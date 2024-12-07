@@ -1,0 +1,185 @@
+site_name: DynamicTelemetry
+site_description: 'DynamicTelemetry PoC Request for Collaboration'
+
+# Info : https://squidfunk.github.io/mkdocs-material/
+
+theme:
+    name: material
+    features:
+        - navigation.top
+        - announce.dismiss
+        - content.action.edit
+        - content.action.view
+        - content.code.annotate
+        - content.code.copy
+        # - content.code.select
+        # - content.tabs.link
+        - content.tooltips
+        # - header.autohide
+        # - navigation.expand
+        - navigation.footer
+        - navigation.indexes
+        # - navigation.instant
+        # - navigation.instant.prefetch
+        # - navigation.instant.progress
+        # - navigation.prune
+        # - navigation.sections
+        - navigation.tabs
+        # - navigation.tabs.sticky
+        - navigation.top
+        - navigation.tracking
+        - search.highlight
+        - search.share
+        - search.suggest
+        - toc.follow
+        # - toc.integrate
+    palette:
+        - media: "(prefers-color-scheme)"
+          toggle:
+            icon: material/link
+            name: Switch to light mode
+        - media: "(prefers-color-scheme: light)"
+          scheme: default
+          primary: indigo
+          accent: indigo
+          toggle:
+            icon: material/toggle-switch
+            name: Switch to dark mode
+        - media: "(prefers-color-scheme: dark)"
+          scheme: slate
+          primary: black
+          accent: indigo
+          toggle:
+              icon: material/toggle-switch-off
+              name: Switch to system preference
+    font:
+        text: Roboto
+        code: Roboto Mono
+    favicon: assets/favicon.png
+    icon:
+        logo: logo
+
+nav:
+    - Introduction: index.md
+
+    - Personas:
+        - Overview: ./Personas/Personas.Overview.document.md
+        - Personas:
+            - Data Analyst: ./Personas/Persona_DataAnalysis.document.md
+            - DevOps: ./Personas/Persona_DevOps.document.md
+            - Developer : ./Personas/Persona_Developer.document.md
+            - Project Manager: ./Personas/Persona_ProjectManager.document.md
+
+    - Scenarios:
+        - Overview: ./Scenarios/Scenarios.Overview.document.md
+        - Scenarios:
+            - CostReduction:
+                - EventSuppression: ./Scenarios/EventSuppression.document.md
+            - Performance:
+                - EventAggregation: ./Scenarios/EventAggregation.document.md
+                - EventSuppression: ./Scenarios/EventSuppression.document.md
+            - Privacy and Security:
+                - EventFieldSuppression: ./Scenarios/EventFieldSuppression.document.md
+                - EventSuppression: ./Scenarios/EventSuppression.document.md
+            - Deep Diagnostics:
+                - Overview: ./Scenarios/Overview.DeepDiagnostics.document.md
+                - MemoryLeak: ./Scenarios/MemoryLeak.document.md
+                - TriggeredMemoryDump: ./PositionPapers/TriggeredMemoryDump.document.md
+                - TriggeredFlightRecorder: ./PositionPapers/TriggeredFlightRecorder.document.md
+                - ExtractingMemoryWithUProbe: ./Scenarios/ExtractingMemoryWithUProbe.document.md
+            - Reliability:
+                - A/B Testing: ./PositionPapers/ABTestingWithRichDiagnostics.document.md
+                - Clearly defined failures: ./PositionPapers/ClearFailuresViaSchema.document.md
+            - Durable Dashboards and Alerts: ./Scenarios/DurableDashboards.Alerts.document.md
+            - Changing Environments: ./Scenarios/ChangingEnvironments.document.md
+
+
+    - Architecture:
+        - Overview: ./Architecture/Architecture.Overview.document.md
+        - Definitions: ./Definitions.document.md
+
+        - Components:
+            - Overview: ./Architecture/Components/Components.Overview.document.md
+            - ObservabilityTypes :
+                - Streaming: ./Architecture/Components/Streaming.Observability.document.md
+                - File Based: ./Architecture/Components/FileBased.Observability.document.md
+
+            - Primitives:
+                - Internal Observer: ./Architecture/Components/Observer.InProcess.document.md
+                - Kernel Observer: ./Architecture/Components/Observer.Kernel.document.md
+                - External, on-box Observer: ./Architecture/Components/Observer.External.OnBox.document.md
+                - External, off-box Observer: ./Architecture/Components/Observer.External.OffBox.document.md
+
+        - Design Patterns:
+            - Overview: ./Architecture/DesignPatterns/DesignPatterns.Overview.document.md
+            - Primitives:
+                - Queues: ./Architecture/DesignPatterns/Queues.document.md
+                - Counters: ./Architecture/DesignPatterns/Counters.document.md
+                - Valves: ./Architecture/DesignPatterns/Valves.document.md
+                - Toggles: ./Architecture/DesignPatterns/Toggles.document.md
+                - Triggers: ./Architecture/DesignPatterns/Triggers.document.md
+                
+        - KeyConstructs:
+            - Overview: ./Architecture/KeyConstructs.Overview.document.md
+            - Actions :
+                - Overview: ./Architecture/Actions/ActionExplanation.document.md
+                - Sample Actions:
+                    - ConfigCollection: ./Architecture/Actions/Action.ConfigCollection.document.md
+                    - CPUSample: ./Architecture/Actions/Action.CPUSample.document.md
+                    - FileCollection: ./Architecture/Actions/Action.FileCollection.document.md
+                    - FlightRecorder: ./Architecture/Actions/Action.FlightRecorder.document.md
+                    - MemoryDump: ./Architecture/Actions/Action.MemoryDump.document.md
+                    - ProcessExecution: ./Architecture/Actions/Action.ProcessExecution.document.md
+                    - StateCollection: ./Architecture/Actions/Action.StateCollection.document.md
+            - Probes:
+                - Overview: ./Architecture/Probes/Probes.Overview.document.md
+                - Sample Probes:
+                    - Linux:
+                        - DTrace: ./Architecture/Probes/Probe.DTrace.document.md
+                        - OpenTelemetry: ./Architecture/Probes/Probe.OpenTelemetry.document.md
+                        - eBPF: ./Architecture/Probes/Probe.eBPF.document.md
+                        - ptrace: ./Architecture/Probes/Probe.ptrace.document.md
+                        - uprobes: ./Architecture/Probes/Probe.uprobes.document.md
+                        - user_events: ./Architecture/Probes/Probe.user_events.document.md
+                    - Windows:
+                        - ETW: ./Architecture/Probes/Probe.ETW.document.md
+
+
+    - Appendix:
+        - Overview: ./PositionPapers/PositionPapers.Overview.document.md
+
+        - Position Papers:
+            - Actions: ./PositionPapers/Actions.document.md
+            - ConfigurationDeployment: ./PositionPapers/ConfigurationDeployment.document.md
+            - DurableIds_StructuredPayloads: ./PositionPapers/DurableIds_StructuredPayloads.document.md
+            - FileAndStreaming: ./PositionPapers/FileAndStreaming.document.md
+            - FlightRecorder: ./PositionPapers/FlightRecorder.document.md
+            - GuideToLogVerbosity: ./PositionPapers/GuideToLogVerbosity.document.md
+            - ObserverEffect: ./PositionPapers/ObserverEffect.document.md
+            - ProbeRiskLevels: ./PositionPapers/ProbeRiskLevels.document.md
+            - TelemetryUmbilical: ./PositionPapers/TelemetryUmbilical.document.md
+            - Defining Production: ./PositionPapers/DefiningProduction.document.md
+            - Cloud and Edge Interop: PositionPapers/CloudAndEdgeInterop.document.md
+            - Delivery Gurantees: PositionPapers/DeliveryGuarantees.document.md
+            - Probe to Header : PositionPapers/ProbeToHeader.document.md
+            - Suppressing and Pushing Stack Args : PositionPapers/WhereToSuppressInProc.document.md
+    - Lookout Tower:
+        - PoC Scenarios: ./LookoutTower/PoC_Scenarios.document.md
+        - Demo 1: ./Demos/1_IntroDemo.md
+        - Demo 2: ./Demos/2_DynamicProbe.md
+plugins:
+    - search
+    - mermaid2
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra_css:
+    - extra.css
+
+extra_javascript:
+    - https://unpkg.com/mermaid/dist/mermaid.min.js
