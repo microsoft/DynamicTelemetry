@@ -5,4 +5,4 @@ status: ReviewLevel1
 
 # PROBE : ETW
 
-![image](./Risk.ETW.png)
+![image](../../orig_media/Risk.ETW.png)

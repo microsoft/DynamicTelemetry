@@ -160,35 +160,35 @@ PROBE configurations are always deployed with the same oversight as production c
 
 ### OpenTelemetry
 
-![image](../Probes/Risk.OpenTelemetry.png)
+![image](../../orig_media/Risk.OpenTelemetry.png)
 
 ### DTrace
 
-![image](../Probes/Risk.DTrace.png)
+![image](../../orig_media/Risk.DTrace.png)
 
 ### eBPF
 
-![image](../Probes/Risk.eBPF.png)
+![image](../../orig_media/Risk.eBPF.png)
 
 ### ptrace
 
-![image](../Probes/Risk.ptrace.png)
+![image](../../orig_media/Risk.ptrace.png)
 
 ### uprobes
 
-![image](../Probes/Risk.uprobes.png)
+![image](../../orig_media/Risk.uprobes.png)
 
 ### user_events
 
-![image](../Probes/Risk.user_events.png)
+![image](../../orig_media/Risk.user_events.png)
 
 
 ## Windows Probe Types (and their risks)
 
 ### ETW
 
-![image](../Probes/Risk.ETW.png)
+![image](../../orig_media/Risk.ETW.png)
 
 ### eBPF
 
-![image](../Probes/Risk.eBPF.png)
+![image](../../orig_media/Risk.eBPF.png)

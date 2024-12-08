@@ -5,7 +5,7 @@ status: ReviewLevel1
 
 #
 
-![image](../LookoutTower.logo.png)
+![image](../orig_media/LookoutTower.logo.png)
 
 Interactive Observability
 

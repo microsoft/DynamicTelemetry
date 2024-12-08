@@ -5,4 +5,4 @@ status: ReviewLevel1
 
 # PROBE : OpenTelemetry
 
-![image](./Risk.eBPF.png)
+![image](../../orig_media/Risk.eBPF.png)

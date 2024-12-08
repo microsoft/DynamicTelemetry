@@ -5,4 +5,4 @@ status: ReviewLevel1
 
 # PROBE : OpenTelemetry
 
-![image](./Risk.uprobes.png)
+![image](../../orig_media/Risk.uprobes.png)

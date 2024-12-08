@@ -5,6 +5,6 @@ status: ReviewLevel1
 
 # PROBE : DTrace
 
-![image](./Risk.DTrace.png)
+![image](../../orig_media/Risk.DTrace.png)
 
 ## Introduction to DTrace

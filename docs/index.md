@@ -5,7 +5,7 @@ description : Introduction to DynamicTelemetry
 ---
 #
 
-![image](./DynamicTelemetry.logo.png)
+![image](./orig_media/DynamicTelemetry.logo.png)
 
 Introducing DynamicTelemetry, an OpenSource, diagnostic compliment to OpenTelemetry.
 
