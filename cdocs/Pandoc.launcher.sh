@@ -20,4 +20,9 @@ if [ $pandoc_ret -ne 0 ]; then
     echo .
     echo .
     bash
+else
+    echo ""
+    echo "PANDOC SUCCESS: when called as follow"
+    echo "     pandoc $@"
+    echo ""
 fi
