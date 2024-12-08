@@ -1,4 +1,4 @@
-![](../../DynamicTelemetry.logo.png)
+![](./DynamicTelemetry.logo.png)
 
 ```cdocs
 this is a sample
