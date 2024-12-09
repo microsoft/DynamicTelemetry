@@ -8,7 +8,13 @@ echo "     pandoc $@"
 echo "--------------------------------------------------------------------------------"
 echo .
 
+
+echo "ARGS[$@]"
 cd /data
+cd $1
+shift
+echo "ARGS_post_pop[$@]"
+
 pandoc "$@"
 
 pandoc_ret=$?
