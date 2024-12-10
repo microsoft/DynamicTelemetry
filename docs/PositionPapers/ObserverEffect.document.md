@@ -1,11 +1,11 @@
-# The Observer Effect, in Telemetry
+# The Observer Effect
 
 The observer effect in physics refers to the phenomenon where the act of
 observing a system inevitably alters its state. This effect is often due
 to the instruments used for measurement, which can interfere with the
 system being observed. A classic example is the double-slit experiment
 in quantum mechanics, where the presence of a detector changes the
-behavior of particles.
+behavior of particles.,
 
 Telemetry involves the collection of data that can influence the system
 being monitored. One of the main risks of telemetry is the potential for
@@ -24,6 +24,8 @@ data collection. Techniques such as using less intrusive measurement
 tools in physics or implementing robust privacy safeguards in telemetry
 can help mitigate these risks.
 
+## Probes and Actions
+
 Different probes used in telemetry and diagnostics come with their own
 set of risks. For instance, **dynamic probes** in DynamicTelemetry can
 introduce performance overhead, potentially affecting the system\'s
@@ -31,7 +33,19 @@ efficiency and reliability. These probes gather minimal amounts of
 memory and transform them into standard OpenTelemetry Logs, which can
 then be fed into existing telemetry pipelines. However, the process of
 setting up these probes, such as using software or hardware breakpoints
-may not always align with security and privacy guidelines.
+and eBPF may not always align with the performance and reliability of
+their destination environment.
+
+### Reliablity Concerns
+
+Of particular concern is the possibility that certain probe types may
+inadvertently alter the **reliability characteristics** of a monitored
+system. In some embodiments of telemetry, such as Event Tracing for
+Windows (ETW), it is possible that merely listening to an event could
+cause the telemetry producer to crash, hang, or otherwise enter a
+failing system state.
+
+### Performance Concerns
 
 Lastly, the **impact on system performance** is a significant concern.
 Probes, especially those that enable CPU sampling or induce memory
@@ -41,4 +55,42 @@ operations, which, while not altering the system state, can still impact
 performance. Therefore, it is essential to balance the need for detailed
 telemetry with the potential performance costs.
 
+## Taxonomy for Evaluating Probe and Action Risk
 
+The Dynamic Telemetry system has developed a comprehensive taxonomy for
+both probes and **actions**, recognizing that perceptions of operational
+risk vary among different usage [personas](../Personas//Personas.Overview.document.md), and hosting environments. This
+taxonomy enables DevOps teams, program managers, and developers to
+collaboratively assess risks in a manner tailored to their specific
+environmental needs.
+
+Due to the extensive nature and potential changes in this taxonomy, a
+dedicated section in the architecture documents covers dynamic
+telemetry. This section will comprehensively describe how to quantify,
+measure, and communicate the risks to different [personas](../Personas//Personas.Overview.document.md). Each of the
+various probes and actions can be evaluated using a spider chart similar
+to, but not identical to, the example below.
+
+![](../orig_media/Risk.ETW.png)
+![](../orig_media/Risk.eBPF.png)
+
+In the above charts you\'ll see that the more area is shaded the more
+risk the particular probe or action type brings. ETW (Windows), when configured incorrectly may inadvertency modify system behavior - whereas eBPF intentionally modifies system behavior, and therefore presents more risks to the different user [personas](../Personas//Personas.Overview.document.md).
+
+ It is often also the
+case that with more risk comes more performance or more flexibility.
+
+**Dynamic Telemetry mandates** that a ***[probe must not intentionally
+alter system state]{.underline}***. This does not preclude the use of a
+probe type akin to the ETW event in Windows with dynamic telemetry;
+however, it does mean that the application of ETW within dynamic
+telemetry must not modify the system state. Although this may initially
+seem prohibitively costly during a quick read of this chapter; further
+details and expansion can be found within the linked architecture
+section.
+
+## Implications on Deployment
+
+Implementations of dynamic telemetry must clearly communicate these
+requirements at the configuration deployment stage using suitable gates,
+deployment rings, and communication systems for the hosting environment.
