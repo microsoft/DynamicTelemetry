@@ -106,6 +106,12 @@ nav:
                 - Streaming: ./Architecture/Components/Streaming.Observability.document.md
                 - File Based: ./Architecture/Components/FileBased.Observability.document.md
 
+            - Processors :
+                - Overview: ./Architecture/Components/Processors/Processor.Overview.document.md
+                - Options:
+                    - KQL : ./Architecture/Components/Processors/Processor.KQL.document.md
+                    - eBPF : ./Architecture/Components/Processors/Processor.eBPF.document.md
+
             - Primitives:
                 - Internal Observer: ./Architecture/Components/Observer.InProcess.document.md
                 - Kernel Observer: ./Architecture/Components/Observer.Kernel.document.md
@@ -166,11 +172,13 @@ nav:
             - Probe to Header : ./PositionPapers/ProbeToHeader.document.md
             - Suppressing and Pushing Stack Args : ./PositionPapers/WhereToSuppressInProc.document.md
             - Convert Logs to Metrics: ./PositionPapers/ConvertLogsToMetrics.document.md
-            
+
     - Lookout Tower:
         - PoC Scenarios: ./LookoutTower/PoC_Scenarios.document.md
         - Demo 1: ./Demos/1_IntroDemo.md
         - Demo 2: ./Demos/2_DynamicProbe.md
+        - Demo 3: ./Samples/AddingSessionId/Sample.AddSessionId.document.md
+
 plugins:
     - search
     - mermaid2
