@@ -109,8 +109,8 @@ nav:
             - Processors :
                 - Overview: ./Architecture/Components/Processors/Processor.Overview.document.md
                 - Options:
-                    - KQL : ./Architecture/Components/Processors/Processor.KQL.document.md
-                    - eBPF : ./Architecture/Components/Processors/Processor.eBPF.document.md
+                    - Query Language : ./Architecture/Components/Processors/Processor.QueryLanguage.document.md
+                    - Language : ./Architecture/Components/Processors/Processor.Language.document.md
 
             - Primitives:
                 - Internal Observer: ./Architecture/Components/Observer.InProcess.document.md
@@ -175,9 +175,11 @@ nav:
 
     - Lookout Tower:
         - PoC Scenarios: ./LookoutTower/PoC_Scenarios.document.md
-        - Demo 1: ./Demos/1_IntroDemo.md
-        - Demo 2: ./Demos/2_DynamicProbe.md
-        - Demo 3: ./Samples/AddingSessionId/Sample.AddSessionId.document.md
+        - Intro Demo: ./Demos/1_IntroDemo.md
+        - Dynamic Probe: ./Demos/2_DynamicProbe.md
+        - Adding Forgotten Session Id: ./LookoutTower/Samples/AddingSessionId/LookoutTower.Sample.AddSessionId.document.md
+        - Scrub Secret: ./LookoutTower/Samples/ScrubSecret/LookoutTower.Sample.ScrubSecret.document.md
+        - Suppress Chatty Log: ./LookoutTower/Samples/SuppressChattyLog/LookoutTower.Sample.SuppressChattyLog.document.md
 
 plugins:
     - search
