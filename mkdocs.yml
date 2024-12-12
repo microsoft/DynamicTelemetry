@@ -110,9 +110,10 @@ nav:
                 - Overview: ./Architecture/Components/Processors/Processor.Overview.document.md
                 - Options:
                     - Query Language : ./Architecture/Components/Processors/Processor.QueryLanguage.document.md
-                    - Language : ./Architecture/Components/Processors/Processor.Language.document.md
+                    - Language : ./Architecture/Components/Processors/Processor.language.document.md
+                    - StateMachine : ./Architecture/Components/Processors/Processor.StateMachine.document.md
 
-            - Primitives:
+            - Processor Installation Locations:
                 - Internal Observer: ./Architecture/Components/Observer.InProcess.document.md
                 - Kernel Observer: ./Architecture/Components/Observer.Kernel.document.md
                 - External, on-box Observer: ./Architecture/Components/Observer.External.OnBox.document.md
@@ -139,6 +140,8 @@ nav:
                     - MemoryDump: ./Architecture/Actions/Action.MemoryDump.document.md
                     - ProcessExecution: ./Architecture/Actions/Action.ProcessExecution.document.md
                     - StateCollection: ./Architecture/Actions/Action.StateCollection.document.md
+                    - Verbose Logs: ./Architecture/Actions/Action.VerboseLogs.document.md
+
             - Probes:
                 - Overview: ./Architecture/Probes/Probes.Overview.document.md
                 - Sample Probes:
