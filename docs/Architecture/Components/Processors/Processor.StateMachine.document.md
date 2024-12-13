@@ -15,8 +15,8 @@ such as timing, counting, and measuring in challenging contexts.
 
 To illustrate, consider the need to track a particular type of
 operation, such as processing a specific file type like a JPEG image.
-When the state machine processor detects a log message indicating that a
-JPEG file has been opened, it transitions from the unknown state to a
+When the state machine processor detects the log message indicating that
+a JPEG file has been opened, it transitions from the unknown state to a
 user-defined state, such as the \"processing JPEG\" state. This
 transition is based on the pre-configured, and dynamically deployed,
 criteria within the state machine.
@@ -36,18 +36,18 @@ facilitating more informed decision-making and analysis.
 
 Lets look at a few examples, as they likely will help tell the tale
 
-
-```mermaid
+``` mermaid
     flowchart TD
         Unknown((Unknown))
         JpegOpened((JpegOpened))
         Unknown --> | LogOpeningFile | JpegOpened
         JpegOpened--> |LogClosed | Unknown
-
 ```
+
+XYZ
 
 Actions of Interest:
 
-* [CPU Sampling](../../Actions/Action.CPUSample.document.md)
-* [Verbose Logs](../../Actions/Action.VerboseLogs.document.md)
-* [Memory Dump](../../Actions//Action.MemoryDump.document.md)
+-   [CPU Sampling](../../Actions/Action.CPUSample.document.md)
+-   [Verbose Logs](../../Actions/Action.VerboseLogs.document.md)
+-   [Memory Dump](../../Actions//Action.MemoryDump.document.md)
