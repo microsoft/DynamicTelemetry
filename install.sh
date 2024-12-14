@@ -10,6 +10,8 @@ cd ~/.local/mkdocs_python/bin
 ./pip install mkdocs-mermaid2-plugin
 ./pip install mkdocs-material
 ./pip install mkdocs-minify-plugin
+./pip install mkdocs-include-markdown-plugin
+
 
 cd ~/.local/bin
 ln -s ../mkdocs_python/bin/mkdocs

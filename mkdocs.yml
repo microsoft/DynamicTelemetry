@@ -175,6 +175,7 @@ nav:
             - Probe to Header : ./PositionPapers/ProbeToHeader.document.md
             - Suppressing and Pushing Stack Args : ./PositionPapers/WhereToSuppressInProc.document.md
             - Convert Logs to Metrics: ./PositionPapers/ConvertLogsToMetrics.document.md
+            - DynamicallyToggleLogs: ./PositionPapers/DynamicallyToggleLogs.document.md
 
     - Lookout Tower:
         - PoC Scenarios: ./LookoutTower/PoC_Scenarios.document.md
@@ -187,6 +188,18 @@ nav:
 plugins:
     - search
     - mermaid2
+    - include-markdown:
+        encoding: ascii
+        preserve_includer_indent: false
+        dedent: false
+        trailing_newlines: true
+        comments: true
+        rewrite_relative_urls: true
+        heading_offset: 0
+        start: <!--start-->
+        end: <!--end-->
+        recursive: true
+
 
 markdown_extensions:
   - attr_list
