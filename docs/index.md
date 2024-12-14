@@ -7,42 +7,46 @@ description : Introduction to DynamicTelemetry
 
 ![image](./orig_media/DynamicTelemetry.logo.png)
 
-Introducing DynamicTelemetry, an OpenSource, diagnostic compliment to OpenTelemetry.
+Introducing DynamicTelemetry, an OpenSource, diagnostic compliment to
+OpenTelemetry.
 
-The DynamicTelemetry development team wants to make debugging highly scaled
-production software as easy and enjoyable as debugging one application locally.
-We want you to be able to diagnose and explore live production systems without
-compromising reliability, performance, or customer privacy.
+The DynamicTelemetry development team wants to make debugging highly
+scaled production software as easy and enjoyable as debugging one
+application locally. We want you to be able to diagnose and explore live
+production systems without compromising reliability, performance, or
+customer privacy.
 
-In this introduction, you will learn about DynamicTelemetry, an open-source
-diagnostic tool that blends traditional symbolic debuggers with advanced new
-complements to your existing OpenTelemetry assets and workflows. You will be
-presented with five architectural components that, when used together, bring
-the peace and calm of local debugging into the distributed cloud.
+In this introduction, you will learn about DynamicTelemetry, an
+open-source diagnostic tool that blends traditional symbolic debuggers
+with advanced new complements to your existing OpenTelemetry assets and
+workflows. You will be presented with five architectural components
+that, when used together, bring the peace and calm of local debugging
+into the distributed cloud.
 
-Before diving into the overall architecture, lets watch a quick demonstration
-that will showcase the end to end workflow.
+Before diving into the overall architecture, lets watch a quick
+demonstration that will showcase the end to end workflow.
 
-In this high-level demonstration, we've added DynamicTelemetry to the standard
-OpenTelemetry Kubernetes sample, but otherwise have not modified (or even
-recompiled) any code from the OpenTelemetry sample.
+In this high-level demonstration, we've added DynamicTelemetry to the
+standard OpenTelemetry Kubernetes sample, but otherwise have not
+modified (or even recompiled) any code from the OpenTelemetry sample.
 
-After the demo, please 'choose your own adventure' by continuing to read along
- one of the four tracks found below.
+After the demo, please 'choose your own adventure' by continuing to read
+along one of the four tracks found below.
 
-## [TODO] DynamicTelemetry Intro Demo
+## \[TODO\] DynamicTelemetry Intro Demo
 
 [Introduction Demo #1](./Demos/1_IntroDemo.md)
 
 ## Usage Personas
 
-DynamicTelemetry is a diagnostic system useful to many different audiences, each of
-whom have similar, but different interests.
+DynamicTelemetry is a diagnostic system useful to many different
+audiences, each of whom have similar, but different interests.
 
-To better cater our introductucory documentation to each of these audiences,
-we've broken the content into personas and scenarios.  This is only to simplify
-understanding, by presenting content in different orders.  We will make use of
- URL's to cross reerence content that may be interesting to muttiple personas.
+To better cater our introductucory documentation to each of these
+audiences, we've broken the content into personas and scenarios. This is
+only to simplify understanding, by presenting content in different
+orders. We will make use of URL's to cross reerence content that may be
+interesting to muttiple personas.
 
 ## Personas
 
@@ -50,26 +54,39 @@ understanding, by presenting content in different orders.  We will make use of
 
 - [**DEVELOPER**](./Personas/Persona_Developer.document.md)
 
-    A programmer of Cloud Scale services, who is looking to add diagnostic
-    probing, to their use of OpenTelemetry.
 
-- [**DEVOPS**](./Personas/Persona_DevOps.document.md)
+
+   A programmer of Cloud Scale services, who is looking to add
+    diagnostic probing, to their use of OpenTelemetry.
+
+
+
+-   [**DEVOPS**](./Personas/Persona_DevOps.document.md)
+
 
     Someone monitoring a cloud service may want to gain insights without
-    involving their development team. They may want to suppress chatty events,
-     turn events into metrics, or suppress erroneous logs, metrics, or events.
+    involving their development team. They may want to suppress chatty
+    events, turn events into metrics, or suppress erroneous logs,
+    metrics, or events.
 
-- [**DATA_ANALYST**](./Personas/Persona_DataAnalysis.document.md)
 
-    Someone who would value better understanding of a Developers intent.  For
-    example how many items should be on a queue,
-    what response latencies were expected when a piece of code was authored.
 
-- [**PROJECT_MANAGER**](./Personas/Persona_ProjectManager.document.md)
+-   [**DATA_ANALYST**](./Personas/Persona_DataAnalysis.document.md)
 
-    Someone who wants to understand a developer’s intent may want to know how
-     many items should be on a queue or what response latencies were expected
-     when a piece of code was authored.
+
+    Someone who would value better understanding of a Developers intent.
+    For example how many items should be on a queue, what response
+    latencies were expected when a piece of code was authored.
+
+
+
+-   [**PROJECT_MANAGER**](./Personas/Persona_ProjectManager.document.md)
+
+
+
+    Someone who wants to understand a developer's intent may want to
+    know how many items should be on a queue or what response latencies
+    were expected when a piece of code was authored.
 
 </div>
 
@@ -80,15 +97,17 @@ understanding, by presenting content in different orders.  We will make use of
 
 - [**Cost Reduction**](./Scenarios/CostReduction.document.md)
 
-- [**Performance Improvments**](./Scenarios/PerformanceImprovements.document.md)
+-   [**Performance
+    Improvments**](./Scenarios/PerformanceImprovements.document.md)
 
-- [**Redacting Secrets**](./Scenarios/RedactingSecrets.document.md)
+-   [**Redacting Secrets**](./Scenarios/RedactingSecrets.document.md)
 
-- [**Deep Diagnostics**](./Scenarios/DeepDiagnostics.document.md)
+-   [**Deep Diagnostics**](./Scenarios/DeepDiagnostics.document.md)
 
-- [**Reliability**](./Scenarios/Reliability.document.md)
+-   [**Reliability**](./Scenarios/Reliability.document.md)
 
-- [**Durable Dashboards and Alerts**](./Scenarios/DurableDashboards.Alerts.document.md)
+-   [**Durable Dashboards and
+    Alerts**](./Scenarios/DurableDashboards.Alerts.document.md)
 
 </div>
 
@@ -120,7 +139,6 @@ understanding, by presenting content in different orders.  We will make use of
 - :fontawesome-solid-shield: [**Defining Production**](./PositionPapers/DefiningProduction.document.md)
 
 </div>
-
-```cdocs
+``` cdocs
 hello world!
 ```
