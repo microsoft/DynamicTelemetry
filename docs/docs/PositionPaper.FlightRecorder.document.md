@@ -9,6 +9,6 @@ status: ReviewLevel1
 
 ## References
 
-1. [File and Streaming](./FileAndStreaming.document.md)
+1. [File and Streaming](./PositionPaper.FileAndStreaming.document.md)
 
-2. [Telemetry Umbilical](./TelemetryUmbilical.document.md)
+2. [Telemetry Umbilical](./PositionPaper.TelemetryUmbilical.document.md)

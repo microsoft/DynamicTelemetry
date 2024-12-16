@@ -16,7 +16,7 @@ TODO:
 
 DynamicTelemetry is a dynamic tool designed to manage, control, and
 reshape telemetry in
-[production](./docs/PositionPaper.DefiningProduction.document.md) systems.
+[production](./PositionPaper.DefiningProduction.document.md) systems.
 
 Essentially, DynamicTelemetry is a set of enforced conventions that
 enable various sophisticated diagnostic systems to work in harmony. It
@@ -27,22 +27,21 @@ be allocated when needed and restricts telemetry when it's not required.
 
 This document aims to delve into the philosophy of DynamicTelemetry,
 exploring the intricate balance between complex realities. While this
-document serves as a comprehensive spiritua guide, some readers might
+document serves as a comprehensive spiritual guide, some readers might
 find it beneficial to start with the usage
-[scenarios](./docs/Scenarios.Overview.document.md) to get a better
+[scenarios](./Scenarios.Overview.document.md) to get a better
 understanding of the system.
 
 ## DynamicTelemetry, in a nutshell
 
-[Demos](./docs/Demos.1_IntroDemo.md) are a great way to go hands on with
+[Demos](./Demos.1_IntroDemo.md) are a great way to go hands on with
 DynamicTelemetry, but before diving in to the complex realities
 DynamicTelemetry seeks to resolve, it's important to have a general
 undertqnding of usage.
 
 Image yourself as a
-[DEVELOPER](./docs/Persona_Developer.document.md). You're focused
-on the latest business needs from your [PROJECT
-MANAGER](../Personas/Persona_ProjectManager.document.md). You're worried
+[DEVELOPER](./Persona_Developer.document.md). You're focused
+on the latest business needs from your [PROJECTMANAGER](./Persona_ProjectManager.document.md). You're worried
 about solving business problems, keeping costs in check,
 
 ``` cdocs

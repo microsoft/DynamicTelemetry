@@ -25,4 +25,4 @@ STREAMING telemetry has three common subtypes {Logs, Metrics, and Traces} that s
 
 ## References
 
-1. [Flight Recorder](./FlightRecorder.document.md)
+1. [Flight Recorder](./PositionPaper.FlightRecorder.document.md)

@@ -90,9 +90,9 @@ Image a piece of code that looks something like this:
 
 ## Useful Actions
 
--   [CPU Sampling](../../Actions/Action.CPUSample.document.md)
--   [Verbose Logs](../../Actions/Action.VerboseLogs.document.md)
--   [Memory Dump](../../Actions//Action.MemoryDump.document.md)
+-   [CPU Sampling](./Architecture.Action.CPUSample.document.md)
+-   [Verbose Logs](./Architecture.Action.VerboseLogs.document.md)
+-   [Memory Dump](./Architecture.Action.MemoryDump.document.md)
 
 ## Example Scenarios
 

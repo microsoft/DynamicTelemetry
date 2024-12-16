@@ -5,4 +5,4 @@ status: ReviewLevel1
 
 # PROBE : user_events
 
-![image](../../orig_media/Risk.user_events.png)
+![image](../orig_media/Risk.user_events.png)
