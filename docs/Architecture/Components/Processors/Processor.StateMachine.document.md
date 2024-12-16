@@ -15,6 +15,11 @@ such as timing, counting, and measuring in challenging contexts.
 
 To illustrate, consider a contrived example - generating unique hashs of a file. Perhaps data files or images JPEG image.
 
+HelloWorld[^test]
+HelloWorld[^test]
+HelloWorld2[^test2]
+HelloWorld3[^test3]
+
 
 ```cdocs
 
@@ -61,3 +66,8 @@ Actions of Interest:
 -   [CPU Sampling](../../Actions/Action.CPUSample.document.md)
 -   [Verbose Logs](../../Actions/Action.VerboseLogs.document.md)
 -   [Memory Dump](../../Actions//Action.MemoryDump.document.md)
+
+
+
+
+{% include "../../../bib.md" %}
