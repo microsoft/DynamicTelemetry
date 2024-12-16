@@ -1,23 +1,30 @@
 # PROCESSOR : State Machine
 
+The state machine processor is a relatively simple yet highly effective
+component within dynamic telemetry. Essentially, this processor listens
+to all log messages that pass by, identifying significant events and
+managing a state machine based on those events. When the state machine
+processor detects an interesting log message, it transitions to a new
+state, potentially initiating an action as part of this transition.
+
 ## Introduction to State Machine Processor
-The State Machine processor, the most basic type of Processor, functions
-akin to a Directed Graph, where transitions occur upon the detection of
-specific logs by the Processor. This state machine Processor is employed
-for operations such as timing, counting, and measuring in contexts that
-present challenges otherwise. The state machine is frequently
-accompanied by various actions and is utilized to initiate complex or
-resource-intensive operations.
 
-A state model processor operates similarly to a directed graph; its
-primary function is to transition between states based on the detection
-and study of specific log events. Initially, the state machine begins in
-an unknown state and then dynamically adjusts its state in response to
-the events it processes. This approach is particularly useful for tasks
-such as timing, counting, and measuring in challenging contexts.
+The State Machine processor operates as a Directed Graph, where
+transitions occur upon the observation of specific logs by the
+Processor. This state machine is employed for tasks such as timing,
+counting, and measuring in contexts that pose significant challenges.
+The state machine is often accompanied by various actions and is
+utilized to initiate complex or resource-intensive operations.
 
-To illustrate, consider a contrived example - generating unique hashs of
-a file. Perhaps data files or images JPEG image.
+Its primary function is to monitor logs and transition between states
+based on the analysis of log names and parameters. Initially, the state
+machine starts in an undefined state and then dynamically adjusts its
+state in response to the events it processes. This method is
+particularly effective for tasks such as timing, counting, and measuring
+in difficult contexts.
+
+To provide an example, consider generating unique hashes of a file, such
+as data files or JPEG images.
 
 ## Simple Code Example; hashing files
 
@@ -33,9 +40,9 @@ a file. Perhaps data files or images JPEG image.
 
 In this example you'll notice that the example code
 
-1.  Log when we begin hashing
-2.  Hash the file; or otherwise perform business logic
-3.  Log when we've completed the hashing of the file
+1.  Logs when we begin hashing
+2.  Hashs the file; or otherwise perform business logic
+3.  Logs when we've completed the hashing of the file
 
 This workflow outlines a typical sequence of operations for a developer.
 Log messages may be disabled before entering production, used during
@@ -44,18 +51,19 @@ testing.
 
 ## Modeling Live System Behavior, with a State Machine Processor
 
-For instance, when a JPEG file is opened and identified, the state
-machine enters the \"processing JPEG\" state. Subsequently, when the
-file is closed, the state machine reverts to the unknown state. This
-transition allows for various actions to be initiated upon entering the
-\"processing JPEG\" state, such as enabling additional telemetry,
-collecting registry keys, or starting CPU sampling.
+Consider the state model processor as a tool to quickly and safely
+understand the system\'s operational characteristics after deployment.
 
-The utility of this functionality lies in its ability to add context to
-logs. By attaching state-related information to future logs, the state
-machine enhances the logs\' value. This enriched information can be
-immediately useful in backend databases, providing instant awareness and
-facilitating more informed decision-making and analysis.
+The state machine processor is typically beneficial in scenarios where
+software has been deployed into a production environment, and it cannot
+be rapidly altered or redeployed. It should be viewed as a diagnostic
+tool that can be employed extensively without affecting user security,
+privacy, or performance.
+
+After a conclusion is reached by the state machine processor, the
+production code is frequently modified to implement a more suitable and
+permanent solution. Consequently, the state machine processor can be
+deactivated once the revised deployment is completed.
 
 Lets look at a few examples, as they likely will help tell the tale
 
@@ -72,11 +80,11 @@ Image a piece of code that looks something like this:
 ## Introducing Actions to the Dynamic Telemetry State Machine
 
 ## Useful Actions
+
 -   [CPU Sampling](../../Actions/Action.CPUSample.document.md)
 -   [Verbose Logs](../../Actions/Action.VerboseLogs.document.md)
 -   [Memory Dump](../../Actions//Action.MemoryDump.document.md)
 
 ## Example Scenarios
-
 
 {% include "../../../bib.md" %}
