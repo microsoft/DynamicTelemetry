@@ -76,16 +76,40 @@ internal partial class Program
             }
         }
 
+        [LoggerMessage(Level = LogLevel.Information, Message = "Starting FileHash {fileName}.")]
+        static partial void LogStartingFileHash(ILogger logger, string fileName);
 
-        [LoggerMessage(Level = LogLevel.Information, Message = "Starting FileHash {imageName}.")]
-        static partial void LogStartingFileHash(ILogger logger, string imageName);
+        [LoggerMessage(Level = LogLevel.Information, Message = "Ending FileHash {fileName}, hash={hashValue}.")]
+        static partial void LogEndFileHash(ILogger logger, string fileName, string hashValue);
 
-        [LoggerMessage(Level = LogLevel.Information, Message = "Ending FileHash {imageName}, hash={hashValue}.")]
-        static partial void LogEndFileHash(ILogger logger, string imageName, string hashValue);
-
-        [LoggerMessage(Level = LogLevel.Warning, Message = "Unable to hash image {imageName}")]
-        static partial void ErrorHashing(ILogger logger, string imageName, Exception e);
+        [LoggerMessage(Level = LogLevel.Warning, Message = "Unable to hash image {fileName}")]
+        static partial void ErrorHashing(ILogger logger, string fileName, Exception e);
         //<!--end-ImageHashExample-->
+
+#if false
+        //<!--start-PseudoExample-Language-Processor-VerifyHash-->
+        void OnLog(LogMessage log)
+        {
+            // Skill all logs, but the ending hash
+            if(log.LogId == "LogEndFileHash")
+            {
+                string hashGeneratedInProduction = log.GetValue("hashValue");
+                string file = log.GetValue("fileName");
+
+                string comparisonHash = GenerateVerificationHash(file);
+
+                if (hashGeneratedInProduction != comparisonHash)
+                {
+                    m_Actions.GenerateNewLog(file, hashGeneratedInProduction, comparisonHash);
+                }
+            }
+        }
+
+        [LoggerMessage(Level = LogLevel.Error, Message = "ERROR: Language Processor detected production hash bug {fileName}")]
+        static partial void ErrorInProductionHash(ILogger logger, string fileName, string productHash, string comparisonHash);
+
+        //<!--end-PseudoExample-Language-Processor-VerifyHash-->
+#endif
     }
 }
 //<!--end-->

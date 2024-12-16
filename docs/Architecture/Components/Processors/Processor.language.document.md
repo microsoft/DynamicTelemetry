@@ -21,7 +21,6 @@ nominal and expected values.
 ## Simple Code Example; hashing files
 
 ``` cdocs
-
 {% include "../../../LookoutTower/Samples/FileExtensionStats/Sample.FileExtensionStats.cs"
     start="//<!--start-ImageHashExample-->"
     end="//<!--end-ImageHashExample-->"
@@ -74,6 +73,17 @@ Image a piece of code that looks something like this:
         HashingFile((HashingFile))
         Unknown --> | LogStartingFileHash | HashingFile
         HashingFile--> |LogEndFileHash | Unknown
+```
+
+### Verifying Hash Algorithm
+
+``` cdocs
+{% include "../../../LookoutTower/Samples/FileExtensionStats/Sample.FileExtensionStats.cs"
+
+    start="//<!--start-PseudoExample-Language-Processor-VerifyHash-->"
+
+    end="//<!--end-PseudoExample-Language-Processor-VerifyHash-->"
+%}
 ```
 
 ## Introducing Actions to the Dynamic Telemetry Language Processor
