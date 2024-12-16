@@ -16,8 +16,7 @@ such as timing, counting, and measuring in challenging contexts.
 To illustrate, consider a contrived example - generating unique hashs of
 a file. Perhaps data files or images JPEG image.
 
-HelloWorld\[\^test\] HelloWorld\[\^test\] HelloWorld2\[\^test2\]
-HelloWorld3\[\^test3\]
+## Simple Code Example; hashing files
 
 ``` cdocs
 
@@ -27,9 +26,20 @@ HelloWorld3\[\^test3\]
 %}
 ```
 
-In this example; a Log message is generated when a This transition is
-based on the pre-configured, and dynamically deployed, criteria within
-the state machine.
+
+## Code Overview
+In this example you'll notice that the example code
+
+1.  Log when we begin hashing
+2.  Hash the file; or otherwise perform business logic
+3.  Log when we've completed the hashing of the file
+
+This workflow outlines a typical sequence of operations for a developer.
+Log messages may be disabled before entering production, used during
+diagnostics, or employed to indicate failure and success in traditional
+testing.
+
+## Using a Dynamic Telemetry State Machine to Model Behavior
 
 For instance, when a JPEG file is opened and identified, the state
 machine enters the \"processing JPEG\" state. Subsequently, when the
@@ -51,9 +61,9 @@ Image a piece of code that looks something like this:
 ``` mermaid
     flowchart TD
         Unknown((Unknown))
-        JpegOpened((JpegOpened))
-        Unknown --> | LogOpeningFile | JpegOpened
-        JpegOpened--> |LogClosed | Unknown
+        HashingFile((HashingFile))
+        Unknown --> | LogStartingFileHash | HashingFile
+        HashingFile--> |LogEndFileHash | Unknown
 ```
 
 Actions of Interest:

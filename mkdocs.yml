@@ -92,6 +92,8 @@ nav:
             - Reliability:
                 - A/B Testing: ./PositionPapers/ABTestingWithRichDiagnostics.document.md
                 - Clearly defined failures: ./PositionPapers/ClearFailuresViaSchema.document.md
+                - Traditional Testing: ./PositionPapers/TraditionalTesting.md
+                
             - Durable Dashboards and Alerts: ./Scenarios/DurableDashboards.Alerts.document.md
             - Changing Environments: ./Scenarios/ChangingEnvironments.document.md
 
