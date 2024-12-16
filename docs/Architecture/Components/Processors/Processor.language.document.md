@@ -1,7 +1,22 @@
 # PROCESSOR : Language
 
+The language processor is one of the most versatile and capable
+processors within dynamic telemetry; however, it also poses certain
+risks. The language processor in dynamic telemetry enables the insertion
+of programming language into the telemetry and logging stream of a
+process. These instructions will have the full functionality of the
+supporting programming language and runtime.
 
 ## Introduction to Language Processor
+
+By incorporating a programming model into a telemetry stream, advanced
+observability and diagnostics can be achieved. For example, memory
+variables can be created, aggregates can be managed, individual threads
+can be monitored, and references can be tracked.
+
+Additionally, complex triggering scenarios can be established, such as
+capturing a memory dump of a process when a reference count exceeds
+nominal and expected values.
 
 ## Simple Code Example; hashing files
 
@@ -26,21 +41,28 @@ Log messages may be disabled before entering production, used during
 diagnostics, or employed to indicate failure and success in traditional
 testing.
 
-## Modeling Live System Behavior, with a Language Processor
+## Modeling Live System Behavior, with a Language Processor.
 
-Consider the state model processor as a tool to quickly and safely
-understand the system\'s operational characteristics after deployment.
+In this scenario, where a file is being hashed, assume there is a bug in
+the hashing algorithm. For example, the implementation of the hashing
+algorithm might have race conditions or, in exceptional cases, memory
+misalignment. If one of these issues occurs, the hash for the input file
+will be incorrect, making it challenging to debug in a production
+system.
 
-The state machine processor is typically beneficial in scenarios where
-software has been deployed into a production environment, and it cannot
-be rapidly altered or redeployed. It should be viewed as a diagnostic
-tool that can be employed extensively without affecting user security,
-privacy, or performance.
+A Dynamic Telemetry Language Processor could be particularly useful for
+advanced diagnostics and tracking of this faulty hashing algorithm.
 
-After a conclusion is reached by the state machine processor, the
-production code is frequently modified to implement a more suitable and
-permanent solution. Consequently, the state machine processor can be
-deactivated once the revised deployment is completed.
+in this example one could imagine the pseudo code below being utilized
+in a randomized pattern and deployed using dynamic telemetry into a
+production environment as you can see in the pseudo code periodically
+the hash of a file will be doubly computed once in the production code
+and secondarily in the telemetry code
+
+when or if hash is detected to be incorrect the dynamic telemetry
+language processor is able to emit extra to diagnostic telemetry that
+indicates to the programmer who is monitoring the back end databases
+that in fact the hashing algorithm is failing
 
 Lets look at a few examples, as they likely will help tell the tale
 

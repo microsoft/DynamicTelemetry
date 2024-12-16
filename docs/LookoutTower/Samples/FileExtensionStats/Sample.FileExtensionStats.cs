@@ -14,7 +14,7 @@ internal partial class Program
         ImageExample imageProcessor = new ImageExample(logger);
         for(; ; )
         {
-            int delay = random.Next(1000);       
+            int delay = random.Next(1000);
             imageProcessor.HashImage("");
         }
     }
@@ -34,10 +34,13 @@ internal partial class Program
 
         //<!--start-ImageHashExample-->
         public byte[] HashFile(string imageName)
-        {            
+        {
             try
             {
+                // 1. Log the start of the hashing process
                 LogStartingFileHash(m_logger, imageName);
+
+                // 2. Open the file and hash it
                 using (FileStream fileStream = File.OpenRead(imageName))
                 {
                     byte[] hashValue = m_SHA256.ComputeHash(fileStream);
@@ -46,15 +49,17 @@ internal partial class Program
             }
             catch (Exception e)
             {
+                // Log any exceptions that occur
                 ErrorHashing(m_logger, imageName, e);
                 throw;
             }
             finally
             {
+                // 3. Log the end of the hashing process
                 LogEndFileHash(m_logger, imageName);
             }
         }
-        
+
 
         [LoggerMessage(Level = LogLevel.Information, Message = "Starting FileHash {imageName}.")]
         static partial void LogStartingFileHash(ILogger logger, string imageName);
