@@ -1,3 +1,6 @@
+# PROCESSOR : State Machine
+
+## Introduction to State Machine Processor
 The State Machine processor, the most basic type of Processor, functions
 akin to a Directed Graph, where transitions occur upon the detection of
 specific logs by the Processor. This state machine Processor is employed
@@ -26,8 +29,8 @@ a file. Perhaps data files or images JPEG image.
 %}
 ```
 
+## Sample Code Overview
 
-## Code Overview
 In this example you'll notice that the example code
 
 1.  Log when we begin hashing
@@ -39,7 +42,7 @@ Log messages may be disabled before entering production, used during
 diagnostics, or employed to indicate failure and success in traditional
 testing.
 
-## Using a Dynamic Telemetry State Machine to Model Behavior
+## Modeling Live System Behavior, with a State Machine Processor
 
 For instance, when a JPEG file is opened and identified, the state
 machine enters the \"processing JPEG\" state. Subsequently, when the
@@ -66,10 +69,14 @@ Image a piece of code that looks something like this:
         HashingFile--> |LogEndFileHash | Unknown
 ```
 
-Actions of Interest:
+## Introducing Actions to the Dynamic Telemetry State Machine
 
+## Useful Actions
 -   [CPU Sampling](../../Actions/Action.CPUSample.document.md)
 -   [Verbose Logs](../../Actions/Action.VerboseLogs.document.md)
 -   [Memory Dump](../../Actions//Action.MemoryDump.document.md)
+
+## Example Scenarios
+
 
 {% include "../../../bib.md" %}
