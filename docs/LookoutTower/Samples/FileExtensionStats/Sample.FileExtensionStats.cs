@@ -1,6 +1,7 @@
 //<!--start-->
 using Microsoft.Extensions.Logging;
 using System.Security.Cryptography;
+using System.Text;
 
 
 internal partial class Program
@@ -15,7 +16,24 @@ internal partial class Program
         for(; ; )
         {
             int delay = random.Next(1000);
-            imageProcessor.HashImage("");
+            string tempFile = Path.GetTempFileName();
+            try
+            {
+                using (FileStream outFile = File.OpenWrite(tempFile))
+                {
+                    byte[] buffer = new byte[4096];
+                    random.NextBytes(buffer);
+                    outFile.Write(buffer);
+                }
+
+                //BUGBUG: create a sample file that is hashed
+                imageProcessor.HashFile(tempFile);
+            }
+            finally
+            {
+                if (File.Exists(tempFile))
+                    File.Delete(tempFile);
+            }
         }
     }
 
@@ -33,7 +51,7 @@ internal partial class Program
         }
 
         //<!--start-ImageHashExample-->
-        public byte[] HashFile(string imageName)
+        public string HashFile(string imageName)
         {
             try
             {
@@ -43,7 +61,10 @@ internal partial class Program
                 // 2. Open the file and hash it
                 using (FileStream fileStream = File.OpenRead(imageName))
                 {
-                    byte[] hashValue = m_SHA256.ComputeHash(fileStream);
+                    string hashValue = Convert.ToBase64String(m_SHA256.ComputeHash(fileStream));
+
+                    // 3. Log the end of the hashing process
+                    LogEndFileHash(m_logger, imageName, hashValue);
                     return hashValue;
                 }
             }
@@ -53,19 +74,14 @@ internal partial class Program
                 ErrorHashing(m_logger, imageName, e);
                 throw;
             }
-            finally
-            {
-                // 3. Log the end of the hashing process
-                LogEndFileHash(m_logger, imageName);
-            }
         }
 
 
         [LoggerMessage(Level = LogLevel.Information, Message = "Starting FileHash {imageName}.")]
         static partial void LogStartingFileHash(ILogger logger, string imageName);
 
-        [LoggerMessage(Level = LogLevel.Information, Message = "Ending FileHash {imageName}.")]
-        static partial void LogEndFileHash(ILogger logger, string imageName);
+        [LoggerMessage(Level = LogLevel.Information, Message = "Ending FileHash {imageName}, hash={hashValue}.")]
+        static partial void LogEndFileHash(ILogger logger, string imageName, string hashValue);
 
         [LoggerMessage(Level = LogLevel.Warning, Message = "Unable to hash image {imageName}")]
         static partial void ErrorHashing(ILogger logger, string imageName, Exception e);
