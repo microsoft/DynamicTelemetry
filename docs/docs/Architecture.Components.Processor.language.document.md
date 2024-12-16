@@ -21,7 +21,7 @@ nominal and expected values.
 ## Simple Code Example; hashing files
 
 ``` cdocs
-{% include "../../../LookoutTower/Samples/FileExtensionStats/Sample.FileExtensionStats.cs"
+{% include "../LookoutTower/Samples/FileExtensionStats/Sample.FileExtensionStats.cs"
     start="//<!--start-ImageHashExample-->"
     end="//<!--end-ImageHashExample-->"
 %}
@@ -78,7 +78,7 @@ Image a piece of code that looks something like this:
 ### Verifying Hash Algorithm
 
 ``` cdocs
-{% include "../../../LookoutTower/Samples/FileExtensionStats/Sample.FileExtensionStats.cs"
+{% include "../LookoutTower/Samples/FileExtensionStats/Sample.FileExtensionStats.cs"
 
     start="//<!--start-PseudoExample-Language-Processor-VerifyHash-->"
 
@@ -96,4 +96,4 @@ Image a piece of code that looks something like this:
 
 ## Example Scenarios
 
-{% include "../../../bib.md" %}
+{% include "./bib.md" %}

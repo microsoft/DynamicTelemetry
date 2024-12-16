@@ -35,7 +35,7 @@ along one of the four tracks found below.
 
 ## \[TODO\] DynamicTelemetry Intro Demo
 
-[Introduction Demo #1](./Demos/1_IntroDemo.md)
+[Introduction Demo #1](./docs/Demos.1_IntroDemo.md)
 
 ## Usage Personas
 
@@ -52,7 +52,7 @@ interesting to muttiple personas.
 
 <div class="grid cards" markdown>
 
-- [**DEVELOPER**](./Personas/Persona_Developer.document.md)
+- [**DEVELOPER**](./docs/Persona_Developer.document.md)
 
 
 
@@ -61,7 +61,7 @@ interesting to muttiple personas.
 
 
 
--   [**DEVOPS**](./Personas/Persona_DevOps.document.md)
+-   [**DEVOPS**](./docs/Persona_DevOps.document.md)
 
 
     Someone monitoring a cloud service may want to gain insights without
@@ -71,7 +71,7 @@ interesting to muttiple personas.
 
 
 
--   [**DATA_ANALYST**](./Personas/Persona_DataAnalysis.document.md)
+-   [**DATA_ANALYST**](./docs/Persona_DataAnalysis.document.md)
 
 
     Someone who would value better understanding of a Developers intent.
@@ -80,7 +80,7 @@ interesting to muttiple personas.
 
 
 
--   [**PROJECT_MANAGER**](./Personas/Persona_ProjectManager.document.md)
+-   [**PROJECT_MANAGER**](./docs/Persona_ProjectManager.document.md)
 
 
 
@@ -95,19 +95,19 @@ interesting to muttiple personas.
 
 <div class="grid cards" markdown>
 
-- [**Cost Reduction**](./Scenarios/CostReduction.document.md)
+- [**Cost Reduction**](./docs/Scenarios.CostReduction.document.md)
 
 -   [**Performance
-    Improvments**](./Scenarios/PerformanceImprovements.document.md)
+    Improvments**](./docs/Scenarios.PerformanceImprovements.document.md)
 
--   [**Redacting Secrets**](./Scenarios/RedactingSecrets.document.md)
+-   [**Redacting Secrets**](./docs/Scenarios.RedactingSecrets.document.md)
 
--   [**Deep Diagnostics**](./Scenarios/DeepDiagnostics.document.md)
+-   [**Deep Diagnostics**](./docs/Scenarios.DeepDiagnostics.document.md)
 
--   [**Reliability**](./Scenarios/Reliability.document.md)
+-   [**Reliability**](./docs/Scenarios.Reliability.document.md)
 
 -   [**Durable Dashboards and
-    Alerts**](./Scenarios/DurableDashboards.Alerts.document.md)
+    Alerts**](./docs/Scenarios.DurableDashboards.Alerts.document.md)
 
 </div>
 
@@ -116,27 +116,27 @@ interesting to muttiple personas.
 
 <div class="grid cards" markdown>
 
-- :fontawesome-solid-desktop: [**Interactive UI**](./Scenarios/InteractiveUI.document.md)
+- :fontawesome-solid-desktop: [**Interactive UI**](./docs/Scenarios.InteractiveUI.document.md)
 
     that bridges an interactive debugger, with your standard OpenTelemetry pipeline
 
-- :fontawesome-solid-shield: [**Safe Deployment**](./PositionPapers/ConfigurationDeployment.document.md)
+- :fontawesome-solid-shield: [**Safe Deployment**](./docs/PositionPaper.ConfigurationDeployment.document.md)
 
     of a diagnostic probes and dynamic configuration
 
-- :fontawesome-solid-shield: [**Durable ID's and Structured Payloads**](./PositionPapers/DurableIds_StructuredPayloads.document.md)
+- :fontawesome-solid-shield: [**Durable ID's and Structured Payloads**](./docs/PositionPaper.DurableIds_StructuredPayloads.document.md)
 
-- :fontawesome-solid-shield: [**File vs. Streaming**](./PositionPapers/FileAndStreaming.document.md)
+- :fontawesome-solid-shield: [**File vs. Streaming**](./docs/PositionPaper.FileAndStreaming.document.md)
 
-- :fontawesome-solid-shield: [**Flight Recorders**](./PositionPapers/FlightRecorder.document.md)
+- :fontawesome-solid-shield: [**Flight Recorders**](./docs/PositionPaper.FlightRecorder.document.md)
 
-- :fontawesome-solid-shield: [**Guide to Verbosity**](./PositionPapers/GuideToLogVerbosity.document.md)
+- :fontawesome-solid-shield: [**Guide to Verbosity**](./docs/PositionPaper.GuideToLogVerbosity.document.md)
 
-- :fontawesome-solid-shield: [**Observer Effect**](./PositionPapers/ObserverEffect.document.md)
+- :fontawesome-solid-shield: [**Observer Effect**](./docs/PositionPaper.ObserverEffect.document.md)
 
-- :fontawesome-solid-shield: [**Telemetry Unbilical**](./PositionPapers/TelemetryUmbilical.document.md)
+- :fontawesome-solid-shield: [**Telemetry Unbilical**](./docs/PositionPaper.TelemetryUmbilical.document.md)
 
-- :fontawesome-solid-shield: [**Defining Production**](./PositionPapers/DefiningProduction.document.md)
+- :fontawesome-solid-shield: [**Defining Production**](./docs/PositionPaper.DefiningProduction.document.md)
 
 </div>
 ``` cdocs
