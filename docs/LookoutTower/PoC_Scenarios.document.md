@@ -11,7 +11,7 @@ Interactive Observability
 
 ## Setup
 
-```bash
+```cdocs
 helm repo add jaegertracing https://jaegertracing.github.io/helm-charts
 helm repo add grafana https://grafana.github.io/helm-charts
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
@@ -40,7 +40,7 @@ helm repo add open-telemetry https://open-telemetry.github.io/opentelemetry-helm
 
 ## Installation Notes
 
-```bash
+```cdocs
 https://minikube.sigs.k8s.io/docs/start/
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube_latest_amd64.deb
 sudo dpkg -i minikube_latest_amd64.deb

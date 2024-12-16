@@ -13,11 +13,19 @@ an unknown state and then dynamically adjusts its state in response to
 the events it processes. This approach is particularly useful for tasks
 such as timing, counting, and measuring in challenging contexts.
 
-To illustrate, consider the need to track a particular type of
-operation, such as processing a specific file type like a JPEG image.
-When the state machine processor detects the log message indicating that
-a JPEG file has been opened, it transitions from the unknown state to a
-user-defined state, such as the \"processing JPEG\" state. This
+To illustrate, consider a contrived example - generating unique hashs of a file. Perhaps data files or images JPEG image.
+
+
+```cdocs
+
+{% include "../../../LookoutTower/Samples/FileExtensionStats/Sample.FileExtensionStats.cs"
+    start="//<!--start-ImageHashExample-->"
+    end="//<!--end-ImageHashExample-->"
+%}
+
+```
+
+In this example; a Log message is generated when a This
 transition is based on the pre-configured, and dynamically deployed,
 criteria within the state machine.
 
@@ -38,42 +46,6 @@ Lets look at a few examples, as they likely will help tell the tale
 
 Image a piece of code that looks something like this:
 
-```cdocs
-
-{% include "../../../LookoutTower/Samples/FileExtensionStats/Program.cs" %}
-
-```
-
-
-```csharp
-using Microsoft.Extensions.Logging;
-
-internal partial class Program
-{
-    static void Main(string[] args)
-    {
-
-        using ILoggerFactory factory = LoggerFactory.Create(builder => builder.AddConsole());
-        ILogger logger = factory.CreateLogger("Program");
-        LogStartupMessage(logger, DateTimeOffset.Now);
-
-        Random random = new Random();
-        for(; ; )
-        {
-            int delay = random.Next(1000);
-            LogWork(logger, delay);
-            Thread.Sleep(delay);
-        }
-    }
-
-    [LoggerMessage(Level = LogLevel.Information, Message = "Starting Process {workAmount}.")]
-    static partial void LogWork(ILogger logger, int workAmount);
-
-    [LoggerMessage(Level = LogLevel.Information, Message = "Starting Process {startTime}.")]
-    static partial void LogStartupMessage(ILogger logger, DateTimeOffset startTime);
-}
-```
-
 
 
 ``` mermaid
@@ -83,8 +55,6 @@ internal partial class Program
         Unknown --> | LogOpeningFile | JpegOpened
         JpegOpened--> |LogClosed | Unknown
 ```
-
-XYZ
 
 Actions of Interest:
 
