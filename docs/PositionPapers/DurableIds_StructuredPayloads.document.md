@@ -62,7 +62,7 @@ After the example, we will then outline why the Durable ID and Structured
 
 1. EXAMPLE #1  (GOOD!)
 
-```text
+```cdocs
 
 LoggingWrite(
         g_Handle,
@@ -73,7 +73,7 @@ LoggingWrite(
 
 ### EXAMPLE #2 (BAD!)
 
-```bash
+```cdocs
 
 LoggingWrite("UPDATING VALUE: updating value to %d", value);
 
@@ -92,7 +92,7 @@ examples are encoded in a similarly the below;  this is the "ENCODED_DATA"
 boundary below - before being passed off to the Operating Systems telemetry
 plumbing.
 
-```bash
+```cdocs
 # EXAMPLE1: with DurableId/Structured Payload
 [DurableID][UdateValue]                          <-- potentially compact
 
@@ -192,7 +192,7 @@ The searching doesn't have to be limited to a database - it's common to have on
 
 ### Second Example
 
-```bash
+```cdocs
 Line 000010 : printf("ALLOC(%d bytes) for %s", size, bufferName1);
               //business logic
 Line 001000 : printf("FREE(%s)", bufferName1);
@@ -200,7 +200,7 @@ Line 001000 : printf("FREE(%s)", bufferName1);
 Line 100000 : printf("FREE(%s)", bufferName2)
 ```
 
-```bash
+```cdocs
 |  Time    | Message                             |
 |    ---   | ---                                 |
 | 12:00:00 | ALLOC(10 bytes) for database_open   |
