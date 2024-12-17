@@ -5,7 +5,7 @@ status: ReviewLevel1_Phase1
 
 # Probe Explanation
 
-In DynamicTelemetry a "[PROBE](../../Definitions.document.md#PROBE)" is the base case
+In DynamicTelemetry a "[PROBE](./Definitions.document.md#PROBE)" is the base case
 abstraction for all means of measure. PROBES extract information from the
 working system, and convert them into a schematized OpenTelemetry Log, Metric,
 or Trace.
@@ -111,14 +111,14 @@ ToDo:
 
 ## Probe Risk
 
-Probes inherently pose risks to [Production](../../PositionPapers/DefiningProduction.document.md)
+Probes inherently pose risks to [Production](./PositionPaper.DefiningProduction.document.md)
 systems. These risks manifest in various forms. DynamicTelemetry aims to mitigate
 these risks across five different dimensions: Privacy, Security, Reliability,
 Cost, and Performance.
 
 This document provides a framework for understanding these risks and the
 mitigation techniques used, as discussed in
-the [Observer Effect](../../PositionPapers/ObserverEffect.document.md).
+the [Observer Effect](./PositionPaper.ObserverEffect.document.md).
 
 ## Probe Risk mitigation's
 
@@ -128,10 +128,10 @@ Mitigation:
 
 1. READ-ONLY: intentionally a PROBE does not alter the functionally of a system
 
-1. [Configuration Deployment](../../PositionPapers/ConfigurationDeployment.document.md);
+1. [Configuration Deployment](./PositionPaper.ConfigurationDeployment.document.md);
 PROBE configurations are always deployed with the same oversight as production code.
 
-1. [Privacy](../../PositionPapers/TelemetryUmbilical.document.md)
+1. [Privacy](./PositionPaper.TelemetryUmbilical.document.md)
 
 ### Security
 
@@ -160,35 +160,35 @@ PROBE configurations are always deployed with the same oversight as production c
 
 ### OpenTelemetry
 
-![image](../../orig_media/Risk.OpenTelemetry.png)
+![image](../orig_media/Risk.OpenTelemetry.png)
 
 ### DTrace
 
-![image](../../orig_media/Risk.DTrace.png)
+![image](../orig_media/Risk.DTrace.png)
 
 ### eBPF
 
-![image](../../orig_media/Risk.eBPF.png)
+![image](../orig_media/Risk.eBPF.png)
 
 ### ptrace
 
-![image](../../orig_media/Risk.ptrace.png)
+![image](../orig_media/Risk.ptrace.png)
 
 ### uprobes
 
-![image](../../orig_media/Risk.uprobes.png)
+![image](../orig_media/Risk.uprobes.png)
 
 ### user_events
 
-![image](../../orig_media/Risk.user_events.png)
+![image](../orig_media/Risk.user_events.png)
 
 
 ## Windows Probe Types (and their risks)
 
 ### ETW
 
-![image](../../orig_media/Risk.ETW.png)
+![image](../orig_media/Risk.ETW.png)
 
 ### eBPF
 
-![image](../../orig_media/Risk.eBPF.png)
+![image](../orig_media/Risk.eBPF.png)

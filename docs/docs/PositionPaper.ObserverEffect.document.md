@@ -59,7 +59,7 @@ telemetry with the potential performance costs.
 
 The Dynamic Telemetry system has developed a comprehensive taxonomy for
 both probes and **actions**, recognizing that perceptions of operational
-risk vary among different usage [personas](../Personas//Personas.Overview.document.md), and hosting environments. This
+risk vary among different usage [personas](./Personas.Overview.document.md), and hosting environments. This
 taxonomy enables DevOps teams, program managers, and developers to
 collaboratively assess risks in a manner tailored to their specific
 environmental needs.
@@ -67,7 +67,7 @@ environmental needs.
 Due to the extensive nature and potential changes in this taxonomy, a
 dedicated section in the architecture documents covers dynamic
 telemetry. This section will comprehensively describe how to quantify,
-measure, and communicate the risks to different [personas](../Personas//Personas.Overview.document.md). Each of the
+measure, and communicate the risks to different [personas](./Personas.Overview.document.md). Each of the
 various probes and actions can be evaluated using a spider chart similar
 to, but not identical to, the example below.
 
@@ -75,7 +75,7 @@ to, but not identical to, the example below.
 ![](../orig_media/Risk.eBPF.png)
 
 In the above charts you\'ll see that the more area is shaded the more
-risk the particular probe or action type brings. ETW (Windows), when configured incorrectly may inadvertency modify system behavior - whereas eBPF intentionally modifies system behavior, and therefore presents more risks to the different user [personas](../Personas//Personas.Overview.document.md).
+risk the particular probe or action type brings. ETW (Windows), when configured incorrectly may inadvertency modify system behavior - whereas eBPF intentionally modifies system behavior, and therefore presents more risks to the different user [personas](./Personas.Overview.document.md).
 
  It is often also the
 case that with more risk comes more performance or more flexibility.

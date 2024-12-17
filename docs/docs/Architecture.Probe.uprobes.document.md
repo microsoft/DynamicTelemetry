@@ -5,4 +5,4 @@ status: ReviewLevel1
 
 # PROBE : uprobe
 
-![image](../../orig_media/Risk.uprobes.png)
+![image](../orig_media/Risk.uprobes.png)

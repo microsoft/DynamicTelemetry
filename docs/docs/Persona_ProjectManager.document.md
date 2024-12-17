@@ -21,8 +21,8 @@ The PROJECT_MANAGER Persona in DynamicTelemetry:
 1. Is well versed and comfortablze with the differences between security and
 privacy.  Knows how to protect users.
 
-1. [Clear Failujres via Schemas](../PositionPapers/ClearFailuresViaSchema.document.md)
-1. [Triggered Flight Recorder](../PositionPapers/TriggeredFlightRecorder.document.md)
+1. [Clear Failujres via Schemas](./PositionPaper.ClearFailuresViaSchema.document.md)
+1. [Triggered Flight Recorder](./PositionPaper.TriggeredFlightRecorder.document.md)
 
 ## Scenarios
 

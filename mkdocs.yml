@@ -63,127 +63,127 @@ nav:
     - Introduction: index.md
 
     - Personas:
-        - Overview: ./Personas/Personas.Overview.document.md
+        - Overview: ./docs/Personas.Overview.document.md
         - Personas:
-            - Data Analyst: ./Personas/Persona_DataAnalysis.document.md
-            - DevOps: ./Personas/Persona_DevOps.document.md
-            - Developer : ./Personas/Persona_Developer.document.md
-            - Project Manager: ./Personas/Persona_ProjectManager.document.md
+            - Data Analyst: ./docs/Persona_DataAnalysis.document.md
+            - DevOps: ./docs/Persona_DevOps.document.md
+            - Developer : ./docs/Persona_Developer.document.md
+            - Project Manager: ./docs/Persona_ProjectManager.document.md
 
     - Scenarios:
-        - Overview: ./Scenarios/Scenarios.Overview.document.md
+        - Overview: ./docs/Scenarios.Overview.document.md
         - Scenarios:
             - CostReduction:
-                - Convert Logs to Metrics: ./Scenarios/ConvertLogsToMetrics.document.md
-                - EventSuppression: ./Scenarios/EventSuppression.document.md
+                - Convert Logs to Metrics: ./docs/Scenarios.ConvertLogsToMetrics.document.md
+                - EventSuppression: ./docs/Scenarios.EventSuppression.document.md
 
             - Performance:
-                - EventAggregation: ./Scenarios/EventAggregation.document.md
-                - EventSuppression: ./Scenarios/EventSuppression.document.md
+                - EventAggregation: ./docs/Scenarios.EventAggregation.document.md
+                - EventSuppression: ./docs/Scenarios.EventSuppression.document.md
             - Privacy and Security:
-                - EventFieldSuppression: ./Scenarios/EventFieldSuppression.document.md
-                - EventSuppression: ./Scenarios/EventSuppression.document.md
+                - EventFieldSuppression: ./docs/Scenarios.EventFieldSuppression.document.md
+                - EventSuppression: ./docs/Scenarios.EventSuppression.document.md
             - Deep Diagnostics:
-                - Overview: ./Scenarios/Overview.DeepDiagnostics.document.md
-                - MemoryLeak: ./Scenarios/MemoryLeak.document.md
-                - TriggeredMemoryDump: ./PositionPapers/TriggeredMemoryDump.document.md
-                - TriggeredFlightRecorder: ./PositionPapers/TriggeredFlightRecorder.document.md
-                - ExtractingMemoryWithUProbe: ./Scenarios/ExtractingMemoryWithUProbe.document.md
+                - Overview: ./docs/Scenarios.Overview.DeepDiagnostics.document.md
+                - MemoryLeak: ./docs/Scenarios.MemoryLeak.document.md
+                - TriggeredMemoryDump: ./docs/PositionPaper.TriggeredMemoryDump.document.md
+                - TriggeredFlightRecorder: ./docs/PositionPaper.TriggeredFlightRecorder.document.md
+                - ExtractingMemoryWithUProbe: ./docs/Scenarios.ExtractingMemoryWithUProbe.document.md
             - Reliability:
-                - A/B Testing: ./PositionPapers/ABTestingWithRichDiagnostics.document.md
-                - Clearly defined failures: ./PositionPapers/ClearFailuresViaSchema.document.md
-                - Traditional Testing: ./PositionPapers/TraditionalTesting.md
-                
-            - Durable Dashboards and Alerts: ./Scenarios/DurableDashboards.Alerts.document.md
-            - Changing Environments: ./Scenarios/ChangingEnvironments.document.md
+                - A/B Testing: ./docs/PositionPaper.ABTestingWithRichDiagnostics.document.md
+                - Clearly defined failures: ./docs/PositionPaper.ClearFailuresViaSchema.document.md
+                - Traditional Testing: ./docs/PositionPaper.TraditionalTesting.md
+
+            - Durable Dashboards and Alerts: ./docs/Scenarios.DurableDashboards.Alerts.document.md
+            - Changing Environments: ./docs/Scenarios.ChangingEnvironments.document.md
 
 
     - Architecture:
-        - Overview: ./Architecture/Architecture.Overview.document.md
-        - Definitions: ./Definitions.document.md
+        - Overview: ./docs/Architecture.Overview.document.md
+        - Definitions: ./docs/Definitions.document.md
 
         - Components:
-            - Overview: ./Architecture/Components/Components.Overview.document.md
+            - Overview: ./docs/Architecture.Components.Overview.document.md
             - ObservabilityTypes :
-                - Streaming: ./Architecture/Components/Streaming.Observability.document.md
-                - File Based: ./Architecture/Components/FileBased.Observability.document.md
+                - Streaming: ./docs/Architecture.Components.Streaming.Observability.document.md
+                - File Based: ./docs/Architecture.Components.FileBased.Observability.document.md
 
             - Processors :
-                - Overview: ./Architecture/Components/Processors/Processor.Overview.document.md
+                - Overview: ./docs/Architecture.Components.Processor.Overview.document.md
                 - Options:
-                    - Query Language : ./Architecture/Components/Processors/Processor.QueryLanguage.document.md
-                    - Language : ./Architecture/Components/Processors/Processor.language.document.md
-                    - StateMachine : ./Architecture/Components/Processors/Processor.StateMachine.document.md
+                    - Query Language : ./docs/Architecture.Components.Processor.QueryLanguage.document.md
+                    - Language : ./docs/Architecture.Components.Processor.language.document.md
+                    - StateMachine : ./docs/Architecture.Components.Processor.StateMachine.document.md
 
             - Processor Installation Locations:
-                - Internal Observer: ./Architecture/Components/Observer.InProcess.document.md
-                - Kernel Observer: ./Architecture/Components/Observer.Kernel.document.md
-                - External, on-box Observer: ./Architecture/Components/Observer.External.OnBox.document.md
-                - External, off-box Observer: ./Architecture/Components/Observer.External.OffBox.document.md
+                - Internal Observer: ./docs/Architecture.Components.Observer.InProcess.document.md
+                - Kernel Observer: ./docs/Architecture.Components.Observer.Kernel.document.md
+                - External, on-box Observer: ./docs/Architecture.Components.Observer.External.OnBox.document.md
+                - External, off-box Observer: ./docs/Architecture.Components.Observer.External.OffBox.document.md
 
         - Design Patterns:
-            - Overview: ./Architecture/DesignPatterns/DesignPatterns.Overview.document.md
+            - Overview: ./docs/Architecture.DesignPatterns.DesignPatterns.Overview.document.md
             - Primitives:
-                - Queues: ./Architecture/DesignPatterns/Queues.document.md
-                - Counters: ./Architecture/DesignPatterns/Counters.document.md
-                - Valves: ./Architecture/DesignPatterns/Valves.document.md
-                - Toggles: ./Architecture/DesignPatterns/Toggles.document.md
-                - Triggers: ./Architecture/DesignPatterns/Triggers.document.md
+                - Queues: ./docs/Architecture.DesignPatterns.Queues.document.md
+                - Counters: ./docs/Architecture.DesignPatterns.Counters.document.md
+                - Valves: ./docs/Architecture.DesignPatterns.Valves.document.md
+                - Toggles: ./docs/Architecture.DesignPatterns.Toggles.document.md
+                - Triggers: ./docs/Architecture.DesignPatterns.Triggers.document.md
 
         - KeyConstructs:
-            - Overview: ./Architecture/KeyConstructs.Overview.document.md
+            - Overview: ./docs/Architecture.KeyConstructs.Overview.document.md
             - Actions :
-                - Overview: ./Architecture/Actions/ActionExplanation.document.md
+                - Overview: ./docs/Architecture.Action.Explanation.document.md
                 - Sample Actions:
-                    - ConfigCollection: ./Architecture/Actions/Action.ConfigCollection.document.md
-                    - CPUSample: ./Architecture/Actions/Action.CPUSample.document.md
-                    - FileCollection: ./Architecture/Actions/Action.FileCollection.document.md
-                    - FlightRecorder: ./Architecture/Actions/Action.FlightRecorder.document.md
-                    - MemoryDump: ./Architecture/Actions/Action.MemoryDump.document.md
-                    - ProcessExecution: ./Architecture/Actions/Action.ProcessExecution.document.md
-                    - StateCollection: ./Architecture/Actions/Action.StateCollection.document.md
-                    - Verbose Logs: ./Architecture/Actions/Action.VerboseLogs.document.md
+                    - ConfigCollection: ./docs/Architecture.Action.ConfigCollection.document.md
+                    - CPUSample: ./docs/Architecture.Action.CPUSample.document.md
+                    - FileCollection: ./docs/Architecture.Action.FileCollection.document.md
+                    - FlightRecorder: ./docs/Architecture.Action.FlightRecorder.document.md
+                    - MemoryDump: ./docs/Architecture.Action.MemoryDump.document.md
+                    - ProcessExecution: ./docs/Architecture.Action.ProcessExecution.document.md
+                    - StateCollection: ./docs/Architecture.Action.StateCollection.document.md
+                    - Verbose Logs: ./docs/Architecture.Action.VerboseLogs.document.md
 
             - Probes:
-                - Overview: ./Architecture/Probes/Probes.Overview.document.md
+                - Overview: ./docs/Architecture.Probes.Overview.document.md
                 - Sample Probes:
                     - Linux:
-                        - DTrace: ./Architecture/Probes/Probe.DTrace.document.md
-                        - OpenTelemetry: ./Architecture/Probes/Probe.OpenTelemetry.document.md
-                        - eBPF: ./Architecture/Probes/Probe.eBPF.document.md
-                        - ptrace: ./Architecture/Probes/Probe.ptrace.document.md
-                        - uprobes: ./Architecture/Probes/Probe.uprobes.document.md
-                        - user_events: ./Architecture/Probes/Probe.user_events.document.md
+                        - DTrace: ./docs/Architecture.Probe.DTrace.document.md
+                        - OpenTelemetry: ./docs/Architecture.Probe.OpenTelemetry.document.md
+                        - eBPF: ./docs/Architecture.Probe.eBPF.document.md
+                        - ptrace: ./docs/Architecture.Probe.ptrace.document.md
+                        - uprobes: ./docs/Architecture.Probe.uprobes.document.md
+                        - user_events: ./docs/Architecture.Probe.user_events.document.md
                     - Windows:
-                        - ETW: ./Architecture/Probes/Probe.ETW.document.md
+                        - ETW: ./docs/Architecture.Probe.ETW.document.md
 
 
     - Appendix:
-        - Overview: ./PositionPapers/PositionPapers.Overview.document.md
+        - Overview: ./docs/PositionPaper.PositionPapers.Overview.document.md
 
         - Position Papers:
-            - Actions: ./PositionPapers/Actions.document.md
-            - ConfigurationDeployment: ./PositionPapers/ConfigurationDeployment.document.md
-            - DurableIds_StructuredPayloads: ./PositionPapers/DurableIds_StructuredPayloads.document.md
-            - FileAndStreaming: ./PositionPapers/FileAndStreaming.document.md
-            - FlightRecorder: ./PositionPapers/FlightRecorder.document.md
-            - GuideToLogVerbosity: ./PositionPapers/GuideToLogVerbosity.document.md
-            - ObserverEffect: ./PositionPapers/ObserverEffect.document.md
-            - ProbeRiskLevels: ./PositionPapers/ProbeRiskLevels.document.md
-            - TelemetryUmbilical: ./PositionPapers/TelemetryUmbilical.document.md
-            - Defining Production: ./PositionPapers/DefiningProduction.document.md
-            - Cloud and Edge Interop: ./PositionPapers/CloudAndEdgeInterop.document.md
-            - Delivery Gurantees: ./PositionPapers/DeliveryGuarantees.document.md
-            - Probe to Header : ./PositionPapers/ProbeToHeader.document.md
-            - Suppressing and Pushing Stack Args : ./PositionPapers/WhereToSuppressInProc.document.md
-            - Convert Logs to Metrics: ./PositionPapers/ConvertLogsToMetrics.document.md
-            - DynamicallyToggleLogs: ./PositionPapers/DynamicallyToggleLogs.document.md
+            - Actions: ./docs/PositionPaper.Actions.document.md
+            - ConfigurationDeployment: ./docs/PositionPaper.ConfigurationDeployment.document.md
+            - DurableIds_StructuredPayloads: ./docs/PositionPaper.DurableIds_StructuredPayloads.document.md
+            - FileAndStreaming: ./docs/PositionPaper.FileAndStreaming.document.md
+            - FlightRecorder: ./docs/PositionPaper.FlightRecorder.document.md
+            - GuideToLogVerbosity: ./docs/PositionPaper.GuideToLogVerbosity.document.md
+            - ObserverEffect: ./docs/PositionPaper.ObserverEffect.document.md
+            - ProbeRiskLevels: ./docs/PositionPaper.ProbeRiskLevels.document.md
+            - TelemetryUmbilical: ./docs/PositionPaper.TelemetryUmbilical.document.md
+            - Defining Production: ./docs/PositionPaper.DefiningProduction.document.md
+            - Cloud and Edge Interop: ./docs/PositionPaper.CloudAndEdgeInterop.document.md
+            - Delivery Gurantees: ./docs/PositionPaper.DeliveryGuarantees.document.md
+            - Probe to Header : ./docs/PositionPaper.ProbeToHeader.document.md
+            - Suppressing and Pushing Stack Args : ./docs/PositionPaper.WhereToSuppressInProc.document.md
+            - Convert Logs to Metrics: ./docs/PositionPaper.ConvertLogsToMetrics.document.md
+            - DynamicallyToggleLogs: ./docs/PositionPaper.DynamicallyToggleLogs.document.md
 
     - Lookout Tower:
-        - PoC Scenarios: ./LookoutTower/PoC_Scenarios.document.md
-        - Intro Demo: ./Demos/1_IntroDemo.md
-        - Dynamic Probe: ./Demos/2_DynamicProbe.md
-        - Adding Forgotten Session Id: ./LookoutTower/Samples/AddingSessionId/LookoutTower.Sample.AddSessionId.document.md
+        - PoC Scenarios: ./docs/LookoutTower.PoC_Scenarios.document.md
+        - Intro Demo: ./docs/Demos.1_IntroDemo.md
+        - Dynamic Probe: ./docs/Demos.2_DynamicProbe.md
+        - Adding Forgotten Session Id: ./docs/LookoutTower.Sample.AddSessionId.document.md
         - Scrub Secret: ./LookoutTower/Samples/ScrubSecret/LookoutTower.Sample.ScrubSecret.document.md
         - Suppress Chatty Log: ./LookoutTower/Samples/SuppressChattyLog/LookoutTower.Sample.SuppressChattyLog.document.md
 

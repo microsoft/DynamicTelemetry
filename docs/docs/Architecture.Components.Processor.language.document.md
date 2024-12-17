@@ -21,7 +21,7 @@ nominal and expected values.
 ## Simple Code Example; hashing files
 
 ``` cdocs
-{% include "../../../LookoutTower/Samples/FileExtensionStats/Sample.FileExtensionStats.cs"
+{% include "../LookoutTower/Samples/FileExtensionStats/Sample.FileExtensionStats.cs"
     start="//<!--start-ImageHashExample-->"
     end="//<!--end-ImageHashExample-->"
 %}
@@ -78,7 +78,7 @@ Image a piece of code that looks something like this:
 ### Verifying Hash Algorithm
 
 ``` cdocs
-{% include "../../../LookoutTower/Samples/FileExtensionStats/Sample.FileExtensionStats.cs"
+{% include "../LookoutTower/Samples/FileExtensionStats/Sample.FileExtensionStats.cs"
 
     start="//<!--start-PseudoExample-Language-Processor-VerifyHash-->"
 
@@ -90,10 +90,10 @@ Image a piece of code that looks something like this:
 
 ## Useful Actions
 
--   [CPU Sampling](../../Actions/Action.CPUSample.document.md)
--   [Verbose Logs](../../Actions/Action.VerboseLogs.document.md)
--   [Memory Dump](../../Actions//Action.MemoryDump.document.md)
+-   [CPU Sampling](./Architecture.Action.CPUSample.document.md)
+-   [Verbose Logs](./Architecture.Action.VerboseLogs.document.md)
+-   [Memory Dump](./Architecture.Action.MemoryDump.document.md)
 
 ## Example Scenarios
 
-{% include "../../../bib.md" %}
+{% include "./bib.md" %}

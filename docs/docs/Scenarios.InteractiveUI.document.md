@@ -12,7 +12,7 @@ DynamicTelemetry is a tool that helps you diagnose and solve tough cloud problem
 
 DynamicTelemetry is designed to serve four different user personas: project managers, data analysts, developers, and DevOps professionals. Each persona can use the same technology in different ways, depending on their specific needs and goals.
 
-Please read over the [philosophy of DynamicTelemetry](../Architecture/Architecture.Overview.document.md) to better understand where we favor existing technolgoies, over creating from scratch.
+Please read over the [philosophy of DynamicTelemetry](./Architecture.Overview.document.md) to better understand where we favor existing technolgoies, over creating from scratch.
 
 ## Interactive UI Tenants
 
@@ -21,8 +21,8 @@ Please read over the [philosophy of DynamicTelemetry](../Architecture/Architectu
 
 ## References
 
-1. [Architecture](../Architecture//Architecture.Overview.document.md)
+1. [Architecture](./Architecture.Overview.document.md)
 
-1. [Probe Risks](../PositionPapers/ProbeRiskLevels.document.md)
+1. [Probe Risks](./PositionPaper.ProbeRiskLevels.document.md)
 
-1. [Configuration Deployments](../PositionPapers/ConfigurationDeployment.document.md)
+1. [Configuration Deployments](./PositionPaper.ConfigurationDeployment.document.md)
