@@ -1,3 +1,8 @@
+---
+author: "Chris Gray"
+status: ReviewLevel2
+---
+
 # The Observer Effect
 
 The observer effect in physics refers to the phenomenon where the act of

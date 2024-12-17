@@ -1,3 +1,8 @@
+---
+author: "Chris Gray"
+status: ReviewLevel2
+---
+
 # PROCESSOR : Query Language
 
 The query language processor is one of the most straightforward

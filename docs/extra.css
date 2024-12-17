@@ -1,47 +1,36 @@
-.md-status--ReviewLevel1::after {
+
+
+  .md-status--ReviewLevel1::after {
     background-color: var(--color-background-dark);
     border-radius: 0.2rem;
     color: red;
-    content: "R:1/5";
+    content: "[Incomplete]";
     font-size: 0.5rem;
-    height: auto;       
+    height: auto;
     padding: 0.1rem;
     -webkit-mask-image: none;
     width: auto;
   }
-  
-  .md-status--ReviewLevel1_Phase1::after {
-    background-color: var(--color-background-dark);
-    border-radius: 0.2rem;
-    color: purple;
-    content: "**IMPORTANT***";
-    font-size: 0.5rem;
-    height: auto;       
-    padding: 0.1rem;
-    -webkit-mask-image: none;
-    width: auto;
-  }
-  
-  
+
   .md-status--ReviewLevel2::after {
     background-color: var(--color-background-dark);
     border-radius: 0.2rem;
-    color: red;
-    content: "2/5";
+    color: orange;
+    content: "[PRE-DRAFT]";
     font-size: 0.5rem;
-    height: auto;       
+    height: auto;
     padding: 0.1rem;
     -webkit-mask-image: none;
     width: auto;
   }
-  
+
   .md-status--ReviewLevel3::after {
     background-color: var(--color-background-dark);
     border-radius: 0.2rem;
-    color: orange;
-    content: "3/5";
+    color: lightgreen;
+    content: "[DRAFT]";
     font-size: 0.5rem;
-    height: auto;       
+    height: auto;
     padding: 0.1rem;
     -webkit-mask-image: none;
     width: auto;
@@ -53,19 +42,19 @@
     color: orange;
     content: "4/5";
     font-size: 0.5rem;
-    height: auto;       
+    height: auto;
     padding: 0.1rem;
     -webkit-mask-image: none;
     width: auto;
   }
-  
+
   .md-status--ReviewLevel5::after {
     background-color: var(--color-background-dark);
     border-radius: 0.2rem;
     color: green    ;
     content: "5/5";
     font-size: 0.5rem;
-    height: auto;       
+    height: auto;
     padding: 0.1rem;
     -webkit-mask-image: none;
     width: auto;

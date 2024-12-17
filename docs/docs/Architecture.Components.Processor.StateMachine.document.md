@@ -1,3 +1,8 @@
+---
+author: "Chris Gray"
+status: ReviewLevel2
+---
+
 # PROCESSOR : State Machine
 
 The state machine processor is a relatively simple yet highly effective

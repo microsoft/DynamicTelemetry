@@ -1,6 +1,6 @@
 ---
 author: "Chris Gray"
-status: ReviewLevel1
+status: ReviewLevel2
 ---
 
 # Durable ID's and Structured Payloads

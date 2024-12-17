@@ -1,6 +1,6 @@
 ---
 author: "Chris Gray"
-status: ReviewLevel1_Phase1
+status: ReviewLevel1
 description : Introduction to DynamicTelemetry
 ---
 #
@@ -25,6 +25,8 @@ into the distributed cloud.
 
 Before diving into the overall architecture, lets watch a quick
 demonstration that will showcase the end to end workflow.
+
+
 
 In this high-level demonstration, we've added DynamicTelemetry to the
 standard OpenTelemetry Kubernetes sample, but otherwise have not
@@ -75,7 +77,6 @@ interesting to muttiple personas.
     Someone who wants to understand a developer's intent may want to
     know how many items should be on a queue or what response latencies
     were expected when a piece of code was authored.
-
 </div>
 
 
