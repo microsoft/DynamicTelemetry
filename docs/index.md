@@ -82,40 +82,28 @@ interesting to muttiple personas.
 
 <div class="grid cards" markdown>
 
--   [**Cost Reduction**](./docs/Scenarios.CostReduction.document.md)
-
-	Convert verbose logs into concise metrics, suppress large payloads, or
-	drop unnecessary logs.
-
 -   [**Performance and Diagnostics**](./docs/Scenarios.DeepDiagnostics.document.md)
 
-	Use Dynamic Telemetry to start CPU sampling when services misbehave.
-	Turn off diagnostic telemetry when systems are operating normally.
-
-	Acquire advanced diagnostic techniques to identify bugs effectively.
-	Initiate memory dumps when your service behaves in ways you do not
-	expect. When your OpenTelemetry indicates problems, you can perform CPU
-	sampling, collect memory dumps, or even dynamically increase telemetry
-	volume.
+    Disable diagnostic telemetry when systems are stable; enable it when they are not. Quickly trigger memory dumps or collect CPU samples during production issues. Deploy observers to monitor telemetry and gather necessary data only when needed.
 
 -   [**Security and Secrets**](./docs/Scenarios.RedactingSecrets.document.md)
 
-	Use Dynamic Telemetry to detect -- and immediately suppress --
-	individual fields within Logs, that inadvertently contain sensitive
-	information such as PATs or keys. Dynamic Telemetry can remove these, at
-	the source, far more quickly than a rebuild or redeploy.
+	Detect and immediately suppress	individual fields within Logs, that may inadvertently contain sensitive
+	information such as PATs, IP addresses, user information, or crypto keys. Remove these, at
+	their source, instantly - without rebuild or redeploy.
 
 
 -   [**Reliability**](./docs/Scenarios.Reliability.document.md)
 
-	Utilize Dynamic Telemetry to test your services effectively; write tests
-	using logging to identify issues before and after deployment.
+	Test your services more effectively; make your Production code self diagnose. Couple the self diagnostics with Actions that toggle up and down telemetry volume, collect memory dumps, and CPU samples.
 
 -   [**Durability - Dashboards and Alerts**](./docs/Scenarios.DurableDashboards.Alerts.document.md)
 
-	Dynamic Telemetry improves dashboards and alerts more effectively than
-	logs. Flexible schemas in Logs/Metrics/Traces can bridge your
-	dashboards, alerts, and tests; helping identify issues before and during
-	production.
+	Enhance the durability of your dashboards and alerts, making them resilient to environmental changes and code refactoring. Develop flexible schemas in logs, metrics, and traces that bridge dashboards and streamline communication between coworkers across various disciplines, enable AI to find problems on your behalf.
+
+-   [**Cost Reduction**](./docs/Scenarios.CostReduction.document.md)
+
+	Convert verbose logs into concise metrics, suppress large payloads, or
+	drop unnecessary logs.
 
 </div>
