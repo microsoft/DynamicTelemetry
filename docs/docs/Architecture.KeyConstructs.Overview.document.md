@@ -1,13 +1,20 @@
-If there is any aspect of dynamic telemetry that requires thorough
+---
+author: "Chris Gray"
+status: ReviewLevel1b
+---
+
+# Overview of Key Constructs; Actions and Probes
+
+If there is any aspect of Dynamic Telemetry that requires thorough
 understanding, it is the critical distinction between static telemetry
-and dynamic telemetry. At its core, this distinction represents the
+and Dynamic Telemetry. At its core, this distinction represents the
 transition from hard-coded, static assets to more versatile and
-utilitarian dynamic telemetry. This concept forms the foundation of
-dynamic telemetry.
+utilitarian Dynamic Telemetry. This concept forms the foundation of
+Dynamic Telemetry.
 
 There are two crucial classifications of enhancements applied to
 telemetry: traditional telemetry markers. These classifications are: (1)
-the **action**, and (2) the **probe**.
+the **Action**, and (2) the **Probe**.
 
 A deeper discussion will be presented in subsequent subsections.
 Generally, a probe refers to an element that can be added to software,
@@ -18,4 +25,4 @@ The second concept involves actions---when a probe identifies something
 of interest, a state machine can be dynamically deployed and attached to
 the running system without compromising its security and privacy. An
 action involves collecting information that was not previously gathered
-before the implementation of dynamic telemetry.
+before the implementation of Dynamic Telemetry.

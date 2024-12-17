@@ -178,6 +178,10 @@ nav:
             - Suppressing and Pushing Stack Args : ./docs/PositionPaper.WhereToSuppressInProc.document.md
             - Convert Logs to Metrics: ./docs/PositionPaper.ConvertLogsToMetrics.document.md
             - DynamicallyToggleLogs: ./docs/PositionPaper.DynamicallyToggleLogs.document.md
+            - Logs into Metrics: ./docs/PositionPaper.ConvertLogsToMetrics.document.md
+            - Impacts of Scarcity: ./docs/PositionPaper.ScarcityAndHumans.md
+
+
 
     - Lookout Tower:
         - PoC Scenarios: ./docs/LookoutTower.PoC_Scenarios.document.md

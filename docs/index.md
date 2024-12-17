@@ -1,6 +1,6 @@
 ---
 author: "Chris Gray"
-status: ReviewLevel1
+status: ReviewLevel2
 description : Introduction to DynamicTelemetry
 ---
 #
@@ -25,8 +25,6 @@ into the distributed cloud.
 
 Before diving into the overall architecture, lets watch a quick
 demonstration that will showcase the end to end workflow.
-
-
 
 In this high-level demonstration, we've added DynamicTelemetry to the
 standard OpenTelemetry Kubernetes sample, but otherwise have not
@@ -89,21 +87,10 @@ interesting to muttiple personas.
 	Convert verbose logs into concise metrics, suppress large payloads, or
 	drop unnecessary logs.
 
--   [**Performance
-    Improvements**](./docs/Scenarios.PerformanceImprovements.document.md)
+-   [**Performance and Diagnostics**](./docs/Scenarios.DeepDiagnostics.document.md)
 
 	Use Dynamic Telemetry to start CPU sampling when services misbehave.
 	Turn off diagnostic telemetry when systems are operating normally.
-
--   [**Redacting
-    Secrets**](./docs/Scenarios.RedactingSecrets.document.md)
-
-	Use Dynamic Telemetry to detect -- and immediately suppress --
-	individual fields within Logs, that inadvertently contain sensitive
-	information such as PATs or keys. Dynamic Telemetry can remove these, at
-	the source, far more quickly than a rebuild or redeploy.
-
--   [**Deep Diagnostics**](./docs/Scenarios.DeepDiagnostics.document.md)
 
 	Acquire advanced diagnostic techniques to identify bugs effectively.
 	Initiate memory dumps when your service behaves in ways you do not
@@ -111,13 +98,20 @@ interesting to muttiple personas.
 	sampling, collect memory dumps, or even dynamically increase telemetry
 	volume.
 
+-   [**Security and Secrets**](./docs/Scenarios.RedactingSecrets.document.md)
+
+	Use Dynamic Telemetry to detect -- and immediately suppress --
+	individual fields within Logs, that inadvertently contain sensitive
+	information such as PATs or keys. Dynamic Telemetry can remove these, at
+	the source, far more quickly than a rebuild or redeploy.
+
+
 -   [**Reliability**](./docs/Scenarios.Reliability.document.md)
 
 	Utilize Dynamic Telemetry to test your services effectively; write tests
 	using logging to identify issues before and after deployment.
 
--   [**Durable Dashboards and
-    Alerts**](./docs/Scenarios.DurableDashboards.Alerts.document.md)
+-   [**Durability - Dashboards and Alerts**](./docs/Scenarios.DurableDashboards.Alerts.document.md)
 
 	Dynamic Telemetry improves dashboards and alerts more effectively than
 	logs. Flexible schemas in Logs/Metrics/Traces can bridge your

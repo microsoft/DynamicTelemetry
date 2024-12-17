@@ -12,6 +12,18 @@
     width: auto;
   }
 
+  .md-status--ReviewLevel1b::after {
+    background-color: var(--color-background-dark);
+    border-radius: 0.2rem;
+    color: darkred;
+    content: "[Talking Points]";
+    font-size: 0.5rem;
+    height: auto;
+    padding: 0.1rem;
+    -webkit-mask-image: none;
+    width: auto;
+  }
+
   .md-status--ReviewLevel2::after {
     background-color: var(--color-background-dark);
     border-radius: 0.2rem;
