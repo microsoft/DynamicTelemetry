@@ -84,11 +84,11 @@ interesting to muttiple personas.
 
 -   [**Performance and Diagnostics**](./docs/Scenarios.DeepDiagnostics.document.md)
 
-    Disable diagnostic telemetry when systems are stable; enable it when they are not. Quickly trigger memory dumps or collect CPU samples during production issues. Deploy observers to monitor telemetry and gather necessary data only when needed.
+    Disable diagnostic telemetry when systems are stable; enable it when they are not. Quickly trigger memory dumps or collect CPU samples during production issues. Deploy observers to monitor telemetry and gather extra diagnostic data, only when needed.
 
 -   [**Security and Secrets**](./docs/Scenarios.RedactingSecrets.document.md)
 
-	Detect and immediately suppress	individual fields within Logs, that may inadvertently contain sensitive
+	Detect and immediately suppress sensitive (or expensive) fields within Logs, should they inadvertently contain sensitive
 	information such as PATs, IP addresses, user information, or crypto keys. Remove these, at
 	their source, instantly - without rebuild or redeploy.
 
