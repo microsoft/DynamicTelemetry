@@ -95,50 +95,29 @@ interesting to muttiple personas.
 
 <div class="grid cards" markdown>
 
-- [**Cost Reduction**](./docs/Scenarios.CostReduction.document.md)
+-   [**Cost Reduction**](./docs/Scenarios.CostReduction.document.md)
 
--   [**Performance
-    Improvments**](./docs/Scenarios.PerformanceImprovements.document.md)
+    Learn to dynamically turn chatty Logs into compact Metrics, to suppress large payloads
+    or to even drop unnecessary logs.
+
+-   [**Performance Improvements**](./docs/Scenarios.PerformanceImprovements.document.md)
+
+    Learn to use Dynamic Telemetry to initiate CPU sampling, when your services are misbehaving.  Or Toggle off large swaths of diagnsotic telemetry, when your systems are operating Nominally.
 
 -   [**Redacting Secrets**](./docs/Scenarios.RedactingSecrets.document.md)
 
+    In the rare case that you've discovered Logs/Metrics/Spans that contain secrets (PATs, keys, etc) use Dynamic Telemetry to silence them at the source; with a speed faster than a rebuild/redeploy.
+
 -   [**Deep Diagnostics**](./docs/Scenarios.DeepDiagnostics.document.md)
+
+    Learn advanced diagnostic tricks to trap your bugs;  initiate memory dumps when your leaking memory, start CPU sampling when you're operating slowly, or dynamically toggle up telemetry volume when your system is misbehaving.
 
 -   [**Reliability**](./docs/Scenarios.Reliability.document.md)
 
--   [**Durable Dashboards and
-    Alerts**](./docs/Scenarios.DurableDashboards.Alerts.document.md)
+    Use Dynamic Telemetry to cleverly test your services;  author tests that use your Logging to spot issues - both before AND after you deploy.
+
+-   [**Durable Dashboards and Alerts**](./docs/Scenarios.DurableDashboards.Alerts.document.md)
+
+    Dynamic Telemetry can make your dashboards and alerts far more durable than using logs.  Take advantage of flexible schemas, to connect your dashboards and your tests - spot issues before and in production.
 
 </div>
-
-
-## Position Papers
-
-<div class="grid cards" markdown>
-
-- :fontawesome-solid-desktop: [**Interactive UI**](./docs/Scenarios.InteractiveUI.document.md)
-
-    that bridges an interactive debugger, with your standard OpenTelemetry pipeline
-
-- :fontawesome-solid-shield: [**Safe Deployment**](./docs/PositionPaper.ConfigurationDeployment.document.md)
-
-    of a diagnostic probes and dynamic configuration
-
-- :fontawesome-solid-shield: [**Durable ID's and Structured Payloads**](./docs/PositionPaper.DurableIds_StructuredPayloads.document.md)
-
-- :fontawesome-solid-shield: [**File vs. Streaming**](./docs/PositionPaper.FileAndStreaming.document.md)
-
-- :fontawesome-solid-shield: [**Flight Recorders**](./docs/PositionPaper.FlightRecorder.document.md)
-
-- :fontawesome-solid-shield: [**Guide to Verbosity**](./docs/PositionPaper.GuideToLogVerbosity.document.md)
-
-- :fontawesome-solid-shield: [**Observer Effect**](./docs/PositionPaper.ObserverEffect.document.md)
-
-- :fontawesome-solid-shield: [**Telemetry Unbilical**](./docs/PositionPaper.TelemetryUmbilical.document.md)
-
-- :fontawesome-solid-shield: [**Defining Production**](./docs/PositionPaper.DefiningProduction.document.md)
-
-</div>
-``` cdocs
-hello world!
-```
