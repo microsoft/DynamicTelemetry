@@ -26,11 +26,11 @@ nets" that catch bugs.
 
 ##  {#section .unnumbered}
 
-## Simple Example : dialing up Logging/Diagnostics when something goes wrong 
+## Simple Example : dialing up Logging/Diagnostics when something goes wrong
 
 For example, consider a situation where a production system works well
 during testing and under light load but experiences unexpectedly high
-CPU contention from time to time. Developers have many throies, and
+CPU contention from time to time. Developers have many theories, and
 little data -- they suspect the machine could be entering receive
 livelock but are unsure why.
 
@@ -60,7 +60,7 @@ waiting for a triggering condition. Once a triggered, an "Action" is
 called; which in turn provides the desired diagnostic information
 necessary for a root cause.
 
-## An Example 
+## An Example
 
 By configuring the Processor to dynamically monitor these log messages,
 it can track the queue depth in real-time. If the queue length exceeds
