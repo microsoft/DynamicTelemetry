@@ -70,11 +70,9 @@ interesting to muttiple personas.
     For example how many items should be on a queue, what response
     latencies were expected when a piece of code was authored.
 
--   [**PROJECT_MANAGER**](./docs/Persona_ProjectManager.document.md)
+-   [**BUSINESS_OWNER**](./docs/Persona_ProjectManager.document.md)
 
-    Someone who wants to understand a developer's intent may want to
-    know how many items should be on a queue or what response latencies
-    were expected when a piece of code was authored.
+   
 </div>
 
 
