@@ -82,3 +82,12 @@ By dynamically enabling and disabling probes and actions, you can create
 a flexible and responsive system that adapts to changing conditions and
 captures valuable diagnostic information when needed.
 
+
+``` cdocs
+
+{% include "../LookoutTower/Samples/TriggeringOnQueue/TriggeringOnQueue.cs"
+    start="//<!--start-SampleWorkQueue-->"
+    end="//<!--end-SampleWorkQueue-->"
+%}
+
+```
