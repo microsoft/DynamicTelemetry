@@ -1,4 +1,4 @@
-/////<!--start-->
+//<!--start-->
 using Microsoft.Extensions.Logging;
 using System.Security.Cryptography;
 using System.Text;
@@ -16,7 +16,9 @@ internal partial class TriggeringOnQueue
 
         for(; ; )
         {
-            worker.EnqueueWork(new Work());
+            int depth = worker.EnqueueWork(new Work());
+            if (depth > 10000)
+                Thread.Sleep(5000);
         }
     }
 
@@ -32,7 +34,7 @@ internal partial class TriggeringOnQueue
     {
         private readonly ILogger m_logger;
         private object m_lock = new object();
-        private Semaphore m_workItemReadySemaphore = new Semaphore(1, 1);
+        private Semaphore m_workItemReadySemaphore = new Semaphore(0, int.MaxValue);
         private Queue<Work> m_WorkQueue = new Queue<Work>();
 
         public ExampleWorkerAgent(ILogger logger)
@@ -40,13 +42,14 @@ internal partial class TriggeringOnQueue
             m_logger = logger;
         }
 
-        public void EnqueueWork(Work work)
+        public int EnqueueWork(Work work)
         {
             lock (m_lock)
             {
                 m_WorkQueue.Enqueue(work);
                 m_workItemReadySemaphore.Release();
                 LogEnqueueWork(m_logger, m_WorkQueue.Count);
+                return m_WorkQueue.Count;
             }
         }
 
