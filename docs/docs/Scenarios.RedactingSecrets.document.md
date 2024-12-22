@@ -1,14 +1,7 @@
-
-
-
-
-
-
 ---
 author: "Chris Gray"
 status: ReviewLevelb
 ---
-
 
 # Redacting Secrets, PII, and Dropping Telemetry
 
