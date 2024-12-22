@@ -17,21 +17,114 @@ AI methods of observing a system.
 
 With Dynamic Telemetry, your test assets are broken into five pillars
 
-1.  Self describing Production Code
-    - Self Describing Production Code : ./docs/PositionPaper.SelfDescribingProductionCode.document.md
+##  Self-describing Production Code:
 
-2.  Internal Auditing of Production Code
-    - Internal Audits of Production Code : ./docs/PositionPaper.InternalAuditsOfProductionCode.document.md
+Dynamic telemetry takes advantage of the durable identifiers and
+structure payloads within your logging and metrics in order to provide
+loose schemas that can be used in self-describing quality
+characteristics of code. While these topics are discussed further in
+other sections, the key aspect can be summarized as Lightweight
+telemetry that signals positive failure, or can otherwise indicate
+operational characteristics
 
-3.  External Auditing of Production Code
-    - External Audits of Production Code : ./docs/PositionPaper.ExternalAuditsOfProductionCode.document.md
+## Self Describing Production Code :
+    ./docs/PositionPaper.SelfDescribingProductionCode.document.md
 
-1.  Entropy Creators
-    - Testing With Entropy: ./docs/PositionPaper.TestingWithEntropy.document.md
+## Internal Auditing of Production Code:
 
-5.  Diagnostic Collection
+An internal audit production code involves creating classifications of
+errors that adhere to strict definitions, unlike the flexible
+classifications often found in other logging and telemetry systems.
+Specifically, this means that an error must clearly describe something
+exceptional that is not permitted. Every identified error requires
+investigation until resolved.
 
-6.  Appropriate Alerts
+For instance, the failure to open a key database file is an example of
+an error worth investigating, whereas the failure to open a user file
+may not be considered a failure. The distinction may seem subtle but is
+significant. For example, in a library that processes files, treating
+the failure to open a file as an error might be inappropriate. This type
+of failure might be flagged as a warning, whereas higher layers might
+treat it as a critical error, such as with a database.
+
+-   Internal Audits of Production Code :
+    ./docs/PositionPaper.InternalAuditsOfProductionCode.document.md
+
+## External Auditing of Production Code
+
+An external audit of the code introduces environmental characteristics
+to the code. For example, what might be a programmatic warning internal
+to the code could be treated as an error by an external observer.
+
+This is where the power of dynamic telemetry can be found. This power
+allows for the training of nominal operating characteristics for a
+particular environment on specific hardware. The external observer
+should be viewed as an advocate for the user within the operational
+environment.
+
+Imagine code in a unit test environment treating particular failures
+with extreme strictness; perhaps any file error is treated as an error
+worth investigating. However, as the code migrates from unit testing to
+scenario testing, the threshold for an investigated failure may shift.
+
+As the code enters the stress environment, the opposite characteristics
+may be applied. For instance, the inability to open a file may no longer
+be treated as an error but rather as a success.
+
+In all cases, however, failures encountered during fuzz testing are
+consistently regarded as errors worthy of further study.
+
+The ability to redefine what is a error worth investigating at runtime
+without recompilation is a key value of Dynamic Telemetry.
+
+## External Audits of Production Code :
+    ./docs/PositionPaper.ExternalAuditsOfProductionCode.document.md
+
+## Entropy Creators
+
+As you explore using telemetry to pass and fail tests, and consider
+different layers of testing as your code\'s execution environment
+changes, it becomes clear how crucial unit testing, stress testing, and
+scenario testing are. This method offers a powerful solution to many
+complex software issues by defining the characteristics you want to
+verify through tests that are dynamically attached to the software as
+external observers.
+
+Once these tests are attached as observers, they can be monitored from
+various points. At this stage, the test engineer needs to design tests
+that introduce enough entropy into the system to determine if the test
+passes or fails. This testing approach is quite fascinating and aligns
+with some philosophical principles in unit testing, deserving further
+consideration.
+
+-   Testing With Entropy:
+    ./docs/PositionPaper.TestingWithEntropy.document.md
+
+##  Diagnostic Collection
+
+Diagnostic collection essentially involves gathering the content that
+programmers or operational teams deem necessary for diagnosing system
+failures. Dynamic telemetry defines an error as an issue requiring
+investigation, therefore providing clear guidance, and total clarity of
+expectation, on the subsequent steps and specifying what needs to be
+collected.
+
+    1.  Should an internal external test fail
+    2.  Collect what the developer said they need
+
+It cannot get simpler. Best of all, with dynamic telemetry, the cost of
+mistakes is low. Clear expectations do not guarantee unique logs, memory
+dumps, or CPU traces when issues arise. Different personas, such as the
+operational team or program management team, also set equally clear
+expectations.
+
+These balances are explored more deeply in the diagnostic collection
+sections. In short though; simply because a developer clearly requests a
+memory dump for minor issues or seek extensive CPU sampling, they may
+not get what they want -- because their operational team set equally
+clear guidance on topics like memory, disk, and CPU usage.
+
+##  Appropriate Alerts
 
 This innovative approach ensures that every aspect of the software is
 continuously monitored, providing real-time insights and enabling
@@ -77,7 +170,6 @@ incorporating these steps into the test pipeline, organizations can
 achieve a higher level of observability and maintain the quality of
 their software123.
 
-
 ## How to Think about Testing, in a world of Dynamic Telemetry
 
 ## Dynamic Telemetry Pillars of Testing
@@ -95,4 +187,3 @@ their software123.
 ### Appropriate Alerts
 
 ## How to Create Quality Analysis Rings
-
