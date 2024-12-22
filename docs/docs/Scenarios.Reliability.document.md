@@ -1,13 +1,85 @@
----
-author: "Chris Gray"
-status: ReviewLevelb
----
+# Reliability
 
-# Draft - only talking points are present
+In the ever-evolving landscape of software development, testing has
+become more than just a mechanical process --- there has become an art
+form. Some of this art stems from the siloed theories that come from
+fast paced development cycles, mixed with differing test strategies.
+Unit testing, stress testing, scenario testing, scale testing, fuzz
+testing, and penetration testing each have their own methodologies,
+strengths and weaknesses, making it challenging to achieve a cohesive
+testing strategy on a strict time budget.
 
-Talking Points:
+Enter Dynamic Telemetry, a revolutionary approach that transforms
+traditional testing into a holistic system monitoring experience. By
+seamlessly incorporating tests and key indicators directly into the
+production code, Dynamic Telemetry opens the door to new statistical and
+AI methods of observing a system.
 
-1. Theory of Reliability
-    1. Integrate Tests into Production
-    1. 'Clip on' Tests, both in Production and in Test
+With Dynamic Telemetry, your test assets are decompiled into three
+pillars
 
+1.  Self describing Production Code
+
+2.  Internal Auditing of Production Code
+
+3.  External Auditing of Production Code
+
+4.  Entropy Creators
+
+5.  Diagnostic Collection
+
+6.  Appropriate Alerts
+
+This innovative approach ensures that every aspect of the software is
+continuously monitored, providing real-time insights and enabling
+proactive responses to potential issues. With Dynamic Telemetry,
+developers can achieve unparalleled levels of observability, making it
+easier than ever to maintain the reliability and performance of their
+systems. Embrace the future of testing with Dynamic Telemetry and
+experience the power of comprehensive, real-time system monitoring.
+
+Dynamic Telemetry addresses these challenges by integrating testing into
+the production code and leveraging both internal and external
+observations. This approach bridges the gap between multiple
+disciplines, allowing for singular functionality runs that encompass
+various testing methods. By doing so, Dynamic Telemetry provides a
+unified and efficient testing framework that enhances system reliability
+and performance.
+
+## Traditional "Testing" - Telemetry, Analysis, and Informing
+
+Traditional testing often involves a series of predefined tests that are
+run in a controlled environment to ensure that the software behaves as
+expected. One crucial aspect of this process is emitting signals. Often
+these signals are the comfortable prematives taught in school - error
+codes, crashs, or thrown exceptions.
+
+By emitting these signals during testing, developers can monitor the
+system's performance and identify any anomalies or failures.
+
+Once the signals are emitted, the next step is studying the results.
+This involves analyzing the collected data to understand the system's
+behavior and identify any potential issues. The developer will use the
+simplified failures (error codes, crashes, or thrown exceptions) as
+indication that the software is not performacing to specification, and
+will then open up log files and source code to figure out what happened.
+
+Finally, it's essential to inform the operator about the test results.
+This can be done through alerts or dashboards that provide real-time
+updates on the system's status. If a test case fails or a dashboard
+alert goes off, the operator can quickly take action to address the
+issue. This proactive approach helps prevent potential problems from
+escalating and ensures that the system remains stable and reliable. By
+incorporating these steps into the test pipeline, organizations can
+achieve a higher level of observability and maintain the quality of
+their software123.
+
+### Telemetry
+
+### Analysis
+
+### Informing
+
+## How to Think about Testing, in a world of Dynamic Telemetry
+
+## How to Create Quality Analysis Rings

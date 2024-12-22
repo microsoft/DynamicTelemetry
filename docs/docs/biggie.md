@@ -1362,6 +1362,11 @@ to better understand STREAMING telemetry.
 
 ## When you must; only in very serious perf paths, suppress before callstacks
 
+# Coming Soon
+
+Points: 1. Locks and putting logging in places where performance is
+preserved
+
 # The Observer Effect
 
 The observer effect in physics refers to the phenomenon where the act of
@@ -1494,6 +1499,11 @@ deployment rings, and communication systems for the hosting environment.
 
 # Coming Soon
 
+# Coming Soon
+
+Points: 1. Just because "I" understand a piece of "data"; doesnt mean
+"you" will 1. ...especially if "I" dont know "you" 1.
+
 # Telemetry UMBILICAL
 
 ## Introduction
@@ -1539,14 +1549,94 @@ Talking Points:
         Metrics](./PositionPaper.LogsIntoMetrics.md)
     3.  Discover Bottlenecks
 
-# Draft - only talking points are present
+# Using Dynamic Telemetry for Deep Diagnostics, at Scale
 
-Talking Points:
+In Dynamic Telemetry, Probes and Actions play crucial roles in
+monitoring and diagnosing system behavior. Probes, such as any Log
+produced in OpenTelemetry, are read by a Dynamic Telemetry Processor as
+dynamic elements that can be used in various ways to better understand
+the runtime characteristics of the system. This approach provides an
+additional layer of depth to your software, which is useful and valuable
+for analysis and troubleshooting. The Probes and accompanying Processor
+are designed to operate transparently within the system without causing
+measurable disruption to performance or reliability. Probes can either
+be static, always active and continuously monitoring the system, or
+dynamic, enabled or disabled as needed.
 
-1.  Theory of Deep Diagnostics=
-    1.  "Casting Nets"
-    2.  Importance of Actions
-2.  Theory of Performance
+Actions, on the other hand, involve diagnostic operations that do not
+alter the system state and can be dynamically enabled or disabled.
+Suitable actions might include enabling CPU sampling, collecting
+configurations, managing flight recorders, inducing memory dumps, and
+collecting other types of state data.
+
+When combined, Probes and Actions create a powerful mechanism to "cast
+nets" that catch bugs.
+
+##  {#section .unnumbered}
+
+## Simple Example : dialing up Logging/Diagnostics when something goes wrong
+
+For example, consider a situation where a production system works well
+during testing and under light load but experiences unexpectedly high
+CPU contention from time to time. Developers have many theories, and
+little data -- they suspect the machine could be entering receive
+livelock but are unsure why.
+
+If they could predict which computer would next exhibit the problem,
+they could turn on CPU sampling when the issue occurs. The challenge is
+that once the problem arises, it is resolved before they're able to:
+
+-   Collect a memory dump to inspect work queues
+
+-   Enable CPU sampling to determine which code is heavily utilized,
+
+-   Enable verbose diagnostic traces.
+
+By using Dynamic Telemetry effectively, teams can proactively manage and
+resolve such issues, improving overall system stability and performance.
+
+## Casting 'Nets'
+
+The Diagnostic Telemetry solution to this class of problem involves
+casting broad 'nets' on multiple machines expected to encounter this
+situation. Each net is very lightweight, with negligible performance or
+reliability concerns.
+
+These nets are simply configurations for a Dynamic Telemetry Processor
+that remain mostly dormant, monitoring selected logging values while
+waiting for a triggering condition. Once a triggered, an "Action" is
+called; which in turn provides the desired diagnostic information
+necessary for a root cause.
+
+## An Example
+
+By configuring the Processor to dynamically monitor these log messages,
+it can track the queue depth in real-time. If the queue length exceeds
+predefined criteria set in the Processor's configuration, the Processor
+can initiate various diagnostic actions such as capturing a memory dump,
+enabling CPU sampling, or activating more verbose logging. This dynamic
+monitoring allows for proactive detection and response to potential
+issues, ensuring abnormalities are promptly addressed, thereby
+maintaining system stability and performance.
+
+Probes are deployed to monitor specific aspects of the system and emit
+data when certain conditions are met. For example, a probe might monitor
+the return value of a particular function or track the occurrence of
+specific events. When a probe detects something noteworthy, it can
+trigger an action. This action may involve collecting additional data,
+enabling more detailed logging, or capturing a memory dump.
+
+By dynamically enabling and disabling probes and actions, you can create
+a flexible and responsive system that adapts to changing conditions and
+captures valuable diagnostic information when needed.
+
+``` cdocs
+
+{% include "../LookoutTower/Samples/TriggeringOnQueue/TriggeringOnQueue.cs"
+    start="//<!--start-SampleWorkQueue-->"
+    end="//<!--end-SampleWorkQueue-->"
+%}
+```
 
 # Draft - only talking points are present
 
@@ -1666,17 +1756,147 @@ the essential ones.
     converting large macro services into microservices or aggregating
     microservices and libraries
 
-# Draft - only talking points are present
+# Redacting Secrets, PII, and Dropping Telemetry
 
-Talking Points:
+Dropping or redacting portions of a log involves selectively removing or
+obscuring specific data within log entries to protect sensitive
+information or reduce noise. This practice is crucial for maintaining
+privacy and security, as logs often contain personal or confidential
+data such as email addresses, credit card numbers, or API keys.
+Additionally, dropping unnecessary log entries helps in managing log
+storage efficiently and ensures that only relevant data is retained for
+analysis. This process can be automated using tools and scripts that
+identify and redact sensitive data patterns, ensuring that logs remain
+useful for monitoring and troubleshooting without compromising security
 
-1.  Theory of Secret Redaction
-    1.  Measure and Detect
-    2.  Scrubber
-2.  Methods of Redacting Secrets
-    1.  [Dynamically Toggle Off
-        Logs](./PositionPaper.DynamicallyToggleLogs.document.md)
-    2.  Scrub variable payloads
+## Techincal Backbone of Secret Redaction
+
+Redacting portions of logs using durable IDs and structured payloads
+involves several technical steps to ensure that sensitive information is
+effectively removed while maintaining the integrity and usability of the
+logs.
+
+Durable IDs are unique identifiers that remain consistent across
+different log entries and sessions. They act like a GPS for debugging
+and analysis, allowing you to trace logs back to the exact line of code
+in the source. This consistency is crucial for accurately identifying
+and redacting sensitive information without losing the context of the
+log entries12.
+
+Structured payloads refer to the organization of log data into a
+well-defined format, possibly a binary format, or as JSON or XML. This
+structure makes it easier to identify and redact specific fields within
+the log entries. For example, instead of having a flat log message, a
+structured payload might separate different pieces of information into
+distinct fields, such as user_id, transaction_id, and timestamp. This
+separation allows for more precise redaction of sensitive data, such as
+email addresses or credit card numbers, without affecting other parts of
+the log.
+
+## Redaction Process
+
+The process typically involves the following steps:
+
+1.  **Identification**: Using durable IDs, the system identifies the
+    specific log entries that contain sensitive information.
+
+2.  **Redaction**: The structured payloads are then parsed to locate the
+    fields that need to be redacted. This can be done using regex
+    patterns or predefined rules that match sensitive data types.
+
+3.  **Replacement**: The sensitive data is replaced with a placeholder
+    or removed entirely. This ensures that the logs remain useful for
+    analysis while protecting sensitive information.
+
+4.  **Validation**: The redacted logs are validated to ensure that the
+    redaction process did not introduce any errors or inconsistencies.
+
+By combining durable IDs and structured payloads, organizations can
+achieve a more efficient and reliable redaction process, ensuring
+compliance with privacy regulations and reducing the risk of data
+breaches
+
+## Methods of Redacting Secrets
+
+### [Dynamically Toggle Off Logs](./PositionPaper.DynamicallyToggleLogs.document.md)
+
+Dynamically turning off individual logs using core operating system
+features such as user_events (Linux) or Event Tracing for Windows (ETW,
+on Windows) involves leveraging the inherent capabilities of these
+systems to manage logging efficiently. This method is particularly
+useful for high-performance applications where logging overhead needs to
+be minimized.
+
+**Event Tracing for Windows (ETW)** is a high-performance, low-overhead
+tracing framework built into the Windows operating system. It allows for
+the dynamic enabling and disabling of event tracing without requiring
+application or system restarts. ETW operates with minimal performance
+impact due to its efficient buffering and non-blocking logging
+mechanisms. It uses per-processor buffers that are written to disk by a
+separate thread, ensuring that logging does not interfere with the
+application\'s main operations1.
+
+**user_events** is a powerful feature built into the Linux kernel, that
+has some characteristics of ETW on Windows Dynamic Telemetry. It allows
+for the insertion of user-defined events into the standard Linux kernel
+mode logging streams, which can be enabled or disabled, in user mode, by
+Kernen - as needed. This flexibility is crucial for maintaining high
+performance, as it ensures that only relevant logs are captured,
+reducing unnecessary data collection and processing2.
+
+The process typically involves the following steps:
+
+1.  **Initialization**: Register the logging providers and define the
+    events that need to be traced. This can be done using ETW APIs or
+    user-defined events.
+
+2.  **Dynamic Control**: Use controllers to start, stop, or update the
+    tracing sessions. Controllers like Xperf, PerfView, or Logman can be
+    used to manage ETW sessions dynamically.
+
+3.  **Buffer Management**: Utilize in-memory circular buffers to store
+    log data temporarily. This data is only written to disk or processed
+    further if specific conditions are met, such as an error occurring.
+
+4.  **Filtering and Aggregation**: Apply filters to capture only the
+    necessary events and aggregate data to reduce the volume of logs.
+    This can be done using query language processors or state machine
+    processors within dynamic telemetry.
+
+5.  **Validation and Analysis**: Validate the captured logs to ensure
+    they are accurate and useful for analysis. This step may involve
+    converting verbose logs into metrics for easier interpretation and
+    reduced storage requirements6.
+
+By leveraging these fundamental operating system capabilities, you can
+achieve efficient and high-performance logging. This ensures that only
+critical data is captured and processed, thereby maintaining optimal
+system performance.
+
+### Scrub variable payloads
+
+Scrubbing payloads can be performed in various locations within a system
+to ensure sensitive information is protected and compliance requirements
+are met.
+
+1.  In the usermode portion of an app or agent, scrubbing can occur
+    before data is transmitted, ensuring that any sensitive information
+    is removed or obfuscated at the source.
+2.  In the kernel mode memory buffer, scrubbing can be implemented to
+    clean data as it is being processed, providing an additional layer
+    of security before it reaches usermode components.
+3.  The usermode aggregator and network transmitter can also perform
+    scrubbing to ensure that aggregated data sent to backend systems is
+    free of sensitive information.
+4.  In the backend, scrubbing can be done at
+    a.  the point of ingest, where data is first received and processed,
+        or
+    b.  within the database, where stored data is periodically reviewed
+        and cleaned to maintain data integrity and security.
+
+Each of these locations offers unique advantages and challenges, and the
+choice of where to implement scrubbing depends on the specific
+requirements and constraints of the system
 
 # Draft - only talking points are present
 
