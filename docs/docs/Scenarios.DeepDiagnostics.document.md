@@ -26,8 +26,6 @@ collecting other types of state data.
 When combined, Probes and Actions create a powerful mechanism to "cast
 nets" that catch bugs.
 
-##  {#section .unnumbered}
-
 ## Simple Example : dialing up Logging/Diagnostics when something goes wrong
 
 For example, consider a situation where a production system works well
