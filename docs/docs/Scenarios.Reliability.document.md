@@ -27,8 +27,7 @@ other sections, the key aspect can be summarized as Lightweight
 telemetry that signals positive failure, or can otherwise indicate
 operational characteristics
 
-## Self Describing Production Code :
-    ./docs/PositionPaper.SelfDescribingProductionCode.document.md
+[Self Describing Production Code](./docs/PositionPaper.SelfDescribingProductionCode.document.md)
 
 ## Internal Auditing of Production Code:
 
@@ -47,8 +46,7 @@ the failure to open a file as an error might be inappropriate. This type
 of failure might be flagged as a warning, whereas higher layers might
 treat it as a critical error, such as with a database.
 
--   Internal Audits of Production Code :
-    ./docs/PositionPaper.InternalAuditsOfProductionCode.document.md
+[Internal Audits of Production Code](./docs/PositionPaper.InternalAuditsOfProductionCode.document.md)
 
 ## External Auditing of Production Code
 
@@ -77,8 +75,7 @@ consistently regarded as errors worthy of further study.
 The ability to redefine what is a error worth investigating at runtime
 without recompilation is a key value of Dynamic Telemetry.
 
-## External Audits of Production Code :
-    ./docs/PositionPaper.ExternalAuditsOfProductionCode.document.md
+[External Audits of Production Code](./docs/PositionPaper.ExternalAuditsOfProductionCode.document.md)
 
 ## Entropy Creators
 
@@ -97,8 +94,7 @@ passes or fails. This testing approach is quite fascinating and aligns
 with some philosophical principles in unit testing, deserving further
 consideration.
 
--   Testing With Entropy:
-    ./docs/PositionPaper.TestingWithEntropy.document.md
+[Testing With Entropy](/docs/PositionPaper.TestingWithEntropy.document.md)
 
 ##  Diagnostic Collection
 
@@ -109,8 +105,8 @@ investigation, therefore providing clear guidance, and total clarity of
 expectation, on the subsequent steps and specifying what needs to be
 collected.
 
-    1.  Should an internal external test fail
-    2.  Collect what the developer said they need
+1. Should an internal external test fail
+1. Collect what the developer said they need
 
 It cannot get simpler. Best of all, with dynamic telemetry, the cost of
 mistakes is low. Clear expectations do not guarantee unique logs, memory
@@ -147,7 +143,7 @@ and performance.
 Traditional testing often involves a series of predefined tests that are
 run in a controlled environment to ensure that the software behaves as
 expected. One crucial aspect of this process is emitting signals. Often
-these signals are the comfortable prematives taught in school - error
+these signals are the comfortable primitives taught in school - error
 codes, crashs, or thrown exceptions.
 
 By emitting these signals during testing, developers can monitor the
@@ -157,7 +153,7 @@ Once the signals are emitted, the next step is studying the results.
 This involves analyzing the collected data to understand the system's
 behavior and identify any potential issues. The developer will use the
 simplified failures (error codes, crashes, or thrown exceptions) as
-indication that the software is not performacing to specification, and
+indication that the software is not performing to specification, and
 will then open up log files and source code to figure out what happened.
 
 Finally, it's essential to inform the operator about the test results.
