@@ -15,16 +15,19 @@ seamlessly incorporating tests and key indicators directly into the
 production code, Dynamic Telemetry opens the door to new statistical and
 AI methods of observing a system.
 
-With Dynamic Telemetry, your test assets are decompiled into three
-pillars
+With Dynamic Telemetry, your test assets are broken into five pillars
 
 1.  Self describing Production Code
+    - Self Describing Production Code : ./docs/PositionPaper.SelfDescribingProductionCode.document.md
 
 2.  Internal Auditing of Production Code
+    - Internal Audits of Production Code : ./docs/PositionPaper.InternalAuditsOfProductionCode.document.md
 
 3.  External Auditing of Production Code
+    - External Audits of Production Code : ./docs/PositionPaper.ExternalAuditsOfProductionCode.document.md
 
-4.  Entropy Creators
+1.  Entropy Creators
+    - Testing With Entropy: ./docs/PositionPaper.TestingWithEntropy.document.md
 
 5.  Diagnostic Collection
 
@@ -74,12 +77,22 @@ incorporating these steps into the test pipeline, organizations can
 achieve a higher level of observability and maintain the quality of
 their software123.
 
-### Telemetry
-
-### Analysis
-
-### Informing
 
 ## How to Think about Testing, in a world of Dynamic Telemetry
 
+## Dynamic Telemetry Pillars of Testing
+
+### Self describing Production Code
+
+### Internal Auditing of Production Code
+
+### External Auditing of Production Code
+
+### Entropy Creators
+
+### Diagnostic Collection
+
+### Appropriate Alerts
+
 ## How to Create Quality Analysis Rings
+

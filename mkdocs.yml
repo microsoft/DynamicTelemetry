@@ -87,6 +87,12 @@ nav:
             - TriggeredFlightRecorder: ./docs/PositionPaper.TriggeredFlightRecorder.document.md
             - ExtractingMemoryWithUProbe: ./docs/Scenarios.ExtractingMemoryWithUProbe.document.md
         - Reliability:
+            - Overview : ./docs/Scenarios.Reliability.document.md
+            - Pillars:
+                - Self Describing Production Code : ./docs/PositionPaper.SelfDescribingProductionCode.document.md
+                - Internal Audits of Production Code : ./docs/PositionPaper.InternalAuditsOfProductionCode.document.md
+                - External Audits of Production Code : ./docs/PositionPaper.ExternalAuditsOfProductionCode.document.md
+                - Testing With Entropy: ./docs/PositionPaper.TestingWithEntropy.document.md
             - A/B Testing: ./docs/PositionPaper.ABTestingWithRichDiagnostics.document.md
             - Clearly defined failures: ./docs/PositionPaper.ClearFailuresViaSchema.document.md
             - Traditional Testing: ./docs/PositionPaper.TraditionalTesting.md
