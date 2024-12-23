@@ -160,35 +160,35 @@ PROBE configurations are always deployed with the same oversight as production c
 
 ### OpenTelemetry
 
-![image](../orig_media/Risk.OpenTelemetry.png)
+![image](../orig_media/Risk.OpenTelemetry.png){width="2.660757874015748in" height="1.8226607611548555in"}
 
 ### DTrace
 
-![image](../orig_media/Risk.DTrace.png)
+![image](../orig_media/Risk.DTrace.png){width="2.660757874015748in" height="1.8226607611548555in"}
 
 ### eBPF
 
-![image](../orig_media/Risk.eBPF.png)
+![image](../orig_media/Risk.eBPF.png){width="2.660757874015748in" height="1.8226607611548555in"}
 
 ### ptrace
 
-![image](../orig_media/Risk.ptrace.png)
+![image](../orig_media/Risk.ptrace.png){width="2.660757874015748in" height="1.8226607611548555in"}
 
 ### uprobes
 
-![image](../orig_media/Risk.uprobes.png)
+![image](../orig_media/Risk.uprobes.png){width="2.660757874015748in" height="1.8226607611548555in"}
 
 ### user_events
 
-![image](../orig_media/Risk.user_events.png)
+![image](../orig_media/Risk.user_events.png){width="2.660757874015748in" height="1.8226607611548555in"}
 
 
 ## Windows Probe Types (and their risks)
 
 ### ETW
 
-![image](../orig_media/Risk.ETW.png)
+![image](../orig_media/Risk.ETW.png){width="2.660757874015748in" height="1.8226607611548555in"}
 
 ### eBPF
 
-![image](../orig_media/Risk.eBPF.png)
+![image](../orig_media/Risk.eBPF.png){width="2.660757874015748in" height="1.8226607611548555in"}

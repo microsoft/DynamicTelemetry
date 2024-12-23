@@ -76,8 +76,8 @@ measure, and communicate the risks to different [personas](./Personas.Overview.d
 various probes and actions can be evaluated using a spider chart similar
 to, but not identical to, the example below.
 
-![](../orig_media/Risk.ETW.png)
-![](../orig_media/Risk.eBPF.png)
+![](../orig_media/Risk.ETW.png){width="2.660757874015748in" height="1.8226607611548555in"}
+![](../orig_media/Risk.eBPF.png){width="2.660757874015748in" height="1.8226607611548555in"}
 
 In the above charts you\'ll see that the more area is shaded the more
 risk the particular probe or action type brings. ETW (Windows), when configured incorrectly may inadvertency modify system behavior - whereas eBPF intentionally modifies system behavior, and therefore presents more risks to the different user [personas](./Personas.Overview.document.md).
