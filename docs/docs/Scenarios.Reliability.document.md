@@ -162,7 +162,7 @@ aspect can be summarized as Lightweight telemetry that signals positive
 failure, or can otherwise indicate operational characteristics
 
 [Self Describing Production
-Code](./docs/PositionPaper.SelfDescribingProductionCode.document.md)
+Code](./PositionPaper.SelfDescribingProductionCode.document.md)
 
 ## Internal Auditing of Production Code:
 
@@ -182,7 +182,7 @@ of failure might be flagged as a warning, whereas higher layers might
 treat it as a critical error, such as with a database.
 
 [Internal Audits of Production
-Code](./docs/PositionPaper.InternalAuditsOfProductionCode.document.md)
+Code](./PositionPaper.InternalAuditsOfProductionCode.document.md)
 
 ## External Auditing of Production Code
 
@@ -212,7 +212,7 @@ The ability to redefine what is a error worth investigating at runtime
 without recompilation is a key value of Dynamic Telemetry.
 
 [External Audits of Production
-Code](./docs/PositionPaper.ExternalAuditsOfProductionCode.document.md)
+Code](./PositionPaper.ExternalAuditsOfProductionCode.document.md)
 
 ## Entropy Creators
 
@@ -232,7 +232,7 @@ with some philosophical principles in unit testing, deserving further
 consideration.
 
 [Testing With
-Entropy](/docs/PositionPaper.TestingWithEntropy.document.md)
+Entropy](./PositionPaper.TestingWithEntropy.document.md)
 
 ## Diagnostic Collection
 

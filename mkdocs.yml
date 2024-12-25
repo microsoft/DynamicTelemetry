@@ -71,21 +71,18 @@ nav:
 
     - Scenarios:
         - Overview: ./docs/Scenarios.Overview.document.md
-        - CostReduction:
-            - Convert Logs to Metrics: ./docs/Scenarios.ConvertLogsToMetrics.document.md
-            - EventSuppression: ./docs/Scenarios.EventSuppression.document.md
-        - Performance:
-            - EventAggregation: ./docs/Scenarios.EventAggregation.document.md
-            - EventSuppression: ./docs/Scenarios.EventSuppression.document.md
-        - Privacy and Security:
-            - EventFieldSuppression: ./docs/Scenarios.EventFieldSuppression.document.md
-            - EventSuppression: ./docs/Scenarios.EventSuppression.document.md
-        - Deep Diagnostics:
-            - Overview: ./docs/Scenarios.Overview.DeepDiagnostics.document.md
+        - Performance and Diagnostics:
+            - Overview: ./docs/Scenarios.DeepDiagnostics.document.md
             - MemoryLeak: ./docs/Scenarios.MemoryLeak.document.md
             - TriggeredMemoryDump: ./docs/PositionPaper.TriggeredMemoryDump.document.md
             - TriggeredFlightRecorder: ./docs/PositionPaper.TriggeredFlightRecorder.document.md
             - ExtractingMemoryWithUProbe: ./docs/Scenarios.ExtractingMemoryWithUProbe.document.md
+
+        - Privacy and Security:
+            - Overview: ./docs/Scenarios.RedactingSecrets.document.md
+            - EventFieldSuppression: ./docs/Scenarios.EventFieldSuppression.document.md
+            - EventSuppression: ./docs/Scenarios.EventSuppression.document.md
+
         - Reliability:
             - Overview : ./docs/Scenarios.Reliability.document.md
             - Pillars:
@@ -96,8 +93,14 @@ nav:
             - A/B Testing: ./docs/PositionPaper.ABTestingWithRichDiagnostics.document.md
             - Clearly defined failures: ./docs/PositionPaper.ClearFailuresViaSchema.document.md
             - Traditional Testing: ./docs/PositionPaper.TraditionalTesting.md
-        - Durable Dashboards and Alerts: ./docs/Scenarios.DurableDashboards.Alerts.document.md
-        - Changing Environments: ./docs/Scenarios.ChangingEnvironments.document.md
+        - Durable Dashboards and Alerts:
+            - Overview : ./docs/Scenarios.DurableDashboards.Alerts.document.md
+            - Changing Environments: ./docs/Scenarios.ChangingEnvironments.document.md
+
+        - CostReduction:
+            - Overview: ./docs/Scenarios.CostReduction.document.md
+            - Convert Logs to Metrics: ./docs/Scenarios.ConvertLogsToMetrics.document.md
+            - EventSuppression: ./docs/Scenarios.EventSuppression.document.md
 
 
     - Architecture:

@@ -52,27 +52,28 @@ interesting to muttiple personas.
 
 <div class="grid cards" markdown>
 
--   [**DEVELOPER**](./docs/Persona_Developer.document.md)
+-   :material-human: [**Developer**](./docs/Persona_Developer.document.md)
 
     A programmer of Cloud Scale services, who is looking to add
     diagnostic probing, to their use of OpenTelemetry.
 
--   [**DEVOPS**](./docs/Persona_DevOps.document.md)
+-   :material-microsoft-azure-devops: [**DevOps**](./docs/Persona_DevOps.document.md)
 
     Someone monitoring a cloud service may want to gain insights without
     involving their development team. They may want to suppress chatty
     events, turn events into metrics, or suppress erroneous logs,
     metrics, or events.
 
--   [**DATA_ANALYST**](./docs/Persona_DataAnalysis.document.md)
+-  :scientist: [**Data Analyst**](./docs/Persona_DataAnalysis.document.md)
 
     Someone who would value better understanding of a Developers intent.
     For example how many items should be on a queue, what response
     latencies were expected when a piece of code was authored.
 
--   [**BUSINESS_OWNER**](./docs/Persona_ProjectManager.document.md)
+-   :material-store: [**Project Manager**](./docs/Persona_ProjectManager.document.md)
 
-   
+    So
+
 </div>
 
 
@@ -80,26 +81,26 @@ interesting to muttiple personas.
 
 <div class="grid cards" markdown>
 
--   [**Performance and Diagnostics**](./docs/Scenarios.DeepDiagnostics.document.md)
+-   :material-speedometer: [**Performance and Diagnostics**](./docs/Scenarios.DeepDiagnostics.document.md)
 
     Disable diagnostic telemetry when systems are stable; enable it when they are not. Quickly trigger memory dumps or collect CPU samples during production issues. Deploy observers to monitor telemetry and gather extra diagnostic data, only when needed.
 
--   [**Security and Secrets**](./docs/Scenarios.RedactingSecrets.document.md)
+-   :shield: [**Privacy and Security**](./docs/Scenarios.RedactingSecrets.document.md)
 
 	Detect and immediately suppress sensitive (or expensive) fields within Logs, should they inadvertently contain sensitive
 	information such as PATs, IP addresses, user information, or crypto keys. Remove these, at
 	their source, instantly - without rebuild or redeploy.
 
 
--   [**Reliability**](./docs/Scenarios.Reliability.document.md)
+-   :fontawesome-solid-dog: [**Reliability**](./docs/Scenarios.Reliability.document.md)
 
 	Test your services more effectively; make your Production code self diagnose. Couple the self diagnostics with Actions that toggle up and down telemetry volume, collect memory dumps, and CPU samples.
 
--   [**Durability - Dashboards and Alerts**](./docs/Scenarios.DurableDashboards.Alerts.document.md)
+-   :material-view-dashboard: [**Durability - Dashboards and Alerts**](./docs/Scenarios.DurableDashboards.Alerts.document.md)
 
 	Enhance the durability of your dashboards and alerts, making them resilient to environmental changes and code refactoring. Develop flexible schemas in logs, metrics, and traces that bridge dashboards and streamline communication between coworkers across various disciplines, enable AI to find problems on your behalf.
 
--   [**Cost Reduction**](./docs/Scenarios.CostReduction.document.md)
+-  :moneybag: [**Cost Reduction**](./docs/Scenarios.CostReduction.document.md)
 
 	Convert verbose logs into concise metrics, suppress large payloads, or
 	drop unnecessary logs.
