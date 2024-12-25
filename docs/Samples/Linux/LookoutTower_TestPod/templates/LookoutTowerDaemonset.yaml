@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: {{ .Release.Name }}-app
+#  labels:
+#    app: ubuntu
+spec:
+  containers:
+  - name: {{ .Release.Name }}-app
+    #image: ubuntu:latest
+    image: chgraypocotdtacr.azurecr.io/chgray123/chgray_repro:dev-mariner.18
+    command: ["/uprobetest/app"]
+    #dommand: ["/bin/sleep", "3650d"]
+    #command: ["/bin/sleep", "3650d"]
+    imagePullPolicy: IfNotPresent
+    restartPolicy: Always
+
+# helm install lookout-tower . --namespace default --set serviceAccount.create=false --set serviceAccount.name=workload-identity-sa
