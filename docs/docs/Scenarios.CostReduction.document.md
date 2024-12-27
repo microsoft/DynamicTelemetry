@@ -1,3 +1,13 @@
+---
+author: "Chris Gray"
+status: ReviewLevelb
+---
+
+![image](../orig_media/CostSavings.banner.png)
+
+{{ ProvideFeedback(page.file.src_uri) }}
+
+
 # Reducing Costs
 
 Dynamic Telemetry is a powerful tool that can be used to significantly
@@ -127,7 +137,7 @@ telemetry data. Ultimately, dropping chatty telemetry that is no longer
 useful helps in maintaining optimal system performance while still
 gathering the necessary diagnostic information1.
 
-## Removing Scarcity 
+## Removing Scarcity
 
 The fear of not having enough telemetry can be a significant source of
 anxiety for engineers and administrators. Telemetry data is crucial for

@@ -1,4 +1,17 @@
-# Improving Communication and Data Durablity
+
+---
+author: "Chris Gray"
+status: ReviewLevelb
+---
+
+![image](../orig_media/Durability.banner.png)
+
+{{ ProvideFeedback(page.file.src_uri) }}
+
+
+
+# Improving Communication and Data Durability
+
 
 Communicating between different personas within a project can be
 challenging due to varying perspectives, priorities, and levels of

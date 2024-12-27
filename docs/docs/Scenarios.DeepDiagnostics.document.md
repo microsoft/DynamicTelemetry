@@ -3,6 +3,8 @@ author: "Chris Gray"
 status: ReviewLevelb
 ---
 
+![image](../orig_media/PerformanceAndDiagnostics.banner.png)
+
 {{ ProvideFeedback(page.file.src_uri) }}
 
 

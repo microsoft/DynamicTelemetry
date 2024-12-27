@@ -3,7 +3,11 @@ author: "Chris Gray"
 status: ReviewLevelb
 ---
 
-# Redacting Secrets, PII, and Dropping Telemetry
+![image](../orig_media/RedactingSecrets.banner.png){width="5.5in"
+height="1.261111111111111in"}
+
+
+# Improving Your Security and Privacy Posture
 
 Dropping or redacting portions of a log involves selectively removing or
 obscuring specific data within log entries to protect sensitive
@@ -16,7 +20,7 @@ analysis. This process can be automated using tools and scripts that
 identify and redact sensitive data patterns, ensuring that logs remain
 useful for monitoring and troubleshooting without compromising security
 
-## Techincal Backbone of Secret Redaction
+## Technical Backbone of Secret Redaction
 
 Redacting portions of logs using durable IDs and structured payloads
 involves several technical steps to ensure that sensitive information is
