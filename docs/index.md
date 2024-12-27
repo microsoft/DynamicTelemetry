@@ -8,7 +8,8 @@ description : Introduction to DynamicTelemetry
 
 #
 
-![image](./orig_media/DynamicTelemetry.logo.png)
+![image](orig_media/DynamicTelemetry.logo.png){width="5.5in"
+height="1.261111111111111in"}
 
 Introducing DynamicTelemetry, an OpenSource, diagnostic compliment to
 OpenTelemetry.
@@ -75,7 +76,7 @@ interesting to muttiple personas.
 
 -   :material-store: [**Project Manager**](./docs/Persona_ProjectManager.document.md)
 
-    So
+    Someone responsible for planning, executing, and overseeing projects to ensure they are completed on time, within scope, and within budget.
 
 </div>
 
@@ -101,7 +102,8 @@ interesting to muttiple personas.
 
 -   :material-view-dashboard: [**Durability - Dashboards and Alerts**](./docs/Scenarios.DurableDashboards.Alerts.document.md)
 
-	Enhance the durability of your dashboards and alerts, making them resilient to environmental changes and code refactoring. Develop flexible schemas in logs, metrics, and traces that bridge dashboards and streamline communication between coworkers across various disciplines, enable AI to find problems on your behalf.
+    Develop flexible schemas in your logs, metrics, and traces that enhance the durability of your dashboards
+    and streamline communication between coworkers. Enable AI to find problems on your behalf.
 
 -  :moneybag: [**Cost Reduction**](./docs/Scenarios.CostReduction.document.md)
 
