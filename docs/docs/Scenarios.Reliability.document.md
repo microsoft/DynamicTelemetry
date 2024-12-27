@@ -1,3 +1,8 @@
+---
+author: "Chris Gray"
+status: ReviewLevelb
+---
+
 # Reliability
 
 After you apply some thinking into probing an action aspects of dynamic

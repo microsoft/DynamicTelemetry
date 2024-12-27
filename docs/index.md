@@ -3,6 +3,9 @@ author: "Chris Gray"
 status: ReviewLevel2
 description : Introduction to DynamicTelemetry
 ---
+
+{{ ProvideFeedback(page.file.src_uri) }}
+
 #
 
 ![image](./orig_media/DynamicTelemetry.logo.png)
@@ -33,7 +36,7 @@ modified (or even recompiled) any code from the OpenTelemetry sample.
 After the demo, please 'choose your own adventure' by continuing to read
 along one of the four tracks found below.
 
-## \[TODO\] DynamicTelemetry Intro Demo
+## DynamicTelemetry Intro Demo
 
 [Introduction Demo #1](./docs/Demos.1_IntroDemo.md)
 

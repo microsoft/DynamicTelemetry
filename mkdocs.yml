@@ -197,6 +197,7 @@ nav:
 
 plugins:
     - search
+    - macros
     - mermaid2
     - include-markdown:
         encoding: ascii

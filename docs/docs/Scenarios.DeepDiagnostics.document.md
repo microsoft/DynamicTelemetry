@@ -3,6 +3,9 @@ author: "Chris Gray"
 status: ReviewLevelb
 ---
 
+{{ ProvideFeedback(page.file.src_uri) }}
+
+
 # Using Dynamic Telemetry for Deep Diagnostics, at Scale
 
 In Dynamic Telemetry, Probes and Actions play crucial roles in
