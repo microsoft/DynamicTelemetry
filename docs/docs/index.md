@@ -6,9 +6,9 @@ description : Introduction to DynamicTelemetry
 
 {{ ProvideFeedback(page.file.src_uri) }}
 
-#
+# Dynamic Telemetry
 
-![image](orig_media/DynamicTelemetry.logo.png){width="5.5in"
+![image](../orig_media/DynamicTelemetry.logo.png){width="5.5in"
 height="1.261111111111111in"}
 
 Introducing DynamicTelemetry, an OpenSource, diagnostic compliment to
@@ -39,7 +39,7 @@ along one of the four tracks found below.
 
 ## DynamicTelemetry Intro Demo
 
-[Introduction Demo #1](./docs/Demos.1_IntroDemo.md)
+[Introduction Demo #1](./Demos.1_IntroDemo.md)
 
 ## Usage Personas
 
@@ -56,25 +56,25 @@ interesting to muttiple personas.
 
 <div class="grid cards" markdown>
 
--   :material-human: [**Developer**](./docs/Persona_Developer.document.md)
+-   :material-human: [**Developer**](./Persona_Developer.document.md)
 
     A programmer of Cloud Scale services, who is looking to add
     diagnostic probing, to their use of OpenTelemetry.
 
--   :material-microsoft-azure-devops: [**DevOps**](./docs/Persona_DevOps.document.md)
+-   :material-microsoft-azure-devops: [**DevOps**](./Persona_DevOps.document.md)
 
     Someone monitoring a cloud service may want to gain insights without
     involving their development team. They may want to suppress chatty
     events, turn events into metrics, or suppress erroneous logs,
     metrics, or events.
 
--  :scientist: [**Data Analyst**](./docs/Persona_DataAnalysis.document.md)
+-  :scientist: [**Data Analyst**](./Persona_DataAnalysis.document.md)
 
     Someone who would value better understanding of a Developers intent.
     For example how many items should be on a queue, what response
     latencies were expected when a piece of code was authored.
 
--   :material-store: [**Project Manager**](./docs/Persona_ProjectManager.document.md)
+-   :material-store: [**Project Manager**](./Persona_ProjectManager.document.md)
 
     Someone responsible for planning, executing, and overseeing projects to ensure they are completed on time, within scope, and within budget.
 
@@ -85,27 +85,27 @@ interesting to muttiple personas.
 
 <div class="grid cards" markdown>
 
--   :material-speedometer: [**Performance and Diagnostics**](./docs/Scenarios.DeepDiagnostics.document.md)
+-   :material-speedometer: [**Performance and Diagnostics**](./Scenarios.DeepDiagnostics.document.md)
 
     Disable diagnostic telemetry when systems are stable; enable it when they are not. Quickly trigger memory dumps or collect CPU samples during production issues. Deploy observers to monitor telemetry and gather extra diagnostic data, only when needed.
 
--   :shield: [**Privacy and Security**](./docs/Scenarios.RedactingSecrets.document.md)
+-   :shield: [**Privacy and Security**](./Scenarios.RedactingSecrets.document.md)
 
 	Detect and immediately suppress sensitive (or expensive) fields within Logs, should they inadvertently contain sensitive
 	information such as PATs, IP addresses, user information, or crypto keys. Remove these, at
 	their source, instantly - without rebuild or redeploy.
 
 
--   :fontawesome-solid-dog: [**Reliability**](./docs/Scenarios.Reliability.document.md)
+-   :fontawesome-solid-dog: [**Reliability**](./Scenarios.Reliability.document.md)
 
 	Test your services more effectively; make your Production code self diagnose. Couple the self diagnostics with Actions that toggle up and down telemetry volume, collect memory dumps, and CPU samples.
 
--   :material-view-dashboard: [**Durability - Dashboards and Alerts**](./docs/Scenarios.DurableDashboards.Alerts.document.md)
+-   :material-view-dashboard: [**Durability - Dashboards and Alerts**](./Scenarios.DurableDashboards.Alerts.document.md)
 
     Develop flexible schemas in your logs, metrics, and traces that enhance the durability of your dashboards
     and streamline communication between coworkers. Enable AI to find problems on your behalf.
 
--  :moneybag: [**Cost Reduction**](./docs/Scenarios.CostReduction.document.md)
+-  :moneybag: [**Cost Reduction**](./Scenarios.CostReduction.document.md)
 
 	Convert verbose logs into concise metrics, suppress large payloads, or
 	drop unnecessary logs.

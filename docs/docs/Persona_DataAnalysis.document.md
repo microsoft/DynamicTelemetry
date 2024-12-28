@@ -3,7 +3,7 @@ author: "Chris Gray"
 status: ReviewLevel1
 ---
 
-# DynamicTelemetry Persona : DEVOPS Persona
+# Data Analyst Persona
 
 DynamicTelemetry personas are intended as an organizational aid to group
 capabilities and usability of common usage scenarios. Browsing between scenarios

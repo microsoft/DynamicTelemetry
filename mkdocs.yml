@@ -60,7 +60,7 @@ theme:
         logo: logo
 
 nav:
-    - Introduction: index.md
+    - Introduction: ./docs/index.md
 
     - Personas:
         - Overview: ./docs/Personas.Overview.document.md
