@@ -59,7 +59,9 @@ theme:
     icon:
         logo: logo
 
+
 nav:
+#<START_BINDING>
     - Introduction: ./docs/index.md
 
     - Personas:
@@ -194,6 +196,8 @@ nav:
         - Adding Forgotten Session Id: ./docs/LookoutTower.Sample.AddSessionId.document.md
         - Scrub Secret: ./docs/LookoutTower.Sample.ScrubSecret.document.md
         - Suppress Chatty Log: ./docs/LookoutTower.Sample.SuppressChattyLog.document.md
+
+#<END_BINDING>
 
 plugins:
     - search
