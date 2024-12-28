@@ -7,24 +7,23 @@ $env:CDOCS_DB = $DB_DIR
 $md = (Get-Content ../../mkdocs.yml | Select-String ".md")
 #$md = (type ../../mkdocs.yml | grep ".md")
 
-if (Test-Path "bind.files")
-{
-	Remove-Item "bind.files"
-}
+
 
 if (!(Test-Path "..\bound_docs" -PathType Container))
 {
 	New-Item "..\bound_docs" -type directory
 }
 
+if (Test-Path "..\bound_docs\bind.files")
+{
+	Remove-Item "..\bound_docs\bind.files"
+}
 
 try {
 	cd ..
 	foreach($file in $md)
 	{
 		$file = $file.ToString()
-		#Write-Host "Looking $file"
-		#Write-Host "MD: " $file.EndsWith(".md")
 
 		if(!$file.EndsWith(".md"))
 		{
@@ -43,17 +42,31 @@ try {
 		}
 
 		$file_leaf = Split-Path -Path $file -Leaf
-		Add-Content "bind.files" $file[1]
 
-		Write-Host "SEP: $seperator, $file"
+		$env:CDOCS_TAB=0
+		if ($seperator -gt 4)
+		{
+			$seperatorx = $seperator
+			$seperatorx -= 4
+			$seperatorx /= 4
+			$env:CDOCS_TAB = $seperatorx
+		}
 
+		Write-Host "Convertinging $file"
 		pandoc -i $file -o ./bound_docs/$file_leaf --filter CDocsMarkdownCommentRender
+
+		Add-Content ".\bound_docs\bind.files" $file_leaf
 	}
+
+	cd bound_docs
+
+	Write-Host "RUN THIS IN REAL LINUX *******"
+	Write-Host "pandoc -i `$(cat ./bind.files) -o ./bound.md"
+	cd ..
+
 } finally {
 	cd docs
 }
 
-
 #cd ..
-#bash -c "pandoc $(cat ./docs/bind.files) -o ./docs/bound.md"
 #cd docs
