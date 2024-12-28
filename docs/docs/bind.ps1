@@ -1,9 +1,5 @@
+$ErrorActionPreference = 'Break'
 
-if ($IsLinux -eq $False)
-{
-	Write-Error "Must run on linux"
-	exit
-}
 
 $md = (Get-Content ../../mkdocs.yml | Select-String ".md")
 #$md = (type ../../mkdocs.yml | grep ".md")
@@ -13,13 +9,48 @@ if (Test-Path "bind.files")
 	Remove-Item "bind.files"
 }
 
-foreach($file in $md)
+if (!(Test-Path "..\bound_docs" -PathType Container))
 {
-	$file=$file.ToString().Trim().Split(":")
-	Add-Content "bind.files" $file[1]
-	Write-Host $file[1]
+	New-Item "..\bound_docs" -type directory
 }
 
-cd ..
-bash -c "pandoc $(cat ./docs/bind.files) -o ./docs/bound.md"
-cd docs
+
+try {
+	cd ..
+	foreach($file in $md)
+	{
+		$file = $file.ToString()
+		#Write-Host "Looking $file"
+		#Write-Host "MD: " $file.EndsWith(".md")
+
+		if(!$file.EndsWith(".md"))
+		{
+			Write-Host ("Skipping : $file")
+			continue
+		}
+
+		$seperator = $file.IndexOf("-")
+		$file = $file.ToString().Trim()
+		$file=$file.ToString().Trim().Split(":")[1].ToString().Trim()
+
+		if(!(Test-Path $file))
+		{
+			Write-Error "file doesnt exist : $file"
+			exit 5
+		}
+
+		$file_leaf = Split-Path -Path $file -Leaf
+		Add-Content "bind.files" $file[1]
+
+		Write-Host "SEP: $seperator, $file"
+
+		Write-Host "pandoc $file -o ./bound_docs/$file_leaf --filter CDocsMarkdownCommentRender"
+	}
+} finally {
+	cd docs
+}
+
+
+#cd ..
+#bash -c "pandoc $(cat ./docs/bind.files) -o ./docs/bound.md"
+#cd docs
