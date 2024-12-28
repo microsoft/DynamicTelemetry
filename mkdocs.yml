@@ -192,8 +192,8 @@ nav:
         - Intro Demo: ./docs/Demos.1_IntroDemo.md
         - Dynamic Probe: ./docs/Demos.2_DynamicProbe.md
         - Adding Forgotten Session Id: ./docs/LookoutTower.Sample.AddSessionId.document.md
-        - Scrub Secret: ./LookoutTower/Samples/ScrubSecret/LookoutTower.Sample.ScrubSecret.document.md
-        - Suppress Chatty Log: ./LookoutTower/Samples/SuppressChattyLog/LookoutTower.Sample.SuppressChattyLog.document.md
+        - Scrub Secret: ./docs/LookoutTower.Sample.ScrubSecret.document.md
+        - Suppress Chatty Log: ./docs/LookoutTower.Sample.SuppressChattyLog.document.md
 
 plugins:
     - search

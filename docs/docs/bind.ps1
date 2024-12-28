@@ -1,5 +1,8 @@
 $ErrorActionPreference = 'Break'
 
+$DB_DIR = Join-Path $PWD "..\orig_media"
+$DB_DIR = Resolve-Path $DB_DIR
+$env:CDOCS_DB = $DB_DIR
 
 $md = (Get-Content ../../mkdocs.yml | Select-String ".md")
 #$md = (type ../../mkdocs.yml | grep ".md")
@@ -44,7 +47,7 @@ try {
 
 		Write-Host "SEP: $seperator, $file"
 
-		Write-Host "pandoc $file -o ./bound_docs/$file_leaf --filter CDocsMarkdownCommentRender"
+		pandoc -i $file -o ./bound_docs/$file_leaf --filter CDocsMarkdownCommentRender
 	}
 } finally {
 	cd docs
