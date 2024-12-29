@@ -1,4 +1,24 @@
+import os
 
-def Include(file, startToken, endToken):
+def Include(baseDir, inputFile, startToken, endToken):
     "Include..."
-    return "Include file: " + file + " from " + startToken + " to " + endToken
+
+    inputFile = os.path.join(baseDir, inputFile)
+
+    with open(inputFile, 'r') as file:
+        content = file.read()
+        start = content.find(startToken)
+        end = content.find(endToken)
+
+        if(start == -1):
+            raise Exception("Start token not found in file " + inputFile)
+
+        if(end == -1):
+            raise Exception("End token not found in file " + inputFile)
+
+        start += len(startToken)
+
+        print(start)
+        print(end)
+
+        return content[start:end]

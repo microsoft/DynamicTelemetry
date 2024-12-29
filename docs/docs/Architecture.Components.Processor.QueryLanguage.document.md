@@ -24,10 +24,10 @@ which significantly reduces its associated risks in the risk taxonomy.
 
 ``` cdocs
 
-{% include "../LookoutTower/Samples/FileExtensionStats/Sample.FileExtensionStats.cs"
-    start="//<!--start-ImageHashExample-->"
-    end="//<!--end-ImageHashExample-->"
-%}
+{{ Include("../LookoutTower/Samples/FileExtensionStats/Sample.FileExtensionStats.cs",
+    "//start-ImageHashExample",
+    "//end-ImageHashExample")
+}}
 ```
 
 ## Query Language Overview

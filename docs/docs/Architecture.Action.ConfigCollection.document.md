@@ -8,6 +8,6 @@ status: ReviewLevel1
 
 {{
     Include("../LookoutTower/Samples/FileExtensionStats/Sample.FileExtensionStats.cs",
-        "start-PseudoExample-Language-Processor-VerifyHash", "end-PseudoExample-Language-Processor-VerifyHash")
+        "//start-PseudoExample-Language-Processor-VerifyHash", "//end-PseudoExample-Language-Processor-VerifyHash")
 }}
 

@@ -1,4 +1,5 @@
 import CDocs_utils as CDocs
+import os
 
 def define_env(env):
     """
@@ -18,4 +19,10 @@ def define_env(env):
     @env.macro
     def Include(file, startToken, endToken):
         "Include..."
-        return CDocs.Include(file, startToken, endToken)
+        print(env.page.url)
+        print(env.page.file)
+        print(env.page.file.src_path)
+        print(env.page.file.src_dir)
+        baseDir = os.path.dirname(env.page.file.src_path)
+        myDir = os.path.join(env.page.file.src_dir, baseDir)
+        return CDocs.Include(myDir, file, startToken, endToken)

@@ -90,9 +90,9 @@ captures valuable diagnostic information when needed.
 
 ``` cdocs
 
-{% include "../LookoutTower/Samples/TriggeringOnQueue/TriggeringOnQueue.cs"
-    start="//<!--start-SampleWorkQueue-->"
-    end="//<!--end-SampleWorkQueue-->"
-%}
+{{ Include("../LookoutTower/Samples/TriggeringOnQueue/TriggeringOnQueue.cs",
+    "//start-SampleWorkQueue",
+    "//end-SampleWorkQueue")
+}}
 
 ```

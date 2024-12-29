@@ -1,4 +1,4 @@
-//<!--start-->
+//start
 using Microsoft.Extensions.Logging;
 using System.Security.Cryptography;
 using System.Text;
@@ -50,7 +50,7 @@ internal partial class Program
             m_SHA256 = SHA256.Create();
         }
 
-        //<!--start-ImageHashExample-->
+        //start-ImageHashExample
         public string HashFile(string imageName)
         {
             try
@@ -84,10 +84,10 @@ internal partial class Program
 
         [LoggerMessage(Level = LogLevel.Warning, Message = "Unable to hash image {fileName}")]
         static partial void ErrorHashing(ILogger logger, string fileName, Exception e);
-        //<!--end-ImageHashExample-->
+        //end-ImageHashExample
 
 #if false
-        //<!--start-PseudoExample-Language-Processor-VerifyHash-->
+        //start-PseudoExample-Language-Processor-VerifyHash
         void OnLog(LogMessage log)
         {
             // Skill all logs, but the ending hash
@@ -108,8 +108,8 @@ internal partial class Program
         [LoggerMessage(Level = LogLevel.Error, Message = "ERROR: Language Processor detected production hash bug {fileName}")]
         static partial void ErrorInProductionHash(ILogger logger, string fileName, string productHash, string comparisonHash);
 
-        //<!--end-PseudoExample-Language-Processor-VerifyHash-->
+        //end-PseudoExample-Language-Processor-VerifyHash
 #endif
     }
 }
-//<!--end-->
+//end

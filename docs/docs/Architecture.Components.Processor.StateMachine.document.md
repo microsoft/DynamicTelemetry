@@ -35,10 +35,10 @@ as data files or JPEG images.
 
 ``` cdocs
 
-{% include "../LookoutTower/Samples/FileExtensionStats/Sample.FileExtensionStats.cs"
-    start="//<!--start-ImageHashExample-->"
-    end="//<!--end-ImageHashExample-->"
-%}
+{{ Include("../LookoutTower/Samples/FileExtensionStats/Sample.FileExtensionStats.cs",
+    "//start-ImageHashExample",
+    "//end-ImageHashExample")
+}}
 ```
 
 ## Sample Code Overview

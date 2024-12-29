@@ -41,8 +41,8 @@ about solving business problems, keeping costs in check,
 ## Tenants
 
 ``` cdocs
-{% include "./PositionPaper.DynamicTelemetryTenants.document.md"
-    start="<!--start-TenantOverview-->"
-    end="<!--end-TenantOverview-->"
-%}
+{{ Include("./PositionPaper.DynamicTelemetryTenants.document.md",
+    "start-TenantOverview",
+    "end-TenantOverview")
+}}
 ```

@@ -1,4 +1,4 @@
-//<!--start-->
+//start
 using Microsoft.Extensions.Logging;
 using System.Security.Cryptography;
 using System.Text;
@@ -53,7 +53,7 @@ internal partial class TriggeringOnQueue
             }
         }
 
-        //<!--start-SampleWorkQueue-->
+        //start-SampleWorkQueue
         public void ProcessWorkQueue()
         {
             for (; ; )
@@ -74,10 +74,10 @@ internal partial class TriggeringOnQueue
 
         [LoggerMessage(Level = LogLevel.Information, Message = "Enqueue depth={depth}")]
         static partial void LogEnqueueWork(ILogger logger, int depth);
-        //<!--end-SampleWorkQueue-->
+        //end-SampleWorkQueue
 
 #if false
-        //<!--start-PseudoExample-Language-Processor-VerifyHash-->
+        //start-PseudoExample-Language-Processor-VerifyHash
         void OnLog(LogMessage log)
         {
             // Skill all logs, but the ending hash
@@ -98,8 +98,8 @@ internal partial class TriggeringOnQueue
         [LoggerMessage(Level = LogLevel.Error, Message = "ERROR: Language Processor detected production hash bug {fileName}")]
         static partial void ErrorInProductionHash(ILogger logger, string fileName, string productHash, string comparisonHash);
 
-        //<!--end-PseudoExample-Language-Processor-VerifyHash-->
+        //end-PseudoExample-Language-Processor-VerifyHash
 #endif
     }
 }
-//<!--end-->
+//end

@@ -26,10 +26,10 @@ nominal and expected values.
 ## Simple Code Example; hashing files
 
 ``` cdocs
-{% include "../LookoutTower/Samples/FileExtensionStats/Sample.FileExtensionStats.cs"
-    start="//<!--start-ImageHashExample-->"
-    end="//<!--end-ImageHashExample-->"
-%}
+{{ Include("../LookoutTower/Samples/FileExtensionStats/Sample.FileExtensionStats.cs",
+    "//start-ImageHashExample",
+    "//end-ImageHashExample")
+}}
 ```
 
 ## Sample Code Overview
@@ -83,12 +83,10 @@ Image a piece of code that looks something like this:
 ### Verifying Hash Algorithm
 
 ``` cdocs
-{% include "../LookoutTower/Samples/FileExtensionStats/Sample.FileExtensionStats.cs"
-
-    start="//<!--start-PseudoExample-Language-Processor-VerifyHash-->"
-
-    end="//<!--end-PseudoExample-Language-Processor-VerifyHash-->"
-%}
+{{ Include("../LookoutTower/Samples/FileExtensionStats/Sample.FileExtensionStats.cs",
+    "//start-PseudoExample-Language-Processor-VerifyHash",
+    "//end-PseudoExample-Language-Processor-VerifyHash")
+}}
 ```
 
 ## Introducing Actions to the Dynamic Telemetry Language Processor
