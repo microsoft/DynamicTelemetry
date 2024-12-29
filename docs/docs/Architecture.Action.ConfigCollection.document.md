@@ -3,4 +3,13 @@ author: "Chris Gray"
 status: ReviewLevel1
 ---
 
-# Coming Soon
+# {{ ComingSoon(page.file.src_uri) }}
+
+
+{{
+    Include("../LookoutTower/Samples/FileExtensionStats/Sample.FileExtensionStats.cs",
+        "start-PseudoExample-Language-Processor-VerifyHash", "end-PseudoExample-Language-Processor-VerifyHash")
+}}
+
+//<!--start-PseudoExample-Language-Processor-VerifyHash-->","//<!--end-PseudoExample-Language-Processor-VerifyHash--> )}}
+

@@ -1,0 +1,2 @@
+def Boo():
+    return "Boo"

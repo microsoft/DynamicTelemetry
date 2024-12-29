@@ -201,7 +201,7 @@ nav:
 
 plugins:
     - search
-    - macros
+    - macros #https://mkdocs-macros-plugin.readthedocs.io/en/latest/
     - mermaid2
     - include-markdown:
         encoding: ascii
