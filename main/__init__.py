@@ -17,5 +17,5 @@ def define_env(env):
 
     @env.macro
     def Include(file, startToken, endToken):
-        "Feedback..."
-        return CDocs.Boo()
+        "Include..."
+        return CDocs.Include(file, startToken, endToken)
