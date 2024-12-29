@@ -6,8 +6,10 @@ status: ReviewLevel1
 # {{ ComingSoon(page.file.src_uri) }}
 
 
+```csharp
 {{
-    Include("../LookoutTower/Samples/FileExtensionStats/Sample.FileExtensionStats.cs",
+    CSharp_Include("../LookoutTower/Samples/FileExtensionStats/Sample.FileExtensionStats.cs",
         "//start-PseudoExample-Language-Processor-VerifyHash", "//end-PseudoExample-Language-Processor-VerifyHash")
 }}
+```
 

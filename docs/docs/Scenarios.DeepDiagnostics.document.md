@@ -88,7 +88,9 @@ a flexible and responsive system that adapts to changing conditions and
 captures valuable diagnostic information when needed.
 
 
-{{ Include("../LookoutTower/Samples/TriggeringOnQueue/TriggeringOnQueue.cs",
+```csharp
+{{ CSharp_Include("../LookoutTower/Samples/TriggeringOnQueue/TriggeringOnQueue.cs",
     "//start-SampleWorkQueue",
     "//end-SampleWorkQueue")
 }}
+```

@@ -22,9 +22,8 @@ which significantly reduces its associated risks in the risk taxonomy.
 
 ## Simple Code Example; hashing files
 
-``` cdocs
-
-{{ Include("../LookoutTower/Samples/FileExtensionStats/Sample.FileExtensionStats.cs",
+```csharp
+{{ CSharp_Include("../LookoutTower/Samples/FileExtensionStats/Sample.FileExtensionStats.cs",
     "//start-ImageHashExample",
     "//end-ImageHashExample")
 }}

@@ -40,8 +40,8 @@ about solving business problems, keeping costs in check,
 
 ## Tenants
 
-``` cdocs
-{{ Include("./PositionPaper.DynamicTelemetryTenants.document.md",
+```csharp
+{{ CSharp_Include("./PositionPaper.DynamicTelemetryTenants.document.md",
     "start-TenantOverview",
     "end-TenantOverview")
 }}

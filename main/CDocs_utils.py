@@ -5,7 +5,10 @@ import os
 # import importlib
 # importlib.reload(CDocs)
 
-def Include(baseDir, inputFile, startToken, endToken):
+def count_leading_spaces(input_string):
+    return len(input_string) - len(input_string.lstrip(' '))
+
+def Include(baseDir, inputFile, startToken, endToken, tabLeft):
     "Include..."
 
     inputFile = os.path.join(baseDir, inputFile)
@@ -22,4 +25,31 @@ def Include(baseDir, inputFile, startToken, endToken):
             raise Exception("End token not found in file " + inputFile)
 
         start += len(startToken)
-        return content[start:end]
+
+        clip = content[start:end]
+
+        if not tabLeft:
+            return clip
+
+        toChop = 999999999
+        for line in clip.split('\n'):
+            if(len(line) == 0):
+                continue
+            spaces = count_leading_spaces(line)
+            #print("Spaces: " + str(spaces))
+
+            if(toChop > spaces):
+                toChop = spaces
+
+        ret = ""
+        for line in clip.split('\n'):
+            if(len(line) == 0):
+                ret += line
+                ret += '\n'
+                continue
+
+            ret += line[toChop:]
+            ret += '\n'
+
+        print("Length of clip: " + str(len(clip)) + " and ret: " + str(len(ret)))
+        return ret
