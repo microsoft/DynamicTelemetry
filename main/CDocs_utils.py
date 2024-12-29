@@ -1,5 +1,10 @@
 import os
 
+# Tips:
+# import CDocs_utils as CDocs
+# import importlib
+# importlib.reload(CDocs)
+
 def Include(baseDir, inputFile, startToken, endToken):
     "Include..."
 
@@ -17,8 +22,4 @@ def Include(baseDir, inputFile, startToken, endToken):
             raise Exception("End token not found in file " + inputFile)
 
         start += len(startToken)
-
-        print(start)
-        print(end)
-
         return content[start:end]
