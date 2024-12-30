@@ -4,6 +4,9 @@ $DB_DIR = Join-Path $PWD "..\orig_media"
 $DB_DIR = Resolve-Path $DB_DIR
 $env:CDOCS_DB = $DB_DIR
 
+
+$env:PATH+=";C:\\Source\\CDocs\\tools\\CDocsMarkdownCommentRender\\bin\\Debug\\net8.0"
+
 $md = (Get-Content ../../mkdocs.yml)
 #$md = (type ../../mkdocs.yml | grep ".md")
 

@@ -141,6 +141,7 @@ nav:
             - Actions :
                 - Overview: ./docs/Architecture.Action.Explanation.document.md
                 - Sample Actions:
+                    - PacketCapture: ./docs/Architecture.Action.PacketCapture.document.md
                     - ConfigCollection: ./docs/Architecture.Action.ConfigCollection.document.md
                     - CPUSample: ./docs/Architecture.Action.CPUSample.document.md
                     - FileCollection: ./docs/Architecture.Action.FileCollection.document.md
