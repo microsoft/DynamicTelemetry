@@ -1,19 +1,16 @@
 #!/bin/sh
 
-echo .
-echo .
-echo "--------------------------------------------------------------------------------"
-echo "Intercepted (debug) Pandoc.launcher.sh"
-echo "     pandoc $@"
-echo "--------------------------------------------------------------------------------"
-echo .
+echo "                   Intercepted private (debug/local) CDoc.Launcher.sh"
+echo "                   pandoc $@"
+echo "                   -------------------------------------------------------------------------------------------"
+echo
 
 
-echo "ARGS[$@]"
+# echo "ARGS[$@]"
 cd /data
 cd $1
 shift
-echo "ARGS_post_pop[$@]"
+# echo "ARGS_post_pop[$@]"
 
 
 pandoc $@
@@ -21,14 +18,9 @@ pandoc $@
 pandoc_ret=$?
 
 if [ $pandoc_ret -ne 0 ]; then
-    echo .
+    echo
     echo "PANDOC FAILED: when called as follow. Exiting to console for debugging"
     echo "     pandoc $@"
-    echo .
+    echo
     bash
-else
-    echo .
-    echo "PANDOC SUCCESS: when called as follow"
-    echo "     pandoc $@"
-    echo .
 fi

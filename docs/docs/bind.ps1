@@ -4,13 +4,10 @@ $DB_DIR = Join-Path $PWD "..\orig_media"
 $DB_DIR = Resolve-Path $DB_DIR
 $env:CDOCS_DB = $DB_DIR
 
-
 $env:PATH+=";C:\\Source\\CDocs\\tools\\CDocsMarkdownCommentRender\\bin\\Debug\\net8.0"
 
 $md = (Get-Content ../../mkdocs.yml)
 #$md = (type ../../mkdocs.yml | grep ".md")
-
-
 
 if (!(Test-Path "..\bound_docs" -PathType Container))
 {
@@ -21,6 +18,9 @@ if (Test-Path "..\bound_docs\bind.files")
 {
 	Remove-Item "..\bound_docs\bind.files"
 }
+
+# Copy Everything; just so our Includes work
+Copy-Item -Path .\* -Destination ..\bound_docs -Recurse 
 
 try {
 	cd ..
@@ -52,7 +52,6 @@ try {
 			continue
 		}
 
-
 		$seperator = $file.IndexOf("-")
 		$env:CDOCS_TAB=0
 		$env:CDOCS_FILTER=1
@@ -64,8 +63,6 @@ try {
 			$seperatorx /= 4
 			$env:CDOCS_TAB = $seperatorx
 		}
-
-
 
 		if(!$file.EndsWith(".md"))
 		{

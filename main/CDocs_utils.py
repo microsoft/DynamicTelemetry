@@ -36,8 +36,7 @@ def Include(baseDir, inputFile, startToken, endToken, tabLeft):
             if(len(line) == 0):
                 continue
             spaces = count_leading_spaces(line)
-            #print("Spaces: " + str(spaces))
-
+         
             if(toChop > spaces):
                 toChop = spaces
 
