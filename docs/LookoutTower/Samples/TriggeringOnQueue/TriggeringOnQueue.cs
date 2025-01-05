@@ -80,7 +80,7 @@ internal partial class TriggeringOnQueue
         //start-PseudoExample-Language-Processor-VerifyHash
         void OnLog(LogMessage log)
         {
-            // Skill all logs, but the ending hash
+            // Skip all logs, but the ending hash
             if(log.LogId == "LogEndFileHash")
             {
                 string hashGeneratedInProduction = log.GetValue("hashValue");

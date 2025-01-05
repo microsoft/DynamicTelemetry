@@ -11,4 +11,4 @@ DynamicTelemetry makes use of two distinct types of telemetry - STREAMING and FI
 
 ## PRINCIPLES
 
-## Importance of the UMBILICAL on [PRIVACY](./PositionPaper.DataPrivacyAndSecurity.document.md)
+## Importance of the UMBILICAL on [PRIVACY](./PositionPaper.DataOwnershipIsntAlwaysClear.document.md)

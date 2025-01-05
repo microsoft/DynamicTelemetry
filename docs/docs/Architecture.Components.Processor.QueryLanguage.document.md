@@ -71,5 +71,3 @@ Image a piece of code that looks something like this:
 ```
 
 ## Example Scenarios
-
-{% include "./bib.md" %}

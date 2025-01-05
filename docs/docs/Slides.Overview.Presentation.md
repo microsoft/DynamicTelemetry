@@ -7,7 +7,7 @@ backgroundColor: #fff
 backgroundImage: url('https://marp.app/assets/hero-background.svg')
 ---
 
-![](../docs/orig_media/DynamicTelemetry.CoPilot.Image.png)
+![](../orig_media/DynamicTelemetry.CoPilot.Image.png)
 
 # Dynamic Telemetry
 

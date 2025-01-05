@@ -38,11 +38,11 @@ about solving business problems, keeping costs in check,
 ## OnBox Architecture
 ![](../orig_media/Architecture.OnBox.drawio.png)
 
-## Tenants
+## Tenents
 
 ```csharp
-{{ CSharp_Include("./PositionPaper.DynamicTelemetryTenants.document.md",
-    "start-TenantOverview",
-    "end-TenantOverview")
+{{ CSharp_Include("./PositionPaper.DynamicTelemetryTenets.document.md",
+    "start-TenetOverview",
+    "end-TenetOverview")
 }}
 ```

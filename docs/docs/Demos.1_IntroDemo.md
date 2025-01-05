@@ -36,3 +36,7 @@ redploying.
    * Create new Logs, based on dynamically applied state machines
    * Or even create Telemetry, where it doesnt exist - by applying a dynamic
    probe
+
+
+## Notes:
+[Sum](./Misfiled.Meter.Sum.kql.md)

@@ -36,7 +36,7 @@ def Include(baseDir, inputFile, startToken, endToken, tabLeft):
             if(len(line) == 0):
                 continue
             spaces = count_leading_spaces(line)
-         
+
             if(toChop > spaces):
                 toChop = spaces
 
@@ -50,5 +50,5 @@ def Include(baseDir, inputFile, startToken, endToken, tabLeft):
             ret += line[toChop:]
             ret += '\n'
 
-        print("Length of clip: " + str(len(clip)) + " and ret: " + str(len(ret)))
+        # print("Length of clip: " + str(len(clip)) + " and ret: " + str(len(ret)))
         return ret

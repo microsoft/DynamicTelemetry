@@ -74,19 +74,20 @@ nav:
     - Scenarios:
         - Overview: ./docs/Scenarios.Overview.document.md
         - Performance and Diagnostics:
-            - Overview: ./docs/Scenarios.DeepDiagnostics.document.md
+            - Overview: ./docs/Scenarios.Overview.DeepDiagnostics.document.md
             - MemoryLeak: ./docs/Scenarios.MemoryLeak.document.md
             - TriggeredMemoryDump: ./docs/PositionPaper.TriggeredMemoryDump.document.md
             - TriggeredFlightRecorder: ./docs/PositionPaper.TriggeredFlightRecorder.document.md
+            - Event Aggregation: ./docs/Scenarios.EventAggregation.document.md
             - ExtractingMemoryWithUProbe: ./docs/Scenarios.ExtractingMemoryWithUProbe.document.md
 
         - Privacy and Security:
-            - Overview: ./docs/Scenarios.RedactingSecrets.document.md
+            - Overview: ./docs/Scenarios.Overview.RedactingSecrets.document.md
             - EventFieldSuppression: ./docs/Scenarios.EventFieldSuppression.document.md
             - EventSuppression: ./docs/Scenarios.EventSuppression.document.md
 
         - Reliability:
-            - Overview : ./docs/Scenarios.Reliability.document.md
+            - Overview : ./docs/Scenarios.Overview.Reliability.document.md
             - Pillars:
                 - Self Describing Production Code : ./docs/PositionPaper.SelfDescribingProductionCode.document.md
                 - Internal Audits of Production Code : ./docs/PositionPaper.InternalAuditsOfProductionCode.document.md
@@ -96,14 +97,13 @@ nav:
             - Clearly defined failures: ./docs/PositionPaper.ClearFailuresViaSchema.document.md
             - Traditional Testing: ./docs/PositionPaper.TraditionalTesting.md
         - Durable Dashboards and Alerts:
-            - Overview : ./docs/Scenarios.DurableDashboards.Alerts.document.md
+            - Overview : ./docs/Scenarios.Overview.DurableDashboards.Alerts.document.md
             - Changing Environments: ./docs/Scenarios.ChangingEnvironments.document.md
 
         - CostReduction:
-            - Overview: ./docs/Scenarios.CostReduction.document.md
+            - Overview: ./docs/Scenarios.Overview.CostReduction.document.md
             - Convert Logs to Metrics: ./docs/Scenarios.ConvertLogsToMetrics.document.md
             - EventSuppression: ./docs/Scenarios.EventSuppression.document.md
-
 
     - Architecture:
         - Overview: ./docs/Architecture.Overview.document.md
@@ -164,9 +164,15 @@ nav:
                     - Windows:
                         - ETW: ./docs/Architecture.Probe.ETW.document.md
 
-
     - Appendix:
         - Overview: ./docs/PositionPaper.PositionPapers.Overview.document.md
+
+        - Slides / Presentations:
+            - Overview: ./docs/Slides.Overview.Presentation.md
+
+        - Development / Spec Process:
+            - Tenets: ./docs/PositionPaper.DynamicTelemetryTenets.document.md
+            - Document Review Process: ./docs/ReviewProcess.document.md
 
         - Position Papers:
             - Actions: ./docs/PositionPaper.Actions.document.md
@@ -187,16 +193,23 @@ nav:
             - DynamicallyToggleLogs: ./docs/PositionPaper.DynamicallyToggleLogs.document.md
             - Logs into Metrics: ./docs/PositionPaper.ConvertLogsToMetrics.document.md
             - Impacts of Scarcity: ./docs/PositionPaper.ScarcityAndHumans.md
+            - Data Ownership isnt always Clear: ./docs/PositionPaper.DataOwnershipIsntAlwaysClear.document.md
+            - Logs into Metrics: ./docs/PositionPaper.ConvertLogsToMetrics.document.md
+            - Triggered Collections: ./docs/PositionPaper.TriggeredCollections.document.md
+            - Proceduralize Nets: ./docs/PositionPaper.ProceduralizeNets.document.md
+            - Locks and Throttles: ./docs/PositionPaper.LeafLevelLogging.document.md
+            - Loose Schemas: ./docs/PositionPaper.SharingDataAmongStakeHoldersIsHard.document.md
 
+        - Lookout Tower (Sample Implementation):
+            - PoC Scenarios: ./docs/LookoutTower.PoC_Scenarios.document.md
+            - Intro Demo:
+                - Demo Overview : ./docs/Demos.1_IntroDemo.md
+                - KQL Queries:  ./docs/Misfiled.Meter.Sum.kql.md
+            - Dynamic Probe: ./docs/Demos.2_DynamicProbe.md
+            - Adding Forgotten Session Id: ./docs/LookoutTower.Sample.AddSessionId.document.md
+            - Scrub Secret: ./docs/LookoutTower.Sample.ScrubSecret.document.md
+            - Suppress Chatty Log: ./docs/LookoutTower.Sample.SuppressChattyLog.document.md
 
-
-    - Lookout Tower:
-        - PoC Scenarios: ./docs/LookoutTower.PoC_Scenarios.document.md
-        - Intro Demo: ./docs/Demos.1_IntroDemo.md
-        - Dynamic Probe: ./docs/Demos.2_DynamicProbe.md
-        - Adding Forgotten Session Id: ./docs/LookoutTower.Sample.AddSessionId.document.md
-        - Scrub Secret: ./docs/LookoutTower.Sample.ScrubSecret.document.md
-        - Suppress Chatty Log: ./docs/LookoutTower.Sample.SuppressChattyLog.document.md
 
 #<END_BINDING>
 
@@ -266,6 +279,3 @@ markdown_extensions:
 
 extra_css:
     - extra.css
-
-extra_javascript:
-    - https://unpkg.com/mermaid/dist/mermaid.min.js

@@ -90,5 +90,3 @@ Image a piece of code that looks something like this:
 -   [Memory Dump](./PositionPaper.TriggeredMemoryDump.document.md)
 
 ## Example Scenarios
-
-{% include "./bib.md" %}
