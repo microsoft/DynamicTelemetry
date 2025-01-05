@@ -213,6 +213,10 @@ nav:
 
 #<END_BINDING>
 
+
+hooks:
+    - main/CDocs.hooks.py
+
 plugins:
     - search
     - macros #https://mkdocs-macros-plugin.readthedocs.io/en/latest/

@@ -1,12 +1,22 @@
 import os
+import random
+import re
 
 # Tips:
+# ------------------------------------------------------------------------------
 # import CDocs_utils as CDocs
 # import importlib
 # importlib.reload(CDocs)
 
 def count_leading_spaces(input_string):
     return len(input_string) - len(input_string.lstrip(' '))
+
+
+def RemoveImageWithAndHeightInfo(text):
+    # Regular expression to remove text between { and }
+    pattern = r'\{width.*?height.*?}'
+    return re.sub(pattern, '', text, flags=re.DOTALL)
+
 
 def Include(baseDir, inputFile, startToken, endToken, tabLeft):
     "Include..."
