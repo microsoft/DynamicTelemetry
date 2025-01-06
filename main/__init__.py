@@ -8,13 +8,13 @@ def define_env(env):
 
     @env.macro
     def ProvideFeedback(page):
-        "Feedback..."
-        return "[Provide Feedback : " + page + "](http://bing.com)"
+        "COMING SOON..."
+        return "[FEEDBACK URL PLACEHOLDER - COMING SOON]"
 
     @env.macro
     def ComingSoon(page):
         "Feedback..."
-        return "[Coming Soon : " + page + "](http://bing.com)"
+        return "[COMING SOON PLACEHOLDER]"
 
     @env.macro
     def XInclude(file, startToken, endToken, tabLeft=False):

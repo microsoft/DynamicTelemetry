@@ -1,1 +1,0 @@
-{% include-markdown "./docs/index.md" %}
