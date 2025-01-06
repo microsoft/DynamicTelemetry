@@ -40,7 +40,7 @@ about solving business problems, keeping costs in check,
 
 ## Tenents
 
-```csharp
+```cdocs_include
 {{ CSharp_Include("./PositionPaper.DynamicTelemetryTenets.document.md",
     "start-TenetOverview",
     "end-TenetOverview")

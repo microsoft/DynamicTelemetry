@@ -5,8 +5,9 @@ status: ReviewLevelb
 
 ![image](../orig_media/CostSavings.banner.png)
 
+``` cdocs_feedback
 {{ ProvideFeedback(page.file.src_uri) }}
-
+```
 
 # Reducing Costs
 

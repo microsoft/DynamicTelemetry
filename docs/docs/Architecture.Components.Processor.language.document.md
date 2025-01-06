@@ -25,7 +25,7 @@ nominal and expected values.
 
 ## Simple Code Example; hashing files
 
-```csharp
+```cdocs_include
 {{ CSharp_Include("../LookoutTower/Samples/FileExtensionStats/Sample.FileExtensionStats.cs",
     "//start-ImageHashExample",
     "//end-ImageHashExample")
@@ -82,7 +82,7 @@ Image a piece of code that looks something like this:
 
 ### Verifying Hash Algorithm
 
-```csharp
+```cdocs_include
 {{ CSharp_Include("../LookoutTower/Samples/FileExtensionStats/Sample.FileExtensionStats.cs",
     "//start-PseudoExample-Language-Processor-VerifyHash",
     "//end-PseudoExample-Language-Processor-VerifyHash")

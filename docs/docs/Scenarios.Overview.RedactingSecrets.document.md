@@ -32,7 +32,7 @@ different log entries and sessions. They act like a GPS for debugging
 and analysis, allowing you to trace logs back to the exact line of code
 in the source. This consistency is crucial for accurately identifying
 and redacting sensitive information without losing the context of the
-log entries12.
+log entries.
 
 Structured payloads refer to the organization of log data into a
 well-defined format, possibly a binary format, or as JSON or XML. This

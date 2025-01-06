@@ -5,8 +5,9 @@ status: ReviewLevelb
 
 ![image](../orig_media/PerformanceAndDiagnostics.banner.png)
 
+``` cdocs_feedback
 {{ ProvideFeedback(page.file.src_uri) }}
-
+```
 
 # Deep Diagnostics, at Scale
 
@@ -88,7 +89,7 @@ a flexible and responsive system that adapts to changing conditions and
 captures valuable diagnostic information when needed.
 
 
-```csharp
+```cdocs_include
 {{ CSharp_Include("../LookoutTower/Samples/TriggeringOnQueue/TriggeringOnQueue.cs",
     "//start-SampleWorkQueue",
     "//end-SampleWorkQueue")

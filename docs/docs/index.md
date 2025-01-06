@@ -4,7 +4,9 @@ status: ReviewLevel2
 description : Introduction to DynamicTelemetry
 ---
 
+``` cdocs_feedback
 {{ ProvideFeedback(page.file.src_uri) }}
+```
 
 # Dynamic Telemetry
 

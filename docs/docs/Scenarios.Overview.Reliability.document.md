@@ -93,7 +93,9 @@ thought.
 
 With Dynamic Telemetry, your test assets are broken into five pillars
 
-## Failure depends on the environment
+## Pillars
+
+### Failure depends on the environment
 
 After careful consideration of using the telemetry system as a means of
 inner processor remote communication, it becomes evident that such a
@@ -162,7 +164,7 @@ testing.
 Later in this section, we will further elaborate and provide detailed
 examples.
 
-## Self-describing Production Code:
+### Self-describing Production Code:
 
 Dynamic telemetry takes advantage of the durable identifiers and
 structure payloads within your logging in order to provide loose schemas
@@ -174,7 +176,7 @@ failure, or can otherwise indicate operational characteristics
 [Self Describing Production
 Code](./PositionPaper.SelfDescribingProductionCode.document.md)
 
-## Internal Auditing of Production Code:
+### Internal Auditing of Production Code:
 
 An internal audit production code involves creating classifications of
 errors that adhere to strict definitions, unlike the flexible
@@ -194,7 +196,7 @@ treat it as a critical error, such as with a database.
 [Internal Audits of Production
 Code](./PositionPaper.InternalAuditsOfProductionCode.document.md)
 
-## External Auditing of Production Code
+### External Auditing of Production Code
 
 An external audit of the code introduces environmental characteristics
 to the code. For example, what might be a programmatic warning internal
@@ -224,27 +226,7 @@ without recompilation is a key value of Dynamic Telemetry.
 [External Audits of Production
 Code](./PositionPaper.ExternalAuditsOfProductionCode.document.md)
 
-## Entropy Creators
-
-As you explore using telemetry to pass and fail tests, and consider
-different layers of testing as your code\'s execution environment
-changes, it becomes clear how crucial unit testing, stress testing, and
-scenario testing are. This method offers a powerful solution to many
-complex software issues by defining the characteristics you want to
-verify through tests that are dynamically attached to the software as
-external observers.
-
-Once these tests are attached as observers, they can be monitored from
-various points. At this stage, the test engineer needs to design tests
-that introduce enough entropy into the system to determine if the test
-passes or fails. This testing approach is quite fascinating and aligns
-with some philosophical principles in unit testing, deserving further
-consideration.
-
-[Testing With
-Entropy](./PositionPaper.TestingWithEntropy.document.md)
-
-## Diagnostic Collection
+### Diagnostic Collection
 
 Diagnostic collection essentially involves gathering the content that
 programmers or operational teams deem necessary for diagnosing system
@@ -268,7 +250,28 @@ memory dump for minor issues or seek extensive CPU sampling, they may
 not get what they want -- because their operational team set equally
 clear guidance on topics like memory, disk, and CPU usage.
 
-## Appropriate Alerts
+## Thought Provoking Ideas
+
+### Entropy Creators
+
+As you explore using telemetry to pass and fail tests, and consider
+different layers of testing as your code\'s execution environment
+changes, it becomes clear how crucial unit testing, stress testing, and
+scenario testing are. This method offers a powerful solution to many
+complex software issues by defining the characteristics you want to
+verify through tests that are dynamically attached to the software as
+external observers.
+
+Once these tests are attached as observers, they can be monitored from
+various points. At this stage, the test engineer needs to design tests
+that introduce enough entropy into the system to determine if the test
+passes or fails. This testing approach is quite fascinating and aligns
+with some philosophical principles in unit testing, deserving further
+consideration.
+
+[Testing With Entropy](./PositionPaper.TestingWithEntropy.document.md)
+
+### Appropriate Alerts
 
 This innovative approach ensures that every aspect of the software is
 continuously monitored, providing real-time insights and enabling
@@ -286,7 +289,7 @@ various testing methods. By doing so, Dynamic Telemetry provides a
 unified and efficient testing framework that enhances system reliability
 and performance.
 
-## Traditional "Testing" - Telemetry, Analysis, and Informing
+### Traditional "Testing" - Telemetry, Analysis, and Informing
 
 Traditional testing often involves a series of predefined tests that are
 run in a controlled environment to ensure that the software behaves as
@@ -312,22 +315,6 @@ issue. This proactive approach helps prevent potential problems from
 escalating and ensures that the system remains stable and reliable. By
 incorporating these steps into the test pipeline, organizations can
 achieve a higher level of observability and maintain the quality of
-their software123.
+their software.
 
 ## How to Think about Testing, in a world of Dynamic Telemetry
-
-## Dynamic Telemetry Pillars of Testing
-
-### Self describing Production Code
-
-### Internal Auditing of Production Code
-
-### External Auditing of Production Code
-
-### Entropy Creators
-
-### Diagnostic Collection
-
-### Appropriate Alerts
-
-## How to Create Quality Analysis Rings

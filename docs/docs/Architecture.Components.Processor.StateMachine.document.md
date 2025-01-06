@@ -33,7 +33,7 @@ as data files or JPEG images.
 
 ## Simple Code Example; hashing files
 
-```csharp
+```cdocs_include
 {{ CSharp_Include("../LookoutTower/Samples/FileExtensionStats/Sample.FileExtensionStats.cs",
     "//start-ImageHashExample",
     "//end-ImageHashExample")
