@@ -6,11 +6,6 @@ status: ReviewLevelb
 
 ![image](../orig_media/Durability.banner.png)
 
-``` cdocs_feedback
-{{ ProvideFeedback(page.file.src_uri) }}
-```
-
-
 # Improving Communication and Data Durability
 
 

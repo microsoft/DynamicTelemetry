@@ -1,16 +1,8 @@
-``` cdocs_ownership
+---
 author: "Chris Gray"
 status: ReviewLevel2
 description : Introduction to DynamicTelemetry
-```
-
-
-``` cdocs_feedback
-{{
-    ProvideFeedback(page.file.src_uri)
-}}
-```
-
+---
 
 # Dynamic Telemetry
 

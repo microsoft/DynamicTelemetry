@@ -5,10 +5,6 @@ status: ReviewLevelb
 
 ![image](../orig_media/CostSavings.banner.png)
 
-``` cdocs_feedback
-{{ ProvideFeedback(page.file.src_uri) }}
-```
-
 # Reducing Costs
 
 Dynamic Telemetry is a powerful tool that can be used to significantly

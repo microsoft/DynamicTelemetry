@@ -221,6 +221,11 @@ plugins:
     - search
     - macros #https://mkdocs-macros-plugin.readthedocs.io/en/latest/
     - mermaid2
+    - redirects:
+        redirect_maps:
+            'index.md' : "docs/index.md"
+
+
     - include-markdown:
         encoding: ascii
         preserve_includer_indent: false

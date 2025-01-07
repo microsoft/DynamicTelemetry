@@ -5,10 +5,6 @@ status: ReviewLevelb
 
 ![image](../orig_media/PerformanceAndDiagnostics.banner.png)
 
-``` cdocs_feedback
-{{ ProvideFeedback(page.file.src_uri) }}
-```
-
 # Deep Diagnostics, at Scale
 
 In Dynamic Telemetry, Probes and Actions play crucial roles in
