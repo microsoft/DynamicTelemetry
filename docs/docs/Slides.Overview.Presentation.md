@@ -17,6 +17,15 @@ status: ReviewLevel1
 
 ---
 
+# Bridging
+    * Open Telemetry
+    * uProbes / kProbes
+    * eBPF
+    * DTrace
+    * ETW (Windows) and user_events (Linux)
+
+---
+
 # Durable ID's and Structured Payloads
 
 ```C++
