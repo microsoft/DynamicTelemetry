@@ -5,7 +5,11 @@ _class: lead
 paginate: true
 backgroundColor: #fff
 backgroundImage: url('https://marp.app/assets/hero-background.svg')
+author: "Chris Gray"
+status: ReviewLevel1
 ---
+
+
 
 ![](../orig_media/DynamicTelemetry.CoPilot.Image.png)
 

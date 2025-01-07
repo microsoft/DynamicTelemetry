@@ -1,3 +1,8 @@
+---
+author: "Chris Gray"
+status: ReviewLevel1
+---
+
 # DELETE_ME : Notes on using OpenTelemetry/C# sum in Kusto
 
 ```csharp
