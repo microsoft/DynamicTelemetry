@@ -235,6 +235,11 @@ plugins:
         heading_offset: 0
         recursive: true
 
+    - mkdocs-video:
+        is_video: True
+        video_muted: True
+        video_controls: True
+
 
 markdown_extensions:
   - attr_list
