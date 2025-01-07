@@ -23,7 +23,7 @@ system can lay in wait, watching for a bug to manifest - and when it does!
 ...the TRIGGER can spring in action, capturing memory dumps, CPU call stack
 sampling, or even can dial up extra telemetry collection.
 
-The importance of DuableID's and Structured Payloads cannot be
+The importance of DurableID's and Structured Payloads cannot be
 overstated - projects running on millions or billions of machines, that do not
 make use of API's equipped with DurableID's and Structured Payloads are almost
 a guaranteed to be on the path to either struggle to be diagnosed, or will be
@@ -45,7 +45,7 @@ Lets start the introduction, by showing an event that contains both a DurableID
 In both examples, it's assumed there exists a means of egressing the telemetry
 to a remote database
 
-```mermaid
+``` mermaid
     flowchart TD
     subgraph Computer Being Traced
         App --> |FUNCTION_CALL|TELEMETRY_LIBRARY

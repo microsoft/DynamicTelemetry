@@ -219,12 +219,11 @@ hooks:
 
 plugins:
     - search
-    - macros #https://mkdocs-macros-plugin.readthedocs.io/en/latest/
     - mermaid2
+    - macros #https://mkdocs-macros-plugin.readthedocs.io/en/latest/
     - redirects:
         redirect_maps:
             'index.md' : "docs/index.md"
-
 
     - include-markdown:
         encoding: ascii
