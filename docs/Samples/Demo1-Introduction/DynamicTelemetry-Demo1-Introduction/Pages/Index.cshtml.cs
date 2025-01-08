@@ -25,7 +25,7 @@ namespace DynamicTelemetry_Demo1_Introduction.Pages
             LogGet(_logger, url);
         }
 
-        [LoggerMessage(Level = LogLevel.Information, Message = "[GENERATED.3] -- Log Get({url})")]
+        [LoggerMessage(Level = LogLevel.Information, Message = "LogGet({url})")]
         static partial void LogGet(ILogger logger, string url);
     }
 }
