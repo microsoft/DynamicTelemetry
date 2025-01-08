@@ -5,10 +5,8 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>DynamicTelemetry_Demo1_Introduction</RootNamespace>
-    <UserSecretsId>a7ad1a29-9ce2-4ebe-96f9-40f6ddec2cbb</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>.</DockerfileContext>
-    <ApplicationInsightsResourceId>/subscriptions/5ab1dc0d-fc98-49d2-9ac9-28c7f1ab7e11/resourcegroups/chgray_DynamicTelemetry_Demo1_Linux/providers/microsoft.insights/components/DynamicTelemetry-Demo1-Introduction</ApplicationInsightsResourceId>
   </PropertyGroup>
 
   <ItemGroup>
