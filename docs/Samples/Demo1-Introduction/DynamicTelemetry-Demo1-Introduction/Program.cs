@@ -1,7 +1,14 @@
+using Azure.Identity;
+using Azure.Monitor.OpenTelemetry.AspNetCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+// Add OpenTelemetry and configure it to use Azure Monitor
+builder.Services.AddOpenTelemetry()
+    .WithMetrics(x=>x.AddMeter("DynamicTelemetry.Sample1.IndexModel"))
+    .UseAzureMonitor();
 
 var app = builder.Build();
 
