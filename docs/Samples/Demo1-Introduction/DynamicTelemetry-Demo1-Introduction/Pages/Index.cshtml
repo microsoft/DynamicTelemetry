@@ -1,21 +1,8 @@
 ﻿@page
 @model IndexModel
-@{
-    ViewData["Title"] = "Home page";
-}
 
-<style>
-body, html {
-  height: 100%;
-}
-
-.bg {
-        background-image: url("@Url.Page("Index", "LoadImageFile", new { name = "test.jpg" })");
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-</style>
-
-<img src="@Url.Page("Index","LoadImageFile",new {name="test.jpg" })" />
+<html lang="en">
+    <body>
+        Hello @Model.WelcomeBanner  
+    </body>
+</html>
