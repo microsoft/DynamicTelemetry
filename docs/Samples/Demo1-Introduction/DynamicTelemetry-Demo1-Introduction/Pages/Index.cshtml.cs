@@ -17,13 +17,14 @@ namespace DynamicTelemetry_Demo1_Introduction.Pages
             LogLaunch(_logger, _version);
         }
 
-        public string WelcomeBanner { get
+        public string WelcomeBanner { 
+            get
             {
                 DateTimeOffset time = DateTimeOffset.UtcNow;
                 LogWelcomeBanner(_logger, time);
                 return $"Welcome : {time}";
             }
-        } 
+        }       
 
         [LoggerMessage(Level = LogLevel.Information, Message = "Launch,  ver={version}")]
         static partial void LogLaunch(ILogger logger, string version);

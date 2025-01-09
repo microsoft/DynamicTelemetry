@@ -1,18 +1,17 @@
----
-author: "Chris Gray"
-status: ReviewLevel1
----
-
 # DynamicTelemetry : Introduction Demo
 
-1. Showcase each of the big pieces
-1. Line of code along with a OpenTelemetry log
-1. UI to configure a trigger
-1. deploy
-1. view results in Grafana and Kusto
+## Demo Overview
 
-## Architectural Overview Video #2
+## Looking at our Logging
 
-## Notes:
+## Spotting an Expensive Log Message
 
-[Sum](./Misfiled.Meter.Sum.kql.md)
+## Deciding we want to Drop this Log
+
+## Choosing Which of the 5x Locations we wish to do so
+
+## Deploying
+
+## Seeing the Improvments
+
+## Recap
