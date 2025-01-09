@@ -4,9 +4,18 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<style>
+body, html {
+  height: 100%;
+}
+
+.bg {
+        background-image: url("@Url.Page("Index", "LoadImageFile", new { name = "test.jpg" })");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
 
 <img src="@Url.Page("Index","LoadImageFile",new {name="test.jpg" })" />

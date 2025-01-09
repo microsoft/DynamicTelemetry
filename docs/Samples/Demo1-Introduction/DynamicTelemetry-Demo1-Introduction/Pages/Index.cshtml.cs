@@ -3,6 +3,9 @@ using Microsoft.AspNetCore.Http.Extensions;
 using SkiaSharp;
 using System.Diagnostics.Metrics;
 using Microsoft.AspNetCore.Mvc;
+using System.Drawing;
+using System.Numerics;
+using System.Diagnostics;
 
 namespace DynamicTelemetry_Demo1_Introduction.Pages
 {
@@ -44,12 +47,37 @@ namespace DynamicTelemetry_Demo1_Introduction.Pages
             {
                 LogStep(_logger, 1);
 
+                int max = 0;
+
                 for (int x = 0; x < bitmap.Width; ++x)
                 {
                     for (int y = 0; y < bitmap.Height; ++y)
                     {
-                        //LogPixel(_logger, x, y);
-                        bitmap.SetPixel(x, y, backgroundColor);
+                        double a = (x - width / 2.0) * 4.0 / width;
+                        double b = (y - height / 2.0) * 4.0 / height;
+                        Complex c = new Complex(a, b);
+                        Complex z = new Complex(0, 0);
+                        int iterations = 0;
+                        int maxIterations = 1000;
+                        float steps = 255 / maxIterations;
+                                              
+                        while (z.Magnitude < 2 && iterations < maxIterations)
+                        {
+                            z = z * z + c;
+                            iterations++;
+                        }
+
+                        if (iterations > max)
+                            max = iterations;
+
+                        double t = (double)iterations / 1000;
+                        byte r = (byte)(9 * (1 - t) * t * t * t * 255);
+                        byte g = (byte)(15 * (1 - t) * (1 - t) * t * t * 255);
+                        byte bColor = (byte)(8.5 * (1 - t) * (1 - t) * (1 - t) * t * 255);
+
+                        SKColor black = new SKColor(r, g, bColor);
+
+                        bitmap.SetPixel(x, y, black);
                     }
                 }
 
@@ -62,6 +90,26 @@ namespace DynamicTelemetry_Demo1_Introduction.Pages
                     return File(ms.GetBuffer(), "image/png");
                 }
             }
+        }
+
+        class Complex
+        {
+            public double Real { get; }
+            public double Imaginary { get; }
+
+            public Complex(double real, double imaginary)
+            {
+                Real = real;
+                Imaginary = imaginary;
+            }
+
+            public static Complex operator +(Complex a, Complex b) =>
+                new Complex(a.Real + b.Real, a.Imaginary + b.Imaginary);
+
+            public static Complex operator *(Complex a, Complex b) =>
+                new Complex(a.Real * b.Real - a.Imaginary * b.Imaginary, a.Real * b.Imaginary + a.Imaginary * b.Real);
+
+            public double Magnitude => Math.Sqrt(Real * Real + Imaginary * Imaginary);
         }
 
         private int FibHelper(int n)
