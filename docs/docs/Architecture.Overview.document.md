@@ -5,7 +5,7 @@ status: ReviewLevel1b
 
 # DynamicTelemetry Philosophy
 
-DynamicTelemetry is an articulation of the emobodiemnt of a suite of Observablity tools, designed to manage, control, and
+DynamicTelemetry is an articulation of the embodiment of a suite of Observability tools, designed to manage, control, and
 reshape telemetry in
 [Production](./PositionPaper.DefiningProduction.document.md) systems.
 
@@ -25,7 +25,7 @@ understanding of the system.
 
 ## DynamicTelemetry, in a nutshell
 
-[Demos](./Demos.1_IntroDemo.md) are a great way to go hands on with
+[Demos](./Demos.1.IntroDemo.md) are a great way to go hands on with
 DynamicTelemetry, but before diving in to the complex realities
 DynamicTelemetry seeks to resolve, it's important to have a general
 undertqnding of usage.

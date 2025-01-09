@@ -37,8 +37,8 @@ along one of the four tracks found below.
 
 ## DynamicTelemetry Intro Demo
 
-![type:video](../DynamicTelemetry_IntroVideo.mp4)){: style='width: 100%'}
-[Introduction Demo #1](./Demos.1_IntroDemo.md)
+<!--![type:video](../DynamicTelemetry_IntroVideo.mp4)){: style='width: 100%'}
+[Introduction Demo #1](./Demos.1_IntroDemo.md)-->
 
 ## Usage Personas
 

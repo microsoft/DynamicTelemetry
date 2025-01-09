@@ -1,3 +1,8 @@
+---
+author: "Chris Gray"
+status: ReviewLevel1b
+---
+
 "Hi everyone! Today, I'm going to show you how to use Dynamic Telemetry
 to save money and reduce storage and database costs, by suppressing a
 chatty log message."
