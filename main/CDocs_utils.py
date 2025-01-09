@@ -29,10 +29,10 @@ def Include(baseDir, inputFile, startToken, endToken, tabLeft):
         end = content.find(endToken)
 
         if(start == -1):
-            raise Exception("Start token not found in file " + inputFile)
+            raise Exception("Start token [" + startToken + "] not found in file " + inputFile)
 
         if(end == -1):
-            raise Exception("End token not found in file " + inputFile)
+            raise Exception("End token [" + endToken + "] not found in file " + inputFile)
 
         start += len(startToken)
 
