@@ -1,15 +1,13 @@
 // StartExample:ContrastDurableID
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using SkiaSharp;
 using System.Diagnostics.Metrics;
-using System.Numerics;
 
 namespace DynamicTelemetry_Demo_DurableIds.Pages
 {
     public partial class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
-        private static string _version = "0.0.2";
+        private static string _version = "0.0.3";
        
         public IndexModel(ILogger<IndexModel> logger, IMeterFactory meterFactory)
         {            
