@@ -85,6 +85,33 @@ and utilizing reflection on the DLLs to pinpoint the exact build and
 line of code. This subject is discussed in greater detail in the
 relevant sections on DurableIDentifiers.
 
+## Instruct Dynamic Telemetry to drop the chatty Log
+
+Now we will use Dynamic Telemetry to focus on and address this event.
+
+This topic is discussed in much greater detail in other sections that
+provide extensive content necessary for a full understanding. In brief,
+Dynamic Telemetry offers several architectural locations where
+modifications can be made to the data being produced.
+
+While avoiding full expansion in this demonstration, it should be noted
+that detailed explanations are available in other sections. In summary,
+we can now process telemetry in real-time based on various risk
+profiles.
+
+1.  In the process of the emitting agent
+
+2.  In the kernel of the emitting agent
+
+3.  In an aggregation / upload service
+
+4.  At the point of ingestion, off the box.
+
+
+![A screenshot of a computer AI-generated content may be
+incorrect.](../orig_media/Demo.1.DurableID.Contrast.ShowLogDrop.png){width="5.0in"
+height="3.9993055555555554in"}
+
 ## Instruct Dynamic Telemetry to convert the Log into a Metric
 
 Now we will use Dynamic Telemetry to focus on and address this event.
@@ -106,6 +133,11 @@ profiles.
 3.  In an aggregation / upload service
 
 4.  At the point of ingestion, off the box.
+
+![A screenshot of a computer AI-generated content may be
+incorrect.](../orig_media/Demo.1.DurableID.ConvertedToMetric.png){width="5.0in"
+height="3.9993055555555554in"}
+
 
 ## Choose one of the five Dynamic Telemetry locations to apply our KQL filter.
 

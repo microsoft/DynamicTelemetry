@@ -10,6 +10,7 @@ if (!Debugger.IsAttached)
 {
     // Add OpenTelemetry and configure it to use Azure Monitor
     builder.Services.AddOpenTelemetry()
+        //.WithMetrics(x => x.AddMeter("DynamicTelemetry.Metric.Conversion"))
         .UseAzureMonitor();
 }
 

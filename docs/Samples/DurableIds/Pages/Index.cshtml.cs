@@ -9,12 +9,17 @@ namespace DynamicTelemetry_Demo_DurableIds.Pages
         private readonly ILogger<IndexModel> _logger;
         private static string _version = "0.0.4";
         private Guid _instanceID = Guid.NewGuid();
+        //private static Counter<int> ? _getCounter;
 
         public IndexModel(ILogger<IndexModel> logger, IMeterFactory meterFactory)
         {
             _logger = logger;
 
+            //var meter = meterFactory.Create("DynamicTelemetry.Metric.Conversion");
+            //_getCounter = meter.CreateCounter<int>("LogLaunch");
+
             // On Launch emit two logs - seemingly identical, one has a DurableID
+            //_getCounter.Add(1);
             LogWithDurableID();
             LogWithoutDurableID();
         }
