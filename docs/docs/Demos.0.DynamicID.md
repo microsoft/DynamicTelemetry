@@ -88,7 +88,7 @@ an increased diagnostic capabilities, to the table.
 
 #### Seeing the Confusion, lack of capability
 
-![](../orig_media/Demo.1.DurableID.Confusion.png){width="5.5in"
+![](../orig_media/Demo.1.DurableID.SummarizeContrast.png){width="5.5in"
 height="4.3991393263342085in"}
 
 Let\'s explore some of these savings by examining where our costs are
