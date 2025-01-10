@@ -76,13 +76,25 @@ and less efficient. Following best practices is highly encouraged.
 }}
 ```
 
+#### Spotting the difference in your database
+
+![](../orig_media/Demo.1.DurableID.Contrast.png)
+
+#### Seeing the Confusion, lack of capability
+
+![](../orig_media/Demo.1.DurableID.Confusion.png)
+
+##### Using the EventName to locate the line of code
+
+![](../orig_media/Demo.1.DurableID.ExtendEventName.png)
+
+##### Aggregating based on the EventName
+
+![](../orig_media/Demo.1.DurableID.Contrast.Aggregate.png)
+
 
 ## Use Azure Monitor and KQL language to locate an unexpectedly expensive Open Telemetry log
 
-![](../orig_media/Demo.1.DurableID.Confusion.png)
-![](../orig_media/Demo.1.DurableID.Contrast.Aggregate.png)
-![](../orig_media/Demo.1.DurableID.Contrast.png)
-![](../orig_media/Demo.1.DurableID.ExtendEventName.png)
 ![](../orig_media/Demo.1.DurableID.SummarizeContrast.png)
 
 ## Instruct Dynamic Telemetry to convert the Log into a Metric**
