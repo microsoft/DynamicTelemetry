@@ -204,7 +204,7 @@ nav:
             - PoC Scenarios: ./docs/LookoutTower.PoC_Scenarios.document.md
             - Intro Demo:
                 - Understanding Durable ID : ./docs/Demos.0.DynamicID.md
-                - Demo Overview : ./docs/Demos.1.IntroDemo.md
+                - Drop a Chatty Event : ./docs/Demos.1.IntroDemo.md
                 - KQL Queries:  ./docs/Misfiled.Meter.Sum.kql.md
             - Dynamic Probe: ./docs/Demos.2_DynamicProbe.md
             - Adding Forgotten Session Id: ./docs/LookoutTower.Sample.AddSessionId.document.md

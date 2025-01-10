@@ -46,10 +46,11 @@ aggregated into a single entry. In a production system, one can expect
 this number to be significantly higher, which would subsequently
 increase potential confusion exponentially.
 
-## Instruct Dynamic Telemetry to convert the Log into a Metric\*\*
+## Utilize the DurableID feature on OpenTelemetry, to locate the line of code responsible for the expense.
 
-##Choose one of the five dynamic telemetry locations to apply our KQL
-filter.
+## Instruct Dynamic Telemetry to convert the Log into a Metric
+
+## Choose one of the five dynamic telemetry locations to apply our KQL filter.
 
 ## Deploy the conversion, and measure the impact
 
