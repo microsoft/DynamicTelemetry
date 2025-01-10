@@ -23,8 +23,11 @@ namespace DynamicTelemetry_Demo_DurableIds.Pages
         {
             //
             // Log a message without a DurableID;  while simple, this log will provide struggles later
+            //    because while we receive a property bag of the variables (_version), we will not know
+            //    which line of code emitted the telemetry - as our only identtifer will be the 
+            //    'flattened' payload string
             //
-            _logger.LogInformation($"Launch,  ver={_version}");
+            _logger.LogInformation($"Launch, ver={_version}");
         }
         // EndExample:NoDurableId
 
@@ -44,7 +47,7 @@ namespace DynamicTelemetry_Demo_DurableIds.Pages
             LogLaunch(_logger, _version);
         }
 
-        [LoggerMessage(Level = LogLevel.Information, Message = "(with id) Launch,  ver={version}")]
+        [LoggerMessage(Level = LogLevel.Information, Message = "Launch, ver={version}")]
         static partial void LogLaunch(ILogger logger, string version);
         // EndExample:DurableId
     }
