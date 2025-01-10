@@ -1,13 +1,15 @@
 // StartExample:ContrastDurableID
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using SkiaSharp;
 using System.Diagnostics.Metrics;
+using System.Numerics;
 
 namespace DynamicTelemetry_Demo_DurableIds.Pages
 {
     public partial class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
-        private static string _version = "0.0.1";
+        private static string _version = "0.0.2";
        
         public IndexModel(ILogger<IndexModel> logger, IMeterFactory meterFactory)
         {            
@@ -33,12 +35,18 @@ namespace DynamicTelemetry_Demo_DurableIds.Pages
         private void LogWithDurableID()
         {
             //
-            // Log a message without a DurableID;  while simple, this log will provide struggles later
+            // Log a message with a DurableID; 'behind the scenes' the dotnet compiler will
+            //     generate two ID's - one numerical, and one a string
+            //    
+            // Behind the scenes, the compiler uses this syntax to create identifiers that are included
+            //     into the telemetry row, that can be used visually, and in automation, to map
+            //     from row of telemetry, to line of code - very useful when extending the capabilities
+            //     of your telemetry assets
             //
-            _logger.LogInformation($"Launch,  ver={_version}");
+            LogLaunch(_logger, _version);
         }
 
-        [LoggerMessage(Level = LogLevel.Information, Message = "Launch,  ver={version}")]
+        [LoggerMessage(Level = LogLevel.Information, Message = "(with id) Launch,  ver={version}")]
         static partial void LogLaunch(ILogger logger, string version);
         // EndExample:DurableId
     }

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -7,8 +7,6 @@
     <RootNamespace>DynamicTelemetry_Demo1_Introduction</RootNamespace>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>.</DockerfileContext>
-    <ApplicationInsightsResourceId>/subscriptions/5ab1dc0d-fc98-49d2-9ac9-28c7f1ab7e11/resourceGroups/chgray_DynamicTelemetry_Demo1_Linux/providers/microsoft.insights/components/DynamicTelemetry-Demo1-Introduction</ApplicationInsightsResourceId>
-    <UserSecretsId>fa80d9f9-fa7a-4be6-ae45-b59a550aea0c</UserSecretsId>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
