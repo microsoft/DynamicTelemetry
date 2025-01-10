@@ -14,18 +14,18 @@ highly verbose log message very quickly.
 
 In short this demo will
 
-\- Use Azure Monitor and KQL language to locate an unexpectedly
+* Use Azure Monitor and KQL language to locate an unexpectedly
 expensive Open Telemetry log.
 
-\- Utilize the DurableID feature on OpenTelemetry, to locate the line of
+* Utilize the DurableID feature on OpenTelemetry, to locate the line of
 code responsible for the expense.
 
-\- Instruct Dynamic Telemetry to convert the Log into a Metric
+* Instruct Dynamic Telemetry to convert the Log into a Metric
 
-\- Choose one of the five dynamic telemetry locations to apply our KQL
+* Choose one of the five dynamic telemetry locations to apply our KQL
 filter.
 
-\- Deploy the conversion, and measure the impact
+* Deploy the conversion, and measure the impact
 
 ## Utilize the DurableID feature on OpenTelemetry, to locate the line of code responsible for the expense.
 
@@ -38,7 +38,7 @@ In microsoft.net platform the durable identifier is created
 automatically at compile time for open telemetry assuming the author of
 the software follows best practices.
 
-### Contrasting C# that makes use of Durable ID's, with C# that does not
+### Contrasting C# that makes use of Durable ID's, with C# that does not**
 
 Let\'s examine code that correctly uses a durable identifier versus one
 that doesn\'t. We'll inspect both in Application Insights, so we can
@@ -79,9 +79,16 @@ and less efficient. Following best practices is highly encouraged.
 
 ## Use Azure Monitor and KQL language to locate an unexpectedly expensive Open Telemetry log
 
-## Instruct Dynamic Telemetry to convert the Log into a Metric
+![](../orig_media/Demo.1.DurableID.Confusion.png)
+![](../orig_media/Demo.1.DurableID.Contrast.Aggregate.png)
+![](../orig_media/Demo.1.DurableID.Contrast.png)
+![](../orig_media/Demo.1.DurableID.ExtendEventName.png)
+![](../orig_media/Demo.1.DurableID.SummarizeContrast.png)
 
-## Choose one of the five dynamic telemetry locations to apply our KQL filter.
+## Instruct Dynamic Telemetry to convert the Log into a Metric**
+
+##Choose one of the five dynamic telemetry locations to apply our KQL
+filter.
 
 ## Deploy the conversion, and measure the impact
 

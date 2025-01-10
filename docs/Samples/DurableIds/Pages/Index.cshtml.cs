@@ -7,8 +7,9 @@ namespace DynamicTelemetry_Demo_DurableIds.Pages
     public partial class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
-        private static string _version = "0.0.3";
-       
+        private static string _version = "0.0.4";
+        private Guid _instanceID = Guid.NewGuid();
+
         public IndexModel(ILogger<IndexModel> logger, IMeterFactory meterFactory)
         {            
             _logger = logger;
@@ -27,7 +28,10 @@ namespace DynamicTelemetry_Demo_DurableIds.Pages
             //    which line of code emitted the telemetry - as our only identtifer will be the 
             //    'flattened' payload string
             //
-            _logger.LogInformation($"Launch, ver={_version}");
+            // NOTE: adding the _instanceID is to showcase how, once 'flattened' this unrecommendable
+            //    method of logging makes for tricky (and expensive) backend searching
+            //
+            _logger.LogInformation($"Launch, ver={_version}, instantion={_instanceID}");
         }
         // EndExample:NoDurableId
 
@@ -44,11 +48,16 @@ namespace DynamicTelemetry_Demo_DurableIds.Pages
             //     from row of telemetry, to line of code - very useful when extending the capabilities
             //     of your telemetry assets
             //
-            LogLaunch(_logger, _version);
+            // NOTE: adding the _instanceID is to showcase how, we can more easily locate this line
+            //     of code, as compared with the earlier 'flattened' version.  The compiler will attach
+            //     an 'EventName' property with the value of our function name "LogLaunch".  We can use this
+            //     instead of regular expressions to locate and aggregate
+            //     
+            LogLaunch(_logger, _version, _instanceID);
         }
 
-        [LoggerMessage(Level = LogLevel.Information, Message = "Launch, ver={version}")]
-        static partial void LogLaunch(ILogger logger, string version);
+        [LoggerMessage(Level = LogLevel.Information, Message = "Launch, ver={version}, instantion={instantionID}")]
+        static partial void LogLaunch(ILogger logger, string version, Guid instantionID);
         // EndExample:DurableId
     }
 }
