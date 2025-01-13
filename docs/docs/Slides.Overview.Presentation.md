@@ -28,12 +28,12 @@ status: ReviewLevel1
 
 # Durable ID's and Structured Payloads
 
-```C++
+```cpp
 printf("oh no, transaction error. err=%d", error);
 ```
 vs.
 
-```C++
+```cpp
 LogTransactionError(error);
 
 [LoggerMessage(Level = LogLevel.Error, Message = "oh no, transaction error. err={error}")]
