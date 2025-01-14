@@ -19,14 +19,35 @@ namespace DynamicTelemetry_Demo_3_SecurityRedactions.Pages
             get
             {
                 DateTimeOffset time = DateTimeOffset.UtcNow;
-
                 string secret = GetSecret(); ;
                 LogWelcomeBanner(_logger, secret);
-
                 return $"Welcome : {time}";
             }
         }
         // EndFunction:MistakenEmission
+
+
+        //
+        // In the WelcomeBanner, for purposes of demo, we emit a 'secret'
+        //    the below KQL can be attached to any DynamicTelemetry 'Processor', to remove the secret
+        //
+#if false
+        //
+        // Drop the entire Log row
+        //
+        // StartKQL:FilterWholeLog
+        traces
+        | where customDimensions.EventName != "LogWelcomeBanner"
+        // EndKQL:FilterWholeLog
+
+        //
+        // StartKQL:FilterField
+        traces
+        | extend customDimensions = iif(customDimensions.EventName == "LogWelcomeBanner",
+            bag_remove_keys(customDimensions, dynamic(['secret'])), customDimensions)
+        // EndKQL:FilterField
+#endif
+
 
         private string GetSecret()
         {
@@ -38,7 +59,7 @@ namespace DynamicTelemetry_Demo_3_SecurityRedactions.Pages
         [LoggerMessage(Level = LogLevel.Information, Message = "Welcome Banner with accidentlly emitted secret = {secret}")]
         static partial void LogWelcomeBanner(ILogger logger, string secret);
         // EndSearchExample:LogWelcomeBanner
-        
+
     }
 }
 // EndExample:RedactSecret

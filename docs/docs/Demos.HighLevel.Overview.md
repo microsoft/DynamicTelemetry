@@ -1,3 +1,8 @@
+---
+author: "Chris Gray"
+status: ReviewLevel1
+---
+
 Welcome to this demonstration of Dynamic Telemetry. In this demo, we
 will quickly take a broad survey of Dynamic Telemetry, highlighting key
 usage scenarios and important architectural points.
@@ -97,11 +102,23 @@ understand the types of operations that dynamic telemetry can offer.
 
 6.  Maintaining state / awareness
 
-#### Sample KQL Filter dropping fields in a Log
 
-#### Sample Log to Metric conversion
+### Simple Sample Using KQL Filter to Drop an Entire Log Message
+```cdocs_include
+{{
+    CSharp_Include("../Samples/Demos.3.SecurityRedaction/Pages/Index.cshtml.cs",
+        "// StartKQL:FilterWholeLog", "// EndKQL:FilterWholeLog")
+}}```
 
-#### Sample eBPF Log Drop
+
+### Simple Sample Using KQL Filter dropping fields in a Log
+
+```cdocs_include
+{{
+    CSharp_Include("../Samples/Demos.3.SecurityRedaction/Pages/Index.cshtml.cs",
+        "// StartKQL:FilterField", "// EndKQL:FilterField")
+}}```
+
 
 ### Including Configuration Deployment Service
 
