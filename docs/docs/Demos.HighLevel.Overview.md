@@ -62,6 +62,25 @@ not the focus of this demonstration.
 ![](../orig_media/Architecture.Boxes.No.DynamicTelemetry.drawio.png){width="5.5in"
 height="2.185044838145232in"}
 
+### Survey of a Dynamic Telemetry Processor
+
+A [Dynamic Telemetry Processor](./Architecture.Components.Processor.Overview.document.md) is a software component that is
+dynamically configured and operates within the standard open telemetry
+OLTP pipeline. This processor is detailed further in the processor
+section, but essentially, it is a software module that monitors all
+events passing through it and allows one of the dynamic telemetry
+personas to modify the telemetry being transmitted.
+
+Subject to implementation a dynamic telemetry processor is likely to be
+fitting into one of several categories
+
+1.  A [Query Language](./Architecture.Components.Processor.QueryLanguage.document.md) (SQL, KQL, etc)
+
+2.  A [Programming Environment or Language](./Architecture.Components.Processor.language.document.md) (eBPF, .NET, Python, Rust,
+    etc)
+
+3.  A textually defined [State Machine, or State Model](./Architecture.Components.Processor.StateMachine.document.md)
+
 ### Addition on all four Dynamic Telemetry Processors
 
 The diagram below shows the installation of dynamic telemetry processors
@@ -102,26 +121,70 @@ understand the types of operations that dynamic telemetry can offer.
 
 6.  Maintaining state / awareness
 
-
 ### Simple Sample Using KQL Filter to Drop an Entire Log Message
 
-```cdocs_include
+Consider a scenario where you have a software agent that is emitting
+logs. For various reasons, you may decide that some of the logs are
+unnecessary or unwanted. Instead of rebuilding, retesting, and
+redeploying your code, you would prefer to have a pause button for these
+logs.
+
+You might want to pause the logs during high traffic times to save
+costs, or only enable logging when diagnosing the software. Another
+option could be pausing the logs to prevent the spread of accidentally
+logged sensitive information.
+
+``` cdocs_include
+{{ CSharp_Include("../Samples/Demos.3.SecurityRedaction/Pages/Index.cshtml.cs",
+    "// StartFunction:MistakenEmission",
+    "// EndFunction:MistakenEmission")
+}}
+```
+``` cdocs_include
+{{ CSharp_Include("../Samples/Demos.3.SecurityRedaction/Pages/Index.cshtml.cs",
+    "// StartSearchExample:LogWelcomeBanner",
+    "// EndSearchExample:LogWelcomeBanner")
+}}
+```
+
+``` cdocs_include
 {{ CSharp_Include("../Samples/Demos.3.SecurityRedaction/Pages/Index.cshtml.cs",
     "// StartKQL:FilterWholeLog",
     "// EndKQL:FilterWholeLog")
 }}
 ```
 
-
+The above KQL could be inserted at any one of the processors described
+in the previous section and when the log message is being emitted at
+that appropriate processing location the log would be simply paused
+(dropped) as long as the dynamically deployed configuration was applied.
 
 ### Simple Sample Using KQL Filter dropping fields in a Log
 
-```cdocs_include
+A potentially more interesting application would be the removal of a
+particular field within a log
+
+in this scenario for some reason a particular field was included and
+then later after deployment was decided that field was unnecessary or
+unwanted this can happen for several reasons ranging from costs to
+security, database performance, and privacy it could also be simply a
+case of just wanting to be more tidy anesthetics
+
+Without dynamic telemetry a rebuild retest and redeploy be required but
+with dynamic telemetry the simple configuration below can be dynamically
+transmitted to any of the four described processors at which point any
+log named "*LogWelcomeBanner*" have it's "secret" field redacted.
+
+``` cdocs_include
 {{ CSharp_Include("../Samples/Demos.3.SecurityRedaction/Pages/Index.cshtml.cs",
     "// StartKQL:FilterField",
     "// EndKQL:FilterField")
 }}
 ```
+
+![](../orig_media/Demos.HighLevel.Overview.BeforeRedact.png)
+
+![](../orig_media/Demos.HighLevel.Overview.AfterRedact.png)
 
 
 ### Including Configuration Deployment Service
@@ -135,10 +198,3 @@ mechanism that ensures responsible usage within the hosted environment.
 
 ![](../orig_media/Architecture.Boxes.Full.DynamicTelemetry.drawio.png){width="5.5in"
 height="3.0075524934383204in"}
-
-## Conclusion
-
-Thank you for watching this demonstration of Dynamic Telemetry. We hope
-you see the immense value it brings to your debugging and diagnostic
-processes. For more information, please explore the detailed
-documentation and scenarios provided.
