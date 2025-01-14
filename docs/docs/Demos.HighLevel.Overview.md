@@ -25,7 +25,7 @@ It is assumed that you already have an OpenTelemetry pipeline in place that hous
 Dynamic Telemetry, in short, is a dynamically controlled diagnostic control, that is inserted into
 one of four location in your Open Telemetry pipeline.
 
-Each insertion point, also called a Processor, accepts 
+Each insertion point, also called a Processor, accepts
 
 ### Standard OpenTelmetry Architectural Overview
 
@@ -42,7 +42,7 @@ Each insertion point, also called a Processor, accepts
 ### Capabilities of Dynamic Telemetry
 
 1. KQL Filtering and Aggregation
-1.
+1. eBPF Filtering and Aggregation
 
 ### Including Configuration Deployment Service
 
