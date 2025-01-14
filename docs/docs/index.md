@@ -14,30 +14,34 @@ OpenTelemetry.
 
 The DynamicTelemetry development team wants to make debugging highly
 scaled production software as easy and enjoyable as debugging one
-application locally. We want you to be able to diagnose and explore live
-production systems without compromising reliability, performance, or
-customer privacy.
+application locally. We want you to be able to diagnose and explore
+live production systems without compromising reliability,
+performance, or customer privacy. 
 
 In this introduction, you will learn about DynamicTelemetry, an
-open-source diagnostic tool that blends traditional symbolic debuggers
-with advanced new complements to your existing OpenTelemetry assets and
-workflows. You will be presented with five architectural components
-that, when used together, bring the peace and calm of local debugging
-into the distributed cloud.
+open-source diagnostic tool that blends traditional symbolic
+debuggers with advanced new complements to your existing
+OpenTelemetry assets and workflows. You will be presented with five
+architectural components that, when used together, bring the peace
+and calm of local debugging into the distributed cloud. 
 
-Before diving into the overall architecture, lets watch a quick
-demonstration that will showcase the end to end workflow.
+Before diving into the overall architecture, let\'s watch a quick
+demonstration that will showcase the end-to-end workflow. 
 
-In this high-level demonstration, we've added DynamicTelemetry to the
-standard OpenTelemetry Kubernetes sample, but otherwise have not
-modified (or even recompiled) any code from the OpenTelemetry sample.
+In this high-level demonstration, we've added DynamicTelemetry to
+the standard OpenTelemetry Kubernetes sample but otherwise have not
+modified (or even recompiled) any code from the OpenTelemetry
+sample. 
 
-After the demo, please 'choose your own adventure' by continuing to read
-along one of the four tracks found below.
+After the demo, please 'choose your own adventure' by continuing to
+read along one of the four tracks found below. 
 
 ## DynamicTelemetry Intro Demo
 
 [Introduction Demo](./Demos.HighLevel.Overview.md)
+
+<iframe src="https://microsoft-my.sharepoint.com/personal/chgray_microsoft_com/_layouts/15/embed.aspx?UniqueId=b4075e2f-89c5-4907-94ed-966cded40b4f&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="DynamicTelemetry_IntroVideo.mp4"></iframe>
+
 
 <!--![type:video](../DynamicTelemetry_IntroVideo.mp4)){: style='width: 100%'}
 [Introduction Demo #1](./Demos.1_IntroDemo.md)-->
@@ -45,13 +49,13 @@ along one of the four tracks found below.
 ## Usage Personas
 
 DynamicTelemetry is a diagnostic system useful to many different
-audiences, each of whom have similar, but different interests.
+audiences, each of whom have similar, but different interests. 
 
-To better cater our introductucory documentation to each of these
-audiences, we've broken the content into personas and scenarios. This is
-only to simplify understanding, by presenting content in different
-orders. We will make use of URL's to cross reerence content that may be
-interesting to muttiple personas.
+To better cater our introductory documentation to each of these
+audiences, we've broken the content into personas and scenarios.
+This is only to simplify understanding, by presenting content in
+different orders. We will make use of URL's to cross reference
+content that may be interesting to multiple personas. 
 
 ## Personas
 
@@ -73,14 +77,15 @@ interesting to muttiple personas.
 
     Someone who would value better understanding of a Developers intent.
     For example how many items should be on a queue, what response
-    latencies were expected when a piece of code was authored.
+    latencies were expected when a piece of code was authored. 
 
 -   :material-store: [**Project Manager**](./Persona_ProjectManager.document.md)
 
-    Someone responsible for planning, executing, and overseeing projects to ensure they are completed on time, within scope, and within budget.
+    Someone responsible for planning, executing, and overseeing projects
+    to ensure they are completed on time, within scope, and within
+    budget. 
 
 </div>
-
 
 ## Scenarios
 
@@ -88,27 +93,35 @@ interesting to muttiple personas.
 
 -   :material-speedometer: [**Performance and Diagnostics**](./Scenarios.Overview.DeepDiagnostics.document.md)
 
-    Disable diagnostic telemetry when systems are stable; enable it when they are not. Quickly trigger memory dumps or collect CPU samples during production issues. Deploy observers to monitor telemetry and gather extra diagnostic data, only when needed.
+    Disable diagnostic telemetry when systems are stable; enable it when
+    they are not. Quickly trigger memory dumps or collect CPU samples
+    during production issues. Deploy observers to monitor telemetry and
+    gather extra diagnostic data, only when needed. 
 
 -   :shield: [**Privacy and Security**](./Scenarios.Overview.RedactingSecrets.document.md)
 
-	Detect and immediately suppress sensitive (or expensive) fields within Logs, should they inadvertently contain sensitive
-	information such as PATs, IP addresses, user information, or crypto keys. Remove these, at
-	their source, instantly - without rebuild or redeploy.
+    Detect and immediately suppress sensitive (or expensive) fields
+    within Logs, should they inadvertently contain sensitive information
+    such as PATs, IP addresses, user information, or crypto keys. Remove
+    these, at their source, instantly - without rebuild or redeploy. 
 
 
 -   :fontawesome-solid-dog: [**Reliability**](./Scenarios.Overview.Reliability.document.md)
 
-	Test your services more effectively; make your Production code self diagnose. Couple the self diagnostics with Actions that toggle up and down telemetry volume, collect memory dumps, and CPU samples.
+    Test your services more effectively; make your Production code self
+    diagnose. Couple the self diagnostics with Actions that toggle up
+    and down telemetry volume, collect memory dumps, and CPU samples. 
 
 -   :material-view-dashboard: [**Durability - Dashboards and Alerts**](./Scenarios.Overview.DurableDashboards.Alerts.document.md)
 
-    Develop flexible schemas in your logs, metrics, and traces that enhance the durability of your dashboards
-    and streamline communication between coworkers. Enable AI to find problems on your behalf.
+    Develop flexible schemas in your logs, metrics, and traces that
+    enhance the durability of your dashboards and streamline
+    communication between coworkers. Enable AI to find problems on your
+    behalf. 
 
 -  :moneybag: [**Cost Reduction**](./Scenarios.Overview.CostReduction.document.md)
 
-	Convert verbose logs into concise metrics, suppress large payloads, or
-	drop unnecessary logs.
+    Convert verbose logs into concise metrics, suppress large payloads,
+    or drop unnecessary logs. 
 
-</div>
+    </div>
