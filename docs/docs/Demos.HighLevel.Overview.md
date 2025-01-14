@@ -104,20 +104,24 @@ understand the types of operations that dynamic telemetry can offer.
 
 
 ### Simple Sample Using KQL Filter to Drop an Entire Log Message
+
 ```cdocs_include
-{{
-    CSharp_Include("../Samples/Demos.3.SecurityRedaction/Pages/Index.cshtml.cs",
-        "// StartKQL:FilterWholeLog", "// EndKQL:FilterWholeLog")
-}}```
+{{ CSharp_Include("../Samples/Demos.3.SecurityRedaction/Pages/Index.cshtml.cs",
+    "// StartKQL:FilterWholeLog",
+    "// EndKQL:FilterWholeLog")
+}}
+```
+
 
 
 ### Simple Sample Using KQL Filter dropping fields in a Log
 
 ```cdocs_include
-{{
-    CSharp_Include("../Samples/Demos.3.SecurityRedaction/Pages/Index.cshtml.cs",
-        "// StartKQL:FilterField", "// EndKQL:FilterField")
-}}```
+{{ CSharp_Include("../Samples/Demos.3.SecurityRedaction/Pages/Index.cshtml.cs",
+    "// StartKQL:FilterField",
+    "// EndKQL:FilterField")
+}}
+```
 
 
 ### Including Configuration Deployment Service
