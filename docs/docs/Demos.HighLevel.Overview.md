@@ -64,22 +64,27 @@ height="2.185044838145232in"}
 
 ### Survey of a Dynamic Telemetry Processor
 
-A [Dynamic Telemetry Processor](./Architecture.Components.Processor.Overview.document.md) is a software component that is
-dynamically configured and operates within the standard open telemetry
-OLTP pipeline. This processor is detailed further in the processor
-section, but essentially, it is a software module that monitors all
-events passing through it and allows one of the dynamic telemetry
-personas to modify the telemetry being transmitted.
+A [Dynamic Telemetry
+Processor](./Architecture.Components.Processor.Overview.document.md) is
+a software component that is dynamically configured and operates within
+the standard open telemetry OLTP pipeline. This processor is detailed
+further in the processor section, but essentially, it is a software
+module that monitors all events passing through it and allows one of the
+dynamic telemetry personas to modify the telemetry being transmitted.
 
 Subject to implementation a dynamic telemetry processor is likely to be
 fitting into one of several categories
 
-1.  A [Query Language](./Architecture.Components.Processor.QueryLanguage.document.md) (SQL, KQL, etc)
+1.  A [Query
+    Language](./Architecture.Components.Processor.QueryLanguage.document.md)
+    (SQL, KQL, etc)
 
-2.  A [Programming Environment or Language](./Architecture.Components.Processor.language.document.md) (eBPF, .NET, Python, Rust,
-    etc)
+2.  A [Programming Environment or
+    Language](./Architecture.Components.Processor.language.document.md)
+    (eBPF, .NET, Python, Rust, etc)
 
-3.  A textually defined [State Machine, or State Model](./Architecture.Components.Processor.StateMachine.document.md)
+3.  A textually defined [State Machine, or State
+    Model](./Architecture.Components.Processor.StateMachine.document.md)
 
 ### Addition on all four Dynamic Telemetry Processors
 
@@ -134,18 +139,10 @@ costs, or only enable logging when diagnosing the software. Another
 option could be pausing the logs to prevent the spread of accidentally
 logged sensitive information.
 
-``` cdocs_include
-{{ CSharp_Include("../Samples/Demos.3.SecurityRedaction/Pages/Index.cshtml.cs",
-    "// StartFunction:MistakenEmission",
-    "// EndFunction:MistakenEmission")
-}}
-```
-``` cdocs_include
-{{ CSharp_Include("../Samples/Demos.3.SecurityRedaction/Pages/Index.cshtml.cs",
-    "// StartSearchExample:LogWelcomeBanner",
-    "// EndSearchExample:LogWelcomeBanner")
-}}
-```
+To achieve this goal, we utilize the KQL [Query
+Language](./Architecture.Components.Processor.QueryLanguage.document.md)
+Processor -- and quickly deploy the below KQL to the most appropriate of
+the four Processors.
 
 ``` cdocs_include
 {{ CSharp_Include("../Samples/Demos.3.SecurityRedaction/Pages/Index.cshtml.cs",
@@ -164,11 +161,37 @@ that appropriate processing location the log would be simply paused
 A potentially more interesting application would be the removal of a
 particular field within a log
 
-in this scenario for some reason a particular field was included and
+In this scenario for some reason a particular field was included and
 then later after deployment was decided that field was unnecessary or
 unwanted this can happen for several reasons ranging from costs to
 security, database performance, and privacy it could also be simply a
 case of just wanting to be more tidy anesthetics
+
+Consider the example below from our demonstration on content redaction.
+This simulation code unintentionally emits a secret, which we need to
+remove before it is ingested into our databases.
+
+In this simulated workflow, we wish to remove the secret before it's
+egressed from the web agent.
+
+``` cdocs_include
+{{ CSharp_Include("../Samples/Demos.3.SecurityRedaction/Pages/Index.cshtml.cs",
+    "// StartFunction:MistakenEmission",
+    "// EndFunction:MistakenEmission")
+}}
+```
+
+``` cdocs_include
+{{ CSharp_Include("../Samples/Demos.3.SecurityRedaction/Pages/Index.cshtml.cs",
+    "// StartKQL:FilterWholeLog",
+    "// EndKQL:FilterWholeLog")
+}}
+```
+
+To achieve this goal, we utilize the KQL [Query
+Language](./Architecture.Components.Processor.QueryLanguage.document.md)
+Processor -- and quickly deploy the below KQL to the most appropriate of
+the four Processors.
 
 Without dynamic telemetry a rebuild retest and redeploy be required but
 with dynamic telemetry the simple configuration below can be dynamically
@@ -182,10 +205,32 @@ log named "*LogWelcomeBanner*" have it's "secret" field redacted.
 }}
 ```
 
-![](../orig_media/Demos.HighLevel.Overview.BeforeRedact.png)
+#### Database view of the Log that contains a secret
 
-![](../orig_media/Demos.HighLevel.Overview.AfterRedact.png)
+As demonstrated below, by utilizing Application Insights and KQL, it is
+evident that the secret in our code has been transmitted to the backend
+databases.
 
+![](../orig_media/Demos.HighLevel.Overview.BeforeRedact.png){width="5.5in"
+height="4.3991393263342085in"}
+
+Because this secret was "accidently" emitted; we wish to remove just the
+field.
+
+#### Database view of the Log, after field redaction
+
+As you can see in the below Screenshot, immediately after the KQL filter
+was deployed, just the 'secret' field is redacted.
+
+``` cdocs_include
+{{ CSharp_Include("../Samples/Demos.3.SecurityRedaction/Pages/Index.cshtml.cs",
+    "// StartKQL:FilterField",
+    "// EndKQL:FilterField")
+}}
+```
+
+![](../orig_media/Demos.HighLevel.Overview.AfterRedact.png){width="5.5in"
+height="4.3991393263342085in"}
 
 ### Including Configuration Deployment Service
 
