@@ -6,8 +6,8 @@ status: ReviewLevel2
 # PROCESSOR : Language
 
 The language processor is one of the most versatile and capable
-processors within dynamic telemetry; however, it also poses certain
-risks. The language processor in dynamic telemetry enables the insertion
+processors within Dynamic Telemetry; however, it also poses certain
+risks. The language processor in Dynamic Telemetry enables the insertion
 of programming language into the telemetry and logging stream of a
 process. These instructions will have the full functionality of the
 supporting programming language and runtime.
@@ -58,12 +58,12 @@ A Dynamic Telemetry Language Processor could be particularly useful for
 advanced diagnostics and tracking of this faulty hashing algorithm.
 
 in this example one could imagine the pseudo code below being utilized
-in a randomized pattern and deployed using dynamic telemetry into a
+in a randomized pattern and deployed using Dynamic Telemetry into a
 production environment as you can see in the pseudo code periodically
 the hash of a file will be doubly computed once in the production code
 and secondarily in the telemetry code
 
-when or if hash is detected to be incorrect the dynamic telemetry
+when or if hash is detected to be incorrect the Dynamic Telemetry
 language processor is able to emit extra to diagnostic telemetry that
 indicates to the programmer who is monitoring the back end databases
 that in fact the hashing algorithm is failing

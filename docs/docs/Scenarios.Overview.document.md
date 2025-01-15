@@ -5,7 +5,7 @@ status: ReviewLevel1b
 
 # Overview of Dynamic Telemetry Scenarios
 
-Dynamic telemetry can be technically intimidating and challenging. This Scenario Driven section, aims to offer a usage vantage into this complex subject.
+Dynamic Telemetry can be technically intimidating and challenging. This Scenario Driven section, aims to offer a usage vantage into this complex subject.
 
 This Scenario section will cover various scenarios commonly used by different
 personas to achieve business or technical results.We will discuss

@@ -8,13 +8,13 @@ description : Demo Showing DurableID
 
 ## Utilize the DurableID feature on OpenTelemetry, to locate the line of code responsible for the expense.
 
-Not all software using open telemetry will utilize a durable identifier,
+Not all software using Open Telemetry will utilize a durable identifier,
 though it is considered best practice. A durable identifier functions
 like a GPS or homing beacon, mapping any row of telemetry to a specific
 line of code.
 
 In microsoft.net platform the durable identifier is created
-automatically at compile time for open telemetry assuming the author of
+automatically at compile time for Open Telemetry assuming the author of
 the software follows best practices.
 
 ### Contrasting C# that makes use of Durable ID's, with C# that does not\*\*

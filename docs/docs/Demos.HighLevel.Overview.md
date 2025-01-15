@@ -67,12 +67,12 @@ height="2.185044838145232in"}
 A [Dynamic Telemetry
 Processor](./Architecture.Components.Processor.Overview.document.md) is
 a software component that is dynamically configured and operates within
-the standard open telemetry OLTP pipeline. This processor is detailed
+the standard Open Telemetry OLTP pipeline. This processor is detailed
 further in the processor section, but essentially, it is a software
 module that monitors all events passing through it and allows one of the
-dynamic telemetry personas to modify the telemetry being transmitted.
+Dynamic Telemetry personas to modify the telemetry being transmitted.
 
-Subject to implementation a dynamic telemetry processor is likely to be
+Subject to implementation a Dynamic Telemetry processor is likely to be
 fitting into one of several categories
 
 1.  A [Query
@@ -88,9 +88,9 @@ fitting into one of several categories
 
 
 
-### Addition on all four Dynamic Telemetry Processors
+### Installation Points for Dynamic Telemetry Processors
 
-The diagram below shows the installation of dynamic telemetry processors
+The diagram below shows the installation of Dynamic Telemetry processors
 in four different architectural locations.
 
 1.  In [process of the emitting agent](./Architecture.Components.Observer.InProcess.document.md)
@@ -103,18 +103,16 @@ in four different architectural locations.
 4.  At the [point of ingestion](./Architecture.Components.Observer.External.OffBox.document.md)
 
 The Processor section of this document expands upon these four different
-insertion points more thoroughly but in short each of them have benefits
-and costs and while functionally similar some care needs to be taken to
-make sure the correct one is chosen.
+insertion points more thoroughly, but in short, each installation point have capability, cost, and benefit tradeoffs.
 
 ![](../orig_media/Architecture.Boxes.Yes.DynamicTelemetry.drawio.png){width="5.5in"
 height="2.185044838145232in"}
 
 ### Capabilities of Dynamic Telemetry
 
-With a basic understanding of where architecturally dynamic telemetry
-can be inserted into the open telemetry pipeline it\'s important to
-understand the types of operations that dynamic telemetry can offer.
+With a basic understanding of where architecturally Dynamic Telemetry
+can be inserted into the Open Telemetry pipeline it\'s important to
+understand the types of operations that Dynamic Telemetry can offer.
 
 1.  Dropping Logs or Metrics
 
@@ -195,8 +193,8 @@ Language](./Architecture.Components.Processor.QueryLanguage.document.md)
 Processor -- and quickly deploy the below KQL to the most appropriate of
 the four Processors.
 
-Without dynamic telemetry a rebuild retest and redeploy be required but
-with dynamic telemetry the simple configuration below can be dynamically
+Without Dynamic Telemetry a rebuild retest and redeploy be required but
+with Dynamic Telemetry the simple configuration below can be dynamically
 transmitted to any of the four described processors at which point any
 log named "*LogWelcomeBanner*" have it's "secret" field redacted.
 
@@ -237,7 +235,7 @@ height="4.3991393263342085in"}
 ### Including Configuration Deployment Service
 
 Since every deployment environment has unique characteristics and
-tolerances for risk, dynamic telemetry leverages the inherent code and
+tolerances for risk, Dynamic Telemetry leverages the inherent code and
 configuration of the infrastructure\'s deployment systems. Further
 details on this topic are provided in subsequent sections. It is
 essential to consider configuration deployment as the most efficient

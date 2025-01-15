@@ -87,7 +87,7 @@ case that with more risk comes more performance or more flexibility.
 
 **Dynamic Telemetry mandates** that a ***[probe must not intentionally
 alter system state]{.underline}***. This does not preclude the use of a
-probe type akin to the ETW event in Windows with dynamic telemetry;
+probe type akin to the ETW event in Windows with Dynamic Telemetry;
 however, it does mean that the application of ETW within dynamic
 telemetry must not modify the system state. Although this may initially
 seem prohibitively costly during a quick read of this chapter; further
@@ -96,6 +96,6 @@ section.
 
 ## Implications on Deployment
 
-Implementations of dynamic telemetry must clearly communicate these
+Implementations of Dynamic Telemetry must clearly communicate these
 requirements at the configuration deployment stage using suitable gates,
 deployment rings, and communication systems for the hosting environment.

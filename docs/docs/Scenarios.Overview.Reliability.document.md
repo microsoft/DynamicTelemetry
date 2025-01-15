@@ -33,7 +33,7 @@ cloud and some of which are on the edge.
 As the complexity grows many developers simply get frustrated and in
 some ways give up.
 
-Dynamic telemetry introduces an interesting set of capabilities that
+Dynamic Telemetry introduces an interesting set of capabilities that
 when reasoned over result in a interesting hybrid between scenario and
 unit tests.
 
@@ -71,7 +71,7 @@ indicate a warning perhaps it\'s not fatal perhaps the programmer
 shouldn\'t even look at it. However maybe at one second this does
 indicate it a failure that needs to be inspected.
 
-The actions portion of dynamic telemetry permit a developer to select
+The actions portion of Dynamic Telemetry permit a developer to select
 their preferred type of diagnostic information in the event that one of
 the pieces of software they\'re authoring it behaves in a way that is
 not expected.
@@ -99,7 +99,7 @@ inner processor remote communication, it becomes evident that such a
 system can signal an external test when a failure occurs. This
 realization allows developers to write code that is easy to diagnose.
 The code itself aims to assist in detecting bugs, and the operational
-environment, through dynamic telemetry, supports both the programmer and
+environment, through Dynamic Telemetry, supports both the programmer and
 the program in this endeavor.
 
 We will introduce two key concepts that are elaborated upon further in
@@ -123,7 +123,7 @@ capabilities. For instance, you could establish a queue with an external
 observer that initiates a failure indicator if the queue becomes
 completely empty or exceeds a predetermined limit. You might be
 wondering what this preset number should be. It is important to note
-that dynamic telemetry does not specify these details; instead, it
+that Dynamic Telemetry does not specify these details; instead, it
 provides the fundamental constructs necessary to build such objects.
 
 One could envision a queue object where, upon initialization, diagnostic
@@ -141,7 +141,7 @@ accordingly. Additionally, queue depths might fluctuate based on varying
 usage patterns throughout the day across different regions.
 
 The apprehension of such programmers is justified. However, the concept
-of dynamic telemetry addresses these concerns by allowing programmers to
+of Dynamic Telemetry addresses these concerns by allowing programmers to
 specify nominal values during the initial setup on the expected
 hardware. In cases where these initial guesses are incorrect, dynamic
 telemetry supports a training process that measures and adjusts these
@@ -163,7 +163,7 @@ examples.
 
 ### Self-describing Production Code:
 
-Dynamic telemetry takes advantage of the durable identifiers and
+Dynamic Telemetry takes advantage of the durable identifiers and
 structure payloads within your logging in order to provide loose schemas
 that can be used in self-describing quality characteristics of code.
 While these topics are discussed further in other sections, the key
@@ -199,7 +199,7 @@ An external audit of the code introduces environmental characteristics
 to the code. For example, what might be a programmatic warning internal
 to the code could be treated as an error by an external observer.
 
-This is where the power of dynamic telemetry can be found. This power
+This is where the power of Dynamic Telemetry can be found. This power
 allows for the training of nominal operating characteristics for a
 particular environment on specific hardware. The external observer
 should be viewed as an advocate for the user within the operational
@@ -227,7 +227,7 @@ Code](./PositionPaper.ExternalAuditsOfProductionCode.document.md)
 
 Diagnostic collection essentially involves gathering the content that
 programmers or operational teams deem necessary for diagnosing system
-failures. Dynamic telemetry defines an error as an issue requiring
+failures. Dynamic Telemetry defines an error as an issue requiring
 investigation, therefore providing clear guidance, and total clarity of
 expectation, on the subsequent steps and specifying what needs to be
 collected.
@@ -235,7 +235,7 @@ collected.
 1.  Should an internal external test fail
 2.  Collect what the developer said they need
 
-It cannot get simpler. Best of all, with dynamic telemetry, the cost of
+It cannot get simpler. Best of all, with Dynamic Telemetry, the cost of
 mistakes is low. Clear expectations do not guarantee unique logs, memory
 dumps, or CPU traces when issues arise. Different personas, such as the
 operational team or program management team, also set equally clear

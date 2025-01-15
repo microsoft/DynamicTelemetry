@@ -64,7 +64,7 @@ and usability of the data.
 
 Dynamic Telemetry log schemas introduce an innovative approach to system
 monitoring and diagnostics. Unlike static telemetry, which relies on
-predefined data points and structures, dynamic telemetry allows for the
+predefined data points and structures, Dynamic Telemetry allows for the
 real-time adjustment and customization of log schemas based on the
 current needs and conditions of the system. This flexibility enables
 more precise and context-aware data collection, providing deeper

@@ -112,7 +112,7 @@ The process typically involves the following steps:
 4.  **Filtering and Aggregation**: Apply filters to capture only the
     necessary events and aggregate data to reduce the volume of logs.
     This can be done using query language processors or state machine
-    processors within dynamic telemetry.
+    processors within Dynamic Telemetry.
 
 5.  **Validation and Analysis**: Validate the captured logs to ensure
     they are accurate and useful for analysis. This step may involve
