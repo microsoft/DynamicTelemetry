@@ -141,7 +141,7 @@ height="3.9993055555555554in"}
 
 ## Choose one of the five Dynamic Telemetry locations to apply our KQL filter.
 
-For this simple example of dropping a chatty event, we\'ll use an
+For this simple example of dropping a chatty event, we'll use an
 in-process emission to avoid context switches and maintain performance
 due to the minimal check required. The necessary risks and benefits are
 detailed in other sections of this document and deserve further

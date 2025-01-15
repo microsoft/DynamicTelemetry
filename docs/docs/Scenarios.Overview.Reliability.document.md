@@ -24,7 +24,7 @@ gration that failed and from there they will look into the logging of
 the system often communicating in a bug fix and the addition of a unit
 test.
 
-The systems aren\'t bad in fact pretty good but a problem emerges when
+The systems aren't bad in fact pretty good but a problem emerges when
 the complexity of this system gets very large perhaps it spans multiple
 machines multiple geographies multiple locations, perhaps the hardware
 architecture spends spans multiple devices some of which are in the
@@ -46,7 +46,7 @@ been written on the subject.
 
 What is interesting and potentially is novel is the idea of using a
 combination of one box and off box observers to this lightly schematized
-telemetry to look for patterns and failures that wouldn\'t be
+telemetry to look for patterns and failures that wouldn't be
 necessarily caught within a unit test or scenario test.
 
 This is especially true as a systems complexity grows into stress
@@ -60,20 +60,20 @@ failure occurs the programmer will automatically get the desired set of
 diagnostics to fix the problem.
 
 Imagine in your software the software to some degree self-described
-failure. Perhaps when you author a inque operation there\'s an
+failure. Perhaps when you author a inque operation there's an
 expectation in programming of how long that operation will take before
-it\'s fully completed in the code when you use a queue you could insert
+it's fully completed in the code when you use a queue you could insert
 the item into a queue and say it is expected that the processing of this
 payload will have completed within 200 milliseconds.
 
 Should the completion take longer than 200 milliseconds this would
-indicate a warning perhaps it\'s not fatal perhaps the programmer
-shouldn\'t even look at it. However maybe at one second this does
+indicate a warning perhaps it's not fatal perhaps the programmer
+shouldn't even look at it. However maybe at one second this does
 indicate it a failure that needs to be inspected.
 
 The actions portion of Dynamic Telemetry permit a developer to select
 their preferred type of diagnostic information in the event that one of
-the pieces of software they\'re authoring it behaves in a way that is
+the pieces of software they're authoring it behaves in a way that is
 not expected.
 
 Further, the operating nominal operating characteristics may not
@@ -85,7 +85,7 @@ interesting when a when coupled with dynamic configuration in the
 telemetry system, because opportunity is created for these values to be
 trained into the system instead of programmed in.
 
-These concepts will be expanded in further sections but they\'re worth
+These concepts will be expanded in further sections but they're worth
 thought.
 
 With Dynamic Telemetry, your test assets are broken into five pillars
@@ -252,7 +252,7 @@ clear guidance on topics like memory, disk, and CPU usage.
 ### Entropy Creators
 
 As you explore using telemetry to pass and fail tests, and consider
-different layers of testing as your code\'s execution environment
+different layers of testing as your code's execution environment
 changes, it becomes clear how crucial unit testing, stress testing, and
 scenario testing are. This method offers a powerful solution to many
 complex software issues by defining the characteristics you want to

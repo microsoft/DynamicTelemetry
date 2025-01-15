@@ -47,7 +47,7 @@ testing.
 An example use of the query language processor is to suppress highly
 chatty events. Suppose we find that we are hashing many files and want
 to keep track of the count without needing file names or statuses. This
-often happens after deployment when it\'s realized that such
+often happens after deployment when it's realized that such
 functionality costs more than anticipated.
 
 To address this, a simple aggregate function can be sent to the Dynamic

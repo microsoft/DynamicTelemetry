@@ -54,7 +54,7 @@ several key steps:
 
 4.  **Metric Emission**: The final step is to emit the metrics into your
     standard and existing metrics solution / dashboard. These metrics
-    provide a high-level overview of the system\'s performance and can
+    provide a high-level overview of the system's performance and can
     be used to track key performance indicators (KPIs) and other
     important metrics.
 

@@ -19,11 +19,11 @@ the software follows best practices.
 
 ### Contrasting C# that makes use of Durable ID's, with C# that does not\*\*
 
-Let\'s examine code that makes use a durable identifier versus one that
-doesn\'t. We'll inspect both in Application Insights, so we can spot the
+Let's examine code that makes use a durable identifier versus one that
+doesn't. We'll inspect both in Application Insights, so we can spot the
 difference.
 
-It\'s important to understand that Dynamic Telemetry functions with and
+It's important to understand that Dynamic Telemetry functions with and
 without a DurableID, however the experience without is less enjoyable
 and less efficient. Following best practices is highly encouraged.
 
@@ -91,17 +91,17 @@ an increased diagnostic capabilities, to the table.
 ![](../orig_media/Demo.1.DurableID.SummarizeContrast.png){width="5.5in"
 height="4.3991393263342085in"}
 
-Let\'s explore some of these savings by examining where our costs are
+Let's explore some of these savings by examining where our costs are
 going. If we aggregate the rows of telemetry using a basic summary based
-on the message string, you\'ll observe that each row has two counts.
+on the message string, you'll observe that each row has two counts.
 
 One of the counts is derived from log information without a durable
 identifier, while the other comes from logging with the durable
 identifier. This results in a row count of two for each log entry, which
-is an intentional aspect of the demo\'s design.
+is an intentional aspect of the demo's design.
 
-It\'s hard to get a clear picture of your telemetry without a durable
-identifier. At best, you\'ll use regular expressions to turn a telemetry
+It's hard to get a clear picture of your telemetry without a durable
+identifier. At best, you'll use regular expressions to turn a telemetry
 row into something identifiable and traceable.
 
 ##### Using the EventName to locate the line of code
@@ -109,7 +109,7 @@ row into something identifiable and traceable.
 ![](../orig_media/Demo.1.DurableID.ExtendEventName.png){width="5.5in"
 height="4.406029090113736in"}
 
-Let\'s utilize our durable identifier by creating a separate event name
+Let's utilize our durable identifier by creating a separate event name
 column. Costs may rise due to the custom dimensions column.
 
 To reduce costs, consider dropping the message column and extracting the

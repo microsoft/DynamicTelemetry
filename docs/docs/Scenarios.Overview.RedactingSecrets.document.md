@@ -85,7 +85,7 @@ application or system restarts. ETW operates with minimal performance
 impact due to its efficient buffering and non-blocking logging
 mechanisms. It uses per-processor buffers that are written to disk by a
 separate thread, ensuring that logging does not interfere with the
-application\'s main operations1.
+application's main operations1.
 
 **user_events** is a powerful feature built into the Linux kernel, that
 has some characteristics of ETW on Windows Dynamic Telemetry. It allows

@@ -22,7 +22,7 @@ gaining insights and the unintended consequences of measurement.
 
 Comparing the two, while the observer effect is a fundamental concept in
 physics that underscores the limitations of measurement at a quantum
-level, telemetry\'s risks are more practical and immediate, impacting
+level, telemetry's risks are more practical and immediate, impacting
 system performance and reliability. In both cases, the challenge lies in
 minimizing the impact of observation to ensure accurate and reliable
 data collection. Techniques such as using less intrusive measurement
@@ -33,7 +33,7 @@ can help mitigate these risks.
 
 Different probes used in telemetry and diagnostics come with their own
 set of risks. For instance, **dynamic probes** in DynamicTelemetry can
-introduce performance overhead, potentially affecting the system\'s
+introduce performance overhead, potentially affecting the system's
 efficiency and reliability. These probes gather minimal amounts of
 memory and transform them into standard OpenTelemetry Logs, which can
 then be fed into existing telemetry pipelines. However, the process of
@@ -79,7 +79,7 @@ to, but not identical to, the example below.
 ![](../orig_media/Risk.ETW.png){width="2.660757874015748in" height="1.8226607611548555in"}
 ![](../orig_media/Risk.eBPF.png){width="2.660757874015748in" height="1.8226607611548555in"}
 
-In the above charts you\'ll see that the more area is shaded the more
+In the above charts you'll see that the more area is shaded the more
 risk the particular probe or action type brings. ETW (Windows), when configured incorrectly may inadvertency modify system behavior - whereas eBPF intentionally modifies system behavior, and therefore presents more risks to the different user [personas](./Personas.Overview.document.md).
 
  It is often also the

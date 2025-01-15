@@ -25,7 +25,7 @@ OpenTelemetry assets and workflows. You will be presented with five
 architectural components that, when used together, bring the peace
 and calm of local debugging into the distributed cloud. 
 
-Before diving into the overall architecture, let\'s watch a quick
+Before diving into the overall architecture, let's watch a quick
 demonstration that will showcase the end-to-end workflow. 
 
 In this high-level demonstration, we've added DynamicTelemetry to

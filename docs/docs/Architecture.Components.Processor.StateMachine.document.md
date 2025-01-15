@@ -56,7 +56,7 @@ testing.
 ## Modeling Live System Behavior, with a State Machine Processor
 
 Consider the state model processor as a tool to quickly and safely
-understand the system\'s operational characteristics after deployment.
+understand the system's operational characteristics after deployment.
 
 The state machine processor is typically beneficial in scenarios where
 software has been deployed into a production environment, and it cannot

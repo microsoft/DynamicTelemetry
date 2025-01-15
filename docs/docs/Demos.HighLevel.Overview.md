@@ -111,7 +111,7 @@ height="2.185044838145232in"}
 ### Capabilities of Dynamic Telemetry
 
 With a basic understanding of where architecturally Dynamic Telemetry
-can be inserted into the Open Telemetry pipeline it\'s important to
+can be inserted into the Open Telemetry pipeline it's important to
 understand the types of operations that Dynamic Telemetry can offer.
 
 1.  Dropping Logs or Metrics
@@ -236,7 +236,7 @@ height="4.3991393263342085in"}
 
 Since every deployment environment has unique characteristics and
 tolerances for risk, Dynamic Telemetry leverages the inherent code and
-configuration of the infrastructure\'s deployment systems. Further
+configuration of the infrastructure's deployment systems. Further
 details on this topic are provided in subsequent sections. It is
 essential to consider configuration deployment as the most efficient
 mechanism that ensures responsible usage within the hosted environment.

@@ -15,7 +15,7 @@ a service, rebooting a machine, writing to a file, or changing a config
 setting.
 
 Suitable actions might involve enabling CPU sampling, which could impact
-performance but doesn\'t intentionally modify system state.
+performance but doesn't intentionally modify system state.
 
 The following sections will discuss sample actions within the scope of
 Dynamic Telemetry, such as collecting configurations, enabling CPU
