@@ -86,19 +86,21 @@ fitting into one of several categories
 3.  A textually defined [State Machine, or State
     Model](./Architecture.Components.Processor.StateMachine.document.md)
 
+
+
 ### Addition on all four Dynamic Telemetry Processors
 
 The diagram below shows the installation of dynamic telemetry processors
 in four different architectural locations.
 
-1.  In process of the emitting agent
+1.  In [process of the emitting agent](./Architecture.Components.Observer.InProcess.document.md)
 
-2.  In the kernel of the Operation System hosting the agent
+2.  In the [kernel of the Operation System hosting the agent](./Architecture.Components.Observer.Kernel.document.md)
 
-3.  In the aggregation process that is about to emit to the ingestion
+3.  In the [aggregation process](./Architecture.Components.Observer.External.OnBox.document.md) that is about to emit to the ingestion
     gateway
 
-4.  At the point of ingestion
+4.  At the [point of ingestion](./Architecture.Components.Observer.External.OffBox.document.md)
 
 The Processor section of this document expands upon these four different
 insertion points more thoroughly but in short each of them have benefits
