@@ -5,7 +5,7 @@ status: ReviewLevel2
 
 # The Observer Effect
 
-The observer effect in physics refers to the phenomenon where the act of
+The Observer Effect in physics refers to the phenomenon where the act of
 observing a system inevitably alters its state. This effect is often due
 to the instruments used for measurement, which can interfere with the
 system being observed. A classic example is the double-slit experiment
@@ -17,10 +17,10 @@ being monitored. One of the main risks of telemetry is the potential for
 reliability and performance issues, as without care, its possible for
 the telemetry itself to negatively influence the performance of the
 system -- and in some cases even create crashes or failures. Both
-telemetry and the observer effect demonstrate the balance between
+telemetry and the Observer Effect demonstrate the balance between
 gaining insights and the unintended consequences of measurement.
 
-Comparing the two, while the observer effect is a fundamental concept in
+Comparing the two, while the Observer Effect is a fundamental concept in
 physics that underscores the limitations of measurement at a quantum
 level, telemetry's risks are more practical and immediate, impacting
 system performance and reliability. In both cases, the challenge lies in
