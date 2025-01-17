@@ -3,9 +3,14 @@ author: "Chris Gray"
 status: ReviewLevel1
 ---
 
-# Probe Risk Levels
+# Coming Soon
 
-# Dimensions
+
+# Notes
+
+## Probe Risk Levels
+
+## Dimensions
 
 1. Privacy Elevation
 1. Security Elevation
@@ -13,13 +18,13 @@ status: ReviewLevel1
 1. Costs [(Durable ID's and Structured Payloads)](./PositionPaper.DurableIds_StructuredPayloads.document.md)
 1. Performance[(Observer Effect)](./PositionPaper.ObserverEffect.document.md)
 
-## No Risk
+### No Risk
 
-## Limited Risk
+### Limited Risk
 
-## High Risk
+### High Risk
 
 
-## Appendix
+### Appendix
 1. [Observer Effect](./PositionPaper.ObserverEffect.document.md)
 1. [Durable ID's and Structured Payloads](./PositionPaper.DurableIds_StructuredPayloads.document.md)

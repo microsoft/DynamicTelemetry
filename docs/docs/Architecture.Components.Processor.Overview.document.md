@@ -40,7 +40,6 @@ durable identifier structure payloads are utilized to simply drop or
 simply transform a log message.
 
 
-
 The second is a state model processor, which is similar to a query
 language processor but introduces actions and probes. These capabilities
 include triggering CPU sampling, performing memory dumps, or temporarily
@@ -56,8 +55,49 @@ accessed and the number of instructions executed.
 
 ### Query Language Processor
 
+A Query Language Processor is the simplest type of processor. It acts as a filter that is applied directly to the OpenTelemetry data stream, allowing for straightforward transformations or the removal of specific log messages.
+
+As demonstrated in the example from our [sample using the Kusto Query Language (KQL)](./Demos.HighLevel.Overview.md), we identify and drop an individual log message.
+
+``` cdocs_include
+{{ CSharp_Include("../Samples/Demos.3.SecurityRedaction/Pages/Index.cshtml.cs",
+    "// StartKQL:FilterWholeLog",
+    "// EndKQL:FilterWholeLog")
+}}
+```
+
+In the example below, we are modifying the log message to drop a particular field.
+
+``` cdocs_include
+{{ CSharp_Include("../Samples/Demos.3.SecurityRedaction/Pages/Index.cshtml.cs",
+    "// StartKQL:FilterField",
+    "// EndKQL:FilterField")
+}}
+```
+
+By using your imagination, you can see many opportunities for this KQL language. For example, you could filter out logs that are not relevant to a specific analysis, transform log data to fit a particular schema, or even aggregate data to generate metrics on the fly.
+
+
 ### State Model Processor
+
+A State Model Processor is our next most sophisticated and complex processor. Similar to a Query Language Processor, the State Model Processor uses a simple configuration file. However, instead of merely providing filtering and aggregation, it allows for the construction of simple state machines that operate on the code as it runs.
+
+The State Model Processor also introduces the concept of [probes](./Architecture.Probes.Overview.document.md) and [actions](./PositionPaper.Actions.document.md), which are discussed in further sections.
+
+Simple applications of a State Model Processor might include the dynamic enablement and disablement of verbose logs in specific situations. For example, when an error occurs, you may wish to enable higher volume telemetry for a period of five minutes.
+
+Other actions include the ability to capture a memory dump. For instance, you might capture a memory dump if a particular error is emitted in a log.
 
 ### Language Processor
 
+The Language Processor is the most complex type of processor. In addition to the ability to dynamically migrate state transitions, it introduces the capability to allocate small amounts of memory and perform simple computations and calculations.
+
+Like other processors, the Language Processor is governed and managed according to the strict requirements found in Dynamic Telemetry. You can read more about the taxonomy that Dynamic Telemetry uses to classify and manage risks in this [section of the documentation](./PositionPaper.ProbeRiskLevels.document.md).
+
+Dynamic Telemetry proposes using a technology similar to eBPF, where a sandboxed virtual machine is employed to ensure performance and reliability guarantees.
+
 ## Requirements on a Processor
+
+A processor is more complicated than it may seem at first blush. Simply injecting code in line to a telemetry pipeline sounds great at first, but there can be real risks as described in the [Observer Effect](./PositionPaper.ObserverEffect.document.md) section of this documentation.
+
+In short, the Observer Effect is a reality where the act of observing a system can actually result in changes to the system, often with detrimental irony.
