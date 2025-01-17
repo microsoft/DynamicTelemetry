@@ -27,7 +27,7 @@ processor.
 
 ## Processor Types
 
-It\'s expected within dynamic telemetry that multiple different
+It\'s expected within Dynamic Telemetry that multiple different
 processor types are created over the course of time because there are
 requirements on the processor in order to meet other obligations, such
 as safety and performance, all processors must meet certain set of
@@ -101,3 +101,19 @@ Dynamic Telemetry proposes using a technology similar to eBPF, where a sandboxed
 A processor is more complicated than it may seem at first blush. Simply injecting code in line to a telemetry pipeline sounds great at first, but there can be real risks as described in the [Observer Effect](./PositionPaper.ObserverEffect.document.md) section of this documentation.
 
 In short, the Observer Effect is a reality where the act of observing a system can actually result in changes to the system, often with detrimental irony.
+
+To address this, a Processor must meet the following requirements:
+
+1. By design, it does not modify the system state.
+2. Each pillar in [Probe Risk](./Architecture.Probes.Overview.document.md) is supported by a measurement mechanism.
+3. Each measurement is communicated to the user in a simple and understandable manner.
+4. Each measurement has an upper bound or ceiling that is always enforced in conjunction with the processor.
+5. Should the upper bound be exceeded, the Processor will automatically disable.
+
+These requirements are serious and will influence how Dynamic Telemetry is used in practice.
+
+There will be scenarios where Dynamic Telemetry could be useful that will not be applicable as a result. And this is OK.
+
+It is the belief of dynamic telemetries designers that having limitations to the application. Are necessary in order to provide a trustworthy. Diagnostic system that is suitable for use within a large. Cloud environment.
+
+In short, we take the observability effect seriously. 
