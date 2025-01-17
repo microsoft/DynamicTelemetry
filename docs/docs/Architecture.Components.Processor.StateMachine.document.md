@@ -5,8 +5,8 @@ status: ReviewLevel2
 
 # PROCESSOR : State Machine
 
-The state machine processor is a relatively simple yet highly effective
-component within Dynamic Telemetry. Essentially, this processor listens
+The State Machine [Processor](./Architecture.Components.Processor.Overview.document.md) is a relatively simple yet highly effective
+component within Dynamic Telemetry. Essentially, this Processor listens
 to all log messages that pass by, identifying significant events and
 managing a state machine based on those events. When the state machine
 processor detects an interesting log message, it transitions to a new

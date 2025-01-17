@@ -5,8 +5,7 @@ status: ReviewLevel2
 
 # PROCESSOR : Language
 
-The language processor is one of the most versatile and capable
-processors within Dynamic Telemetry; however, it also poses certain
+The Language [Processor](./Architecture.Components.Processor.Overview.document.md) is one of the most versatile and capable Processors within Dynamic Telemetry; however, it also poses certain
 risks. The language processor in Dynamic Telemetry enables the insertion
 of programming language into the telemetry and logging stream of a
 process. These instructions will have the full functionality of the

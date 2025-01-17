@@ -5,8 +5,7 @@ status: ReviewLevel2
 
 # PROCESSOR : Query Language
 
-The query language processor is one of the most straightforward
-processors available. It presents minimal risk while still providing
+The Query Language [Processor](./Architecture.Components.Processor.Overview.document.md) is one of the most straightforward available. It presents minimal risk while still providing
 valuable capabilities for dynamic modeling and system understanding. The
 query language processor can be likened to command line tools found on
 all operating systems, which manipulate standard IO subsystems.
