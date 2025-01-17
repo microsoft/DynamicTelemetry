@@ -114,6 +114,6 @@ These requirements are serious and will influence how Dynamic Telemetry is used 
 
 There will be scenarios where Dynamic Telemetry could be useful that will not be applicable as a result. And this is OK.
 
-It is the belief of dynamic telemetries designers that having limitations to the application. Are necessary in order to provide a trustworthy. Diagnostic system that is suitable for use within a large. Cloud environment.
+It is the belief of Dynamic Telemetry's designers that having limitations to the application is necessary in order to provide a trustworthy diagnostic system that is suitable for use within a large cloud environment.
 
-In short, we take the observability effect seriously. 
+In short, we take the [Observer Effect](./PositionPaper.ObserverEffect.document.md) seriously.
