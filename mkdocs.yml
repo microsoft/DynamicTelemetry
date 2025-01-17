@@ -118,8 +118,8 @@ nav:
                 - Overview: ./docs/Architecture.Components.Processor.Overview.document.md
                 - Options:
                     - Query Language : ./docs/Architecture.Components.Processor.QueryLanguage.document.md
-                    - Language : ./docs/Architecture.Components.Processor.language.document.md
                     - StateMachine : ./docs/Architecture.Components.Processor.StateMachine.document.md
+                    - Language : ./docs/Architecture.Components.Processor.Language.document.md
 
             - Processor Installation Locations:
                 - Internal Observer: ./docs/Architecture.Components.Observer.InProcess.document.md
