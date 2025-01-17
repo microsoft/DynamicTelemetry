@@ -55,7 +55,7 @@ accessed and the number of instructions executed.
 
 ### Query Language Processor
 
-A Query Language Processor is the simplest type of processor. It acts as a filter that is applied directly to the OpenTelemetry data stream, allowing for straightforward transformations or the removal of specific log messages.
+[A Query Language Processor](./Architecture.Components.Processor.QueryLanguage.document.md) is the simplest type of processor. It acts as a filter that is applied directly to the OpenTelemetry data stream, allowing for straightforward transformations or the removal of specific log messages.
 
 As demonstrated in the example from our [sample using the Kusto Query Language (KQL)](./Demos.HighLevel.Overview.md), we identify and drop an individual log message.
 
@@ -80,7 +80,7 @@ By using your imagination, you can see many opportunities for this KQL language.
 
 ### State Model Processor
 
-A State Model Processor is our next most sophisticated and complex processor. Similar to a Query Language Processor, the State Model Processor uses a simple configuration file. However, instead of merely providing filtering and aggregation, it allows for the construction of simple state machines that operate on the code as it runs.
+[A State Model Processor](./Architecture.Components.Processor.StateMachine.document.md) is our next most sophisticated and complex processor. Similar to a Query Language Processor, the State Model Processor uses a simple configuration file. However, instead of merely providing filtering and aggregation, it allows for the construction of simple state machines that operate on the code as it runs.
 
 The State Model Processor also introduces the concept of [probes](./Architecture.Probes.Overview.document.md) and [actions](./PositionPaper.Actions.document.md), which are discussed in further sections.
 
@@ -88,9 +88,10 @@ Simple applications of a State Model Processor might include the dynamic enablem
 
 Other actions include the ability to capture a memory dump. For instance, you might capture a memory dump if a particular error is emitted in a log.
 
+
 ### Language Processor
 
-The Language Processor is the most complex type of processor. In addition to the ability to dynamically migrate state transitions, it introduces the capability to allocate small amounts of memory and perform simple computations and calculations.
+[The Language Processor](./Architecture.Components.Processor.Language.document.md) is the most complex type of processor. In addition to the ability to dynamically migrate state transitions, it introduces the capability to allocate small amounts of memory and perform simple computations and calculations.
 
 Like other processors, the Language Processor is governed and managed according to the strict requirements found in Dynamic Telemetry. You can read more about the taxonomy that Dynamic Telemetry uses to classify and manage risks in this [section of the documentation](./PositionPaper.ProbeRiskLevels.document.md).
 
