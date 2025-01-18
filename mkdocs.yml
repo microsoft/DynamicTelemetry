@@ -155,14 +155,17 @@ nav:
                 - Overview: ./docs/Architecture.Probes.Overview.document.md
                 - Sample Probes:
                     - Linux:
-                        - DTrace: ./docs/Architecture.Probe.DTrace.document.md
-                        - OpenTelemetry: ./docs/Architecture.Probe.OpenTelemetry.document.md
+                        - Breakpoint Probes:
+                            - ptrace: ./docs/Architecture.Probe.ptrace.document.md
+                            - uprobes: ./docs/Architecture.Probe.uprobes.document.md
+                            - DTrace: ./docs/Architecture.Probe.DTrace.document.md
                         - eBPF: ./docs/Architecture.Probe.eBPF.document.md
-                        - ptrace: ./docs/Architecture.Probe.ptrace.document.md
-                        - uprobes: ./docs/Architecture.Probe.uprobes.document.md
-                        - user_events: ./docs/Architecture.Probe.user_events.document.md
-                    - Windows:
-                        - ETW: ./docs/Architecture.Probe.ETW.document.md
+                        - Logging Probes:
+                            - OpenTelemetry: ./docs/Architecture.Probe.OpenTelemetry.document.md
+                            - Linux:
+                                - user_events: ./docs/Architecture.Probe.user_events.document.md
+                            - Windows:
+                                - ETW: ./docs/Architecture.Probe.ETW.document.md
 
     - Appendix:
         - Overview: ./docs/PositionPaper.PositionPapers.Overview.document.md

@@ -17,7 +17,7 @@ namespace DynamicTelemetry_Demo_3_SecurityRedactions.Pages
             _cache = cache;
         }
 
-        // StartExample:InsertTelemetry
+        // StartExample:InsertTelemetryOnGet
         public void OnGet(string variable="")
         {
             _me = _cache.GetOrCreate(variable, entry => {
@@ -27,15 +27,17 @@ namespace DynamicTelemetry_Demo_3_SecurityRedactions.Pages
 
             _me?.AddUsage();
         }
-        // EndExample:InsertTelemetry
+        // EndExample:InsertTelemetryOnGet
     }
 
     public class CachedObject
     {
-        public int Usage { get; private set; } = 0;
+        private int _usage = 0;
+        public int Usage { get { lock (this) { return _usage; } } }
+                    
         public void AddUsage()
         {
-            ++Usage;
+            lock (this) { ++_usage; }
         }
     }
 }
