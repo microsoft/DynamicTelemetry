@@ -3,10 +3,10 @@ author: "Chris Gray"
 status: ReviewLevel2
 ---
 
-# PROCESSOR : Language
+# Processor : Language
 
 The Language [Processor](./Architecture.Components.Processor.Overview.document.md) is one of the most versatile and capable Processors within Dynamic Telemetry; however, it also poses certain
-risks. The language processor in Dynamic Telemetry enables the insertion
+risks. The language Processor in Dynamic Telemetry enables the insertion
 of programming language into the telemetry and logging stream of a
 process. These instructions will have the full functionality of the
 supporting programming language and runtime.
@@ -63,7 +63,7 @@ the hash of a file will be doubly computed once in the production code
 and secondarily in the telemetry code
 
 when or if hash is detected to be incorrect the Dynamic Telemetry
-language processor is able to emit extra to diagnostic telemetry that
+language Processor is able to emit extra to diagnostic telemetry that
 indicates to the programmer who is monitoring the back end databases
 that in fact the hashing algorithm is failing
 

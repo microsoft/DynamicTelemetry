@@ -3,18 +3,18 @@ author: "Chris Gray"
 status: ReviewLevel2
 ---
 
-# PROCESSOR : State Machine
+# Processor : State Machine
 
 The State Machine [Processor](./Architecture.Components.Processor.Overview.document.md) is a relatively simple yet highly effective
 component within Dynamic Telemetry. Essentially, this Processor listens
 to all log messages that pass by, identifying significant events and
 managing a state machine based on those events. When the state machine
-processor detects an interesting log message, it transitions to a new
+Processor detects an interesting log message, it transitions to a new
 state, potentially initiating an action as part of this transition.
 
 ## Introduction to State Machine Processor
 
-The State Machine processor operates as a Directed Graph, where
+The State Machine Processor operates as a Directed Graph, where
 transitions occur upon the observation of specific logs by the
 Processor. This state machine is employed for tasks such as timing,
 counting, and measuring in contexts that pose significant challenges.
@@ -55,18 +55,18 @@ testing.
 
 ## Modeling Live System Behavior, with a State Machine Processor
 
-Consider the state model processor as a tool to quickly and safely
+Consider the state model Processor as a tool to quickly and safely
 understand the system's operational characteristics after deployment.
 
-The state machine processor is typically beneficial in scenarios where
+The state machine Processor is typically beneficial in scenarios where
 software has been deployed into a production environment, and it cannot
 be rapidly altered or redeployed. It should be viewed as a diagnostic
 tool that can be employed extensively without affecting user security,
 privacy, or performance.
 
-After a conclusion is reached by the state machine processor, the
+After a conclusion is reached by the state machine Processor, the
 production code is frequently modified to implement a more suitable and
-permanent solution. Consequently, the state machine processor can be
+permanent solution. Consequently, the state machine Processor can be
 deactivated once the revised deployment is completed.
 
 Lets look at a few examples, as they likely will help tell the tale
