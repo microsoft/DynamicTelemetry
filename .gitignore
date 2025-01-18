@@ -17,3 +17,4 @@
 *.azurePubxml
 *.pubxml
 *.publishproj
+.fake

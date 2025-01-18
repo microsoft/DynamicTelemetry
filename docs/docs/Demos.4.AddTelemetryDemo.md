@@ -47,6 +47,19 @@ To better understand the problem, the developers would like to know how many ite
 }}
 ```
 
+To achieve this. We will open the Visual Studio Code. Editor and locate the piece of code where we would like to insert our Probe.
+
+
+![](../orig_media/Demos.4.AddDynamicTracePoint.VSCode.png)
+
+We simply right-click and select "Add Dynamic Telemetry Memory Probe."
+
+Similar to standard Visual Studio conditional breakpoints, we can set emission criteria for a variable in a way that does not stop the execution pointer. This method is both fast and safe.
+
+![](../orig_media/Demos.4.AddDynamicTracePoint.VSCode.AddCacheCount.png)
+
+When this breakpoint is hit, the memory will be extracted and inserted into the standard and previously deployed OpenTelemetry pipelines. You can then view this data from your standard database.
+
 
 # Deploy this Dynamic Telemetry probe to a small number of machines that we expect to be impacted.
 
