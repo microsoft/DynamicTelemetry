@@ -7,6 +7,9 @@ status: ReviewLevelb
 
 # Deep Diagnostics, at Scale
 
+<iframe src="https://microsoft-my.sharepoint.com/personal/chgray_microsoft_com/_layouts/15/embed.aspx?UniqueId=9a936a65-78d6-4fc6-937e-f5d12e0028d5&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="DynamicTelemetry_DiagnosticVideo.mp4"></iframe>
+
+
 In Dynamic Telemetry, Probes and Actions play crucial roles in
 monitoring and diagnosing system behavior. Probes, such as any Log
 produced in OpenTelemetry, are read by a Dynamic Telemetry Processor as
