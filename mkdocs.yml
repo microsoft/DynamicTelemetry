@@ -203,20 +203,11 @@ nav:
             - Locks and Throttles: ./docs/PositionPaper.LeafLevelLogging.document.md
             - Loose Schemas: ./docs/PositionPaper.SharingDataAmongStakeHoldersIsHard.document.md
 
-        - Lookout Tower (Sample Implementation):
-            - PoC Scenarios: ./docs/LookoutTower.PoC_Scenarios.document.md
-            - Intro Demo:
-                - High Level Overview: ./docs/Demos.HighLevel.Overview.md
-                - Understanding Durable ID : ./docs/Demos.0.DynamicID.md
-                - Drop a Chatty Event : ./docs/Demos.1.IntroDemo.md
-                - KQL Queries:  ./docs/Misfiled.Meter.Sum.kql.md
+        - Intro Demo:
+            - Adding a Memory Probe: ./docs/Demos.4.AddTelemetryDemo.md
+            - Understanding Durable ID : ./docs/Demos.0.DynamicID.md
+            - Drop a Chatty Event : ./docs/Demos.1.DropChattyLog.md
 
-
-
-            - Dynamic Probe: ./docs/Demos.2_DynamicProbe.md
-            - Adding Forgotten Session Id: ./docs/LookoutTower.Sample.AddSessionId.document.md
-            - Scrub Secret: ./docs/LookoutTower.Sample.ScrubSecret.document.md
-            - Suppress Chatty Log: ./docs/LookoutTower.Sample.SuppressChattyLog.document.md
 
 
 #<END_BINDING>

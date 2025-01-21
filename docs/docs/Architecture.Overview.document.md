@@ -25,7 +25,7 @@ understanding of the system.
 
 ## DynamicTelemetry, in a nutshell
 
-[Demos](./Demos.1.IntroDemo.md) are a great way to go hands on with
+[Demos](./Demos.1.DropChattyLog.md) are a great way to go hands on with
 DynamicTelemetry, but before diving in to the complex realities
 DynamicTelemetry seeks to resolve, it's important to have a general
 understanding of usage.
