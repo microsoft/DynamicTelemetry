@@ -14,9 +14,11 @@ specialized breakpoint into our code. This will allow us to dynamically
 extract small amounts of memory and insert it into our existing
 OpenTelemetry pipelines.
 
-## Demo Overview
+## Demo Overview and Video
 
-In short this demo will
+![type:video](../orig_media/DynamicTelemetry_DiagnosticVideo.mp4)
+
+In short this demo will:
 
 1.  Use a Breakpoint Probe to dynamically insert a row of telemetry to
     emit the contents of a variable into our standard OpenTelemetry
@@ -24,6 +26,7 @@ In short this demo will
 2.  Deploy this Dynamic Telemetry probe to a small number of machines
     that we expect to be impacted.
 3.  Connect to Application Insights and View / Graph / Alert this value.
+
 
 # Dynamically insert a row of telemetry to emit the contents of a variable into our standard OpenTelemetry pipelines.
 

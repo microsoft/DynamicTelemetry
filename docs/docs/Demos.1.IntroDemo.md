@@ -27,6 +27,9 @@ In short this demo will
 
 -   Deploy the conversion, and measure the impact
 
+## Demo Video
+![type:video](../orig_media/DynamicTelemetry_CostSavings.mp4)
+
 ## Use Azure Monitor and KQL language to locate an unexpectedly expensive Open Telemetry log
 
 By using the query below in Application Insights, we can utilize the

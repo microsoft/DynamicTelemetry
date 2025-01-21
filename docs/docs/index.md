@@ -48,7 +48,6 @@ read along one of the four tracks found below. 
     during production issues. Deploy observers to monitor telemetry and
     gather extra diagnostic data, only when needed. 
 
-
     ![type:video](../orig_media/DynamicTelemetry_DiagnosticVideo.mp4)
 
 -   :shield: [**Privacy and Security**](./Scenarios.Overview.RedactingSecrets.document.md)
@@ -57,7 +56,6 @@ read along one of the four tracks found below. 
     within Logs, should they inadvertently contain sensitive information
     such as PATs, IP addresses, user information, or crypto keys. Remove
     these, at their source, instantly - without rebuild or redeploy. 
-
 
 -   :fontawesome-solid-dog: [**Reliability**](./Scenarios.Overview.Reliability.document.md)
 
@@ -78,7 +76,4 @@ read along one of the four tracks found below. 
     or drop unnecessary logs. 
 
     ![type:video](../orig_media/DynamicTelemetry_CostSavings.mp4)
-
-
-
-    </div>
+</div>

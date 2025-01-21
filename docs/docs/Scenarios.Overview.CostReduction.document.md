@@ -30,6 +30,9 @@ diagnostics. This approach ensures that resources are allocated
 effectively, reducing unnecessary expenditures and improving the bottom
 line.
 
+![type:video](../orig_media/DynamicTelemetry_CostSavings.mp4)
+
+
 ## Convert Logs into Metrics
 
 Converting logs into metrics is a powerful technique used in Dynamic
