@@ -36,19 +36,6 @@ sample. 
 After the demo, please 'choose your own adventure' by continuing to
 read along one of the four tracks found below. 
 
-## DynamicTelemetry Intro Demo(s)
-
-<div class="grid cards" markdown>
-- :moneybag: [Cost Savings](./Demos.HighLevel.Overview.md)
-
-<iframe src="https://microsoft-my.sharepoint.com/personal/chgray_microsoft_com/_layouts/15/embed.aspx?UniqueId=b4075e2f-89c5-4907-94ed-966cded40b4f&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="DynamicTelemetry_IntroVideo.mp4"></iframe>
-
-- :material-speedometer: [Diagnostics and Performance](./Demos.4.AddTelemetryDemo.md)
-
-<iframe src="https://microsoft-my.sharepoint.com/personal/chgray_microsoft_com/_layouts/15/embed.aspx?UniqueId=9a936a65-78d6-4fc6-937e-f5d12e0028d5&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="DynamicTelemetry_DiagnosticVideo.mp4"></iframe>
-
-</div>
-
 
 ## Scenarios
 
@@ -60,6 +47,9 @@ read along one of the four tracks found below. 
     they are not. Quickly trigger memory dumps or collect CPU samples
     during production issues. Deploy observers to monitor telemetry and
     gather extra diagnostic data, only when needed. 
+
+
+    ![type:video](../orig_media/DynamicTelemetry_DiagnosticVideo.mp4)
 
 -   :shield: [**Privacy and Security**](./Scenarios.Overview.RedactingSecrets.document.md)
 
@@ -86,5 +76,9 @@ read along one of the four tracks found below. 
 
     Convert verbose logs into concise metrics, suppress large payloads,
     or drop unnecessary logs. 
+
+    ![type:video](../orig_media/DynamicTelemetry_CostSavings.mp4)
+
+
 
     </div>

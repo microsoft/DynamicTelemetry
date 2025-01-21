@@ -91,7 +91,7 @@ Other actions include the ability to capture a memory dump. For instance, you mi
 
 ### Language Processor
 
-[The Language Processor](./Architecture.Components.Processor.Language.document.md) is the most complex type of Processor. In addition to the ability to dynamically migrate state transitions, it introduces the capability to allocate small amounts of memory and perform simple computations and calculations.
+[The Language Processor](./Architecture.Components.Processor.Language.md) is the most complex type of Processor. In addition to the ability to dynamically migrate state transitions, it introduces the capability to allocate small amounts of memory and perform simple computations and calculations.
 
 Like other Processors, the Language Processor is governed and managed according to the strict requirements found in Dynamic Telemetry. You can read more about the taxonomy that Dynamic Telemetry uses to classify and manage risks in this [section of the documentation](./PositionPaper.ProbeRiskLevels.document.md).
 

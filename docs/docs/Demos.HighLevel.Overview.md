@@ -80,7 +80,7 @@ fitting into one of several categories
     (SQL, KQL, etc)
 
 2.  A [Programming Environment or
-    Language](./Architecture.Components.Processor.Language.document.md)
+    Language](./Architecture.Components.Processor.Language.md)
     (eBPF, .NET, Python, Rust, etc)
 
 3.  A textually defined [State Machine, or State

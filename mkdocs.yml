@@ -119,7 +119,7 @@ nav:
                 - Options:
                     - Query Language : ./docs/Architecture.Components.Processor.QueryLanguage.document.md
                     - StateMachine : ./docs/Architecture.Components.Processor.StateMachine.document.md
-                    - Language : ./docs/Architecture.Components.Processor.Language.document.md
+                    - Language : ./docs/Architecture.Components.Processor.Language.md
 
             - Processor Installation Locations:
                 - Internal Observer: ./docs/Architecture.Components.Observer.InProcess.document.md
