@@ -28,7 +28,7 @@ understanding of the system.
 [Demos](./Demos.1.IntroDemo.md) are a great way to go hands on with
 DynamicTelemetry, but before diving in to the complex realities
 DynamicTelemetry seeks to resolve, it's important to have a general
-undertqnding of usage.
+understanding of usage.
 
 Image yourself as a
 [DEVELOPER](./Persona_Developer.document.md). You're focused
@@ -38,7 +38,7 @@ about solving business problems, keeping costs in check,
 ## OnBox Architecture
 ![](../orig_media/Architecture.OnBox.drawio.png)
 
-## Tenents
+## Tenants
 
 ```cdocs_include
 {{ CSharp_Include("./PositionPaper.DynamicTelemetryTenets.document.md",

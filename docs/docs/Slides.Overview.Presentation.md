@@ -9,11 +9,39 @@ author: "Chris Gray"
 status: ReviewLevel1
 ---
 
-
-
 ![](../orig_media/DynamicTelemetry.CoPilot.Image.png)
 
 # Dynamic Telemetry
+
+---
+
+# Our Challenge
+
+* Privacy, Security, Cost, and Diagnostics is tough in a fragmented ecosystem
+* Countless Tools
+* Multiple OS's  (2x)
+* Multiple Languages (11x)
+* Multiple Databases (>5x)
+* Multiple Visualizations and Alerting (>5x)
+* Multiple Hosting Environments (>5x)
+* Multiple Usage Models
+
+
+---
+
+# Our Opportunity
+
+* OpenTelemetry seeks to tackle the API / Language problem
+* Dynamic Telemetry seeks to tackle the connections, using Scenarios as golden paths
+
+---
+
+# Actions
+
+* Seek Community Agreement on Workflow; Scenarios
+* Clear architectural connection points (Probe, Action, Processors)
+* Make it easier to 'bolt in' than to replicate    
+* Turn Key, Golden Paths
 
 ---
 

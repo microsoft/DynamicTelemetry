@@ -36,56 +36,19 @@ sample. 
 After the demo, please 'choose your own adventure' by continuing to
 read along one of the four tracks found below. 
 
-## DynamicTelemetry Intro Demo
+## DynamicTelemetry Intro Demo(s)
 
-[Introduction Demo](./Demos.HighLevel.Overview.md)
+<div class="grid cards" markdown>
+- :moneybag: [Cost Savings](./Demos.HighLevel.Overview.md)
 
 <iframe src="https://microsoft-my.sharepoint.com/personal/chgray_microsoft_com/_layouts/15/embed.aspx?UniqueId=b4075e2f-89c5-4907-94ed-966cded40b4f&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="DynamicTelemetry_IntroVideo.mp4"></iframe>
 
+- :material-speedometer: [Diagnostics and Performance](./Demos.4.AddTelemetryDemo.md)
 
-<!--![type:video](../DynamicTelemetry_IntroVideo.mp4)){: style='width: 100%'}
-[Introduction Demo #1](./Demos.1_IntroDemo.md)-->
-
-## Usage Personas
-
-DynamicTelemetry is a diagnostic system useful to many different
-audiences, each of whom have similar, but different interests. 
-
-To better cater our introductory documentation to each of these
-audiences, we've broken the content into personas and scenarios.
-This is only to simplify understanding, by presenting content in
-different orders. We will make use of URL's to cross reference
-content that may be interesting to multiple personas. 
-
-## Personas
-
-<div class="grid cards" markdown>
-
--   :material-human: [**Developer**](./Persona_Developer.document.md)
-
-    A programmer of Cloud Scale services, who is looking to add
-    diagnostic probing, to their use of OpenTelemetry.
-
--   :material-microsoft-azure-devops: [**DevOps**](./Persona_DevOps.document.md)
-
-    Someone monitoring a cloud service may want to gain insights without
-    involving their development team. They may want to suppress chatty
-    events, turn events into metrics, or suppress erroneous logs,
-    metrics, or events.
-
--  :scientist: [**Data Analyst**](./Persona_DataAnalysis.document.md)
-
-    Someone who would value better understanding of a Developers intent.
-    For example how many items should be on a queue, what response
-    latencies were expected when a piece of code was authored. 
-
--   :material-store: [**Project Manager**](./Persona_ProjectManager.document.md)
-
-    Someone responsible for planning, executing, and overseeing projects
-    to ensure they are completed on time, within scope, and within
-    budget. 
+<iframe src="https://microsoft-my.sharepoint.com/personal/chgray_microsoft_com/_layouts/15/embed.aspx?UniqueId=9a936a65-78d6-4fc6-937e-f5d12e0028d5&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="DynamicTelemetry_DiagnosticVideo.mp4"></iframe>
 
 </div>
+
 
 ## Scenarios
 
