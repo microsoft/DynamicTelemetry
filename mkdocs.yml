@@ -170,13 +170,6 @@ nav:
     - Appendix:
         - Overview: ./docs/PositionPaper.PositionPapers.Overview.document.md
 
-        - Slides / Presentations:
-            - Overview: ./docs/Slides.Overview.Presentation.md
-
-        - Development / Spec Process:
-            - Tenets: ./docs/PositionPaper.DynamicTelemetryTenets.document.md
-            - Document Review Process: ./docs/ReviewProcess.document.md
-
         - Position Papers:
             - Actions: ./docs/PositionPaper.Actions.document.md
             - ConfigurationDeployment: ./docs/PositionPaper.ConfigurationDeployment.document.md
@@ -203,11 +196,17 @@ nav:
             - Locks and Throttles: ./docs/PositionPaper.LeafLevelLogging.document.md
             - Loose Schemas: ./docs/PositionPaper.SharingDataAmongStakeHoldersIsHard.document.md
 
-        - Intro Demo:
+        - Demo Videos:
             - Adding a Memory Probe: ./docs/Demos.4.AddTelemetryDemo.md
             - Understanding Durable ID : ./docs/Demos.0.DynamicID.md
             - Drop a Chatty Event : ./docs/Demos.1.DropChattyLog.md
 
+        - Slides / Presentations:
+            - Overview: ./docs/Slides.Overview.Presentation.md
+
+        - Development / Spec Process:
+            - Tenets: ./docs/PositionPaper.DynamicTelemetryTenets.document.md
+            - Document Review Process: ./docs/ReviewProcess.document.md
 
 
 #<END_BINDING>
