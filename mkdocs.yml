@@ -206,7 +206,9 @@ nav:
 
         - Development / Spec Process:
             - Tenets: ./docs/PositionPaper.DynamicTelemetryTenets.document.md
+            - Rude Q&A : ./docs/Rude_Q_and_A.md 
             - Document Review Process: ./docs/ReviewProcess.document.md
+
 
 
 #<END_BINDING>

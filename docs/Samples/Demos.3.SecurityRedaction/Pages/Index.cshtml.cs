@@ -26,12 +26,6 @@ namespace DynamicTelemetry_Demo_3_SecurityRedactions.Pages
         }
         // EndFunction:MistakenEmission
 
-        // StartSearchExample:LogWelcomeBanner
-        [LoggerMessage(Level = LogLevel.Information, Message = "Welcome Banner with accidentlly emitted secret = {secret}")]
-        static partial void LogWelcomeBanner(ILogger logger, string secret);
-        // EndSearchExample:LogWelcomeBanner
-
-
 
         //
         // In the WelcomeBanner, for purposes of demo, we emit a 'secret'

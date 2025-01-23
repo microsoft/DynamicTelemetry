@@ -15,58 +15,46 @@ status: ReviewLevel1
 
 ---
 
+# TLDR;  What is Dynamic Telemetry
+
+1. Single Architecture
+1. That Connects bespoke telemetry / diagnostic tools
+1. Solving and Connecting
+1. 'Golden Path' scenarios
+    1. Performance and Diagnostics
+    1. Security and Privacy
+    1. Dashboard and Alert Durability
+    1. Cost Reductions
+1. Creating Opportunities for AI
+
+---
+
 # Our Challenge
 
-* Privacy, Security, Cost, and Diagnostics is tough in a fragmented ecosystem
-* Countless Tools
-* Multiple OS's  (2x)
-* Multiple Languages (11x)
-* Multiple Databases (>5x)
-* Multiple Visualizations and Alerting (>5x)
-* Multiple Hosting Environments (>5x)
-* Multiple Usage Models
-
+![](../orig_media/ChallengeMatrix.drawio.png)
 
 ---
 
 # Our Opportunity
 
-* OpenTelemetry seeks to tackle the API / Language problem
-* Dynamic Telemetry seeks to tackle the connections, using Scenarios as golden paths
+* Organize API's; Language, OS under Open Telemetry
+* Tackle the connections under 'Dynamic Telemetry';  using Scenarios as golden paths
+
+---
+
+# My Ask
+
+1. If these scenarios come up, I'd love to help guide the implementation as described in this presentation.
+
+1. Let me know if you're excited about this!
 
 ---
 
 # Actions
 
-* Seek Community Agreement on Workflow; Scenarios
-* Clear architectural connection points (Probe, Action, Processors)
-* Make it easier to 'bolt in' than to replicate    
-* Turn Key, Golden Paths
-
----
-
-# Bridging
-    * Open Telemetry
-    * uProbes / kProbes
-    * eBPF
-    * DTrace
-    * ETW (Windows) and user_events (Linux)
-
----
-
-# Durable ID's and Structured Payloads
-
-```cpp
-printf("oh no, transaction error. err=%d", error);
-```
-vs.
-
-```cpp
-LogTransactionError(error);
-
-[LoggerMessage(Level = LogLevel.Error, Message = "oh no, transaction error. err={error}")]
-static partial void LogStartingFileHash(ILogger logger, int error);
-```
+* Seek Community Agreement on Scenario Workflow; 'Golden Paths'
+* Create architectural connection points (Probe, Action, Processors, DurableID's)
+* Manage and Maintain Samples; ensuring collaboration is easier than replication
 
 ---
 
@@ -78,12 +66,30 @@ static partial void LogStartingFileHash(ILogger logger, int error);
 
 ---
 
-# Examples
+# Risks
 
+---
+# Scenarios
+
+* Performance and Diagnostics
 * Security and Privacy
+* Reliability
+* Durable Dashboards and Alerts
 * Cost Reduction
-* Deep Diagnostics
-* New Opportunities for AI
+* Opportunities for AI
+
+---
+
+# Architecture
+
+![](../orig_media/Architecture.Boxes.Full.DynamicTelemetry.drawio.png)
+
+---
+
+# Diagnostics (aka Touch Reduction)
+
+* DurableID's and Structured Payloads can be used to Trigger
+* Memory Dumps, CPU samples, more verbose Logging
 
 ---
 
@@ -101,13 +107,6 @@ static partial void LogStartingFileHash(ILogger logger, int error);
 * Through positive identification
     * we can toggle
     * we can drop/modify
-
----
-
-# Diagnostics (aka Touch Reduction)
-
-* DurableID's and Structured Payloads can be used to Trigger
-* Memory Dumps, CPU samples, more verbose Logging
 
 ---
 
