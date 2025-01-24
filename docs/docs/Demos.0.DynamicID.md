@@ -4,7 +4,7 @@ status: ReviewLevel1
 description : Demo Showing DurableID
 ---
 
-# Demo 0 - Durable ID's Explaination
+# Demo 0 - Durable ID's Explanation
 
 ## Utilize the DurableID feature on OpenTelemetry, to locate the line of code responsible for the expense.
 
