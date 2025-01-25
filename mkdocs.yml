@@ -298,5 +298,8 @@ markdown_extensions:
       - example
       - quote
 
+extra:
+  generator: false
+
 extra_css:
     - extra.css
