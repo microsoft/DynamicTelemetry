@@ -27,7 +27,7 @@ Processor.
 
 ## Processor Types
 
-It\'s expected within Dynamic Telemetry that multiple different
+It's expected within Dynamic Telemetry that multiple different
 Processor types are created over the course of time because there are
 requirements on the Processor in order to meet other obligations, such
 as safety and performance, all Processors must meet certain set of

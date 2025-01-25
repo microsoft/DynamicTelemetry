@@ -154,18 +154,20 @@ nav:
             - Probes:
                 - Overview: ./docs/Architecture.Probes.Overview.document.md
                 - Sample Probes:
-                    - Linux:
-                        - Breakpoint Probes:
+                    - Breakpoint Probes:
+                        - Breakpoint: ./docs/Architecture.Probe.Breakpoint.document.md
+                        - Linux:
                             - ptrace: ./docs/Architecture.Probe.ptrace.document.md
                             - uprobes: ./docs/Architecture.Probe.uprobes.document.md
                             - DTrace: ./docs/Architecture.Probe.DTrace.document.md
+                    - Language Probes:
                         - eBPF: ./docs/Architecture.Probe.eBPF.document.md
-                        - Logging Probes:
-                            - OpenTelemetry: ./docs/Architecture.Probe.OpenTelemetry.document.md
-                            - Linux:
-                                - user_events: ./docs/Architecture.Probe.user_events.document.md
-                            - Windows:
-                                - ETW: ./docs/Architecture.Probe.ETW.document.md
+                    - Logging Probes:
+                        - OpenTelemetry: ./docs/Architecture.Probe.OpenTelemetry.document.md
+                        - Linux:
+                            - user_events: ./docs/Architecture.Probe.user_events.document.md
+                        - Windows:
+                            - ETW: ./docs/Architecture.Probe.ETW.document.md
 
     - Appendix:
         - Overview: ./docs/PositionPaper.PositionPapers.Overview.document.md
@@ -195,8 +197,9 @@ nav:
             - Proceduralize Nets: ./docs/PositionPaper.ProceduralizeNets.document.md
             - Locks and Throttles: ./docs/PositionPaper.LeafLevelLogging.document.md
             - Loose Schemas: ./docs/PositionPaper.SharingDataAmongStakeHoldersIsHard.document.md
-
         - Demo Videos:
+            - Dynamic Probes: ./docs/Demos.2_DynamicProbe.md
+            - HighLevel / Overview : ./docs/Demos.HighLevel.Overview.md
             - Adding a Memory Probe: ./docs/Demos.4.AddTelemetryDemo.md
             - Understanding Durable ID : ./docs/Demos.0.DynamicID.md
             - Drop a Chatty Event : ./docs/Demos.1.DropChattyLog.md
@@ -206,7 +209,7 @@ nav:
 
         - Development / Spec Process:
             - Tenets: ./docs/PositionPaper.DynamicTelemetryTenets.document.md
-            - Rude Q&A : ./docs/Rude_Q_and_A.md 
+            - Rude Q&A : ./docs/Rude_Q_and_A.md
             - Document Review Process: ./docs/ReviewProcess.document.md
 
 
