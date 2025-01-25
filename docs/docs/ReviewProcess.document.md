@@ -4,17 +4,26 @@ status: ReviewLevel1
 ---
 
 # Review Process
+Because there are many stakeholders and dynamic telemetry, each document has a header that describes the state of review.
 
-## Introduction
+Below are the different stages:
 
 ## Stages of Review
 
-### STAGE 1 : Broad Strokes
+### ReviewLevel1 (Incomplete)
+Placeholder; incomplete or unwritten
 
-### STAGE 2 : Content Creation
+### ReviewLevel1b (Talking Points)
+ReviewLevel1 plus talking points are enumerated
 
-### STAGE 3 : PRE-REVIEW
+### ReviewLevel2 (PRE-DRAFT)
+ReviewLeverl 1b, plus document has been written
 
-### STAGE 4 : IN-REVIEW
+### ReviewLevel3 (DRAFT)
+ReviewLevel2, but in in review
 
-### STAGE 5 : REVIEWE#D
+### ReviewLevel4 (PENDING)
+ReviewLevel3, but generally accepted
+
+### ReviewLevel (COMPLETE)
+ReviewLevel4, signed off

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import re
 import random
+import os
 from pathlib import Path
 from typing import TYPE_CHECKING
 import mkdocs.plugins
@@ -17,10 +18,18 @@ def on_page_markdown(markdown: str, page: Page, config: MkDocsConfig, **kwargs) 
     if not "author" in page.meta:
         raise Exception("Please Set Author in " + page.file.src_path)
 
-    if -1 == markdown.find("ProvideFeedback"):
-        data = "{{ProvideFeedback(page.file.src_uri)}}\n"
-        data += CDocs.RemoveImageWithAndHeightInfo(markdown)
-        return data
-        #raise Exception("Needs Feedback : " + page.file.src_path)
+    #for name, value in os.environ.items():
+    #    markdown += "{0}: {1}\n".format(name, value)
 
-    return CDocs.RemoveImageWithAndHeightInfo(markdown)
+    #for property, value in vars(page).items():
+    #    markdown += "{0}: {1}\n".format(property, value)
+
+    data = ""
+    if -1 == markdown.find("ProvideFeedback"):
+        data += "{{ProvideFeedback(page.file.src_uri)}}\n"
+        data += CDocs.RemoveImageWithAndHeightInfo(markdown)
+    else:
+        data += CDocs.RemoveImageWithAndHeightInfo(markdown)
+
+    data += "\n\n```cdocs\nhttp://microsoft.github.io/DynamicTelemetry/" + page.file.url + "\n```"
+    return data

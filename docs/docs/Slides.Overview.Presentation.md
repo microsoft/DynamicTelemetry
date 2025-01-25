@@ -15,6 +15,15 @@ status: ReviewLevel1
 
 ---
 
+# Previous 2 or 3 years
+
+1. Aligning our API surfaces, core tech
+1. OpenTelemetry into the kernel
+1. Industry and 1P
+1. Applications ranging from perf/security/cost reductions/AI
+
+---
+
 # TLDR;  What is Dynamic Telemetry
 
 1. Single Architecture
@@ -33,6 +42,8 @@ status: ReviewLevel1
 
 ![](../orig_media/ChallengeMatrix.drawio.png)
 
+(each permutation, os often a whole new architecture)
+
 ---
 
 # Our Opportunity
@@ -44,17 +55,18 @@ status: ReviewLevel1
 
 # My Ask
 
-1. If these scenarios come up, I'd love to help guide the implementation as described in this presentation.
+1. I'd like teams who are solving any of these problems, to be aware that we can have a singular architecture, if we adapt the same North Star
 
-1. Let me know if you're excited about this!
+1. If these scenarios come up, I'd love to help guide the implementation as described in this presentation.
 
 ---
 
 # Actions
 
-* Seek Community Agreement on Scenario Workflow; 'Golden Paths'
-* Create architectural connection points (Probe, Action, Processors, DurableID's)
-* Manage and Maintain Samples; ensuring collaboration is easier than replication
+* Seek 1P/3P (OSS) Community Agreement on Scenario Workflow; 'Golden Paths'
+* Focus on  architectural North Star (Probe, Action, Processors, DurableID's)
+* Dynamic Telemetry vTeam creates aspirational samples
+* As time permits, we collectively turn my Dynamic Telemetry samples, into reality
 
 ---
 

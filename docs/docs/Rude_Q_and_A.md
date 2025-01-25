@@ -27,3 +27,12 @@ This is similar to being in control of any form of system deployment or CI/CD pi
 An attacker would also need access to the backend databases to harvest the extracted memory.
 
 Use of a memory extraction probe should be done in a contained environment, using secure workstations, and following extra processes and procedures that likely include audits.
+
+
+
+## Q3 : Dynamic Telemetry takes a position of no rigid schemas - isnt this at odds with the value prop of Design Patterns?
+
+[reading material](./PositionPaper.SharingDataAmongStakeHoldersIsHard.document.md)
+
+### A3 : Maybe.. it's something we should discuss
+A keen reader of the Dynamic Telemetry documentation will notice potential incongruity found in the design pattern documentation. Specifically, the design patterns discussed have rigid schemas as their core value proposition. This is potentially something that should be further discussed if the design patterns are included in Dynamic Telemetry or built atop it.``
