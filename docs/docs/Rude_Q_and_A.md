@@ -18,3 +18,11 @@ There are cases where risks are present. For example, CPU sampling can impact pe
 Dynamic Telemetry offers [a taxonomy of risk measurement](./PositionPaper.ProbeRiskLevels.document.md) used in actions and probes. This taxonomy clearly communicates the risks to business decision-makers, allowing them to choose which probes and actions are permissible in their environment and under what deployment constraints.
 
 
+
+
+## Q3 : Dynamic Telemetry takes a position of no rigid schemas - isnt this at odds with the value prop of Design Patterns?
+
+[reading material](./PositionPaper.SharingDataAmongStakeHoldersIsHard.document.md)
+
+### A3 : Maybe.. it's something we should discuss
+A keen reader of the Dynamic Telemetry documentation will notice potential incongruity found in the design pattern documentation. Specifically, the design patterns discussed have rigid schemas as their core value proposition. This is potentially something that should be further discussed if the design patterns are included in Dynamic Telemetry or built atop it.

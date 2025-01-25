@@ -12,6 +12,8 @@ cd ~/.local/mkdocs_python/bin
 ./pip install mkdocs-minify-plugin
 ./pip install mkdocs-include-markdown-plugin
 ./pip install mkdocs-macros-plugin
+./pip install mkdocs-video
+./pip install mkdocs-markdown
 
 cd ~/.local/bin
 ln -s ../mkdocs_python/bin/mkdocs
