@@ -122,10 +122,12 @@ nav:
                     - Language : ./docs/Architecture.Components.Processor.Language.md
 
             - Processor Installation Locations:
-                - Internal Observer: ./docs/Architecture.Components.Observer.InProcess.document.md
-                - Kernel Observer: ./docs/Architecture.Components.Observer.Kernel.document.md
-                - External, on-box Observer: ./docs/Architecture.Components.Observer.External.OnBox.document.md
-                - External, off-box Observer: ./docs/Architecture.Components.Observer.External.OffBox.document.md
+                - Overview: ./docs/Architecture.Components.ProcessorInstallation.Overview.document.md
+                - Installation Locations:
+                    - Internal Observer: ./docs/Architecture.Components.Observer.InProcess.document.md
+                    - Kernel Observer: ./docs/Architecture.Components.Observer.Kernel.document.md
+                    - External, on-box Observer: ./docs/Architecture.Components.Observer.External.OnBox.document.md
+                    - External, off-box Observer: ./docs/Architecture.Components.Observer.External.OffBox.document.md
 
         - Design Patterns:
             - Overview: ./docs/Architecture.DesignPatterns.DesignPatterns.Overview.document.md

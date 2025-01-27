@@ -19,7 +19,9 @@ Deployments carry risks; code or configuration - doesn't Dynamic Telemetry encou
 #### A1: Yes, there are risks; but there is also a taxonomy for understanding
 The [Observer Effect](./PositionPaper.ObserverEffect.document.md) document covers this topic at a high level. It's important to know that 100% of all Probes, Actions, and Processors in Dynamic Telemetry are intentionally read-only. This is not to say that Dynamic Telemetry's implementation is bug-free. However, by design and intent, no part of Dynamic Telemetry should alter your system state.
 
-There are cases where risks are present. For example, CPU sampling can impact performance, memory dumps will pause your threads, and extracting memory can pose security risks.
+An interesting discussion should be started about where the line is and if it can be enforced technically, or if it's strictly a business problem that can be solved through policy and taxonomy. As a thought experiment, consider a database that has update policies that are run on ingestion and used for versioning. Most reasonable people can agree that this is a useful feature of a database and is something that an administrator can apply nearly instantaneously. To reject the ability for Dynamic Telemetry to have dynamic deployments is akin to rejecting this capability. The question only seems to be where the balance is and how to map that balance into the business needs.
+
+Unfortunately, are cases where risks are present. For example, CPU sampling can impact performance, memory dumps will pause your threads, and extracting memory can pose security risks.
 
 Dynamic Telemetry offers [a taxonomy of risk measurement](./PositionPaper.ProbeRiskLevels.document.md) used in actions and probes. This taxonomy clearly communicates the risks to business decision-makers, allowing them to choose which probes and actions are permissible in their environment and under what deployment constraints.
 
