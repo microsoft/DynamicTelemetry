@@ -6,10 +6,6 @@ def define_env(env):
     This is the hook for the variables, macros and filters.
     """
 
-    @env.macro
-    def ProvideFeedback(page):
-        "COMING SOON..."
-        return "[FEEDBACK URL PLACEHOLDER - COMING SOON]"
 
     @env.macro
     def CSharp_Include(file, startToken, endToken, tabLeft=True ):

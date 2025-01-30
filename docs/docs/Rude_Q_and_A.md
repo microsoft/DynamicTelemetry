@@ -26,6 +26,7 @@ Unfortunately, are cases where risks are present. For example, CPU sampling can 
 Dynamic Telemetry offers [a taxonomy of risk measurement](./PositionPaper.ProbeRiskLevels.document.md) used in actions and probes. This taxonomy clearly communicates the risks to business decision-makers, allowing them to choose which probes and actions are permissible in their environment and under what deployment constraints.
 
 
+----
 
 ## Security
 

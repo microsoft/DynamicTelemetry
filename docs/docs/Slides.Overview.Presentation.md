@@ -15,11 +15,15 @@ status: ReviewLevel1
 
 ---
 
+1. Stitched Together in a way that
+
+---
+
 # Previous 2 or 3 years
 
 1. Aligning our API surfaces, core tech
-1. OpenTelemetry into the kernel
-1. Industry and 1P
+1. Supporting changes made in .NET, OpenTelemetry, and the kernels of Windows and Linux
+1. Industry / OSS Support
 1. Applications ranging from perf/security/cost reductions/AI
 
 ---
@@ -42,7 +46,7 @@ status: ReviewLevel1
 
 ![](../orig_media/ChallengeMatrix.drawio.png)
 
-(each permutation, os often a whole new architecture)
+(each permutation, is often a whole new architecture requiring extensive refactoring)
 
 ---
 
@@ -50,14 +54,6 @@ status: ReviewLevel1
 
 * Organize API's; Language, OS under Open Telemetry
 * Tackle the connections under 'Dynamic Telemetry';  using Scenarios as golden paths
-
----
-
-# My Ask
-
-1. I'd like teams who are solving any of these problems, to be aware that we can have a singular architecture, if we adapt the same North Star
-
-1. If these scenarios come up, I'd love to help guide the implementation as described in this presentation.
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 author: "Chris Gray"
-status: ReviewLevelb
+status: ReviewLevel1b
 ---
 
 ![image](../orig_media/RedactingSecrets.banner.png){width="5.5in"

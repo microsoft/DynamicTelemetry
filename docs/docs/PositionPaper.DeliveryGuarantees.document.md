@@ -1,6 +1,6 @@
 ---
 author: "Chris Gray"
-status: ReviewLevelb
+status: ReviewLevel1b
 ---
 
 # Delivery Guarantees of Dynamic Telemetry (and OpenTelemetry)
