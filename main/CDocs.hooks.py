@@ -49,6 +49,9 @@ def on_page_markdown(markdown: str, page: Page, config: MkDocsConfig, **kwargs) 
         ret += "    https://microsoft.github.io/DynamicTelemetry/\n"
         ret += "    ```"
         ret += "\n\n"
+        ret += "    Learn about overall document status\n"
+        ret += "        [here](./ReviewProcess.document.md)\n"
+        ret += "\n\n"
 
         data += ret
         # data += "{{ProvideFeedback(page.file.src_uri)}}\n"
