@@ -5,7 +5,7 @@ from collections import defaultdict
 review_status_counts = defaultdict(int)
 fileinfo = defaultdict(list)
 wordCounts = defaultdict(int)
-
+    
 review_status_counts["Level1"] = 0
 review_status_counts["Level1b"] = 0
 review_status_counts["Level2"] = 0

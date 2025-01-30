@@ -28,7 +28,10 @@ def on_page_markdown(markdown: str, page: Page, config: MkDocsConfig, **kwargs) 
     if -1 == markdown.find("ProvideFeedback"):
 
         ret = ""
-        ret += "??? note \"Provide Document Feedback\"\n"
+        ret += "??? danger \"Dynamic Telemetry is a PROPOSAL : please provide feedback! :-)\"\n"
+        ret += "    Dynamic Telemetry is not an implementation, it's a request for collaboration, \n"
+        ret += "    that will lead to an shared understanding, and hopefully one or more implementations.\n"
+        ret += "\n\n"
         ret += "    Your feedback and suggestions on this document are highly encouraged!\n\n"
         ret += "    *Please:*\n\n"
         ret += "    1. Open [this Git Hub Pull Request](https://github.com/microsoft/DynamicTelemetry/pull/6/)\n\n"

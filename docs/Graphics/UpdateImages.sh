@@ -1,6 +1,6 @@
 #!/bin/bash
 
-python3 ./CalculateStatus.py
-./CalculateStatus.sh
+python3 ./_CalculateStatus.py
+./_CalculateStatus.gnuplot
 
-./BuildProbeSpider.sh
+./_BuildProbeSpider.gnuplot
