@@ -3,7 +3,7 @@ from __future__ import annotations
 import re
 import random
 import os
-import urllib.parse
+from urllib.parse import quote
 from pathlib import Path
 from typing import TYPE_CHECKING
 import mkdocs.plugins
@@ -27,7 +27,9 @@ def on_page_markdown(markdown: str, page: Page, config: MkDocsConfig, **kwargs) 
 
     data = ""
     if -1 == markdown.find("ProvideFeedback"):
-        encoded = str(page.file.src_path).replace("/", ".")
+        #encoded = str(page.file.src_path).replace("/", ".")
+        encoded = quote(page.file.src_path)
+
         ret = ""
         ret += "??? danger \"Dynamic Telemetry is a PROPOSAL : please provide feedback! :-)\"\n"
         ret += "    Dynamic Telemetry is not an implementation, it's a request for collaboration, \n"
