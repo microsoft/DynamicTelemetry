@@ -321,7 +321,7 @@ extra:
       analytics:
         name: Viewing Analytics
         value: Testing1234
-        checked: false
+        checked: true
 
 
   analytics:
