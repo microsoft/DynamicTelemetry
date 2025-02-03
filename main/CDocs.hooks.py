@@ -3,6 +3,7 @@ from __future__ import annotations
 import re
 import random
 import os
+import urllib.parse
 from pathlib import Path
 from typing import TYPE_CHECKING
 import mkdocs.plugins
@@ -26,7 +27,7 @@ def on_page_markdown(markdown: str, page: Page, config: MkDocsConfig, **kwargs) 
 
     data = ""
     if -1 == markdown.find("ProvideFeedback"):
-
+        encoded = str(page.file.src_path).replace("/", ".")
         ret = ""
         ret += "??? danger \"Dynamic Telemetry is a PROPOSAL : please provide feedback! :-)\"\n"
         ret += "    Dynamic Telemetry is not an implementation, it's a request for collaboration, \n"
@@ -51,6 +52,8 @@ def on_page_markdown(markdown: str, page: Page, config: MkDocsConfig, **kwargs) 
         ret += "\n\n"
         ret += "    Learn about overall document status\n"
         ret += "        [here](./ReviewProcess.document.md)\n"
+        ret += "\n\n"
+        ret += "    <img src=\"https://durableid-demo-a9byc5fwa7htc5h0.westus2-01.azurewebsites.net/?name=test.jpg&handler=LoadImageFile&pageName=" + encoded + "\"/>"
         ret += "\n\n"
 
         data += ret

@@ -71,3 +71,14 @@
     -webkit-mask-image: none;
     width: auto;
   }
+
+  .md-content__inner.md-typeset:before {
+    content: "OSS_Proposal";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-75deg);
+    font-size: 15em;
+    color: rgb(128, 128, 128, 0.3);
+    position: absolute;
+    pointer-events: none;
+  }
