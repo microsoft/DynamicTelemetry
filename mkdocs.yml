@@ -65,13 +65,6 @@ nav:
 #<START_BINDING>
     - Introduction: ./docs/index.md
 
-    - Personas:
-        - Overview: ./docs/Personas.Overview.document.md
-        - Data Analyst: ./docs/Persona_DataAnalysis.document.md
-        - DevOps: ./docs/Persona_DevOps.document.md
-        - Developer : ./docs/Persona_Developer.document.md
-        - Project Manager: ./docs/Persona_ProjectManager.document.md
-
     - Scenarios:
         - Overview: ./docs/Scenarios.Overview.document.md
         - Performance and Diagnostics:
@@ -213,8 +206,16 @@ nav:
         - Development / Spec Process:
             - Tenets: ./docs/PositionPaper.DynamicTelemetryTenets.document.md
             - Rude Q&A : ./docs/Rude_Q_and_A.md
-            - Document Review Process: ./docs/ReviewProcess.document.md
+            - Document Review :
+                - Process : ./docs/ReviewProcess.document.md
+                - Status : ./docs/GeneratedFileStatus.md
 
+        - Personas:
+            - Overview: ./docs/Personas.Overview.document.md
+            - Data Analyst: ./docs/Persona_DataAnalysis.document.md
+            - DevOps: ./docs/Persona_DevOps.document.md
+            - Developer : ./docs/Persona_Developer.document.md
+            - Project Manager: ./docs/Persona_ProjectManager.document.md
 
 
 #<END_BINDING>
