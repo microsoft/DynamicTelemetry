@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Http.Extensions;
 using System.Diagnostics.Metrics;
@@ -25,7 +24,6 @@ namespace DynamicTelemetry_Demo1_Introduction.Pages
             LogGet(_logger, url);
         }
 
-        [LoggerMessage(Level = LogLevel.Information, Message = "[GENERATED.3] -- Log Get({url})")]
         static partial void LogGet(ILogger logger, string url);
     }
 }
