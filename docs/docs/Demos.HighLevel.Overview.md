@@ -214,7 +214,7 @@ databases.
 ![](../orig_media/Demos.HighLevel.Overview.BeforeRedact.png){width="5.5in"
 height="4.3991393263342085in"}
 
-Because this secret was "accidently" emitted; we wish to remove just the
+Because this secret was "accidentally" emitted; we wish to remove just the
 field.
 
 #### Database view of the Log, after field redaction

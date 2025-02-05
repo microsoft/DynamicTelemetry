@@ -51,16 +51,16 @@ try {
 			continue
 		}
 
-		$seperator = $file.IndexOf("-")
+		$separator = $file.IndexOf("-")
 		$env:CDOCS_TAB=0
 		$env:CDOCS_FILTER=1
 
-		if ($seperator -gt 4)
+		if ($separator -gt 4)
 		{
-			$seperatorx = $seperator
-			$seperatorx -= 4
-			$seperatorx /= 4
-			$env:CDOCS_TAB = $seperatorx
+			$separatorx = $separator
+			$separatorx -= 4
+			$separatorx /= 4
+			$env:CDOCS_TAB = $separatorx
 		}
 
 		if(!$file.EndsWith(".md"))
