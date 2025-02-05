@@ -13,7 +13,7 @@
         <mxCell id="j5zyZETpQFfi42s4NJHR-5" value="C#&lt;div&gt;C/C++&lt;/div&gt;&lt;div&gt;Rust&lt;/div&gt;&lt;div&gt;Python&lt;/div&gt;&lt;div&gt;etc&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;opacity=50;" parent="1" vertex="1">
           <mxGeometry x="280" y="230" width="120" height="270" as="geometry" />
         </mxCell>
-        <mxCell id="j5zyZETpQFfi42s4NJHR-6" value="Kusto&lt;div&gt;SQL&lt;/div&gt;&lt;div&gt;Splunk&lt;/div&gt;&lt;div&gt;Snowflake&lt;/div&gt;&lt;div&gt;Promethesus&lt;/div&gt;&lt;div&gt;etc&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;opacity=50;" parent="1" vertex="1">
+        <mxCell id="j5zyZETpQFfi42s4NJHR-6" value="Kusto&lt;div&gt;SQL&lt;/div&gt;&lt;div&gt;Splunk&lt;/div&gt;&lt;div&gt;Snowflake&lt;/div&gt;&lt;div&gt;Prometheus&lt;/div&gt;&lt;div&gt;etc&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;opacity=50;" parent="1" vertex="1">
           <mxGeometry x="410" y="230" width="120" height="270" as="geometry" />
         </mxCell>
         <mxCell id="j5zyZETpQFfi42s4NJHR-8" value="Kusto&lt;div&gt;Graphana&lt;/div&gt;&lt;div&gt;PowerBI&lt;/div&gt;&lt;div&gt;etc&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;opacity=50;" parent="1" vertex="1">
@@ -22,7 +22,7 @@
         <mxCell id="j5zyZETpQFfi42s4NJHR-9" value="Azure&lt;div&gt;AWS&lt;/div&gt;&lt;div&gt;GoogleCloud&lt;/div&gt;&lt;div&gt;etc&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;opacity=50;" parent="1" vertex="1">
           <mxGeometry x="670" y="230" width="120" height="270" as="geometry" />
         </mxCell>
-        <mxCell id="j5zyZETpQFfi42s4NJHR-10" value="Solution Requries Cooporation Across All" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;opacity=80;" parent="1" vertex="1">
+        <mxCell id="j5zyZETpQFfi42s4NJHR-10" value="Solution Requires Cooperation Across All" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;opacity=80;" parent="1" vertex="1">
           <mxGeometry x="-40" y="260" width="900" height="30" as="geometry" />
         </mxCell>
         <mxCell id="j5zyZETpQFfi42s4NJHR-11" value="Probe Tech" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
