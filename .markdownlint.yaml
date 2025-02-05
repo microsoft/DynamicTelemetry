@@ -24,7 +24,6 @@ ol-prefix: false
 no-alt-text: false
 ul-indent: false
 blanks-around-headings: false
-single-title: false
 no-trailing-punctuation: false
 first-line-heading: false
 no-missing-space-atx: false

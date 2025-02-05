@@ -5,9 +5,6 @@ status: ReviewLevel1
 
 # Coming Soon
 
-
-# Notes
-
 ## Probe Risk Levels
 
 ## Dimensions

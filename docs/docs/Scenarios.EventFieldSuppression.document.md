@@ -5,4 +5,4 @@ status: ReviewLevel1
 
 # Coming Soon
 
-# Suppressing Log/Trace Fields (for Privacy)
+## Suppressing Log/Trace Fields (for Privacy)

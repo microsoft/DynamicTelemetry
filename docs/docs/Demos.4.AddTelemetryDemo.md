@@ -28,7 +28,7 @@ In short this demo will:
 3.  Connect to Application Insights and View / Graph / Alert this value.
 
 
-# Dynamically insert a row of telemetry to emit the contents of a variable into our standard OpenTelemetry pipelines.
+## Dynamically insert a row of telemetry to emit the contents of a variable into our standard OpenTelemetry pipelines.
 
 For this demo, we will make use of the [Breakpoint
 Probe](./Architecture.Probe.Breakpoint.document.md) concept in Dynamic
@@ -98,7 +98,7 @@ When this breakpoint is hit, the memory will be extracted and inserted
 into the standard and previously deployed OpenTelemetry pipelines. You
 can then view this data from your standard database.
 
-# Deploy this Dynamic Telemetry probe to a small number of machines that we expect to be impacted.
+## Deploy this Dynamic Telemetry probe to a small number of machines that we expect to be impacted.
 
 Deployment into your environment is flexible, as Dynamic Telemetry
 offers various configuration methods. Depending on your needs, you may
