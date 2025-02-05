@@ -1,3 +1,4 @@
+# Support
 
 **REPO OWNER**: Do you want Customer Service & Support (CSS) support for
 this product/project?
@@ -14,8 +15,6 @@ this product/project?
 
 *Then remove this first heading from this SUPPORT.MD file before
 publishing your repo.*
-
-# Support
 
 ## How to file issues and get help
 
