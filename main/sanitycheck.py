@@ -1,6 +1,14 @@
 #!/usr/bin/env python3
 
+import glob
+import os
+import sys
+
 from sanitycheck_helpers import sanitycheck
+
+CR = b'\r'
+CRLF = b'\r\n'
+LF = b'\n'
 
 retval = 0
 retval += sanitycheck('.github/**/*.md', allow_eol = (LF,))

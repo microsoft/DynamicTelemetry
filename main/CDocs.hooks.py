@@ -10,11 +10,6 @@ import mkdocs.plugins
 import CDocs_utils as CDocs
 from sanitycheck_helpers import sanitycheck
 
-def ends_with_newline(file_path):
-    with open(file_path, 'rb') as file:
-        file.seek(-1, 2)  # Move the cursor to the last byte of the file
-        last_char = file.read(1)
-        return last_char == b'\n'
 
 @mkdocs.plugins.event_priority(50000)
 def on_page_markdown(markdown: str, page: Page, config: MkDocsConfig, **kwargs) -> str | None:
@@ -28,16 +23,6 @@ def on_page_markdown(markdown: str, page: Page, config: MkDocsConfig, **kwargs) 
     file = "./docs/" + page.file.src_path
     if 0 != sanitycheck(file):
         raise Exception("Sanity Check failed for " + file)
-
-    if not ends_with_newline(file):
-        print("FILE: " + file + " doesnt have new line")
-        with open(file, "a") as f:
-            f.write("\n")
-        raise Exception("Please make sure " + page.file.src_path + " ends with a new line")
-    else:
-        print("GOOD_FILE: " + file + " does have new line")
-
-
 
     #for name, value in os.environ.items():
     #    markdown += "{0}: {1}\n".format(name, value)
