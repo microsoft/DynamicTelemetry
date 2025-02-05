@@ -53,7 +53,7 @@ namespace DynamicTelemetry_Demo_3_SecurityRedactions.Pages
 
 
         // StartSearchExample:LogWelcomeBanner
-        [LoggerMessage(Level = LogLevel.Information, Message = "Welcome Banner with accidentlly emitted secret = {secret}")]
+        [LoggerMessage(Level = LogLevel.Information, Message = "Welcome Banner with accidentally emitted secret = {secret}")]
         static partial void LogWelcomeBanner(ILogger logger, string secret);
         // EndSearchExample:LogWelcomeBanner
 

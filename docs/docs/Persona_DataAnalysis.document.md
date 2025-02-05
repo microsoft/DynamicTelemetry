@@ -23,7 +23,7 @@ privacy. Knows how to protect users.
 
 1. [Bug Beacon](./PositionPaper.ClearFailuresViaSchema.document.md)
 1. [A/B Feature Testing](./PositionPaper.ABTestingWithRichDiagnostics.document.md)
-1. [Catagorized/Schematized Failures](./PositionPaper.ClearFailuresViaSchema.document.md)
+1. [Categorized/Schematized Failures](./PositionPaper.ClearFailuresViaSchema.document.md)
 1. [Triggered Flight Recorder](./PositionPaper.TriggeredFlightRecorder.document.md)
 
 ## Notes (To Be Deleted)

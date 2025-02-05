@@ -13,7 +13,7 @@ absence of telemetry. ...and a curiousity that we'll explore!
 
 Please quickly study this code,  it's a simple "Tower of Hanoi" problem, like
 every college freshman studies in CS101.  Unique to this code, you will notice
-the absense of telemetry and certainly no OpenTelemetry.
+the absence of telemetry and certainly no OpenTelemetry.
 
 To address this issue, we will establish a dynamic probe and connect it to the
 active process. This probe utilizes technology akin to what's found in symbolic

@@ -178,7 +178,7 @@ nav:
             - TelemetryUmbilical: ./docs/PositionPaper.TelemetryUmbilical.document.md
             - Defining Production: ./docs/PositionPaper.DefiningProduction.document.md
             - Cloud and Edge Interop: ./docs/PositionPaper.CloudAndEdgeInterop.document.md
-            - Delivery Gurantees: ./docs/PositionPaper.DeliveryGuarantees.document.md
+            - Delivery Guarantees: ./docs/PositionPaper.DeliveryGuarantees.document.md
             - Probe to Header : ./docs/PositionPaper.ProbeToHeader.document.md
             - Suppressing and Pushing Stack Args : ./docs/PositionPaper.WhereToSuppressInProc.document.md
             - Convert Logs to Metrics: ./docs/PositionPaper.ConvertLogsToMetrics.document.md
