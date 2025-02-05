@@ -1,0 +1,20 @@
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+*.profile.*json
+
+[Bb]in/
+[Oo]bj/
+
+.vs/
+
+# Publish Web Output
+*.[Pp]ublish.xml
+*.azurePubxml
+*.pubxml
+*.publishproj
+.fake

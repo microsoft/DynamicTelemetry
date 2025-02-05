@@ -1,0 +1,84 @@
+
+
+  .md-status--ReviewLevel1::after {
+    background-color: var(--color-background-dark);
+    border-radius: 0.2rem;
+    color: red;
+    content: "[Incomplete]";
+    font-size: 0.5rem;
+    height: auto;
+    padding: 0.1rem;
+    -webkit-mask-image: none;
+    width: auto;
+  }
+
+  .md-status--ReviewLevel1b::after {
+    background-color: var(--color-background-dark);
+    border-radius: 0.2rem;
+    color: darkred;
+    content: "[Talking Points]";
+    font-size: 0.5rem;
+    height: auto;
+    padding: 0.1rem;
+    -webkit-mask-image: none;
+    width: auto;
+  }
+
+  .md-status--ReviewLevel2::after {
+    background-color: var(--color-background-dark);
+    border-radius: 0.2rem;
+    color: orange;
+    content: "[PRE-DRAFT]";
+    font-size: 0.5rem;
+    height: auto;
+    padding: 0.1rem;
+    -webkit-mask-image: none;
+    width: auto;
+  }
+
+  .md-status--ReviewLevel3::after {
+    background-color: var(--color-background-dark);
+    border-radius: 0.2rem;
+    color: lightgreen;
+    content: "[DRAFT]";
+    font-size: 0.5rem;
+    height: auto;
+    padding: 0.1rem;
+    -webkit-mask-image: none;
+    width: auto;
+  }
+
+  .md-status--ReviewLevel4::after {
+    background-color: var(--color-background-dark);
+    border-radius: 0.2rem;
+    color: orange;
+    content: "[PENDING]";
+    font-size: 0.5rem;
+    height: auto;
+    padding: 0.1rem;
+    -webkit-mask-image: none;
+    width: auto;
+  }
+
+  .md-status--ReviewLevel5::after {
+    background-color: var(--color-background-dark);
+    border-radius: 0.2rem;
+    color: green    ;
+    content: "5/5";
+    font-size: 0.5rem;
+    height: auto;
+    padding: 0.1rem;
+    -webkit-mask-image: none;
+    width: auto;
+  }
+
+  .md-content__inner.md-typeset:before {
+    content: "OSS_Proposal";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-75deg);
+    font-size: 15em;
+    color: rgb(128, 128, 128, 0.3);
+    position: absolute;
+    pointer-events: none;
+  }
