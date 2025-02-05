@@ -75,4 +75,5 @@ read along one of the five scenarios themes found below.
     or drop unnecessary logs.
 
     ![type:video](../orig_media/DynamicTelemetry_CostSavings.mp4)
+
 </div>
