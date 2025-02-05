@@ -6,6 +6,7 @@ status: ReviewLevel1b
 # Telemetry UMBILICAL : INCOMPLETE
 
 ## Talking Points
+
     1. Two Types of Telemetry [{file, streaming}](./PositionPaper.FileAndStreaming.document.md)
     1. All telemetry for a partition {container, VM, or Host} must only use 2x sockets - multiple apps need to be aggregated / multiplexed
     1. The 'umbilical' is a choke point; that has standard 'pipe fittings'

@@ -16,4 +16,5 @@ status: ReviewLevel1
 1. 'Rip Cords'; near instant disablement in the case of emergency
 
 ## Observer Effect
+
 [Observer Effect](./PositionPaper.ObserverEffect.document.md)

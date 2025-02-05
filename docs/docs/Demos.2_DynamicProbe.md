@@ -4,6 +4,7 @@ status: ReviewLevel1
 ---
 
 # DynamicTelemetry : Demo 1, adding Telemetry dynamically
+
 In this demonstration, well be utilizing DynamicTelemetry to generate telemetry for
 code thats already been deployed in a Production environment.
 
