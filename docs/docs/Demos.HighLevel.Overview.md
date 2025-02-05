@@ -3,6 +3,8 @@ author: "Chris Gray"
 status: ReviewLevel1
 ---
 
+# High Level Overview Demo, of Dynamic Telemetry
+
 Welcome to this demonstration of Dynamic Telemetry. In this demo, we
 will quickly take a broad survey of Dynamic Telemetry, highlighting key
 usage scenarios and important architectural points.
@@ -85,8 +87,6 @@ fitting into one of several categories
 
 3.  A textually defined [State Machine, or State
     Model](./Architecture.Components.Processor.StateMachine.document.md)
-
-
 
 ### Installation Points for Dynamic Telemetry Processors
 

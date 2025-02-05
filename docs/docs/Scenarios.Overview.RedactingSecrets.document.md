@@ -3,11 +3,10 @@ author: "Chris Gray"
 status: ReviewLevel1b
 ---
 
+# Improving Your Security and Privacy Posture
+
 ![image](../orig_media/RedactingSecrets.banner.png){width="5.5in"
 height="1.261111111111111in"}
-
-
-# Improving Your Security and Privacy Posture
 
 Dropping or redacting portions of a log involves selectively removing or
 obscuring specific data within log entries to protect sensitive
@@ -39,7 +38,7 @@ well-defined format, possibly a binary format, or as JSON or XML. This
 structure makes it easier to identify and redact specific fields within
 the log entries. For example, instead of having a flat log message, a
 structured payload might separate different pieces of information into
-distinct fields, such as user_id, transaction_id, and timestamp. This
+distinct fields, such asuser_id,transaction_id, andtimestamp. This
 separation allows for more precise redaction of sensitive data, such as
 email addresses or credit card numbers, without affecting other parts of
 the log.
@@ -72,13 +71,13 @@ breaches
 ### [Dynamically Toggle Off Logs](./PositionPaper.DynamicallyToggleLogs.document.md)
 
 Dynamically turning off individual logs using core operating system
-features such as user_events (Linux) or Event Tracing for Windows (ETW,
+features such asuser_events (Linux)or Event Tracing for Windows (ETW,
 on Windows) involves leveraging the inherent capabilities of these
 systems to manage logging efficiently. This method is particularly
 useful for high-performance applications where logging overhead needs to
 be minimized.
 
-**Event Tracing for Windows (ETW)** is a high-performance, low-overhead
+**Event Tracing for Windows (ETW)**is a high-performance, low-overhead
 tracing framework built into the Windows operating system. It allows for
 the dynamic enabling and disabling of event tracing without requiring
 application or system restarts. ETW operates with minimal performance
@@ -87,7 +86,7 @@ mechanisms. It uses per-processor buffers that are written to disk by a
 separate thread, ensuring that logging does not interfere with the
 application's main operations1.
 
-**user_events** is a powerful feature built into the Linux kernel, that
+**user_events**is a powerful feature built into the Linux kernel, that
 has some characteristics of ETW on Windows Dynamic Telemetry. It allows
 for the insertion of user-defined events into the standard Linux kernel
 mode logging streams, which can be enabled or disabled, in user mode, by

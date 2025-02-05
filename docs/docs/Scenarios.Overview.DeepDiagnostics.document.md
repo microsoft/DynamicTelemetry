@@ -3,9 +3,9 @@ author: "Chris Gray"
 status: ReviewLevel1b
 ---
 
-![image](../orig_media/PerformanceAndDiagnostics.banner.png)
-
 # Deep Diagnostics, at Scale
+
+![image](../orig_media/PerformanceAndDiagnostics.banner.png)
 
 In Dynamic Telemetry, Probes and Actions play crucial roles in
 monitoring and diagnosing system behavior. Probes, such as any Log
@@ -85,7 +85,6 @@ enabling more detailed logging, or capturing a memory dump.
 By dynamically enabling and disabling probes and actions, you can create
 a flexible and responsive system that adapts to changing conditions and
 captures valuable diagnostic information when needed.
-
 
 ```cdocs_include
 {{ CSharp_Include("../LookoutTower/Samples/TriggeringOnQueue/TriggeringOnQueue.cs",

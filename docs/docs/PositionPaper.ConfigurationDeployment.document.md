@@ -13,10 +13,8 @@ status: ReviewLevel1
 
 1. Ringed Deployment; instead of deploying to all machines, intantly, deploymens can be deployed slowly
 
-
 1. 'Rip Cords'; near instant disablement in the case of emergency
 
 ## Observer Effect
+
 [Observer Effect](./PositionPaper.ObserverEffect.document.md)
-
-

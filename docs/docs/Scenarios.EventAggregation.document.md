@@ -5,7 +5,7 @@ status: ReviewLevel1
 
 # Coming Soon
 
-# Suppressing a chatty Event, by aggregating it into a new Metric
+## Suppressing a chatty Event, by aggregating it into a new Metric
 
 ## Introduction
 

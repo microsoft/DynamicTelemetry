@@ -5,7 +5,7 @@ status: ReviewLevel1
 
 # Coming Soon
 
-# Suppressing a chatty Event
+## Suppressing a chatty Event
 
 ## Introduction
 

@@ -2,7 +2,7 @@
 author: "Chris Gray"
 status: ReviewLevel1
 ---
-P
+
 # The Observer Effect
 
 The Observer Effect in physics refers to the phenomenon where the act of
@@ -32,7 +32,7 @@ can help mitigate these risks.
 ## Probes and Actions
 
 Different probes used in telemetry and diagnostics come with their own
-set of risks. For instance, **dynamic probes** in DynamicTelemetry can
+set of risks. For instance,**dynamic probes**in DynamicTelemetry can
 introduce performance overhead, potentially affecting the system's
 efficiency and reliability. These probes gather minimal amounts of
 memory and transform them into standard OpenTelemetry Logs, which can
@@ -52,7 +52,7 @@ failing system state.
 
 ### Performance Concerns
 
-Lastly, the **impact on system performance** is a significant concern.
+Lastly, the**impact on system performance**is a significant concern.
 Probes, especially those that enable CPU sampling or induce memory
 dumps, can introduce latency and affect the overall performance of the
 system This is particularly true for **actions** that involve diagnostic

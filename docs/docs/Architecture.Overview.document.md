@@ -36,6 +36,7 @@ on the latest business needs from your [PROJECTMANAGER](./Persona_ProjectManager
 about solving business problems, keeping costs in check,
 
 ## OnBox Architecture
+
 ![](../orig_media/Architecture.OnBox.drawio.png)
 
 ## Tenants

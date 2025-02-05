@@ -157,10 +157,6 @@ of the system. This makes DynamicTelemetry a reliable tool for system
 monitoring and data analysis, capable of providing rich insights while
 maintaining system integrity and performance.
 
-
-
-
-
 ToDo:
 
 * Risk vs. Perf axis
@@ -170,7 +166,7 @@ ToDo:
 * Link to Observer Effect
 * Link to Risk Levels
 
-##Probe Characteristics
+## Probe Characteristics
 
 1. Intentionally READ-ONLY; this is a 'hard and fast' rule in OpenTelemetry that
  may box out some very powerful opportunities.
@@ -213,20 +209,16 @@ PROBE configurations are always deployed with the same oversight as production c
 
 ### Performance
 
-
 ## Probe Values
 
 * Local Suppression
 * Remote Suppression
-
 
 | Value          | Remote Mitigations | Local Mitigations |
 | --             | --               | --                  |
 |  1 (low risk)  | :smiley:         | :smiley:            |
 |  2 (med risk)  |                  | :smiley:            |
 |  3 (high risk) |                  |                     |
-
-
 
 ## Linux Probe Types (and their risks)
 
@@ -254,13 +246,12 @@ PROBE configurations are always deployed with the same oversight as production c
 
 ![image](../orig_media/Risk.user_events.png){width="2.660757874015748in" height="1.8226607611548555in"}
 
-
 ## Windows Probe Types (and their risks)
 
 ### ETW
 
 ![image](../orig_media/Risk.ETW.png){width="2.660757874015748in" height="1.8226607611548555in"}
 
-### eBPF
+### eBPF (Windows)
 
 ![image](../orig_media/Risk.eBPF.png){width="2.660757874015748in" height="1.8226607611548555in"}

@@ -6,7 +6,7 @@ description : Demo Showing DurableID
 
 # Demo 0 - Durable ID's Explanation
 
-## Utilize the DurableID feature on OpenTelemetry, to locate the line of code responsible for the expense.
+## Utilize the DurableID feature on OpenTelemetry, to locate the line of code responsible for the expense
 
 Not all software using Open Telemetry will utilize a durable identifier,
 though it is considered best practice. A durable identifier functions
@@ -17,7 +17,7 @@ In microsoft.net platform the durable identifier is created
 automatically at compile time for Open Telemetry assuming the author of
 the software follows best practices.
 
-### Contrasting C# that makes use of Durable ID's, with C# that does not\*\*
+### Contrasting C# that makes use of Durable ID's, with C# that does not
 
 Let's examine code that makes use a durable identifier versus one that
 doesn't. We'll inspect both in Application Insights, so we can spot the
@@ -136,4 +136,3 @@ underscores the point; in this instance, nine messages have been
 aggregated into a single entry. In a production system, one can expect
 this number to be significantly higher, which would subsequently
 increase potential confusion exponentially.
-

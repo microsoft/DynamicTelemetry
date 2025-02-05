@@ -6,6 +6,7 @@ status: ReviewLevel1b
 # Coming Soon
 
 Points:
+
 1. Dynamic Telemetry takes a hard position on rigid schema - "no"
 1. Dynamic Telemetry takes a hard position on [Durable ID and structured payloads](./PositionPaper.DurableIds_StructuredPayloads.document.md) - "YES"
 
