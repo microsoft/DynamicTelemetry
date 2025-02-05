@@ -32,7 +32,6 @@ ReviewLevel4, signed off
 
 ![](../orig_media/DocumentStatus.png)
 
-
 ## Individual Status
 
 {% include-markdown "./GeneratedFileStatus.md" %}

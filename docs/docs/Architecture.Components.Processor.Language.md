@@ -88,7 +88,6 @@ Image a piece of code that looks something like this:
 }}
 ```
 
-
 ## Introducing Actions to the Dynamic Telemetry Language Processor
 
 ## Useful Actions

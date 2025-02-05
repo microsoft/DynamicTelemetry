@@ -136,4 +136,3 @@ underscores the point; in this instance, nine messages have been
 aggregated into a single entry. In a production system, one can expect
 this number to be significantly higher, which would subsequently
 increase potential confusion exponentially.
-

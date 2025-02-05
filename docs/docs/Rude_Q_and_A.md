@@ -12,7 +12,6 @@ The rate of deployment is a double-edged sword. On one hand, deploying quickly c
 
 This section of Rude Q and A covers deployments in this dilemma.
 
-
 ### Q1: Don't deployments carry risks?
 Deployments carry risks; code or configuration - doesn't Dynamic Telemetry encourage accelerated deployments, and won't that carry risks?
 
@@ -24,7 +23,6 @@ An interesting discussion should be started about where the line is and if it ca
 Unfortunately, are cases where risks are present. For example, CPU sampling can impact performance, memory dumps will pause your threads, and extracting memory can pose security risks.
 
 Dynamic Telemetry offers [a taxonomy of risk measurement](./PositionPaper.ProbeRiskLevels.document.md) used in actions and probes. This taxonomy clearly communicates the risks to business decision-makers, allowing them to choose which probes and actions are permissible in their environment and under what deployment constraints.
-
 
 ----
 
@@ -44,7 +42,6 @@ This is similar to being in control of any form of system deployment or CI/CD pi
 An attacker would also need access to the backend databases to harvest the extracted memory.
 
 Use of a memory extraction probe should be done in a contained environment, using secure workstations, and following extra processes and procedures that likely include audits.
-
 
 ## Potentially Confused Topics
 

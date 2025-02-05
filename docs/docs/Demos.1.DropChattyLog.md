@@ -110,7 +110,6 @@ profiles.
 
 4.  At the point of ingestion, off the box.
 
-
 ![A screenshot of a computer AI-generated content may be
 incorrect.](../orig_media/Demo.1.DurableID.Contrast.ShowLogDrop.png){width="5.0in"
 height="3.9993055555555554in"}
@@ -140,7 +139,6 @@ profiles.
 ![A screenshot of a computer AI-generated content may be
 incorrect.](../orig_media/Demo.1.DurableID.ConvertedToMetric.png){width="5.0in"
 height="3.9993055555555554in"}
-
 
 ## Choose one of the five Dynamic Telemetry locations to apply our KQL filter.
 

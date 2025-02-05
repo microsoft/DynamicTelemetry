@@ -82,7 +82,6 @@ status: Level5
 | [../docs/Scenarios.MemoryLeak.document.md](../docs/Scenarios.MemoryLeak.document.md)  | 17|
 | [../docs/Slides.Overview.Presentation.md](../docs/Slides.Overview.Presentation.md)  | 378|
 
-
 ## Level1b
 
 | File | Word Count |
@@ -105,7 +104,6 @@ status: Level5
 | [../docs/Scenarios.Overview.RedactingSecrets.document.md](../docs/Scenarios.Overview.RedactingSecrets.document.md)  | 1003|
 | [../docs/Scenarios.Overview.Reliability.document.md](../docs/Scenarios.Overview.Reliability.document.md)  | 2310|
 
-
 ## Level2
 
 | File | Word Count |
@@ -118,5 +116,3 @@ status: Level5
 | [../docs/index.md](../docs/index.md)  | 361|
 | [../docs/Personas.Overview.document.md](../docs/Personas.Overview.document.md)  | 257|
 | [../docs/PositionPaper.DurableIds_StructuredPayloads.document.md](../docs/PositionPaper.DurableIds_StructuredPayloads.document.md)  | 1243|
-
-

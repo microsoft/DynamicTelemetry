@@ -7,7 +7,6 @@ status: ReviewLevel1b
 
 # Improving Communication and Data Durability
 
-
 Communicating between different personas within a project can be
 challenging due to varying perspectives, priorities, and levels of
 technical understanding. For instance, a developer might focus on the

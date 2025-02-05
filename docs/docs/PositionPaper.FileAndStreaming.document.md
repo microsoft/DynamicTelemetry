@@ -21,7 +21,6 @@ A key differentiator between STREAMING telemetry and FILE_BASED telemetry is tha
 
 [OpenTelemetrys website](https://opentelemetry.io/) is a great resource to better understand STREAMING telemetry.
 
-
 ## FILE_BASED Telemetry:
 
 FILE_BASED telemetry is similar to STREAMING telemetry in that it can emit logs, metrics, and traces. However, the key difference lies in its ability to capture high-fidelity content, such as memory dumps, packet captures, or CPU samples.

@@ -27,7 +27,6 @@ In short this demo will:
     that we expect to be impacted.
 3.  Connect to Application Insights and View / Graph / Alert this value.
 
-
 ## Dynamically insert a row of telemetry to emit the contents of a variable into our standard OpenTelemetry pipelines.
 
 For this demo, we will make use of the [Breakpoint

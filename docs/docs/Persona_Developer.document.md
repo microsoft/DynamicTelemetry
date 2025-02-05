@@ -3,7 +3,6 @@ author: "Chris Gray"
 status: ReviewLevel1
 ---
 
-
 # DynamicTelemetry Persona : DEVELOPER Persona
 
 DynamicTelemetry personas are intended as an organizational aid to group

@@ -11,5 +11,4 @@ status: ReviewLevel1b
     1. The 'umbilical' is a choke point; that has standard 'pipe fittings'
     1. The umbilical can be 'cut' and rerouted - such that there are only two locations per 'partition' {container, VM, Host} to be cut, should (re)routing, filtering, need to occur
 
-
 ## Importance of the UMBILICAL on [PRIVACY](./PositionPaper.DataOwnershipIsntAlwaysClear.document.md)

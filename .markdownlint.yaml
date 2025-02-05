@@ -19,7 +19,6 @@ fenced-code-language: false
 #          pandoc.   The intent is to add them back as solutions are found.
 #
 list-marker-space: false
-whitespace: false
 ol-prefix: false
 no-alt-text: false
 ul-indent: false

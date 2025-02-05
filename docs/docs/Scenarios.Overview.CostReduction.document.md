@@ -32,7 +32,6 @@ line.
 
 ![type:video](../orig_media/DynamicTelemetry_CostSavings.mp4)
 
-
 ## Convert Logs into Metrics
 
 Converting logs into metrics is a powerful technique used in Dynamic

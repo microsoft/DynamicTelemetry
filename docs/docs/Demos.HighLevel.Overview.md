@@ -86,8 +86,6 @@ fitting into one of several categories
 3.  A textually defined [State Machine, or State
     Model](./Architecture.Components.Processor.StateMachine.document.md)
 
-
-
 ### Installation Points for Dynamic Telemetry Processors
 
 The diagram below shows the installation of Dynamic Telemetry processors

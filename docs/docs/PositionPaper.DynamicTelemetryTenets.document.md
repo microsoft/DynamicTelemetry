@@ -5,7 +5,6 @@ status: ReviewLevel1b
 
 ## Tenets
 
-
 <!--start-TenetOverview-->
 1.  **Leverage existing technology**, before creating new
 2.  Be **philosophically indifferent to tooling**, operating systems, or

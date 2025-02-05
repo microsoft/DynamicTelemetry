@@ -21,7 +21,6 @@ status: ReviewLevel1
 
 ### High Risk
 
-
 ### Appendix
 1. [Observer Effect](./PositionPaper.ObserverEffect.document.md)
 1. [Durable ID's and Structured Payloads](./PositionPaper.DurableIds_StructuredPayloads.document.md)

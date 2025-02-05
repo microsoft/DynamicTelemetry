@@ -6,7 +6,6 @@ status: ReviewLevel1b
 ![image](../orig_media/RedactingSecrets.banner.png){width="5.5in"
 height="1.261111111111111in"}
 
-
 # Improving Your Security and Privacy Posture
 
 Dropping or redacting portions of a log involves selectively removing or

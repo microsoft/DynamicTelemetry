@@ -7,6 +7,3 @@ status: ReviewLevel1
 
 Points:
 1. Locks and putting logging in places where performance is preserved
-
-
-
