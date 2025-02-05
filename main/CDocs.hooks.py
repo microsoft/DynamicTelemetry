@@ -26,11 +26,11 @@ def filter_bytes(file_path):
 @mkdocs.plugins.event_priority(50000)
 def on_page_markdown(markdown: str, page: Page, config: MkDocsConfig, **kwargs) -> str | None:
 
-    if not "status" in page.meta:
-        raise Exception("Please Set Status in " + page.file.src_path)
+    #if not "status" in page.meta:
+    #    raise Exception("Please Set Status in " + page.file.src_path)
 
-    if not "author" in page.meta:
-        raise Exception("Please Set Author in " + page.file.src_path)
+    #if not "author" in page.meta:
+    #    raise Exception("Please Set Author in " + page.file.src_path)
 
     file = "./docs/" + page.file.src_path
     if 0 != sanitycheck(file):

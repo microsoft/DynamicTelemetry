@@ -40,7 +40,7 @@ Please include the requested information listed below (as much as you
 can provide) to help us better understand the nature and scope of the
 possible issue:
 
-- Type of issue (e.g. buffer overflow, SQL injection, cross-site
+- Type of issue (e.g.buffer overflow, SQL injection, cross-site
     scripting, etc.)
 - Full paths of source file(s) related to the manifestation of the
     issue
