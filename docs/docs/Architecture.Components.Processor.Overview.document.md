@@ -20,7 +20,7 @@ Before delving into the differences among these three types, it is
 essential to discuss the four different locations that can house a query
 Processor.
 
-## Locations in OpenTelemetry that may contain a Processor.
+## Locations in OpenTelemetry that may contain a Processor
 
 ![](../orig_media/Architecture.Boxes.Yes.DynamicTelemetry.drawio.png)
 

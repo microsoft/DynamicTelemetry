@@ -13,7 +13,7 @@ The rate of deployment is a double-edged sword. On one hand, deploying quickly c
 
 This section of Rude Q and A covers deployments in this dilemma.
 
-### Q1: Don't deployments carry risks?
+### Q1: Don't deployments carry risks
 
 Deployments carry risks; code or configuration - doesn't Dynamic Telemetry encourage accelerated deployments, and won't that carry risks?
 
@@ -37,7 +37,7 @@ This section covers those topics.
 
 ### Q2: Can memory extraction probes be used by an adversary to extract memory and compromise security?
 
-#### A2: Potentially. Care must be taken.
+#### A2: Potentially. Care must be taken
 
 A memory extraction probe is one of the more flexible and useful tools in Dynamic Telemetry. Built upon technologies such as DTrace, Ptrace, Uprobes, and Kprobes, it allows for detailed memory analysis. However, if an adversary compromises the deployment of Dynamic Telemetry configuration, they may be able to extract memory, potentially leading to a system compromise.
 

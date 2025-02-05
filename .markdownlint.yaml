@@ -22,6 +22,6 @@ list-marker-space: false
 no-alt-text: false
 #ul-indent: false
 #blanks-around-headings: false
-no-trailing-punctuation: false
+#no-trailing-punctuation: false
 first-line-heading: false
 blanks-around-lists: false

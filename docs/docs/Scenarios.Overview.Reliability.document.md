@@ -161,7 +161,7 @@ testing.
 Later in this section, we will further elaborate and provide detailed
 examples.
 
-### Self-describing Production Code:
+### Self-describing Production Code
 
 Dynamic Telemetry takes advantage of the durable identifiers and
 structure payloads within your logging in order to provide loose schemas
@@ -173,7 +173,7 @@ failure, or can otherwise indicate operational characteristics
 [Self Describing Production
 Code](./PositionPaper.SelfDescribingProductionCode.document.md)
 
-### Internal Auditing of Production Code:
+### Internal Auditing of Production Code
 
 An internal audit production code involves creating classifications of
 errors that adhere to strict definitions, unlike the flexible

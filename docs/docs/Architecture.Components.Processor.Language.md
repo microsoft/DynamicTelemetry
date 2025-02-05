@@ -44,7 +44,7 @@ Log messages may be disabled before entering production, used during
 diagnostics, or employed to indicate failure and success in traditional
 testing.
 
-## Modeling Live System Behavior, with a Language Processor.
+## Modeling Live System Behavior, with a Language Processor
 
 In this scenario, where a file is being hashed, assume there is a bug in
 the hashing algorithm. For example, the implementation of the hashing

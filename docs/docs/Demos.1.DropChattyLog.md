@@ -58,7 +58,7 @@ aggregated into a single entry. In a production system, one can expect
 this number to be significantly higher, which would subsequently
 increase potential confusion exponentially.
 
-## Utilize the DurableID feature on OpenTelemetry, to locate the line of code responsible for the expense.
+## Utilize the DurableID feature on OpenTelemetry, to locate the line of code responsible for the expense
 
 It should be immediately apparent that using a DurableIDentifier instead
 of a regular expression is significantly faster and more cost-effective
@@ -141,7 +141,7 @@ profiles.
 incorrect.](../orig_media/Demo.1.DurableID.ConvertedToMetric.png){width="5.0in"
 height="3.9993055555555554in"}
 
-## Choose one of the five Dynamic Telemetry locations to apply our KQL filter.
+## Choose one of the five Dynamic Telemetry locations to apply our KQL filter
 
 For this simple example of dropping a chatty event, we'll use an
 in-process emission to avoid context switches and maintain performance
