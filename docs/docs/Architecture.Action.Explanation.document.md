@@ -3,6 +3,8 @@ author: "Chris Gray"
 status: ReviewLevel1b
 ---
 
+# Understanding Actions
+
 Understanding an action in Dynamic Telemetry is crucial for grasping its
 workflows. An action involves diagnostic operations that do not alter
 system state and can be dynamically enabled or disabled using a provided

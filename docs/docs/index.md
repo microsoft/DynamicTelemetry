@@ -36,7 +36,6 @@ sample.
 After the demo, please 'choose your own adventure' by continuing to
 read along one of the five scenarios themes found below.
 
-
 ## Scenarios
 
 <div class="grid cards" markdown>
@@ -76,4 +75,5 @@ read along one of the five scenarios themes found below.
     or drop unnecessary logs.
 
     ![type:video](../orig_media/DynamicTelemetry_CostSavings.mp4)
+
 </div>

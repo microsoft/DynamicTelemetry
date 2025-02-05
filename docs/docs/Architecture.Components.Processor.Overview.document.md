@@ -20,10 +20,9 @@ Before delving into the differences among these three types, it is
 essential to discuss the four different locations that can house a query
 Processor.
 
-## Locations in OpenTelemetry that may contain a Processor.
+## Locations in OpenTelemetry that may contain a Processor
 
 ![](../orig_media/Architecture.Boxes.Yes.DynamicTelemetry.drawio.png)
-
 
 ## Processor Types
 
@@ -38,7 +37,6 @@ There are three different types of Processors each with varying degrees
 of complexity first is a simple query language Processor where the
 durable identifier structure payloads are utilized to simply drop or
 simply transform a log message.
-
 
 The second is a state model Processor, which is similar to a query
 language Processor but introduces actions and probes. These capabilities
@@ -77,7 +75,6 @@ In the example below, we are modifying the log message to drop a particular fiel
 
 By using your imagination, you can see many opportunities for this KQL language. For example, you could filter out logs that are not relevant to a specific analysis, transform log data to fit a particular schema, or even aggregate data to generate metrics on the fly.
 
-
 ### State Model Processor
 
 [A State Model Processor](./Architecture.Components.Processor.StateMachine.document.md) is our next most sophisticated and complex Processor. Similar to a Query Language Processor, the State Model Processor uses a simple configuration file. However, instead of merely providing filtering and aggregation, it allows for the construction of simple state machines that operate on the code as it runs.
@@ -87,7 +84,6 @@ The State Model Processor also introduces the concept of [probes](./Architecture
 Simple applications of a State Model Processor might include the dynamic enablement and disablement of verbose logs in specific situations. For example, when an error occurs, you may wish to enable higher volume telemetry for a period of five minutes.
 
 Other actions include the ability to capture a memory dump. For instance, you might capture a memory dump if a particular error is emitted in a log.
-
 
 ### Language Processor
 

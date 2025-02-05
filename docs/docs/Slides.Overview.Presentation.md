@@ -9,9 +9,9 @@ author: "Chris Gray"
 status: ReviewLevel1
 ---
 
-![](../orig_media/DynamicTelemetry.CoPilot.Image.png)
-
 # Dynamic Telemetry
+
+![](../orig_media/DynamicTelemetry.CoPilot.Image.png)
 
 ---
 
@@ -19,7 +19,7 @@ status: ReviewLevel1
 
 ---
 
-# Previous 2 or 3 years
+## Previous 2 or 3 years
 
 1. Aligning our API surfaces, core tech
 1. Supporting changes made in .NET, OpenTelemetry, and the kernels of Windows and Linux
@@ -28,7 +28,7 @@ status: ReviewLevel1
 
 ---
 
-# TLDR;  What is Dynamic Telemetry
+## TLDR;  What is Dynamic Telemetry
 
 1. Single Architecture
 1. That Connects bespoke telemetry / diagnostic tools
@@ -42,7 +42,7 @@ status: ReviewLevel1
 
 ---
 
-# Our Challenge
+## Our Challenge
 
 ![](../orig_media/ChallengeMatrix.drawio.png)
 
@@ -50,14 +50,14 @@ status: ReviewLevel1
 
 ---
 
-# Our Opportunity
+## Our Opportunity
 
 * Organize API's; Language, OS under Open Telemetry
 * Tackle the connections under 'Dynamic Telemetry';  using Scenarios as golden paths
 
 ---
 
-# Actions
+## Actions
 
 * Seek 1P/3P (OSS) Community Agreement on Scenario Workflow; 'Golden Paths'
 * Focus on  architectural North Star (Probe, Action, Processors, DurableID's)
@@ -66,7 +66,7 @@ status: ReviewLevel1
 
 ---
 
-# Why DurableID's and structured payloads are helpful
+## Why DurableID's and structured payloads are helpful
 
 * Regular Expressions are fragile, confusing, and expensive
 * Durable ID provides a sort of 'GPS' to find the file and line
@@ -74,11 +74,11 @@ status: ReviewLevel1
 
 ---
 
-# Risks
+## Risks
 
 ---
 
-# Scenarios
+## Scenarios
 
 * Performance and Diagnostics
 * Security and Privacy
@@ -89,37 +89,37 @@ status: ReviewLevel1
 
 ---
 
-# Architecture
+## Architecture
 
 ![](../orig_media/Architecture.Boxes.Full.DynamicTelemetry.drawio.png)
 
 ---
 
-# Diagnostics (aka Touch Reduction)
+## Diagnostics (aka Touch Reduction)
 
 * DurableID's and Structured Payloads can be used to Trigger
 * Memory Dumps, CPU samples, more verbose Logging
 
 ---
 
-# Security and Privacy
+## Security and Privacy
 
 * in SFI/Azure we've had problems with embedded PATs, certs
 * in GDPR/Client we've had problems with IP addresses, MAC/BSSID/SSID's
 
 ---
 
-# Cost Reduction
+## Cost Reduction
 
 * Logging is expensive
 * Not all Logs are great or always needed
 * Through positive identification
-    * we can toggle
-    * we can drop/modify
+  * we can toggle
+  * we can drop/modify
 
 ---
 
-# Opens up new Opportunities for AI
+## Opens up new Opportunities for AI
 
 * With Strings being CHEAP - more options
 * Reduce Volume

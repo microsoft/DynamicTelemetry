@@ -7,9 +7,7 @@ status: ReviewLevel1
 
 In short, there are four locations that Can accept one of the three different dynamic telemetry processors.
 
-
 ![](../orig_media/Architecture.Boxes.Yes.DynamicTelemetry.drawio.png)
-
 
 1. [In process](./Architecture.Components.Observer.InProcess.document.md)
 
