@@ -114,8 +114,8 @@ status: ReviewLevel1
 * Logging is expensive
 * Not all Logs are great or always needed
 * Through positive identification
-    * we can toggle
-    * we can drop/modify
+  * we can toggle
+  * we can drop/modify
 
 ---
 
