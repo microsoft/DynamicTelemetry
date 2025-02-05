@@ -4,8 +4,8 @@ status: ReviewLevel1
 ---
 
 # DynamicTelemetry : Demo 1, adding Telemetry dynamiclly
-In this demonstration, we’ll be utilizing DynamicTelemetry to generate telemetry for
-code that’s already been deployed in a Production environment.
+In this demonstration, we'll be utilizing DynamicTelemetry to generate telemetry for
+code that's already been deployed in a Production environment.
 
 Consider a scenario where a certain piece of code is operational within a
 Production Kubernetes cluster. A quick review of this code reveals a complete
