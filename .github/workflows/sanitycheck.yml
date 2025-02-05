@@ -3,7 +3,8 @@
 name: Lint - Spelling & Encoding
 
 on:
-  workflow_call:
+  pull_request:
+    branches: [ main ]
 
 jobs:
   run-misspell:
