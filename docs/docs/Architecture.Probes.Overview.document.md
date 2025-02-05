@@ -261,6 +261,6 @@ PROBE configurations are always deployed with the same oversight as production c
 
 ![image](../orig_media/Risk.ETW.png){width="2.660757874015748in" height="1.8226607611548555in"}
 
-### eBPF
+### eBPF (Windows)
 
 ![image](../orig_media/Risk.eBPF.png){width="2.660757874015748in" height="1.8226607611548555in"}
