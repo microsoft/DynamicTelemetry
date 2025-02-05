@@ -3,7 +3,7 @@ author: "Chris Gray"
 status: ReviewLevel1
 ---
 
-# DynamicTelemetry : Demo 1, adding Telemetry dynamiclly
+# DynamicTelemetry : Demo 1, adding Telemetry dynamically
 In this demonstration, we'll be utilizing DynamicTelemetry to generate telemetry for
 code that's already been deployed in a Production environment.
 
