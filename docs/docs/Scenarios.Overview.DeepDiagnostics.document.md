@@ -3,9 +3,9 @@ author: "Chris Gray"
 status: ReviewLevel1b
 ---
 
-![image](../orig_media/PerformanceAndDiagnostics.banner.png)
-
 # Deep Diagnostics, at Scale
+
+![image](../orig_media/PerformanceAndDiagnostics.banner.png)
 
 In Dynamic Telemetry, Probes and Actions play crucial roles in
 monitoring and diagnosing system behavior. Probes, such as any Log

@@ -3,10 +3,10 @@ author: "Chris Gray"
 status: ReviewLevel1b
 ---
 
+# Improving Your Security and Privacy Posture
+
 ![image](../orig_media/RedactingSecrets.banner.png){width="5.5in"
 height="1.261111111111111in"}
-
-# Improving Your Security and Privacy Posture
 
 Dropping or redacting portions of a log involves selectively removing or
 obscuring specific data within log entries to protect sensitive

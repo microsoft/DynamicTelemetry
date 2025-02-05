@@ -3,9 +3,9 @@ author: "Chris Gray"
 status: ReviewLevel1b
 ---
 
-![image](../orig_media/Reliability.banner.png)
-
 # Reliability
+
+![image](../orig_media/Reliability.banner.png)
 
 After you apply some thinking into probing an action aspects of dynamic
 telemetry you may come to realize that using these facilities provide an

@@ -3,6 +3,8 @@ author: "Chris Gray"
 status: ReviewLevel1
 ---
 
+# "Rude" Questions and Answers
+
 This section addresses commonly asked questions that are challenging or difficult. It is called "Rude Q and A" because it encourages asking tough, awkward, or uncomfortable questions.
 
 Please be polite when asking questions here, but do not feel the need to create a false sense of harmony. This page is for addressing difficult problems directly.

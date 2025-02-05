@@ -3,7 +3,7 @@ author: "Chris Gray"
 status: ReviewLevel1b
 ---
 
-## Tenets
+# Tenets
 
 <!--start-TenetOverview-->
 1.  **Leverage existing technology**, before creating new

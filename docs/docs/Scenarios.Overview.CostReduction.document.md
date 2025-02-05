@@ -3,9 +3,9 @@ author: "Chris Gray"
 status: ReviewLevel1b
 ---
 
-![image](../orig_media/CostSavings.banner.png)
-
 # Reducing Costs
+
+![image](../orig_media/CostSavings.banner.png)
 
 Dynamic Telemetry is a powerful tool that can be used to significantly
 reduce costs by converting logs into metrics dynamically. This
