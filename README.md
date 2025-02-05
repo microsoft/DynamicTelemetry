@@ -1,5 +1,7 @@
 # Project
 
+Test to trigger CI jobs.
+
 Dynamic Telemetry is  proposal for an open-source diagnostic tool designed to complement OpenTelemetry by making debugging highly scaled production software as easy and enjoyable as debugging a single application locally. Our goal is to enable you to diagnose and explore live production systems without compromising reliability, performance, or customer privacy.
 
 Dynamic Telemetry blends traditional symbolic debuggers with advanced new complements to your existing OpenTelemetry assets and workflows. It introduces five architectural components that, when used together, bring the peace and calm of local debugging into the distributed cloud.
