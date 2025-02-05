@@ -8,7 +8,13 @@ from pathlib import Path
 from typing import TYPE_CHECKING
 import mkdocs.plugins
 import CDocs_utils as CDocs
+from sanitycheck import sanitycheck
 
+def ends_with_newline(file_path):
+    with open(file_path, 'rb') as file:
+        file.seek(-1, 2)  # Move the cursor to the last byte of the file
+        last_char = file.read(1)
+        return last_char == b'\n'
 
 @mkdocs.plugins.event_priority(50000)
 def on_page_markdown(markdown: str, page: Page, config: MkDocsConfig, **kwargs) -> str | None:
@@ -18,6 +24,18 @@ def on_page_markdown(markdown: str, page: Page, config: MkDocsConfig, **kwargs) 
 
     if not "author" in page.meta:
         raise Exception("Please Set Author in " + page.file.src_path)
+
+    file = "./docs/" + page.file.src_path
+    if 0 != sanitycheck(file):
+        raise Exception("Sanity Check failed for " + file)
+
+
+    if not ends_with_newline(file):
+        with open(file, "a") as f:
+            f.write("\n")
+        #raise Exception("Please make sure " + page.file.src_path + " ends with a new line")
+
+
 
     #for name, value in os.environ.items():
     #    markdown += "{0}: {1}\n".format(name, value)
