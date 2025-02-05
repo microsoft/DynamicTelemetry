@@ -1,0 +1,33 @@
+# See https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
+# and https://github.com/DavidAnson/markdownlint/blob/main/README.md
+
+# Default state for all rules
+default: true
+
+ul-style: false
+line-length: false
+no-duplicate-header:
+  siblings_only: true
+#ol-prefix:
+#  style: ordered
+no-inline-html: false
+fenced-code-language: false
+
+
+#
+# BUGBUG : adding these suppressions, just to work around mutual exclusion in
+#          pandoc.   The intent is to add them back as solutions are found.
+#
+list-marker-space: false
+whitespace: false
+ol-prefix: false
+no-alt-text: false
+ul-indent: false
+blanks-around-headings: false
+single-title: false
+no-trailing-punctuation: false
+first-line-heading: false
+no-missing-space-atx: false
+no-duplicate-heading: false
+blanks-around-lists: false
+git d
