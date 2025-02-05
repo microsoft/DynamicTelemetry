@@ -19,7 +19,7 @@ STREAMING telemetry has three common subtypes: Logs, Metrics, and Traces. These 
 
 A key differentiator between STREAMING telemetry and FILE_BASED telemetry is that STREAMING telemetry is always emitted, whereas FILE_BASED telemetry is only transmitted upon request, usually in the event of a failure.
 
-[OpenTelemetrys website](https://opentelemetry.io/) is a great resource to better understand STREAMING telemetry.
+[OpenTelemetry’s website](https://opentelemetry.io/) is a great resource to better understand STREAMING telemetry.
 
 
 ## FILE_BASED Telemetry:
