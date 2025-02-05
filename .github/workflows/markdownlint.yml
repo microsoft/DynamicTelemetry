@@ -1,9 +1,10 @@
 # Called by ci.yml to perform markdown linting
 # See: https://docs.github.com/en/actions/using-workflows/reusing-workflows#creating-a-reusable-workflow
-name: Lint - Markdown
+name: Lint - Markdownlint
 
 on:
-  workflow_call:
+  pull_request:
+    branches: [ main ]
 
 jobs:
   run-markdownlint:
