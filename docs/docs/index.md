@@ -34,7 +34,7 @@ modified (or even recompiled) any code from the OpenTelemetry
 sample. 
 
 After the demo, please 'choose your own adventure' by continuing to
-read along one of the four tracks found below. 
+read along one of the five scenarios themes found below. 
 
 
 ## Scenarios

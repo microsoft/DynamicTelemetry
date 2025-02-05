@@ -63,10 +63,8 @@ theme:
 
 nav:
 #<START_BINDING>
-    - Introduction: ./docs/index.md
-
     - Scenarios:
-        - Overview: ./docs/Scenarios.Overview.document.md
+        - Introduction : ./docs/index.md
         - Performance and Diagnostics:
             - Overview: ./docs/Scenarios.Overview.DeepDiagnostics.document.md
             - MemoryLeak: ./docs/Scenarios.MemoryLeak.document.md
