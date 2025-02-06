@@ -2,7 +2,7 @@
 
 *You're at the main github location hosting the unrendered markdown for Dynamic
 Telemetry.  If you'd prefer more pleasing to read, rendered HTML, please visit
-[https://microsoft.github.io/DynamicTelemetry/](https://microsoft.github.io/DynamicTelemetry/)
+[https://microsoft.github.io/DynamicTelemetry/](https://microsoft.github.io/DynamicTelemetry/).
 
 Dynamic Telemetry is proposal for an open-source diagnostic tool
 designed to complement OpenTelemetry by making debugging highly scaled
