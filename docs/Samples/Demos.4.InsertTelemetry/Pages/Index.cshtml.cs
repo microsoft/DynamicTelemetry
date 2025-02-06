@@ -28,8 +28,6 @@ namespace DynamicTelemetry_Demo_3_SecurityRedactions.Pages
             });
 
             _me?.AddUsage();
-
-           
         }
         // EndExample:InsertTelemetryOnGet
 
@@ -42,7 +40,7 @@ namespace DynamicTelemetry_Demo_3_SecurityRedactions.Pages
     {
         private int _usage = 0;
         public int Usage { get { lock (this) { return _usage; } } }
-                    
+
         public void AddUsage()
         {
             lock (this) { ++_usage; }
@@ -61,13 +59,13 @@ traces
 | project EventName, message, customDimensions, timestamp
 | extend CacheCount=toint(customDimensions.cacheLength)
 | summarize countif(EventName == "LogWelcome"), max(CacheCount) by bin(timestamp, 1m)
-| render timechart 
-// EndExample:KQL_Monitor 
+| render timechart
+// EndExample:KQL_Monitor
 */
 
 
-// 
-//  Notes: this sample dynamically simluates adding the below log message 
+//
+//  Notes: this sample dynamically simluates adding the below log message
 //LogCacheLength(_logger, ((MemoryCache)_cache).Count);
 //[LoggerMessage(Level = LogLevel.Information, Message = "CacheCount={cacheLength}")]
 //static partial void LogCacheLength(ILogger logger, int cacheLength);
