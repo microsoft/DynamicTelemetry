@@ -4,7 +4,7 @@ We welcome everyone to contribute to Dynamic Telemetry.
 
 ## Development Environment
 
-You can contribute to this project from a Windows, macOS, or Linux machine.
+You can contribute to this project from a macOS, Linux or Windows machine.
 
 On all platforms, the minimum requirements are:
 
@@ -62,3 +62,4 @@ A PR is considered to be **ready to merge** when:
 * Major feedback/comments are resolved.
 * It has been open for review for at least one working day. This gives people
   reasonable time to review.
+* Approved by at least one code owner.
