@@ -1,0 +1,22 @@
+# Called by ci.yml to perform markdown linting
+# See: https://docs.github.com/en/actions/using-workflows/reusing-workflows#creating-a-reusable-workflow
+name: Lint - Markdownlint
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  run-markdownlint:
+    runs-on: ubuntu-22.04
+
+    steps:
+    - name: check out code
+      uses: actions/checkout@v4
+
+    - name: run markdownlint
+      uses: DavidAnson/markdownlint-cli2-action@v18.0.0
+      with:
+        globs: |
+          **/*.md
+          !.github/**/*.md

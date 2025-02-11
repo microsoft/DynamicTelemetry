@@ -1,0 +1,34 @@
+<script>
+    /* Add custom analytics integration here, e.g. */
+    var property = "{{ config.extra.analytics.property }}"
+
+
+    function getCookie(name) {
+        let cookieArr = document.cookie.split(";");
+
+        for(let i = 0; i < cookieArr.length; i++) {
+            let pieces = cookieArr[i].split("=");
+
+            if(name === pieces[0].trim()) {
+                return decodeURIComponent(pieces[1]);
+            }
+        }
+        return null;
+    }
+
+    async function getData() {
+        var consent = __md_get("__consent")
+
+        if (consent && consent.analytics)
+        {
+            url = "https://durableid-demo-a9byc5fwa7htc5h0.westus2-01.azurewebsites.net/?name=test.jpg&handler=DocumentLoaded&pageName=" + encodeURIComponent(location.pathname) + "&session=" + getCookie("analytics")
+
+            try {
+                const response = await fetch(url, {mode:"no-cors"});
+            } catch (error) {
+            }
+        }
+    }
+
+    getData()
+</script>

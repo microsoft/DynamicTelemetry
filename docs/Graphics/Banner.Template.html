@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    .top-left {
+        position: absolute;
+        top: 0px;
+        left: 50px;
+        color: white;
+        font-size: 48px;
+    }
+    </style>
+</head>
+<body>
+<div class="container">
+    <img src="../orig_media/Base.banner.png" style="width:100%;">
+    <div class="top-left"><h1 id="bannerText">ERROR - should be empty</h1></div>
+</div>
+
+</body>
+</html>
+
+
+<script>
+
+function getQueryVariable(variable) {
+    var file = decodeURI(window.location.search.substring(1));
+
+    var variables = file.split("&");
+    for (var i=0;i<variables.length;i++) {
+        var pieces = variables[i].split("=");
+        if (pieces[0] == variable) {
+            return pieces[1];
+        }
+    }
+}
+
+console.log("DEBUG ----");
+document.getElementById("bannerText").innerHTML=getQueryVariable("title");
+
+</script>
