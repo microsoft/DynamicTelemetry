@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 using Azure.Identity;
 using Azure.Monitor.OpenTelemetry.AspNetCore;
 using System.Diagnostics;

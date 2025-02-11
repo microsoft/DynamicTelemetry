@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 //start
 using Microsoft.Extensions.Logging;
 using System.Security.Cryptography;

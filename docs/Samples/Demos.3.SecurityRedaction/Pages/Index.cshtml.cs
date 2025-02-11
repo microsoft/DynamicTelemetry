@@ -1,3 +1,7 @@
+	
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 // StartExample:RedactSecret
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Diagnostics.Metrics;
