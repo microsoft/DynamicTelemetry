@@ -188,7 +188,7 @@ nav:
             - Data Ownership isnt always Clear: ./docs/PositionPaper.DataOwnershipIsntAlwaysClear.document.md
             - Logs into Metrics: ./docs/PositionPaper.ConvertLogsToMetrics.document.md
             - Triggered Collections: ./docs/PositionPaper.TriggeredCollections.document.md
-            - Proceduralize Nets: ./docs/PositionPaper.ProceduralizeNets.document.md
+            - Procedural Nets: ./docs/PositionPaper.ProceduralizeNets.document.md
             - Locks and Throttles: ./docs/PositionPaper.LeafLevelLogging.document.md
             - Loose Schemas: ./docs/PositionPaper.SharingDataAmongStakeHoldersIsHard.document.md
         - Demo Videos:
@@ -322,15 +322,12 @@ extra:
         value: Testing1234
         checked: true
 
-
   analytics:
     provider: custom
     actions:
       - accept
       - reject
       - manage
-
-
 
 extra_css:
     - extra.css
