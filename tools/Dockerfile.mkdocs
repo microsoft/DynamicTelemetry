@@ -1,0 +1,29 @@
+FROM mcr.microsoft.com/cbl-mariner/base/core:2.0
+
+# ------------------------------------------------------------------------------
+#
+# Helpful commands: this section is the 'junk drawer' of handy command
+#    one could argue they shouldnt be here
+#
+# {docker, podman} build -f Dockerfile.mkdocs -t "dynamictelemetry/dynamictelemetry:mkdocs" .
+
+RUN tdnf update -y
+RUN tdnf install python3 -y
+RUN tdnf install python3-pip -y
+
+RUN mkdir -p ~/.local/mkdocs_python
+RUN python3 -m venv ~/.local/mkdocs_python
+RUN cd ~/.local/mkdocs_python/bin
+
+RUN ~/.local/mkdocs_python/bin/pip install mkdocs
+RUN ~/.local/mkdocs_python/bin/pip install mkdocs-mermaid2-plugin
+RUN ~/.local/mkdocs_python/bin/pip install mkdocs-material
+RUN ~/.local/mkdocs_python/bin/pip install mkdocs-minify-plugin
+RUN ~/.local/mkdocs_python/bin/pip install mkdocs-include-markdown-plugin
+RUN ~/.local/mkdocs_python/bin/pip install mkdocs-macros-plugin
+RUN ~/.local/mkdocs_python/bin/pip install mkdocs-video
+RUN ~/.local/mkdocs_python/bin/pip install mkdocs-redirects
+
+WORKDIR /data
+
+ENTRYPOINT [ "/root/.local/mkdocs_python/bin/mkdocs", "serve", "-a", "0.0.0.0:8000", "-s" ]

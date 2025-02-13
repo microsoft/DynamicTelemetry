@@ -19,5 +19,4 @@ jobs:
       with:
         globs: |
           **/*.md
-          !SECURITY.md
           !.github/**/*.md
