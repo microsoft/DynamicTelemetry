@@ -97,21 +97,20 @@ Blur some of this author's favorite uses.
 
 ### Information leading into a process crash.
 
-``` cdocs_include
-{{ CSharp_Include("./Applications.FlightRecorder.MemoryLeak.document.md",
-    "## Scenario Summary",
-    "## Scenario Expansion")
-}}
-```
+{%
+    include-markdown "./Applications.FlightRecorder.PriorToCrash.document.md",
+    start="## Scenario Summary",
+    end="## Scenario Expansion"
+%}
+
 
 ### Memory Leak Tracking
 
-``` cdocs_include
-{{ CSharp_Include("./Applications.FlightRecorder.MemoryLeak.document.md",
-    "## Scenario Summary",
-    "## Scenario Expansion")
-}}
-```
+{%
+    include-markdown "./Applications.FlightRecorder.MemoryLeak.document.md",
+    start="## Scenario Summary",
+    end="## Scenario Expansion"
+%}
 
 ## References
 
