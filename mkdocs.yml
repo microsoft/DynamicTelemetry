@@ -190,6 +190,10 @@ nav:
             - Locks and Throttles: ./docs/PositionPaper.LeafLevelLogging.document.md
             - Loose Schemas: ./docs/PositionPaper.SharingDataAmongStakeHoldersIsHard.document.md
 
+        - Interesting Applications:
+            - Overview: ./docs/Applications.InterestingApplications.document.md
+
+
         - Upcoming and Proposed Cuts:
             - Upcoming:
                 - Design Patterns:

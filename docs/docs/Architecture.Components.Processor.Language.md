@@ -22,11 +22,11 @@ Additionally, complex triggering scenarios can be established, such as
 capturing a memory dump of a process when a reference count exceeds
 nominal and expected values.
 
-## Simple Code Example; hashing files
+## Simple Code Example; hashing files - XX
 
 ```cdocs_include
 {{ CSharp_Include("../LookoutTower/Samples/FileExtensionStats/Sample.FileExtensionStats.cs",
-    "//start-ImageHashExample",
+    "#",
     "//end-ImageHashExample")
 }}
 ```
