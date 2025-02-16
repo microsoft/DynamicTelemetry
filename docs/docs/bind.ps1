@@ -12,6 +12,18 @@ if (Test-Path "..\bound_docs\bind.files")
 {
 	Remove-Item "..\bound_docs\bind.files"
 }
+
+
+if (Test-Path "..\bound_docs\title.txt")
+{
+	Remove-Item "..\bound_docs\title.txt"
+}
+Add-Content ..\bound_docs\title.txt "---"
+Add-Content ..\bound_docs\title.txt "title: Dynamic Telemetry $(Get-Date)"
+Add-Content ..\bound_docs\title.txt "author: Chris Gray at.al"
+Add-Content ..\bound_docs\title.txt "date: $(Get-Date)"
+Add-Content ..\bound_docs\title.txt "---"
+
 # Copy Everything; just so our Includes work
 Copy-Item -Path .\* -Destination ..\bound_docs -Recurse
 try {
@@ -75,7 +87,7 @@ try {
 	}
 	cd bound_docs
 	Write-Host "RUN THIS IN REAL LINUX *******"
-	Write-Host "pandoc -i `$(cat ./bind.files) -o ./bound.md"
+	Write-Host "dos2unix ./bind.files; pandoc -i `$(cat ./bind.files) -o ./_bound.tmp.md; cat ./_bound.tmp.md | grep -v mp4 > ./bound.md"
 	cd ..
 } finally {
 	cd docs
