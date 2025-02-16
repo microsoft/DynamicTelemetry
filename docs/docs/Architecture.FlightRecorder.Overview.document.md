@@ -23,7 +23,7 @@ fire safes, this method is especially valuable for incident
 reconstruction. It preserves past states, which helps ensure that system
 insights remain available even when live connections are not.
 
-### What is a flight recorder?
+## What is a flight recorder?
 
 A flight recorder comprises a ring buffer with fixed capacity, typically
 residing in memory or on disk, that continually overwrites older data
@@ -53,44 +53,60 @@ critical details for post-event analysis. Logs remain accessible when
 needed, even if they might not be retained long-term.
 
 This solution can provide both performance benefits and cost savings. To
-learn more, refer to the position papers on [scarcity](./PositionPaper.ScarcityAndHumans.md) and [triggered flight recorders](./PositionPaper.TriggeredFlightRecorder.document.md).
+learn more, refer to the position papers on
+[scarcity](./PositionPaper.ScarcityAndHumans.md) and [triggered flight
+recorders](./PositionPaper.TriggeredFlightRecorder.document.md).
 
-The basic steps to collect a flight recorder are to know through some mechanism its identifier and then to use a triggering action to collect it.
+The basic steps to collect a flight recorder are to know through some
+mechanism its identifier and then to use a triggering action to collect
+it.
 
-### Steps Involved in Collecting a Flight Recorder
+**Steps Involved in Collecting a Flight Recorder**
 
     1. Route high volume Logging to a Flight Recorder
     2. Note its Identifier
     3. Use the Flight Recorder egress action, to collect the flight recorder
 
-## Flight Recorder, Trace 'Horizons'
+## Trace 'Horizons'
 
-Flight recorders often collect high volume logs that remain local until a triggering event prompts upload. This approach introduces different trace horizons. One horizon might capture logs leading to a process crash or other diagnostic event. Because these logs can be high in volume, ring buffers overwrite older data frequently. This arrangement is commonly referred to as a "short-horizon" flight recorder.
+Flight recorders often collect high volume logs that remain local until
+a triggering event prompts upload. This approach introduces different
+trace horizons. One horizon might capture logs leading to a process
+crash or other diagnostic event. Because these logs can be high in
+volume, ring buffers overwrite older data frequently. This arrangement
+is commonly referred to as a "short-horizon" flight recorder.
 
-In contrast, some logging applies only to specific failures that may take minutes or days to occur. Examples include Bluetooth sessions on a client operating system, long-running transactions, or writing data to a slow medium like tape. These scenarios require maintaining a flight recorder over an extended period, ensuring that all pertinent logs remain accessible when needed.
+In contrast, some logging applies only to specific failures that may
+take minutes or days to occur. Examples include Bluetooth sessions on a
+client operating system, long-running transactions, or writing data to a
+slow medium like tape. These scenarios require maintaining a flight
+recorder over an extended period, ensuring that all pertinent logs
+remain accessible when needed.
 
-These lower volume but long duration flight recorders are known as long-horizon flight recorders. They are designed to capture and retain logs over extended periods, ensuring that all relevant data is available for analysis when needed.
+These lower volume but long duration flight recorders are known as
+long-horizon flight recorders. They are designed to capture and retain
+logs over extended periods, ensuring that all relevant data is available
+for analysis when needed.
 
+## Interesting Applications of Flight Recorders
 
-### Interesting Applications of Flight Recorders
-
-Flight recorders are an extremely interesting and fun concept. As you gain proficiency in using them, you'll find applications everywhere.
+Flight recorders are an extremely interesting and fun concept. As you
+gain proficiency in using them, you'll find applications everywhere.
 
 Blur some of this author's favorite uses.
 
-#### Information leading into a process crash.
+### Information leading into a process crash.
 
-```cdocs_include
+``` cdocs_include
 {{ CSharp_Include("./Applications.FlightRecorder.MemoryLeak.document.md",
     "## Scenario Summary",
     "## Scenario Expansion")
 }}
 ```
 
+### Memory Leak Tracking
 
-#### Memory Leak Tracking
-
-```cdocs_include
+``` cdocs_include
 {{ CSharp_Include("./Applications.FlightRecorder.MemoryLeak.document.md",
     "## Scenario Summary",
     "## Scenario Expansion")
@@ -101,9 +117,10 @@ Blur some of this author's favorite uses.
 
 1.  [File and Streaming](./PositionPaper.FileAndStreaming.document.md)
 
-2.  [Telemetry Umbilical](./PositionPaper.TelemetryUmbilical.document.md)
+2.  [Telemetry
+    Umbilical](./PositionPaper.TelemetryUmbilical.document.md)
 
-3. [Scarcity and Humans](./PositionPaper.ScarcityAndHumans.md)
+3.  [Scarcity and Humans](./PositionPaper.ScarcityAndHumans.md)
 
-3. [triggered flight recorders](./PositionPaper.TriggeredFlightRecorder.document.md).
-
+4.  [triggered flight
+    recorders](./PositionPaper.TriggeredFlightRecorder.document.md).
