@@ -1,9 +1,11 @@
 ---
 author: "Chris Gray"
-status: ReviewLevel1
+status: ReviewLevel1b
 ---
 
 # Long Horizon Flight Recorder
+
+![](../orig_media/LongHorizon.banner.png)
 
 A Long Horizon Flight Recorder is a specialized type of flight recorder designed
 to study long-running issues that are typically very difficult to understand and

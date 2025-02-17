@@ -5,6 +5,8 @@ status: ReviewLevel1b
 
 # Short Horizon Flight Recorder
 
+![](../orig_media/ShortHorizon.banner.png)
+
 Short Horizon Flight Recorder is a focused logging strategy designed to capture
 and preserve data within bound memory limits. Rather than collecting lengthy
 histories, over a long time span, it employs broad and loosely filtered logs to
