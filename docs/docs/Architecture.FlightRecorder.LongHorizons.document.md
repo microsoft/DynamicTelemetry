@@ -1,6 +1,7 @@
-______________________________________________________________________
-
-## author: "Chris Gray" status: ReviewLevel1
+---
+author: "Chris Gray"
+status: ReviewLevel1
+---
 
 # Long Horizon Flight Recorder
 
@@ -41,7 +42,7 @@ Typically a Long Horizon Flight Recorder will Have
 1. A large memory buffer.
 1. A very restrictive filter. That is very selective in what is captured.
 
-## Something to consider when using a Long Horizon flight recorder in a cloud based system
+## Long Horizon Flight Recorders in the Cloud
 
 A keen observer may realize that the value proposition of a Long Horizon flight
 recorder in a cloud system may not be very significant. This is true because a
@@ -78,7 +79,7 @@ This likely will not be the case in aAn operating system.
 Long Horizon Flight Recorders are ideally suited for diagnosing problems that
 develop gradually over extended periods or under complex, long-running
 conditions. They capture logs and metrics selectively, focusing on events
-important for troubleshooting systemic issues that wouldnt manifest in
+important for troubleshooting systemic issues that wouldn't manifest in
 real-time. As a result, they can be a powerful complement to Short Horizon
 Flight Recorders when an organization needs both short-term bursts of data
 collection and deeper, continuous insight.
