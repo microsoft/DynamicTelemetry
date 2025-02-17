@@ -5,7 +5,8 @@ status: ReviewLevel1
 
 # Review Process
 
-Because there are many stakeholders and dynamic telemetry, each document has a header that describes the state of review.
+Because there are many stakeholders and dynamic telemetry, each document has a
+header that describes the state of review.
 
 Below are the different stages:
 

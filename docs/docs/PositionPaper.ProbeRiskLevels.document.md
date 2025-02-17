@@ -12,7 +12,8 @@ status: ReviewLevel1
 1. Privacy Elevation
 1. Security Elevation
 1. Reliability[(Observer Effect)](./PositionPaper.ObserverEffect.document.md)
-1. Costs [(Durable ID's and Structured Payloads)](./PositionPaper.DurableIds_StructuredPayloads.document.md)
+1. Costs
+   [(Durable ID's and Structured Payloads)](./PositionPaper.DurableIds_StructuredPayloads.document.md)
 1. Performance[(Observer Effect)](./PositionPaper.ObserverEffect.document.md)
 
 ### No Risk

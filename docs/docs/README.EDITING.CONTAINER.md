@@ -13,18 +13,23 @@ one-time setup.
 ## Installation
 
 1. Install Docker or Podman from https://www.docker.com.
-2. From the tools directory in DynamicTelemetry, build the container using:
-    ```
-    docker build -f Dockerfile.mkdocs -t "dynamictelemetry/dynamictelemetry:mkdocs" .
-    ```
 
-3. Once the build process is complete, simply use the container. In a workflow that looks something like this.
+1. From the tools directory in DynamicTelemetry, build the container using:
 
-    * In a Stand alone. terminal window, Use. The compose up command. Which will monitor Profile changes and update accordingly.
+   ```
+   docker build -f Dockerfile.mkdocs -t "dynamictelemetry/dynamictelemetry:mkdocs" .
+   ```
 
-    ```
-    docker compose up
-    ```
+1. Once the build process is complete, simply use the container. In a workflow
+   that looks something like this.
 
-    * Make changes to the documentation.
-    * View the changes in your local web browser [http://localhost:8000](http://localhost:8000)
+   - In a Stand alone. terminal window, Use. The compose up command. Which will
+     monitor Profile changes and update accordingly.
+
+   ```
+   docker compose up
+   ```
+
+   - Make changes to the documentation.
+   - View the changes in your local web browser
+     [http://localhost:8000](http://localhost:8000)

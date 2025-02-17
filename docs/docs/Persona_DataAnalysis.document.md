@@ -7,7 +7,7 @@ status: ReviewLevel1
 
 DynamicTelemetry personas are intended as an organizational aid to group
 capabilities and usability of common usage scenarios. Browsing between scenarios
- is recommended, for the personas are intended only as an aid.
+is recommended, for the personas are intended only as an aid.
 
 ## Introduction
 
@@ -15,9 +15,9 @@ The DATA_ANALYST Persona in DynamicTelemetry:
 
 1. Looks for patterns - has a background in math, AI, big data, statistics, etc
 1. Apprecates (but doesnt necessarily depend on) schematized data, with crisp
-contracts
+   contracts
 1. Is well versed and comfortable with the differences between security and
-privacy. Knows how to protect users.
+   privacy. Knows how to protect users.
 
 ## Scenarios
 
