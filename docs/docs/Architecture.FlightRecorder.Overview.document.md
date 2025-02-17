@@ -84,8 +84,8 @@ its identifier and then to use a triggering action to collect it.
 Steps Involved in Collecting a Flight Recorder
 
 1. Route high volume Logging to a Flight Recorder
-2. Note its Identifier
-3. Use the Flight Recorder egress action, to collect the Flight Recorder
+1. Note its Identifier
+1. Use the Flight Recorder egress action, to collect the Flight Recorder
 
 ## Trace 'Horizons'
 
