@@ -30,7 +30,7 @@ In short this demo will
 
 ![type:video](../orig_media/DynamicTelemetry_CostSavings.mp4)
 
-## Use Azure Monitor and KQL language to locate an unexpectedly expensive Open Telemetry log
+## Use Azure Monitor and KQL language to locate an expensive Open Telemetry log
 
 By using the query below in Application Insights, we can utilize the Durable
 Identifier found in our logs to pinpoint specific log messages or identify any
@@ -56,7 +56,7 @@ this instance, nine messages have been aggregated into a single entry. In a
 production system, one can expect this number to be significantly higher, which
 would subsequently increase potential confusion exponentially.
 
-## Utilize the DurableID feature on OpenTelemetry, to locate the line of code responsible for the expense
+## Utilize the DurableID, to locate the line of code responsible for the expense
 
 It should be immediately apparent that using a DurableIDentifier instead of a
 regular expression is significantly faster and more cost-effective than using

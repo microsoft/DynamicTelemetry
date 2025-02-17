@@ -96,7 +96,9 @@ example, it appears contradictory to state that Dynamic Telemetry does not have
 rigid schemas while simultaneously offering capabilities built upon rigid
 schemas.
 
-### Q3 : Dynamic Telemetry takes a position of no rigid schemas - isnt this at odds with the value prop of Design Patterns?
+### Q3 : Dynamic Telemetry takes a position of no rigid schemas??
+
+....isn't this at odds with the value prop of Design Patterns?
 
 [reading material](./PositionPaper.SharingDataAmongStakeHoldersIsHard.document.md)
 
