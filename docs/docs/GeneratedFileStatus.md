@@ -12,10 +12,6 @@ status: Level5
 | [../docs/Architecture.Components.Observer.InProcess.document.md](../docs/Architecture.Components.Observer.InProcess.document.md)  | 53|
 | [../docs/Architecture.Components.Observer.Kernel.document.md](../docs/Architecture.Components.Observer.Kernel.document.md)  | 68|
 | [../docs/Architecture.Components.Streaming.Observability.document.md](../docs/Architecture.Components.Streaming.Observability.document.md)  | 59|
-| [../docs/Architecture.FlightRecorder.LongHorizons.document.md](../docs/Architecture.FlightRecorder.LongHorizons.document.md)  | 797|
-| [../docs/Architecture.FlightRecorder.Overview.document.md](../docs/Architecture.FlightRecorder.Overview.document.md)  | 811|
-| [../docs/Architecture.FlightRecorder.ShortHorizons.document.md](../docs/Architecture.FlightRecorder.ShortHorizons.document.md)  | 588|
-| [../docs/Architecture.FlightRecorder.TraceHorizons.document.md](../docs/Architecture.FlightRecorder.TraceHorizons.document.md)  | 365|
 | [../docs/Architecture.KeyConstructs.Overview.document.md](../docs/Architecture.KeyConstructs.Overview.document.md)  | 174|
 | [../docs/Architecture.Overview.document.md](../docs/Architecture.Overview.document.md)  | 210|
 | [../docs/PositionPaper.DeliveryGuarantees.document.md](../docs/PositionPaper.DeliveryGuarantees.document.md)  | 163|
@@ -58,7 +54,6 @@ status: Level5
 | [../docs/Architecture.DesignPatterns.Toggles.document.md](../docs/Architecture.DesignPatterns.Toggles.document.md)  | 10|
 | [../docs/Architecture.DesignPatterns.Triggers.document.md](../docs/Architecture.DesignPatterns.Triggers.document.md)  | 10|
 | [../docs/Architecture.DesignPatterns.Valves.document.md](../docs/Architecture.DesignPatterns.Valves.document.md)  | 10|
-| [../docs/Architecture.FlightRecorder.CubbyHole.document.md](../docs/Architecture.FlightRecorder.CubbyHole.document.md)  | 15|
 | [../docs/Architecture.Probe.Breakpoint.document.md](../docs/Architecture.Probe.Breakpoint.document.md)  | 97|
 | [../docs/Architecture.Probe.DTrace.document.md](../docs/Architecture.Probe.DTrace.document.md)  | 18|
 | [../docs/Architecture.Probe.eBPF.document.md](../docs/Architecture.Probe.eBPF.document.md)  | 13|
@@ -68,11 +63,11 @@ status: Level5
 | [../docs/Architecture.Probe.uprobes.document.md](../docs/Architecture.Probe.uprobes.document.md)  | 13|
 | [../docs/Architecture.Probe.user_events.document.md](../docs/Architecture.Probe.user_events.document.md)  | 13|
 | [../docs/Definitions.document.md](../docs/Definitions.document.md)  | 161|
-| [../docs/Demos.0.DynamicID.md](../docs/Demos.0.DynamicID.md)  | 725|
-| [../docs/Demos.1.DropChattyLog.md](../docs/Demos.1.DropChattyLog.md)  | 1104|
+| [../docs/Demos.0.DynamicID.md](../docs/Demos.0.DynamicID.md)  | 722|
+| [../docs/Demos.1.DropChattyLog.md](../docs/Demos.1.DropChattyLog.md)  | 1103|
 | [../docs/Demos.2_DynamicProbe.md](../docs/Demos.2_DynamicProbe.md)  | 277|
 | [../docs/Demos.4.AddTelemetryDemo.md](../docs/Demos.4.AddTelemetryDemo.md)  | 1078|
-| [../docs/Demos.HighLevel.Overview.md](../docs/Demos.HighLevel.Overview.md)  | 1190|
+| [../docs/Demos.HighLevel.Overview.md](../docs/Demos.HighLevel.Overview.md)  | 1187|
 | [../docs/Persona_DataAnalysis.document.md](../docs/Persona_DataAnalysis.document.md)  | 122|
 | [../docs/Persona_Developer.document.md](../docs/Persona_Developer.document.md)  | 183|
 | [../docs/Persona_DevOps.document.md](../docs/Persona_DevOps.document.md)  | 110|
@@ -106,14 +101,14 @@ status: Level5
 | [../docs/PositionPaper.WhereToSuppressInProc.document.md](../docs/PositionPaper.WhereToSuppressInProc.document.md)  | 10|
 | [../docs/ReviewProcess.document.md](../docs/ReviewProcess.document.md)  | 98|
 | [../docs/Rude_Q_and_A.md](../docs/Rude_Q_and_A.md)  | 748|
-| [../docs/Scenarios.ChangingEnvironments.document.md](../docs/Scenarios.ChangingEnvironments.document.md)  | 24|
+| [../docs/Scenarios.ChangingEnvironments.document.md](../docs/Scenarios.ChangingEnvironments.document.md)  | 23|
 | [../docs/Scenarios.ConvertLogsToMetrics.document.md](../docs/Scenarios.ConvertLogsToMetrics.document.md)  | 10|
 | [../docs/Scenarios.EventAggregation.document.md](../docs/Scenarios.EventAggregation.document.md)  | 37|
 | [../docs/Scenarios.EventFieldSuppression.document.md](../docs/Scenarios.EventFieldSuppression.document.md)  | 16|
 | [../docs/Scenarios.EventSuppression.document.md](../docs/Scenarios.EventSuppression.document.md)  | 30|
 | [../docs/Scenarios.ExtractingMemoryWithUProbe.document.md](../docs/Scenarios.ExtractingMemoryWithUProbe.document.md)  | 15|
 | [../docs/Scenarios.MemoryLeak.document.md](../docs/Scenarios.MemoryLeak.document.md)  | 17|
-| [../docs/Slides.Overview.Presentation.md](../docs/Slides.Overview.Presentation.md)  | 378|
+| [../docs/Slides.Overview.Presentation.md](../docs/Slides.Overview.Presentation.md)  | 377|
 
 
 ## Level2
@@ -124,7 +119,7 @@ status: Level5
 | [../docs/Architecture.Components.Processor.Overview.document.md](../docs/Architecture.Components.Processor.Overview.document.md)  | 952|
 | [../docs/Architecture.Components.Processor.QueryLanguage.document.md](../docs/Architecture.Components.Processor.QueryLanguage.document.md)  | 349|
 | [../docs/Architecture.Components.Processor.StateMachine.document.md](../docs/Architecture.Components.Processor.StateMachine.document.md)  | 475|
-| [../docs/Architecture.Probes.Overview.document.md](../docs/Architecture.Probes.Overview.document.md)  | 1409|
+| [../docs/Architecture.Probes.Overview.document.md](../docs/Architecture.Probes.Overview.document.md)  | 1405|
 | [../docs/index.md](../docs/index.md)  | 362|
 | [../docs/Personas.Overview.document.md](../docs/Personas.Overview.document.md)  | 257|
 | [../docs/PositionPaper.DurableIds_StructuredPayloads.document.md](../docs/PositionPaper.DurableIds_StructuredPayloads.document.md)  | 1242|
