@@ -119,9 +119,17 @@ nav:
                         - Windows:
                             - ETW: ./docs/Architecture.Probe.ETW.document.md
             - Flight Recorders:
+                - Overview: ./docs/Architecture.FlightRecorder.Overview.document.md
                 - Data Types:
                         - Streaming: ./docs/Architecture.Components.Streaming.Observability.document.md
                         - File Based: ./docs/Architecture.Components.FileBased.Observability.document.md
+                - Trace Horizons:
+                    - Overview: ./docs/Architecture.FlightRecorder.TraceHorizons.document.md
+                    - Sample Horizons:
+                        - Short Horizons: ./docs/Architecture.FlightRecorder.ShortHorizons.document.md
+                        - Cubby Hole: ./docs/Architecture.FlightRecorder.CubbyHole.document.md
+                        - Long Horizons: ./docs/Architecture.FlightRecorder.LongHorizons.document.md
+
             - Actions:
                 - Overview: ./docs/Architecture.Action.Explanation.document.md
                 - Sample Actions:
