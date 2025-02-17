@@ -127,7 +127,7 @@ nav:
                     - Overview: ./docs/Architecture.FlightRecorder.TraceHorizons.document.md
                     - Sample Horizons:
                         - Short Horizons: ./docs/Architecture.FlightRecorder.ShortHorizons.document.md
-                        - Medium Horizons: ./docs/Architecture.FlightRecorder.MediumHorizons.document.md
+                        - Cubby Hole: ./docs/Architecture.FlightRecorder.CubbyHole.document.md
                         - Long Horizons: ./docs/Architecture.FlightRecorder.LongHorizons.document.md
 
             - Actions:
@@ -146,6 +146,8 @@ nav:
 
         - Software Components:
             - Overview: ./docs/Architecture.Components.Overview.document.md
+            - Filters and Routers: ./docs/Architecture.Components.FiltersAndRouters.document.md
+
             - Processors :
                 - Overview: ./docs/Architecture.Components.Processor.Overview.document.md
                 - Processor Types:
