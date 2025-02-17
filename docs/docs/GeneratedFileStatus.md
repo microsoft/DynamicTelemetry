@@ -2,10 +2,40 @@
 author: Generated File
 status: Level5
 ---
+## Level1b
+
+| File | Word Count |
+|------|------------|
+| [../docs/Applications.FlightRecorder.MemoryLeak.document.md](../docs/Applications.FlightRecorder.MemoryLeak.document.md)  | 211|
+| [../docs/Architecture.Action.Explanation.document.md](../docs/Architecture.Action.Explanation.document.md)  | 124|
+| [../docs/Architecture.Components.FiltersAndRouters.document.md](../docs/Architecture.Components.FiltersAndRouters.document.md)  | 44|
+| [../docs/Architecture.Components.Observer.InProcess.document.md](../docs/Architecture.Components.Observer.InProcess.document.md)  | 53|
+| [../docs/Architecture.Components.Observer.Kernel.document.md](../docs/Architecture.Components.Observer.Kernel.document.md)  | 68|
+| [../docs/Architecture.Components.Streaming.Observability.document.md](../docs/Architecture.Components.Streaming.Observability.document.md)  | 59|
+| [../docs/Architecture.FlightRecorder.Overview.document.md](../docs/Architecture.FlightRecorder.Overview.document.md)  | 811|
+| [../docs/Architecture.FlightRecorder.ShortHorizons.document.md](../docs/Architecture.FlightRecorder.ShortHorizons.document.md)  | 587|
+| [../docs/Architecture.KeyConstructs.Overview.document.md](../docs/Architecture.KeyConstructs.Overview.document.md)  | 174|
+| [../docs/Architecture.Overview.document.md](../docs/Architecture.Overview.document.md)  | 210|
+| [../docs/PositionPaper.DeliveryGuarantees.document.md](../docs/PositionPaper.DeliveryGuarantees.document.md)  | 163|
+| [../docs/PositionPaper.DynamicTelemetryTenets.document.md](../docs/PositionPaper.DynamicTelemetryTenets.document.md)  | 67|
+| [../docs/PositionPaper.FileAndStreaming.document.md](../docs/PositionPaper.FileAndStreaming.document.md)  | 227|
+| [../docs/PositionPaper.SharingDataAmongStakeHoldersIsHard.document.md](../docs/PositionPaper.SharingDataAmongStakeHoldersIsHard.document.md)  | 171|
+| [../docs/PositionPaper.TelemetryUmbilical.document.md](../docs/PositionPaper.TelemetryUmbilical.document.md)  | 95|
+| [../docs/Scenarios.Overview.CostReduction.document.md](../docs/Scenarios.Overview.CostReduction.document.md)  | 1368|
+| [../docs/Scenarios.Overview.DeepDiagnostics.document.md](../docs/Scenarios.Overview.DeepDiagnostics.document.md)  | 577|
+| [../docs/Scenarios.Overview.document.md](../docs/Scenarios.Overview.document.md)  | 180|
+| [../docs/Scenarios.Overview.DurableDashboards.Alerts.document.md](../docs/Scenarios.Overview.DurableDashboards.Alerts.document.md)  | 552|
+| [../docs/Scenarios.Overview.RedactingSecrets.document.md](../docs/Scenarios.Overview.RedactingSecrets.document.md)  | 996|
+| [../docs/Scenarios.Overview.Reliability.document.md](../docs/Scenarios.Overview.Reliability.document.md)  | 2310|
+
+
 ## Level1
 
 | File | Word Count |
 |------|------------|
+| [../docs/Applications.FlightRecorder.PriorToCrash.document.md](../docs/Applications.FlightRecorder.PriorToCrash.document.md)  | 252|
+| [../docs/Applications.InterestingApplications.document.md](../docs/Applications.InterestingApplications.document.md)  | 10|
+| [../docs/Applications.Overview.InterestingApplications.document.md](../docs/Applications.Overview.InterestingApplications.document.md)  | 7|
 | [../docs/Architecture.Action.ConfigCollection.document.md](../docs/Architecture.Action.ConfigCollection.document.md)  | 10|
 | [../docs/Architecture.Action.CPUSample.document.md](../docs/Architecture.Action.CPUSample.document.md)  | 10|
 | [../docs/Architecture.Action.FileCollection.document.md](../docs/Architecture.Action.FileCollection.document.md)  | 10|
@@ -26,11 +56,9 @@ status: Level5
 | [../docs/Architecture.DesignPatterns.Toggles.document.md](../docs/Architecture.DesignPatterns.Toggles.document.md)  | 10|
 | [../docs/Architecture.DesignPatterns.Triggers.document.md](../docs/Architecture.DesignPatterns.Triggers.document.md)  | 10|
 | [../docs/Architecture.DesignPatterns.Valves.document.md](../docs/Architecture.DesignPatterns.Valves.document.md)  | 10|
+| [../docs/Architecture.FlightRecorder.CubbyHole.document.md](../docs/Architecture.FlightRecorder.CubbyHole.document.md)  | 7|
 | [../docs/Architecture.FlightRecorder.LongHorizons.document.md](../docs/Architecture.FlightRecorder.LongHorizons.document.md)  | 7|
-| [../docs/Architecture.FlightRecorder.MediumHorizons.document.md](../docs/Architecture.FlightRecorder.MediumHorizons.document.md)  | 7|
-| [../docs/Architecture.FlightRecorder.Overview.document.md](../docs/Architecture.FlightRecorder.Overview.document.md)  | 21|
-| [../docs/Architecture.FlightRecorder.ShortHorizons.document.md](../docs/Architecture.FlightRecorder.ShortHorizons.document.md)  | 7|
-| [../docs/Architecture.FlightRecorder.TraceHorizons.document.md](../docs/Architecture.FlightRecorder.TraceHorizons.document.md)  | 7|
+| [../docs/Architecture.FlightRecorder.TraceHorizons.document.md](../docs/Architecture.FlightRecorder.TraceHorizons.document.md)  | 10|
 | [../docs/Architecture.Probe.Breakpoint.document.md](../docs/Architecture.Probe.Breakpoint.document.md)  | 97|
 | [../docs/Architecture.Probe.DTrace.document.md](../docs/Architecture.Probe.DTrace.document.md)  | 18|
 | [../docs/Architecture.Probe.eBPF.document.md](../docs/Architecture.Probe.eBPF.document.md)  | 13|
@@ -86,29 +114,6 @@ status: Level5
 | [../docs/Scenarios.ExtractingMemoryWithUProbe.document.md](../docs/Scenarios.ExtractingMemoryWithUProbe.document.md)  | 15|
 | [../docs/Scenarios.MemoryLeak.document.md](../docs/Scenarios.MemoryLeak.document.md)  | 17|
 | [../docs/Slides.Overview.Presentation.md](../docs/Slides.Overview.Presentation.md)  | 378|
-
-
-## Level1b
-
-| File | Word Count |
-|------|------------|
-| [../docs/Architecture.Action.Explanation.document.md](../docs/Architecture.Action.Explanation.document.md)  | 124|
-| [../docs/Architecture.Components.Observer.InProcess.document.md](../docs/Architecture.Components.Observer.InProcess.document.md)  | 53|
-| [../docs/Architecture.Components.Observer.Kernel.document.md](../docs/Architecture.Components.Observer.Kernel.document.md)  | 68|
-| [../docs/Architecture.Components.Streaming.Observability.document.md](../docs/Architecture.Components.Streaming.Observability.document.md)  | 59|
-| [../docs/Architecture.KeyConstructs.Overview.document.md](../docs/Architecture.KeyConstructs.Overview.document.md)  | 174|
-| [../docs/Architecture.Overview.document.md](../docs/Architecture.Overview.document.md)  | 210|
-| [../docs/PositionPaper.DeliveryGuarantees.document.md](../docs/PositionPaper.DeliveryGuarantees.document.md)  | 163|
-| [../docs/PositionPaper.DynamicTelemetryTenets.document.md](../docs/PositionPaper.DynamicTelemetryTenets.document.md)  | 67|
-| [../docs/PositionPaper.FileAndStreaming.document.md](../docs/PositionPaper.FileAndStreaming.document.md)  | 227|
-| [../docs/PositionPaper.SharingDataAmongStakeHoldersIsHard.document.md](../docs/PositionPaper.SharingDataAmongStakeHoldersIsHard.document.md)  | 171|
-| [../docs/PositionPaper.TelemetryUmbilical.document.md](../docs/PositionPaper.TelemetryUmbilical.document.md)  | 95|
-| [../docs/Scenarios.Overview.CostReduction.document.md](../docs/Scenarios.Overview.CostReduction.document.md)  | 1368|
-| [../docs/Scenarios.Overview.DeepDiagnostics.document.md](../docs/Scenarios.Overview.DeepDiagnostics.document.md)  | 577|
-| [../docs/Scenarios.Overview.document.md](../docs/Scenarios.Overview.document.md)  | 180|
-| [../docs/Scenarios.Overview.DurableDashboards.Alerts.document.md](../docs/Scenarios.Overview.DurableDashboards.Alerts.document.md)  | 552|
-| [../docs/Scenarios.Overview.RedactingSecrets.document.md](../docs/Scenarios.Overview.RedactingSecrets.document.md)  | 996|
-| [../docs/Scenarios.Overview.Reliability.document.md](../docs/Scenarios.Overview.Reliability.document.md)  | 2310|
 
 
 ## Level2

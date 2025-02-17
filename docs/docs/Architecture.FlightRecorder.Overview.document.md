@@ -5,6 +5,8 @@ status: ReviewLevel1b
 
 # Flight Recorder Overview
 
+![](../orig_media/FlightRecorders.banner.png/)
+
 A Flight Recorder is an alternative and compliment to standard
 [Streaming](./PositionPaper.FileAndStreaming.document.md) Observability.
 

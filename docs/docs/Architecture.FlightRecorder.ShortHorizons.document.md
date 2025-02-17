@@ -9,7 +9,7 @@ Short Horizon Flight Recorder is a focused logging strategy designed to capture 
 over a long time span, it employs broad and loosely filtered logs to collect as much
 logging as possible For several minutes leading into a problem. . Its approach emphasizes gathering as much telmeetyr as possible, for a few minutes prior to a failure - which can be particularly useful when probing difficult-to-reproduce bugs.
 
-By capturing high-volume telemetry right before events like crashes or lockups, the Short Horizon recorder streamlines failure analysis. It empowers engineering teams to isolate race conditions, examine deadlocks, or retrieve critical logs without excessive overhead or wasted storage. This targeted method contrasts with “Long Horizons,” which rely on more extended data retention  (with less telemetry volume), for root cause analysis.
+By capturing high-volume telemetry right before events like crashes or lockups, the Short Horizon recorder streamlines failure analysis. It empowers engineering teams to isolate race conditions, examine deadlocks, or retrieve critical logs without excessive overhead or wasted storage. This targeted method contrasts with "Long Horizons" which rely on more extended data retention  (with less telemetry volume), for root cause analysis.
 
 Adopting a Short Horizon approach offers operational benefits and an extra layer of confidence.
 
