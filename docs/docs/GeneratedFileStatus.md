@@ -39,7 +39,7 @@ status: Level5
 | [../docs/Architecture.Action.ConfigCollection.document.md](../docs/Architecture.Action.ConfigCollection.document.md)  | 10|
 | [../docs/Architecture.Action.CPUSample.document.md](../docs/Architecture.Action.CPUSample.document.md)  | 10|
 | [../docs/Architecture.Action.FileCollection.document.md](../docs/Architecture.Action.FileCollection.document.md)  | 10|
-| [../docs/Architecture.Action.FlightRecorder.document.md](../docs/Architecture.Action.FlightRecorder.document.md)  | 10|
+| [../docs/Architecture.Action.FlightRecorder.document.md](../docs/Architecture.Action.FlightRecorder.document.md)  | 33|
 | [../docs/Architecture.Action.MemoryDump.document.md](../docs/Architecture.Action.MemoryDump.document.md)  | 10|
 | [../docs/Architecture.Action.PacketCapture.document.md](../docs/Architecture.Action.PacketCapture.document.md)  | 10|
 | [../docs/Architecture.Action.ProcessExecution.document.md](../docs/Architecture.Action.ProcessExecution.document.md)  | 10|
@@ -57,7 +57,7 @@ status: Level5
 | [../docs/Architecture.DesignPatterns.Triggers.document.md](../docs/Architecture.DesignPatterns.Triggers.document.md)  | 10|
 | [../docs/Architecture.DesignPatterns.Valves.document.md](../docs/Architecture.DesignPatterns.Valves.document.md)  | 10|
 | [../docs/Architecture.FlightRecorder.CubbyHole.document.md](../docs/Architecture.FlightRecorder.CubbyHole.document.md)  | 7|
-| [../docs/Architecture.FlightRecorder.LongHorizons.document.md](../docs/Architecture.FlightRecorder.LongHorizons.document.md)  | 7|
+| [../docs/Architecture.FlightRecorder.LongHorizons.document.md](../docs/Architecture.FlightRecorder.LongHorizons.document.md)  | 800|
 | [../docs/Architecture.FlightRecorder.TraceHorizons.document.md](../docs/Architecture.FlightRecorder.TraceHorizons.document.md)  | 10|
 | [../docs/Architecture.Probe.Breakpoint.document.md](../docs/Architecture.Probe.Breakpoint.document.md)  | 97|
 | [../docs/Architecture.Probe.DTrace.document.md](../docs/Architecture.Probe.DTrace.document.md)  | 18|
@@ -95,7 +95,7 @@ status: Level5
 | [../docs/PositionPaper.PositionPapers.Overview.document.md](../docs/PositionPaper.PositionPapers.Overview.document.md)  | 10|
 | [../docs/PositionPaper.ProbeRiskLevels.document.md](../docs/PositionPaper.ProbeRiskLevels.document.md)  | 55|
 | [../docs/PositionPaper.ProbeToHeader.document.md](../docs/PositionPaper.ProbeToHeader.document.md)  | 10|
-| [../docs/PositionPaper.ProceduralizeNets.document.md](../docs/PositionPaper.ProceduralizeNets.document.md)  | 7|
+| [../docs/PositionPaper.ProceduralizeNets.document.md](../docs/PositionPaper.ProceduralizeNets.document.md)  | 11|
 | [../docs/PositionPaper.ScarcityAndHumans.md](../docs/PositionPaper.ScarcityAndHumans.md)  | 10|
 | [../docs/PositionPaper.SelfDescribingProductionCode.document.md](../docs/PositionPaper.SelfDescribingProductionCode.document.md)  | 7|
 | [../docs/PositionPaper.TestingWithEntropy.document.md](../docs/PositionPaper.TestingWithEntropy.document.md)  | 7|
