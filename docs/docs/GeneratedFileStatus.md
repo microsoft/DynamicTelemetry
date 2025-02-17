@@ -12,6 +12,10 @@ status: Level5
 | [../docs/Architecture.Components.Observer.InProcess.document.md](../docs/Architecture.Components.Observer.InProcess.document.md)  | 53|
 | [../docs/Architecture.Components.Observer.Kernel.document.md](../docs/Architecture.Components.Observer.Kernel.document.md)  | 68|
 | [../docs/Architecture.Components.Streaming.Observability.document.md](../docs/Architecture.Components.Streaming.Observability.document.md)  | 59|
+| [../docs/Architecture.FlightRecorder.LongHorizons.document.md](../docs/Architecture.FlightRecorder.LongHorizons.document.md)  | 797|
+| [../docs/Architecture.FlightRecorder.Overview.document.md](../docs/Architecture.FlightRecorder.Overview.document.md)  | 811|
+| [../docs/Architecture.FlightRecorder.ShortHorizons.document.md](../docs/Architecture.FlightRecorder.ShortHorizons.document.md)  | 588|
+| [../docs/Architecture.FlightRecorder.TraceHorizons.document.md](../docs/Architecture.FlightRecorder.TraceHorizons.document.md)  | 365|
 | [../docs/Architecture.KeyConstructs.Overview.document.md](../docs/Architecture.KeyConstructs.Overview.document.md)  | 174|
 | [../docs/Architecture.Overview.document.md](../docs/Architecture.Overview.document.md)  | 210|
 | [../docs/PositionPaper.DeliveryGuarantees.document.md](../docs/PositionPaper.DeliveryGuarantees.document.md)  | 163|
@@ -54,6 +58,7 @@ status: Level5
 | [../docs/Architecture.DesignPatterns.Toggles.document.md](../docs/Architecture.DesignPatterns.Toggles.document.md)  | 10|
 | [../docs/Architecture.DesignPatterns.Triggers.document.md](../docs/Architecture.DesignPatterns.Triggers.document.md)  | 10|
 | [../docs/Architecture.DesignPatterns.Valves.document.md](../docs/Architecture.DesignPatterns.Valves.document.md)  | 10|
+| [../docs/Architecture.FlightRecorder.CubbyHole.document.md](../docs/Architecture.FlightRecorder.CubbyHole.document.md)  | 15|
 | [../docs/Architecture.Probe.Breakpoint.document.md](../docs/Architecture.Probe.Breakpoint.document.md)  | 97|
 | [../docs/Architecture.Probe.DTrace.document.md](../docs/Architecture.Probe.DTrace.document.md)  | 18|
 | [../docs/Architecture.Probe.eBPF.document.md](../docs/Architecture.Probe.eBPF.document.md)  | 13|
