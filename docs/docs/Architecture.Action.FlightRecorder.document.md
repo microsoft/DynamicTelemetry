@@ -7,5 +7,3 @@ status: ReviewLevel1
 
 1. Create a Flight Recorder, with an identifier
 1. Describe the Logs that should be recorded
-
-

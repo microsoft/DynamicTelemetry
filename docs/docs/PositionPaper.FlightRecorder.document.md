@@ -11,4 +11,4 @@ status: ReviewLevel1
 
 1. [File and Streaming](./PositionPaper.FileAndStreaming.document.md)
 
-2. [Telemetry Umbilical](./PositionPaper.TelemetryUmbilical.document.md)
+1. [Telemetry Umbilical](./PositionPaper.TelemetryUmbilical.document.md)

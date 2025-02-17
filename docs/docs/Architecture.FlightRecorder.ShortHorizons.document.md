@@ -9,7 +9,7 @@ Short Horizon Flight Recorder is a focused logging strategy designed to capture
 and preserve data within bound memory limits. Rather than collecting lengthy
 histories, over a long time span, it employs broad and loosely filtered logs to
 collect as much logging as possible For several minutes leading into a problem.
-. Its approach emphasizes gathering as much telmeetyr as possible, for a few
+. Its approach emphasizes gathering as much telemetry as possible, for a few
 minutes prior to a failure - which can be particularly useful when probing
 difficult-to-reproduce bugs.
 
