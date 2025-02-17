@@ -6,7 +6,7 @@ description : Demo Showing DurableID
 
 # Demo 0 - Durable ID's Explanation
 
-## Utilize the DurableID feature on OpenTelemetry, to locate the line of code responsible for the expense
+## Using DurableID in OpenTelemetry, to locate the source of the the expense
 
 Not all software using Open Telemetry will utilize a durable identifier, though
 it is considered best practice. A durable identifier functions like a GPS or
@@ -114,7 +114,7 @@ database and indexing efficiently.
 
 ##### Aggregating based on the EventName
 
-## Use Azure Monitor and KQL language to locate an unexpectedly expensive Open Telemetry log
+## Use Azure Monitor and KQL language to locate an expensive Open Telemetry log
 
 ![](../orig_media/Demo.1.DurableID.SummarizeContrast.png){width="5.5in"
 height="4.4303149606299215in"}
