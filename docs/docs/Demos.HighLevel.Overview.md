@@ -44,7 +44,7 @@ that is inserted into one of four architectural locations in your existing Open
 Telemetry pipeline.
 
 Each insertion point, also called a Processor, accepts configuration from a
-remote configuration deployment server, and intercepts all open telemetry logs
+remote configuration deployment server, and intercepts all OpenTelemetry logs
 metrics and traces that are being emitted and passed through that architectural
 point in the below diagram.
 
@@ -67,7 +67,7 @@ height="2.185044838145232in"}
 A
 [Dynamic Telemetry Processor](./Architecture.Components.Processor.Overview.document.md)
 is a software component that is dynamically configured and operates within the
-standard Open Telemetry OLTP pipeline. This processor is detailed further in the
+standard OpenTelemetry OLTP pipeline. This processor is detailed further in the
 processor section, but essentially, it is a software module that monitors all
 events passing through it and allows one of the Dynamic Telemetry personas to
 modify the telemetry being transmitted.
@@ -114,7 +114,7 @@ height="2.185044838145232in"}
 ### Capabilities of Dynamic Telemetry
 
 With a basic understanding of where architecturally Dynamic Telemetry can be
-inserted into the Open Telemetry pipeline it's important to understand the types
+inserted into the OpenTelemetry pipeline it's important to understand the types
 of operations that Dynamic Telemetry can offer.
 
 1. Dropping Logs or Metrics

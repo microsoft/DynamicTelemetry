@@ -9,6 +9,6 @@ status: ReviewLevel1
 
 ## Introduction
 
-## STREAMING Telemetry (Open Telemetry)
+## STREAMING Telemetry (OpenTelemetry)
 
 ## FILE_BASED

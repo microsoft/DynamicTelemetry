@@ -54,7 +54,7 @@ ______________________________________________________________________
 
 ## Our Opportunity
 
-- Organize API's; Language, OS under Open Telemetry
+- Organize API's; Language, OS under OpenTelemetry
 - Tackle the connections under 'Dynamic Telemetry'; using Scenarios as golden
   paths
 

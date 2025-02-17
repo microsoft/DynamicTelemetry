@@ -13,4 +13,4 @@ ability to drop and modify telemetry data. This is done with the scope of the
 entire user mode of the machine.
 
 This is an
-[excellent location for flight recorders.](./PositionPaper.FlightRecorder.document.md)
+[excellent location for Flight Recorders.](./PositionPaper.FlightRecorder.document.md)

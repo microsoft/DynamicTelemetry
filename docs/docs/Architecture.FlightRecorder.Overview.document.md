@@ -76,7 +76,7 @@ they might not be retained long-term.
 This solution can provide both performance benefits and cost savings. To learn
 more, refer to the position papers on
 [scarcity](./PositionPaper.ScarcityAndHumans.md) and
-[triggered flight recorders](./PositionPaper.TriggeredFlightRecorder.document.md).
+[triggered Flight Recorders](./PositionPaper.TriggeredFlightRecorder.document.md).
 
 The basic steps to collect a Flight Recorder are to know through some mechanism
 its identifier and then to use a triggering action to collect it.
@@ -99,7 +99,7 @@ overwrite older data frequently. This arrangement is commonly referred to as a
 In contrast, some logging applies only to specific failures that may take
 minutes or days to occur. Examples include Bluetooth sessions on a client
 operating system, long-running transactions, or writing data to a slow medium
-like tape. These scenarios require maintaining a flight recorder over an
+like tape. These scenarios require maintaining a Flight Recorder over an
 extended period, ensuring that all pertinent logs remain accessible when needed.
 
 These lower volume but long duration Flight Recorders are known as long-horizon
@@ -131,4 +131,4 @@ start="## Scenario Summary", end="## Scenario Expansion" %}
 
 1. [Scarcity and Humans](./PositionPaper.ScarcityAndHumans.md)
 
-1. [triggered flight recorders](./PositionPaper.TriggeredFlightRecorder.document.md).
+1. [triggered Flight Recorders](./PositionPaper.TriggeredFlightRecorder.document.md).

@@ -30,7 +30,7 @@ In short this demo will
 
 ![type:video](../orig_media/DynamicTelemetry_CostSavings.mp4)
 
-## Use Azure Monitor and KQL language to locate an expensive Open Telemetry log
+## Use Azure Monitor and KQL language to locate an expensive OpenTelemetry log
 
 By using the query below in Application Insights, we can utilize the Durable
 Identifier found in our logs to pinpoint specific log messages or identify any

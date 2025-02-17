@@ -7,7 +7,7 @@ status: ReviewLevel1b
 
 ![](../orig_media/LongHorizon.banner.png)
 
-A Long Horizon Flight Recorder is a specialized type of flight recorder designed
+A Long Horizon Flight Recorder is a specialized type of Flight Recorder designed
 to study long-running issues that are typically very difficult to understand and
 capture. For example, imagine a long-running asynchronous operation that takes
 hours or days to complete, such as writing the entirety of a large tape or
@@ -23,7 +23,7 @@ transaction, but only collect / harvest this logging should that transaction
 fail.
 
 Using a combination of [Probes](./Architecture.Probes.Overview.document.md) that
-log into a Long Horizon flight recorder and
+log into a Long Horizon Flight Recorder and
 [Actions](./Architecture.Action.Explanation.document.md) that initiate the
 egress of that recorder upon transaction failure, very interesting and novel
 diagnostic situations can often be created.
@@ -34,9 +34,9 @@ only what is too big to fit through the net (e.g., the action).
 
 ## Criteria (and differentiators from 'Long Horizons')
 
-Just like a Short Horizon Flight Recorder. Or really any flight recorder.
+Just like a Short Horizon Flight Recorder. Or really any Flight Recorder.
 There's no preset criteria to differentiate them. The primary purpose in having
-a long and a short horizon flight recorder is to initiate a conversation about
+a long and a short horizon Flight Recorder is to initiate a conversation about
 how this recorder will be used in practice.
 
 Typically a Long Horizon Flight Recorder will Have
@@ -48,24 +48,24 @@ Typically a Long Horizon Flight Recorder will Have
 
 A keen observer may realize that the value proposition of a Long Horizon flight
 recorder in a cloud system may not be very significant. This is true because a
-Long Horizon flight recorder has a very restrictive filter on the logs that are
-placed into the flight recorder. By design, the flight recorder will not be very
+Long Horizon Flight Recorder has a very restrictive filter on the logs that are
+placed into the Flight Recorder. By design, the Flight Recorder will not be very
 chatty and therefore may be suitable for immediate streaming using standard
 stream-based telemetry.
 
-Without question, a Long Horizon flight recorder is not something every engineer
+Without question, a Long Horizon Flight Recorder is not something every engineer
 utilizes in their day-to-day work. It is a specialized tool designed for
 specific scenarios where long-running processes need detailed logging and
 diagnostics. Its use is typically reserved for complex systems where
 understanding and troubleshooting extended operations is crucial.
 
-However, this does not mean that a Long Horizon flight recorder is of no value.
+However, this does not mean that a Long Horizon Flight Recorder is of no value.
 There are some situations where it can be beneficial:
 
-1. When a Long Horizon flight recorder is dynamically
+1. When a Long Horizon Flight Recorder is dynamically
    [created and triggered](./Architecture.Action.FlightRecorder.document.md)
    based on the starting and stopping of a transaction. In this case, there are
-   many Long Horizon flight recorders, and the sum of all would be prohibitive
+   many Long Horizon Flight Recorders, and the sum of all would be prohibitive
    to emit.
 1. In an operating system, where it is considered best practice to emit very
    little telemetry that is not of a diagnostic nature.

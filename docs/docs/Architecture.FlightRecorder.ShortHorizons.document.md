@@ -26,7 +26,7 @@ Adopting a Short Horizon approach offers operational benefits and an extra layer
 of confidence.
 
 A well-implemented Short Horizon Flight Recorder can be thought of as a vault or
-an airplane's flight recorder, capturing all problems regardless of the
+an airplane's Flight Recorder, capturing all problems regardless of the
 situation.
 
 When used this way, the Short Horizon Flight Recorder becomes the developer's

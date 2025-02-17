@@ -8,12 +8,12 @@ description : Demo Showing DurableID
 
 ## Using DurableID in OpenTelemetry, to locate the source of the the expense
 
-Not all software using Open Telemetry will utilize a durable identifier, though
+Not all software using OpenTelemetry will utilize a durable identifier, though
 it is considered best practice. A durable identifier functions like a GPS or
 homing beacon, mapping any row of telemetry to a specific line of code.
 
 In microsoft.net platform the durable identifier is created automatically at
-compile time for Open Telemetry assuming the author of the software follows best
+compile time for OpenTelemetry assuming the author of the software follows best
 practices.
 
 ### Contrasting C# that makes use of Durable ID's, with C# that does not
@@ -114,7 +114,7 @@ database and indexing efficiently.
 
 ##### Aggregating based on the EventName
 
-## Use Azure Monitor and KQL language to locate an expensive Open Telemetry log
+## Use Azure Monitor and KQL language to locate an expensive OpenTelemetry log
 
 ![](../orig_media/Demo.1.DurableID.SummarizeContrast.png){width="5.5in"
 height="4.4303149606299215in"}

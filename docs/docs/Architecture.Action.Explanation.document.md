@@ -19,4 +19,4 @@ performance but doesn't intentionally modify system state.
 
 The following sections will discuss sample actions within the scope of Dynamic
 Telemetry, such as collecting configurations, enabling CPU sampling, managing
-flight recorders, inducing memory dumps, and collecting other state types.
+Flight Recorders, inducing memory dumps, and collecting other state types.

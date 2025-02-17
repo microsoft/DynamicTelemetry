@@ -47,7 +47,7 @@ information when activated. However, they carry a higher risk as they might
 alter the system, such as with EBPF, uProbes, kProbes, or DTrace..
 
 DynamicTelemetry facilitates the dynamic and rapid activation of probes to
-collect data and integrate it into your existing Open Telemetry workflows. This
+collect data and integrate it into your existing OpenTelemetry workflows. This
 functionality is particularly beneficial in production systems where a probe may
 need to be deactivated after use or should a performance issue be detected.
 
@@ -104,14 +104,14 @@ process is quick and efficient, allowing users to gather valuable data on-demand
 without any significant impact on system performance.
 
 Once a probe is enabled, it begins to emit data that is then egressed into the
-Open Telemetry workflows. For instance, a user could turn on a uprobe to monitor
+OpenTelemetry workflows. For instance, a user could turn on a uprobe to monitor
 the return value for a particular function. This data is then sent to Open
 Telemetry for further processing and analysis.
 
 The role of DynamicTelemetry in this process is to facilitate the dynamic
 enabling of probes and the initial extraction of data. Once the data is emitted
-to Open Telemetry, DynamicTelemetry's role ends. The data is then handled by the
-standard egressing mechanisms of Open Telemetry, which could involve various
+to OpenTelemetry, DynamicTelemetry's role ends. The data is then handled by the
+standard egressing mechanisms of OpenTelemetry, which could involve various
 processes such as aggregation, counting, or direct emission as a log.
 
 This dynamic and on-demand use of probes makes DynamicTelemetry a powerful tool

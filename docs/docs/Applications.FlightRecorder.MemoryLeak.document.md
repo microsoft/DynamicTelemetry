@@ -13,7 +13,7 @@ memory and doesn't shrink as it should. While some may argue whether this
 constitutes a memory leak, the system inevitably starts to slow down and thrash
 as memory pressure exceeds the hardware's capabilities.
 
-A powerful use of a flight recorder is to track the insertion or deletion from
+A powerful use of a Flight Recorder is to track the insertion or deletion from
 such a list, or the add reference and release, or malloc() and free() operations
 in unmanaged languages.
 
@@ -21,7 +21,7 @@ This is achieved either through standard logging or by inserting a dynamic probe
 on the malloc() and free() calls.
 
 By using a probe that indicates the amount of memory load on a machine, coupled
-with an action to collect this type of memory flight recorder, a developer can
+with an action to collect this type of memory Flight Recorder, a developer can
 obtain a high-fidelity glimpse into the machine's memory usage over a long
 duration without negatively impacting performance.
 
