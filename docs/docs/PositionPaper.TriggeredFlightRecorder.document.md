@@ -1,5 +1,6 @@
-______________________________________________________________________
+---
+author: "Chris Gray"
+status: ReviewLevel1
+---
 
-## author: "Chris Gray" status: ReviewLevel1
-
-# Coming Soon
+# Triggered Flight Recorder - Coming Soon

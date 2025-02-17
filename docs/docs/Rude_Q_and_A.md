@@ -68,13 +68,13 @@ previously suppressed or set at a lower capture level.
 
 This section covers those topics.
 
-### Q2: Can memory extraction probes be used by an adversary to extract memory and compromise security?
+### Q2: Can memory extraction probes be used by an adversary to extract memory?
 
 #### A2: Potentially. Care must be taken
 
 A memory extraction probe is one of the more flexible and useful tools in
-Dynamic Telemetry. Built upon technologies such as DTrace, Ptrace, Uprobes, and
-Kprobes, it allows for detailed memory analysis. However, if an adversary
+Dynamic Telemetry. Built upon technologies such as DTrace, Ptrace, uprobes, and
+kprobes, it allows for detailed memory analysis. However, if an adversary
 compromises the deployment of Dynamic Telemetry configuration, they may be able
 to extract memory, potentially leading to a system compromise.
 
