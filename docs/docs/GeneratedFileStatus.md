@@ -17,6 +17,7 @@ status: Level5
 | [../docs/Architecture.FlightRecorder.Overview.document.md](../docs/Architecture.FlightRecorder.Overview.document.md)  | 811|
 | [../docs/Architecture.FlightRecorder.ShortHorizons.document.md](../docs/Architecture.FlightRecorder.ShortHorizons.document.md)  | 588|
 | [../docs/Architecture.FlightRecorder.TraceHorizons.document.md](../docs/Architecture.FlightRecorder.TraceHorizons.document.md)  | 365|
+| [../docs/Architecture.KeyConstructs.Overview.document.md](../docs/Architecture.KeyConstructs.Overview.document.md)  | 440|
 | [../docs/Architecture.Overview.document.md](../docs/Architecture.Overview.document.md)  | 210|
 | [../docs/Demos.1.DropChattyLog.md](../docs/Demos.1.DropChattyLog.md)  | 1103|
 | [../docs/Demos.2_DynamicProbe.md](../docs/Demos.2_DynamicProbe.md)  | 277|
@@ -41,7 +42,6 @@ status: Level5
 
 | File | Word Count |
 |------|------------|
-| [../docs/Applications.FlightRecorder.PriorToCrash.document.md](../docs/Applications.FlightRecorder.PriorToCrash.document.md)  | 252|
 | [../docs/Applications.InterestingApplications.document.md](../docs/Applications.InterestingApplications.document.md)  | 10|
 | [../docs/Applications.Overview.InterestingApplications.document.md](../docs/Applications.Overview.InterestingApplications.document.md)  | 7|
 | [../docs/Architecture.Action.ConfigCollection.document.md](../docs/Architecture.Action.ConfigCollection.document.md)  | 10|
@@ -75,8 +75,6 @@ status: Level5
 | [../docs/Architecture.Probe.user_events.document.md](../docs/Architecture.Probe.user_events.document.md)  | 13|
 | [../docs/Definitions.document.md](../docs/Definitions.document.md)  | 161|
 | [../docs/Demos.0.DynamicID.md](../docs/Demos.0.DynamicID.md)  | 722|
-| [../docs/Demos.1.DropChattyLog.md](../docs/Demos.1.DropChattyLog.md)  | 1108|
-| [../docs/Demos.4.AddTelemetryDemo.md](../docs/Demos.4.AddTelemetryDemo.md)  | 1089|
 | [../docs/Persona_DataAnalysis.document.md](../docs/Persona_DataAnalysis.document.md)  | 122|
 | [../docs/Persona_Developer.document.md](../docs/Persona_Developer.document.md)  | 183|
 | [../docs/Persona_DevOps.document.md](../docs/Persona_DevOps.document.md)  | 110|
@@ -95,7 +93,6 @@ status: Level5
 | [../docs/PositionPaper.GuideToLogVerbosity.document.md](../docs/PositionPaper.GuideToLogVerbosity.document.md)  | 33|
 | [../docs/PositionPaper.InternalAuditsOfProductionCode.document.md](../docs/PositionPaper.InternalAuditsOfProductionCode.document.md)  | 7|
 | [../docs/PositionPaper.LeafLevelLogging.document.md](../docs/PositionPaper.LeafLevelLogging.document.md)  | 22|
-| [../docs/PositionPaper.ObserverEffect.document.md](../docs/PositionPaper.ObserverEffect.document.md)  | 733|
 | [../docs/PositionPaper.PositionPapers.Overview.document.md](../docs/PositionPaper.PositionPapers.Overview.document.md)  | 10|
 | [../docs/PositionPaper.ProbeRiskLevels.document.md](../docs/PositionPaper.ProbeRiskLevels.document.md)  | 55|
 | [../docs/PositionPaper.ProbeToHeader.document.md](../docs/PositionPaper.ProbeToHeader.document.md)  | 10|
@@ -109,7 +106,6 @@ status: Level5
 | [../docs/PositionPaper.TriggeredMemoryDump.document.md](../docs/PositionPaper.TriggeredMemoryDump.document.md)  | 10|
 | [../docs/PositionPaper.WhereToSuppressInProc.document.md](../docs/PositionPaper.WhereToSuppressInProc.document.md)  | 10|
 | [../docs/ReviewProcess.document.md](../docs/ReviewProcess.document.md)  | 98|
-| [../docs/Rude_Q_and_A.md](../docs/Rude_Q_and_A.md)  | 747|
 | [../docs/Scenarios.ChangingEnvironments.document.md](../docs/Scenarios.ChangingEnvironments.document.md)  | 23|
 | [../docs/Scenarios.ConvertLogsToMetrics.document.md](../docs/Scenarios.ConvertLogsToMetrics.document.md)  | 10|
 | [../docs/Scenarios.EventAggregation.document.md](../docs/Scenarios.EventAggregation.document.md)  | 37|

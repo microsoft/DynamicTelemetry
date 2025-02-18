@@ -123,12 +123,12 @@ nav:
                 - Data Types:
                         - Streaming: ./docs/Architecture.Components.Streaming.Observability.document.md
                         - File Based: ./docs/Architecture.Components.FileBased.Observability.document.md
-                    - PacketCapture: ./docs/Architecture.Action.PacketCapture.document.md
-                    - ConfigCollection: ./docs/Architecture.Action.ConfigCollection.document.md
-                    - CPUSample: ./docs/Architecture.Action.CPUSample.document.md
-                    - FileCollection: ./docs/Architecture.Action.FileCollection.document.md
-                    - ProcessExecution: ./docs/Architecture.Action.ProcessExecution.document.md
-                    - StateCollection: ./docs/Architecture.Action.StateCollection.document.md
+                - Trace Horizons:
+                    - Overview: ./docs/Architecture.FlightRecorder.TraceHorizons.document.md
+                    - Sample Horizons:
+                        - Short Horizons: ./docs/Architecture.FlightRecorder.ShortHorizons.document.md
+                        - Cubby Hole: ./docs/Architecture.FlightRecorder.CubbyHole.document.md
+                        - Long Horizons: ./docs/Architecture.FlightRecorder.LongHorizons.document.md
 
             - Actions:
                 - Overview: ./docs/Architecture.Action.Explanation.document.md
