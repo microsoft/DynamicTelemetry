@@ -67,6 +67,6 @@ memory dump or starting a CPU sample. This actor would be called an Action.
 By configuring a Filter to detect memory management logs, you can then direct
 those logs to a specialized Flight Recorder Action built for diagnosing memory
 leaks. This Flight Recorder can capture snapshots of heap usage or detailed
-allocation patterns whenever the filter’s trigger conditions are met, enabling
-quick identification of problematic regions within the application’s memory
+allocation patterns whenever the filter's trigger conditions are met, enabling
+quick identification of problematic regions within the application's memory
 footprint without continuously running resource-intensive diagnostics.

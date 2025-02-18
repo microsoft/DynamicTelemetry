@@ -7,6 +7,7 @@ status: Level5
 | File | Word Count |
 |------|------------|
 | [../docs/Applications.FlightRecorder.MemoryLeak.document.md](../docs/Applications.FlightRecorder.MemoryLeak.document.md)  | 211|
+| [../docs/Applications.FlightRecorder.PriorToCrash.document.md](../docs/Applications.FlightRecorder.PriorToCrash.document.md)  | 252|
 | [../docs/Architecture.Action.Explanation.document.md](../docs/Architecture.Action.Explanation.document.md)  | 124|
 | [../docs/Architecture.Components.FiltersAndRouters.document.md](../docs/Architecture.Components.FiltersAndRouters.document.md)  | 44|
 | [../docs/Architecture.Components.Observer.InProcess.document.md](../docs/Architecture.Components.Observer.InProcess.document.md)  | 53|
@@ -16,13 +17,19 @@ status: Level5
 | [../docs/Architecture.FlightRecorder.Overview.document.md](../docs/Architecture.FlightRecorder.Overview.document.md)  | 811|
 | [../docs/Architecture.FlightRecorder.ShortHorizons.document.md](../docs/Architecture.FlightRecorder.ShortHorizons.document.md)  | 588|
 | [../docs/Architecture.FlightRecorder.TraceHorizons.document.md](../docs/Architecture.FlightRecorder.TraceHorizons.document.md)  | 365|
-| [../docs/Architecture.KeyConstructs.Overview.document.md](../docs/Architecture.KeyConstructs.Overview.document.md)  | 439|
+| [../docs/Architecture.KeyConstructs.Overview.document.md](../docs/Architecture.KeyConstructs.Overview.document.md)  | 440|
 | [../docs/Architecture.Overview.document.md](../docs/Architecture.Overview.document.md)  | 210|
+| [../docs/Demos.1.DropChattyLog.md](../docs/Demos.1.DropChattyLog.md)  | 1103|
+| [../docs/Demos.2_DynamicProbe.md](../docs/Demos.2_DynamicProbe.md)  | 277|
+| [../docs/Demos.4.AddTelemetryDemo.md](../docs/Demos.4.AddTelemetryDemo.md)  | 1078|
+| [../docs/Demos.HighLevel.Overview.md](../docs/Demos.HighLevel.Overview.md)  | 1187|
 | [../docs/PositionPaper.DeliveryGuarantees.document.md](../docs/PositionPaper.DeliveryGuarantees.document.md)  | 163|
 | [../docs/PositionPaper.DynamicTelemetryTenets.document.md](../docs/PositionPaper.DynamicTelemetryTenets.document.md)  | 67|
 | [../docs/PositionPaper.FileAndStreaming.document.md](../docs/PositionPaper.FileAndStreaming.document.md)  | 227|
+| [../docs/PositionPaper.ObserverEffect.document.md](../docs/PositionPaper.ObserverEffect.document.md)  | 728|
 | [../docs/PositionPaper.SharingDataAmongStakeHoldersIsHard.document.md](../docs/PositionPaper.SharingDataAmongStakeHoldersIsHard.document.md)  | 171|
 | [../docs/PositionPaper.TelemetryUmbilical.document.md](../docs/PositionPaper.TelemetryUmbilical.document.md)  | 95|
+| [../docs/Rude_Q_and_A.md](../docs/Rude_Q_and_A.md)  | 748|
 | [../docs/Scenarios.Overview.CostReduction.document.md](../docs/Scenarios.Overview.CostReduction.document.md)  | 1368|
 | [../docs/Scenarios.Overview.DeepDiagnostics.document.md](../docs/Scenarios.Overview.DeepDiagnostics.document.md)  | 577|
 | [../docs/Scenarios.Overview.document.md](../docs/Scenarios.Overview.document.md)  | 180|
@@ -35,7 +42,6 @@ status: Level5
 
 | File | Word Count |
 |------|------------|
-| [../docs/Applications.FlightRecorder.PriorToCrash.document.md](../docs/Applications.FlightRecorder.PriorToCrash.document.md)  | 252|
 | [../docs/Applications.InterestingApplications.document.md](../docs/Applications.InterestingApplications.document.md)  | 10|
 | [../docs/Applications.Overview.InterestingApplications.document.md](../docs/Applications.Overview.InterestingApplications.document.md)  | 7|
 | [../docs/Architecture.Action.ConfigCollection.document.md](../docs/Architecture.Action.ConfigCollection.document.md)  | 10|
@@ -69,10 +75,6 @@ status: Level5
 | [../docs/Architecture.Probe.user_events.document.md](../docs/Architecture.Probe.user_events.document.md)  | 13|
 | [../docs/Definitions.document.md](../docs/Definitions.document.md)  | 161|
 | [../docs/Demos.0.DynamicID.md](../docs/Demos.0.DynamicID.md)  | 722|
-| [../docs/Demos.1.DropChattyLog.md](../docs/Demos.1.DropChattyLog.md)  | 1103|
-| [../docs/Demos.2_DynamicProbe.md](../docs/Demos.2_DynamicProbe.md)  | 277|
-| [../docs/Demos.4.AddTelemetryDemo.md](../docs/Demos.4.AddTelemetryDemo.md)  | 1078|
-| [../docs/Demos.HighLevel.Overview.md](../docs/Demos.HighLevel.Overview.md)  | 1187|
 | [../docs/Persona_DataAnalysis.document.md](../docs/Persona_DataAnalysis.document.md)  | 122|
 | [../docs/Persona_Developer.document.md](../docs/Persona_Developer.document.md)  | 183|
 | [../docs/Persona_DevOps.document.md](../docs/Persona_DevOps.document.md)  | 110|
@@ -91,7 +93,6 @@ status: Level5
 | [../docs/PositionPaper.GuideToLogVerbosity.document.md](../docs/PositionPaper.GuideToLogVerbosity.document.md)  | 33|
 | [../docs/PositionPaper.InternalAuditsOfProductionCode.document.md](../docs/PositionPaper.InternalAuditsOfProductionCode.document.md)  | 7|
 | [../docs/PositionPaper.LeafLevelLogging.document.md](../docs/PositionPaper.LeafLevelLogging.document.md)  | 22|
-| [../docs/PositionPaper.ObserverEffect.document.md](../docs/PositionPaper.ObserverEffect.document.md)  | 728|
 | [../docs/PositionPaper.PositionPapers.Overview.document.md](../docs/PositionPaper.PositionPapers.Overview.document.md)  | 10|
 | [../docs/PositionPaper.ProbeRiskLevels.document.md](../docs/PositionPaper.ProbeRiskLevels.document.md)  | 55|
 | [../docs/PositionPaper.ProbeToHeader.document.md](../docs/PositionPaper.ProbeToHeader.document.md)  | 10|
@@ -105,7 +106,6 @@ status: Level5
 | [../docs/PositionPaper.TriggeredMemoryDump.document.md](../docs/PositionPaper.TriggeredMemoryDump.document.md)  | 10|
 | [../docs/PositionPaper.WhereToSuppressInProc.document.md](../docs/PositionPaper.WhereToSuppressInProc.document.md)  | 10|
 | [../docs/ReviewProcess.document.md](../docs/ReviewProcess.document.md)  | 98|
-| [../docs/Rude_Q_and_A.md](../docs/Rude_Q_and_A.md)  | 748|
 | [../docs/Scenarios.ChangingEnvironments.document.md](../docs/Scenarios.ChangingEnvironments.document.md)  | 23|
 | [../docs/Scenarios.ConvertLogsToMetrics.document.md](../docs/Scenarios.ConvertLogsToMetrics.document.md)  | 10|
 | [../docs/Scenarios.EventAggregation.document.md](../docs/Scenarios.EventAggregation.document.md)  | 37|

@@ -63,7 +63,7 @@ theme:
 
 nav:
 #<START_BINDING>
-    - Scenarios:
+    - What is Dynamic Telemetry:
         - Introduction : ./docs/index.md
         - Performance and Diagnostics:
             - Overview: ./docs/Scenarios.Overview.DeepDiagnostics.document.md
