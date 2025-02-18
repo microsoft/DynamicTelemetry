@@ -4,6 +4,8 @@ $DB_DIR = Resolve-Path $DB_DIR
 $env:CDOCS_DB = $DB_DIR
 $env:PATH+=";C:\\Source\\CDocs\\tools\\CDocsMarkdownCommentRender\\bin\\Debug\\net8.0"
 $md = (Get-Content ../../mkdocs.yml)
+
+
 if (!(Test-Path "..\bound_docs" -PathType Container))
 {
 	New-Item "..\bound_docs" -type directory
