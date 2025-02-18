@@ -16,17 +16,19 @@ cd /data/docs/bound_docs
 dos2unix ./bind.files
 pandoc -i $(cat ./bind.files) -o ./_bound.tmp.md
 
-fileName=$(date +DynamicTelemetry-Draft-%b-%d-%H-%M-%S)
+myDate=$(date +%b-%d-%H-%M-%S)
+fileName="DynamicTelemetry-Draft-$myDate"
 
 echo "---" > ./title.txt
-echo "Title:$fileName" >> ./title.txt
-echo "Author:Chris Gray at al" >> ./title.txt
+echo "title: $fileName" >> ./title.txt
+echo "author: Chris Gray at al" >> ./title.txt
+echo "date: $myDate" >> ./title.txt
 echo "---" >> ./title.txt
-
 
 cat ./title.txt ./_bound.tmp.md | grep -v mp4 > ./bound.md
 
-pandoc ./bound.md -o ./$fileName.epub
+pandoc ./bound.md --toc --toc-depth 6 --epub-cover-image=../orig_media/DynamicTelemetry.CoPilot.Image.png -o ./epub_$fileName.epub
+
 pandoc ./bound.md -o ./$fileName.pdf
 pandoc ./bound.md -o ./$fileName.docx
 
