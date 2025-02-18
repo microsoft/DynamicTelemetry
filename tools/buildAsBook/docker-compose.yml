@@ -1,0 +1,9 @@
+version: '3'
+services:
+  mkdocs:
+    image: dynamictelemetry/dynamictelemetry:pandoc
+    entrypoint: /bin/bash -c "cd /data & ls"
+    volumes:
+      - ../../:/data
+    stdin_open: true
+    tty: true
