@@ -37,40 +37,44 @@ one of the five scenarios themes found below.
 
 <div class="grid cards" markdown>
 
--   :material-speedometer: [**Performance and Diagnostics**](./Scenarios.Overview.DeepDiagnostics.document.md)
+- :material-speedometer:
+  [**Performance and Diagnostics**](./Scenarios.Overview.DeepDiagnostics.document.md)
 
-    Disable diagnostic telemetry when systems are stable; enable it when
-    they are not. Quickly trigger memory dumps or collect CPU samples
-    during production issues. Deploy observers to monitor telemetry and
-    gather extra diagnostic data, only when needed.
+  Disable diagnostic telemetry when systems are stable; enable it when they are
+  not. Quickly trigger memory dumps or collect CPU samples during production
+  issues. Deploy observers to monitor telemetry and gather extra diagnostic
+  data, only when needed.
 
-    ![type:video](../orig_media/DynamicTelemetry_DiagnosticVideo.mp4)
+  ![type:video](../orig_media/DynamicTelemetry_DiagnosticVideo.mp4)
 
--   :shield: [**Privacy and Security**](./Scenarios.Overview.RedactingSecrets.document.md)
+- :shield:
+  [**Privacy and Security**](./Scenarios.Overview.RedactingSecrets.document.md)
 
-    Detect and immediately suppress sensitive (or expensive) fields
-    within Logs, should they inadvertently contain sensitive information
-    such as PATs, IP addresses, user information, or crypto keys. Remove
-    these, at their source, instantly - without rebuild or redeploy.
+  Detect and immediately suppress sensitive (or expensive) fields within Logs,
+  should they inadvertently contain sensitive information such as PATs, IP
+  addresses, user information, or crypto keys. Remove these, at their source,
+  instantly - without rebuild or redeploy.
 
--   :fontawesome-solid-dog: [**Reliability**](./Scenarios.Overview.Reliability.document.md)
+- :fontawesome-solid-dog:
+  [**Reliability**](./Scenarios.Overview.Reliability.document.md)
 
-    Test your services more effectively; make your Production code self
-    diagnose. Couple the self diagnostics with Actions that toggle up
-    and down telemetry volume, collect memory dumps, and CPU samples.
+  Test your services more effectively; make your Production code self diagnose.
+  Couple the self diagnostics with Actions that toggle up and down telemetry
+  volume, collect memory dumps, and CPU samples.
 
--   :material-view-dashboard: [**Durability - Dashboards and Alerts**](./Scenarios.Overview.DurableDashboards.Alerts.document.md)
+- :material-view-dashboard:
+  [**Durability - Dashboards and Alerts**](./Scenarios.Overview.DurableDashboards.Alerts.document.md)
 
-    Develop flexible schemas in your logs, metrics, and traces that
-    enhance the durability of your dashboards and streamline
-    communication between coworkers. Enable AI to find problems on your
-    behalf.
+  Develop flexible schemas in your logs, metrics, and traces that enhance the
+  durability of your dashboards and streamline communication between coworkers.
+  Enable AI to find problems on your behalf.
 
--  :moneybag: [**Cost Reduction**](./Scenarios.Overview.CostReduction.document.md)
+- :moneybag:
+  [**Cost Reduction**](./Scenarios.Overview.CostReduction.document.md)
 
-    Convert verbose logs into concise metrics, suppress large payloads,
-    or drop unnecessary logs.
+  Convert verbose logs into concise metrics, suppress large payloads, or drop
+  unnecessary logs.
 
-    ![type:video](../orig_media/DynamicTelemetry_CostSavings.mp4)
+  ![type:video](../orig_media/DynamicTelemetry_CostSavings.mp4)
 
 </div>

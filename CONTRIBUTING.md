@@ -20,7 +20,7 @@ requests (PRs).
 To create a new PR, fork the project on GitHub and clone the upstream repo:
 
 ```sh
-git clone https://github.com/DynamicTelemetry.git
+git clone https://github.com/Microsoft/DynamicTelemetry.git
 ```
 
 Navigate to the repo root:
