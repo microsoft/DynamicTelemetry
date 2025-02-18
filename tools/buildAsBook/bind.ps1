@@ -14,8 +14,8 @@ $env:CDOCS_DB = $DB_DIR
 
 $md = (Get-Content ../../mkdocs.yml)
 
-`
-if (!(Test-Path "../bound_docs" -PathType Container))
+
+if (!(Test-Path "..\bound_docs" -PathType Container))
 {
 	New-Item "../bound_docs" -type directory
 }
@@ -29,6 +29,18 @@ if (Test-Path "../bound_docs/title.txt")
 {
 	Remove-Item "../bound_docs/title.txt"
 }
+
+
+if (Test-Path "..\bound_docs\title.txt")
+{
+	Remove-Item "..\bound_docs\title.txt"
+}
+Add-Content ..\bound_docs\title.txt "---"
+Add-Content ..\bound_docs\title.txt "title: Dynamic Telemetry $(Get-Date)"
+Add-Content ..\bound_docs\title.txt "author: Chris Gray at.al"
+Add-Content ..\bound_docs\title.txt "date: $(Get-Date)"
+Add-Content ..\bound_docs\title.txt "---"
+
 # Copy Everything; just so our Includes work
 Write-Host ""
 Write-Host "Copying all doc files into ../bound_docs, for processing"
