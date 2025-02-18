@@ -7,7 +7,7 @@ status: ReviewLevel1
 
 DynamicTelemetry personas are intended as an organizational aid to group
 capabilities and usability of common usage scenarios. Browsing between scenarios
- is recommended, for the personas are intended only as an aid.
+is recommended, for the personas are intended only as an aid.
 
 ## Introduction
 
@@ -15,12 +15,12 @@ The DEVELOPER Persona in DynamicTelemetry:
 
 1. *Authors code*, firsthand
 1. Understands *technical details* like data schemas, instruction pointers, and
-can differentiate logs/traces from metrics.
+   can differentiate logs/traces from metrics.
 1. Comfortable with *core operating system concepts*, like threads, heaps, and
-stacks
+   stacks
 1. Understands *symbolic debuggers*, code offsets, and symbols
 1. Is well versed and comfortable with the differences between security and
-privacy.  Knows how to protect users.
+   privacy. Knows how to protect users.
 
 ## Scenarios
 

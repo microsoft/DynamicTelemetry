@@ -7,7 +7,8 @@ Please search the existing issues before filing new issues to avoid
 duplicates. For new issues, file your bug or feature request as a new
 Issue.
 
-For help and questions about using this project, please create a Pull Request, or file a [Github Issue](https://github.com/microsoft/DynamicTelemetry/issues).
+For help and questions about using this project, please create a Pull Request,
+or file a [Github Issue](https://github.com/microsoft/DynamicTelemetry/issues).
 
 ## Microsoft Support Policy
 

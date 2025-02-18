@@ -1,11 +1,15 @@
 # See https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
 # and https://github.com/DavidAnson/markdownlint/blob/main/README.md
 
+
+# look at 'mdformat' for 80 columns
+# https://github.com/hukkin/mdformat
+
 # Default state for all rules
 default: true
 
 ul-style: false
-line-length: false
+line-length: 80
 no-duplicate-header:
   siblings_only: true
 #ol-prefix:

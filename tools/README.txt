@@ -1,0 +1,1 @@
+Please read ..\docs\docs README.EDITING.CONTAINER.md for more information

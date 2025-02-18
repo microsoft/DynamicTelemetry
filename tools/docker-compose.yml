@@ -1,0 +1,10 @@
+version: '3'
+services:
+  mkdocs:
+    image: dynamictelemetry/dynamictelemetry:mkdocs
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../:/data
+    stdin_open: true
+    tty: true
