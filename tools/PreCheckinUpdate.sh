@@ -28,8 +28,7 @@ echo "---" >> ./title.txt
 cat ./title.txt ./_bound.tmp.md | grep -v mp4 > ./bound.md
 
 pandoc ./bound.md --toc --toc-depth 6 --epub-cover-image=../orig_media/DynamicTelemetry.CoPilot.Image.png -o ./epub_$fileName.epub
-
-pandoc ./bound.md -o ./$fileName.pdf
+pandoc ./bound.md -o ./$fileName.pdf  --toc --toc-depth 6 -N -V geometry:margin=0.25in -V papersize=a5
 pandoc ./bound.md -o ./$fileName.docx
 
 ls -l ./bound*

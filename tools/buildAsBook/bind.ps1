@@ -93,6 +93,7 @@ try {
 			Write-Host (" ==> $me ==> $id")
 			$file = "./bound_docs/$id.generated.md"
 			$file_leaf = "$id.generated.converted.md"
+			Add-Content "$file" "\newpage"
 			Add-Content "$file" "# $me"
 		} else {
 			$file = $file.ToString().Trim()
