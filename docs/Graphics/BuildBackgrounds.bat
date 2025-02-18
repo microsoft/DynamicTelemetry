@@ -20,3 +20,7 @@ set BASE="file:///C:/Source/DynamicTelemetry/docs/Graphics/Banner.Template.html"
 %TOOL% --debug-javascript --enable-local-file-access "%BASE%?title=Long%%20Horizon" ../orig_media/LongHorizon.banner.png
 %TOOL% --debug-javascript --enable-local-file-access "%BASE%?title=Cubby%%20Hole%%20Horizon" ../orig_media/CubbyHole.banner.png
 
+
+%TOOL% --debug-javascript --enable-local-file-access "%BASE%?title=Key Constructs" ../orig_media/KeyConstructs.banner.png
+
+
