@@ -10,38 +10,50 @@ status: ReviewLevel1b
 The concept of a trace horizon is straightforward. It refers to the amount of
 time that can typically be stored in a circular buffer.
 
-Think of this as your contract. You would say, "Our trace horizon is expected to
-be about five minutes in the P50."
+When a Flight Recorder is discussed, it is often described by its trace length,
+which is the duration of time it covers. For example, you might say, *"Every time
+a process crashes, we collect a 5-minute Flight Recorder leading up to the
+crash."*
 
-All these words are easy to say, but there is some complexity in providing this
-guarantee.
+Your Trace Horizon, in this case, **is 5 minutes**.
 
-In play are the following:
+Achieving an exact 5-minute trace horizon is more of an ideal than a reality. In
+practice, the trace length will vary, and it requires continuous refinement and
+iteration over time. Your team will need to develop conventions and processes to
+manage and adjusting the trace horizon effectively over time.
 
-1. The amount of memory provided to the Flight Recorder.
-1. The verbosity of logs that have been sampled in by the filter.
-1. The runtime characteristics of the machine, which can be dynamic.
+The variable involved in your Horizon are:
+
+1. The **amount of memory** provided to the Flight Recorder.
+1. The **verbosity of logs** that have been sampled in by the filter.
 
 Imagine a simple example where your software is running smoothly, and the Flight
-Recorder is operating nominally. Suddenly, the code goes into a failure mode
-where the logging for errors dramatically spikes up.
+Recorder is operating nominally. **No Flight Recorders are emitted - they cost
+nothing in your backends/databases, and almost nothing on the machines being
+monitored.** Suddenly, however, your code goes into a failure mode where the
+logging for errors dramatically spikes up.
 
-Because the amount of memory provided to the Flight Recorder is fixed, this
-dramatic spike will result in a shorter time horizon found in the log.
+In this example, you've configured your filter to collect these logs into a
+fixed memory Flight Recorder where they remain until an issue triggers an
+.Action. These logs are stored in the Flight Recorder, where they stay until
+either the buffer wraps or the .Action emits the entire log into your
+observability backends.
 
-While this may sound bad, it usually is not. A decision must be made, and this
-is the decision: Should the log be egressed due to an action, the developer will
-inspect the logs and realize that they are in that failure mode and will have
-more clues as to what is going wrong.
+When in .Action does trigger the egressing Flight Recorder. It'll go into your
+standard observability backends where your developers can enjoy a higher
+fidelity amount of logging than when operating in an nominal case.
 
-They will then reconfigure the Filter leading into the Flight Recorder, to
-simmer down the verbose logs. Options at their disposal would include
+It's not uncommon for teams to discover that they either have too much
+information and would prefer a longer trace horizon, or they would like to
+shuffle the logging that is stored. Typically, after some analysis, they'll want
+to reconfigure the filter that serves this Flight Recorder.
 
-1. Filtering (dropping) out the chatty logs
-1. Converting
-   [the chatty logs into a Metric](./Scenarios.ConvertLogsToMetrics.document.md)
+Their options will include:
+
+1. [Filtering](./Scenarios.EventSuppression.document.md) out the chatty logs
+1. Converting the chatty logs into a [Metric](./Scenarios.ConvertLogsToMetrics.document.md)
 1. Increasing the memory dedicated to the Flight Recorder
-1. Removing logs that are no long interesting
+
 
 The key takeaway for this section is that the trace horizon is a critical aspect
 of Dynamic Telemetry.

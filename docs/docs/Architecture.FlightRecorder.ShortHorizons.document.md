@@ -7,13 +7,11 @@ status: ReviewLevel1b
 
 ![](../orig_media/ShortHorizon.banner.png)
 
-Short Horizon Flight Recorder is a focused logging strategy designed to capture
-and preserve data within bound memory limits. Rather than collecting lengthy
-histories, over a long time span, it employs broad and loosely filtered logs to
-collect as much logging as possible For several minutes leading into a problem.
-. Its approach emphasizes gathering as much telemetry as possible, for a few
-minutes prior to a failure - which can be particularly useful when probing
-difficult-to-reproduce bugs.
+A Short Horizon Flight Recorder is a focused Flight Recorder, designed to
+capture and store a higher volume of logging than is responsible to always
+stream via OpenTelemetry. A Short Horizon Flight Recorder employs broad and
+loosely filtered logs to collect as much logging as possible For several minutes
+before allowing its collection buffers to wrap.
 
 By capturing high-volume telemetry right before events like crashes or lockups,
 the Short Horizon recorder streamlines failure analysis. It empowers engineering
@@ -30,22 +28,32 @@ an airplane's Flight Recorder, capturing all problems regardless of the
 situation.
 
 When used this way, the Short Horizon Flight Recorder becomes the developer's
-best friend and a communication tool for project managers.
+best friend as well as a communication tool for project managers.
 
 Expectations can be set with development, test, and operations teams so that
 anytime a problem occurs, it is always expected that this short horizon flight
 record will be collected.
 
-This consistency is what management and finance teams will encourage development
-teams to invest in as cost-saving pressures increase.
+In some circles, this is conventionally known as pressing ***THE BIG RED
+BUTTON***. When a problem manifests, the culture expects that "something"
+pressed the BigRed button.
 
-By ensuring that every incident is logged and analyzed, teams will build trust
-and develop custom diagnostic processors around the Flight Recorder. he Short
-Horizon Flight Recorder fosters a culture of accountability and continuous
-improvement. Teams can review logs to understand what went wrong, learn from
-mistakes, and implement better practices. This iterative process enhances
-overall software quality and when used well, will encourage cost reduction,
-privacy improvements, and security hardening.
+![Big Red Button](../orig_media/BigRed.button.jpg)
+
+This consistency is a place of investment, anytime a problem manifests, no
+matter which team is involved, the expectation is that someone (or more likely
+an Action) pressed this 'button'
+
+By ensuring that every incident is logged and analyzed with the content of a
+Long Horizon Flight Recorder, your teams will build trust and develop custom
+diagnostic processors around the Flight Recorder. he Short Horizon Flight
+Recorder fosters a culture of accountability and continuous improvement. Teams
+can review logs to understand what went wrong, learn from mistakes, and
+implement better practices.
+
+This iterative process enhances overall software
+quality and when used well, will encourage cost reduction, privacy improvements,
+and security hardening.
 
 **This is because a log that is not emitted is the most cost-effective, private,
 and secure log.**
@@ -57,11 +65,11 @@ Recorder can vary, there are some established guidelines that have proven
 effective over time. These criteria help ensure that the recorder captures
 useful data without overwhelming system resources. Key considerations include:
 
-- Fixed memory budget: Typically, a predefined limit such as 32MB is set to
+- **Fixed memory budget**: Typically, a predefined limit such as 32MB is set to
   ensure that the recorder does not consume excessive memory.
-- Broad collection scope: The recorder should capture a wide range of events,
+- **Broad collection scope**: The recorder should capture a wide range of events,
   but focus on a narrow set of critical events to avoid unnecessary data.
-- Performance impact: The recorder may affect system performance, so it is often
+- **Performance impact**: The recorder may affect system performance, so it is often
   used in conjunction with filters to manage the volume of collected data.
 
 These guidelines help create an efficient and effective Short Horizon Flight
