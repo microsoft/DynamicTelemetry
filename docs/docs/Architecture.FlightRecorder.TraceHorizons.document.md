@@ -3,7 +3,9 @@ author: "Chris Gray"
 status: ReviewLevel1b
 ---
 
+
 # Understanding Trace Horizons
+
 
 ![](../orig_media/TraceHorizons.banner.png)
 

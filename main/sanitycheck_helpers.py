@@ -26,8 +26,8 @@ def sanitycheck(pattern, allow_utf8 = False, allow_eol = (CRLF, LF), indent = 1)
                     line = line[3:]
                 if any(b == 7 for b in line):
                     error.append('  TAB found at Ln:{} {}'.format(lineno, line))
-                if any(b > 127 for b in line):
-                    error.append('  Non-ASCII character found at Ln:{} {}'.format(lineno, line))
+                if any((b > 127 and b != '-') for b in line):
+                    error.append('  *Non-ASCII character found at Ln:{} {}'.format(lineno, line))
                 if line[-2:] == CRLF:
                     if not eol:
                         eol = CRLF
