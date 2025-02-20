@@ -30,7 +30,7 @@ for(file) in glob.glob("../docs/*.md"):
             break # Only print the first match
 
 
-with open("./Status.csv", "w") as f:
+with open("/out/Status.csv", "w") as f:
     print("State, Count", file=f)
     for (key, value) in review_status_counts.items():
         print(key + "," + str(value), file=f)
