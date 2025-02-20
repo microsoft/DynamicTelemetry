@@ -5967,7 +5967,7 @@ that will lead to an shared understanding, and hopefully one or more implementat
 <p><em>Please:</em></p>
 <ol>
 <li>
-<p>Open <a href="https://github.com/microsoft/DynamicTelemetry/pull/6/">this Git Hub Pull Request</a></p>
+<p>Open <a href="https://github.com/microsoft/DynamicTelemetry/pull/26/">this Git Hub Pull Request</a></p>
 </li>
 <li>
 <p>Locate this file ( <strong>docs/Architecture.Components.Processor.Overview.document.md</strong>)</p>
@@ -5976,11 +5976,8 @@ that will lead to an shared understanding, and hopefully one or more implementat
 <p>Add Comments! :)</p>
 </li>
 </ol>
-<p><em>Direct Sharing URL</em></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>http://microsoft.github.io/DynamicTelemetry/docs/Architecture.Components.Processor.Overview.document/
-</span></code></pre></div>
 <p><em>If you'd prefer to give us a PR</em></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>https://microsoft.github.io/DynamicTelemetry/
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>https://microsoft.github.io/DynamicTelemetry/
 </span></code></pre></div>
 <p>Learn about overall document status
     <a href="../ReviewProcess.document/">here</a></p>
@@ -6028,14 +6025,14 @@ or the removal of specific log messages.</p>
 <p>As demonstrated in the example from our
 <a href="../Demos.HighLevel.Overview/">sample using the Kusto Query Language (KQL)</a>, we
 identify and drop an individual log message.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>traces
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>| where customDimensions.EventName != "LogWelcomeBanner"
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>traces
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>| where customDimensions.EventName != "LogWelcomeBanner"
 </span></code></pre></div>
 <p>In the example below, we are modifying the log message to drop a particular
 field.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>traces
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>| extend customDimensions = iif(customDimensions.EventName == "LogWelcomeBanner",
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    bag_remove_keys(customDimensions, dynamic(['secret'])), customDimensions)
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>traces
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>| extend customDimensions = iif(customDimensions.EventName == "LogWelcomeBanner",
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    bag_remove_keys(customDimensions, dynamic(['secret'])), customDimensions)
 </span></code></pre></div>
 <p>By using your imagination, you can see many opportunities for this KQL language.
 For example, you could filter out logs that are not relevant to a specific
