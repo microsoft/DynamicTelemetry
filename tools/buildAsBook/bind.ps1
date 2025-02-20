@@ -105,16 +105,10 @@ try {
 			}
 			$file_leaf = Split-Path -Path $file -Leaf
 		}
-		Write-Host "Convertinging $file == > $file_leaf"
+		Write-Host "Converting $file == > $file_leaf"
 		pandoc -i $file -o ./bound_docs/$file_leaf --filter CDocsMarkdownCommentRender
 		Add-Content "./bound_docs/bind.files" $file_leaf
 	}
-	cd bound_docs
-	Write-Host "RUN THIS IN REAL LINUX *******"
-	Write-Host "dos2unix ./bind.files; pandoc -i `$(cat ./bind.files) -o ./_bound.tmp.md; cat ./_bound.tmp.md | grep -v mp4 > ./bound.md"
-	cd ..
 } finally {
 	cd docs
 }
-#cd ..
-#cd docs
