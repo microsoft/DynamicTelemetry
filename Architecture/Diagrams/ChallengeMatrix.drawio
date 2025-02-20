@@ -43,7 +43,7 @@
         <mxCell id="j5zyZETpQFfi42s4NJHR-16" value="Environment" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
           <mxGeometry x="670" y="190" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="g6Rb_NseqLPhcfFkv03y-1" value="Open Telemetry Solves&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" vertex="1" parent="1">
+        <mxCell id="g6Rb_NseqLPhcfFkv03y-1" value="OpenTelemetry Solves&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" vertex="1" parent="1">
           <mxGeometry x="20" y="440" width="380" height="60" as="geometry" />
         </mxCell>
         <mxCell id="g6Rb_NseqLPhcfFkv03y-2" value="Dynamic Telemetry Solves" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" vertex="1" parent="1">
