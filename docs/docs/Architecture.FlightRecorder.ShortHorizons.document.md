@@ -8,10 +8,13 @@ status: ReviewLevel1b
 ![](../orig_media/ShortHorizon.banner.png)
 
 A Short Horizon Flight Recorder is a focused Flight Recorder, designed to
-capture and store a higher volume of logging than is responsible to always
-stream via OpenTelemetry. A Short Horizon Flight Recorder employs broad and
-loosely filtered logs to collect as much logging as possible For several minutes
-before allowing its collection buffers to wrap.
+capture and telemetry that is too verbose for steady-state streaming via
+OpenTelemetry.  It's a Flight Recorder you only collect, when something goes
+wrong, based on an [Action](./Architecture.Action.Explanation.document.md)
+
+A Short Horizon Flight Recorder employs broad and loosely filtered logs to
+collect as much logging as possible, with a goal of keeping a few minutes of
+verbose Logging, leading into a problem.
 
 By capturing high-volume telemetry right before events like crashes or lockups,
 the Short Horizon recorder streamlines failure analysis. It empowers engineering
