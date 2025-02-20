@@ -38,7 +38,7 @@ pipelines. However, the process of setting up these probes, such as using
 software or hardware breakpoints and eBPF may not always align with the
 performance and reliability of their destination environment.
 
-### Reliablity Concerns
+### Reliability Concerns
 
 Of particular concern is the possibility that certain probe types may
 inadvertently alter the **reliability characteristics** of a monitored system.
@@ -99,3 +99,4 @@ architecture section.
 Implementations of Dynamic Telemetry must clearly communicate these requirements
 at the configuration deployment stage using suitable gates, deployment rings,
 and communication systems for the hosting environment.
+
