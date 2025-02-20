@@ -4,6 +4,9 @@ services:
     image: dynamictelemetry/dynamictelemetry:pandoc
     entrypoint: /bin/bash -c "cd /data/tools; ls; ./PreCheckinUpdate.sh"
     volumes:
-      - ../../:/data
+      - ../..:/data:ro
+      - ../../docs/orig_media:/out/orig_media:ro
+      - ../..:/data_rw:rw
+      - ../../bound:/out/bound:rw
     stdin_open: true
     tty: true

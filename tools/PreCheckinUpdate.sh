@@ -1,6 +1,9 @@
 #!/bin/bash
 
-cd ../docs/docs
+#
+# READ-WRITE Update Status and Probes
+#
+cd /data_rw/docs/docs
 
 echo "Updating Status..."
 python3 ../../tools/_CalculateStatus.py
@@ -9,10 +12,17 @@ python3 ../../tools/_CalculateStatus.py
 echo "Rebuilding Probe Spider..."
 ../../tools/_BuildProbeSpider.gnuplot
 
+
+#
+# READ-ONLY: Do Binding and create content in docx/pdf/epub
+#
+cd /data/docs/docs
+
 echo "Binding and generating TOC"
 pwsh ../../tools/buildAsBook/bind.ps1
 
-cd /data/docs/bound_docs
+
+cd /out/bound_docs
 dos2unix ./bind.files
 pandoc -i $(cat ./bind.files) -o ./_bound.tmp.md
 
@@ -27,8 +37,9 @@ echo "---" >> ./title.txt
 
 cat ./title.txt ./_bound.tmp.md | grep -v mp4 > ./bound.md
 
-pandoc ./bound.md --toc --toc-depth 6 --epub-cover-image=../orig_media/DynamicTelemetry.CoPilot.Image.png -o ./epub_$fileName.epub
-pandoc ./bound.md -o ./$fileName.pdf  --toc --toc-depth 6 -N -V geometry:margin=0.25in -V papersize=a5
-pandoc ./bound.md -o ./$fileName.docx
+echo "Building bound contents; in docx, pdf, and epub"
+pandoc ./bound.md --toc --toc-depth 6 --epub-cover-image=../orig_media/DynamicTelemetry.CoPilot.Image.png -o /out/bound/epub_$fileName.epub
+pandoc ./bound.md -o /out/bound/$fileName.pdf  --toc --toc-depth 6 -N -V geometry:margin=0.25in -V papersize=a5
+pandoc ./bound.md -o /out/bound/$fileName.docx
 
-ls -l ./bound*
+echo "Done!"
