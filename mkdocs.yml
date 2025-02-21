@@ -196,6 +196,7 @@ nav:
 
         - Upcoming and Proposed Cuts:
             - Upcoming:
+                - Ideas : ./docs/Ideas.ToExpandOn.document.md
                 - Design Patterns:
                     - Overview: ./docs/Architecture.DesignPatterns.DesignPatterns.Overview.document.md
                     - Primitives:
