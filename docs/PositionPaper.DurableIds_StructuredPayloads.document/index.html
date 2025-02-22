@@ -1554,16 +1554,23 @@ Licensed under the MIT License. -->
             Upcoming
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Ideas.ToExpandOn.document/">
+<span class="md-ellipsis">
+    Ideas
+  </span>
+</a>
+</li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3_5_1_1" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_5_1_1" id="__nav_3_5_1_1_label" tabindex="0">
+<input class="md-nav__toggle md-toggle" id="__nav_3_5_1_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_5_1_2" id="__nav_3_5_1_2_label" tabindex="0">
 <span class="md-ellipsis">
     Design Patterns
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_3_5_1_1_label" class="md-nav" data-md-level="4">
-<label class="md-nav__title" for="__nav_3_5_1_1">
+<nav aria-expanded="false" aria-labelledby="__nav_3_5_1_2_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_3_5_1_2">
 <span class="md-nav__icon md-icon"></span>
             Design Patterns
           </label>
@@ -1577,15 +1584,15 @@ Licensed under the MIT License. -->
 </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3_5_1_1_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_5_1_1_2" id="__nav_3_5_1_1_2_label" tabindex="0">
+<input class="md-nav__toggle md-toggle" id="__nav_3_5_1_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_5_1_2_2" id="__nav_3_5_1_2_2_label" tabindex="0">
 <span class="md-ellipsis">
     Primitives
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_3_5_1_1_2_label" class="md-nav" data-md-level="5">
-<label class="md-nav__title" for="__nav_3_5_1_1_2">
+<nav aria-expanded="false" aria-labelledby="__nav_3_5_1_2_2_label" class="md-nav" data-md-level="5">
+<label class="md-nav__title" for="__nav_3_5_1_2_2">
 <span class="md-nav__icon md-icon"></span>
             Primitives
           </label>
@@ -2011,8 +2018,11 @@ that will lead to an shared understanding, and hopefully one or more implementat
 <p>Add Comments! :)</p>
 </li>
 </ol>
+<p><em>Direct Sharing URL</em></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>http://microsoft.github.io/DynamicTelemetry/docs/PositionPaper.DurableIds_StructuredPayloads.document/
+</span></code></pre></div>
 <p><em>If you'd prefer to give us a PR</em></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>https://microsoft.github.io/DynamicTelemetry/
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>https://microsoft.github.io/DynamicTelemetry/
 </span></code></pre></div>
 <p>Learn about overall document status
     <a href="../ReviewProcess.document/">here</a></p>
@@ -2065,14 +2075,14 @@ Payload is both important and valuable.</p>
 <ol>
 <li>EXAMPLE #1 (GOOD!)</li>
 </ol>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>LoggingWrite(
-</span><span id="__span-1-2"><a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>        g_Handle,
-</span><span id="__span-1-3"><a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>        "MemoryStatusUpdate",               &lt;-- DurableID
-</span><span id="__span-1-4"><a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a>        LoggingUInt32(value, "UpdateValue") &lt;-- Structured Payload (U32/string)
-</span><span id="__span-1-5"><a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a>        );
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>LoggingWrite(
+</span><span id="__span-2-2"><a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>        g_Handle,
+</span><span id="__span-2-3"><a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>        "MemoryStatusUpdate",               &lt;-- DurableID
+</span><span id="__span-2-4"><a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>        LoggingUInt32(value, "UpdateValue") &lt;-- Structured Payload (U32/string)
+</span><span id="__span-2-5"><a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>        );
 </span></code></pre></div>
 <h3 id="example-2-bad">EXAMPLE #2 (BAD!)</h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>LoggingWrite("UPDATING VALUE: updating value to %d", value);
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>LoggingWrite("UPDATING VALUE: updating value to %d", value);
 </span></code></pre></div>
 <h3 id="materially-how-do-these-differ">Materially how do these differ?</h3>
 <p>In both these examples, the "UpdateValue" will be passed to the
@@ -2083,13 +2093,13 @@ network, to a database, for insertion into a table.</p>
 examples are encoded in a similarly the below; this is the "ENCODED_DATA"
 boundary below - before being passed off to the Operating Systems telemetry
 plumbing.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a># EXAMPLE1: with DurableId/Structured Payload
-</span><span id="__span-3-2"><a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>[DurableID][UdateValue]                          &lt;-- potentially compact
-</span><span id="__span-3-3"><a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a>
-</span><span id="__span-3-4"><a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a>vs.
-</span><span id="__span-3-5"><a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a>
-</span><span id="__span-3-6"><a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a># EXAMPLE2 : without DurableID and Structured Payload
-</span><span id="__span-3-7"><a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a>UPDATING VALUE: updating value to &lt;value&gt;      &lt;-- not as compact
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a># EXAMPLE1: with DurableId/Structured Payload
+</span><span id="__span-4-2"><a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>[DurableID][UdateValue]                          &lt;-- potentially compact
+</span><span id="__span-4-3"><a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a>vs.
+</span><span id="__span-4-5"><a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a>
+</span><span id="__span-4-6"><a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a># EXAMPLE2 : without DurableID and Structured Payload
+</span><span id="__span-4-7"><a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a>UPDATING VALUE: updating value to &lt;value&gt;      &lt;-- not as compact
 </span></code></pre></div>
 <p>This difference is due to what we're calling "flattening" in this writeup. The
 term is defined more below; but the gist is the dynamic portions of the log are
@@ -2168,22 +2178,22 @@ event, with particular payload, is encountered.</p>
 </ol>
 <h2 id="appendix">Appendix</h2>
 <h3 id="second-example">Second Example</h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>Line 000010 : printf("ALLOC(%d bytes) for %s", size, bufferName1);
-</span><span id="__span-4-2"><a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>              //business logic
-</span><span id="__span-4-3"><a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a>Line 001000 : printf("FREE(%s)", bufferName1);
-</span><span id="__span-4-4"><a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a>              //more business logic
-</span><span id="__span-4-5"><a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a>Line 100000 : printf("FREE(%s)", bufferName2)
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>Line 000010 : printf("ALLOC(%d bytes) for %s", size, bufferName1);
+</span><span id="__span-5-2"><a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a>              //business logic
+</span><span id="__span-5-3"><a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a>Line 001000 : printf("FREE(%s)", bufferName1);
+</span><span id="__span-5-4"><a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a>              //more business logic
+</span><span id="__span-5-5"><a href="#__codelineno-5-5" id="__codelineno-5-5" name="__codelineno-5-5"></a>Line 100000 : printf("FREE(%s)", bufferName2)
 </span></code></pre></div>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>|  Time    | Message                             |
-</span><span id="__span-5-2"><a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a>|    ---   | ---                                 |
-</span><span id="__span-5-3"><a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a>| 12:00:00 | ALLOC(10 bytes) for database_open   |
-</span><span id="__span-5-4"><a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a>| 12:01:00 | ERROR: unable to open file foo.txt  |
-</span><span id="__span-5-5"><a href="#__codelineno-5-5" id="__codelineno-5-5" name="__codelineno-5-5"></a>| 12:02:02 | ALLOC(10 bytes) for network_open    |
-</span><span id="__span-5-6"><a href="#__codelineno-5-6" id="__codelineno-5-6" name="__codelineno-5-6"></a>| 12:02:00 | ERROR: unable to open file bar.txt  |
-</span><span id="__span-5-7"><a href="#__codelineno-5-7" id="__codelineno-5-7" name="__codelineno-5-7"></a>| 12:02:01 | FREE(network_open)                  |
-</span><span id="__span-5-8"><a href="#__codelineno-5-8" id="__codelineno-5-8" name="__codelineno-5-8"></a>| 12:02:02 | ERROR: unable to open file bar.txt  |
-</span><span id="__span-5-9"><a href="#__codelineno-5-9" id="__codelineno-5-9" name="__codelineno-5-9"></a>| 12:02:01 | FREE(database_open)                 |
-</span><span id="__span-5-10"><a href="#__codelineno-5-10" id="__codelineno-5-10" name="__codelineno-5-10"></a>| 12:03:00 | ERROR: unable to open file baz.txt  |
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>|  Time    | Message                             |
+</span><span id="__span-6-2"><a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a>|    ---   | ---                                 |
+</span><span id="__span-6-3"><a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a>| 12:00:00 | ALLOC(10 bytes) for database_open   |
+</span><span id="__span-6-4"><a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a>| 12:01:00 | ERROR: unable to open file foo.txt  |
+</span><span id="__span-6-5"><a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a>| 12:02:02 | ALLOC(10 bytes) for network_open    |
+</span><span id="__span-6-6"><a href="#__codelineno-6-6" id="__codelineno-6-6" name="__codelineno-6-6"></a>| 12:02:00 | ERROR: unable to open file bar.txt  |
+</span><span id="__span-6-7"><a href="#__codelineno-6-7" id="__codelineno-6-7" name="__codelineno-6-7"></a>| 12:02:01 | FREE(network_open)                  |
+</span><span id="__span-6-8"><a href="#__codelineno-6-8" id="__codelineno-6-8" name="__codelineno-6-8"></a>| 12:02:02 | ERROR: unable to open file bar.txt  |
+</span><span id="__span-6-9"><a href="#__codelineno-6-9" id="__codelineno-6-9" name="__codelineno-6-9"></a>| 12:02:01 | FREE(database_open)                 |
+</span><span id="__span-6-10"><a href="#__codelineno-6-10" id="__codelineno-6-10" name="__codelineno-6-10"></a>| 12:03:00 | ERROR: unable to open file baz.txt  |
 </span></code></pre></div>
 <p>While this may not superficially "look bad" when costs and scale are small; over
 time, we'll face a problem where it's unclear where this code originates.</p>

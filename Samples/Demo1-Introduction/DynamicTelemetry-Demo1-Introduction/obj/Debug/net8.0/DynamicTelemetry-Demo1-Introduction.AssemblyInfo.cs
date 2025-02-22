@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DynamicTelemetry-Demo1-Introduction")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cfce49b7fbe3795b026f21d9790c2499fde3628d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3027e8d6422d04d58c7911910e17d1265be05552")]
 [assembly: System.Reflection.AssemblyProductAttribute("DynamicTelemetry-Demo1-Introduction")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DynamicTelemetry-Demo1-Introduction")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
