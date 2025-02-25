@@ -18,3 +18,4 @@
 *.pubxml
 *.publishproj
 .fake
+main/__pycache__
