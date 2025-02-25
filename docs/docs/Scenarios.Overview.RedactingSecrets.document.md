@@ -63,6 +63,21 @@ regulations and reducing the risk of data breaches
 
 ## Methods of Redacting Secrets
 
+Should you find yourself in the unenviable position where your OpenTelemetry
+logs/traces contain secrets, or privacy information you face a complicated
+journey.
+
+First you have to fix the code, retest, redeploy, (potentially wait for a
+ringed deployment), and then go scrub your databases.
+
+Dynamic Telemetry offers no solution to database scrubbing, but it does offer
+solutions into scrubbing.  Several in fact!
+
+In broad strokes, the two most common are
+
+1. Dynamically Toggling Off Logs;  dropping an entire log row
+1. Payload Scrubbing;  scrubbing portions of a log
+
 ### [Dynamically Toggle Off Logs](./PositionPaper.DynamicallyToggleLogs.document.md)
 
 Dynamically turning off individual logs using core operating system features
@@ -82,7 +97,7 @@ does not interfere with the application's main operations1.
 **user_events**is a powerful feature built into the Linux kernel, that has some
 characteristics of ETW on Windows Dynamic Telemetry. It allows for the insertion
 of user-defined events into the standard Linux kernel mode logging streams,
-which can be enabled or disabled, in user mode, by Kernen - as needed. This
+which can be enabled or disabled, in user mode, or keren mode - as needed. This
 flexibility is crucial for maintaining high performance, as it ensures that only
 relevant logs are captured, reducing unnecessary data collection and
 processing2.
@@ -134,4 +149,4 @@ ensure sensitive information is protected and compliance requirements are met.
 
 Each of these locations offers unique advantages and challenges, and the choice
 of where to implement scrubbing depends on the specific requirements and
-constraints of the system
+constraints of the system.

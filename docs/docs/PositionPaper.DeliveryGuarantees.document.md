@@ -26,4 +26,4 @@ Reason:
    1. stop servicing customer workloads
 
 The right answer is to continue servicing customer loads, and to stop dropping
-telemetry
+telemetry.

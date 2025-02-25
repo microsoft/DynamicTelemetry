@@ -25,5 +25,3 @@ RUN ~/.local/mkdocs_python/bin/pip install mkdocs-video
 RUN ~/.local/mkdocs_python/bin/pip install mkdocs-redirects
 
 WORKDIR /data
-
-ENTRYPOINT [ "/root/.local/mkdocs_python/bin/mkdocs", "serve", "-a", "0.0.0.0:8000", "-s" ]

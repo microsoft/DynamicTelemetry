@@ -39,7 +39,7 @@ These tools are always active, monitoring the system continuously. They pose
 less risk but consume more resources. Examples include ETW on Windows, syslog,
 LTTG user events, and perf on Linux.
 
-### Dynamic probes
+### Dynamic Probes
 
 On the other hand, Dynamic Telemetry probes can be enabled or disabled as
 required. They offer greater flexibility and can quickly provide comprehensive

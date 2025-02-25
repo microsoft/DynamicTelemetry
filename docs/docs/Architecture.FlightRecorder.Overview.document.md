@@ -7,26 +7,40 @@ status: ReviewLevel1b
 
 ![](../orig_media/FlightRecorders.banner.png)
 
-A Flight Recorder is an alternative and compliment to standard
-[Streaming](./PositionPaper.FileAndStreaming.document.md) Observability.
+A Flight Recorder is essentially a ring buffer that stores logging
+data that is only uploaded to a backend, when instructed by a triggering
+[Action](./Architecture.Action.Explanation.document.md).  Unlike standard
+streaming telemetry, this telemetry is only emitted when instructed, usually on
+failure.
 
-The key differentiator between standard streaming telemetry, and a Flight
-Recorder is that a Flight Recorder will only egress the Observability when
-instructed by an [Action](./Architecture.Action.Explanation.document.md).
+In this capacity, it serves as an alternative and compliment to standard
+[Streaming](./PositionPaper.FileAndStreaming.document.md) Observability.  In
+fact, users of flight recorders. Typically report that their presence turns the
+frustrating act of debugging a live system into something a lot more fun and
+interactive, almost like a video game.
 
-File-based telemetry collects data in a locally stored format, resembling the
-way an airplane's black box safeguards flight parameters.
+A quick recap:
 
-Many modern systems rely heavily on streaming telemetry for near real-time
-monitoring. This approach fulfills observability needs by enabling on-the-fly
-analysis and rapid response. Continuous data egress also makes it simpler to
-spot trends or anomalies as they emerge.
+1. A [Probe](./Architecture.Probes.Overview.document.md) is a form of logging
+   that flows into OpenTelemetry
+1. A [Filter or Router](./Architecture.Components.FiltersAndRouters.document.md)
+   is a piece of code situated in the middle of an OpenTelemetry pipe that
+   routes or filters logs
+1. A Flight Recorder is a circular log that is never emitted unless there's a
+   reason
+1. An [Action](./Architecture.Action.Explanation.document.md) provides the
+   reason
 
-Flight Recorder telemetry, on the other hand, stores higher volume logging for
-post-event examination. Similar in concept to safeguarded flight data recorders
-or fire safes, this method is especially valuable for incident reconstruction.
-By preserving a higher fidelity of the past, Flight Recorders help 'fill in the
-blanks' when gaps exist in standard streaming telemetry.
+Think of a Flight Recorder as a way to enhance your logging capabilities. It
+provides flexibility and additional options for addressing complex issues.
+Imagine needing a specific log when something goes wrong
+
+A Flight Recorder offers a unique approach where logs are collected but not
+uploaded unless a problem arises. The challenge and creative opportunity lie in
+defining the triggering Ation for when the issue you're monitoring occurs.
+
+Now we're playing cat and mouse with our bugs and that is a lot of fun.
+
 
 ## What is a Flight Recorder?
 
@@ -48,11 +62,12 @@ redirected into a circular buffer, instead of streamed directly to a a backend.
 ## Special Characteristics of a Flight Recorder
 
 In Dynamic Telemetry, one one machine, there can be hundreds - if not thousands
-\- of Flight Recorders. Some are as small as a log record or two, others may
-contain megabytes of Logs, collected over days.
+of Flight Recorders. Some are as small as a log record or two, others may
+contain megabytes of Logs, any of which can be collected as instructed by an
+Action.
 
 The most special characteristic of a Flight Recorder, is that each can be
-uniquely identified by a dedicated tag or name. This allows for quick
+***uniquely identified*** by a dedicated tag or name. This allows for quick
 recognition among multiple data sources and ensures streamlined retrieval when
 logs need to be collected by an Action.
 
@@ -109,16 +124,18 @@ periods, ensuring that all relevant data is available for analysis when needed.
 ## Interesting Applications of Flight Recorders
 
 Flight Recorders are an extremely interesting and fun concept. As you gain
-proficiency in using them, you'll find applications everywhere.
+proficiency in using them, you'll find applications everywhere. They offer a
+unique way to capture and analyze telemetry data, providing insights that are
+not possible with traditional logging methods.
 
-Blur some of this author's favorite uses.
+Below are some of our favorite applications:
 
-### Information leading into a process crash
+### Recording Information leading into a process crash
 
 {% include-markdown "./Applications.FlightRecorder.PriorToCrash.document.md",
 start="## Scenario Summary", end="## Scenario Expansion" %}
 
-### Memory Leak Tracking
+### Tracking Memory Leaks
 
 {% include-markdown "./Applications.FlightRecorder.MemoryLeak.document.md",
 start="## Scenario Summary", end="## Scenario Expansion" %}
