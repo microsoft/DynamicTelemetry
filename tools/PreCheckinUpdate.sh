@@ -41,5 +41,6 @@ echo "Building bound contents; in docx, pdf, and epub"
 pandoc ./bound.md --toc --toc-depth 6 --epub-cover-image=../orig_media/DynamicTelemetry.CoPilot.Image.png -o /out/bound/epub_$fileName.epub
 pandoc ./bound.md -o /out/bound/$fileName.pdf  --toc --toc-depth 6 -N -V geometry:margin=0.25in -V papersize=a5
 pandoc ./bound.md -o /out/bound/$fileName.docx
+cp ./bound.md /out/bound
 
 echo "Done!"
