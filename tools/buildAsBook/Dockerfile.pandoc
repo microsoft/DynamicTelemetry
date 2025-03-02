@@ -84,6 +84,8 @@ RUN apt-get install -y -q git
 RUN git clone https://github.com/chgray/CDocs /Source/CDocs
 RUN dotnet build /Source/CDocs/tools/CDocsMarkdownCommentRender
 ENV PATH=$PATH:/Source/CDocs/tools/CDocsMarkdownCommentRender/bin/Debug/net8.0
+RUN apt-get install -y -q podman
+
 
 RUN apt-get install -y -q podman
 
