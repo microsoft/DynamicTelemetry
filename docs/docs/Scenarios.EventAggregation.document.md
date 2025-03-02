@@ -3,12 +3,5 @@ author: "Chris Gray"
 status: ReviewLevel1
 ---
 
-# Coming Soon
+# Event Aggregation and Suppression : Coming Soon
 
-## Suppressing a chatty Event, by aggregating it into a new Metric
-
-## Introduction
-
-## Option 1 : Outright Suppression
-
-## Option 2 : Converting to Metric

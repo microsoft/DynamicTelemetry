@@ -3,7 +3,7 @@ author: "Chris Gray"
 status: ReviewLevel1b
 ---
 
-# DynamicTelemetry Philosophy
+# Dynamic Telemetry Philosophy
 
 DynamicTelemetry is an articulation of the embodiment of a suite of
 Observability tools, designed to manage, control, and reshape telemetry in
@@ -22,7 +22,7 @@ comprehensive spiritual guide, some readers might find it beneficial to start
 with the usage [scenarios](./Scenarios.Overview.document.md) to get a better
 understanding of the system.
 
-## DynamicTelemetry, in a nutshell
+## Dynamic Telemetry, in a nutshell
 
 [Demos](./Demos.1.DropChattyLog.md) are a great way to go hands on with
 DynamicTelemetry, but before diving in to the complex realities DynamicTelemetry
