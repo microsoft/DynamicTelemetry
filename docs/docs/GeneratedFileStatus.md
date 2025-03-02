@@ -130,10 +130,3 @@ status: Level5
 | [../docs/PositionPaper.DurableIds_StructuredPayloads.document.md](../docs/PositionPaper.DurableIds_StructuredPayloads.document.md)  | 1242|
 
 
-## Level1 ---
-
-| File | Word Count |
-|------|------------|
-| [../docs/bound.md](../docs/bound.md)  | 24241|
-
-
