@@ -56,7 +56,7 @@ def on_page_markdown(markdown: str, page: Page, config: MkDocsConfig, **kwargs) 
         ret += "\n\n"
         ret += "    Your feedback and suggestions on this document are highly encouraged!\n\n"
         ret += "    *Please:*\n\n"
-        ret += "    1. Open [this Git Hub Pull Request](https://github.com/microsoft/DynamicTelemetry/pull/26/)\n\n"
+        ret += "    1. Open [this Git Hub Pull Request](https://github.com/microsoft/DynamicTelemetry/pull/28/)\n\n"
         ret += "    1. Locate this file ( **" + page.file.src_path + "**)\n\n"
         ret += "    1. Add Comments! :)\n\n"
         ret += "\n\n"
