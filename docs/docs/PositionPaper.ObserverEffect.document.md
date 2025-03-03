@@ -99,4 +99,3 @@ architecture section.
 Implementations of Dynamic Telemetry must clearly communicate these requirements
 at the configuration deployment stage using suitable gates, deployment rings,
 and communication systems for the hosting environment.
-
