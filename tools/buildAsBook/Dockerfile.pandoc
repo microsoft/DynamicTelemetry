@@ -86,9 +86,11 @@ RUN apt-get install -y -q git
 ENV PATH=$PATH:/Source/CDocs/tools/CDocsMarkdownCommentRender/bin/Debug/net8.0
 RUN apt-get update
 RUN apt-get install -y -q podman
-
-
 RUN apt-get install -y -q tmux
 RUN apt-get install -y -q python3.10-venv
+
+
+RUN mkdir /mkdocs_python
+RUN python3 -m venv /mkdocs_python
 
 WORKDIR /data/tools/buildAsBook

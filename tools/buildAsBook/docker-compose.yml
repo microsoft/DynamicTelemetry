@@ -12,11 +12,21 @@ services:
       - devdir:/root:rw
       - c:\DevDir:/devdir_ro:ro
       - ./source_cache:/Source:rw
+
+      #- ../..:/data:ro
+      #- ../../docs/orig_media:/out/orig_media:rw
+      #- ../../bound_docs:/out/bound_docs:rw
+      #- ../..:/data_rw:rw
+      #- ../../bound:/out/bound:rw
+
       - ../..:/data:ro
-      - ../../docs/orig_media:/out/orig_media:rw
-      - ../../bound_docs:/out/bound_docs:rw
-      - ../..:/data_rw:rw
-      - ../../bound:/out/bound:rw
+      - /data/docs/orig_media
+      - ../../docs/orig_media:/data/docs/orig_media:rw
+      - /data/docs/bound_docs
+      - /data/bound
+      - ../../bound/bound_docs:/data/docs/bound_docs:rw
+      - ../../bound:/data/bound:rw
+
     stdin_open: true
     tty: true
 

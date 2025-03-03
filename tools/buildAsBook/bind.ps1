@@ -2,7 +2,7 @@ $ErrorActionPreference = 'Break'
 
 Write-Host "Binding Docs............."
 
-cd ../../docs/docs
+cd /data/docs/docs
 
 ls
 
@@ -12,40 +12,40 @@ $env:CDOCS_DB = $DB_DIR
 
 $md = (Get-Content ../../mkdocs.yml)
 
-if (!(Test-Path "/out/bound_docs" -PathType Container))
+if (!(Test-Path "/data/docs/bound_docs" -PathType Container))
 {
-	New-Item "/out/bound_docs" -type directory
+	New-Item "/data/docs/bound_docs" -type directory
 }
-if (Test-Path "/out/bound_docs/bind.files")
+if (Test-Path "/data/docs/bound_docs/bind.files")
 {
-	Remove-Item "/out/bound_docs/bind.files"
-}
-
-if (Test-Path "/out/bound_docs/title.txt")
-{
-	Remove-Item "/out/bound_docs/title.txt"
+	Remove-Item "/data/docs/bound_docs/bind.files"
 }
 
-if (Test-Path "/out/bound_docs\title.txt")
+if (Test-Path "/data/docs/bound_docs/title.txt")
 {
-	Remove-Item "/out/bound_docs\title.txt"
+	Remove-Item "/data/docs/bound_docs/title.txt"
 }
-Add-Content /out/bound_docs\title.txt "---"
-Add-Content /out/bound_docs\title.txt "title: Dynamic Telemetry $(Get-Date)"
-Add-Content /out/bound_docs\title.txt "author: Chris Gray at.al"
-Add-Content /out/bound_docs\title.txt "date: $(Get-Date)"
-Add-Content /out/bound_docs\title.txt "---"
+
+if (Test-Path "/data/docs/bound_docs\title.txt")
+{
+	Remove-Item "/data/docs/bound_docs\title.txt"
+}
+Add-Content /data/docs/bound_docs\title.txt "---"
+Add-Content /data/docs/bound_docs\title.txt "title: Dynamic Telemetry $(Get-Date)"
+Add-Content /data/docs/bound_docs\title.txt "author: Chris Gray at.al"
+Add-Content /data/docs/bound_docs\title.txt "date: $(Get-Date)"
+Add-Content /data/docs/bound_docs\title.txt "---"
 
 # Copy Everything; just so our Includes work
 Write-Host ""
-Write-Host "Copying all doc files into /out/bound_docs, for processing"
+Write-Host "Copying all doc files into /data/docs/bound_docs, for processing"
 Write-Host ""
-Copy-Item -Path ./* -Destination /out/bound_docs -Recurse
+Copy-Item -Path ./* -Destination /data/docs/bound_docs -Recurse
 Write-Host "Copy Complete"
 
 
 try {
-	cd /out
+	cd /data/docs
 	$inNav = $false
 	foreach($file in $md)
 	{

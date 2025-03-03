@@ -7,18 +7,29 @@ if [ ! -d "/Source/CDocs" ]; then
     git clone https://github.com/chgray/CDocs /Source/CDocs
     cd /Source/CDocs
     git checkout user/chgray/update_ubuntu
-    cd /Source/CDocs/tools/CDocsMarkdownCommentRender
-    dotnet build .
 fi
 
-if [ ! -f "/out/.CDocs.config" ]; then
-    touch /out/.CDocs.config
+cd /Source/CDocs/tools/CDocsMarkdownCommentRender
+dotnet build .
+
+
+if [ ! -d "/mkdocs_python" ]; then
+    echo "ERROR: /mkdocs_python not found"
+    exit 1
 fi
+
+#
+# Setup the environment
+source /mkdocs_python/bin/activate
+export CDOCS_FILTER=1
+export PATH=$PATH:/Source/CDocs/tools/CDocsMarkdownCommentRender/bin/Debug/net8.0
+
+
 
 #
 # READ-WRITE Update Status and Probes
 #
-cd /data_rw/docs/docs
+cd /data/docs/docs
 
 echo "Updating Status..."
 python3 ../../tools/_CalculateStatus.py
@@ -37,7 +48,7 @@ echo "Binding and generating TOC"
 pwsh ../../tools/buildAsBook/bind.ps1
 
 
-cd /out/bound_docs
+cd /data/docs/bound_docs
 dos2unix ./bind.files
 pandoc -i $(cat ./bind.files) -o ./_bound.tmp.md
 
@@ -54,13 +65,11 @@ cat ./title.txt ./_bound.tmp.md | grep -v mp4 > ./bound.md
 
 echo "Building bound contents; in docx, pdf, and epub"
 
-export CDOCS_FILTER=1
-export PATH=$PATH:/Source/CDocs/tools/CDocsMarkdownCommentRender/bin/Debug/net8.0
 
-pandoc ./bound.md --toc --toc-depth 6 --epub-cover-image=../orig_media/DynamicTelemetry.CoPilot.Image.png -o /out/bound/epub_$fileName.epub --filter CDocsMarkdownCommentRender
-pandoc ./bound.md -o /out/bound/$fileName.pdf  --toc --toc-depth 6 -N -V geometry:margin=0.25in -V papersize=a5 --filter CDocsMarkdownCommentRender
-pandoc ./bound.md -o /out/bound/$fileName.docx --filter CDocsMarkdownCommentRender
+pandoc ./bound.md --toc --toc-depth 6 --epub-cover-image=../orig_media/DynamicTelemetry.CoPilot.Image.png -o /data/bound/epub_$fileName.epub --filter CDocsMarkdownCommentRender
+pandoc ./bound.md -o /data/bound/$fileName.pdf  --toc --toc-depth 6 -N -V geometry:margin=0.25in -V papersize=a5 --filter CDocsMarkdownCommentRender
+pandoc ./bound.md -o /data/bound/$fileName.docx --filter CDocsMarkdownCommentRender
 
-cp ./bound.md /out/bound
+cp ./bound.md /data/bound
 
 echo "Done!"
