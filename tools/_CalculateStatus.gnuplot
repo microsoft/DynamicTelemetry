@@ -18,4 +18,4 @@ set grid ytics
 
 # Read data from the CSV file
 set datafile separator ","
-plot '/out/Status.csv' using 2:xtic(1) title 'Data' linecolor rgb "blue"
+plot '/data/bound/Status.csv' using 2:xtic(1) title 'Data' linecolor rgb "blue"

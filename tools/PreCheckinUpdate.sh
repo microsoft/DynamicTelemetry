@@ -21,9 +21,6 @@ fi
 #
 # Setup the environment
 source /mkdocs_python/bin/activate
-export CDOCS_FILTER=1
-export PATH=$PATH:/Source/CDocs/tools/CDocsMarkdownCommentRender/bin/Debug/net8.0
-
 
 
 #

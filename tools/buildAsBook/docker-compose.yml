@@ -19,13 +19,14 @@ services:
       #- ../..:/data_rw:rw
       #- ../../bound:/out/bound:rw
 
-      - ../..:/data:ro
+      - ../..:/data:rw
       - /data/docs/orig_media
       - ../../docs/orig_media:/data/docs/orig_media:rw
+      #- /data/docs/bound_docs
       - /data/docs/bound_docs
-      - /data/bound
-      - ../../bound/bound_docs:/data/docs/bound_docs:rw
       - ../../bound:/data/bound:rw
+      - ../../bound_docs:/data/docs/bound_docs:rw
+
 
     stdin_open: true
     tty: true

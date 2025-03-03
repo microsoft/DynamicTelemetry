@@ -93,4 +93,6 @@ RUN apt-get install -y -q python3.10-venv
 RUN mkdir /mkdocs_python
 RUN python3 -m venv /mkdocs_python
 
+ENV CDOCS_FILTER=1
+
 WORKDIR /data/tools/buildAsBook
