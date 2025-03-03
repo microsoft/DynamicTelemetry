@@ -1519,24 +1519,6 @@ Licensed under the MIT License. -->
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#onbox-architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      OnBox Architecture
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tenants" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tenants
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1774,7 +1756,7 @@ Licensed under the MIT License. -->
             
   
   <span class="md-ellipsis">
-    Breakpoint Probes
+    Dynamic Probes
   </span>
   
 
@@ -1784,7 +1766,7 @@ Licensed under the MIT License. -->
         <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_2_2_2_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2_2_2_1">
             <span class="md-nav__icon md-icon"></span>
-            Breakpoint Probes
+            Dynamic Probes
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3828,6 +3810,8 @@ Licensed under the MIT License. -->
       
         
       
+        
+      
     
     
       
@@ -4531,6 +4515,34 @@ Licensed under the MIT License. -->
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PositionPaper.ThinkLike.RTOS.document/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Borrows from RTOS
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--ReviewLevel2"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -4718,6 +4730,13 @@ Licensed under the MIT License. -->
   <span class="md-ellipsis">
     Ideas
   </span>
+  
+    
+  
+  
+    <span class="md-status md-status--ReviewLevel1"></span>
+  
+
   
 
       </a>
@@ -5800,7 +5819,7 @@ Licensed under the MIT License. -->
   
   
     <li class="md-nav__item">
-      <a href="../GeneratedFileStatus/" class="md-nav__link">
+      <a href="../../orig_media/GeneratedFileStatus/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5879,24 +5898,6 @@ Licensed under the MIT License. -->
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#onbox-architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      OnBox Architecture
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tenants" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tenants
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -5949,6 +5950,9 @@ compatibility with user privacy and security needs. Simultaneously,
 DynamicTelemetry provides businesses with the ability to adjust their
 Observability based on necessity. This allows resources to be allocated when
 needed and restricts telemetry when it's not required.</p>
+<p>By using Dynamic Telemetry, developers will have less guessing to do when
+deciding how much logging verbosity to utilize, as they can late bind the
+decision by deploying refining telemetry after code deployment.</p>
 <p>This document aims to delve into the philosophy of DynamicTelemetry, exploring
 the intricate balance between complex realities. While this document serves as a
 comprehensive spiritual guide, some readers might find it beneficial to start
@@ -5956,27 +5960,21 @@ with the usage <a href="../Scenarios.Overview.document/">scenarios</a> to get a 
 understanding of the system.</p>
 <h2 id="dynamic-telemetry-in-a-nutshell">Dynamic Telemetry, in a nutshell</h2>
 <p><a href="../Demos.1.DropChattyLog/">Demos</a> are a great way to go hands on with
-DynamicTelemetry, but before diving in to the complex realities DynamicTelemetry
-seeks to resolve, it's important to have a general understanding of usage.</p>
+DynamicTelemetry, but before diving in to the complex realities
+DynamicTelemetry, it's important to have a general understanding of usage.</p>
 <p>Image yourself as a <a href="../Persona_Developer.document/">DEVELOPER</a>. You're focused
 on the latest business needs from your
 <a href="../Persona_ProjectManager.document/">PROJECTMANAGER</a>. You're worried about
-solving business problems, keeping costs in check,</p>
-<h2 id="onbox-architecture">OnBox Architecture</h2>
-<p><img alt="" src="../../orig_media/Architecture.OnBox.drawio.png"></p>
-<h2 id="tenants">Tenants</h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>--&gt;
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>1. **Leverage existing technology**, before creating new
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>1. Be **philosophically indifferent to tooling**, operating systems, or
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>   environment
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>1. **Offer recommendable decisions**, make decisions, to those who ask
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>1. By intent do not modify system state and minimize the Observer Effect
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>1. Be clear where the Observer Effect can impact, with clear awareness and
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>   options for mitigation
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>&lt;!--
-</span></code></pre></div></div>
+solving business problems, keeping costs in check, being able to diagnose after
+deployment (and in crisis) as well as preserving the privacy and security of
+your users content.</p>
+<p>Many of these items are mutually exclusive. For example, if you add more logs,
+you can diagnose issues better. However, this will increase costs and may
+introduce privacy and security risks.</p>
+<p>Dynamic Telemetry treats your telemetry like water in a holistic pipeline that
+can be filtered, routed, stored, and accessed on demand. Even better, your logs
+can actively participate in the process. They can be used to detect problems,
+adjust the verbosity of other logs, or even trigger advanced data collections.</p></div>
 
 
 

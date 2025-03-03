@@ -1676,13 +1676,13 @@ Licensed under the MIT License. -->
 </li>
       
         <li class="md-nav__item">
-  <a href="#course-types-of-probes" class="md-nav__link">
+  <a href="#probe-types" class="md-nav__link">
     <span class="md-ellipsis">
-      Course Types of Probes
+      Probe Types
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Course Types of Probes">
+    <nav class="md-nav" aria-label="Probe Types">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2027,7 +2027,7 @@ Licensed under the MIT License. -->
             
   
   <span class="md-ellipsis">
-    Breakpoint Probes
+    Dynamic Probes
   </span>
   
 
@@ -2037,7 +2037,7 @@ Licensed under the MIT License. -->
         <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_2_2_2_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2_2_2_1">
             <span class="md-nav__icon md-icon"></span>
-            Breakpoint Probes
+            Dynamic Probes
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -4081,6 +4081,8 @@ Licensed under the MIT License. -->
       
         
       
+        
+      
     
     
       
@@ -4784,6 +4786,34 @@ Licensed under the MIT License. -->
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PositionPaper.ThinkLike.RTOS.document/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Borrows from RTOS
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--ReviewLevel2"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -4971,6 +5001,13 @@ Licensed under the MIT License. -->
   <span class="md-ellipsis">
     Ideas
   </span>
+  
+    
+  
+  
+    <span class="md-status md-status--ReviewLevel1"></span>
+  
+
   
 
       </a>
@@ -6053,7 +6090,7 @@ Licensed under the MIT License. -->
   
   
     <li class="md-nav__item">
-      <a href="../GeneratedFileStatus/" class="md-nav__link">
+      <a href="../../orig_media/GeneratedFileStatus/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6133,13 +6170,13 @@ Licensed under the MIT License. -->
 </li>
       
         <li class="md-nav__item">
-  <a href="#course-types-of-probes" class="md-nav__link">
+  <a href="#probe-types" class="md-nav__link">
     <span class="md-ellipsis">
-      Course Types of Probes
+      Probe Types
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Course Types of Probes">
+    <nav class="md-nav" aria-label="Probe Types">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -6463,7 +6500,7 @@ of DynamicTelemetry, enabling it to monitor system performance, detect
 anomalies, and provide valuable insights for system optimization. The use of
 probes underscores DynamicTelemetry's commitment to maintaining system integrity
 while providing a robust and comprehensive monitoring solution.</p>
-<h2 id="course-types-of-probes">Course Types of Probes</h2>
+<h2 id="probe-types">Probe Types</h2>
 <h3 id="static-probes">Static probes</h3>
 <p>These tools are always active, monitoring the system continuously. They pose
 less risk but consume more resources. Examples include ETW on Windows, syslog,
@@ -6512,8 +6549,8 @@ of providing valuable, non-disruptive data for system monitoring and analysis.</
 enabled or disabled as needed. This flexibility is crucial in a production
 environment where unnecessary data collection can lead to performance
 degradation.</p>
-<p>When a probe is disabled, it remains dormant within the system, not contributing
-any data or consuming any resources. However, the true power of probes comes to
+<p>When a probe is disabled, it remains dormant within the system, minimally
+contributing to resource usage. However, the true power of probes comes to
 light when they are enabled. With DynamicTelemetry, users can dynamically enable
 a probe when they need to extract specific information from the system. This
 process is quick and efficient, allowing users to gather valuable data on-demand
@@ -6524,13 +6561,18 @@ the return value for a particular function. This data is then sent to Open
 Telemetry for further processing and analysis.</p>
 <p>The role of DynamicTelemetry in this process is to facilitate the dynamic
 enabling of probes and the initial extraction of data. Once the data is emitted
-to OpenTelemetry, DynamicTelemetry's role ends. The data is then handled by the
-standard egressing mechanisms of OpenTelemetry, which could involve various
-processes such as aggregation, counting, or direct emission as a log.</p>
+to OpenTelemetry, DynamicTelemetry's becomes special pipe fitting in the standard
+OTLP/gRPC pipelines. The data is then handled by the standard egressing
+mechanisms of OpenTelemetry, which could involve various processes such as
+aggregation, counting, or direct emission as a log.</p>
 <p>This dynamic and on-demand use of probes makes DynamicTelemetry a powerful tool
 for real-time system monitoring and data extraction. It allows users to gather
 rich, valuable data when they need it, providing insights that can help optimize
 system performance and troubleshoot issues.</p>
+<p>Best of all, if a probe (log) is not available, DynamicTelemetry offers the
+ability to dynamically add one. This feature ensures that users can always
+gather the necessary data by creating and enabling new probes on-the-fly,
+providing flexibility and comprehensive monitoring capabilities.</p>
 <h2 id="performance-impact-and-safeguards-of-probes-in-dynamictelemetry">Performance Impact and Safeguards of Probes in DynamicTelemetry</h2>
 <p>The use of probes in DynamicTelemetry can potentially impact system performance.
 This is primarily due to the frequent emission of logs, which could consume
@@ -6554,15 +6596,6 @@ and valuable data without compromising the performance of the system. This makes
 DynamicTelemetry a reliable tool for system monitoring and data analysis,
 capable of providing rich insights while maintaining system integrity and
 performance.</p>
-<p>ToDo:</p>
-<ul>
-<li>Risk vs. Perf axis</li>
-<li>Discuss operations that can occur to a probe</li>
-<li>Contrast a probe from a breakpoint</li>
-<li>Talk about how Logs/Traces can be used as probes</li>
-<li>Link to Observer Effect</li>
-<li>Link to Risk Levels</li>
-</ul>
 <h2 id="probe-characteristics">Probe Characteristics</h2>
 <ol>
 <li>
