@@ -24,7 +24,7 @@ zooming in on the area that failed and from there they will look into the
 logging of the subsystem looking for root cause.
 
 The systems aren't bad, but a problem emerges as the complexity of this system
-grows, espeically when multiple machines participate in one of the scenarios. As
+grows, especially when multiple machines participate in one of the scenarios. As
 the complexity grows many developers simply get frustrated and in some ways give
 up.
 
