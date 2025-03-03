@@ -44,7 +44,6 @@ logging, but through the use of adapters, can be other technologies like syslog,
 ETW, user_events, or even more dynamic emitters like kprobes, uprobes, eBPF, or
 dtrace.
 
-
 Actions, on the other hand, initiate specific operations. While they are
 designed to avoid altering the system state intentionally, they can be
 dynamically enabled or disabled. Typical actions might include enabling CPU
