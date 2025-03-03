@@ -6,7 +6,6 @@ status: ReviewLevel1b
 
 # Understanding Trace Horizons
 
-
 ![](../orig_media/TraceHorizons.banner.png)
 
 The concept of a trace horizon is straightforward. It refers to the amount of
@@ -55,7 +54,6 @@ Their options will include:
 1. [Filtering](./Scenarios.EventSuppression.document.md) out the chatty logs
 1. Converting the chatty logs into a [Metric](./Scenarios.ConvertLogsToMetrics.document.md)
 1. Increasing the memory dedicated to the Flight Recorder
-
 
 The key takeaway for this section is that the trace horizon is a critical aspect
 of Dynamic Telemetry.

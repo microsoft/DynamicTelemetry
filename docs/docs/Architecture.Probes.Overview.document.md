@@ -153,7 +153,6 @@ DynamicTelemetry a reliable tool for system monitoring and data analysis,
 capable of providing rich insights while maintaining system integrity and
 performance.
 
-
 ## Probe Characteristics
 
 1. Intentionally READ-ONLY; this is a 'hard and fast' rule in OpenTelemetry that

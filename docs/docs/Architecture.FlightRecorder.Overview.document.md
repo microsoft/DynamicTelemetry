@@ -41,7 +41,6 @@ defining the triggering Ation for when the issue you're monitoring occurs.
 
 Now we're playing cat and mouse with our bugs and that is a lot of fun.
 
-
 ## What is a Flight Recorder?
 
 Technically, a Flight Recorder comprises a ring buffer with fixed capacity,
