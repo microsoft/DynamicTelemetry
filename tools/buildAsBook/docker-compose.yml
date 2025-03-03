@@ -8,11 +8,23 @@ services:
     entrypoint: /bin/bash -c "cd /data/tools; ls; bash"
 
     volumes:
-      - ./build_cache/containers:/var/lib/containers:rw
-      - ./build_cache/CDocs:/Source/CDocs:rw
+      - container_caching:/var/lib/containers:rw
+      - devdir:/root:rw
+      - c:\DevDir:/devdir_ro:ro
+      - ./source_cache:/Source:rw
       - ../..:/data:ro
-      - ../../docs/orig_media:/out/orig_media:ro
+      - ../../docs/orig_media:/out/orig_media:rw
+      - ../../bound_docs:/out/bound_docs:rw
       - ../..:/data_rw:rw
       - ../../bound:/out/bound:rw
     stdin_open: true
     tty: true
+
+volumes:
+  container_caching:
+    external: true
+    name: counter_cache
+
+  devdir:
+      external: true
+      name: dev_dir
