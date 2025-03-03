@@ -105,7 +105,7 @@ nav:
             - Probes:
                 - Probe Overview: ./docs/Architecture.Probes.Overview.document.md
                 - Sample Probes:
-                    - Breakpoint Probes:
+                    - Dynamic Probes:
                         - Breakpoint: ./docs/Architecture.Probe.Breakpoint.document.md
                         - Linux:
                             - ptrace: ./docs/Architecture.Probe.ptrace.document.md
@@ -189,6 +189,7 @@ nav:
             - Procedural Nets: ./docs/PositionPaper.ProceduralizeNets.document.md
             - Locks and Throttles: ./docs/PositionPaper.LeafLevelLogging.document.md
             - Loose Schemas: ./docs/PositionPaper.SharingDataAmongStakeHoldersIsHard.document.md
+            - Borrows from RTOS : ./docs/PositionPaper.ThinkLike.RTOS.document.md
 
         - Interesting Applications:
             - Overview: ./docs/Applications.InterestingApplications.document.md

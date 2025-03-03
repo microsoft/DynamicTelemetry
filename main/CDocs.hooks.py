@@ -69,9 +69,12 @@ def on_page_markdown(markdown: str, page: Page, config: MkDocsConfig, **kwargs) 
         ret += "    ```cdocs\n"
         ret += "    https://microsoft.github.io/DynamicTelemetry/\n"
         ret += "    ```"
-        ret += "\n\n"
-        ret += "    Learn about overall document status\n"
-        ret += "        [here](./ReviewProcess.document.md)\n"
+
+        if not ("GeneratedFileStatus" in page.file.src_path):
+            ret += "\n\n"
+            ret += "    Learn about overall document status\n"
+            ret += "        [here](./ReviewProcess.document.md)\n"
+
         ret += "\n\n"
         ret += "    <img src=\"https://durableid-demo-a9byc5fwa7htc5h0.westus2-01.azurewebsites.net/?name=test.jpg&handler=LoadImageFile&pageName=" + encoded + "\"/>"
         ret += "\n\n"

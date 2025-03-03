@@ -48,7 +48,7 @@ dtrace.
 Actions, on the other hand, initiate specific operations. While they are
 designed to avoid altering the system state intentionally, they can be
 dynamically enabled or disabled. Typical actions might include enabling CPU
-sampling, collecting configurations, managing flight recorders, inducing memory
+sampling, collecting configurations, managing Flight Recorders, inducing memory
 dumps, and gathering other types of state data.
 
 When combined, Probes and Actions create a powerful mechanism to "cast nets"

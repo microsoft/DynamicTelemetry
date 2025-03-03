@@ -15,7 +15,7 @@ failure.
 
 In this capacity, it serves as an alternative and compliment to standard
 [Streaming](./PositionPaper.FileAndStreaming.document.md) Observability.  In
-fact, users of flight recorders. Typically report that their presence turns the
+fact, users of Flight Recorders. Typically report that their presence turns the
 frustrating act of debugging a live system into something a lot more fun and
 interactive, almost like a video game.
 

@@ -37,11 +37,11 @@ logging for errors dramatically spikes up.
 
 In this example, you've configured your filter to collect these logs into a
 fixed memory Flight Recorder where they remain until an issue triggers an
-.Action. These logs are stored in the Flight Recorder, where they stay until
-either the buffer wraps or the .Action emits the entire log into your
+Action. These logs are then stored in the Flight Recorder, where they stay until
+either the buffer wraps or the Action emits the entire log into your
 observability backends.
 
-When in .Action does trigger the egressing Flight Recorder. It'll go into your
+Should an Action trigger the egressing Flight Recorder. It'll go into your
 standard observability backends where your developers can enjoy a higher
 fidelity amount of logging than when operating in an nominal case.
 
