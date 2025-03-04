@@ -80,7 +80,7 @@ nav:
 
         - Reliability:
             - Overview : ./docs/Scenarios.Overview.Reliability.document.md
-            - Pillars:
+            - Testing Themes:
                 - Self Describing Production Code : ./docs/PositionPaper.SelfDescribingProductionCode.document.md
                 - Internal Audits of Production Code : ./docs/PositionPaper.InternalAuditsOfProductionCode.document.md
                 - External Audits of Production Code : ./docs/PositionPaper.ExternalAuditsOfProductionCode.document.md
@@ -99,12 +99,13 @@ nav:
 
     - Architecture:
         - Overview: ./docs/Architecture.Overview.document.md
-        - Key Concepts:
+
+        - Software Components:
             - Overview: ./docs/Architecture.KeyConstructs.Overview.document.md
             - Probes:
-                - Overview: ./docs/Architecture.Probes.Overview.document.md
+                - Probe Overview: ./docs/Architecture.Probes.Overview.document.md
                 - Sample Probes:
-                    - Breakpoint Probes:
+                    - Dynamic Probes:
                         - Breakpoint: ./docs/Architecture.Probe.Breakpoint.document.md
                         - Linux:
                             - ptrace: ./docs/Architecture.Probe.ptrace.document.md
@@ -119,7 +120,7 @@ nav:
                         - Windows:
                             - ETW: ./docs/Architecture.Probe.ETW.document.md
             - Flight Recorders:
-                - Overview: ./docs/Architecture.FlightRecorder.Overview.document.md
+                - Flight Recorder Overview: ./docs/Architecture.FlightRecorder.Overview.document.md
                 - Data Types:
                         - Streaming: ./docs/Architecture.Components.Streaming.Observability.document.md
                         - File Based: ./docs/Architecture.Components.FileBased.Observability.document.md
@@ -129,27 +130,11 @@ nav:
                         - Short Horizons: ./docs/Architecture.FlightRecorder.ShortHorizons.document.md
                         - Cubby Hole: ./docs/Architecture.FlightRecorder.CubbyHole.document.md
                         - Long Horizons: ./docs/Architecture.FlightRecorder.LongHorizons.document.md
-
-            - Actions:
-                - Overview: ./docs/Architecture.Action.Explanation.document.md
-                - Sample Actions:
-                    - PacketCapture: ./docs/Architecture.Action.PacketCapture.document.md
-                    - ConfigCollection: ./docs/Architecture.Action.ConfigCollection.document.md
-                    - CPUSample: ./docs/Architecture.Action.CPUSample.document.md
-                    - FileCollection: ./docs/Architecture.Action.FileCollection.document.md
-                    - FlightRecorder: ./docs/Architecture.Action.FlightRecorder.document.md
-                    - MemoryDump: ./docs/Architecture.Action.MemoryDump.document.md
-                    - ProcessExecution: ./docs/Architecture.Action.ProcessExecution.document.md
-                    - StateCollection: ./docs/Architecture.Action.StateCollection.document.md
-                    - Verbose Logs: ./docs/Architecture.Action.VerboseLogs.document.md
-
-
-        - Software Components:
-            - Overview: ./docs/Architecture.Components.Overview.document.md
-            - Filters and Routers: ./docs/Architecture.Components.FiltersAndRouters.document.md
+            - Filters and Routers:
+                - Filters / Routers Overview: ./docs/Architecture.Components.FiltersAndRouters.document.md
 
             - Processors :
-                - Overview: ./docs/Architecture.Components.Processor.Overview.document.md
+                - Processors Overview: ./docs/Architecture.Components.Processor.Overview.document.md
                 - Processor Types:
                     - Query Language : ./docs/Architecture.Components.Processor.QueryLanguage.document.md
                     - StateMachine : ./docs/Architecture.Components.Processor.StateMachine.document.md
@@ -162,6 +147,19 @@ nav:
                         - Kernel Observer: ./docs/Architecture.Components.Observer.Kernel.document.md
                         - External, on-box Observer: ./docs/Architecture.Components.Observer.External.OnBox.document.md
                         - External, off-box Observer: ./docs/Architecture.Components.Observer.External.OffBox.document.md
+
+            - Actions:
+                - Action Overview: ./docs/Architecture.Action.Explanation.document.md
+                - Sample Actions:
+                    - PacketCapture: ./docs/Architecture.Action.PacketCapture.document.md
+                    - ConfigCollection: ./docs/Architecture.Action.ConfigCollection.document.md
+                    - CPUSample: ./docs/Architecture.Action.CPUSample.document.md
+                    - FileCollection: ./docs/Architecture.Action.FileCollection.document.md
+                    - FlightRecorder: ./docs/Architecture.Action.FlightRecorder.document.md
+                    - MemoryDump: ./docs/Architecture.Action.MemoryDump.document.md
+                    - ProcessExecution: ./docs/Architecture.Action.ProcessExecution.document.md
+                    - StateCollection: ./docs/Architecture.Action.StateCollection.document.md
+                    - Verbose Logs: ./docs/Architecture.Action.VerboseLogs.document.md
 
     - Appendix:
         - Overview: ./docs/PositionPaper.PositionPapers.Overview.document.md
@@ -191,6 +189,7 @@ nav:
             - Procedural Nets: ./docs/PositionPaper.ProceduralizeNets.document.md
             - Locks and Throttles: ./docs/PositionPaper.LeafLevelLogging.document.md
             - Loose Schemas: ./docs/PositionPaper.SharingDataAmongStakeHoldersIsHard.document.md
+            - Borrows from RTOS : ./docs/PositionPaper.ThinkLike.RTOS.document.md
 
         - Interesting Applications:
             - Overview: ./docs/Applications.InterestingApplications.document.md
@@ -198,6 +197,7 @@ nav:
 
         - Upcoming and Proposed Cuts:
             - Upcoming:
+                - Ideas : ./docs/Ideas.ToExpandOn.document.md
                 - Design Patterns:
                     - Overview: ./docs/Architecture.DesignPatterns.DesignPatterns.Overview.document.md
                     - Primitives:
@@ -229,7 +229,7 @@ nav:
             - Rude Q&A : ./docs/Rude_Q_and_A.md
             - Document Review :
                 - Process : ./docs/ReviewProcess.document.md
-                - Status : ./docs/GeneratedFileStatus.md
+                - Status : ./orig_media/GeneratedFileStatus.md
 
 
 

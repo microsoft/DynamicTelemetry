@@ -60,7 +60,7 @@ diagnostics. Its use is typically reserved for complex systems where
 understanding and troubleshooting extended operations is crucial.
 
 However, this does not mean that a Long Horizon Flight Recorder is of no value.
-There are some situations where it can be beneficial:
+There are some situations where one can be beneficial:
 
 1. When a Long Horizon Flight Recorder is dynamically
    [created and triggered](./Architecture.Action.FlightRecorder.document.md)
@@ -95,11 +95,10 @@ Common Use Cases:
 - Capturing persistent system logs for embedded or industrial software that runs
   24/7.
 
-By limiting their scope to just the essential data, Long Horizon recorders help
-organizations avoid overwhelming (or undesirable) storage costs while still
-offering critical coverage. They also provide a "rolling window" of vital
-analytics, maintaining an ongoing record to pinpoint when and why an anomaly
-occurred.
+By limiting their scope to just the essential data, Long Horizon recorders avoid
+overwhelming (or undesirable) storage costs while still offering critical
+coverage. They also provide a "rolling window" of vital analytics, maintaining
+an ongoing record to pinpoint when and why an anomaly occurred.
 
 ## When You Should Consider a Long Horizon Flight Recorder
 

@@ -31,7 +31,7 @@ anomalies, and provide valuable insights for system optimization. The use of
 probes underscores DynamicTelemetry's commitment to maintaining system integrity
 while providing a robust and comprehensive monitoring solution.
 
-## Course Types of Probes
+## Probe Types
 
 ### Static probes
 
@@ -39,7 +39,7 @@ These tools are always active, monitoring the system continuously. They pose
 less risk but consume more resources. Examples include ETW on Windows, syslog,
 LTTG user events, and perf on Linux.
 
-### Dynamic probes
+### Dynamic Probes
 
 On the other hand, Dynamic Telemetry probes can be enabled or disabled as
 required. They offer greater flexibility and can quickly provide comprehensive
@@ -96,8 +96,8 @@ enabled or disabled as needed. This flexibility is crucial in a production
 environment where unnecessary data collection can lead to performance
 degradation.
 
-When a probe is disabled, it remains dormant within the system, not contributing
-any data or consuming any resources. However, the true power of probes comes to
+When a probe is disabled, it remains dormant within the system, minimally
+contributing to resource usage. However, the true power of probes comes to
 light when they are enabled. With DynamicTelemetry, users can dynamically enable
 a probe when they need to extract specific information from the system. This
 process is quick and efficient, allowing users to gather valuable data on-demand
@@ -110,14 +110,20 @@ Telemetry for further processing and analysis.
 
 The role of DynamicTelemetry in this process is to facilitate the dynamic
 enabling of probes and the initial extraction of data. Once the data is emitted
-to OpenTelemetry, DynamicTelemetry's role ends. The data is then handled by the
-standard egressing mechanisms of OpenTelemetry, which could involve various
-processes such as aggregation, counting, or direct emission as a log.
+to OpenTelemetry, DynamicTelemetry's becomes special pipe fitting in the standard
+OTLP/gRPC pipelines. The data is then handled by the standard egressing
+mechanisms of OpenTelemetry, which could involve various processes such as
+aggregation, counting, or direct emission as a log.
 
 This dynamic and on-demand use of probes makes DynamicTelemetry a powerful tool
 for real-time system monitoring and data extraction. It allows users to gather
 rich, valuable data when they need it, providing insights that can help optimize
 system performance and troubleshoot issues.
+
+Best of all, if a probe (log) is not available, DynamicTelemetry offers the
+ability to dynamically add one. This feature ensures that users can always
+gather the necessary data by creating and enabling new probes on-the-fly,
+providing flexibility and comprehensive monitoring capabilities.
 
 ## Performance Impact and Safeguards of Probes in DynamicTelemetry
 
@@ -146,15 +152,6 @@ and valuable data without compromising the performance of the system. This makes
 DynamicTelemetry a reliable tool for system monitoring and data analysis,
 capable of providing rich insights while maintaining system integrity and
 performance.
-
-ToDo:
-
-- Risk vs. Perf axis
-- Discuss operations that can occur to a probe
-- Contrast a probe from a breakpoint
-- Talk about how Logs/Traces can be used as probes
-- Link to Observer Effect
-- Link to Risk Levels
 
 ## Probe Characteristics
 

@@ -56,7 +56,7 @@ def on_page_markdown(markdown: str, page: Page, config: MkDocsConfig, **kwargs) 
         ret += "\n\n"
         ret += "    Your feedback and suggestions on this document are highly encouraged!\n\n"
         ret += "    *Please:*\n\n"
-        ret += "    1. Open [this Git Hub Pull Request](https://github.com/microsoft/DynamicTelemetry/pull/6/)\n\n"
+        ret += "    1. Open [this Git Hub Pull Request](https://github.com/microsoft/DynamicTelemetry/pull/28/)\n\n"
         ret += "    1. Locate this file ( **" + page.file.src_path + "**)\n\n"
         ret += "    1. Add Comments! :)\n\n"
         ret += "\n\n"
@@ -65,14 +65,16 @@ def on_page_markdown(markdown: str, page: Page, config: MkDocsConfig, **kwargs) 
         ret += "    ```cdocs\n"
         ret += "    http://microsoft.github.io/DynamicTelemetry/" + page.file.url + "\n"
         ret += "    ```\n\n"
-
         ret += "    *If you'd prefer to give us a PR*\n\n"
         ret += "    ```cdocs\n"
         ret += "    https://microsoft.github.io/DynamicTelemetry/\n"
         ret += "    ```"
-        ret += "\n\n"
-        ret += "    Learn about overall document status\n"
-        ret += "        [here](./ReviewProcess.document.md)\n"
+
+        if not ("GeneratedFileStatus" in page.file.src_path):
+            ret += "\n\n"
+            ret += "    Learn about overall document status\n"
+            ret += "        [here](./ReviewProcess.document.md)\n"
+
         ret += "\n\n"
         ret += "    <img src=\"https://durableid-demo-a9byc5fwa7htc5h0.westus2-01.azurewebsites.net/?name=test.jpg&handler=LoadImageFile&pageName=" + encoded + "\"/>"
         ret += "\n\n"

@@ -1,0 +1,98 @@
+
+FROM ubuntu:22.04
+LABEL maintainer chgray@gmail.com
+
+# ------------------------------------------------------------------------------
+#
+# Helpful commands: this section is the 'junk drawer' of handy command
+#    one could argue they shouldnt be here
+#
+# {docker, podman} build -f Dockerfile.pandoc -t "dynamictelemetry/dynamictelemetry:pandoc" .
+
+ENV TZ=America/Los_Angeles
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US:en
+ENV LC_ALL en_US.UTF-8
+
+RUN apt-get update \
+    && apt-get -y install sudo
+
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone \
+    && export DEBIAN_FRONTEND=noninteractive \
+    && apt-get update \
+    && apt-get install -y -q \
+    python3-pip \
+    libnss3-dev \
+    npm \
+    wget \
+    yarn
+
+RUN apt-get update
+
+RUN apt-get install -y -q cups \
+    libxss1 \
+    aptitude \
+    libasound2-dev \
+    libatk1.0-0 \
+    libatk-bridge2.0-0 \
+    libpangocairo-1.0-0 \
+    libgtk-3-0
+
+RUN apt-get install -y -q yarn
+RUN apt-get install -y -q libgbm-dev
+RUN apt-get install -y -q cmake \
+    cabal-install \
+    git
+
+
+RUN apt-get install -y -q locales
+RUN locale-gen en_US.UTF-8
+
+RUN apt-get install -y -q dos2unix
+RUN apt-get install -y -q python3-matplotlib
+RUN apt-get install -y -q python3-pip
+RUN DEBIAN_FRONTEND=noninteractive apt-get install keyboard-configuration
+
+RUN apt-get install -y -q gnuplot
+
+RUN wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+
+ARG PROC_ARCH=arm64
+RUN echo "-----------------------------------------"
+RUN echo $PROC_ARCH
+
+RUN wget https://github.com/jgm/pandoc/releases/download/3.3/pandoc-3.3-1-$PROC_ARCH.deb
+RUN dpkg -i ./pandoc-3.3-1-$PROC_ARCH.deb
+
+RUN apt-get install -y -q texlive-latex-base texlive-fonts-recommended texlive-latex-recommended
+
+
+RUN wget https://dot.net/v1/dotnet-install.sh
+RUN chmod +x ./dotnet-install.sh
+RUN ./dotnet-install.sh -c Current
+RUN ./dotnet-install.sh -c LTS
+RUN ./dotnet-install.sh --channel 7.0
+RUN ./dotnet-install.sh --channel 8.0
+
+ENV DOTNET_ROOT=/root/.dotnet
+ENV PATH=$PATH:$DOTNET_ROOT
+ENV PATH=$PATH:$DOTNET_ROOT/tools
+
+RUN dotnet tool install powershell --global
+
+RUN apt-get install -y -q git
+#RUN git clone https://github.com/chgray/CDocs /Source/CDocs
+#RUN dotnet build /Source/CDocs/tools/CDocsMarkdownCommentRender
+ENV PATH=$PATH:/Source/CDocs/tools/CDocsMarkdownCommentRender/bin/Debug/net8.0
+RUN apt-get update
+RUN apt-get install -y -q podman
+RUN apt-get install -y -q tmux
+RUN apt-get install -y -q python3.10-venv
+
+
+RUN mkdir /mkdocs_python
+RUN python3 -m venv /mkdocs_python
+
+ENV CDOCS_FILTER=1
+
+WORKDIR /data/tools/buildAsBook
