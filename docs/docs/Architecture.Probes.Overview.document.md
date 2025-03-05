@@ -148,7 +148,7 @@ of the system. This makes DynamicTelemetry a reliable tool for system
 monitoring and data analysis, capable of providing rich insights while
 maintaining system integrity and performance.
 
-### Risk Taxomy
+### Risk Taxonomy
 
 #### Understanding Privacy Risks
 
