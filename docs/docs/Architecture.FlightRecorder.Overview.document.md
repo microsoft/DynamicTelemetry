@@ -90,7 +90,7 @@ they might not be retained long-term.
 This solution can provide both performance benefits and cost savings. To learn
 more, refer to the position papers on
 [scarcity](./PositionPaper.ScarcityAndHumans.md) and
-[triggered Flight Recorders](./PositionPaper.TriggeredFlightRecorder.document.md).
+[triggered Flight Recorders](./PositionPaper.TriggeredCollections.document.md).
 
 The basic steps to collect a Flight Recorder are to know through some mechanism
 its identifier and then to use a triggering action to collect it.
@@ -147,4 +147,3 @@ start="## Scenario Summary", end="## Scenario Expansion" %}
 
 1. [Scarcity and Humans](./PositionPaper.ScarcityAndHumans.md)
 
-1. [triggered Flight Recorders](./PositionPaper.TriggeredFlightRecorder.document.md).

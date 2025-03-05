@@ -5,7 +5,7 @@ status: ReviewLevel2
 
 # Probe Explanation
 
-In DynamicTelemetry a "[PROBE](./Definitions.document.md#PROBE)" is the base
+In DynamicTelemetry a "[PROBE](./Definitions.document.md)" is the base
 case abstraction for all means of measure. PROBES extract information from the
 working system, and convert them into a schematized OpenTelemetry Log, Metric,
 or Trace.
@@ -164,7 +164,7 @@ performance.
 
 ## INEXPENSIVE
 
-## Probe Risk
+## Probe Risks and Mitigations
 
 Probes inherently pose risks to
 [Production](./PositionPaper.DefiningProduction.document.md) systems. These
@@ -176,9 +176,9 @@ This document provides a framework for understanding these risks and the
 mitigation techniques used, as discussed in the
 [Observer Effect](./PositionPaper.ObserverEffect.document.md).
 
-## Probe Risk mitigation's
+### Risk Mitigations
 
-### Privacy
+#### Privacy Mitigations
 
 Mitigation:
 
@@ -190,13 +190,13 @@ Mitigation:
 
 1. [Privacy](./PositionPaper.TelemetryUmbilical.document.md)
 
-### Security
+#### Security Mitigations
 
-### Reliability
+#### Reliability Mitigations
 
-### Cost
+#### Cost Mitigations
 
-### Performance
+#### Performance Mitigations
 
 ## Probe Values
 

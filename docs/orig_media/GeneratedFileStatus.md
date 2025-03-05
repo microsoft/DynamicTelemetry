@@ -14,7 +14,7 @@ status: Level5
 | [../docs/Architecture.Components.Observer.Kernel.document.md](../docs/Architecture.Components.Observer.Kernel.document.md)  | 68|
 | [../docs/Architecture.Components.Streaming.Observability.document.md](../docs/Architecture.Components.Streaming.Observability.document.md)  | 59|
 | [../docs/Architecture.FlightRecorder.LongHorizons.document.md](../docs/Architecture.FlightRecorder.LongHorizons.document.md)  | 795|
-| [../docs/Architecture.FlightRecorder.Overview.document.md](../docs/Architecture.FlightRecorder.Overview.document.md)  | 919|
+| [../docs/Architecture.FlightRecorder.Overview.document.md](../docs/Architecture.FlightRecorder.Overview.document.md)  | 915|
 | [../docs/Architecture.FlightRecorder.ShortHorizons.document.md](../docs/Architecture.FlightRecorder.ShortHorizons.document.md)  | 633|
 | [../docs/Architecture.FlightRecorder.TraceHorizons.document.md](../docs/Architecture.FlightRecorder.TraceHorizons.document.md)  | 466|
 | [../docs/Architecture.KeyConstructs.Overview.document.md](../docs/Architecture.KeyConstructs.Overview.document.md)  | 652|
@@ -72,14 +72,15 @@ status: Level5
 | [../docs/Architecture.Probe.ptrace.document.md](../docs/Architecture.Probe.ptrace.document.md)  | 13|
 | [../docs/Architecture.Probe.uprobes.document.md](../docs/Architecture.Probe.uprobes.document.md)  | 13|
 | [../docs/Architecture.Probe.user_events.document.md](../docs/Architecture.Probe.user_events.document.md)  | 13|
-| [../docs/Definitions.document.md](../docs/Definitions.document.md)  | 161|
+| [../docs/Definitions.document.md](../docs/Definitions.document.md)  | 19|
 | [../docs/Demos.0.DynamicID.md](../docs/Demos.0.DynamicID.md)  | 722|
 | [../docs/GeneratedFileStatus.md](../docs/GeneratedFileStatus.md)  | 7|
 | [../docs/Ideas.ToExpandOn.document.md](../docs/Ideas.ToExpandOn.document.md)  | 146|
 | [../docs/Persona_DataAnalysis.document.md](../docs/Persona_DataAnalysis.document.md)  | 122|
-| [../docs/Persona_Developer.document.md](../docs/Persona_Developer.document.md)  | 183|
+| [../docs/Persona_Developer.document.md](../docs/Persona_Developer.document.md)  | 153|
 | [../docs/Persona_DevOps.document.md](../docs/Persona_DevOps.document.md)  | 110|
 | [../docs/Persona_ProjectManager.document.md](../docs/Persona_ProjectManager.document.md)  | 121|
+| [../docs/PlaceHolder.document.md](../docs/PlaceHolder.document.md)  | 18|
 | [../docs/PositionPaper.ABTestingWithRichDiagnostics.document.md](../docs/PositionPaper.ABTestingWithRichDiagnostics.document.md)  | 12|
 | [../docs/PositionPaper.Actions.document.md](../docs/PositionPaper.Actions.document.md)  | 12|
 | [../docs/PositionPaper.ClearFailuresViaSchema.document.md](../docs/PositionPaper.ClearFailuresViaSchema.document.md)  | 12|
@@ -104,7 +105,6 @@ status: Level5
 | [../docs/PositionPaper.TraditionalTesting.md](../docs/PositionPaper.TraditionalTesting.md)  | 12|
 | [../docs/PositionPaper.TriggeredCollections.document.md](../docs/PositionPaper.TriggeredCollections.document.md)  | 12|
 | [../docs/PositionPaper.TriggeredFlightRecorder.document.md](../docs/PositionPaper.TriggeredFlightRecorder.document.md)  | 12|
-| [../docs/PositionPaper.TriggeredMemoryDump.document.md](../docs/PositionPaper.TriggeredMemoryDump.document.md)  | 12|
 | [../docs/PositionPaper.WhereToSuppressInProc.document.md](../docs/PositionPaper.WhereToSuppressInProc.document.md)  | 12|
 | [../docs/ReviewProcess.document.md](../docs/ReviewProcess.document.md)  | 98|
 | [../docs/Scenarios.ChangingEnvironments.document.md](../docs/Scenarios.ChangingEnvironments.document.md)  | 15|
@@ -113,7 +113,6 @@ status: Level5
 | [../docs/Scenarios.EventFieldSuppression.document.md](../docs/Scenarios.EventFieldSuppression.document.md)  | 16|
 | [../docs/Scenarios.EventSuppression.document.md](../docs/Scenarios.EventSuppression.document.md)  | 15|
 | [../docs/Scenarios.ExtractingMemoryWithUProbe.document.md](../docs/Scenarios.ExtractingMemoryWithUProbe.document.md)  | 15|
-| [../docs/Scenarios.MemoryLeak.document.md](../docs/Scenarios.MemoryLeak.document.md)  | 14|
 | [../docs/Slides.Overview.Presentation.md](../docs/Slides.Overview.Presentation.md)  | 377|
 
 
@@ -124,7 +123,7 @@ status: Level5
 | [../docs/Architecture.Components.Processor.Language.md](../docs/Architecture.Components.Processor.Language.md)  | 476|
 | [../docs/Architecture.Components.Processor.Overview.document.md](../docs/Architecture.Components.Processor.Overview.document.md)  | 952|
 | [../docs/Architecture.Components.Processor.QueryLanguage.document.md](../docs/Architecture.Components.Processor.QueryLanguage.document.md)  | 349|
-| [../docs/Architecture.Components.Processor.StateMachine.document.md](../docs/Architecture.Components.Processor.StateMachine.document.md)  | 475|
+| [../docs/Architecture.Components.Processor.StateMachine.document.md](../docs/Architecture.Components.Processor.StateMachine.document.md)  | 472|
 | [../docs/Architecture.Probes.Overview.document.md](../docs/Architecture.Probes.Overview.document.md)  | 1407|
 | [../docs/index.md](../docs/index.md)  | 362|
 | [../docs/Personas.Overview.document.md](../docs/Personas.Overview.document.md)  | 257|

@@ -66,19 +66,32 @@ try {
 		{
 			continue
 		}
+
+		# Skip Empty Lines
 		if($file.Trim().Length -eq 0)
 		{
 			continue
 		}
+
+		# Skip Comments
+		if($file.Trim().StartsWith("#"))
+		{
+			continue
+		}
+		
 		$separator = $file.IndexOf("-")
 		$env:CDOCS_TAB=0
 		$env:CDOCS_FILTER=1
 		if ($separator -gt 4)
 		{
 			$separatorx = $separator
-			$separatorx -= 4
-			$separatorx /= 4
-			$env:CDOCS_TAB = $separatorx
+
+			if (0 -eq ($separator % 4))
+			{
+				$separatorx -= 4
+				$separatorx /= 4
+				$env:CDOCS_TAB = $separatorx
+			}
 		}
 		if(!$file.EndsWith(".md"))
 		{
@@ -103,8 +116,17 @@ try {
 			}
 			$file_leaf = Split-Path -Path $file -Leaf
 		}
+
+		$cmd = "pandoc -i $file -o ./bound_docs/$file_leaf --filter CDocsMarkdownCommentRender"
 		Write-Host "Converting $file == > $file_leaf"
+		Write-Host "    $cmd"
 		pandoc -i $file -o ./bound_docs/$file_leaf --filter CDocsMarkdownCommentRender
+
+		if (!(Test-Path "./bound_docs/$file_leaf"))
+		{
+			throw
+		}
+
 		Add-Content "./bound_docs/bind.files" $file_leaf
 	}
 } finally {

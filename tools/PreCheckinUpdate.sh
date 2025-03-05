@@ -7,6 +7,9 @@ if [ ! -d "/Source/CDocs" ]; then
     git clone https://github.com/chgray/CDocs /Source/CDocs
     cd /Source/CDocs
     git checkout user/chgray/update_ubuntu
+
+    podman image pull docker.io/chgray123/chgray_repro:pandoc
+    podman image pull docker.io/chgray123/chgray_repro:cdocs.mermaid
 fi
 
 cd /Source/CDocs/tools/CDocsMarkdownCommentRender
