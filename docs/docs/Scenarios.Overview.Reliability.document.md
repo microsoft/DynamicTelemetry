@@ -210,7 +210,7 @@ recompilation is a key value of Dynamic Telemetry.
 
 **Read more:** [External Audits of Production Code](./PositionPaper.ExternalAuditsOfProductionCode.document.md)
 
-### Diagnostic Collection
+### Triggering Verbose Diagnostic Collections
 
 Diagnostic collection essentially involves gathering the content that
 programmers or operational teams deem necessary for diagnosing system failures.
@@ -218,8 +218,12 @@ Dynamic Telemetry defines an error as an issue requiring investigation,
 therefore providing clear guidance, and total clarity of expectation, on the
 subsequent steps and specifying what needs to be collected.
 
+
 1. Should an internal external test fail
-1. Collect what the developer said they need
+1. 'Detect' this in any one of your [Processor Locations](./Architecture.Components.Processor.Overview.document.md)
+1. 'Trigger' a Diagnostic Collecting, containing what the developer said they
+   need 
+
 
 It cannot get simpler. Best of all, with Dynamic Telemetry, the cost of mistakes
 is low. Clear expectations do not guarantee unique logs, memory dumps, or CPU

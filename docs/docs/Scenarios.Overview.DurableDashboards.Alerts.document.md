@@ -64,3 +64,7 @@ context-aware data collection, providing deeper insights into system behavior
 and performance. By leveraging dynamic telemetry, teams can enhance their
 observability and diagnostic capabilities, leading to more effective monitoring,
 quicker issue resolution, and overall improved system reliability.
+
+## Changing Environments;  hosting providers, containers, VM's
+
+TODO;  add content

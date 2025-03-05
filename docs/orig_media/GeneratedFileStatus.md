@@ -17,8 +17,8 @@ status: Level5
 | [../docs/Architecture.FlightRecorder.Overview.document.md](../docs/Architecture.FlightRecorder.Overview.document.md)  | 915|
 | [../docs/Architecture.FlightRecorder.ShortHorizons.document.md](../docs/Architecture.FlightRecorder.ShortHorizons.document.md)  | 633|
 | [../docs/Architecture.FlightRecorder.TraceHorizons.document.md](../docs/Architecture.FlightRecorder.TraceHorizons.document.md)  | 466|
-| [../docs/Architecture.KeyConstructs.Overview.document.md](../docs/Architecture.KeyConstructs.Overview.document.md)  | 652|
-| [../docs/Architecture.Overview.document.md](../docs/Architecture.Overview.document.md)  | 331|
+| [../docs/Architecture.KeyConstructs.Overview.document.md](../docs/Architecture.KeyConstructs.Overview.document.md)  | 648|
+| [../docs/Architecture.Overview.document.md](../docs/Architecture.Overview.document.md)  | 330|
 | [../docs/Demos.1.DropChattyLog.md](../docs/Demos.1.DropChattyLog.md)  | 1103|
 | [../docs/Demos.2_DynamicProbe.md](../docs/Demos.2_DynamicProbe.md)  | 277|
 | [../docs/Demos.4.AddTelemetryDemo.md](../docs/Demos.4.AddTelemetryDemo.md)  | 1084|
