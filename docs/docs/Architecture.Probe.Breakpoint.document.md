@@ -5,9 +5,9 @@ status: ReviewLevel1
 
 # Coming Soon
 
-## Notes (Breakpoint Probe)
+## Notes (Dynamic / Breakpoint Probe)
 
-A breakpoint probe is a type of probe that utilizes a software or hardware
+A Dynamic / Breakpoint probe is a type of probe that utilizes a software or hardware
 breakpoint, depending on the programming language.
 
 This is a riskier probe type because the instruction pointer will transfer into
@@ -15,7 +15,7 @@ the underlying kernel facilities. However, it is not as risky as a traditional
 debugger, as the instruction pointer will not be frozen. Instead, it will simply
 collect the memory and exit using standard OpenTelemetry.
 
-Some types of breakpoint probes may include.
+Some types of Dyanmic / Breakpoint Probes may include.
 
 1. [uProbe](./Architecture.Probe.uprobes.document.md)
 1. dotnet

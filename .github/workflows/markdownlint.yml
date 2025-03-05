@@ -20,5 +20,5 @@ jobs:
         globs: |
           **/*.md
           !SECURITY.md
-          !docs/docs/GeneratedFileStatus.md
+          !docs/orig_media/GeneratedFileStatus.md
           !.github/**/*.md

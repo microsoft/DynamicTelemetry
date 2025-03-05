@@ -42,4 +42,4 @@ ReviewLevel4, signed off
 
 ## Individual Status
 
-{% include-markdown "./GeneratedFileStatus.md" %}
+{% include-markdown "../orig_media/GeneratedFileStatus.md" %}

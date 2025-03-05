@@ -9,83 +9,86 @@ status: ReviewLevel1b
 
 After you apply some thinking into probing an action aspects of dynamic
 telemetry you may come to realize that using these facilities provide an
-interesting methodology for testing and hardening production systems.
+interesting technique into the testing and hardening your
+[Production](./PositionPaper.DefiningProduction.document.md) systems.
 
 Traditional testing requires decoupling of the software from into smaller pieces
-each of which are tested independently often these are called unit tests. Is
-this complexity of the software grows unit tests remain useful but often
+each of which are tested independently, often adding unit tests to orchestrate.
+Is this complexity of the software grows unit tests remain useful but often
 struggle to detect integration type failures.
 
 To cope with this many developers will start using scenario testing which blends
 together different architectural components into one logical set which is then
 tested as a entire scenario. Should the scenario fail the developer will start
-zooming in on the area has been a gration that failed and from there they will
-look into the logging of the system often communicating in a bug fix and the
-addition of a unit test.
+zooming in on the area that failed and from there they will look into the
+logging of the subsystem looking for root cause.
 
-The systems aren't bad in fact pretty good but a problem emerges when the
-complexity of this system gets very large perhaps it spans multiple machines
-multiple geographies multiple locations, perhaps the hardware architecture
-spends spans multiple devices some of which are in the cloud and some of which
-are on the edge.
+The systems aren't bad, but a problem emerges as the complexity of this system
+grows, especially when multiple machines participate in one of the scenarios. As
+the complexity grows many developers simply get frustrated and in some ways give
+up.
 
-As the complexity grows many developers simply get frustrated and in some ways
-give up.
-
-Dynamic Telemetry introduces an interesting set of capabilities that when
-reasoned over result in a interesting hybrid between scenario and unit tests.
+Dynamic Telemetry introduces an interesting set of capabilities that result in a
+interesting hybrid between scenario and unit tests.
 
 The idea is to to use the logging and metrics found within a piece of software
 to self describe desired and expected behavior such that the product itself
 could detect its own failures.
 
+[Processors](./Architecture.Components.Processor.Overview.document.md) are then
+configured to "look" for problems, that emanate from the very core of the
+software executing.
+
 In itself this is not a novel or new concept in fact entire books have been
 written on the subject.
 
-What is interesting and potentially is novel is the idea of using a combination
-of one box and off box observers to this lightly schematized telemetry to look
-for patterns and failures that wouldn't be necessarily caught within a unit test
-or scenario test.
+What is interesting, and potentially is novel, is the idea of using a combination
+of one box [in
+process](./Architecture.Components.Observer.InProcess.document.md)/[on
+box](./Architecture.Components.Observer.External.OnBox.document.md) and [off
+box](./Architecture.Components.Observer.External.OnBox.document.md) observers to
+this lightly schematized telemetry to look for patterns and failures that
+wouldn't be necessarily caught within a unit test or scenario test.
 
 This is especially true as a systems complexity grows into stress testing or
 penetration testing where network fuzzing or payload fuzzing has been enabled.
 
-The remainder of this section will discuss a different way of thinking about
-testing and improving the reliability of a system such that the code itself is
-architected to self diagnose and in the event that a failure occurs the
-programmer will automatically get the desired set of diagnostics to fix the
+The remainder of this section will discuss a few different ways of thinking about
+testing such that your code self describes, and detects problems - and
+automatically generates verbose diagnostics for you, to help you fix the
 problem.
 
-Imagine in your software the software to some degree self-described failure.
-Perhaps when you author a inque operation there's an expectation in programming
-of how long that operation will take before it's fully completed in the code
-when you use a queue you could insert the item into a queue and say it is
-expected that the processing of this payload will have completed within 200
-milliseconds.
+## Quick Thought Experiment
+
+Imagine your software has the ability to self-described failure.
+Perhaps when you author a enqueue() operation you also supply nominal
+expectations (for example, that no item sticks in the queue more than 200 ms).
 
 Should the completion take longer than 200 milliseconds this would indicate a
-warning perhaps it's not fatal perhaps the programmer shouldn't even look at it.
-However maybe at one second this does indicate it a failure that needs to be
-inspected.
+warning, that perhaps not fatal, might indicate the need for a programmer to
+inspect and figure out why.
 
-The actions portion of Dynamic Telemetry permit a developer to select their
-preferred type of diagnostic information in the event that one of the pieces of
-software they're authoring it behaves in a way that is not expected.
-
-Further, the operating nominal operating characteristics may not necessarily be
-specified at right at build time they may actually be configured or deployed
-dynamically at runtime.
+The Processor portion of Dynamic Telemetry permit a developer to craft little
+traps for their bugs;  you cna easily imagine using a [loose
+schema](PositionPaper.ClearFailuresViaSchema.document.md) that describes certain
+logs and what good and bad looks like!
 
 This concept of self describing operational state is extremely interesting when
 a when coupled with dynamic configuration in the telemetry system, because
 opportunity is created for these values to be trained into the system instead of
-programmed in.
+programmed in. It's not tough to see applications in AI.
 
 These concepts will be expanded in further sections but they're worth thought.
 
-With Dynamic Telemetry, your test assets are broken into five pillars
+With Dynamic Telemetry, your test assets are broken into five themes
 
-## Pillars
+## Testing Themes
+
+1. Failure depends on the environment;
+1. Self-describing Production Code
+1. Internal Auditing of Production Code
+1. External Auditing of Production Code
+1. Diagnostic Collection
 
 ### Failure depends on the environment
 
@@ -159,7 +162,7 @@ discussed further in other sections, the key aspect can be summarized as
 Lightweight telemetry that signals positive failure, or can otherwise indicate
 operational characteristics
 
-[Self Describing Production Code](./PositionPaper.SelfDescribingProductionCode.document.md)
+**Read more:** [Self Describing Production Code](./PositionPaper.SelfDescribingProductionCode.document.md)
 
 ### Internal Auditing of Production Code
 
@@ -177,7 +180,7 @@ as an error might be inappropriate. This type of failure might be flagged as a
 warning, whereas higher layers might treat it as a critical error, such as with
 a database.
 
-[Internal Audits of Production Code](./PositionPaper.InternalAuditsOfProductionCode.document.md)
+**Read more:** [Internal Audits of Production Code](./PositionPaper.InternalAuditsOfProductionCode.document.md)
 
 ### External Auditing of Production Code
 
@@ -205,7 +208,7 @@ regarded as errors worthy of further study.
 The ability to redefine what is a error worth investigating at runtime without
 recompilation is a key value of Dynamic Telemetry.
 
-[External Audits of Production Code](./PositionPaper.ExternalAuditsOfProductionCode.document.md)
+**Read more:** [External Audits of Production Code](./PositionPaper.ExternalAuditsOfProductionCode.document.md)
 
 ### Diagnostic Collection
 
@@ -246,7 +249,7 @@ enough entropy into the system to determine if the test passes or fails. This
 testing approach is quite fascinating and aligns with some philosophical
 principles in unit testing, deserving further consideration.
 
-[Testing With Entropy](./PositionPaper.TestingWithEntropy.document.md)
+**Read More:** [Testing With Entropy](./PositionPaper.TestingWithEntropy.document.md)
 
 ### Appropriate Alerts
 

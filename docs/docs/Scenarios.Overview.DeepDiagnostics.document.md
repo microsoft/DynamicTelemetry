@@ -7,21 +7,48 @@ status: ReviewLevel1b
 
 ![image](../orig_media/PerformanceAndDiagnostics.banner.png)
 
-In Dynamic Telemetry, Probes and Actions play crucial roles in monitoring and
-diagnosing system behavior. Probes, such as any Log produced in OpenTelemetry,
-are read by a Dynamic Telemetry Processor as dynamic elements that can be used
-in various ways to better understand the runtime characteristics of the system.
-This approach provides an additional layer of depth to your software, which is
-useful and valuable for analysis and troubleshooting. The Probes and
-accompanying Processor are designed to operate transparently within the system
-without causing measurable disruption to performance or reliability. Probes can
-either be static, always active and continuously monitoring the system, or
-dynamic, enabled or disabled as needed.
+With static telemetry, you often depend on luck, intuition, a large budget, or
+an oracle because your logging decisions are fixed after deployment. We've all
+been there, you're writing a tricky function and have to decide if adding a few
+extra logging messages is wise. On one hand, the more logs, the easier
+debugging; on the other hand, the logs accumulate, slowing down databases,
+costing money, and increasing security and privacy profiles for you and your
+users.
 
-Actions, on the other hand, involve diagnostic operations that do not alter the
-system state and can be dynamically enabled or disabled. Suitable actions might
-include enabling CPU sampling, collecting configurations, managing flight
-recorders, inducing memory dumps, and collecting other types of state data.
+The complexity compounds in cases where the software cannot be easily cycled or
+where bugs are particularly elusive.
+
+Dynamic Telemetry, provides middle ground; it offers the ability to dynamically
+toggle telemetry, either manually or programmatically.
+
+As you start using and learning Dynamic Telemetry, you'll discover how to gamify
+debugging by dynamically collecting memory, toggling logs, and employing other
+techniques to effectively trap and diagnose bugs.
+
+## Introducing your Tools : Processors, Probes, and Actions
+
+In Dynamic Telemetry, Processors, Probes, and Actions play crucial roles in
+monitoring and diagnosing system behavior.
+
+The most important concept, if you can only understand one, is the [Processor](./Architecture.Components.Processor.Overview.document.md).
+
+Think of the Processor as a virtual machine that sits in the middle of all
+OpenTelemetry logs. It "sees" all the logs and, based on what it's seeing, can
+perform various actions. For example, it might "see" a queue getting really long
+and capture a memory dump, or it might "see" connections per second dropping and
+start a CPU sample.
+
+[Probes](./Architecture.Probes.Overview.document.md) are simply "something" that
+emits into OpenTelemetry in a streaming way. This could be the simple case of
+logging, but through the use of adapters, can be other technologies like syslog,
+ETW, user_events, or even more dynamic emitters like kprobes, uprobes, eBPF, or
+dtrace.
+
+Actions, on the other hand, initiate specific operations. While they are
+designed to avoid altering the system state intentionally, they can be
+dynamically enabled or disabled. Typical actions might include enabling CPU
+sampling, collecting configurations, managing Flight Recorders, inducing memory
+dumps, and gathering other types of state data.
 
 When combined, Probes and Actions create a powerful mechanism to "cast nets"
 that catch bugs.

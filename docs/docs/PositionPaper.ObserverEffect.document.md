@@ -38,7 +38,7 @@ pipelines. However, the process of setting up these probes, such as using
 software or hardware breakpoints and eBPF may not always align with the
 performance and reliability of their destination environment.
 
-### Reliablity Concerns
+### Reliability Concerns
 
 Of particular concern is the possibility that certain probe types may
 inadvertently alter the **reliability characteristics** of a monitored system.
@@ -86,8 +86,8 @@ user [personas](./Personas.Overview.document.md).
 It is often also the case that with more risk comes more performance or more
 flexibility.
 
-**Dynamic Telemetry mandates** that a ***\[probe must not intentionally alter
-system state\]{.underline}***. This does not preclude the use of a probe type
+**Dynamic Telemetry mandates** that a ***probe must not intentionally alter
+system state***. This does not preclude the use of a probe type
 akin to the ETW event in Windows with Dynamic Telemetry; however, it does mean
 that the application of ETW within dynamic telemetry must not modify the system
 state. Although this may initially seem prohibitively costly during a quick read

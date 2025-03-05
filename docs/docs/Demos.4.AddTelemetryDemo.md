@@ -24,8 +24,8 @@ amounts of memory and insert it into our existing OpenTelemetry pipelines.
 
 In short this demo will:
 
-1. Use a Breakpoint Probe to dynamically insert a row of telemetry to emit the
-   contents of a variable into our standard OpenTelemetry pipelines.
+1. Use a Dynamic / Breakpoint Probe to dynamically insert a row of telemetry to
+   emit the contents of a variable into our standard OpenTelemetry pipelines.
 1. Deploy this Dynamic Telemetry probe to a small number of machines that we
    expect to be impacted.
 1. Connect to Application Insights and View / Graph / Alert this value.
@@ -33,11 +33,11 @@ In short this demo will:
 ## Dynamically insert a row of telemetry to emit the contents of a variable
 
 For this demo, we will make use of the
-[Breakpoint Probe](./Architecture.Probe.Breakpoint.document.md) concept in
-Dynamic Telemetry, Our [Action](./Architecture.Action.Explanation.document.md).
-Will not be a complicated action such as collecting a memory dump, starting a
-CPU sample, or toggling on or off diagnostic logs, even though Each of these are
-a possibility.
+[Dynamic / Breakpoint Probe](./Architecture.Probe.Breakpoint.document.md)
+concept in Dynamic Telemetry, Our
+[Action](./Architecture.Action.Explanation.document.md). Will not be a
+complicated action such as collecting a memory dump, starting a CPU sample, or
+toggling on or off diagnostic logs, even though Each of these are a possibility.
 
 For our application, we simply want to know the value of a memory variable when
 our probe is hit.
@@ -115,9 +115,9 @@ For our purposes, we will deploy this rapidly for demonstration purposes.
 
 ## Connect to Application Insights and View / Graph / Alert this value
 
-Because the breakpoint probe conforms to the Dynamic Telemetry specification,
-the collected memory will be emitted into a standard OpenTelemetry logging
-message that includes the desired contents.
+Because the Dynamic / Breakpoint Probe conforms to the Dynamic Telemetry
+specification, the collected memory will be emitted into a standard
+OpenTelemetry logging message that includes the desired contents.
 
 This is this is an interesting feature because within seconds of being deployed,
 telemetry is already being emitted.

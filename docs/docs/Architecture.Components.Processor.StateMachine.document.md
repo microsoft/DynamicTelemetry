@@ -85,6 +85,5 @@ Image a piece of code that looks something like this:
 
 - [CPU Sampling](./Architecture.Action.CPUSample.document.md)
 - [Verbose Logs](./Architecture.Action.VerboseLogs.document.md)
-- [Memory Dump](./PositionPaper.TriggeredMemoryDump.document.md)
 
 ## Example Scenarios
