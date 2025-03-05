@@ -75,7 +75,7 @@ problem arises, it is resolved before they're able to:
 By using Dynamic Telemetry effectively, teams can proactively manage and resolve
 such issues, improving overall system stability and performance.
 
-## Casting 'Nets'
+## Trapping your Bugs - Dynamically, by Casting 'Nets'
 
 The Diagnostic Telemetry solution to this class of problem involves casting
 broad 'nets' on multiple machines expected to encounter this situation. Each net
@@ -86,7 +86,8 @@ remain mostly dormant, monitoring selected logging values while waiting for a
 triggering condition. Once a triggered, an "Action" is called; which in turn
 provides the desired diagnostic information necessary for a root cause.
 
-## An Example
+**Nets;  and example**
+
 
 By configuring the Processor to dynamically monitor these log messages, it can
 track the queue depth in real-time. If the queue length exceeds predefined

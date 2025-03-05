@@ -28,7 +28,7 @@ The PROJECT_MANAGER Persona in DynamicTelemetry:
 
 1. [Clear Failujres via Schemas](./PositionPaper.ClearFailuresViaSchema.document.md)
 
-1. [Triggered Flight Recorder](./PositionPaper.TriggeredFlightRecorder.document.md)
+1. [Triggered Flight Recorder](./PositionPaper.TriggeredCollections.document.md)
 
 ## Scenarios
 
