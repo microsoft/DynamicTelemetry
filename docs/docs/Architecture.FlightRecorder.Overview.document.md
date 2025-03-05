@@ -146,4 +146,3 @@ start="## Scenario Summary", end="## Scenario Expansion" %}
 1. [Telemetry Umbilical](./PositionPaper.TelemetryUmbilical.document.md)
 
 1. [Scarcity and Humans](./PositionPaper.ScarcityAndHumans.md)
-
