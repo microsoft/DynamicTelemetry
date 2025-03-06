@@ -3,4 +3,4 @@ author: "Chris Gray"
 status: ReviewLevel1
 ---
 
-# PositionPaper.GuideToLogVerbosity.document.md  : COMING SOON
+# Logging Levels;  {errors, warnings, and info} aren't the ticket

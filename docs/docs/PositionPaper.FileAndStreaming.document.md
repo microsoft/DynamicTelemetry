@@ -3,7 +3,7 @@ author: "Chris Gray"
 status: ReviewLevel1b
 ---
 
-# (COMING SOON) FILE vs. STREAMING Telemetry
+# The Two Types of Telemetry; files and streaming
 
 ## Introduction
 

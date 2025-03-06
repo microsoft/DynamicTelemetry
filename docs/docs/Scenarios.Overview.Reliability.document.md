@@ -164,51 +164,52 @@ operational characteristics
 
 **Read more:** [Self Describing Production Code](./PositionPaper.SelfDescribingProductionCode.document.md)
 
-### Internal Auditing of Production Code
+### Auditing of Production Code
 
-An internal audit production code involves creating classifications of errors
-that adhere to strict definitions, unlike the flexible classifications often
-found in other logging and telemetry systems. Specifically, this means that an
-error must clearly describe something exceptional that is not permitted. Every
-identified error requires investigation until resolved.
+* *Internal Audits*
 
-For instance, the failure to open a key database file is an example of an error
-worth investigating, whereas the failure to open a user file may not be
-considered a failure. The distinction may seem subtle but is significant. For
-example, in a library that processes files, treating the failure to open a file
-as an error might be inappropriate. This type of failure might be flagged as a
-warning, whereas higher layers might treat it as a critical error, such as with
-a database.
+    An internal audit production code involves creating classifications of errors
+    that adhere to strict definitions, unlike the flexible classifications often
+    found in other logging and telemetry systems. Specifically, this means that an
+    error must clearly describe something exceptional that is not permitted. Every
+    identified error requires investigation until resolved.
 
-**Read more:** [Internal Audits of Production Code](./PositionPaper.InternalAuditsOfProductionCode.document.md)
+    For instance, the failure to open a key database file is an example of an error
+    worth investigating, whereas the failure to open a user file may not be
+    considered a failure. The distinction may seem subtle but is significant. For
+    example, in a library that processes files, treating the failure to open a file
+    as an error might be inappropriate. This type of failure might be flagged as a
+    warning, whereas higher layers might treat it as a critical error, such as with
+    a database.
 
-### External Auditing of Production Code
 
-An external audit of the code introduces environmental characteristics to the
-code. For example, what might be a programmatic warning internal to the code
-could be treated as an error by an external observer.
+* *External Audits*
 
-This is where the power of Dynamic Telemetry can be found. This power allows for
-the training of nominal operating characteristics for a particular environment
-on specific hardware. The external observer should be viewed as an advocate for
-the user within the operational environment.
+   An external audit of the code introduces environmental characteristics to the
+   code. For example, what might be a programmatic warning internal to the code
+   could be treated as an error by an external observer.
 
-Imagine code in a unit test environment treating particular failures with
-extreme strictness; perhaps any file error is treated as an error worth
-investigating. However, as the code migrates from unit testing to scenario
-testing, the threshold for an investigated failure may shift.
+   This is where the power of Dynamic Telemetry can be found. This power allows for
+   the training of nominal operating characteristics for a particular environment
+   on specific hardware. The external observer should be viewed as an advocate for
+   the user within the operational environment.
 
-As the code enters the stress environment, the opposite characteristics may be
-applied. For instance, the inability to open a file may no longer be treated as
-an error but rather as a success.
+   Imagine code in a unit test environment treating particular failures with
+   extreme strictness; perhaps any file error is treated as an error worth
+   investigating. However, as the code migrates from unit testing to scenario
+   testing, the threshold for an investigated failure may shift.
 
-In all cases, however, failures encountered during fuzz testing are consistently
-regarded as errors worthy of further study.
+   As the code enters the stress environment, the opposite characteristics may be
+   applied. For instance, the inability to open a file may no longer be treated as
+   an error but rather as a success.
 
-The ability to redefine what is a error worth investigating at runtime without
-recompilation is a key value of Dynamic Telemetry.
+   In all cases, however, failures encountered during fuzz testing are consistently
+   regarded as errors worthy of further study.
 
-**Read more:** [External Audits of Production Code](./PositionPaper.ExternalAuditsOfProductionCode.document.md)
+   The ability to redefine what is a error worth investigating at runtime without
+   recompilation is a key value of Dynamic Telemetry.
+
+**Read more:** [Auditing of Production Code](./PositionPaper.AuditingProductionCode.document.md)
 
 ### Triggering Verbose Diagnostic Collections
 
@@ -218,12 +219,10 @@ Dynamic Telemetry defines an error as an issue requiring investigation,
 therefore providing clear guidance, and total clarity of expectation, on the
 subsequent steps and specifying what needs to be collected.
 
-
 1. Should an internal external test fail
 1. 'Detect' this in any one of your [Processor Locations](./Architecture.Components.Processor.Overview.document.md)
 1. 'Trigger' a Diagnostic Collecting, containing what the developer said they
-   need 
-
+   need
 
 It cannot get simpler. Best of all, with Dynamic Telemetry, the cost of mistakes
 is low. Clear expectations do not guarantee unique logs, memory dumps, or CPU

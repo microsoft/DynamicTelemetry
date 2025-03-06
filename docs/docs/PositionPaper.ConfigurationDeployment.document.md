@@ -3,7 +3,7 @@ author: "Chris Gray"
 status: ReviewLevel1
 ---
 
-# Configuration Deployment
+# The Stresses and Risks behind simple 'Configuration' Deployment
 
 ## Mechanisms
 

@@ -66,9 +66,16 @@ cat ./title.txt ./_bound.tmp.md | grep -v mp4 > ./bound.md
 echo "Building bound contents; in docx, pdf, and epub"
 
 
-pandoc ./bound.md --toc --toc-depth 6 --epub-cover-image=../orig_media/DynamicTelemetry.CoPilot.Image.png -o /data/bound/epub_$fileName.epub --filter CDocsMarkdownCommentRender
-pandoc ./bound.md -o /data/bound/$fileName.pdf  --toc --toc-depth 6 -N -V geometry:margin=0.25in -V papersize=a5 --filter CDocsMarkdownCommentRender
-pandoc ./bound.md -o /data/bound/$fileName.docx --filter CDocsMarkdownCommentRender
+if [ ! -f /data/tools/buildAsBook/header.tex ]; then
+    echo "ERROR: /data/tools/buildAsBook/header.tex not found"
+    exit 1
+fi
+
+pandoc ./bound.md -o /data/bound/$fileName.json --filter CDocsMarkdownCommentRender
+
+pandoc /data/bound/$fileName.json --toc --toc-depth 4 --epub-cover-image=../orig_media/DynamicTelemetry.CoPilot.Image.png -o /data/bound/epub_$fileName.epub
+pandoc /data/bound/$fileName.json -o /data/bound/$fileName.pdf --toc --toc-depth 4 -N -V papersize=a5 -H /data/tools/buildAsBook/header.tex
+pandoc /data/bound/$fileName.json -o /data/bound/$fileName.docx
 
 cp ./bound.md /data/bound
 
