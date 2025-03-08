@@ -1,5 +1,7 @@
 
 \usepackage{fancyhdr}
-\usepackage[margin=0.25in, includeheadfoot]{geometry}
+\usepackage{datetime2}
+\usepackage[margin=0.5in, includeheadfoot]{geometry}
 \pagestyle{fancy}
-\fancyhead{}
+\fancyfoot[LO,LE]{DRAFT:\DTMnow}
+\fancyfoot[LE,RO]{\thepage}

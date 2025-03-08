@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 #
 # See if CDocs has been built; if not sync and build
@@ -47,7 +48,6 @@ cd /data/docs/docs
 echo "Binding and generating TOC"
 pwsh ../../tools/buildAsBook/bind.ps1
 
-
 cd /data/docs/bound_docs
 dos2unix ./bind.files
 pandoc -i $(cat ./bind.files) -o ./_bound.tmp.md
@@ -71,11 +71,19 @@ if [ ! -f /data/tools/buildAsBook/header.tex ]; then
     exit 1
 fi
 
-pandoc ./bound.md -o /data/bound/$fileName.json --filter CDocsMarkdownCommentRender
 
-pandoc /data/bound/$fileName.json --toc --toc-depth 4 --epub-cover-image=../orig_media/DynamicTelemetry.CoPilot.Image.png -o /data/bound/epub_$fileName.epub
-pandoc /data/bound/$fileName.json -o /data/bound/$fileName.pdf --toc --toc-depth 4 -N -V papersize=a5 -H /data/tools/buildAsBook/header.tex
-pandoc /data/bound/$fileName.json -o /data/bound/$fileName.docx
+echo ""
+echo ""
+echo ""
+echo "Building bound contents; in docx, pdf, and epub"
+
+fileName=testing_doc
+inputFile=./bound.md
+pandoc ./bound.md -o /data/bound/$fileName.json --toc --toc-depth 4 -N -V papersize=a5 -H /data/tools/buildAsBook/header.tex --filter CDocsMarkdownCommentRender --filter pandoc-latex-unlisted
+
+pandoc $inputFile -o /data/bound/epub_$fileName.epub --toc --toc-depth 4 -N --epub-cover-image=../orig_media/DynamicTelemetry.CoPilot.Image.png --filter CDocsMarkdownCommentRender --filter pandoc-latex-unlisted
+pandoc $inputFile -o /data/bound/$fileName.pdf --toc --toc-depth 4 -N -V papersize=a5 -H /data/tools/buildAsBook/header.tex --filter CDocsMarkdownCommentRender
+pandoc $inputFile -o /data/bound/$fileName.docx --filter CDocsMarkdownCommentRender --filter pandoc-latex-unlisted
 
 cp ./bound.md /data/bound
 

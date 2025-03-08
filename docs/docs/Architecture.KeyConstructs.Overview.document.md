@@ -20,7 +20,7 @@ The four Constructs of Dynamic Telemetry are
 1. a [Flight Recorder](./Architecture.FlightRecorder.Overview.document.md)
 1. a [Action](./Architecture.Action.Explanation.document.md)
 
-## What is a Probe
+## What is a Probe{.unlisted .unnumbered}
 
 A Dynamic Telemetry Probe is a lightweight mechanism that emits events (logs)
 within a running system. A Probe is usually specific to the operating system and
@@ -28,7 +28,7 @@ native to that environment. For example, it could be the Event Tracing for
 Windows (ETW) system within Windows, user events within Linux syslog, or even
 OpenTelemetry on cross-platforms.
 
-### Examples of Dynamic Probes
+### Examples of Dynamic Probes{.unlisted .unnumbered}
 
 Dynamic Probes can take various forms depending on the system and requirements.
 Examples include uprobes or kprobes, which are used in Linux for tracing
@@ -50,7 +50,7 @@ logging events without altering the application code. This dynamic nature enable
 real-time adjustments to telemetry data collection, facilitating more responsive
 and efficient monitoring and diagnostics.
 
-## What is a Filter/Router
+## What is a Filter/Router{.unlisted .unnumbered}
 
 A filter is a Dynamic Telemetry construct used to filter and route logging that
 is already inside an OpenTelemetry pipeline.
@@ -61,7 +61,7 @@ blocking filter could be considered a valve. The use of filters and routers
 allows the dynamic shaping and routing of telemetry - much like valves and
 filters in a water system.
 
-## What is a Flight Recorder
+## What is a Flight Recorder{.unlisted .unnumbered}
 
 A Flight Recorder is essentially a ring buffer of logs with a unique identifier
 or name. It acts as a designated collector of routed logging data. In its
@@ -73,7 +73,7 @@ The two key characteristics of a Flight Recorder are:
 1. that it is uniquely identifiable
 1. that it contains logs
 
-## What is an Action
+## What is an Action{.unlisted .unnumbered}
 
 An Action is an architectural construct that performs tasks based on the logging
 data it observes passing through a pipeline.
