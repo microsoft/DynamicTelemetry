@@ -55,9 +55,9 @@ that catch bugs.
 
 ![type:video](../orig_media/DynamicTelemetry_DiagnosticVideo.mp4)
 
-## Simple Example : dialing up Logging/Diagnostics when something goes wrong
+## Understaing by Example : Dynamically Regulating Logging, when things go wrong
 
-For example, consider a situation where a production system works well during
+Consider a situation where a production system works well during
 testing and under light load but experiences unexpectedly high CPU contention
 from time to time. Developers have many theories, and little data -- they
 suspect the machine could be entering receive livelock but are unsure why.

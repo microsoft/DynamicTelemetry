@@ -30,11 +30,11 @@ status: Level5
 | [../docs/PositionPaper.TelemetryUmbilical.document.md](../docs/PositionPaper.TelemetryUmbilical.document.md)  | 92|
 | [../docs/Rude_Q_and_A.md](../docs/Rude_Q_and_A.md)  | 748|
 | [../docs/Scenarios.Overview.CostReduction.document.md](../docs/Scenarios.Overview.CostReduction.document.md)  | 1368|
-| [../docs/Scenarios.Overview.DeepDiagnostics.document.md](../docs/Scenarios.Overview.DeepDiagnostics.document.md)  | 763|
+| [../docs/Scenarios.Overview.DeepDiagnostics.document.md](../docs/Scenarios.Overview.DeepDiagnostics.document.md)  | 761|
 | [../docs/Scenarios.Overview.document.md](../docs/Scenarios.Overview.document.md)  | 180|
 | [../docs/Scenarios.Overview.DurableDashboards.Alerts.document.md](../docs/Scenarios.Overview.DurableDashboards.Alerts.document.md)  | 562|
 | [../docs/Scenarios.Overview.RedactingSecrets.document.md](../docs/Scenarios.Overview.RedactingSecrets.document.md)  | 1084|
-| [../docs/Scenarios.Overview.Reliability.document.md](../docs/Scenarios.Overview.Reliability.document.md)  | 2254|
+| [../docs/Scenarios.Overview.Reliability.document.md](../docs/Scenarios.Overview.Reliability.document.md)  | 2232|
 
 
 ## Level1
@@ -119,7 +119,7 @@ status: Level5
 | [../docs/Architecture.Components.Processor.QueryLanguage.document.md](../docs/Architecture.Components.Processor.QueryLanguage.document.md)  | 349|
 | [../docs/Architecture.Components.Processor.StateMachine.document.md](../docs/Architecture.Components.Processor.StateMachine.document.md)  | 472|
 | [../docs/Architecture.Probes.Overview.document.md](../docs/Architecture.Probes.Overview.document.md)  | 1395|
-| [../docs/index.md](../docs/index.md)  | 362|
+| [../docs/index.md](../docs/index.md)  | 367|
 | [../docs/Personas.Overview.document.md](../docs/Personas.Overview.document.md)  | 257|
 | [../docs/PositionPaper.DurableIds_StructuredPayloads.document.md](../docs/PositionPaper.DurableIds_StructuredPayloads.document.md)  | 1242|
 | [../docs/PositionPaper.ThinkLike.RTOS.document.md](../docs/PositionPaper.ThinkLike.RTOS.document.md)  | 43|

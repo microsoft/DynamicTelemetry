@@ -66,8 +66,7 @@ nav:
     - What is Dynamic Telemetry:
         - Introduction : ./docs/index.md
 
-        - Performance and Diagnostics:
-            - Diagnostics Overview: ./docs/Scenarios.Overview.DeepDiagnostics.document.md
+        - Performance and Diagnostics: ./docs/Scenarios.Overview.DeepDiagnostics.document.md
             #- Tools:
             #    - Event Aggregation: ./docs/Scenarios.EventAggregation.document.md
             #    - ExtractingMemoryWithUProbe: ./docs/Scenarios.ExtractingMemoryWithUProbe.document.md
@@ -75,27 +74,23 @@ nav:
             #- Architecture: ./docs/PlaceHolder.document.md
             #- Position Papers: ./docs/PlaceHolder.document.md
 
-        - Privacy and Security:
-            - Privacy Overview: ./docs/Scenarios.Overview.RedactingSecrets.document.md
+        - Privacy and Security: ./docs/Scenarios.Overview.RedactingSecrets.document.md
             #- Tools:
             #    - EventFieldSuppression: ./docs/Scenarios.EventFieldSuppression.document.md
             #    - EventSuppression: ./docs/Scenarios.EventSuppression.document.md
 
-        - Reliability:
-            - Reliability Overview : ./docs/Scenarios.Overview.Reliability.document.md
+        - Reliability: ./docs/Scenarios.Overview.Reliability.document.md
             #- Tools: ./docs/PlaceHolder.document.md
             #- Architecture: ./docs/PlaceHolder.document.md
             #- Position Papers: ./docs/PlaceHolder.document.md
 
-        - Durable Dashboards and Alerts:
-            - Durable Dashboards Overview : ./docs/Scenarios.Overview.DurableDashboards.Alerts.document.md
+        - Durable Dashboards and Alerts: ./docs/Scenarios.Overview.DurableDashboards.Alerts.document.md
             #- Tools:
             #    - Changing Environments: ./docs/Scenarios.ChangingEnvironments.document.md
             #- Architecture: ./docs/PlaceHolder.document.md
             #- Position Papers: ./docs/PlaceHolder.document.md
 
-        - CostReduction:
-            - Cost Reduction Overview: ./docs/Scenarios.Overview.CostReduction.document.md
+        - CostReduction: ./docs/Scenarios.Overview.CostReduction.document.md
             #- Tools:
             #    - Convert Logs to Metrics: ./docs/Scenarios.ConvertLogsToMetrics.document.md
             #- Architecture: ./docs/PlaceHolder.document.md
