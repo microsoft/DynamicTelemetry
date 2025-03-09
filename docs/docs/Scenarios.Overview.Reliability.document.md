@@ -3,7 +3,7 @@ author: "Chris Gray"
 status: ReviewLevel1b
 ---
 
-# Reliability
+# Reliability and Testing
 
 ![image](../orig_media/Reliability.banner.png)
 
@@ -58,7 +58,7 @@ testing such that your code self describes, and detects problems - and
 automatically generates verbose diagnostics for you, to help you fix the
 problem.
 
-## Quick Thought Experiment
+## Introducing Your Tools : Triggering, Flight Recorders, Actions, and Processors
 
 Imagine your software has the ability to self-described failure.
 Perhaps when you author a enqueue() operation you also supply nominal
@@ -80,159 +80,7 @@ programmed in. It's not tough to see applications in AI.
 
 These concepts will be expanded in further sections but they're worth thought.
 
-With Dynamic Telemetry, your test assets are broken into five themes
-
-## Testing Themes
-
-1. Failure depends on the environment;
-1. Self-describing Production Code
-1. Internal Auditing of Production Code
-1. External Auditing of Production Code
-1. Diagnostic Collection
-
-### Failure depends on the environment
-
-After careful consideration of using the telemetry system as a means of inner
-processor remote communication, it becomes evident that such a system can signal
-an external test when a failure occurs. This realization allows developers to
-write code that is easy to diagnose. The code itself aims to assist in detecting
-bugs, and the operational environment, through Dynamic Telemetry, supports both
-the programmer and the program in this endeavor.
-
-We will introduce two key concepts that are elaborated upon further in the
-documentation and are essential for comprehensive understanding. These concepts
-are probes and actions. A probe, in its simplest form, is nothing more than a
-log or metric emitted by a piece of code, for example, when a file is opened.
-The log may include the file name and the return code from the open system call.
-
-An action is part of a dynamically deployed processor that monitors the
-operational characteristics of the system either internally within the process,
-externally on the same computer, or even remotely from a backend. The action
-listens to logging and metrics as they are generated. When a particular log or
-metric with a specific failure code of interest is emitted, the action can
-trigger rich diagnostic collections, which may include a memory dump, a CPU
-sample, or could enable the collection of more verbose logs.
-
-At this point, you may be considering innovative ways to utilize these
-capabilities. For instance, you could establish a queue with an external
-observer that initiates a failure indicator if the queue becomes completely
-empty or exceeds a predetermined limit. You might be wondering what this preset
-number should be. It is important to note that Dynamic Telemetry does not
-specify these details; instead, it provides the fundamental constructs necessary
-to build such objects.
-
-One could envision a queue object where, upon initialization, diagnostic
-configurations are provided by the developer that include the minimum and
-maximum expected lengths of the queue. Perhaps this queue contains an expected
-flow rate. You can quickly imagine how an internal external observer could
-initiate diagnostic collections should any of these parameters we operating
-outside of specification.
-
-Experienced programmers may understandably become concerned about the accuracy
-of hardcoded values. Consider a scenario where a queue is designed for specific
-hardware, but over time, as hardware evolves and becomes faster, the queue links
-could either expand or contract accordingly. Additionally, queue depths might
-fluctuate based on varying usage patterns throughout the day across different
-regions.
-
-The apprehension of such programmers is justified. However, the concept of
-Dynamic Telemetry addresses these concerns by allowing programmers to specify
-nominal values during the initial setup on the expected hardware. In cases where
-these initial guesses are incorrect, dynamic telemetry supports a training
-process that measures and adjusts these values based on the new hardware or
-environment being utilized.
-
-...in short, the hardcoded values are reasonable guesses; the real values will
-be specified during operational training, on real hardware, with real workloads.
-
-... if this is interesting, now imagine you have different environments where
-the same code is executing, each having different configurations for failure
-attached - for instance, in a unit testing environment, one set of
-configurations is applied. In contrast, a different configuration set is used
-for scenario testing, and yet another set for stress or fuzz testing.
-
-Later in this section, we will further elaborate and provide detailed examples.
-
-### Self-describing Production Code
-
-Dynamic Telemetry takes advantage of the durable identifiers and structure
-payloads within your logging in order to provide loose schemas that can be used
-in self-describing quality characteristics of code. While these topics are
-discussed further in other sections, the key aspect can be summarized as
-Lightweight telemetry that signals positive failure, or can otherwise indicate
-operational characteristics
-
-**Read more:** [Self Describing Production Code](./PositionPaper.SelfDescribingProductionCode.document.md)
-
-### Internal Auditing of Production Code
-
-An internal audit production code involves creating classifications of errors
-that adhere to strict definitions, unlike the flexible classifications often
-found in other logging and telemetry systems. Specifically, this means that an
-error must clearly describe something exceptional that is not permitted. Every
-identified error requires investigation until resolved.
-
-For instance, the failure to open a key database file is an example of an error
-worth investigating, whereas the failure to open a user file may not be
-considered a failure. The distinction may seem subtle but is significant. For
-example, in a library that processes files, treating the failure to open a file
-as an error might be inappropriate. This type of failure might be flagged as a
-warning, whereas higher layers might treat it as a critical error, such as with
-a database.
-
-**Read more:** [Internal Audits of Production Code](./PositionPaper.InternalAuditsOfProductionCode.document.md)
-
-### External Auditing of Production Code
-
-An external audit of the code introduces environmental characteristics to the
-code. For example, what might be a programmatic warning internal to the code
-could be treated as an error by an external observer.
-
-This is where the power of Dynamic Telemetry can be found. This power allows for
-the training of nominal operating characteristics for a particular environment
-on specific hardware. The external observer should be viewed as an advocate for
-the user within the operational environment.
-
-Imagine code in a unit test environment treating particular failures with
-extreme strictness; perhaps any file error is treated as an error worth
-investigating. However, as the code migrates from unit testing to scenario
-testing, the threshold for an investigated failure may shift.
-
-As the code enters the stress environment, the opposite characteristics may be
-applied. For instance, the inability to open a file may no longer be treated as
-an error but rather as a success.
-
-In all cases, however, failures encountered during fuzz testing are consistently
-regarded as errors worthy of further study.
-
-The ability to redefine what is a error worth investigating at runtime without
-recompilation is a key value of Dynamic Telemetry.
-
-**Read more:** [External Audits of Production Code](./PositionPaper.ExternalAuditsOfProductionCode.document.md)
-
-### Diagnostic Collection
-
-Diagnostic collection essentially involves gathering the content that
-programmers or operational teams deem necessary for diagnosing system failures.
-Dynamic Telemetry defines an error as an issue requiring investigation,
-therefore providing clear guidance, and total clarity of expectation, on the
-subsequent steps and specifying what needs to be collected.
-
-1. Should an internal external test fail
-1. Collect what the developer said they need
-
-It cannot get simpler. Best of all, with Dynamic Telemetry, the cost of mistakes
-is low. Clear expectations do not guarantee unique logs, memory dumps, or CPU
-traces when issues arise. Different personas, such as the operational team or
-program management team, also set equally clear expectations.
-
-These balances are explored more deeply in the diagnostic collection sections.
-In short though; simply because a developer clearly requests a memory dump for
-minor issues or seek extensive CPU sampling, they may not get what they want --
-because their operational team set equally clear guidance on topics like memory,
-disk, and CPU usage.
-
-## Thought Provoking Ideas
+## Understanding By Example : Surveying Interesting Testing Techniques
 
 ### Entropy Creators
 
@@ -295,4 +143,151 @@ remains stable and reliable. By incorporating these steps into the test
 pipeline, organizations can achieve a higher level of observability and maintain
 the quality of their software.
 
-## How to Think about Testing, in a world of Dynamic Telemetry
+With Dynamic Telemetry, your test assets are broken into five themes
+
+## Testing Themes
+
+### Specialized Environmental Testing
+
+After careful consideration of using the telemetry system as a means of inner
+processor remote communication, it becomes evident that such a system can signal
+an external test when a failure occurs. This realization allows developers to
+write code that is easy to diagnose. The code itself aims to assist in detecting
+bugs, and the operational environment, through Dynamic Telemetry, supports both
+the programmer and the program in this endeavor.
+
+We will introduce two key concepts that are elaborated upon further in the
+documentation and are essential for comprehensive understanding. These concepts
+are probes and actions. A probe, in its simplest form, is nothing more than a
+log or metric emitted by a piece of code, for example, when a file is opened.
+The log may include the file name and the return code from the open system call.
+
+An action is part of a dynamically deployed processor that monitors the
+operational characteristics of the system either internally within the process,
+externally on the same computer, or even remotely from a backend. The action
+listens to logging and metrics as they are generated. When a particular log or
+metric with a specific failure code of interest is emitted, the action can
+trigger rich diagnostic collections, which may include a memory dump, a CPU
+sample, or could enable the collection of more verbose logs.
+
+At this point, you may be considering innovative ways to utilize these
+capabilities. For instance, you could establish a queue with an external
+observer that initiates a failure indicator if the queue becomes completely
+empty or exceeds a predetermined limit. You might be wondering what this preset
+number should be. It is important to note that Dynamic Telemetry does not
+specify these details; instead, it provides the fundamental constructs necessary
+to build such objects.
+
+One could envision a queue object where, upon initialization, diagnostic
+configurations are provided by the developer that include the minimum and
+maximum expected lengths of the queue. Perhaps this queue contains an expected
+flow rate. You can quickly imagine how an internal external observer could
+initiate diagnostic collections should any of these parameters we operating
+outside of specification.
+
+Experienced programmers may understandably become concerned about the accuracy
+of hardcoded values. Consider a scenario where a queue is designed for specific
+hardware, but over time, as hardware evolves and becomes faster, the queue links
+could either expand or contract accordingly. Additionally, queue depths might
+fluctuate based on varying usage patterns throughout the day across different
+regions.
+
+The apprehension of such programmers is justified. However, the concept of
+Dynamic Telemetry addresses these concerns by allowing programmers to specify
+nominal values during the initial setup on the expected hardware. In cases where
+these initial guesses are incorrect, dynamic telemetry supports a training
+process that measures and adjusts these values based on the new hardware or
+environment being utilized.
+
+...in short, the hardcoded values are reasonable guesses; the real values will
+be specified during operational training, on real hardware, with real workloads.
+
+... if this is interesting, now imagine you have different environments where
+the same code is executing, each having different configurations for failure
+attached - for instance, in a unit testing environment, one set of
+configurations is applied. In contrast, a different configuration set is used
+for scenario testing, and yet another set for stress or fuzz testing.
+
+Later in this section, we will further elaborate and provide detailed examples.
+
+### Authoring Self-Describing Production Code
+
+Dynamic Telemetry takes advantage of the durable identifiers and structure
+payloads within your logging in order to provide loose schemas that can be used
+in self-describing quality characteristics of code. While these topics are
+discussed further in other sections, the key aspect can be summarized as
+Lightweight telemetry that signals positive failure, or can otherwise indicate
+operational characteristics
+
+**Read more:** [Self Describing Production Code](./PositionPaper.SelfDescribingProductionCode.document.md)
+
+### Auditing Code, in Production
+
+* *Internal Audits*
+
+    An internal audit production code involves creating classifications of
+    errors that adhere to strict definitions, unlike the flexible
+    classifications often found in other logging and telemetry systems.
+    Specifically, this means that an error must clearly describe something
+    exceptional that is not permitted. Every identified error requires
+    investigation until resolved.
+
+    For instance, the failure to open a key database file is an example of an
+    error worth investigating, whereas the failure to open a user file may
+    not be considered a failure. The distinction may seem subtle but is
+    significant. For example, in a library that processes files, treating the
+    failure to open a file as an error might be inappropriate. This type of
+    failure might be flagged as a warning, whereas higher layers might treat
+    it as a critical error, such as with a database.
+
+* *External Audits*
+
+   An external audit of the code introduces environmental characteristics to the
+   code. For example, what might be a programmatic warning internal to the code
+   could be treated as an error by an external observer.
+
+   This is where the power of Dynamic Telemetry can be found. This power allows for
+   the training of nominal operating characteristics for a particular environment
+   on specific hardware. The external observer should be viewed as an advocate for
+   the user within the operational environment.
+
+   Imagine code in a unit test environment treating particular failures with
+   extreme strictness; perhaps any file error is treated as an error worth
+   investigating. However, as the code migrates from unit testing to scenario
+   testing, the threshold for an investigated failure may shift.
+
+   As the code enters the stress environment, the opposite characteristics may be
+   applied. For instance, the inability to open a file may no longer be treated as
+   an error but rather as a success.
+
+   In all cases, however, failures encountered during fuzz testing are consistently
+   regarded as errors worthy of further study.
+
+   The ability to redefine what is a error worth investigating at runtime without
+   recompilation is a key value of Dynamic Telemetry.
+
+**Read more:** [Auditing of Production Code](./PositionPaper.AuditingProductionCode.document.md)
+
+### Failure Induced Triggering of Verbose Diagnostics
+
+Diagnostic collection essentially involves gathering the content that
+programmers or operational teams deem necessary for diagnosing system failures.
+Dynamic Telemetry defines an error as an issue requiring investigation,
+therefore providing clear guidance, and total clarity of expectation, on the
+subsequent steps and specifying what needs to be collected.
+
+1. Should an internal external test fail
+1. 'Detect' this in any one of your [Processor Locations](./Architecture.Components.Processor.Overview.document.md)
+1. 'Trigger' a Diagnostic Collecting, containing what the developer said they
+   need
+
+It cannot get simpler. Best of all, with Dynamic Telemetry, the cost of mistakes
+is low. Clear expectations do not guarantee unique logs, memory dumps, or CPU
+traces when issues arise. Different personas, such as the operational team or
+program management team, also set equally clear expectations.
+
+These balances are explored more deeply in the diagnostic collection sections.
+In short though; simply because a developer clearly requests a memory dump for
+minor issues or seek extensive CPU sampling, they may not get what they want --
+because their operational team set equally clear guidance on topics like memory,
+disk, and CPU usage.

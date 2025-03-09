@@ -3,7 +3,7 @@ author: "Chris Gray"
 status: ReviewLevel1b
 ---
 
-# Dynamic Telemetry Philosophy
+# Dynamic Telemetry
 
 DynamicTelemetry is an articulation of the embodiment of a suite of
 Observability tools, designed to manage, control, and reshape telemetry in

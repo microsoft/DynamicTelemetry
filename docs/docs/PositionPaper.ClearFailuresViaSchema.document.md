@@ -3,4 +3,4 @@ author: "Chris Gray"
 status: ReviewLevel1
 ---
 
-# PositionPaper.ClearFailuresViaSchema.document.md  : COMING SOON
+# Using Crisp Schemas; to simplify communications among stakeholders easier

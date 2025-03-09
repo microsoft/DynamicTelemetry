@@ -3,4 +3,4 @@ author: "Chris Gray"
 status: ReviewLevel1
 ---
 
-# PositionPaper.ProbeToHeader.document.md  : COMING SOON
+# Generated Headers/Contracts for Logging; for Strong Contracts

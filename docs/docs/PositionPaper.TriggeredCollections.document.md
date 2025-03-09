@@ -3,4 +3,4 @@ author: "Chris Gray"
 status: ReviewLevel1
 ---
 
-# PositionPaper.TriggeredCollections.document.md : COMING SOON
+# Theory of Triggered Diagnostic Collections

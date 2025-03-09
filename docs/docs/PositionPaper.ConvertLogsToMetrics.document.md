@@ -3,4 +3,4 @@ author: "Chris Gray"
 status: ReviewLevel1
 ---
 
-# PositionPaper.ConvertLogsToMetrics.document.md  : COMING SOON
+# Converting Logs to Metrics; for cost, privacy, and performance
