@@ -5,7 +5,7 @@ status: ReviewLevel1
 
 # Offbox Processor Coming Soon
 
-![](../orig_media/Architecture.Boxes.Yes.DynamicTelemetry.drawio.png)
+![](../orig_media/Architecture.Boxes.Full.DynamicTelemetry.drawio.png)
 
 This processor has a unique characteristic of being off-box and separate from
 the machine being monitored. This is likely the least risky location to start

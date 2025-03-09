@@ -18,7 +18,7 @@ retained for analysis. This process can be automated using tools and scripts
 that identify and redact sensitive data patterns, ensuring that logs remain
 useful for monitoring and troubleshooting without compromising security
 
-## Introducing Your Tools : Dynamically Dropping and Scrubbing Logs
+## Introducing Your Tools : Filters
 
 Redacting portions of logs using durable IDs and structured payloads involves
 several technical steps to ensure that sensitive information is effectively

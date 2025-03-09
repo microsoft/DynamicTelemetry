@@ -3,7 +3,7 @@ author: "Chris Gray"
 status: ReviewLevel1b
 ---
 
-# Deep Diagnostics, at Scale
+# Performance and Diagnostics, at Scale
 
 ![image](../orig_media/PerformanceAndDiagnostics.banner.png)
 

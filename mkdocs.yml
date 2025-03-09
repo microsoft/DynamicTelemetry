@@ -79,18 +79,18 @@ nav:
             #    - EventFieldSuppression: ./docs/Scenarios.EventFieldSuppression.document.md
             #    - EventSuppression: ./docs/Scenarios.EventSuppression.document.md
 
-        - Reliability: ./docs/Scenarios.Overview.Reliability.document.md
+        - Reliability and Testing: ./docs/Scenarios.Overview.Reliability.document.md
             #- Tools: ./docs/PlaceHolder.document.md
             #- Architecture: ./docs/PlaceHolder.document.md
             #- Position Papers: ./docs/PlaceHolder.document.md
 
-        - Durable Dashboards and Alerts: ./docs/Scenarios.Overview.DurableDashboards.Alerts.document.md
+        - Dashboards, Alerts, and Environment Migrations: ./docs/Scenarios.Overview.DurableDashboards.Alerts.document.md
             #- Tools:
             #    - Changing Environments: ./docs/Scenarios.ChangingEnvironments.document.md
             #- Architecture: ./docs/PlaceHolder.document.md
             #- Position Papers: ./docs/PlaceHolder.document.md
 
-        - CostReduction: ./docs/Scenarios.Overview.CostReduction.document.md
+        - Cost Reduction: ./docs/Scenarios.Overview.CostReduction.document.md
             #- Tools:
             #    - Convert Logs to Metrics: ./docs/Scenarios.ConvertLogsToMetrics.document.md
             #- Architecture: ./docs/PlaceHolder.document.md
