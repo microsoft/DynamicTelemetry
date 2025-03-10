@@ -23,6 +23,7 @@ status: Level5
 | [../docs/Demos.2_DynamicProbe.md](../docs/Demos.2_DynamicProbe.md)  | 277|
 | [../docs/Demos.4.AddTelemetryDemo.md](../docs/Demos.4.AddTelemetryDemo.md)  | 1084|
 | [../docs/Demos.HighLevel.Overview.md](../docs/Demos.HighLevel.Overview.md)  | 1187|
+| [../docs/HowTo.UseThisDocumentation.document.md](../docs/HowTo.UseThisDocumentation.document.md)  | 335|
 | [../docs/PositionPaper.DeliveryGuarantees.document.md](../docs/PositionPaper.DeliveryGuarantees.document.md)  | 163|
 | [../docs/PositionPaper.FileAndStreaming.document.md](../docs/PositionPaper.FileAndStreaming.document.md)  | 229|
 | [../docs/PositionPaper.ObserverEffect.document.md](../docs/PositionPaper.ObserverEffect.document.md)  | 728|
@@ -30,7 +31,7 @@ status: Level5
 | [../docs/PositionPaper.TelemetryUmbilical.document.md](../docs/PositionPaper.TelemetryUmbilical.document.md)  | 92|
 | [../docs/Rude_Q_and_A.md](../docs/Rude_Q_and_A.md)  | 748|
 | [../docs/Scenarios.Overview.CostReduction.document.md](../docs/Scenarios.Overview.CostReduction.document.md)  | 1391|
-| [../docs/Scenarios.Overview.DeepDiagnostics.document.md](../docs/Scenarios.Overview.DeepDiagnostics.document.md)  | 762|
+| [../docs/Scenarios.Overview.DeepDiagnostics.document.md](../docs/Scenarios.Overview.DeepDiagnostics.document.md)  | 763|
 | [../docs/Scenarios.Overview.document.md](../docs/Scenarios.Overview.document.md)  | 180|
 | [../docs/Scenarios.Overview.DurableDashboards.Alerts.document.md](../docs/Scenarios.Overview.DurableDashboards.Alerts.document.md)  | 569|
 | [../docs/Scenarios.Overview.RedactingSecrets.document.md](../docs/Scenarios.Overview.RedactingSecrets.document.md)  | 1090|
