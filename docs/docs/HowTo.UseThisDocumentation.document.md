@@ -29,7 +29,7 @@ However, as you read the Dynamic Telemetry documentation, you'll notice a
 mixture of Open Source and closed source software offerings. Dynamic Telemetry
 does not take a principled position on either; both are considered valuable.
 
-The Dynamic Telemetry documentation is organized. Into three layers.
+The Dynamic Telemetry documentation is organized into three layers.
 
 1. **Scenarios**; mapping user utility into software architecture
 1. **Architecture**; showcasing the software "big boxes" and data flows
