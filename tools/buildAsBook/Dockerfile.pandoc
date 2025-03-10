@@ -92,6 +92,9 @@ RUN apt-get install -y -q python3.10-venv
 
 RUN mkdir /mkdocs_python
 RUN python3 -m venv /mkdocs_python
+RUN apt-get install -y -q texlive-latex-extra
+RUN pip install pandoc-latex-unlisted
+RUN apt-get install -y -q wkhtmltopdf
 
 ENV CDOCS_FILTER=1
 

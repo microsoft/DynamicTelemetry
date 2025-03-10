@@ -3,7 +3,7 @@ author: "Chris Gray"
 status: ReviewLevel1b
 ---
 
-# Coming Soon
+# Sharing data between stake holders is tough;  roles and responsibly breakdowns
 
 Points:
 

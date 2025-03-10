@@ -34,6 +34,7 @@ theme:
         - search.suggest
         - toc.follow
         # - toc.integrate
+
     palette:
         - media: "(prefers-color-scheme)"
           toggle:
@@ -65,37 +66,36 @@ nav:
 #<START_BINDING>
     - What is Dynamic Telemetry:
         - Introduction : ./docs/index.md
-        - Performance and Diagnostics:
-            - Overview: ./docs/Scenarios.Overview.DeepDiagnostics.document.md
-            - MemoryLeak: ./docs/Scenarios.MemoryLeak.document.md
-            - TriggeredMemoryDump: ./docs/PositionPaper.TriggeredMemoryDump.document.md
-            - TriggeredFlightRecorder: ./docs/PositionPaper.TriggeredFlightRecorder.document.md
-            - Event Aggregation: ./docs/Scenarios.EventAggregation.document.md
-            - ExtractingMemoryWithUProbe: ./docs/Scenarios.ExtractingMemoryWithUProbe.document.md
 
-        - Privacy and Security:
-            - Overview: ./docs/Scenarios.Overview.RedactingSecrets.document.md
-            - EventFieldSuppression: ./docs/Scenarios.EventFieldSuppression.document.md
-            - EventSuppression: ./docs/Scenarios.EventSuppression.document.md
+        - Performance and Diagnostics: ./docs/Scenarios.Overview.DeepDiagnostics.document.md
+            #- Tools:
+            #    - Event Aggregation: ./docs/Scenarios.EventAggregation.document.md
+            #    - ExtractingMemoryWithUProbe: ./docs/Scenarios.ExtractingMemoryWithUProbe.document.md
+            #- The Process: ./docs/PlaceHolder.document.md
+            #- Architecture: ./docs/PlaceHolder.document.md
+            #- Position Papers: ./docs/PlaceHolder.document.md
 
-        - Reliability:
-            - Overview : ./docs/Scenarios.Overview.Reliability.document.md
-            - Testing Themes:
-                - Self Describing Production Code : ./docs/PositionPaper.SelfDescribingProductionCode.document.md
-                - Internal Audits of Production Code : ./docs/PositionPaper.InternalAuditsOfProductionCode.document.md
-                - External Audits of Production Code : ./docs/PositionPaper.ExternalAuditsOfProductionCode.document.md
-                - Testing With Entropy: ./docs/PositionPaper.TestingWithEntropy.document.md
-            - A/B Testing: ./docs/PositionPaper.ABTestingWithRichDiagnostics.document.md
-            - Clearly defined failures: ./docs/PositionPaper.ClearFailuresViaSchema.document.md
-            - Traditional Testing: ./docs/PositionPaper.TraditionalTesting.md
-        - Durable Dashboards and Alerts:
-            - Overview : ./docs/Scenarios.Overview.DurableDashboards.Alerts.document.md
-            - Changing Environments: ./docs/Scenarios.ChangingEnvironments.document.md
+        - Privacy and Security: ./docs/Scenarios.Overview.RedactingSecrets.document.md
+            #- Tools:
+            #    - EventFieldSuppression: ./docs/Scenarios.EventFieldSuppression.document.md
+            #    - EventSuppression: ./docs/Scenarios.EventSuppression.document.md
 
-        - CostReduction:
-            - Overview: ./docs/Scenarios.Overview.CostReduction.document.md
-            - Convert Logs to Metrics: ./docs/Scenarios.ConvertLogsToMetrics.document.md
-            - EventSuppression: ./docs/Scenarios.EventSuppression.document.md
+        - Reliability and Testing: ./docs/Scenarios.Overview.Reliability.document.md
+            #- Tools: ./docs/PlaceHolder.document.md
+            #- Architecture: ./docs/PlaceHolder.document.md
+            #- Position Papers: ./docs/PlaceHolder.document.md
+
+        - Dashboards, Alerts, and Environment Migrations: ./docs/Scenarios.Overview.DurableDashboards.Alerts.document.md
+            #- Tools:
+            #    - Changing Environments: ./docs/Scenarios.ChangingEnvironments.document.md
+            #- Architecture: ./docs/PlaceHolder.document.md
+            #- Position Papers: ./docs/PlaceHolder.document.md
+
+        - Cost Reduction: ./docs/Scenarios.Overview.CostReduction.document.md
+            #- Tools:
+            #    - Convert Logs to Metrics: ./docs/Scenarios.ConvertLogsToMetrics.document.md
+            #- Architecture: ./docs/PlaceHolder.document.md
+            #- Position Papers: ./docs/PlaceHolder.document.md
 
     - Architecture:
         - Overview: ./docs/Architecture.Overview.document.md
@@ -165,74 +165,80 @@ nav:
         - Overview: ./docs/PositionPaper.PositionPapers.Overview.document.md
         - Definitions: ./docs/Definitions.document.md
         - Position Papers:
-            - Actions: ./docs/PositionPaper.Actions.document.md
-            - ConfigurationDeployment: ./docs/PositionPaper.ConfigurationDeployment.document.md
-            - DurableIds_StructuredPayloads: ./docs/PositionPaper.DurableIds_StructuredPayloads.document.md
-            - FileAndStreaming: ./docs/PositionPaper.FileAndStreaming.document.md
-            - FlightRecorder: ./docs/PositionPaper.FlightRecorder.document.md
-            - GuideToLogVerbosity: ./docs/PositionPaper.GuideToLogVerbosity.document.md
-            - ObserverEffect: ./docs/PositionPaper.ObserverEffect.document.md
-            - ProbeRiskLevels: ./docs/PositionPaper.ProbeRiskLevels.document.md
-            - TelemetryUmbilical: ./docs/PositionPaper.TelemetryUmbilical.document.md
-            - Defining Production: ./docs/PositionPaper.DefiningProduction.document.md
-            - Cloud and Edge Interop: ./docs/PositionPaper.CloudAndEdgeInterop.document.md
-            - Delivery Guarantees: ./docs/PositionPaper.DeliveryGuarantees.document.md
-            - Probe to Header : ./docs/PositionPaper.ProbeToHeader.document.md
-            - Suppressing and Pushing Stack Args : ./docs/PositionPaper.WhereToSuppressInProc.document.md
-            - Convert Logs to Metrics: ./docs/PositionPaper.ConvertLogsToMetrics.document.md
-            - DynamicallyToggleLogs: ./docs/PositionPaper.DynamicallyToggleLogs.document.md
-            - Logs into Metrics: ./docs/PositionPaper.ConvertLogsToMetrics.document.md
-            - Impacts of Scarcity: ./docs/PositionPaper.ScarcityAndHumans.md
-            - Data Ownership isnt always Clear: ./docs/PositionPaper.DataOwnershipIsntAlwaysClear.document.md
-            - Logs into Metrics: ./docs/PositionPaper.ConvertLogsToMetrics.document.md
-            - Triggered Collections: ./docs/PositionPaper.TriggeredCollections.document.md
-            - Procedural Nets: ./docs/PositionPaper.ProceduralizeNets.document.md
-            - Locks and Throttles: ./docs/PositionPaper.LeafLevelLogging.document.md
-            - Loose Schemas: ./docs/PositionPaper.SharingDataAmongStakeHoldersIsHard.document.md
-            - Borrows from RTOS : ./docs/PositionPaper.ThinkLike.RTOS.document.md
+            - Inspirations:
+                - GuideToLogVerbosity: ./docs/PositionPaper.GuideToLogVerbosity.document.md
+                - ObserverEffect: ./docs/PositionPaper.ObserverEffect.document.md
+                - Defining Production: ./docs/PositionPaper.DefiningProduction.document.md
+                - Probe to Header : ./docs/PositionPaper.ProbeToHeader.document.md
+                - Convert Logs to Metrics: ./docs/PositionPaper.ConvertLogsToMetrics.document.md
+                - A/B Testing: ./docs/PositionPaper.ABTestingWithRichDiagnostics.document.md
+                - Impacts of Scarcity: ./docs/PositionPaper.ScarcityAndHumans.md
+                - Borrowing from RTOS : ./docs/PositionPaper.ThinkLike.RTOS.document.md
+                - Self Describing Production Code : ./docs/PositionPaper.SelfDescribingProductionCode.document.md
+                - Loose Schemas: ./docs/PositionPaper.SharingDataAmongStakeHoldersIsHard.document.md
 
-        - Interesting Applications:
-            - Overview: ./docs/Applications.InterestingApplications.document.md
+            - Implementation:
+                - Actions: ./docs/PositionPaper.Actions.document.md
+                - ConfigurationDeployment: ./docs/PositionPaper.ConfigurationDeployment.document.md
+                - ProbeRiskLevels: ./docs/PositionPaper.ProbeRiskLevels.document.md
 
+            - Architectural Pillars:
+                - DurableIds_StructuredPayloads: ./docs/PositionPaper.DurableIds_StructuredPayloads.document.md
+                - FileAndStreaming: ./docs/PositionPaper.FileAndStreaming.document.md
+                - FlightRecorder: ./docs/PositionPaper.FlightRecorder.document.md
+                - TelemetryUmbilical: ./docs/PositionPaper.TelemetryUmbilical.document.md
+                - Delivery Guarantees: ./docs/PositionPaper.DeliveryGuarantees.document.md
+                - DynamicallyToggleLogs: ./docs/PositionPaper.DynamicallyToggleLogs.document.md
+                - Triggered Collections: ./docs/PositionPaper.TriggeredCollections.document.md
+
+            - Testing and Quality:
+                - Testing With Entropy: ./docs/PositionPaper.TestingWithEntropy.document.md
+                - Clearly defined failures: ./docs/PositionPaper.ClearFailuresViaSchema.document.md
+                - Traditional Testing: ./docs/PositionPaper.TraditionalTesting.md
+                - Procedural Nets: ./docs/PositionPaper.ProceduralizeNets.document.md
+                - Auditing Production Code : ./docs/PositionPaper.AuditingProductionCode.document.md
 
         - Upcoming and Proposed Cuts:
-            - Upcoming:
-                - Ideas : ./docs/Ideas.ToExpandOn.document.md
-                - Design Patterns:
-                    - Overview: ./docs/Architecture.DesignPatterns.DesignPatterns.Overview.document.md
-                    - Primitives:
-                        - Queues: ./docs/Architecture.DesignPatterns.Queues.document.md
-                        - Counters: ./docs/Architecture.DesignPatterns.Counters.document.md
-                        - Valves: ./docs/Architecture.DesignPatterns.Valves.document.md
-                        - Toggles: ./docs/Architecture.DesignPatterns.Toggles.document.md
-                        - Triggers: ./docs/Architecture.DesignPatterns.Triggers.document.md
-            - Proposed Cuts:
-                - Personas:
-                    - Overview: ./docs/Personas.Overview.document.md
-                    - Data Analyst: ./docs/Persona_DataAnalysis.document.md
-                    - DevOps: ./docs/Persona_DevOps.document.md
-                    - Developer : ./docs/Persona_Developer.document.md
-                    - Project Manager: ./docs/Persona_ProjectManager.document.md
+            - Holding Pattern (the cut line):
+                - Interesting Applications:
+                    - Overview: ./docs/Applications.InterestingApplications.document.md
 
-        - Demos and Presentations:
-            - Videos:
-                - Dynamic Probes: ./docs/Demos.2_DynamicProbe.md
-                - HighLevel / Overview : ./docs/Demos.HighLevel.Overview.md
-                - Adding a Memory Probe: ./docs/Demos.4.AddTelemetryDemo.md
-                - Understanding Durable ID : ./docs/Demos.0.DynamicID.md
-                - Drop a Chatty Event : ./docs/Demos.1.DropChattyLog.md
-            - Slides / Presentations:
-                - Overview: ./docs/Slides.Overview.Presentation.md
-        - Development / Spec Process:
-            - Tenets: ./docs/PositionPaper.DynamicTelemetryTenets.document.md
-            - Using Doc Editing Container : ./docs/README.EDITING.CONTAINER.md
-            - Rude Q&A : ./docs/Rude_Q_and_A.md
-            - Document Review :
-                - Process : ./docs/ReviewProcess.document.md
-                - Status : ./orig_media/GeneratedFileStatus.md
+                - Upcoming:
+                    - Ideas : ./docs/Ideas.ToExpandOn.document.md
+                    - Design Patterns:
+                        - Overview: ./docs/Architecture.DesignPatterns.DesignPatterns.Overview.document.md
+                        - Primitives:
+                            - Queues: ./docs/Architecture.DesignPatterns.Queues.document.md
+                            - Counters: ./docs/Architecture.DesignPatterns.Counters.document.md
+                            - Valves: ./docs/Architecture.DesignPatterns.Valves.document.md
+                            - Toggles: ./docs/Architecture.DesignPatterns.Toggles.document.md
+                            - Triggers: ./docs/Architecture.DesignPatterns.Triggers.document.md
+                - Proposed Cuts:
+                    - Personas:
+                        - Overview: ./docs/Personas.Overview.document.md
+                        - Data Analyst: ./docs/Persona_DataAnalysis.document.md
+                        - DevOps: ./docs/Persona_DevOps.document.md
+                        - Developer : ./docs/Persona_Developer.document.md
+                        - Project Manager: ./docs/Persona_ProjectManager.document.md
 
+                - Demos and Presentations:
+                    - Videos:
+                        - Dynamic Probes: ./docs/Demos.2_DynamicProbe.md
+                        - HighLevel / Overview : ./docs/Demos.HighLevel.Overview.md
+                        - Adding a Memory Probe: ./docs/Demos.4.AddTelemetryDemo.md
+                        - Understanding Durable ID : ./docs/Demos.0.DynamicID.md
+                        - Drop a Chatty Event : ./docs/Demos.1.DropChattyLog.md
+                    - Slides / Presentations:
+                        - Overview: ./docs/Slides.Overview.Presentation.md
+                - Development / Spec Process:
+                    - Using Doc Editing Container : ./docs/README.EDITING.CONTAINER.md
+                    - Rude Q&A : ./docs/Rude_Q_and_A.md
+                    - Document Review :
+                        - Process : ./docs/ReviewProcess.document.md
+                        - Status : ./orig_media/GeneratedFileStatus.md
 
-
+    - HowTo:
+        - Using this Documentation: ./docs/HowTo.UseThisDocumentation.document.md
 
 #<END_BINDING>
 
@@ -325,6 +331,8 @@ copyright: >
 
 extra:
   generator: false
+
+
 
   consent:
     title: Cookie consent

@@ -4,7 +4,7 @@ status: ReviewLevel2
 description : Introduction to DynamicTelemetry
 ---
 
-# Dynamic Telemetry
+# Introduction to Dynamic Telemetry
 
 ![image](../orig_media/DynamicTelemetry.logo.png){width="5.5in"
 height="1.261111111111111in"}
@@ -33,7 +33,7 @@ recompiled) any code from the OpenTelemetry sample.
 After the demo, please 'choose your own adventure' by continuing to read along
 one of the five scenarios themes found below.
 
-## Scenarios
+## Common Scenarios {.unlisted .unnumbered}
 
 <div class="grid cards" markdown>
 

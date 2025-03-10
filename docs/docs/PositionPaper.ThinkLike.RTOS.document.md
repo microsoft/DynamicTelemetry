@@ -3,7 +3,7 @@ author: "Chris Gray"
 status: ReviewLevel2
 ---
 
-# Dynamic Telemetry and RTOS : COMING SOON
+# Applying RTOS techniques, to mitigate the risks of Dynamic Telemetry
 
 1. balancing risks and costs
 1. RTOS isn't fast; it's bound

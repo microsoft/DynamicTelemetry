@@ -5,7 +5,14 @@ FROM mcr.microsoft.com/cbl-mariner/base/core:2.0
 # Helpful commands: this section is the 'junk drawer' of handy command
 #    one could argue they shouldnt be here
 #
-# {docker, podman} build -f Dockerfile.mkdocs -t "dynamictelemetry/dynamictelemetry:mkdocs" .
+
+# podman build --platform linux/arm64 -f Dockerfile.mkdocs -t "docker.io/chgray123/dynamictelemetry:mkdocs" .
+# podman build --platform linux/amd64 -f Dockerfile.mkdocs -t "docker.io/chgray123/dynamictelemetry:mkdocs" .
+
+# podman login docker.io
+# podman push --platform linux/amd64 docker.io/chgray123/dynamictelemetry:mkdocs
+# podman push --platform linux/arm64 docker.io/chgray123/dynamictelemetry:mkdocs
+
 
 RUN tdnf update -y
 RUN tdnf install python3 -y
@@ -15,13 +22,6 @@ RUN mkdir -p ~/.local/mkdocs_python
 RUN python3 -m venv ~/.local/mkdocs_python
 RUN cd ~/.local/mkdocs_python/bin
 
-RUN ~/.local/mkdocs_python/bin/pip install mkdocs
-RUN ~/.local/mkdocs_python/bin/pip install mkdocs-mermaid2-plugin
-RUN ~/.local/mkdocs_python/bin/pip install mkdocs-material
-RUN ~/.local/mkdocs_python/bin/pip install mkdocs-minify-plugin
-RUN ~/.local/mkdocs_python/bin/pip install mkdocs-include-markdown-plugin
-RUN ~/.local/mkdocs_python/bin/pip install mkdocs-macros-plugin
-RUN ~/.local/mkdocs_python/bin/pip install mkdocs-video
-RUN ~/.local/mkdocs_python/bin/pip install mkdocs-redirects
+RUN ~/.local/mkdocs_python/bin/pip install mkdocs mkdocs-mermaid2-plugin mkdocs-material mkdocs-minify-plugin mkdocs-include-markdown-plugin mkdocs-macros-plugin mkdocs-video mkdocs-redirects
 
 WORKDIR /data

@@ -59,7 +59,7 @@ omitted in favor of direct ingestion from an agent. These architectures are
 usually employed in small to medium-sized installations. Although they function
 similarly, these variations are not the focus of this demonstration.
 
-![](../orig_media/Architecture.Boxes.No.DynamicTelemetry.drawio.png){width="5.5in"
+![](../orig_media/Architecture.Boxes.Full.DynamicTelemetry.drawio.png){width="5.5in"
 height="2.185044838145232in"}
 
 ### Survey of a Dynamic Telemetry Processor
@@ -108,7 +108,7 @@ The Processor section of this document expands upon these four different
 insertion points more thoroughly, but in short, each installation point have
 capability, cost, and benefit tradeoffs.
 
-![](../orig_media/Architecture.Boxes.Yes.DynamicTelemetry.drawio.png){width="5.5in"
+![](../orig_media/Architecture.Boxes.Full.DynamicTelemetry.drawio.png){width="5.5in"
 height="2.185044838145232in"}
 
 ### Capabilities of Dynamic Telemetry

@@ -5,7 +5,7 @@ status: ReviewLevel1
 
 # OnBox Observer: Coming Soon
 
-![](../orig_media/Architecture.Boxes.Yes.DynamicTelemetry.drawio.png)
+![](../orig_media/Architecture.Boxes.Full.DynamicTelemetry.drawio.png)
 
 The processor runs in user mode on the machine being observed, but it is not in
 the kernel. This is the final protocol conversion between the kernel's telemetry

@@ -3,7 +3,7 @@ author: "Chris Gray"
 status: ReviewLevel1b
 ---
 
-# Improving Communication and Data Durability
+# Environment Migration, Durability
 
 ![image](../orig_media/Durability.banner.png)
 
@@ -64,3 +64,9 @@ context-aware data collection, providing deeper insights into system behavior
 and performance. By leveraging dynamic telemetry, teams can enhance their
 observability and diagnostic capabilities, leading to more effective monitoring,
 quicker issue resolution, and overall improved system reliability.
+
+## Introducing Your Tools : Routers, and Flight Recorder
+
+## Changing Environments;  hosting providers, containers, VM's
+
+TODO;  add content

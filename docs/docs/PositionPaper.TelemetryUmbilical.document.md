@@ -3,7 +3,7 @@ author: "Chris Gray"
 status: ReviewLevel1b
 ---
 
-# Telemetry UMBILICAL : INCOMPLETE
+# Telemetry Umbilical; Migrating, splicing, and filtering your telemetry
 
 ## Talking Points
 
@@ -15,5 +15,3 @@ status: ReviewLevel1b
 1. The umbilical can be 'cut' and rerouted - such that there are only two
    locations per 'partition' {container, VM, Host} to be cut, should
    (re)routing, filtering, need to occur
-
-## Importance of the UMBILICAL on [PRIVACY](./PositionPaper.DataOwnershipIsntAlwaysClear.document.md)

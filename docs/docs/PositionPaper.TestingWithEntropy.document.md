@@ -3,4 +3,4 @@ author: "Chris Gray"
 status: ReviewLevel1
 ---
 
-# PositionPaper.TestingWithEntropy.document.md  : COMING SOON
+# Randomized Entropy Testing; using Dynamic Telemetry

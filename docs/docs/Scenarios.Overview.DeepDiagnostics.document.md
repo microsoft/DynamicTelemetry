@@ -3,7 +3,7 @@ author: "Chris Gray"
 status: ReviewLevel1b
 ---
 
-# Deep Diagnostics, at Scale
+# Performance and Diagnostics, at Scale
 
 ![image](../orig_media/PerformanceAndDiagnostics.banner.png)
 
@@ -55,9 +55,9 @@ that catch bugs.
 
 ![type:video](../orig_media/DynamicTelemetry_DiagnosticVideo.mp4)
 
-## Simple Example : dialing up Logging/Diagnostics when something goes wrong
+## Understaing by Example : Dynamically Regulating Logging, when things go wrong
 
-For example, consider a situation where a production system works well during
+Consider a situation where a production system works well during
 testing and under light load but experiences unexpectedly high CPU contention
 from time to time. Developers have many theories, and little data -- they
 suspect the machine could be entering receive livelock but are unsure why.
@@ -75,7 +75,7 @@ problem arises, it is resolved before they're able to:
 By using Dynamic Telemetry effectively, teams can proactively manage and resolve
 such issues, improving overall system stability and performance.
 
-## Casting 'Nets'
+## Trapping your Bugs - Dynamically, by Casting 'Nets'
 
 The Diagnostic Telemetry solution to this class of problem involves casting
 broad 'nets' on multiple machines expected to encounter this situation. Each net
@@ -85,8 +85,6 @@ These nets are simply configurations for a Dynamic Telemetry Processor that
 remain mostly dormant, monitoring selected logging values while waiting for a
 triggering condition. Once a triggered, an "Action" is called; which in turn
 provides the desired diagnostic information necessary for a root cause.
-
-## An Example
 
 By configuring the Processor to dynamically monitor these log messages, it can
 track the queue depth in real-time. If the queue length exceeds predefined
