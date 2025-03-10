@@ -23,7 +23,6 @@ Think of Dynamic Telemetry as a map, into the future and past of Observability.
 
 ![](../orig_media/HowTo.Map.jpeg)
 
-
 For the most part, Dynamic Telemetry will focus on Open Source technologies.
 However, as you read the Dynamic Telemetry documentation, you'll notice a
 mixture of Open Source and closed source software offerings. Dynamic Telemetry

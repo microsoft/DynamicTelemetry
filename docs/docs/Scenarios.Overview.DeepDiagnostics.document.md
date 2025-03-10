@@ -86,9 +86,6 @@ remain mostly dormant, monitoring selected logging values while waiting for a
 triggering condition. Once a triggered, an "Action" is called; which in turn
 provides the desired diagnostic information necessary for a root cause.
 
-**Nets;  and example**
-
-
 By configuring the Processor to dynamically monitor these log messages, it can
 track the queue depth in real-time. If the queue length exceeds predefined
 criteria set in the Processor's configuration, the Processor can initiate
