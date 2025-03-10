@@ -45,7 +45,7 @@ Telemetry, don't stop reading at the architecture! Keep reading into position
 papers. As you read, you may encounter disagreeable positions. This is okay!
 ***Reasonable people may disagree in the position papers.***
 
-***Please surface your questions and disagreements!***, through our
+***Please surface your questions and disagreements!*** through our
 [CONTRIBUTING](https://github.com/microsoft/DynamicTelemetry/blob/main/CONTRIBUTING.md)documentation.
 
 ```mermaid
