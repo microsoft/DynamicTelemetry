@@ -30,9 +30,9 @@ does not take a principled position on either; both are considered valuable.
 
 The Dynamic Telemetry documentation is organized into three layers.
 
-1. **Scenarios**; mapping user utility into software architecture
-1. **Architecture**; showcasing the software "big boxes" and data flows
-1. **Position papers**; articulating dilemmas and choices that had to be
+1. **Scenarios** mapping user utility into software architecture
+1. **Architecture** showcasing the software "big boxes" and data flows
+1. **Position papers** articulating dilemmas and choices that had to be
    balanced along the way
 
 If you're a user of the Dynamic Telemetry systems, [feel free to read the
