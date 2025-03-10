@@ -62,4 +62,4 @@ papers. As you read, you may encounter disagreeable positions. This is okay!
         end
 ```
 
-[To begin your journey;  visit https://microsoft.github.io/DynamicTelemetry](https://microsoft.github.io/DynamicTelemetry)
+***To begin your journey***, visit [https://microsoft.github.io/DynamicTelemetry](https://microsoft.github.io/DynamicTelemetry)
