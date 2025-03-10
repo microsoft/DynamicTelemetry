@@ -34,6 +34,7 @@ theme:
         - search.suggest
         - toc.follow
         # - toc.integrate
+
     palette:
         - media: "(prefers-color-scheme)"
           toggle:
@@ -95,7 +96,6 @@ nav:
             #    - Convert Logs to Metrics: ./docs/Scenarios.ConvertLogsToMetrics.document.md
             #- Architecture: ./docs/PlaceHolder.document.md
             #- Position Papers: ./docs/PlaceHolder.document.md
-
 
     - Architecture:
         - Overview: ./docs/Architecture.Overview.document.md
@@ -237,8 +237,8 @@ nav:
                         - Process : ./docs/ReviewProcess.document.md
                         - Status : ./orig_media/GeneratedFileStatus.md
 
-
-
+    - HowTo:
+        - Using this Documentation: ./docs/HowTo.UseThisDocumentation.document.md
 
 #<END_BINDING>
 
@@ -331,6 +331,8 @@ copyright: >
 
 extra:
   generator: false
+
+
 
   consent:
     title: Cookie consent
