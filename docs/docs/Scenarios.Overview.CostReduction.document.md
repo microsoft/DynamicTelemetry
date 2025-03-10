@@ -3,7 +3,7 @@ author: "Chris Gray"
 status: ReviewLevel1b
 ---
 
-# Reducing Costs
+# Costs Reduction
 
 ![image](../orig_media/CostSavings.banner.png)
 
@@ -29,7 +29,7 @@ expenditures and improving the bottom line.
 
 ![type:video](../orig_media/DynamicTelemetry_CostSavings.mp4)
 
-## Convert Logs into Metrics
+## Introducing Your Tools : Filtering, Flight Recorders, and Converting Logs to Metrics
 
 Converting logs into metrics is a powerful technique used in Dynamic Telemetry
 to optimize monitoring and reduce the overhead associated with storing and
@@ -59,7 +59,9 @@ overhead of storing and processing large volumes of log data. This approach
 ensures that resources are allocated effectively, reducing unnecessary costs,
 improving search performance, and improving the bottom line.
 
-## Organize Chatty Diagnostic Logs into Toggle Traces
+## Understanding By Example
+
+### Organize Chatty Diagnostic Logs into Toggle Traces
 
 Toggle Traces are perhaps one of the most interesting features of Dynamic
 Telemetry. Toggle traces refer to the ability to dynamically enable or disable
@@ -96,7 +98,7 @@ This approach ensures that you have the right balance between comprehensive
 monitoring and cost efficiency, allowing you to maintain optimal system
 performance while still gathering the necessary diagnostic information.
 
-## Drop Chatty / Unused Logs
+### Drop Chatty / Unused Logs
 
 Not all telemetry data remains valuable over time. Chatty telemetry, which
 refers to excessive and often redundant logging, can become a burden rather than
@@ -122,7 +124,7 @@ signal-to-noise ratio in the telemetry data. Ultimately, dropping chatty
 telemetry that is no longer useful helps in maintaining optimal system
 performance while still gathering the necessary diagnostic information1.
 
-## Removing Scarcity
+## A Deeper Understanding : Removing the Worry of Scarcity in your Dev Team
 
 The fear of not having enough telemetry can be a significant source of anxiety
 for engineers and administrators. Telemetry data is crucial for understanding

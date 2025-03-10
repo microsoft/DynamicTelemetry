@@ -17,7 +17,6 @@ no-duplicate-header:
 no-inline-html: false
 fenced-code-language: false
 
-
 #
 # BUGBUG : adding these suppressions, just to work around mutual exclusion in
 #          pandoc.   The intent is to add them back as solutions are found.

@@ -3,4 +3,4 @@ author: "Chris Gray"
 status: ReviewLevel1
 ---
 
-# PositionPaper.SelfDescribingProductionCode.document.md  : COMING SOON
+# Authoring "Self Describing" Code;  to maximize the impacts of Dynamic Telemetry

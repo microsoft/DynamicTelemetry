@@ -18,7 +18,7 @@ retained for analysis. This process can be automated using tools and scripts
 that identify and redact sensitive data patterns, ensuring that logs remain
 useful for monitoring and troubleshooting without compromising security
 
-## Technical Backbone of Secret Redaction
+## Introducing Your Tools : Filters
 
 Redacting portions of logs using durable IDs and structured payloads involves
 several technical steps to ensure that sensitive information is effectively
@@ -39,7 +39,7 @@ asuser_id,transaction_id, andtimestamp. This separation allows for more precise
 redaction of sensitive data, such as email addresses or credit card numbers,
 without affecting other parts of the log.
 
-## Redaction Process
+## Understanding by Example : Mechanics of Secret Redaction
 
 The process typically involves the following steps:
 

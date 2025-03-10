@@ -1,8 +1,8 @@
 version: '3'
 services:
   mkdocs:
-    image: dynamictelemetry/dynamictelemetry:mkdocs
-    entrypoint: /root/.local/mkdocs_python/bin/mkdocs serve -a 0.0.0.0:8000 -s
+    image: chgray123/dynamictelemetry:mkdocs
+    entrypoint: /root/.local/mkdocs_python/bin/mkdocs serve -a 0.0.0.0:8000
     ports:
       - "8000:8000"
     volumes:
