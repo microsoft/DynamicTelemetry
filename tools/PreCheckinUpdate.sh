@@ -5,14 +5,12 @@ set -e
 # See if CDocs has been built; if not sync and build
 #
 if [ ! -d "/Source/CDocs" ]; then
-    git clone https://github.com/chgray/CDocs /Source/CDocs_tmp
-    cd /Source/CDocs_tmp
+    git clone https://github.com/chgray/CDocs /Source/CDocs
+    cd /Source/CDocs
     git checkout user/chgray/update_ubuntu
 
     podman image pull docker.io/chgray123/chgray_repro:pandoc
     podman image pull docker.io/chgray123/chgray_repro:cdocs.mermaid
-
-    mv /Source/CDocs_tmp /Source/CDocs
 fi
 
 cd /Source/CDocs/tools/CDocsMarkdownCommentRender

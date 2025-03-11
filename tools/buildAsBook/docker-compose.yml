@@ -2,13 +2,13 @@ version: '3'
 services:
   mkdocs:
     privileged: true
-    container_name: pandoc
+    container_name: bind
     image: dynamictelemetry/dynamictelemetry:pandoc
     #entrypoint: /bin/bash -c "cd /data/tools; ls; ./PreCheckinUpdate.sh"
     entrypoint: /bin/bash -c "cd /data/tools; ls; bash"
 
     volumes:
-      - container_cache:/var/lib/containers:rw
+      - counter_cache:/var/lib/containers:rw
       - dev_dir:/root:rw
       - c:\DevDir:/devdir_ro:ro
       - ./source_cache:/Source:rw
@@ -32,9 +32,9 @@ services:
     tty: true
 
 volumes:
-  container_cache:
+  counter_cache:
     external: true
-    name: container_cache
+    name: counter_cache
 
   dev_dir:
       external: true
