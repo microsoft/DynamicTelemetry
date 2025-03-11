@@ -12,10 +12,24 @@ height="1.261111111111111in"}
 Introducing DynamicTelemetry, an OpenSource, diagnostic compliment to
 OpenTelemetry.
 
-The DynamicTelemetry development team wants to make debugging highly scaled
-production software as easy and enjoyable as debugging one application locally.
-We want you to be able to diagnose and explore live production systems without
-compromising reliability, performance, or customer privacy.
+DynamicTelemetry is a collaborative effort, bringing together technical
+innovators from diverse backgrounds. Key contributors include authors and key
+contributors from the Linux kernel, Windows kernel, OpenTelemetry, countless
+pieces of middleware, eBPF, compilers, and runtimes. Our software is running in
+most Linux and Windows operating systems, cloud hosts, and mobile devices
+worldwide. Our documents aim to provide a comprehensive guide, reflecting on
+past developments and looking forward to future advancements.
+
+***Dynamic Telemetry is our Shared Vision***; and we welcome your contributions.
+If you're a software innovator in this field,, we hope our documentation
+supports your needs, that it makes you feel welcome to contribute to our shared
+vision, and that with you, we can mutually empower one another to support one
+another.
+
+**The DynamicTelemetry development team aims to make debugging highly scaled
+production software as easy and enjoyable as debugging a single application
+locally.** Our goal is to enable you to diagnose and explore live production
+systems without compromising reliability, performance, or customer privacy.
 
 In this introduction, you will learn about DynamicTelemetry, an open-source
 diagnostic tool that blends traditional symbolic debuggers with advanced new

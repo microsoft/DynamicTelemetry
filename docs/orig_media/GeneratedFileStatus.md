@@ -23,7 +23,7 @@ status: Level5
 | [../docs/Demos.2_DynamicProbe.md](../docs/Demos.2_DynamicProbe.md)  | 277|
 | [../docs/Demos.4.AddTelemetryDemo.md](../docs/Demos.4.AddTelemetryDemo.md)  | 1084|
 | [../docs/Demos.HighLevel.Overview.md](../docs/Demos.HighLevel.Overview.md)  | 1187|
-| [../docs/HowTo.UseThisDocumentation.document.md](../docs/HowTo.UseThisDocumentation.document.md)  | 335|
+| [../docs/HowTo.UseThisDocumentation.document.md](../docs/HowTo.UseThisDocumentation.document.md)  | 332|
 | [../docs/PositionPaper.DeliveryGuarantees.document.md](../docs/PositionPaper.DeliveryGuarantees.document.md)  | 163|
 | [../docs/PositionPaper.FileAndStreaming.document.md](../docs/PositionPaper.FileAndStreaming.document.md)  | 229|
 | [../docs/PositionPaper.ObserverEffect.document.md](../docs/PositionPaper.ObserverEffect.document.md)  | 728|
@@ -120,7 +120,7 @@ status: Level5
 | [../docs/Architecture.Components.Processor.QueryLanguage.document.md](../docs/Architecture.Components.Processor.QueryLanguage.document.md)  | 349|
 | [../docs/Architecture.Components.Processor.StateMachine.document.md](../docs/Architecture.Components.Processor.StateMachine.document.md)  | 472|
 | [../docs/Architecture.Probes.Overview.document.md](../docs/Architecture.Probes.Overview.document.md)  | 1395|
-| [../docs/index.md](../docs/index.md)  | 367|
+| [../docs/index.md](../docs/index.md)  | 412|
 | [../docs/Personas.Overview.document.md](../docs/Personas.Overview.document.md)  | 257|
 | [../docs/PositionPaper.DurableIds_StructuredPayloads.document.md](../docs/PositionPaper.DurableIds_StructuredPayloads.document.md)  | 1242|
 | [../docs/PositionPaper.ThinkLike.RTOS.document.md](../docs/PositionPaper.ThinkLike.RTOS.document.md)  | 43|
