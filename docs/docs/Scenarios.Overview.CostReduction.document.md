@@ -32,22 +32,30 @@ expenditures and improving the bottom line.
 ## Introducing Your Tools : Filtering, Flight Recorders, and Converting Logs to Metrics
 
 Converting logs into metrics is a powerful technique used in Dynamic Telemetry
-to optimize monitoring and reduce the overhead associated with storing and
+for optimizing and reducing the overhead associated with storing and
 processing large volumes of log data. This process involves several key steps:
 
-1. **Log Collection**: The first step is to collect logs from various sources
-   within the system. These logs contain detailed information about events and
+1. **Log Emission**: The first step is to collect Logs from various sources
+   within the system. These Logs contain detailed information about events and
    operations occurring within the system.
 
-1. **Log Filtering and Aggregation**: Once the logs are collected, they are
-   filtered and aggregated to extract meaningful data. This is where the query
-   language processor comes into play. It integrates into the logging stream,
-   monitoring events by applying straightforward query language filtering and
-   aggregate functions. This helps in reducing the volume of data by focusing on
-   the most critical information.
 
-1. **Metric Conversion**: After filtering and aggregation, the relevant log data
-   can be converted into metrics.
+1. **Log Filtering and Aggregation**: Once the logs are emitted, they can be
+   immediately egressed (as usual) or by using Dynamic Telemetry, they can be
+   [Filtered, or
+   Routed](./docs/Architecture.Components.FiltersAndRouters.document.md) into a
+   temporary memory buffer, that is only egressed when something interesting
+   happens. We call these [Flight
+   Recorders](./docs/Architecture.FlightRecorder.Overview.document.md), and they
+   work similarly to what you'd expect on an aircraft. Perhaps more interesting,
+   is that Logs can be dynamically converted into Metrics.  While there are many
+   techniques (discussed later), one of the most interesting is using a [Query
+   Language
+   Processor](./docs/Architecture.Components.Processor.QueryLanguage.document.md).
+
+   These integrate into the logging stream, monitoring events by applying
+   straight forward Query Language filtering and aggregate functions. This helps
+   in reducing the volume of data by focusing on the most critical information.
 
 1. **Metric Emission**: The final step is to emit the metrics into your standard
    and existing metrics solution / dashboard. These metrics provide a high-level
