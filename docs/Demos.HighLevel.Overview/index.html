@@ -5814,23 +5814,15 @@ that will lead to an shared understanding, and hopefully one or more implementat
 <p><em>Please:</em></p>
 <ol>
 <li>
-<p>Open <a href="https://github.com/microsoft/DynamicTelemetry/pull/28/">this Git Hub Pull Request</a></p>
+<p><a href="https://github.com/microsoft/DynamicTelemetry/discussions">Join us, by providing comments or feedback, in our Discussions page</a></p>
 </li>
 <li>
-<p>Locate this file ( <strong>docs/Demos.HighLevel.Overview.md</strong>)</p>
-</li>
-<li>
-<p>Add Comments! :)</p>
+<p>Submit a PR with changes to this file ( <strong>docs/Demos.HighLevel.Overview.md</strong>)</p>
 </li>
 </ol>
 <p><em>Direct Sharing URL</em></p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>http://microsoft.github.io/DynamicTelemetry/docs/Demos.HighLevel.Overview/
 </span></code></pre></div>
-<p><em>If you'd prefer to give us a PR</em></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>https://microsoft.github.io/DynamicTelemetry/
-</span></code></pre></div>
-<p>Learn about overall document status
-    <a href="../ReviewProcess.document/">here</a></p>
 <p><img src="https://durableid-demo-a9byc5fwa7htc5h0.westus2-01.azurewebsites.net/?name=test.jpg&amp;handler=LoadImageFile&amp;pageName=docs/Demos.HighLevel.Overview.md"></p>
 </details>
 <h1 id="high-level-overview-demo-of-dynamic-telemetry">High Level Overview Demo, of Dynamic Telemetry</h1>
@@ -5964,8 +5956,8 @@ information.</p>
 <a href="../Architecture.Components.Processor.QueryLanguage.document/">Query Language</a>
 Processor -- and quickly deploy the below KQL to the most appropriate of the
 four Processors.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>traces
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>| where customDimensions.EventName != "LogWelcomeBanner"
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>traces
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>| where customDimensions.EventName != "LogWelcomeBanner"
 </span></code></pre></div>
 <p>The above KQL could be inserted at any one of the processors described in the
 previous section and when the log message is being emitted at that appropriate
@@ -5984,19 +5976,19 @@ simulation code unintentionally emits a secret, which we need to remove before
 it is ingested into our databases.</p>
 <p>In this simulated workflow, we wish to remove the secret before it's egressed
 from the web agent.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>public string WelcomeBanner
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>{
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    get
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    {
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>        DateTimeOffset time = DateTimeOffset.UtcNow;
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>        string secret = GetSecret(); ;
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>        LogWelcomeBanner(_logger, secret);
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>        return $"Welcome : {time}";
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    }
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>}
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>public string WelcomeBanner
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>{
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    get
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    {
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>        DateTimeOffset time = DateTimeOffset.UtcNow;
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>        string secret = GetSecret(); ;
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>        LogWelcomeBanner(_logger, secret);
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>        return $"Welcome : {time}";
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    }
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>}
 </span></code></pre></div>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>traces
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>| where customDimensions.EventName != "LogWelcomeBanner"
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>traces
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>| where customDimensions.EventName != "LogWelcomeBanner"
 </span></code></pre></div>
 <p>To achieve this goal, we utilize the KQL
 <a href="../Architecture.Components.Processor.QueryLanguage.document/">Query Language</a>
@@ -6006,9 +5998,9 @@ four Processors.</p>
 Dynamic Telemetry the simple configuration below can be dynamically transmitted
 to any of the four described processors at which point any log named
 "<em>LogWelcomeBanner</em>" have it's "secret" field redacted.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>traces
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>| extend customDimensions = iif(customDimensions.EventName == "LogWelcomeBanner",
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    bag_remove_keys(customDimensions, dynamic(['secret'])), customDimensions)
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>traces
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>| extend customDimensions = iif(customDimensions.EventName == "LogWelcomeBanner",
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    bag_remove_keys(customDimensions, dynamic(['secret'])), customDimensions)
 </span></code></pre></div>
 <h4 id="database-view-of-the-log-that-contains-a-secret">Database view of the Log that contains a secret</h4>
 <p>As demonstrated below, by utilizing Application Insights and KQL, it is evident
@@ -6019,9 +6011,9 @@ field.</p>
 <h4 id="database-view-of-the-log-after-field-redaction">Database view of the Log, after field redaction</h4>
 <p>As you can see in the below Screenshot, immediately after the KQL filter was
 deployed, just the 'secret' field is redacted.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>traces
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>| extend customDimensions = iif(customDimensions.EventName == "LogWelcomeBanner",
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    bag_remove_keys(customDimensions, dynamic(['secret'])), customDimensions)
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>traces
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>| extend customDimensions = iif(customDimensions.EventName == "LogWelcomeBanner",
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    bag_remove_keys(customDimensions, dynamic(['secret'])), customDimensions)
 </span></code></pre></div>
 <p><img alt="" src="../../orig_media/Demos.HighLevel.Overview.AfterRedact.png"></p>
 <h3 id="including-configuration-deployment-service">Including Configuration Deployment Service</h3>

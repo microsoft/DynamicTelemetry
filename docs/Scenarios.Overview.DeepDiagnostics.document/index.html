@@ -5602,23 +5602,15 @@ that will lead to an shared understanding, and hopefully one or more implementat
 <p><em>Please:</em></p>
 <ol>
 <li>
-<p>Open <a href="https://github.com/microsoft/DynamicTelemetry/pull/28/">this Git Hub Pull Request</a></p>
+<p><a href="https://github.com/microsoft/DynamicTelemetry/discussions">Join us, by providing comments or feedback, in our Discussions page</a></p>
 </li>
 <li>
-<p>Locate this file ( <strong>docs/Scenarios.Overview.DeepDiagnostics.document.md</strong>)</p>
-</li>
-<li>
-<p>Add Comments! :)</p>
+<p>Submit a PR with changes to this file ( <strong>docs/Scenarios.Overview.DeepDiagnostics.document.md</strong>)</p>
 </li>
 </ol>
 <p><em>Direct Sharing URL</em></p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>http://microsoft.github.io/DynamicTelemetry/docs/Scenarios.Overview.DeepDiagnostics.document/
 </span></code></pre></div>
-<p><em>If you'd prefer to give us a PR</em></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>https://microsoft.github.io/DynamicTelemetry/
-</span></code></pre></div>
-<p>Learn about overall document status
-    <a href="../ReviewProcess.document/">here</a></p>
 <p><img src="https://durableid-demo-a9byc5fwa7htc5h0.westus2-01.azurewebsites.net/?name=test.jpg&amp;handler=LoadImageFile&amp;pageName=docs/Scenarios.Overview.DeepDiagnostics.document.md"></p>
 </details>
 <h1 id="performance-and-diagnostics-at-scale">Performance and Diagnostics, at Scale</h1>
@@ -5637,7 +5629,7 @@ toggle telemetry, either manually or programmatically.</p>
 <p>As you start using and learning Dynamic Telemetry, you'll discover how to gamify
 debugging by dynamically collecting memory, toggling logs, and employing other
 techniques to effectively trap and diagnose bugs.</p>
-<h2 id="introducing-your-tools-processors-probes-and-actions">Introducing your Tools : Processors, Probes, and Actions</h2>
+<h2 id="introducing-your-tools-processors-probes-and-actions">Introducing your Tools : <a href="../Architecture.Components.Processor.Overview.document/">Processors</a>, <a href="../Architecture.Probes.Overview.document/">Probes</a>, and <a href="../Architecture.Action.Explanation.document/">Actions</a></h2>
 <p>In Dynamic Telemetry, Processors, Probes, and Actions play crucial roles in
 monitoring and diagnosing system behavior.</p>
 <p>The most important concept, if you can only understand one, is the <a href="../Architecture.Components.Processor.Overview.document/">Processor</a>.</p>
@@ -5688,7 +5680,6 @@ is very lightweight, with negligible performance or reliability concerns.</p>
 remain mostly dormant, monitoring selected logging values while waiting for a
 triggering condition. Once a triggered, an "Action" is called; which in turn
 provides the desired diagnostic information necessary for a root cause.</p>
-<p><strong>Nets;  and example</strong></p>
 <p>By configuring the Processor to dynamically monitor these log messages, it can
 track the queue depth in real-time. If the queue length exceeds predefined
 criteria set in the Processor's configuration, the Processor can initiate
@@ -5705,26 +5696,26 @@ a memory dump.</p>
 <p>By dynamically enabling and disabling probes and actions, you can create a
 flexible and responsive system that adapts to changing conditions and captures
 valuable diagnostic information when needed.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>public void ProcessWorkQueue()
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>{
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    for (; ; )
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    {
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>        m_workItemReadySemaphore.WaitOne();
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>        Work myWork;
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>        lock (m_lock)
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>        {
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>            myWork = m_WorkQueue.Dequeue();
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>            LogDequeueWork(m_logger, m_WorkQueue.Count);
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>        }
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>        myWork.DoWork();
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    }
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>}
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>
-</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>[LoggerMessage(Level = LogLevel.Information, Message = "Dequeue depth={depth}")]
-</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>static partial void LogDequeueWork(ILogger logger, int depth);
-</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>
-</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>[LoggerMessage(Level = LogLevel.Information, Message = "Enqueue depth={depth}")]
-</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>static partial void LogEnqueueWork(ILogger logger, int depth);
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>public void ProcessWorkQueue()
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>{
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    for (; ; )
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    {
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>        m_workItemReadySemaphore.WaitOne();
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>        Work myWork;
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>        lock (m_lock)
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>        {
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>            myWork = m_WorkQueue.Dequeue();
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>            LogDequeueWork(m_logger, m_WorkQueue.Count);
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>        }
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>        myWork.DoWork();
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    }
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>}
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>[LoggerMessage(Level = LogLevel.Information, Message = "Dequeue depth={depth}")]
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>static partial void LogDequeueWork(ILogger logger, int depth);
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>[LoggerMessage(Level = LogLevel.Information, Message = "Enqueue depth={depth}")]
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>static partial void LogEnqueueWork(ILogger logger, int depth);
 </span></code></pre></div></div>
 
 
