@@ -4,8 +4,7 @@
 Telemetry.  If you'd prefer more pleasing to read, rendered HTML, please visit
 [https://microsoft.github.io/DynamicTelemetry/](https://microsoft.github.io/DynamicTelemetry/).
 
-Dynamic Telemetry is proposal for an open-source diagnostic tool
-designed to complement OpenTelemetry by making debugging highly scaled
+Dynamic Telemetry is an effort to make debugging highly scaled
 production software as easy and enjoyable as debugging a single
 application locally. Our goal is to enable you to diagnose and explore
 live production systems without compromising reliability, performance,
