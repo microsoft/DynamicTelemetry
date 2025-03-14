@@ -25,7 +25,7 @@ As you start using and learning Dynamic Telemetry, you'll discover how to gamify
 debugging by dynamically collecting memory, toggling logs, and employing other
 techniques to effectively trap and diagnose bugs.
 
-## Introducing your Tools : Processors, Probes, and Actions
+## Introducing your Tools : [Processors](./Architecture.Components.Processor.Overview.document.md), [Probes](./Architecture.Probes.Overview.document.md), and [Actions](./Architecture.Action.Explanation.document.md)
 
 In Dynamic Telemetry, Processors, Probes, and Actions play crucial roles in
 monitoring and diagnosing system behavior.
