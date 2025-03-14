@@ -58,7 +58,7 @@ testing such that your code self describes, and detects problems - and
 automatically generates verbose diagnostics for you, to help you fix the
 problem.
 
-## Introducing Your Tools : Triggering, Flight Recorders, Actions, and Processors
+## Introducing Your Tools : [Processors](./Architecture.Components.Processor.Overview.document.md), [Probes](./Architecture.Probes.Overview.document.md), [Actions](./Architecture.Action.Explanation.document.md), and [Flight Recorders](./Architecture.FlightRecorder.Overview.document.md)
 
 Imagine your software has the ability to self-described failure.
 Perhaps when you author a enqueue() operation you also supply nominal
