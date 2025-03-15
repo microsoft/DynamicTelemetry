@@ -5,6 +5,11 @@ set -e
 # See if CDocs has been built; if not sync and build
 #
 if [ ! -d "/Source/CDocs" ]; then
+
+    if [ -d "/Source/CDocs_tmp" ]; then
+        rm -r -f /Source/CDocs_tmp
+    fi
+    
     git clone https://github.com/chgray/CDocs /Source/CDocs_tmp
     cd /Source/CDocs_tmp
     git checkout user/chgray/update_ubuntu
