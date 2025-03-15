@@ -7,8 +7,8 @@ LABEL maintainer chgray@gmail.com
 # Helpful commands: this section is the 'junk drawer' of handy command
 #    one could argue they shouldnt be here
 #
-# podman build --platform linux/arm64 -f Dockerfile.pandoc -t "docker.io/chgray123/chgray_repro:pandoc" .
-# podman build --platform linux/amd64 -f Dockerfile.pandoc -t "docker.io/chgray123/chgray_repro:pandoc" .
+# podman build --platform linux/arm64 -f Dockerfile.pandoc -t "docker.io/chgray123/chgray_repro:pandoc_arm64" .
+# podman build --platform linux/amd64 -f Dockerfile.pandoc -t "docker.io/chgray123/chgray_repro:pandoc_amd64" .
 
 # docker build --platform linux/amd64,linux/arm64 -f Dockerfile.pandoc -t "docker.io/chgray123/chgray_repro:pandoc" --push .
 
@@ -91,7 +91,7 @@ ENV DOTNET_ROOT=/root/.dotnet
 ENV PATH=$PATH:$DOTNET_ROOT
 ENV PATH=$PATH:$DOTNET_ROOT/tools
 
-# RUN dotnet tool install powershell --global
+RUN dotnet tool install powershell --global
 
 RUN apt-get install -y -q git
 #RUN git clone https://github.com/chgray/CDocs /Source/CDocs
