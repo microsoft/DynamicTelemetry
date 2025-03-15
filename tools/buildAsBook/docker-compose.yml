@@ -2,27 +2,24 @@ version: '3'
 services:
   mkdocs:
     privileged: true
-    container_name: bind
-    image: dynamictelemetry/dynamictelemetry:pandoc
-    #entrypoint: /bin/bash -c "cd /data/tools; ls; ./PreCheckinUpdate.sh"
-    entrypoint: /bin/bash -c "cd /data/tools; ls; bash"
+    container_name: pandoc
+    image: chgray123/chgray_repro:pandoc
+    entrypoint: /bin/bash -c "cd /data/tools; ls; ./PreCheckinUpdate.sh"
+    #entrypoint: /bin/bash -c "cd /data/tools; ls; bash"
 
     volumes:
-      - counter_cache:/var/lib/containers:rw
+      - container_cache:/var/lib/containers:rw
       - dev_dir:/root:rw
       - c:\DevDir:/devdir_ro:ro
-      - ./source_cache:/Source:rw
+      - c:\Source\CDocs:/Source/CDocs:rw
 
-      #- ../..:/data:ro
-      #- ../../docs/orig_media:/out/orig_media:rw
-      #- ../../bound_docs:/out/bound_docs:rw
-      #- ../..:/data_rw:rw
-      #- ../../bound:/out/bound:rw
+      #- ./source_cache:/Source:rw
+
 
       - ../..:/data:rw
       - /data/docs/orig_media
       - ../../docs/orig_media:/data/docs/orig_media:rw
-      #- /data/docs/bound_docs
+
       - /data/docs/bound_docs
       - ../../bound:/data/bound:rw
       - ../../bound_docs:/data/docs/bound_docs:rw
@@ -32,10 +29,10 @@ services:
     tty: true
 
 volumes:
-  counter_cache:
-    external: true
-    name: counter_cache
+  container_cache:
+    external: false
+    name: container_cache
 
   dev_dir:
-      external: true
+      external: false
       name: dev_dir
