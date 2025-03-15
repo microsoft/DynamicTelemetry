@@ -4,8 +4,8 @@ services:
     privileged: true
     container_name: pandoc
     image: chgray123/chgray_repro:pandoc
-    #entrypoint: /bin/bash -c "cd /data/tools; ls; ./PreCheckinUpdate.sh"
-    entrypoint: /bin/bash -c "cd /data/tools; ls; bash"
+    entrypoint: /bin/bash -c "cd /data/tools; ls; ./PreCheckinUpdate.sh"
+    #entrypoint: /bin/bash -c "cd /data/tools; ls; bash"
 
     volumes:
       - container_cache:/var/lib/containers:rw

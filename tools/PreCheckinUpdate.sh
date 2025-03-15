@@ -9,20 +9,40 @@ if [ ! -d "/Source/CDocs" ]; then
     if [ -d "/Source/CDocs_tmp" ]; then
         rm -r -f /Source/CDocs_tmp
     fi
-    
+
     git clone https://github.com/chgray/CDocs /Source/CDocs_tmp
     cd /Source/CDocs_tmp
     git checkout user/chgray/update_ubuntu
-
-    podman image pull docker.io/chgray123/chgray_repro:pandoc
-    podman image pull docker.io/chgray123/chgray_repro:cdocs.mermaid
-
     mv /Source/CDocs_tmp /Source/CDocs
 fi
 
+#
+# See if the pandoc image exists; if not, pull it
+#
+set +e
+podman image exists docker.io/chgray123/chgray_repro:pandoc
+
+if [ $? -ne 0 ]; then
+    set -e
+    echo "Pulling pandoc image..."
+    podman image pull docker.io/chgray123/chgray_repro:pandoc
+fi
+
+set +e
+podman image exists docker.io/chgray123/chgray_repro:cdocs.mermaid
+
+if [ $? -ne 0 ]; then
+    set -e
+    echo "Pulling cdocs.mermaid image..."
+    podman image pull docker.io/chgray123/chgray_repro:cdocs.mermaid
+fi
+set -e
+
+#
+# Build CDocsMarkdownCommentRender
+#
 cd /Source/CDocs/tools/CDocsMarkdownCommentRender
 dotnet build .
-
 
 #
 # Setup the Python environment
