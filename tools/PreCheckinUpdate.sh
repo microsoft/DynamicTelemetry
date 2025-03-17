@@ -39,6 +39,15 @@ fi
 set -e
 
 #
+# Docker build w/ AMD64, on ARM64 results in segfault when powershell is installed
+#   do the install here, one time
+#
+if [ ! -f /root/.dotnet/tools/pwsh ]; then
+    echo "Installing powershell (this may take a few minutes)..."
+    dotnet tool install powershell --global
+fi
+
+#
 # Build CDocsMarkdownCommentRender
 #
 cd /Source/CDocs/tools/CDocsMarkdownCommentRender
