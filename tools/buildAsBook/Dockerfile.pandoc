@@ -91,11 +91,9 @@ ENV DOTNET_ROOT=/root/.dotnet
 ENV PATH=$PATH:$DOTNET_ROOT
 ENV PATH=$PATH:$DOTNET_ROOT/tools
 
-RUN dotnet tool install powershell --global
+# RUN dotnet tool install powershell --global
 
 RUN apt-get install -y -q git
-#RUN git clone https://github.com/chgray/CDocs /Source/CDocs
-#RUN dotnet build /Source/CDocs/tools/CDocsMarkdownCommentRender
 ENV PATH=$PATH:/Source/CDocs/tools/CDocsMarkdownCommentRender/bin/Debug/net8.0
 RUN apt-get update
 RUN apt-get install -y -q podman
