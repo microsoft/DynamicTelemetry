@@ -28,13 +28,13 @@ creating tight feedback loops and more useful telemetry.
 
 In this introduction, lets explore a hypothetical new telemetry experience
 that blends traditional symbolic debuggers with advanced new complements to
-your existing OpenTelemetry assets and workflows ...
-innovators from diverse backgrounds. Key contributors include authors and key
-contributors from the Linux kernel, Windows kernel, OpenTelemetry, countless
-pieces of middleware, eBPF, compilers, and runtimes. Our software is running in
-most Linux and Windows operating systems, cloud hosts, and mobile devices
-worldwide. Our documents aim to provide a comprehensive guide, reflecting on
-past developments and looking forward to future advancements.
+your existing OpenTelemetry assets and workflow. We are innovators from diverse
+technical backgrounds. Key contributors include authors and key contributors
+from the Linux kernel, Windows kernel, OpenTelemetry, countless pieces of
+middleware, eBPF, compilers, and runtimes. Our software is running in most Linux
+and Windows operating systems, cloud hosts, and mobile devices worldwide. Our
+documents aim to provide a comprehensive guide, reflecting on past developments
+and looking forward to future advancements.
 
 ***Dynamic Telemetry is our Shared Vision***; and we welcome your contributions.
 If you're a software innovator in this field,, we hope our documentation
