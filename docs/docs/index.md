@@ -16,7 +16,8 @@ OpenTelemetry.
 production software as easy and enjoyable as debugging a single application
 locally.** Engineers should be able to diagnose and explore live production
 systems without compromising reliability, performance, or customer privacy.
-***Dynamic Telemetry is a collaborative effort and a shared vision***; We are actively exploring it and we welcome your contributions.
+***Dynamic Telemetry is a collaborative effort and a shared vision***; We are
+actively exploring it and we welcome your contributions.
 
 Historically telemetry has focused on collecting large volumes of statically
 configured information, then mining it later in hopes that it is useful.
