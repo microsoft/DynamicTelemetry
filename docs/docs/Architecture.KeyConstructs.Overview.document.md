@@ -19,7 +19,7 @@ The four Constructs of Dynamic Telemetry are
 1. [Flight Recorders](./Architecture.FlightRecorder.Overview.document.md)
 1. [Filters, Routers, and Adapters](./Architecture.Components.FiltersAndRouters.document.md)
 1. [Processors](./Architecture.Components.Processor.Overview.document.md)
-1. [Actiona](./Architecture.Actions.Overview.document.md)
+1. [Actions](./Architecture.Actions.Overview.document.md)
 
 ## What is a Probe{.unlisted .unnumbered}
 
