@@ -78,7 +78,7 @@ filters in a water system.
   one that streams into an OpenTelemetry backend while the other goes into a
   Flight Recorder.
 * An Adapter allows the adaptation of existing non-OpenTelemetry and often
-  platform-specific telemetry  nto the OpenTelemetry pipeline. For example,
+  platform-specific telemetry into the OpenTelemetry pipeline. For example,
   syslog, LTTng, or ETW on Windows.
 
 ## What is a Processor{.unlisted .unnumbered}
