@@ -12,13 +12,29 @@ height="1.261111111111111in"}
 Introducing DynamicTelemetry, an OpenSource, diagnostic compliment to
 OpenTelemetry.
 
-DynamicTelemetry is a collaborative effort, bringing together technical
-innovators from diverse backgrounds. Key contributors include authors and key
-contributors from the Linux kernel, Windows kernel, OpenTelemetry, countless
-pieces of middleware, eBPF, compilers, and runtimes. Our software is running in
-most Linux and Windows operating systems, cloud hosts, and mobile devices
-worldwide. Our documents aim to provide a comprehensive guide, reflecting on
-past developments and looking forward to future advancements.
+**The DynamicTelemetry project aims to make debugging highly scaled
+production software as easy and enjoyable as debugging a single application
+locally.** Engineers should be able to diagnose and explore live production
+systems without compromising reliability, performance, or customer privacy.
+***Dynamic Telemetry is a collaborative effort and a shared vision***; We are
+actively exploring it and we welcome your contributions.
+
+Historically telemetry has focused on collecting large volumes of statically
+configured information, then mining it later in hopes that it is useful.
+This often leads to storing vast amounts of rarely used data 'just in case', yet
+failing to anticipate other data that will be needed in the future. We want to let
+engineers reconfigure the telemetry being sent by production systems in real-time,
+creating tight feedback loops and more useful telemetry.
+
+In this introduction, lets explore a hypothetical new telemetry experience
+that blends traditional symbolic debuggers with advanced new complements to
+your existing OpenTelemetry assets and workflow. We are innovators from diverse
+technical backgrounds. Key contributors include authors and key contributors
+from the Linux kernel, Windows kernel, OpenTelemetry, countless pieces of
+middleware, eBPF, compilers, and runtimes. Our software is running in most Linux
+and Windows operating systems, cloud hosts, and mobile devices worldwide. Our
+documents aim to provide a comprehensive guide, reflecting on past developments
+and looking forward to future advancements.
 
 ***Dynamic Telemetry is our Shared Vision***; and we welcome your contributions.
 If you're a software innovator in this field,, we hope our documentation
