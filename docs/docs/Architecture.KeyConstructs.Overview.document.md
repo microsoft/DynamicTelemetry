@@ -91,7 +91,7 @@ that sits inside the OpenTelemetry data feed.
 Simple examples of a Processor include:
 
 - Counting and aggregating log messages.
-- Auditing Logging for PII or unintentional secret egress
+- Auditing Logging for PII or unintentional secret egress.
 - Converting verbose logs into metrics.
 - Monitoring logs to invoke an Action when a problem occurs.
 
