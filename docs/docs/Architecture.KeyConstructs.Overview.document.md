@@ -51,7 +51,6 @@ logging events without altering the application code. This dynamic nature enable
 real-time adjustments to telemetry data collection, facilitating more responsive
 and efficient monitoring and diagnostics.
 
-
 ## What is a Flight Recorder{.unlisted .unnumbered}
 
 A Flight Recorder is essentially a ring buffer of logs with a unique identifier
@@ -64,7 +63,6 @@ The two key characteristics of a Flight Recorder are:
 1. that it is uniquely identifiable
 1. that it contains logs
 
-
 ## What is a Filter/Router/Adapter{.unlisted .unnumbered}
 
 Imagine an OpenTelemetry pipeline as a pipe of water. Cutting the pipe and
@@ -73,18 +71,22 @@ blocking filter could be considered a valve. The use of filters and routers
 allows the dynamic shaping and routing of telemetry - much like valves and
 filters in a water system.
 
-* A filter is a Dynamic Telemetry construct used to filter and route logging that
-is already inside an OpenTelemetry pipeline.
+* A filter is a Dynamic Telemetry construct used to filter and route logging
+  that is already inside an OpenTelemetry pipeline.
 * A Router is a dynamic telemetry construct that allows the data pipeline to be
   cut and forked. For example, it can connect two different processors, perhaps
   one that streams into an OpenTelemetry backend while the other goes into a
   Flight Recorder.
-* An Adapter allows the adaptation of existing non-OpenTelemetry and often platform-specific telemetry into the OpenTelemetry pipeline. For example, syslog, LTTng, or ETW on Windows.
-
+* An Adapter allows the adaptation of existing non-OpenTelemetry and often
+  platform-specific telemetry  nto the OpenTelemetry pipeline. For example,
+  syslog, LTTng, or ETW on Windows.
 
 ## What is a Processor{.unlisted .unnumbered}
 
-A Processor is the dynamic component of Dynamic Telemetry where various scenarios and applications are manifested. The simplest way to think of a Processor is as a place for compute to be applied with dynamic configuration that sits inside the OpenTelemetry data feed.
+A Processor is the dynamic component of Dynamic Telemetry where various
+scenarios and applications are manifested. The simplest way to think of a
+Processor is as a place for compute to be applied with dynamic configuration
+that sits inside the OpenTelemetry data feed.
 
 Simple examples of a Processor include:
 
