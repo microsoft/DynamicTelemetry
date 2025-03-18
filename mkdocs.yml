@@ -131,7 +131,7 @@ nav:
                         - Cubby Hole: ./docs/Architecture.FlightRecorder.CubbyHole.document.md
                         - Long Horizons: ./docs/Architecture.FlightRecorder.LongHorizons.document.md
             - Filters and Routers:
-                - Filters / Routers Overview: ./docs/Architecture.Components.FiltersAndRouters.document.md
+                - Filters / Routers Overview: ./docs/Architecture.Components.FiltersRoutersAndAdapters.document.md
 
             - Processors :
                 - Processors Overview: ./docs/Architecture.Components.Processor.Overview.document.md

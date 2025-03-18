@@ -58,7 +58,7 @@ testing such that your code self describes, and detects problems - and
 automatically generates verbose diagnostics for you, to help you fix the
 problem.
 
-## Introducing Your Tools : [Processors](./Architecture.Components.Processor.Overview.document.md), [Probes](./Architecture.Probes.Overview.document.md), [Actions](./Architecture.Action.Explanation.document.md), and [Flight Recorders](./Architecture.FlightRecorder.Overview.document.md)
+## Introducing Your Tools : [Processors](./Architecture.Components.Processor.Overview.document.md), [Probes](./Architecture.Probes.Overview.document.md), [Actions](./Architecture.Action.Explanation.document.md), [Filters, Routers](./Architecture.Components.FiltersRoutersAndAdapters.document.md) and [Flight Recorders](./Architecture.FlightRecorder.Overview.document.md)
 
 Imagine your software has the ability to self-described failure.
 Perhaps when you author a enqueue() operation you also supply nominal
@@ -246,25 +246,25 @@ operational characteristics
    code. For example, what might be a programmatic warning internal to the code
    could be treated as an error by an external observer.
 
-   This is where the power of Dynamic Telemetry can be found. This power allows for
-   the training of nominal operating characteristics for a particular environment
-   on specific hardware. The external observer should be viewed as an advocate for
-   the user within the operational environment.
+   This is where the power of Dynamic Telemetry can be found. This power allows
+   for the training of nominal operating characteristics for a particular
+   environment on specific hardware. The external observer should be viewed as
+   an advocate for the user within the operational environment.
 
    Imagine code in a unit test environment treating particular failures with
    extreme strictness; perhaps any file error is treated as an error worth
    investigating. However, as the code migrates from unit testing to scenario
    testing, the threshold for an investigated failure may shift.
 
-   As the code enters the stress environment, the opposite characteristics may be
-   applied. For instance, the inability to open a file may no longer be treated as
-   an error but rather as a success.
+   As the code enters the stress environment, the opposite characteristics may
+   be applied. For instance, the inability to open a file may no longer be
+   treated as an error but rather as a success.
 
-   In all cases, however, failures encountered during fuzz testing are consistently
-   regarded as errors worthy of further study.
+   In all cases, however, failures encountered during fuzz testing are
+   consistently regarded as errors worthy of further study.
 
-   The ability to redefine what is a error worth investigating at runtime without
-   recompilation is a key value of Dynamic Telemetry.
+   The ability to redefine what is a error worth investigating at runtime
+   without recompilation is a key value of Dynamic Telemetry.
 
 **Read more:** [Auditing of Production Code](./PositionPaper.AuditingProductionCode.document.md)
 

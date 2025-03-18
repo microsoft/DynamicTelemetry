@@ -9,7 +9,7 @@ status: Level5
 | [../docs/Applications.FlightRecorder.MemoryLeak.document.md](../docs/Applications.FlightRecorder.MemoryLeak.document.md)  | 211|
 | [../docs/Applications.FlightRecorder.PriorToCrash.document.md](../docs/Applications.FlightRecorder.PriorToCrash.document.md)  | 252|
 | [../docs/Architecture.Action.Explanation.document.md](../docs/Architecture.Action.Explanation.document.md)  | 124|
-| [../docs/Architecture.Components.FiltersAndRouters.document.md](../docs/Architecture.Components.FiltersAndRouters.document.md)  | 44|
+| [../docs/Architecture.Components.FiltersRoutersAndAdapters.document.md](../docs/Architecture.Components.FiltersRoutersAndAdapters.document.md)  | 44|
 | [../docs/Architecture.Components.Observer.InProcess.document.md](../docs/Architecture.Components.Observer.InProcess.document.md)  | 53|
 | [../docs/Architecture.Components.Observer.Kernel.document.md](../docs/Architecture.Components.Observer.Kernel.document.md)  | 68|
 | [../docs/Architecture.Components.Streaming.Observability.document.md](../docs/Architecture.Components.Streaming.Observability.document.md)  | 59|
@@ -120,7 +120,7 @@ status: Level5
 | [../docs/Architecture.Components.Processor.QueryLanguage.document.md](../docs/Architecture.Components.Processor.QueryLanguage.document.md)  | 349|
 | [../docs/Architecture.Components.Processor.StateMachine.document.md](../docs/Architecture.Components.Processor.StateMachine.document.md)  | 472|
 | [../docs/Architecture.Probes.Overview.document.md](../docs/Architecture.Probes.Overview.document.md)  | 1395|
-| [../docs/index.md](../docs/index.md)  | 489|
+| [../docs/index.md](../docs/index.md)  | 641|
 | [../docs/Personas.Overview.document.md](../docs/Personas.Overview.document.md)  | 257|
 | [../docs/PositionPaper.DurableIds_StructuredPayloads.document.md](../docs/PositionPaper.DurableIds_StructuredPayloads.document.md)  | 1242|
 | [../docs/PositionPaper.ThinkLike.RTOS.document.md](../docs/PositionPaper.ThinkLike.RTOS.document.md)  | 43|
