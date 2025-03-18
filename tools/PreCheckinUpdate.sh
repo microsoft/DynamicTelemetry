@@ -5,17 +5,53 @@ set -e
 # See if CDocs has been built; if not sync and build
 #
 if [ ! -d "/Source/CDocs" ]; then
-    git clone https://github.com/chgray/CDocs /Source/CDocs
-    cd /Source/CDocs
-    git checkout user/chgray/update_ubuntu
 
-    podman image pull docker.io/chgray123/chgray_repro:pandoc
-    podman image pull docker.io/chgray123/chgray_repro:cdocs.mermaid
+    if [ -d "/Source/CDocs_tmp" ]; then
+        rm -r -f /Source/CDocs_tmp
+    fi
+
+    git clone https://github.com/chgray/CDocs /Source/CDocs_tmp
+    cd /Source/CDocs_tmp
+    git checkout user/chgray/update_ubuntu
+    mv /Source/CDocs_tmp /Source/CDocs
 fi
 
+#
+# See if the pandoc image exists; if not, pull it
+#
+set +e
+podman image exists docker.io/chgray123/chgray_repro:pandoc
+
+if [ $? -ne 0 ]; then
+    set -e
+    echo "Pulling pandoc image..."
+    podman image pull docker.io/chgray123/chgray_repro:pandoc
+fi
+
+set +e
+podman image exists docker.io/chgray123/chgray_repro:cdocs.mermaid
+
+if [ $? -ne 0 ]; then
+    set -e
+    echo "Pulling cdocs.mermaid image..."
+    podman image pull docker.io/chgray123/chgray_repro:cdocs.mermaid
+fi
+set -e
+
+#
+# Docker build w/ AMD64, on ARM64 results in segfault when powershell is installed
+#   do the install here, one time
+#
+if [ ! -f /root/.dotnet/tools/pwsh ]; then
+    echo "Installing powershell (this may take a few minutes)..."
+    dotnet tool install powershell --global
+fi
+
+#
+# Build CDocsMarkdownCommentRender
+#
 cd /Source/CDocs/tools/CDocsMarkdownCommentRender
 dotnet build .
-
 
 #
 # Setup the Python environment
