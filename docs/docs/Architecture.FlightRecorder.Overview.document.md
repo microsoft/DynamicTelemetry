@@ -9,7 +9,7 @@ status: ReviewLevel1b
 
 A Flight Recorder is essentially a ring buffer that stores logging
 data that is only uploaded to a backend, when instructed by a triggering
-[Action](./Architecture.Action.Explanation.document.md).  Unlike standard
+[Action](./Architecture.Actions.Overview.document.md).  Unlike standard
 streaming telemetry, this telemetry is only emitted when instructed, usually on
 failure.
 
@@ -28,7 +28,7 @@ A quick recap:
    routes or filters logs
 1. A Flight Recorder is a circular log that is never emitted unless there's a
    reason
-1. An [Action](./Architecture.Action.Explanation.document.md) provides the
+1. An [Action](./Architecture.Actions.Overview.document.md) provides the
    reason
 
 Think of a Flight Recorder as a way to enhance your logging capabilities. It
@@ -138,11 +138,3 @@ start="## Scenario Summary", end="## Scenario Expansion" %}
 
 {% include-markdown "./Applications.FlightRecorder.MemoryLeak.document.md",
 start="## Scenario Summary", end="## Scenario Expansion" %}
-
-## References
-
-1. [File and Streaming](./PositionPaper.FileAndStreaming.document.md)
-
-1. [Telemetry Umbilical](./PositionPaper.TelemetryUmbilical.document.md)
-
-1. [Scarcity and Humans](./PositionPaper.ScarcityAndHumans.md)

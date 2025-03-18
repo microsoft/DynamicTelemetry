@@ -149,7 +149,7 @@ nav:
                         - External, off-box Observer: ./docs/Architecture.Components.Observer.External.OffBox.document.md
 
             - Actions:
-                - Action Overview: ./docs/Architecture.Action.Explanation.document.md
+                - Action Overview: ./docs/Architecture.Actions.Overview.document.md
                 - Sample Actions:
                     - PacketCapture: ./docs/Architecture.Action.PacketCapture.document.md
                     - ConfigCollection: ./docs/Architecture.Action.ConfigCollection.document.md

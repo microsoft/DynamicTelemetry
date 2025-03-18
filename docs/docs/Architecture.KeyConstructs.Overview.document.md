@@ -15,10 +15,11 @@ Telemetry. This distinction forms the foundation of Dynamic Telemetry.
 
 The four Constructs of Dynamic Telemetry are
 
-1. a [Probe](./Architecture.Probes.Overview.document.md)
-1. a [Filter](./Architecture.Components.FiltersAndRouters.document.md)
-1. a [Flight Recorder](./Architecture.FlightRecorder.Overview.document.md)
-1. a [Action](./Architecture.Action.Explanation.document.md)
+1. [Probes](./Architecture.Probes.Overview.document.md)
+1. [Flight Recorders](./Architecture.FlightRecorder.Overview.document.md)
+1. [Filters, Routers, and Adapters](./Architecture.Components.FiltersAndRouters.document.md)
+1. [Processors](./Architecture.Components.Processor.Overview.document.md)
+1. [Actiona](./Architecture.Actions.Overview.document.md)
 
 ## What is a Probe{.unlisted .unnumbered}
 
@@ -50,16 +51,6 @@ logging events without altering the application code. This dynamic nature enable
 real-time adjustments to telemetry data collection, facilitating more responsive
 and efficient monitoring and diagnostics.
 
-## What is a Filter/Router{.unlisted .unnumbered}
-
-A filter is a Dynamic Telemetry construct used to filter and route logging that
-is already inside an OpenTelemetry pipeline.
-
-Imagine an OpenTelemetry pipeline as a pipe of water. Cutting the pipe and
-adding a filter or diverter would allow you to control the flow. A fully
-blocking filter could be considered a valve. The use of filters and routers
-allows the dynamic shaping and routing of telemetry - much like valves and
-filters in a water system.
 
 ## What is a Flight Recorder{.unlisted .unnumbered}
 
@@ -72,6 +63,35 @@ The two key characteristics of a Flight Recorder are:
 
 1. that it is uniquely identifiable
 1. that it contains logs
+
+
+## What is a Filter/Router/Adapter{.unlisted .unnumbered}
+
+Imagine an OpenTelemetry pipeline as a pipe of water. Cutting the pipe and
+adding a filter or diverter would allow you to control the flow. A fully
+blocking filter could be considered a valve. The use of filters and routers
+allows the dynamic shaping and routing of telemetry - much like valves and
+filters in a water system.
+
+* A filter is a Dynamic Telemetry construct used to filter and route logging that
+is already inside an OpenTelemetry pipeline.
+* A Router is a dynamic telemetry construct that allows the data pipeline to be
+  cut and forked. For example, it can connect two different processors, perhaps
+  one that streams into an OpenTelemetry backend while the other goes into a
+  Flight Recorder.
+* An Adapter allows the adaptation of existing non-OpenTelemetry and often platform-specific telemetry into the OpenTelemetry pipeline. For example, syslog, LTTng, or ETW on Windows.
+
+
+## What is a Processor{.unlisted .unnumbered}
+
+A Processor is the dynamic component of Dynamic Telemetry where various scenarios and applications are manifested. The simplest way to think of a Processor is as a place for compute to be applied with dynamic configuration that sits inside the OpenTelemetry data feed.
+
+Simple examples of a Processor include:
+
+- Counting and aggregating log messages.
+- Auditing Logging for PII or unintentional secret egress
+- Converting verbose logs into metrics.
+- Monitoring logs to invoke an Action when a problem occurs.
 
 ## What is an Action{.unlisted .unnumbered}
 
