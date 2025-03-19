@@ -86,6 +86,7 @@ exporter, processor, and router}.
     [Please Join This Discussion to provide advice](https://github.com/microsoft/DynamicTelemetry/discussions/38)
 
     We need to contrast / align with the following (among others):
+
     * [otel-arrow Processor](https://github.com/lquerel/otel-arrow/blob/dataflow-doc/rust/beaubourg/docs/dataflow-design.md#processors)
     * [otel-Processor](https://opentelemetry.io/docs/collector/architecture/#processors)
     * [otel-Exporter](https://opentelemetry.io/docs/collector/architecture/#exporters)
