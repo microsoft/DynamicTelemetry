@@ -23,9 +23,9 @@ tested as a entire scenario. Should the scenario fail the developer will start
 zooming in on the area that failed and from there they will look into the
 logging of the subsystem looking for root cause.
 
-The systems aren't bad, but a problem emerges as the complexity of this system
-grows, especially when multiple machines participate in one of the scenarios. As
-the complexity grows many developers simply get frustrated and in some ways give
+The systems aren't bad, but a problem emerges as the complexity grows,
+especially when multiple machines participate in one of the scenarios. As the
+complexity grows many developers simply get frustrated and in some ways give
 up.
 
 Dynamic Telemetry introduces an interesting set of capabilities that result in a
@@ -35,19 +35,19 @@ The idea is to to use the logging and metrics found within a piece of software
 to self describe desired and expected behavior such that the product itself
 could detect its own failures.
 
-[Processors](./Architecture.Components.Processor.Overview.document.md) are then
+[Processors](./Architecture.Components.Processor.Overview.document.md) can be
 configured to "look" for problems, that emanate from the very core of the
 software executing.
 
-In itself this is not a novel or new concept in fact entire books have been
+In itself this is not a novel or new concept, in fact entire books have been
 written on the subject.
 
-What is interesting, and potentially is novel, is the idea of using a combination
+What is interesting, and potentially novel, is the idea of using a combination
 of one box [in
 process](./Architecture.Components.Observer.InProcess.document.md)/[on
 box](./Architecture.Components.Observer.External.OnBox.document.md) and [off
 box](./Architecture.Components.Observer.External.OnBox.document.md) observers to
-this lightly schematized telemetry to look for patterns and failures that
+this lightly schematized telemetry, to look for patterns and failures that
 wouldn't be necessarily caught within a unit test or scenario test.
 
 This is especially true as a systems complexity grows into stress testing or
@@ -58,7 +58,7 @@ testing such that your code self describes, and detects problems - and
 automatically generates verbose diagnostics for you, to help you fix the
 problem.
 
-## Introducing Your Tools : [Processors](./Architecture.Components.Processor.Overview.document.md), [Probes](./Architecture.Probes.Overview.document.md), [Actions](./Architecture.Action.Explanation.document.md), and [Flight Recorders](./Architecture.FlightRecorder.Overview.document.md)
+## Introducing Your Tools : [Processors](./Architecture.Components.Processor.Overview.document.md), [Probes](./Architecture.Probes.Overview.document.md), [Actions](./Architecture.Actions.Overview.document.md), and [Flight Recorders](./Architecture.FlightRecorder.Overview.document.md)
 
 Imagine your software has the ability to self-described failure.
 Perhaps when you author a enqueue() operation you also supply nominal
@@ -74,9 +74,11 @@ schema](PositionPaper.ClearFailuresViaSchema.document.md) that describes certain
 logs and what good and bad looks like!
 
 This concept of self describing operational state is extremely interesting when
-a when coupled with dynamic configuration in the telemetry system, because
-opportunity is created for these values to be trained into the system instead of
-programmed in. It's not tough to see applications in AI.
+coupled with dynamic configuration in the telemetry system, because opportunity
+is created for these values to be trained into the system instead of programmed
+explicitly.
+
+It's not tough to see applications in AI.
 
 These concepts will be expanded in further sections but they're worth thought.
 

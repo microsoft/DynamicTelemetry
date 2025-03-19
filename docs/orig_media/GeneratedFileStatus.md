@@ -8,7 +8,7 @@ status: Level5
 |------|------------|
 | [../docs/Applications.FlightRecorder.MemoryLeak.document.md](../docs/Applications.FlightRecorder.MemoryLeak.document.md)  | 211|
 | [../docs/Applications.FlightRecorder.PriorToCrash.document.md](../docs/Applications.FlightRecorder.PriorToCrash.document.md)  | 252|
-| [../docs/Architecture.Action.Explanation.document.md](../docs/Architecture.Action.Explanation.document.md)  | 124|
+| [../docs/Architecture.Actions.Overview.document.md](../docs/Architecture.Actions.Overview.document.md)  | 124|
 | [../docs/Architecture.Components.FiltersAndRouters.document.md](../docs/Architecture.Components.FiltersAndRouters.document.md)  | 44|
 | [../docs/Architecture.Components.Observer.InProcess.document.md](../docs/Architecture.Components.Observer.InProcess.document.md)  | 53|
 | [../docs/Architecture.Components.Observer.Kernel.document.md](../docs/Architecture.Components.Observer.Kernel.document.md)  | 68|
