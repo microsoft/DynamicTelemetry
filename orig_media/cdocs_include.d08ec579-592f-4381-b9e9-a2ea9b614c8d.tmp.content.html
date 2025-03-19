@@ -1,0 +1,15 @@
+<p>void OnLog(LogMessage log) { // Skip all logs, but the ending hash
+if(log.LogId == “LogEndFileHash”) { string hashGeneratedInProduction =
+log.GetValue(“hashValue”); string file = log.GetValue(“fileName”);</p>
+<pre><code>    string comparisonHash = GenerateVerificationHash(file);
+
+    if (hashGeneratedInProduction != comparisonHash)
+    {
+        m_Actions.GenerateNewLog(file, hashGeneratedInProduction, comparisonHash);
+    }
+}</code></pre>
+<p>}</p>
+<p>[LoggerMessage(Level = LogLevel.Error, Message = “ERROR: Language
+Processor detected production hash bug {fileName}”)] static partial void
+ErrorInProductionHash(ILogger logger, string fileName, string
+productHash, string comparisonHash);</p>

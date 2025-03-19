@@ -1,0 +1,10 @@
+<p>public void ProcessWorkQueue() { for (; ; ) {
+m_workItemReadySemaphore.WaitOne(); Work myWork; lock (m_lock) { myWork
+= m_WorkQueue.Dequeue(); LogDequeueWork(m_logger, m_WorkQueue.Count); }
+myWork.DoWork(); } }</p>
+<p>[LoggerMessage(Level = LogLevel.Information, Message = “Dequeue
+depth={depth}”)] static partial void LogDequeueWork(ILogger logger, int
+depth);</p>
+<p>[LoggerMessage(Level = LogLevel.Information, Message = “Enqueue
+depth={depth}”)] static partial void LogEnqueueWork(ILogger logger, int
+depth);</p>

@@ -1,0 +1,6 @@
+<p>// // Sample KQL query to monitor the CacheCount // traces | extend
+EventName = tostring(customDimensions.EventName) | project EventName,
+message, customDimensions, timestamp | extend
+CacheCount=toint(customDimensions.cacheLength) | summarize
+countif(EventName == “LogWelcome”), max(CacheCount) by bin(timestamp,
+1m) | render timechart</p>

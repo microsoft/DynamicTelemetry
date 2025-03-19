@@ -1,0 +1,1 @@
+{"t":"CodeBlock","c":[["",["cdocs"],[]],"\nLoggingWrite(\n        g_Handle,\n        \u0022MemoryStatusUpdate\u0022,               \u003C-- DurableID\n        LoggingUInt32(value, \u0022UpdateValue\u0022) \u003C-- Structured Payload (U32/string)\n        );"]}

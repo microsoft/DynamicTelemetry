@@ -1,0 +1,8 @@
+<p>public void OnGet(string variable=““) { LogWelcome(_logger);</p>
+<pre><code>_me = _cache.GetOrCreate(variable, entry =&gt; {
+    entry.AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(30);
+    return new CachedObject();
+});
+
+_me?.AddUsage();</code></pre>
+<p>}</p>

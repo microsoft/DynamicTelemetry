@@ -1,0 +1,9 @@
+<p>private void LogWithoutDurableID() { // // Log a message without a
+DurableID; while simple, this log will provide struggles later //
+because while we receive a property bag of the variables (_version), we
+will not know // which line of code emitted the telemetry - as our only
+identtifer will be the // ‘flattened’ payload string // // NOTE: adding
+the _instanceID is to showcase how, once ‘flattened’ this
+unrecommendable // method of logging makes for tricky (and expensive)
+backend searching // _logger.LogInformation($“Launch, ver={_version},
+instantion={_instanceID}“); }</p>

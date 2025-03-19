@@ -2639,7 +2639,7 @@ Licensed under the MIT License. -->
   
   
     <li class="md-nav__item">
-      <a href="../Architecture.Action.Explanation.document/" class="md-nav__link">
+      <a href="../Architecture.Actions.Overview.document/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5778,26 +5778,26 @@ together different architectural components into one logical set which is then
 tested as a entire scenario. Should the scenario fail the developer will start
 zooming in on the area that failed and from there they will look into the
 logging of the subsystem looking for root cause.</p>
-<p>The systems aren't bad, but a problem emerges as the complexity of this system
-grows, especially when multiple machines participate in one of the scenarios. As
-the complexity grows many developers simply get frustrated and in some ways give
+<p>The systems aren't bad, but a problem emerges as the complexity grows,
+especially when multiple machines participate in one of the scenarios. As the
+complexity grows many developers simply get frustrated and in some ways give
 up.</p>
 <p>Dynamic Telemetry introduces an interesting set of capabilities that result in a
 interesting hybrid between scenario and unit tests.</p>
 <p>The idea is to to use the logging and metrics found within a piece of software
 to self describe desired and expected behavior such that the product itself
 could detect its own failures.</p>
-<p><a href="../Architecture.Components.Processor.Overview.document/">Processors</a> are then
+<p><a href="../Architecture.Components.Processor.Overview.document/">Processors</a> can be
 configured to "look" for problems, that emanate from the very core of the
 software executing.</p>
-<p>In itself this is not a novel or new concept in fact entire books have been
+<p>In itself this is not a novel or new concept, in fact entire books have been
 written on the subject.</p>
-<p>What is interesting, and potentially is novel, is the idea of using a combination
+<p>What is interesting, and potentially novel, is the idea of using a combination
 of one box <a href="../Architecture.Components.Observer.InProcess.document/">in
 process</a>/<a href="../Architecture.Components.Observer.External.OnBox.document/">on
 box</a> and <a href="../Architecture.Components.Observer.External.OnBox.document/">off
 box</a> observers to
-this lightly schematized telemetry to look for patterns and failures that
+this lightly schematized telemetry, to look for patterns and failures that
 wouldn't be necessarily caught within a unit test or scenario test.</p>
 <p>This is especially true as a systems complexity grows into stress testing or
 penetration testing where network fuzzing or payload fuzzing has been enabled.</p>
@@ -5805,7 +5805,7 @@ penetration testing where network fuzzing or payload fuzzing has been enabled.</
 testing such that your code self describes, and detects problems - and
 automatically generates verbose diagnostics for you, to help you fix the
 problem.</p>
-<h2 id="introducing-your-tools-processors-probes-actions-and-flight-recorders">Introducing Your Tools : <a href="../Architecture.Components.Processor.Overview.document/">Processors</a>, <a href="../Architecture.Probes.Overview.document/">Probes</a>, <a href="../Architecture.Action.Explanation.document/">Actions</a>, and <a href="../Architecture.FlightRecorder.Overview.document/">Flight Recorders</a></h2>
+<h2 id="introducing-your-tools-processors-probes-actions-and-flight-recorders">Introducing Your Tools : <a href="../Architecture.Components.Processor.Overview.document/">Processors</a>, <a href="../Architecture.Probes.Overview.document/">Probes</a>, <a href="../Architecture.Actions.Overview.document/">Actions</a>, and <a href="../Architecture.FlightRecorder.Overview.document/">Flight Recorders</a></h2>
 <p>Imagine your software has the ability to self-described failure.
 Perhaps when you author a enqueue() operation you also supply nominal
 expectations (for example, that no item sticks in the queue more than 200 ms).</p>
@@ -5817,9 +5817,10 @@ traps for their bugs;  you cna easily imagine using a <a href="../PositionPaper.
 schema</a> that describes certain
 logs and what good and bad looks like!</p>
 <p>This concept of self describing operational state is extremely interesting when
-a when coupled with dynamic configuration in the telemetry system, because
-opportunity is created for these values to be trained into the system instead of
-programmed in. It's not tough to see applications in AI.</p>
+coupled with dynamic configuration in the telemetry system, because opportunity
+is created for these values to be trained into the system instead of programmed
+explicitly.</p>
+<p>It's not tough to see applications in AI.</p>
 <p>These concepts will be expanded in further sections but they're worth thought.</p>
 <h2 id="understanding-by-example-surveying-interesting-testing-techniques">Understanding By Example : Surveying Interesting Testing Techniques</h2>
 <h3 id="entropy-creators">Entropy Creators</h3>

@@ -838,18 +838,27 @@ Licensed under the MIT License. -->
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-is-a-filterrouterunlisted-unnumbered" class="md-nav__link">
+  <a href="#what-is-a-flight-recorderunlisted-unnumbered" class="md-nav__link">
     <span class="md-ellipsis">
-      What is a Filter/Router{.unlisted .unnumbered}
+      What is a Flight Recorder{.unlisted .unnumbered}
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-is-a-flight-recorderunlisted-unnumbered" class="md-nav__link">
+  <a href="#what-is-a-filterrouteradapterunlisted-unnumbered" class="md-nav__link">
     <span class="md-ellipsis">
-      What is a Flight Recorder{.unlisted .unnumbered}
+      What is a Filter/Router/Adapter{.unlisted .unnumbered}
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-a-processorunlisted-unnumbered" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a Processor{.unlisted .unnumbered}
     </span>
   </a>
   
@@ -2590,7 +2599,7 @@ Licensed under the MIT License. -->
   
   
     <li class="md-nav__item">
-      <a href="../Architecture.Action.Explanation.document/" class="md-nav__link">
+      <a href="../Architecture.Actions.Overview.document/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5602,18 +5611,27 @@ Licensed under the MIT License. -->
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-is-a-filterrouterunlisted-unnumbered" class="md-nav__link">
+  <a href="#what-is-a-flight-recorderunlisted-unnumbered" class="md-nav__link">
     <span class="md-ellipsis">
-      What is a Filter/Router{.unlisted .unnumbered}
+      What is a Flight Recorder{.unlisted .unnumbered}
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-is-a-flight-recorderunlisted-unnumbered" class="md-nav__link">
+  <a href="#what-is-a-filterrouteradapterunlisted-unnumbered" class="md-nav__link">
     <span class="md-ellipsis">
-      What is a Flight Recorder{.unlisted .unnumbered}
+      What is a Filter/Router/Adapter{.unlisted .unnumbered}
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-a-processorunlisted-unnumbered" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a Processor{.unlisted .unnumbered}
     </span>
   </a>
   
@@ -5672,10 +5690,11 @@ hard-coded, static assets to more versatile and reconfigurable Dynamic
 Telemetry. This distinction forms the foundation of Dynamic Telemetry.</p>
 <p>The four Constructs of Dynamic Telemetry are</p>
 <ol>
-<li>a <a href="../Architecture.Probes.Overview.document/">Probe</a></li>
-<li>a <a href="../Architecture.Components.FiltersAndRouters.document/">Filter</a></li>
-<li>a <a href="../Architecture.FlightRecorder.Overview.document/">Flight Recorder</a></li>
-<li>a <a href="../Architecture.Action.Explanation.document/">Action</a></li>
+<li><a href="../Architecture.Probes.Overview.document/">Probes</a></li>
+<li><a href="../Architecture.FlightRecorder.Overview.document/">Flight Recorders</a></li>
+<li><a href="../Architecture.Components.FiltersAndRouters.document/">Filters, Routers, and Adapters</a></li>
+<li><a href="../Architecture.Components.Processor.Overview.document/">Processors</a></li>
+<li><a href="../Architecture.Actions.Overview.document/">Actions</a></li>
 </ol>
 <h2 id="what-is-a-probeunlisted-unnumbered">What is a Probe{.unlisted .unnumbered}</h2>
 <p>A Dynamic Telemetry Probe is a lightweight mechanism that emits events (logs)
@@ -5702,14 +5721,6 @@ adaptable solution. They allow for the insertion, modification, and removal of
 logging events without altering the application code. This dynamic nature enables
 real-time adjustments to telemetry data collection, facilitating more responsive
 and efficient monitoring and diagnostics.</p>
-<h2 id="what-is-a-filterrouterunlisted-unnumbered">What is a Filter/Router{.unlisted .unnumbered}</h2>
-<p>A filter is a Dynamic Telemetry construct used to filter and route logging that
-is already inside an OpenTelemetry pipeline.</p>
-<p>Imagine an OpenTelemetry pipeline as a pipe of water. Cutting the pipe and
-adding a filter or diverter would allow you to control the flow. A fully
-blocking filter could be considered a valve. The use of filters and routers
-allows the dynamic shaping and routing of telemetry - much like valves and
-filters in a water system.</p>
 <h2 id="what-is-a-flight-recorderunlisted-unnumbered">What is a Flight Recorder{.unlisted .unnumbered}</h2>
 <p>A Flight Recorder is essentially a ring buffer of logs with a unique identifier
 or name. It acts as a designated collector of routed logging data. In its
@@ -5720,6 +5731,38 @@ implementations, it could be a file on disk.</p>
 <li>that it is uniquely identifiable</li>
 <li>that it contains logs</li>
 </ol>
+<h2 id="what-is-a-filterrouteradapterunlisted-unnumbered">What is a Filter/Router/Adapter{.unlisted .unnumbered}</h2>
+<p>Imagine an OpenTelemetry pipeline as a pipe of water. Cutting the pipe and
+adding a filter or diverter would allow you to control the flow. A fully
+blocking filter could be considered a valve. The use of filters and routers
+allows the dynamic shaping and routing of telemetry - much like valves and
+filters in a water system.</p>
+<p>Dynamic Telemetry Filters, Routers, and Adapters can be thought of as specific
+purpose, narrowly focused, subcategories of Open Telemetry {connector,
+exporter, processor, and router}.</p>
+<ul>
+<li>A filter is a Dynamic Telemetry construct used to filter and route logging
+  that is already inside an OpenTelemetry pipeline.</li>
+<li>A Router is a dynamic telemetry construct that allows the data pipeline to be
+  cut and forked. For example, it can connect two different processors, perhaps
+  one that streams into an OpenTelemetry backend while the other goes into a
+  Flight Recorder.</li>
+<li>An Adapter allows the adaptation of existing non-OpenTelemetry and often
+  platform-specific telemetry into the OpenTelemetry pipeline. For example,
+  syslog, LTTng, or ETW on Windows.</li>
+</ul>
+<h2 id="what-is-a-processorunlisted-unnumbered">What is a Processor{.unlisted .unnumbered}</h2>
+<p>A Processor is the dynamic component of Dynamic Telemetry where various
+scenarios and applications are manifested. The simplest way to think of a
+Processor is as a place for compute to be applied with dynamic configuration
+that sits inside the OpenTelemetry data feed.</p>
+<p>Simple examples of a Processor include:</p>
+<ul>
+<li>Counting and aggregating log messages.</li>
+<li>Auditing Logging for PII or unintentional secret egress.</li>
+<li>Converting verbose logs into metrics.</li>
+<li>Monitoring logs to invoke an Action when a problem occurs.</li>
+</ul>
 <h2 id="what-is-an-actionunlisted-unnumbered">What is an Action{.unlisted .unnumbered}</h2>
 <p>An Action is an architectural construct that performs tasks based on the logging
 data it observes passing through a pipeline.</p>

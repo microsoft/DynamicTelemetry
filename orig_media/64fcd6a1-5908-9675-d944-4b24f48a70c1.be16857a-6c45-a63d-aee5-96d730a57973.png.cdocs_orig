@@ -1,0 +1,1 @@
+{"t":"CodeBlock","c":[["",["mermaid"],[]],"    flowchart TD\n    subgraph Computer Being Traced\n        App --\u003E |FUNCTION_CALL|TELEMETRY_LIBRARY\n        TELEMETRY_LIBRARY --\u003E |ENCODED_DATA| OS\n        OS--\u003ENetwork_Egress_Application\n    end\n    Network_Egress_Application --\u003E |Network| Database"]}

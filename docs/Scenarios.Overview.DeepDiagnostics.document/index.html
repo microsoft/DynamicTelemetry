@@ -2564,7 +2564,7 @@ Licensed under the MIT License. -->
   
   
     <li class="md-nav__item">
-      <a href="../Architecture.Action.Explanation.document/" class="md-nav__link">
+      <a href="../Architecture.Actions.Overview.document/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5629,20 +5629,25 @@ toggle telemetry, either manually or programmatically.</p>
 <p>As you start using and learning Dynamic Telemetry, you'll discover how to gamify
 debugging by dynamically collecting memory, toggling logs, and employing other
 techniques to effectively trap and diagnose bugs.</p>
-<h2 id="introducing-your-tools-processors-probes-and-actions">Introducing your Tools : <a href="../Architecture.Components.Processor.Overview.document/">Processors</a>, <a href="../Architecture.Probes.Overview.document/">Probes</a>, and <a href="../Architecture.Action.Explanation.document/">Actions</a></h2>
-<p>In Dynamic Telemetry, Processors, Probes, and Actions play crucial roles in
+<h2 id="introducing-your-tools-processors-probes-and-actions">Introducing your Tools : <a href="../Architecture.Components.Processor.Overview.document/">Processors</a>, <a href="../Architecture.Probes.Overview.document/">Probes</a>, and <a href="../Architecture.Actions.Overview.document/">Actions</a></h2>
+<p>In Dynamic Telemetry,
+<a href="../Architecture.Components.Processor.Overview.document/">Processors</a>,
+<a href="../Architecture.Probes.Overview.document/">Probes</a>, and
+<a href="../Architecture.Actions.Overview.document/">Actions</a> play crucial roles in
 monitoring and diagnosing system behavior.</p>
-<p>The most important concept, if you can only understand one, is the <a href="../Architecture.Components.Processor.Overview.document/">Processor</a>.</p>
+<p>The most important concept, if you can only understand one, is the
+<a href="../Architecture.Components.Processor.Overview.document/">Processor</a>.</p>
 <p>Think of the Processor as a virtual machine that sits in the middle of all
 OpenTelemetry logs. It "sees" all the logs and, based on what it's seeing, can
 perform various actions. For example, it might "see" a queue getting really long
 and capture a memory dump, or it might "see" connections per second dropping and
 start a CPU sample.</p>
 <p><a href="../Architecture.Probes.Overview.document/">Probes</a> are simply "something" that
-emits into OpenTelemetry in a streaming way. This could be the simple case of
-logging, but through the use of adapters, can be other technologies like syslog,
-ETW, user_events, or even more dynamic emitters like kprobes, uprobes, eBPF, or
-dtrace.</p>
+emits a Log, Metric, or Trace, into OpenTelemetry. This could be the simple case
+of static logging, but through the use of
+<a href="../Architecture.Components.FiltersAndRouters.document/">Adapters</a>, can be
+other technologies like syslog, ETW, user_events, or even more dynamic emitters
+like kprobes, uprobes, eBPF, or dtrace.</p>
 <p>Actions, on the other hand, initiate specific operations. While they are
 designed to avoid altering the system state intentionally, they can be
 dynamically enabled or disabled. Typical actions might include enabling CPU
