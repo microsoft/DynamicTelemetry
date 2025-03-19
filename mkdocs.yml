@@ -130,8 +130,8 @@ nav:
                         - Short Horizons: ./docs/Architecture.FlightRecorder.ShortHorizons.document.md
                         - Cubby Hole: ./docs/Architecture.FlightRecorder.CubbyHole.document.md
                         - Long Horizons: ./docs/Architecture.FlightRecorder.LongHorizons.document.md
-            - Filters and Routers:
-                - Filters / Routers Overview: ./docs/Architecture.Components.FiltersAndRouters.document.md
+            - Filters, Routers, and Adapters:
+                - Filters / Routers / Adapters Overview: ./docs/Architecture.Components.FiltersRoutersAndAdapters.document.md
 
             - Processors :
                 - Processors Overview: ./docs/Architecture.Components.Processor.Overview.document.md

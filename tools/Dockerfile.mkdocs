@@ -9,6 +9,9 @@ FROM mcr.microsoft.com/cbl-mariner/base/core:2.0
 # podman build --platform linux/arm64 -f Dockerfile.mkdocs -t "docker.io/chgray123/dynamictelemetry:mkdocs" .
 # podman build --platform linux/amd64 -f Dockerfile.mkdocs -t "docker.io/chgray123/dynamictelemetry:mkdocs" .
 
+# docker build --platform linux/amd64,linux/arm64 -f Dockerfile.mkdocs -t "docker.io/chgray123/dynamictelemetry:mkdocs" . --push
+
+
 # podman login docker.io
 # podman push --platform linux/amd64 docker.io/chgray123/dynamictelemetry:mkdocs
 # podman push --platform linux/arm64 docker.io/chgray123/dynamictelemetry:mkdocs
