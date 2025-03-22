@@ -1,1 +1,0 @@
-{"t":"CodeBlock","c":[["",["cdocs_include"],[]],"{{ CSharp_Include(\u0022../Samples/Demos.3.SecurityRedaction/Pages/Index.cshtml.cs\u0022,\n    \u0022// StartKQL:FilterWholeLog\u0022,\n    \u0022// EndKQL:FilterWholeLog\u0022)\n}}"]}

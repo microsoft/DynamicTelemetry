@@ -1,1 +1,0 @@
-{"t":"CodeBlock","c":[["",["cdocs"],[]],"# EXAMPLE1: with DurableId/Structured Payload\n[DurableID][UdateValue]                          \u003C-- potentially compact\n\nvs.\n\n# EXAMPLE2 : without DurableID and Structured Payload\nUPDATING VALUE: updating value to \u003Cvalue\u003E      \u003C-- not as compact"]}

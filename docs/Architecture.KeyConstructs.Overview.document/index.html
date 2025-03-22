@@ -2014,7 +2014,7 @@ Licensed under the MIT License. -->
             
   
   <span class="md-ellipsis">
-    Filters and Routers
+    Filters, Routers, and Adapters
     
   </span>
   
@@ -2025,7 +2025,7 @@ Licensed under the MIT License. -->
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2_4">
             <span class="md-nav__icon md-icon"></span>
-            Filters and Routers
+            Filters, Routers, and Adapters
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2036,11 +2036,11 @@ Licensed under the MIT License. -->
   
   
     <li class="md-nav__item">
-      <a href="../Architecture.Components.FiltersAndRouters.document/" class="md-nav__link">
+      <a href="../Architecture.Components.FiltersRoutersAndAdapters.document/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Filters / Routers Overview
+    Filters / Routers / Adapters Overview
     
   </span>
   
@@ -5692,7 +5692,7 @@ Telemetry. This distinction forms the foundation of Dynamic Telemetry.</p>
 <ol>
 <li><a href="../Architecture.Probes.Overview.document/">Probes</a></li>
 <li><a href="../Architecture.FlightRecorder.Overview.document/">Flight Recorders</a></li>
-<li><a href="../Architecture.Components.FiltersAndRouters.document/">Filters, Routers, and Adapters</a></li>
+<li><a href="./Architecture.Components.FiltersAndRouters.document.md">Filters, Routers, and Adapters</a></li>
 <li><a href="../Architecture.Components.Processor.Overview.document/">Processors</a></li>
 <li><a href="../Architecture.Actions.Overview.document/">Actions</a></li>
 </ol>
@@ -5740,6 +5740,25 @@ filters in a water system.</p>
 <p>Dynamic Telemetry Filters, Routers, and Adapters can be thought of as specific
 purpose, narrowly focused, subcategories of Open Telemetry {connector,
 exporter, processor, and router}.</p>
+<details class="info">
+<summary>Help Needed From OpenTelemetry experts</summary>
+<p>Dynamic Telemetry is trying to describe core architectural components like
+Filter / Router / Adapter, in a way that can span into operating system tech
+as well as within OpenTelemetry</p>
+<p>We realize there is some name overloading with standard OpenTelemetry, as
+well as within the OTel-Arrow project</p>
+<p><a href="https://github.com/microsoft/DynamicTelemetry/discussions/38">Please Join This Discussion to provide advice</a></p>
+<p>We need to contrast / align with the following (among others):</p>
+<ul>
+<li><a href="https://github.com/lquerel/otel-arrow/blob/dataflow-doc/rust/beaubourg/docs/dataflow-design.md#processors">otel-arrow Processor</a></li>
+<li><a href="https://opentelemetry.io/docs/collector/architecture/#processors">otel-Processor</a></li>
+<li><a href="https://opentelemetry.io/docs/collector/architecture/#exporters">otel-Exporter</a></li>
+<li><a href="https://opentelemetry.io/docs/collector/architecture/#receivers">otel-Receiver</a></li>
+<li><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/connector/routingconnector">otel-Routing Connector</a></li>
+<li><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/connector/failoverconnector">otel-failoverconnector</a></li>
+</ul>
+</details>
+<p><em>Dynamic Telemetry Terms:</em></p>
 <ul>
 <li>A filter is a Dynamic Telemetry construct used to filter and route logging
   that is already inside an OpenTelemetry pipeline.</li>

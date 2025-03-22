@@ -591,9 +591,9 @@ Licensed under the MIT License. -->
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introducing-your-tools-processors-probes-actions-and-flight-recorders" class="md-nav__link">
+  <a href="#introducing-your-tools-processors-probes-actions-filters-routers-and-flight-recorders" class="md-nav__link">
     <span class="md-ellipsis">
-      Introducing Your Tools : Processors, Probes, Actions, and Flight Recorders
+      Introducing Your Tools : Processors, Probes, Actions, Filters, Routers and Flight Recorders
     </span>
   </a>
   
@@ -2054,7 +2054,7 @@ Licensed under the MIT License. -->
             
   
   <span class="md-ellipsis">
-    Filters and Routers
+    Filters, Routers, and Adapters
     
   </span>
   
@@ -2065,7 +2065,7 @@ Licensed under the MIT License. -->
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2_4">
             <span class="md-nav__icon md-icon"></span>
-            Filters and Routers
+            Filters, Routers, and Adapters
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2076,11 +2076,11 @@ Licensed under the MIT License. -->
   
   
     <li class="md-nav__item">
-      <a href="../Architecture.Components.FiltersAndRouters.document/" class="md-nav__link">
+      <a href="../Architecture.Components.FiltersRoutersAndAdapters.document/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Filters / Routers Overview
+    Filters / Routers / Adapters Overview
     
   </span>
   
@@ -5627,9 +5627,9 @@ Licensed under the MIT License. -->
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introducing-your-tools-processors-probes-actions-and-flight-recorders" class="md-nav__link">
+  <a href="#introducing-your-tools-processors-probes-actions-filters-routers-and-flight-recorders" class="md-nav__link">
     <span class="md-ellipsis">
-      Introducing Your Tools : Processors, Probes, Actions, and Flight Recorders
+      Introducing Your Tools : Processors, Probes, Actions, Filters, Routers and Flight Recorders
     </span>
   </a>
   
@@ -5805,7 +5805,7 @@ penetration testing where network fuzzing or payload fuzzing has been enabled.</
 testing such that your code self describes, and detects problems - and
 automatically generates verbose diagnostics for you, to help you fix the
 problem.</p>
-<h2 id="introducing-your-tools-processors-probes-actions-and-flight-recorders">Introducing Your Tools : <a href="../Architecture.Components.Processor.Overview.document/">Processors</a>, <a href="../Architecture.Probes.Overview.document/">Probes</a>, <a href="../Architecture.Actions.Overview.document/">Actions</a>, and <a href="../Architecture.FlightRecorder.Overview.document/">Flight Recorders</a></h2>
+<h2 id="introducing-your-tools-processors-probes-actions-filters-routers-and-flight-recorders">Introducing Your Tools : <a href="../Architecture.Components.Processor.Overview.document/">Processors</a>, <a href="../Architecture.Probes.Overview.document/">Probes</a>, <a href="./Architecture.Action.Explanation.document.md">Actions</a>, <a href="../Architecture.Components.FiltersRoutersAndAdapters.document/">Filters, Routers</a> and <a href="../Architecture.FlightRecorder.Overview.document/">Flight Recorders</a></h2>
 <p>Imagine your software has the ability to self-described failure.
 Perhaps when you author a enqueue() operation you also supply nominal
 expectations (for example, that no item sticks in the queue more than 200 ms).</p>
@@ -5959,21 +5959,21 @@ it as a critical error, such as with a database.</p>
 <p>An external audit of the code introduces environmental characteristics to the
    code. For example, what might be a programmatic warning internal to the code
    could be treated as an error by an external observer.</p>
-<p>This is where the power of Dynamic Telemetry can be found. This power allows for
-   the training of nominal operating characteristics for a particular environment
-   on specific hardware. The external observer should be viewed as an advocate for
-   the user within the operational environment.</p>
+<p>This is where the power of Dynamic Telemetry can be found. This power allows
+   for the training of nominal operating characteristics for a particular
+   environment on specific hardware. The external observer should be viewed as
+   an advocate for the user within the operational environment.</p>
 <p>Imagine code in a unit test environment treating particular failures with
    extreme strictness; perhaps any file error is treated as an error worth
    investigating. However, as the code migrates from unit testing to scenario
    testing, the threshold for an investigated failure may shift.</p>
-<p>As the code enters the stress environment, the opposite characteristics may be
-   applied. For instance, the inability to open a file may no longer be treated as
-   an error but rather as a success.</p>
-<p>In all cases, however, failures encountered during fuzz testing are consistently
-   regarded as errors worthy of further study.</p>
-<p>The ability to redefine what is a error worth investigating at runtime without
-   recompilation is a key value of Dynamic Telemetry.</p>
+<p>As the code enters the stress environment, the opposite characteristics may
+   be applied. For instance, the inability to open a file may no longer be
+   treated as an error but rather as a success.</p>
+<p>In all cases, however, failures encountered during fuzz testing are
+   consistently regarded as errors worthy of further study.</p>
+<p>The ability to redefine what is a error worth investigating at runtime
+   without recompilation is a key value of Dynamic Telemetry.</p>
 <p><strong>Read more:</strong> <a href="../PositionPaper.AuditingProductionCode.document/">Auditing of Production Code</a></p>
 <h3 id="failure-induced-triggering-of-verbose-diagnostics">Failure Induced Triggering of Verbose Diagnostics</h3>
 <p>Diagnostic collection essentially involves gathering the content that

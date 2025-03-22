@@ -1,3 +1,0 @@
-<p>traces | extend customDimensions = iif(customDimensions.EventName ==
-“LogWelcomeBanner”, bag_remove_keys(customDimensions,
-dynamic([‘secret’])), customDimensions)</p>

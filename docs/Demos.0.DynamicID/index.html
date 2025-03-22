@@ -1899,7 +1899,7 @@ Licensed under the MIT License. -->
             
   
   <span class="md-ellipsis">
-    Filters and Routers
+    Filters, Routers, and Adapters
     
   </span>
   
@@ -1910,7 +1910,7 @@ Licensed under the MIT License. -->
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2_4">
             <span class="md-nav__icon md-icon"></span>
-            Filters and Routers
+            Filters, Routers, and Adapters
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1921,11 +1921,11 @@ Licensed under the MIT License. -->
   
   
     <li class="md-nav__item">
-      <a href="../Architecture.Components.FiltersAndRouters.document/" class="md-nav__link">
+      <a href="../Architecture.Components.FiltersRoutersAndAdapters.document/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Filters / Routers Overview
+    Filters / Routers / Adapters Overview
     
   </span>
   
@@ -5119,35 +5119,11 @@ Licensed under the MIT License. -->
 </li>
         
           <li class="md-nav__item">
-  <a href="#seeing-the-confusion-lack-of-capability" class="md-nav__link">
+  <a href="#trying-to-reason-over-lots-of-logs" class="md-nav__link">
     <span class="md-ellipsis">
-      Seeing the Confusion, lack of capability
+      Trying to reason over lots of Logs
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Seeing the Confusion, lack of capability">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#using-the-eventname-to-locate-the-line-of-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using the EventName to locate the line of code
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#aggregating-based-on-the-eventname" class="md-nav__link">
-    <span class="md-ellipsis">
-      Aggregating based on the EventName
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -5715,35 +5691,11 @@ Licensed under the MIT License. -->
 </li>
         
           <li class="md-nav__item">
-  <a href="#seeing-the-confusion-lack-of-capability" class="md-nav__link">
+  <a href="#trying-to-reason-over-lots-of-logs" class="md-nav__link">
     <span class="md-ellipsis">
-      Seeing the Confusion, lack of capability
+      Trying to reason over lots of Logs
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Seeing the Confusion, lack of capability">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#using-the-eventname-to-locate-the-line-of-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using the EventName to locate the line of code
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#aggregating-based-on-the-eventname" class="md-nav__link">
-    <span class="md-ellipsis">
-      Aggregating based on the EventName
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -5803,19 +5755,22 @@ that will lead to an shared understanding, and hopefully one or more implementat
 </details>
 <h1 id="demo-0-durable-ids-explanation">Demo 0 - Durable ID's Explanation</h1>
 <h2 id="using-durableid-in-opentelemetry-to-locate-the-source-of-the-the-expense">Using DurableID in OpenTelemetry, to locate the source of the the expense</h2>
-<p>Not all software using OpenTelemetry will utilize a durable identifier, though
-it is considered best practice. A durable identifier functions like a GPS or
-homing beacon, mapping any row of telemetry to a specific line of code.</p>
-<p>In microsoft.net platform the durable identifier is created automatically at
-compile time for OpenTelemetry assuming the author of the software follows best
-practices.</p>
+<p>This demonstration will showcase and contrast two logging messages in
+OpenTelemetry. One will use a Durable Identifier, and the other will not. It's
+expected that not all software using OpenTelemetry will utilize a durable
+identifier, even though, in Dynamic Telemetry, the use of the DurableID is
+considered a best practice. A durable identifier functions like a GPS or homing
+beacon, mapping any row of telemetry to a specific line of code.</p>
+<p>In Microsoft .net platform, a durable identifier is created automatically at
+compile time for OpenTelemetry user using ILogger - when the author of the
+software follows best practices.</p>
 <h3 id="contrasting-c-that-makes-use-of-durable-ids-with-c-that-does-not">Contrasting C# that makes use of Durable ID's, with C# that does not</h3>
-<p>Let's examine code that makes use a durable identifier versus one that doesn't.
-We'll inspect both in Application Insights, so we can spot the difference.</p>
-<p>It's important to understand that Dynamic Telemetry functions with and without a
-DurableID, however the experience without is less enjoyable and less efficient.
-Following best practices is highly encouraged.</p>
+<p>Let's examine code that makes use of a durable identifier versus one that
+doesn't. We'll inspect both in the Application Insights Log database, to spot
+the difference.</p>
 <h3 id="seeing-the-durableid-in-azures-application-insights">Seeing the DurableID in Azures Application Insights</h3>
+<p>Lets start with the recommended way to log in .NET; using ILogger, with a
+compiler generated Durable ID.</p>
 <h4 id="recommended-way-to-log">Recommended Way to Log</h4>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>private void LogWithDurableID()
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>{
@@ -5836,10 +5791,8 @@ Following best practices is highly encouraged.</p>
 </span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>    LogLaunch(_logger, _version, _instanceID);
 </span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>}
 </span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>// StartSearchExample:LogLaunch
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>[LoggerMessage(Level = LogLevel.Information, Message = "Launch, ver={version}, instantion={instantionID}")]
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>static partial void LogLaunch(ILogger logger, string version, Guid instantionID);
-</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>// EndSearchExample:LogLaunch
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>[LoggerMessage(Level = LogLevel.Information, Message = "Launch, ver={version}, instantion={instantionID}")]
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>static partial void LogLaunch(ILogger logger, string version, Guid instantionID);
 </span></code></pre></div>
 <h4 id="not-recommended-way-to-log">Not Recommended Way to Log</h4>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>private void LogWithoutDurableID()
@@ -5867,118 +5820,126 @@ Following best practices is highly encouraged.</p>
 </span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>        private readonly ILogger&lt;IndexModel&gt; _logger;
 </span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>        private static string _version = "0.0.4";
 </span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>        private Guid _instanceID = Guid.NewGuid();
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>        //private static Counter&lt;int&gt; ? _getCounter;
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>        public IndexModel(ILogger&lt;IndexModel&gt; logger, IMeterFactory meterFactory)
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>        {
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>            _logger = logger;
-</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>
-</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>            //var meter = meterFactory.Create("DynamicTelemetry.Metric.Conversion");
-</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>            //_getCounter = meter.CreateCounter&lt;int&gt;("LogLaunch");
-</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>
-</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>            // On Launch emit two logs - seemingly identical, one has a DurableID
-</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>            //_getCounter.Add(1);
-</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>            LogWithDurableID();
-</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>            LogWithoutDurableID();
-</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>        }
-</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>
-</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>        // StartExample:NoDurableId
-</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>        private void LogWithoutDurableID()
-</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>        {
-</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>            //
-</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>            // Log a message without a DurableID;  while simple, this log will provide struggles later
-</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>            //    because while we receive a property bag of the variables (_version), we will not know
-</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>            //    which line of code emitted the telemetry - as our only identtifer will be the
-</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>            //    'flattened' payload string
-</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>            //
-</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>            // NOTE: adding the _instanceID is to showcase how, once 'flattened' this unrecommendable
-</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>            //    method of logging makes for tricky (and expensive) backend searching
-</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>            //
-</span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a>            _logger.LogInformation($"Launch, ver={_version}, instantion={_instanceID}");
-</span><span id="__span-3-39"><a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a>        }
-</span><span id="__span-3-40"><a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a>        // EndExample:NoDurableId
-</span><span id="__span-3-41"><a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a>
-</span><span id="__span-3-42"><a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a>
-</span><span id="__span-3-43"><a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a>        // StartExample:DurableId
-</span><span id="__span-3-44"><a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a>        private void LogWithDurableID()
-</span><span id="__span-3-45"><a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a>        {
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>        public IndexModel(ILogger&lt;IndexModel&gt; logger, IMeterFactory meterFactory)
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>        {
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>            _logger = logger;
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>            //var meter = meterFactory.Create("DynamicTelemetry.Metric.Conversion");
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>            //_getCounter = meter.CreateCounter&lt;int&gt;("LogLaunch");
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>            // On Launch emit two logs - seemingly identical, one has a DurableID
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>            //_getCounter.Add(1);
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>            LogWithDurableID();
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>            LogWithoutDurableID();
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>            // START : LoopRandomGUID
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>            // Generate some data that will be tough to aggregate
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>            for (int i = 0; i &lt; 1000; i++)
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>            {
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>                _logger.LogInformation($"Loop, random ID={Guid.NewGuid()}");
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>                LogRandomGuid(_logger, Guid.NewGuid());
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>            }
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>            // END : LoopRandomGUID
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>        }
+</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>        // StartExample:NoDurableId
+</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>        private void LogWithoutDurableID()
+</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>        {
+</span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a>            //
+</span><span id="__span-3-39"><a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a>            // Log a message without a DurableID;  while simple, this log will provide struggles later
+</span><span id="__span-3-40"><a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a>            //    because while we receive a property bag of the variables (_version), we will not know
+</span><span id="__span-3-41"><a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a>            //    which line of code emitted the telemetry - as our only identtifer will be the
+</span><span id="__span-3-42"><a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a>            //    'flattened' payload string
+</span><span id="__span-3-43"><a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a>            //
+</span><span id="__span-3-44"><a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a>            // NOTE: adding the _instanceID is to showcase how, once 'flattened' this unrecommendable
+</span><span id="__span-3-45"><a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a>            //    method of logging makes for tricky (and expensive) backend searching
 </span><span id="__span-3-46"><a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a>            //
-</span><span id="__span-3-47"><a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a>            // Log a message with a DurableID; 'behind the scenes' the dotnet compiler will
-</span><span id="__span-3-48"><a id="__codelineno-3-48" name="__codelineno-3-48" href="#__codelineno-3-48"></a>            //     generate two ID's - one numerical, and one a string
-</span><span id="__span-3-49"><a id="__codelineno-3-49" name="__codelineno-3-49" href="#__codelineno-3-49"></a>            //
-</span><span id="__span-3-50"><a id="__codelineno-3-50" name="__codelineno-3-50" href="#__codelineno-3-50"></a>            // Behind the scenes, the compiler uses this syntax to create identifiers that are included
-</span><span id="__span-3-51"><a id="__codelineno-3-51" name="__codelineno-3-51" href="#__codelineno-3-51"></a>            //     into the telemetry row, that can be used visually, and in automation, to map
-</span><span id="__span-3-52"><a id="__codelineno-3-52" name="__codelineno-3-52" href="#__codelineno-3-52"></a>            //     from row of telemetry, to line of code - very useful when extending the capabilities
-</span><span id="__span-3-53"><a id="__codelineno-3-53" name="__codelineno-3-53" href="#__codelineno-3-53"></a>            //     of your telemetry assets
-</span><span id="__span-3-54"><a id="__codelineno-3-54" name="__codelineno-3-54" href="#__codelineno-3-54"></a>            //
-</span><span id="__span-3-55"><a id="__codelineno-3-55" name="__codelineno-3-55" href="#__codelineno-3-55"></a>            // NOTE: adding the _instanceID is to showcase how, we can more easily locate this line
-</span><span id="__span-3-56"><a id="__codelineno-3-56" name="__codelineno-3-56" href="#__codelineno-3-56"></a>            //     of code, as compared with the earlier 'flattened' version.  The compiler will attach
-</span><span id="__span-3-57"><a id="__codelineno-3-57" name="__codelineno-3-57" href="#__codelineno-3-57"></a>            //     an 'EventName' property with the value of our function name "LogLaunch".  We can use this
-</span><span id="__span-3-58"><a id="__codelineno-3-58" name="__codelineno-3-58" href="#__codelineno-3-58"></a>            //     instead of regular expressions to locate and aggregate
-</span><span id="__span-3-59"><a id="__codelineno-3-59" name="__codelineno-3-59" href="#__codelineno-3-59"></a>            //
-</span><span id="__span-3-60"><a id="__codelineno-3-60" name="__codelineno-3-60" href="#__codelineno-3-60"></a>            LogLaunch(_logger, _version, _instanceID);
-</span><span id="__span-3-61"><a id="__codelineno-3-61" name="__codelineno-3-61" href="#__codelineno-3-61"></a>        }
-</span><span id="__span-3-62"><a id="__codelineno-3-62" name="__codelineno-3-62" href="#__codelineno-3-62"></a>
-</span><span id="__span-3-63"><a id="__codelineno-3-63" name="__codelineno-3-63" href="#__codelineno-3-63"></a>        // StartSearchExample:LogLaunch
-</span><span id="__span-3-64"><a id="__codelineno-3-64" name="__codelineno-3-64" href="#__codelineno-3-64"></a>        [LoggerMessage(Level = LogLevel.Information, Message = "Launch, ver={version}, instantion={instantionID}")]
-</span><span id="__span-3-65"><a id="__codelineno-3-65" name="__codelineno-3-65" href="#__codelineno-3-65"></a>        static partial void LogLaunch(ILogger logger, string version, Guid instantionID);
-</span><span id="__span-3-66"><a id="__codelineno-3-66" name="__codelineno-3-66" href="#__codelineno-3-66"></a>        // EndSearchExample:LogLaunch
-</span><span id="__span-3-67"><a id="__codelineno-3-67" name="__codelineno-3-67" href="#__codelineno-3-67"></a>        // EndExample:DurableId
-</span><span id="__span-3-68"><a id="__codelineno-3-68" name="__codelineno-3-68" href="#__codelineno-3-68"></a>    }
-</span><span id="__span-3-69"><a id="__codelineno-3-69" name="__codelineno-3-69" href="#__codelineno-3-69"></a>}
+</span><span id="__span-3-47"><a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a>            _logger.LogInformation($"Launch, ver={_version}, instantion={_instanceID}");
+</span><span id="__span-3-48"><a id="__codelineno-3-48" name="__codelineno-3-48" href="#__codelineno-3-48"></a>        }
+</span><span id="__span-3-49"><a id="__codelineno-3-49" name="__codelineno-3-49" href="#__codelineno-3-49"></a>        // EndExample:NoDurableId
+</span><span id="__span-3-50"><a id="__codelineno-3-50" name="__codelineno-3-50" href="#__codelineno-3-50"></a>
+</span><span id="__span-3-51"><a id="__codelineno-3-51" name="__codelineno-3-51" href="#__codelineno-3-51"></a>
+</span><span id="__span-3-52"><a id="__codelineno-3-52" name="__codelineno-3-52" href="#__codelineno-3-52"></a>        // StartExample:DurableId
+</span><span id="__span-3-53"><a id="__codelineno-3-53" name="__codelineno-3-53" href="#__codelineno-3-53"></a>        private void LogWithDurableID()
+</span><span id="__span-3-54"><a id="__codelineno-3-54" name="__codelineno-3-54" href="#__codelineno-3-54"></a>        {
+</span><span id="__span-3-55"><a id="__codelineno-3-55" name="__codelineno-3-55" href="#__codelineno-3-55"></a>            //
+</span><span id="__span-3-56"><a id="__codelineno-3-56" name="__codelineno-3-56" href="#__codelineno-3-56"></a>            // Log a message with a DurableID; 'behind the scenes' the dotnet compiler will
+</span><span id="__span-3-57"><a id="__codelineno-3-57" name="__codelineno-3-57" href="#__codelineno-3-57"></a>            //     generate two ID's - one numerical, and one a string
+</span><span id="__span-3-58"><a id="__codelineno-3-58" name="__codelineno-3-58" href="#__codelineno-3-58"></a>            //
+</span><span id="__span-3-59"><a id="__codelineno-3-59" name="__codelineno-3-59" href="#__codelineno-3-59"></a>            // Behind the scenes, the compiler uses this syntax to create identifiers that are included
+</span><span id="__span-3-60"><a id="__codelineno-3-60" name="__codelineno-3-60" href="#__codelineno-3-60"></a>            //     into the telemetry row, that can be used visually, and in automation, to map
+</span><span id="__span-3-61"><a id="__codelineno-3-61" name="__codelineno-3-61" href="#__codelineno-3-61"></a>            //     from row of telemetry, to line of code - very useful when extending the capabilities
+</span><span id="__span-3-62"><a id="__codelineno-3-62" name="__codelineno-3-62" href="#__codelineno-3-62"></a>            //     of your telemetry assets
+</span><span id="__span-3-63"><a id="__codelineno-3-63" name="__codelineno-3-63" href="#__codelineno-3-63"></a>            //
+</span><span id="__span-3-64"><a id="__codelineno-3-64" name="__codelineno-3-64" href="#__codelineno-3-64"></a>            // NOTE: adding the _instanceID is to showcase how, we can more easily locate this line
+</span><span id="__span-3-65"><a id="__codelineno-3-65" name="__codelineno-3-65" href="#__codelineno-3-65"></a>            //     of code, as compared with the earlier 'flattened' version.  The compiler will attach
+</span><span id="__span-3-66"><a id="__codelineno-3-66" name="__codelineno-3-66" href="#__codelineno-3-66"></a>            //     an 'EventName' property with the value of our function name "LogLaunch".  We can use this
+</span><span id="__span-3-67"><a id="__codelineno-3-67" name="__codelineno-3-67" href="#__codelineno-3-67"></a>            //     instead of regular expressions to locate and aggregate
+</span><span id="__span-3-68"><a id="__codelineno-3-68" name="__codelineno-3-68" href="#__codelineno-3-68"></a>            //
+</span><span id="__span-3-69"><a id="__codelineno-3-69" name="__codelineno-3-69" href="#__codelineno-3-69"></a>            LogLaunch(_logger, _version, _instanceID);
+</span><span id="__span-3-70"><a id="__codelineno-3-70" name="__codelineno-3-70" href="#__codelineno-3-70"></a>        }
+</span><span id="__span-3-71"><a id="__codelineno-3-71" name="__codelineno-3-71" href="#__codelineno-3-71"></a>
+</span><span id="__span-3-72"><a id="__codelineno-3-72" name="__codelineno-3-72" href="#__codelineno-3-72"></a>        [LoggerMessage(Level = LogLevel.Information, Message = "Launch, ver={version}, instantion={instantionID}")]
+</span><span id="__span-3-73"><a id="__codelineno-3-73" name="__codelineno-3-73" href="#__codelineno-3-73"></a>        static partial void LogLaunch(ILogger logger, string version, Guid instantionID);
+</span><span id="__span-3-74"><a id="__codelineno-3-74" name="__codelineno-3-74" href="#__codelineno-3-74"></a>        // EndExample:DurableId
+</span><span id="__span-3-75"><a id="__codelineno-3-75" name="__codelineno-3-75" href="#__codelineno-3-75"></a>
+</span><span id="__span-3-76"><a id="__codelineno-3-76" name="__codelineno-3-76" href="#__codelineno-3-76"></a>
+</span><span id="__span-3-77"><a id="__codelineno-3-77" name="__codelineno-3-77" href="#__codelineno-3-77"></a>        // START_DEFINE : LogRandomGuid
+</span><span id="__span-3-78"><a id="__codelineno-3-78" name="__codelineno-3-78" href="#__codelineno-3-78"></a>        [LoggerMessage(Level = LogLevel.Information, Message = "Loop, random ID={guid}")]
+</span><span id="__span-3-79"><a id="__codelineno-3-79" name="__codelineno-3-79" href="#__codelineno-3-79"></a>        static partial void LogRandomGuid(ILogger logger, Guid guid);
+</span><span id="__span-3-80"><a id="__codelineno-3-80" name="__codelineno-3-80" href="#__codelineno-3-80"></a>        // END_DEFINE : LogRandomGuid
+</span><span id="__span-3-81"><a id="__codelineno-3-81" name="__codelineno-3-81" href="#__codelineno-3-81"></a>    }
+</span><span id="__span-3-82"><a id="__codelineno-3-82" name="__codelineno-3-82" href="#__codelineno-3-82"></a>}
 </span></code></pre></div>
 <h4 id="spotting-the-difference-in-your-database">Spotting the difference in your database</h4>
-<p>The most obvious way to see the differences between this these two different
-methods of emitting telemetry is by looking and inspecting your database.</p>
-<p>Without this awareness, the suggested logging method might seem overly complex,
-as it requires extra effort and log record creation.</p>
-<p><img alt="" src="../../orig_media/Demo.1.DurableID.Contrast.png"></p>
+<p>While both of these logging methods result in the same printf() ('flatted') log,
+the one with the Durable ID offers many extra goodies.</p>
+<p>Please recall the source snippets above;  when these two lines of code manifest
+in our database, they look as follows.</p>
+<p><img alt="" src="../orig_media/Demo.0.DurableID.WithAndWithoutContrast.png"></p>
 <p>Upon examining each of these rows in the telemetry data, you will notice that
-one contains an entry in the custom definitions while the other does not. The
-row without a custom definition originates from a direct call to log
-information, resulting in the omission of these critical fields.</p>
-<p>At first glance, it may appear that incorporating a durable identifier incurs
-higher storage and compute costs; this is initially accurate and holds true in
-this example. However, as you optimize your database, you may end up entirely
-omitting the message column.</p>
-<p>Subsequentl what sceney, you can expand the custom dimensions values into their
-distinct type-specific saved columns, which are indexed and offer high
-performance.</p>
-<p>This optimization step is what really will bring dramatic cost savings, an
-increased diagnostic capabilities, to the table.</p>
-<h4 id="seeing-the-confusion-lack-of-capability">Seeing the Confusion, lack of capability</h4>
-<p><img alt="" src="../../orig_media/Demo.1.DurableID.SummarizeContrast.png"></p>
-<p>Let's explore some of these savings by examining where our costs are going. If
-we aggregate the rows of telemetry using a basic summary based on the message
-string, you'll observe that each row has two counts.</p>
-<p>One of the counts is derived from log information without a durable identifier,
-while the other comes from logging with the durable identifier. This results in
-a row count of two for each log entry, which is an intentional aspect of the
-demo's design.</p>
-<p>It's hard to get a clear picture of your telemetry without a durable identifier.
-At best, you'll use regular expressions to turn a telemetry row into something
-identifiable and traceable.</p>
-<h5 id="using-the-eventname-to-locate-the-line-of-code">Using the EventName to locate the line of code</h5>
-<p><img alt="" src="../../orig_media/Demo.1.DurableID.ExtendEventName.png"></p>
-<p>Let's utilize our durable identifier by creating a separate event name column.
-Costs may rise due to the custom dimensions column.</p>
-<p>To reduce costs, consider dropping the message column and extracting the event
-name for indexing during ingestion. This leverages the strengths of a relational
-database and indexing efficiently.</p>
-<h5 id="aggregating-based-on-the-eventname">Aggregating based on the EventName</h5>
+one contains an entry in the custom definitions while the other does not.</p>
+<p>This customDimension column is generated by the compiler, and includes a string based
+EventName as well as a numerical EventId.</p>
+<p>You can see an expanded version of these fields below.</p>
+<p><img alt="" src="../orig_media/Demo.0.DurableID.LogExpansion.png"></p>
+<h4 id="trying-to-reason-over-lots-of-logs">Trying to reason over lots of Logs</h4>
+<p>Scenarios that require performant study and aggregation of clusters of Logs,
+really struggle with 'flattened' logs.  This is discussed more in the
+<a href="../PositionPaper.DurableIds_StructuredPayloads.document/">Position Paper on Durable
+ID's</a>, but in short,
+due to the addition of a GUID, each row of telemetry is different from another.</p>
+<p>You can see this quickly, with a quick dcount (distinct count) of each message.</p>
+<p><img alt="" src="../orig_media/Demo.0.DurableID.ShowCollisions.png"></p>
+<p>Notice in this screenshot, that the number of distinct messages is similar to
+the number of absolute messages - without a Durable Identifier, spotting the
+differences can be difficult.  This in turn complicates cost reductions, as well
+as any number of the Dynamic Telemetry scenarios.</p>
 <h2 id="use-azure-monitor-and-kql-language-to-locate-an-expensive-opentelemetry-log">Use Azure Monitor and KQL language to locate an expensive OpenTelemetry log</h2>
-<p><img alt="" src="../../orig_media/Demo.1.DurableID.SummarizeContrast.png"></p>
-<p>With the event name in hand, one can appreciate the value of having a durable
-identifier. What was once multiple pages of rows has now been streamlined into
-only five rows. Some of these event names are generated by the network
-infrastructure itself, while the second and fourth ones are produced by our
-demonstration program.</p>
-<p>It is noticeable that the counts of the empty row are slightly higher compared
-to the log launch row. This discrepancy arises because not every log row
-corresponds to a log launch. This observation further underscores the point; in
-this instance, nine messages have been aggregated into a single entry. In a
-production system, one can expect this number to be significantly higher, which
-would subsequently increase potential confusion exponentially.</p></div>
+<p>Lets go back to the original code;  and use the compiler generated Durable ID to
+quickly count the ILogger log, that followed recommended guidance.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>// Generate some data that will be tough to aggregate
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>for (int i = 0; i &lt; 1000; i++)
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>{
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    _logger.LogInformation($"Loop, random ID={Guid.NewGuid()}");
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    LogRandomGuid(_logger, Guid.NewGuid());
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>}
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>[LoggerMessage(Level = LogLevel.Information, Message = "Loop, random ID={guid}")]
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>static partial void LogRandomGuid(ILogger logger, Guid guid);
+</span></code></pre></div>
+<p>This time, instead of trying to deduplicate with the message (where the GUID all
+bug guarantees each row is unique), we will deduplicate with the
+extracted EventName field.</p>
+<p><img alt="" src="../orig_media/Demo.0.DurableID.GroupedByEventName.png"></p>
+<p>You'll notice "LogRandomGuid" quickly stands out, with a tidy dcount(),  whereas
+the other similar log is still unclear.</p>
+<p>With the event name in hand, we can quickly do all sorts of quick study and
+aggregation across our logs.  With a little dreaming, it's easy to appreciate
+the value of the investment. What was once multiple pages of rows has now been
+streamlined into only five rows.</p></div>
 
 
 

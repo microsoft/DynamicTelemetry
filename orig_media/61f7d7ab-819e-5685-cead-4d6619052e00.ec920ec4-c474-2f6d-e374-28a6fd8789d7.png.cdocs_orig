@@ -1,1 +1,0 @@
-{"t":"CodeBlock","c":[["",["cdocs"],[]],"Line 000010 : printf(\u0022ALLOC(%d bytes) for %s\u0022, size, bufferName1);\n              //business logic\nLine 001000 : printf(\u0022FREE(%s)\u0022, bufferName1);\n              //more business logic\nLine 100000 : printf(\u0022FREE(%s)\u0022, bufferName2)"]}
