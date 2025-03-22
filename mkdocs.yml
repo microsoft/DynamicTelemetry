@@ -222,12 +222,13 @@ nav:
                         - Project Manager: ./docs/Persona_ProjectManager.document.md
 
                 - Demos and Presentations:
-                    - Videos:
+                    - Video Demos:
+                        - Adding a Memory Probe: ./docs/Demos.4.AddTelemetryDemo.md
+                        - Drop a Chatty Event : ./docs/Demos.1.DropChattyLog.md
+                    - Written Demos:
+                        - Understanding Durable ID : ./docs/Demos.0.DynamicID.md
                         - Dynamic Probes: ./docs/Demos.2_DynamicProbe.md
                         - HighLevel / Overview : ./docs/Demos.HighLevel.Overview.md
-                        - Adding a Memory Probe: ./docs/Demos.4.AddTelemetryDemo.md
-                        - Understanding Durable ID : ./docs/Demos.0.DynamicID.md
-                        - Drop a Chatty Event : ./docs/Demos.1.DropChattyLog.md
                     - Slides / Presentations:
                         - Overview: ./docs/Slides.Overview.Presentation.md
                 - Development / Spec Process:
