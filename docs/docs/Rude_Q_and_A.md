@@ -143,7 +143,20 @@ Reading Material:
 [Stake Holder Documents](./PositionPaper.SharingDataAmongStakeHoldersIsHard.document.md)
 [Clear Failure Schemas](./PositionPaper.ClearFailuresViaSchema.document.md)
 
-
 ### Q5: What is the Change Approach - "are we hoping to see lots of experimentation, or is this a community standards approach, like IETF"
 
-#### A5: 
+#### A5: Experimentation and Collaboration mostly - but it's a little of both
+
+Dynamic Telemetry aims to provide a holistic vision and historical ledger for
+observability and telemetry practices. While it is not explicitly designed to
+dictate standards, it serves as a foundation for exploring innovative approaches
+and fostering discussions around best practices. At the time of writing, it
+remains uncertain whether specific implementations will emerge directly from
+Dynamic Telemetry, but its role as a conceptual framework is clear.
+
+Standards are more likely to emerge from established organizations such as IETF,
+OpenTelemetry, and CNCF. These bodies are well-positioned to define and
+formalize community-driven protocols and specifications. Dynamic Telemetry
+complements these efforts by offering insights and ideas that could influence
+the evolution of standards in the broader observability ecosystem.
+
