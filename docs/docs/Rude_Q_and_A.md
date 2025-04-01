@@ -119,12 +119,12 @@ ______________________________________________________________________
 
 Will Dynamic Telemetry invent a new protocol?
 
-### A4 : No, Dynamic Telemetry operates within Open Telemetry (OTLP, gRPC, etc)
+#### A4 : No, Dynamic Telemetry operates within Open Telemetry (OTLP, gRPC, etc)
 
 Dynamic Telemetry adheres to the principles and protocols established by
 OpenTelemetry. While there may be opportunities to enhance schema usage within
 OpenTelemetry payloads, any such enhancements must remain fully compliant with
-OpenTelemetry's standard protocols and specifications. 
+OpenTelemetry's standard protocols and specifications.
 
 [https://github.com/open-telemetry/opentelemetry-proto/](https://github.com/open-telemetry/opentelemetry-proto/)
 
@@ -144,7 +144,6 @@ Reading Material:
 [Clear Failure Schemas](./PositionPaper.ClearFailuresViaSchema.document.md)
 
 
-####
+### Q5: What is the Change Approach - "are we hoping to see lots of experimentation, or is this a community standards approach, like IETF"
 
-
-### Q2: What is the Change Approach - "is this a case law problem, where you just need lots of teams to try and experiment, or is this a community standards approach, like IETF"
+#### A5: 
