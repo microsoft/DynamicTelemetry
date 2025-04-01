@@ -109,3 +109,42 @@ incongruity found in the design pattern documentation. Specifically, the design
 patterns discussed have rigid schemas as their core value proposition. This is
 potentially something that should be further discussed if the design patterns
 are included in Dynamic Telemetry or built atop it.\`\`
+
+
+______________________________________________________________________
+
+## Compatibility
+
+### Q4: Does Dynamic Telemetry have it's own protocol?
+
+Will Dynamic Telemetry invent a new protocol?
+
+### A4 : No, Dynamic Telemetry operates within Open Telemetry (OTLP, gRPC, etc)
+
+Dynamic Telemetry adheres to the principles and protocols established by
+OpenTelemetry. While there may be opportunities to enhance schema usage within
+OpenTelemetry payloads, any such enhancements must remain fully compliant with
+OpenTelemetry's standard protocols and specifications. 
+
+[https://github.com/open-telemetry/opentelemetry-proto/](https://github.com/open-telemetry/opentelemetry-proto/)
+
+Where there could be some struggles; and something to monitor, is that Dynamic
+Telemetry makes use of triggering
+[Actions](./Architecture.Action.Explanation.document.md). These Actions benefit
+from ability to decode and understand logging.
+
+Where Dynamic Telemetry may find itself
+
+Please see Q3 above, join a live
+[Discussion](https://github.com/microsoft/DynamicTelemetry/discussions/40) or
+study reading material below.
+
+Reading Material:
+[Stake Holder Documents](./PositionPaper.SharingDataAmongStakeHoldersIsHard.document.md)
+[Clear Failure Schemas](./PositionPaper.ClearFailuresViaSchema.document.md)
+
+
+####
+
+
+### Q2: What is the Change Approach - "is this a case law problem, where you just need lots of teams to try and experiment, or is this a community standards approach, like IETF"
