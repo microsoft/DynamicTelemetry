@@ -109,3 +109,23 @@ incongruity found in the design pattern documentation. Specifically, the design
 patterns discussed have rigid schemas as their core value proposition. This is
 potentially something that should be further discussed if the design patterns
 are included in Dynamic Telemetry or built atop it.\`\`
+
+
+### Q4: Without any form of rigid schemas, can we expect and trust logs won't change over time?
+
+#### A4: It's a valid concern, but flexibility and consistency can coexist
+
+Ultimately, the balance between flexibility and consistency lies in adopting
+practices that allow for evolution while maintaining trust and reliability in
+the data. Implemented to monitor and control changes to log structures. This
+ensures that any modifications are deliberate, documented, and aligned with
+organizational objectives.
+
+The (valid) concern is that the structure of logs may evolve, backward
+compatibility and durablity of dashboards may suffer.
+
+Ideas to solve this include:
+1. Rigid Schema enforcment
+1. Compiler assist in identifer generation
+
+
