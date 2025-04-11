@@ -13,7 +13,7 @@ data that is only uploaded to a backend, when instructed by a triggering
 streaming telemetry, this telemetry is only emitted when instructed, usually on
 failure.
 
-In this capacity, it serves as an alternative and compliment to standard
+In this capacity, it serves as an alternative and complement to standard
 [Streaming](./PositionPaper.FileAndStreaming.document.md) Observability.  In
 fact, users of Flight Recorders. Typically report that their presence turns the
 frustrating act of debugging a live system into something a lot more fun and
