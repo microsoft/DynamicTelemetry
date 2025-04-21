@@ -16,7 +16,7 @@ considered a best practice. A durable identifier functions like a GPS or homing
 beacon, mapping any row of telemetry to a specific line of code.
 
 In Microsoft .net platform, a durable identifier is created automatically at
-compile time for OpenTelemetry user using ILogger - when the author of the
+compile time for OpenTelemetry user using 'ILogger', when the author of the
 software follows best practices.
 
 ### Contrasting C# that makes use of Durable ID's, with C# that does not
@@ -25,9 +25,9 @@ Let's examine code that makes use of a durable identifier versus one that
 doesn't. We'll inspect both in the Application Insights Log database, to spot
 the difference.
 
-### Seeing the DurableID in Azures Application Insights
+### Seeing the DurableID in Azure's Application Insights
 
-Lets start with the recommended way to log in .NET; using ILogger, with a
+Let's start with the recommended way to log in .NET; using 'ILogger', with a
 compiler generated Durable ID.
 
 #### Recommended Way to Log
@@ -117,8 +117,7 @@ This time, instead of trying to deduplicate with the message (where the GUID all
 bug guarantees each row is unique), we will deduplicate with the
 extracted EventName field.
 
-![](../orig_media/Demo.0.DurableID.GroupedByEventName.png){width="5.5in"
-height="4.3991393263342085in"}
+![](../orig_media/Demo.0.DurableID.GroupedByEventName.png)
 
 You'll notice "LogRandomGuid" quickly stands out, with a tidy dcount(),  whereas
 the other similar log is still unclear.
