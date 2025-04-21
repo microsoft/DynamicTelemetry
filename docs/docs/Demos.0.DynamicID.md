@@ -9,19 +9,19 @@ description : Demo Showing DurableID
 ## Using DurableID in OpenTelemetry, to locate the source of the the expense
 
 This demonstration will showcase and contrast two logging messages in
-OpenTelemetry. One will use a Durable Identifier, and the other will not. It's
+OpenTelemetry. One will use a Durable ID, and the other will not. It's
 expected that not all software using OpenTelemetry will utilize a durable
 identifier, even though, in Dynamic Telemetry, the use of the DurableID is
-considered a best practice. A durable identifier functions like a GPS or homing
+considered a best practice. A Durable ID functions like a GPS or homing
 beacon, mapping any row of telemetry to a specific line of code.
 
-In Microsoft .net platform, a durable identifier is created automatically at
+In Microsoft .net platform, a Durable ID is created automatically at
 compile time for OpenTelemetry user using 'ILogger', when the author of the
 software follows best practices.
 
 ### Contrasting C# that makes use of Durable ID's, with C# that does not
 
-Let's examine code that makes use of a durable identifier versus one that
+Let's examine code that makes use of a Durable ID versus one that
 doesn't. We'll inspect both in the Application Insights Log database, to spot
 the difference.
 
@@ -90,7 +90,7 @@ You can see this quickly, with a quick dcount (distinct count) of each message.
 ![](../orig_media/Demo.0.DurableID.ShowCollisions.png)
 
 Notice in this screenshot, that the number of distinct messages is similar to
-the number of absolute messages - without a Durable Identifier, spotting the
+the number of absolute messages - without a Durable ID, spotting the
 differences can be difficult.  This in turn complicates cost reductions, as well
 as any number of the Dynamic Telemetry scenarios.
 
