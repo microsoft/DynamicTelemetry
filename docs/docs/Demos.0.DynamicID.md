@@ -15,7 +15,7 @@ identifier, even though, in Dynamic Telemetry, the use of the DurableID is
 considered a best practice. A Durable ID functions like a GPS or homing
 beacon, mapping any row of telemetry to a specific line of code.
 
-In Microsoft .net platform, a Durable ID is created automatically at
+In Microsoft .NET platform, a Durable ID is created automatically at
 compile time for OpenTelemetry user using 'ILogger', when the author of the
 software follows best practices.
 
