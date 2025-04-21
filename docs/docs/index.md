@@ -9,7 +9,7 @@ description : Introduction to DynamicTelemetry
 ![image](../orig_media/DynamicTelemetry.logo.png){width="5.5in"
 height="1.261111111111111in"}
 
-Introducing DynamicTelemetry, an OpenSource, diagnostic compliment to
+Introducing DynamicTelemetry, an OpenSource, diagnostic complement to
 OpenTelemetry.
 
 **The DynamicTelemetry project aims to make debugging highly scaled
