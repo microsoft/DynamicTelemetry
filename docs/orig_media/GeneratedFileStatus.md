@@ -120,7 +120,7 @@ status: Level5
 | [../docs/Architecture.Components.Processor.QueryLanguage.document.md](../docs/Architecture.Components.Processor.QueryLanguage.document.md)  | 349|
 | [../docs/Architecture.Components.Processor.StateMachine.document.md](../docs/Architecture.Components.Processor.StateMachine.document.md)  | 472|
 | [../docs/Architecture.Probes.Overview.document.md](../docs/Architecture.Probes.Overview.document.md)  | 1395|
-| [../docs/index.md](../docs/index.md)  | 489|
+| [../docs/index.md](../docs/index.md)  | 641|
 | [../docs/Personas.Overview.document.md](../docs/Personas.Overview.document.md)  | 257|
 | [../docs/PositionPaper.DurableIds_StructuredPayloads.document.md](../docs/PositionPaper.DurableIds_StructuredPayloads.document.md)  | 1242|
 | [../docs/PositionPaper.ThinkLike.RTOS.document.md](../docs/PositionPaper.ThinkLike.RTOS.document.md)  | 43|
