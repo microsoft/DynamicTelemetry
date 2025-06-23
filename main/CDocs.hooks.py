@@ -46,7 +46,6 @@ def on_page_markdown(markdown: str, page: Page, config: MkDocsConfig, **kwargs) 
 
     data = ""
     if -1 == markdown.find("ProvideFeedback"):
-        #encoded = str(page.file.src_path).replace("/", ".")
         encoded = quote(page.file.src_path)
 
         ret = ""
@@ -65,11 +64,8 @@ def on_page_markdown(markdown: str, page: Page, config: MkDocsConfig, **kwargs) 
         ret += "    http://microsoft.github.io/DynamicTelemetry/" + page.file.url + "\n"
         ret += "    ```\n\n"
         ret += "\n\n"
-        ret += "    <img src=\"https://durableid-demo-a9byc5fwa7htc5h0.westus2-01.azurewebsites.net/?name=test.jpg&handler=LoadImageFile&pageName=" + encoded + "\"/>"
-        ret += "\n\n"
 
         data += ret
-        # data += "{{ProvideFeedback(page.file.src_uri)}}\n"
         data += CDocs.RemoveImageWithAndHeightInfo(markdown)
     else:
         data += CDocs.RemoveImageWithAndHeightInfo(markdown)
