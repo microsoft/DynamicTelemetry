@@ -69,7 +69,7 @@ algorithm is failing
 
 Lets look at a few examples, as they likely will help tell the tale
 
-Image a piece of code that looks something like this:
+Imagine a piece of code that looks something like this:
 
 ```mermaid
     flowchart TD
