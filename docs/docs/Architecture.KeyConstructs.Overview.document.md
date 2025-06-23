@@ -71,7 +71,7 @@ allows the dynamic shaping and routing of telemetry - much like valves and
 filters in a water system.
 
 Dynamic Telemetry Filters, Routers, and Adapters can be thought of as specific
-purpose, narrowly focused, subcategories of Open Telemetry {connector,
+purpose, narrowly focused, subcategories of OpenTelemetry {connector,
 exporter, processor, and router}.
 
 ??? info "Help Needed From OpenTelemetry experts"
