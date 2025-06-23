@@ -20,7 +20,6 @@ The four Constructs of Dynamic Telemetry are
 1. a [Flight Recorder](./Architecture.FlightRecorder.Overview.document.md)
 1. a [Action](./Architecture.Action.Explanation.document.md)
 
-
 ## What is a Probe{.unlisted .unnumbered}
 
 A Dynamic Telemetry Probe is a lightweight mechanism that emits events (logs)
