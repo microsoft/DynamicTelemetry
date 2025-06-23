@@ -15,11 +15,11 @@ Telemetry. This distinction forms the foundation of Dynamic Telemetry.
 
 The four Constructs of Dynamic Telemetry are
 
-1. [Probes](./Architecture.Probes.Overview.document.md)
-1. [Flight Recorders](./Architecture.FlightRecorder.Overview.document.md)
-1. [Filters, Routers, and Adapters](./Architecture.Components.FiltersAndRouters.document.md)
-1. [Processors](./Architecture.Components.Processor.Overview.document.md)
-1. [Actions](./Architecture.Actions.Overview.document.md)
+1. a [Probe](./Architecture.Probes.Overview.document.md)
+1. a [Filter](./Architecture.Components.FiltersRoutersAndAdapters.document.md)
+1. a [Flight Recorder](./Architecture.FlightRecorder.Overview.document.md)
+1. a [Action](./Architecture.Action.Explanation.document.md)
+
 
 ## What is a Probe{.unlisted .unnumbered}
 

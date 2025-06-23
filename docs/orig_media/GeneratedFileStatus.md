@@ -7,7 +7,6 @@ status: Level5
 | File | Word Count |
 |------|------------|
 
-
 ## Level1b
 
 | File | Word Count |
@@ -48,14 +47,4 @@ status: Level5
 
 | File | Word Count |
 |------|------------|
-| [../docs/Architecture.Components.Processor.Language.md](../docs/Architecture.Components.Processor.Language.md)  | 0|
-| [../docs/Architecture.Components.Processor.Overview.document.md](../docs/Architecture.Components.Processor.Overview.document.md)  | 0|
-| [../docs/Personas.Overview.document.md](../docs/Personas.Overview.document.md)  | 0|
-| [../docs/Architecture.Components.Processor.StateMachine.document.md](../docs/Architecture.Components.Processor.StateMachine.document.md)  | 0|
-| [../docs/PositionPaper.ThinkLike.RTOS.document.md](../docs/PositionPaper.ThinkLike.RTOS.document.md)  | 0|
-| [../docs/Architecture.Components.Processor.QueryLanguage.document.md](../docs/Architecture.Components.Processor.QueryLanguage.document.md)  | 0|
-| [../docs/Architecture.Probes.Overview.document.md](../docs/Architecture.Probes.Overview.document.md)  | 0|
-| [../docs/index.md](../docs/index.md)  | 0|
-| [../docs/PositionPaper.DurableIds_StructuredPayloads.document.md](../docs/PositionPaper.DurableIds_StructuredPayloads.document.md)  | 0|
-
 
