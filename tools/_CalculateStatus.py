@@ -49,7 +49,7 @@ with open(os.path.join(base_path, "GeneratedFileStatus.md"), "w") as f:
         print("| File | Word Count |", file=f)
         print("|------|------------|", file=f)
         for(file) in files:
-            file = os.path.relpath(file, base_path)
-            print("| [" + file + "](" + file + ")  | " + str(wordCounts[file]) + "|", file=f)
+            file_translated = os.path.relpath(file, base_path)
+            print("| [" + file_translated + "](" + file_translated + ")  | " + str(wordCounts[file]) + "|", file=f)
 
         print("\n", file=f)
