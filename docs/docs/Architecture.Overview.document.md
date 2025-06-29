@@ -32,7 +32,7 @@ understanding of the system.
 DynamicTelemetry, but before diving in to the complex realities
 DynamicTelemetry, it's important to have a general understanding of usage.
 
-Image yourself as a [DEVELOPER](./Persona_Developer.document.md). You're focused
+Imagine yourself as a [DEVELOPER](./Persona_Developer.document.md). You're focused
 on the latest business needs from your
 [PROJECTMANAGER](./Persona_ProjectManager.document.md). You're worried about
 solving business problems, keeping costs in check, being able to diagnose after

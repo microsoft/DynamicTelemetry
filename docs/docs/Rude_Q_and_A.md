@@ -46,7 +46,7 @@ ability for Dynamic Telemetry to have dynamic deployments is akin to rejecting
 this capability. The question only seems to be where the balance is and how to
 map that balance into the business needs.
 
-Unfortunately, are cases where risks are present. For example, CPU sampling can
+Unfortunately, there are cases where risks are present. For example, CPU sampling can
 impact performance, memory dumps will pause your threads, and extracting memory
 can pose security risks.
 
@@ -108,4 +108,4 @@ A keen reader of the Dynamic Telemetry documentation will notice potential
 incongruity found in the design pattern documentation. Specifically, the design
 patterns discussed have rigid schemas as their core value proposition. This is
 potentially something that should be further discussed if the design patterns
-are included in Dynamic Telemetry or built atop it.\`\`
+are included in Dynamic Telemetry or built atop it.

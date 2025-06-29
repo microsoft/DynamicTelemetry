@@ -69,7 +69,7 @@ warning, that perhaps not fatal, might indicate the need for a programmer to
 inspect and figure out why.
 
 The Processor portion of Dynamic Telemetry permit a developer to craft little
-traps for their bugs;  you cna easily imagine using a [loose
+traps for their bugs; you can easily imagine using a [loose
 schema](PositionPaper.ClearFailuresViaSchema.document.md) that describes certain
 logs and what good and bad looks like!
 
