@@ -12,14 +12,14 @@ telemetry you may come to realize that using these facilities provide an
 interesting technique into the testing and hardening your
 [Production](./PositionPaper.DefiningProduction.document.md) systems.
 
-Traditional testing requires decoupling of the software from into smaller pieces
+Traditional testing requires decoupling of the software into smaller pieces,
 each of which are tested independently, often adding unit tests to orchestrate.
-Is this complexity of the software grows unit tests remain useful but often
+As the complexity of the software grows, unit tests remain useful but often
 struggle to detect integration type failures.
 
-To cope with this many developers will start using scenario testing which blends
+To cope with this, many developers will start using scenario testing which blends
 together different architectural components into one logical set which is then
-tested as a entire scenario. Should the scenario fail the developer will start
+tested as an entire scenario. Should the scenario fail, the developer will start
 zooming in on the area that failed and from there they will look into the
 logging of the subsystem looking for root cause.
 
@@ -64,8 +64,8 @@ Imagine your software has the ability to self-described failure.
 Perhaps when you author a enqueue() operation you also supply nominal
 expectations (for example, that no item sticks in the queue more than 200 ms).
 
-Should the completion take longer than 200 milliseconds this would indicate a
-warning, that perhaps not fatal, might indicate the need for a programmer to
+Should the completion take longer than 200 milliseconds, this would indicate a
+warning that, perhaps not fatal, might indicate the need for a programmer to
 inspect and figure out why.
 
 The Processor portion of Dynamic Telemetry permit a developer to craft little

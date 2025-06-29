@@ -67,7 +67,7 @@ Should you find yourself in the unenviable position where your OpenTelemetry
 logs/traces contain secrets, or privacy information you face a complicated
 journey.
 
-First you have to fix the code, retest, redeploy, (potentially wait for a
+First, you have to fix the code, retest, redeploy, (potentially wait for a
 ringed deployment), and then go scrub your databases.
 
 Dynamic Telemetry offers no solution to database scrubbing, but it does offer
@@ -132,7 +132,7 @@ captured and processed, thereby maintaining optimal system performance.
 ### Scrub variable payloads
 
 Scrubbing payloads can be performed in various Processor locations within a
-system to ensure sensitive information is protected and compliance requirements
+system to ensure that sensitive information is protected and compliance requirements
 are met.
 
 ![hi](../orig_media/Architecture.Boxes.Full.DynamicTelemetry.drawio.png)

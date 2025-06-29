@@ -1,6 +1,6 @@
 # Using the Markdown editing container
 
-MkDocs is our markdown rendering in Dynamic Telemetry, providing a pleasant
+MkDocs is our markdown rendering tool in Dynamic Telemetry, providing a pleasant
 looking markdown-to-HTML converter that integrates well with GitHub.
 
 Because MkDocs depends on Python, versioning issues can arise. To avoid these

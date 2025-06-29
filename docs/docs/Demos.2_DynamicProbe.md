@@ -12,7 +12,7 @@ Consider a scenario where a certain piece of code is operational within a
 Production Kubernetes cluster. A quick review of this code reveals a complete
 absence of telemetry. ...and a curiousity that we'll explore!
 
-Please quickly study this code, it's a simple "Tower of Hanoi" problem, like
+Please quickly study this code; it's a simple "Tower of Hanoi" problem, like
 every college freshman studies in CS101. Unique to this code, you will notice
 the absence of telemetry and certainly no OpenTelemetry.
 

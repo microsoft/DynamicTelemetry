@@ -9,7 +9,7 @@ status: ReviewLevel1b
 
 With static telemetry, you often depend on luck, intuition, a large budget, or
 an oracle because your logging decisions are fixed after deployment. We've all
-been there, you're writing a tricky function and have to decide if adding a few
+been there: you're writing a tricky function and have to decide if adding a few
 extra logging messages is wise. On one hand, the more logs, the easier
 debugging; on the other hand, the logs accumulate, slowing down databases,
 costing money, and increasing security and privacy profiles for you and your
@@ -18,7 +18,7 @@ users.
 The complexity compounds in cases where the software cannot be easily cycled or
 where bugs are particularly elusive.
 
-Dynamic Telemetry, provides middle ground; it offers the ability to dynamically
+Dynamic Telemetry provides middle ground; it offers the ability to dynamically
 toggle telemetry, either manually or programmatically.
 
 As you start using and learning Dynamic Telemetry, you'll discover how to gamify

@@ -114,7 +114,7 @@ height="2.185044838145232in"}
 ### Capabilities of Dynamic Telemetry
 
 With a basic understanding of where architecturally Dynamic Telemetry can be
-inserted into the OpenTelemetry pipeline it's important to understand the types
+inserted into the OpenTelemetry pipeline, it's important to understand the types
 of operations that Dynamic Telemetry can offer.
 
 1. Dropping Logs or Metrics

@@ -27,8 +27,8 @@ the difference.
 
 ### Seeing the DurableID in Azure's Application Insights
 
-Let's start with the recommended way to log in .NET; using 'ILogger', with a
-compiler generated Durable ID.
+Let's start with the recommended way to log in .NET: using 'ILogger', with a
+compiler-generated Durable ID.
 
 #### Recommended Way to Log
 
@@ -123,6 +123,6 @@ You'll notice "LogRandomGuid" quickly stands out, with a tidy dcount(),  whereas
 the other similar log is still unclear.
 
 With the event name in hand, we can quickly do all sorts of quick study and
-aggregation across our logs.  With a little dreaming, it's easy to appreciate
+aggregation across our logs. With a little dreaming, it's easy to appreciate
 the value of the investment. What was once multiple pages of rows has now been
 streamlined into only five rows.

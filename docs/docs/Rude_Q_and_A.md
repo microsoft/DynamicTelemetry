@@ -102,7 +102,7 @@ schemas.
 
 [reading material](./PositionPaper.SharingDataAmongStakeHoldersIsHard.document.md)
 
-#### A3 : Maybe.. it's something we should discuss
+#### A3: Maybe... it's something we should discuss
 
 A keen reader of the Dynamic Telemetry documentation will notice potential
 incongruity found in the design pattern documentation. Specifically, the design
