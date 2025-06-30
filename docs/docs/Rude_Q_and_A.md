@@ -46,9 +46,9 @@ ability for Dynamic Telemetry to have dynamic deployments is akin to rejecting
 this capability. The question only seems to be where the balance is and how to
 map that balance into the business needs.
 
-Unfortunately, there are cases where risks are present. For example, CPU sampling can
-impact performance, memory dumps will pause your threads, and extracting memory
-can pose security risks.
+Unfortunately, there are cases where risks are present. For example, CPU
+sampling can impact performance, memory dumps will pause your threads, and
+extracting memory can pose security risks.
 
 Dynamic Telemetry offers
 [a taxonomy of risk measurement](./PositionPaper.ProbeRiskLevels.document.md)
