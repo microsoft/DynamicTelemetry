@@ -123,7 +123,7 @@ system reliability and performance.
 Traditional testing often involves a series of predefined tests that are run in
 a controlled environment to ensure that the software behaves as expected. One
 crucial aspect of this process is emitting signals. Often these signals are the
-comfortable primitives taught in school - error codes, crashs, or thrown
+comfortable primitives taught in school - error codes, crashes, or thrown
 exceptions.
 
 By emitting these signals during testing, developers can monitor the system's

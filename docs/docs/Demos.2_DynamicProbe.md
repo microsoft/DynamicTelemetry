@@ -23,7 +23,7 @@ minimal amounts of memory, transform them into standard OpenTelemetry Logs, and
 then directly feed them into your existing OpenTelemetry pipelines.
 
 Once emitted, these new Logs will work no differently to any other
-OpenTelemetry. All your Graphana, Prometheus, or Azure Dev Explorer tooling will
+OpenTelemetry. All your Grafana, Prometheus, or Azure Dev Explorer tooling will
 work as they do today.
 
 To set up the dynamic probe, we just need to highlight the interesting function
@@ -33,5 +33,5 @@ probing, it will then be implemented on the targeted machines.
 
 Within minutes, the new OpenTelemetry Logs and Metrics will be emitted to your
 existing OpenTelemetry pipeline. You'll see the values appear for use within
-Graphana, Azure Data Explorer, or any other OpenTelemtry compatible services you
+Grafana, Azure Data Explorer, or any other OpenTelemetry compatible services you
 have installed.
