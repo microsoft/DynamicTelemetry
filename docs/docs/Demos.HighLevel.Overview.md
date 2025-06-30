@@ -27,7 +27,7 @@ documentation.
 
 ## Demonstration
 
-In this demonstration, we're going to how case the broad architecture points
+In this demonstration, we're going to showcase the broad architecture points
 found in added Dynamic Telemetry. We'll build on the standard OpenTelemetry
 Kubernetes sample without modifying or recompiling any code. This showcases the
 seamless integration and powerful capabilities of Dynamic Telemetry.
@@ -48,7 +48,7 @@ remote configuration deployment server, and intercepts all OpenTelemetry logs
 metrics and traces that are being emitted and passed through that architectural
 point in the below diagram.
 
-### Standard OpenTelmetry Architectural Overview
+### Standard OpenTelemetry Architectural Overview
 
 In the diagram below, you will observe a typical OpenTelemetry architecture,
 where multiple agents transmit their telemetry data through the kernel of their
@@ -95,7 +95,7 @@ different architectural locations.
    [process of the emitting agent](./Architecture.Components.Observer.InProcess.document.md)
 
 1. In the
-   [kernel of the Operation System hosting the agent](./Architecture.Components.Observer.Kernel.document.md)
+   [kernel of the Operating System hosting the agent](./Architecture.Components.Observer.Kernel.document.md)
 
 1. In the
    [aggregation process](./Architecture.Components.Observer.External.OnBox.document.md)
@@ -114,7 +114,7 @@ height="2.185044838145232in"}
 ### Capabilities of Dynamic Telemetry
 
 With a basic understanding of where architecturally Dynamic Telemetry can be
-inserted into the OpenTelemetry pipeline it's important to understand the types
+inserted into the OpenTelemetry pipeline, it's important to understand the types
 of operations that Dynamic Telemetry can offer.
 
 1. Dropping Logs or Metrics
@@ -167,7 +167,7 @@ In this scenario for some reason a particular field was included and then later
 after deployment was decided that field was unnecessary or unwanted this can
 happen for several reasons ranging from costs to security, database performance,
 and privacy it could also be simply a case of just wanting to be more tidy
-anesthetics
+aesthetics
 
 Consider the example below from our demonstration on content redaction. This
 simulation code unintentionally emits a secret, which we need to remove before
@@ -195,10 +195,10 @@ To achieve this goal, we utilize the KQL
 Processor -- and quickly deploy the below KQL to the most appropriate of the
 four Processors.
 
-Without Dynamic Telemetry a rebuild retest and redeploy be required but with
+Without Dynamic Telemetry a rebuild, retest and redeploy would be required, but with
 Dynamic Telemetry the simple configuration below can be dynamically transmitted
 to any of the four described processors at which point any log named
-"*LogWelcomeBanner*" have it's "secret" field redacted.
+"*LogWelcomeBanner*" will have its "secret" field redacted.
 
 ```cdocs_include
 {{ CSharp_Include("../Samples/Demos.3.SecurityRedaction/Pages/Index.cshtml.cs",

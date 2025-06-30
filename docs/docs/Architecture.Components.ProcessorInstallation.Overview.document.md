@@ -3,7 +3,7 @@ author: "Chris Gray"
 status: ReviewLevel1
 ---
 
-# Proessor Installation Overview : COMING SOON
+# Processor Installation Overview : COMING SOON
 
 In short, there are four locations that Can accept one of the three different
 dynamic telemetry processors.

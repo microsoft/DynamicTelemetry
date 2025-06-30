@@ -10,9 +10,9 @@ for code thats already been deployed in a Production environment.
 
 Consider a scenario where a certain piece of code is operational within a
 Production Kubernetes cluster. A quick review of this code reveals a complete
-absence of telemetry. ...and a curiousity that we'll explore!
+absence of telemetry. ...and a curiosity that we'll explore!
 
-Please quickly study this code, it's a simple "Tower of Hanoi" problem, like
+Please quickly study this code; it's a simple "Tower of Hanoi" problem, like
 every college freshman studies in CS101. Unique to this code, you will notice
 the absence of telemetry and certainly no OpenTelemetry.
 
@@ -23,7 +23,7 @@ minimal amounts of memory, transform them into standard OpenTelemetry Logs, and
 then directly feed them into your existing OpenTelemetry pipelines.
 
 Once emitted, these new Logs will work no differently to any other
-OpenTelemetry. All your Graphana, Prometheus, or Azure Dev Explorer tooling will
+OpenTelemetry. All your Grafana, Prometheus, or Azure Dev Explorer tooling will
 work as they do today.
 
 To set up the dynamic probe, we just need to highlight the interesting function
@@ -33,5 +33,5 @@ probing, it will then be implemented on the targeted machines.
 
 Within minutes, the new OpenTelemetry Logs and Metrics will be emitted to your
 existing OpenTelemetry pipeline. You'll see the values appear for use within
-Graphana, Azure Data Explorer, or any other OpenTelemtry compatible services you
+Grafana, Azure Data Explorer, or any other OpenTelemetry compatible services you
 have installed.

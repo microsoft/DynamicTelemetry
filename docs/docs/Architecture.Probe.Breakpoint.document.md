@@ -15,7 +15,7 @@ the underlying kernel facilities. However, it is not as risky as a traditional
 debugger, as the instruction pointer will not be frozen. Instead, it will simply
 collect the memory and exit using standard OpenTelemetry.
 
-Some types of Dyanmic / Breakpoint Probes may include.
+Some types of Dynamic / Breakpoint Probes may include.
 
 1. [uProbe](./Architecture.Probe.uprobes.document.md)
 1. dotnet

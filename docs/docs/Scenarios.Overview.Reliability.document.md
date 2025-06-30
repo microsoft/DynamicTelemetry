@@ -7,19 +7,19 @@ status: ReviewLevel1b
 
 ![image](../orig_media/Reliability.banner.png)
 
-After you apply some thinking into probing an action aspects of dynamic
-telemetry you may come to realize that using these facilities provide an
-interesting technique into the testing and hardening your
+After you apply some thinking to probing and action aspects of dynamic
+telemetry, you may come to realize that using these facilities provides an
+interesting technique for testing and hardening your
 [Production](./PositionPaper.DefiningProduction.document.md) systems.
 
-Traditional testing requires decoupling of the software from into smaller pieces
+Traditional testing requires decoupling of the software into smaller pieces,
 each of which are tested independently, often adding unit tests to orchestrate.
-Is this complexity of the software grows unit tests remain useful but often
+As the complexity of the software grows, unit tests remain useful but often
 struggle to detect integration type failures.
 
-To cope with this many developers will start using scenario testing which blends
+To cope with this, many developers will start using scenario testing which blends
 together different architectural components into one logical set which is then
-tested as a entire scenario. Should the scenario fail the developer will start
+tested as an entire scenario. Should the scenario fail, the developer will start
 zooming in on the area that failed and from there they will look into the
 logging of the subsystem looking for root cause.
 
@@ -28,15 +28,15 @@ especially when multiple machines participate in one of the scenarios. As the
 complexity grows many developers simply get frustrated and in some ways give
 up.
 
-Dynamic Telemetry introduces an interesting set of capabilities that result in a
+Dynamic Telemetry introduces an interesting set of capabilities that result in an
 interesting hybrid between scenario and unit tests.
 
-The idea is to to use the logging and metrics found within a piece of software
-to self describe desired and expected behavior such that the product itself
+The idea is to use the logging and metrics found within a piece of software
+to self-describe desired and expected behavior such that the product itself
 could detect its own failures.
 
 [Processors](./Architecture.Components.Processor.Overview.document.md) can be
-configured to "look" for problems, that emanate from the very core of the
+configured to "look" for problems that emanate from the very core of the
 software executing.
 
 In itself this is not a novel or new concept, in fact entire books have been
@@ -58,22 +58,22 @@ testing such that your code self describes, and detects problems - and
 automatically generates verbose diagnostics for you, to help you fix the
 problem.
 
-## Introducing Your Tools : [Processors](./Architecture.Components.Processor.Overview.document.md), [Probes](./Architecture.Probes.Overview.document.md), [Actions](./Architecture.Actions.Overview.document.md), and [Flight Recorders](./Architecture.FlightRecorder.Overview.document.md)
+## Introducing Your Tools: [Processors](./Architecture.Components.Processor.Overview.document.md), [Probes](./Architecture.Probes.Overview.document.md), [Actions](./Architecture.Actions.Overview.document.md), and [Flight Recorders](./Architecture.FlightRecorder.Overview.document.md)
 
-Imagine your software has the ability to self-described failure.
-Perhaps when you author a enqueue() operation you also supply nominal
+Imagine your software has the ability to self-describe failure.
+Perhaps when you author an enqueue() operation you also supply nominal
 expectations (for example, that no item sticks in the queue more than 200 ms).
 
-Should the completion take longer than 200 milliseconds this would indicate a
-warning, that perhaps not fatal, might indicate the need for a programmer to
+Should the completion take longer than 200 milliseconds, this would indicate a
+warning that, perhaps not fatal, might indicate the need for a programmer to
 inspect and figure out why.
 
-The Processor portion of Dynamic Telemetry permit a developer to craft little
-traps for their bugs;  you cna easily imagine using a [loose
+The Processor portion of Dynamic Telemetry permits a developer to craft little
+traps for their bugs; you can easily imagine using a [loose
 schema](PositionPaper.ClearFailuresViaSchema.document.md) that describes certain
 logs and what good and bad looks like!
 
-This concept of self describing operational state is extremely interesting when
+This concept of self-describing operational state is extremely interesting when
 coupled with dynamic configuration in the telemetry system, because opportunity
 is created for these values to be trained into the system instead of programmed
 explicitly.
@@ -123,7 +123,7 @@ system reliability and performance.
 Traditional testing often involves a series of predefined tests that are run in
 a controlled environment to ensure that the software behaves as expected. One
 crucial aspect of this process is emitting signals. Often these signals are the
-comfortable primitives taught in school - error codes, crashs, or thrown
+comfortable primitives taught in school - error codes, crashes, or thrown
 exceptions.
 
 By emitting these signals during testing, developers can monitor the system's
