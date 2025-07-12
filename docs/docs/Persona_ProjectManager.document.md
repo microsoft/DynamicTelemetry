@@ -21,12 +21,12 @@ The PROJECT_MANAGER Persona in DynamicTelemetry:
 
 1. Is concerned about balancing quality, product applicability, and features
 
-1. Balances mutiple environments
+1. Balances multiple environments
 
-1. Is well versed and comfortablze with the differences between security and
+1. Is well versed and comfortable with the differences between security and
    privacy. Knows how to protect users.
 
-1. [Clear Failujres via Schemas](./PositionPaper.ClearFailuresViaSchema.document.md)
+1. [Clear Failures via Schemas](./PositionPaper.ClearFailuresViaSchema.document.md)
 
 1. [Triggered Flight Recorder](./PositionPaper.TriggeredCollections.document.md)
 

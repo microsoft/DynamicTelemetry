@@ -1,6 +1,6 @@
 #!/usr/bin/gnuplot -persist
 #set terminal pngcairo  transparent enhanced font "arial,10" fontscale 1.0 size 1024, 768
-#set output '../orig_media/OpenTelemetry.RiskSpider.png'
+#set output '../docs/orig_media/OpenTelemetry.RiskSpider.png'
 reset session
 set terminal pngcairo enhanced font "Times,16"
 
@@ -39,30 +39,30 @@ array user_events[5]   = [1,1,1,1,1]
 array uprobes[5]       = [3,3,2,2,2]
 array etw[5]           = [1,1,2,1,1]
 
-set output "../orig_media/Risk.OpenTelemetry.png"
+set output "../docs/orig_media/Risk.OpenTelemetry.png"
 set title "Probe Risk Chart : OpenTelemetry" offset 0,2 font ",20"
 plot for [i=1:|OpenTelemetry|] OpenTelemetry using (OpenTelemetry[i]) lc 3 lw 3
 
-set output "../orig_media/Risk.DTrace.png"
+set output "../docs/orig_media/Risk.DTrace.png"
 set title "Probe Risk Chart : DTrace" offset 0,2 font ",20"
 plot for [i=1:|DTrace|] DTrace using (DTrace[i]) lc 3 lw 3
 
-set output "../orig_media/Risk.eBPF.png"
+set output "../docs/orig_media/Risk.eBPF.png"
 set title "Probe Risk Chart : eBPF" offset 0,2 font ",20"
 plot for [i=1:|eBPF|] eBPF using (eBPF[i]) lc 3 lw 3
 
-set output "../orig_media/Risk.ptrace.png"
+set output "../docs/orig_media/Risk.ptrace.png"
 set title "Probe Risk Chart : ptrace" offset 0,2 font ",20"
 plot for [i=1:|ptrace|] ptrace using (ptrace[i]) lc 3 lw 3
 
-set output "../orig_media/Risk.user_events.png"
+set output "../docs/orig_media/Risk.user_events.png"
 set title "Probe Risk Chart : user_events" offset 0,2 font ",20"
 plot for [i=1:|user_events|] user_events using (user_events[i]) lc 3 lw 3
 
-set output "../orig_media/Risk.uprobes.png"
+set output "../docs/orig_media/Risk.uprobes.png"
 set title "Probe Risk Chart : uprobes" offset 0,2 font ",20"
 plot for [i=1:|uprobes|] uprobes using (uprobes[i]) lc 3 lw 3
 
-set output "../orig_media/Risk.ETW.png"
+set output "../docs/orig_media/Risk.ETW.png"
 set title "Probe Risk Chart : ETW" offset 0,2 font ",20"
 plot for [i=1:|etw|] etw using (etw[i]) lc 3 lw 3

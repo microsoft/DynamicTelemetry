@@ -1,0 +1,21 @@
+name: build-bundles
+run-name: ${{ github.actor }} is bundling documents together
+on: [push]
+jobs:
+  Generating-Bound-Versions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: ./tools/InstallUbuntuBuildDependencies.sh
+      - run: ./tools/PreCheckinUpdate.sh
+      - name: Upload bound_docs as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: bound_docs
+          path: |
+            ./docs/bound_docs/*.docx
+            ./docs/bound_docs/*.epub
+            ./docs/bound_docs/*.pdf
