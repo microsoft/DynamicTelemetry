@@ -35,7 +35,7 @@ risks in the risk taxonomy.
 In this example you'll notice that the example code
 
 1. Logs when we begin hashing
-1. Hashs the file; or otherwise perform business logic
+1. Hashes the file; or otherwise perform business logic
 1. Logs when we've completed the hashing of the file
 
 This workflow outlines a typical sequence of operations for a developer. Log
@@ -60,7 +60,7 @@ statistics if they are still needed.
 
 Lets look at a few examples, as they likely will help tell the tale
 
-Image a piece of code that looks something like this:
+Imagine a piece of code that looks something like this:
 
 ```mermaid
     flowchart TD

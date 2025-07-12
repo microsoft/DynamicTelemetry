@@ -35,7 +35,7 @@ In short this demo will:
 For this demo, we will make use of the
 [Dynamic / Breakpoint Probe](./Architecture.Probe.Breakpoint.document.md)
 concept in Dynamic Telemetry, Our
-[Action](./Architecture.Action.Explanation.document.md). Will not be a
+[Action](./Architecture.Actions.Overview.document.md). Will not be a
 complicated action such as collecting a memory dump, starting a CPU sample, or
 toggling on or off diagnostic logs, even though Each of these are a possibility.
 

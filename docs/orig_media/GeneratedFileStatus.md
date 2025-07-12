@@ -8,24 +8,24 @@ status: Level5
 |------|------------|
 | [../docs/Applications.FlightRecorder.MemoryLeak.document.md](../docs/Applications.FlightRecorder.MemoryLeak.document.md)  | 211|
 | [../docs/Applications.FlightRecorder.PriorToCrash.document.md](../docs/Applications.FlightRecorder.PriorToCrash.document.md)  | 252|
-| [../docs/Architecture.Action.Explanation.document.md](../docs/Architecture.Action.Explanation.document.md)  | 124|
-| [../docs/Architecture.Components.FiltersAndRouters.document.md](../docs/Architecture.Components.FiltersAndRouters.document.md)  | 44|
+| [../docs/Architecture.Actions.Overview.document.md](../docs/Architecture.Actions.Overview.document.md)  | 124|
+| [../docs/Architecture.Components.FiltersRoutersAndAdapters.document.md](../docs/Architecture.Components.FiltersRoutersAndAdapters.document.md)  | 922|
 | [../docs/Architecture.Components.Observer.InProcess.document.md](../docs/Architecture.Components.Observer.InProcess.document.md)  | 53|
 | [../docs/Architecture.Components.Observer.Kernel.document.md](../docs/Architecture.Components.Observer.Kernel.document.md)  | 68|
 | [../docs/Architecture.Components.Streaming.Observability.document.md](../docs/Architecture.Components.Streaming.Observability.document.md)  | 59|
 | [../docs/Architecture.FlightRecorder.LongHorizons.document.md](../docs/Architecture.FlightRecorder.LongHorizons.document.md)  | 795|
-| [../docs/Architecture.FlightRecorder.Overview.document.md](../docs/Architecture.FlightRecorder.Overview.document.md)  | 915|
+| [../docs/Architecture.FlightRecorder.Overview.document.md](../docs/Architecture.FlightRecorder.Overview.document.md)  | 902|
 | [../docs/Architecture.FlightRecorder.ShortHorizons.document.md](../docs/Architecture.FlightRecorder.ShortHorizons.document.md)  | 633|
 | [../docs/Architecture.FlightRecorder.TraceHorizons.document.md](../docs/Architecture.FlightRecorder.TraceHorizons.document.md)  | 466|
-| [../docs/Architecture.KeyConstructs.Overview.document.md](../docs/Architecture.KeyConstructs.Overview.document.md)  | 653|
-| [../docs/Architecture.Overview.document.md](../docs/Architecture.Overview.document.md)  | 330|
+| [../docs/Architecture.KeyConstructs.Overview.document.md](../docs/Architecture.KeyConstructs.Overview.document.md)  | 920|
+| [../docs/Architecture.Overview.document.md](../docs/Architecture.Overview.document.md)  | 331|
 | [../docs/Demos.1.DropChattyLog.md](../docs/Demos.1.DropChattyLog.md)  | 1103|
 | [../docs/Demos.2_DynamicProbe.md](../docs/Demos.2_DynamicProbe.md)  | 277|
 | [../docs/Demos.4.AddTelemetryDemo.md](../docs/Demos.4.AddTelemetryDemo.md)  | 1084|
-| [../docs/Demos.HighLevel.Overview.md](../docs/Demos.HighLevel.Overview.md)  | 1187|
+| [../docs/Demos.HighLevel.Overview.md](../docs/Demos.HighLevel.Overview.md)  | 1188|
 | [../docs/HowTo.UseThisDocumentation.document.md](../docs/HowTo.UseThisDocumentation.document.md)  | 332|
 | [../docs/PositionPaper.DeliveryGuarantees.document.md](../docs/PositionPaper.DeliveryGuarantees.document.md)  | 163|
-| [../docs/PositionPaper.FileAndStreaming.document.md](../docs/PositionPaper.FileAndStreaming.document.md)  | 229|
+| [../docs/PositionPaper.FileAndStreaming.document.md](../docs/PositionPaper.FileAndStreaming.document.md)  | 224|
 | [../docs/PositionPaper.ObserverEffect.document.md](../docs/PositionPaper.ObserverEffect.document.md)  | 728|
 | [../docs/PositionPaper.SharingDataAmongStakeHoldersIsHard.document.md](../docs/PositionPaper.SharingDataAmongStakeHoldersIsHard.document.md)  | 180|
 | [../docs/PositionPaper.TelemetryUmbilical.document.md](../docs/PositionPaper.TelemetryUmbilical.document.md)  | 92|
@@ -34,8 +34,8 @@ status: Level5
 | [../docs/Scenarios.Overview.DeepDiagnostics.document.md](../docs/Scenarios.Overview.DeepDiagnostics.document.md)  | 760|
 | [../docs/Scenarios.Overview.document.md](../docs/Scenarios.Overview.document.md)  | 180|
 | [../docs/Scenarios.Overview.DurableDashboards.Alerts.document.md](../docs/Scenarios.Overview.DurableDashboards.Alerts.document.md)  | 569|
-| [../docs/Scenarios.Overview.RedactingSecrets.document.md](../docs/Scenarios.Overview.RedactingSecrets.document.md)  | 1090|
-| [../docs/Scenarios.Overview.Reliability.document.md](../docs/Scenarios.Overview.Reliability.document.md)  | 2232|
+| [../docs/Scenarios.Overview.RedactingSecrets.document.md](../docs/Scenarios.Overview.RedactingSecrets.document.md)  | 1093|
+| [../docs/Scenarios.Overview.Reliability.document.md](../docs/Scenarios.Overview.Reliability.document.md)  | 2220|
 
 
 ## Level1
@@ -73,7 +73,7 @@ status: Level5
 | [../docs/Architecture.Probe.uprobes.document.md](../docs/Architecture.Probe.uprobes.document.md)  | 13|
 | [../docs/Architecture.Probe.user_events.document.md](../docs/Architecture.Probe.user_events.document.md)  | 13|
 | [../docs/Definitions.document.md](../docs/Definitions.document.md)  | 19|
-| [../docs/Demos.0.DynamicID.md](../docs/Demos.0.DynamicID.md)  | 722|
+| [../docs/Demos.0.DynamicID.md](../docs/Demos.0.DynamicID.md)  | 618|
 | [../docs/GeneratedFileStatus.md](../docs/GeneratedFileStatus.md)  | 7|
 | [../docs/Ideas.ToExpandOn.document.md](../docs/Ideas.ToExpandOn.document.md)  | 146|
 | [../docs/Persona_DataAnalysis.document.md](../docs/Persona_DataAnalysis.document.md)  | 122|
@@ -84,7 +84,7 @@ status: Level5
 | [../docs/PositionPaper.ABTestingWithRichDiagnostics.document.md](../docs/PositionPaper.ABTestingWithRichDiagnostics.document.md)  | 14|
 | [../docs/PositionPaper.Actions.document.md](../docs/PositionPaper.Actions.document.md)  | 13|
 | [../docs/PositionPaper.AuditingProductionCode.document.md](../docs/PositionPaper.AuditingProductionCode.document.md)  | 20|
-| [../docs/PositionPaper.ClearFailuresViaSchema.document.md](../docs/PositionPaper.ClearFailuresViaSchema.document.md)  | 17|
+| [../docs/PositionPaper.ClearFailuresViaSchema.document.md](../docs/PositionPaper.ClearFailuresViaSchema.document.md)  | 16|
 | [../docs/PositionPaper.ConfigurationDeployment.document.md](../docs/PositionPaper.ConfigurationDeployment.document.md)  | 71|
 | [../docs/PositionPaper.ConvertLogsToMetrics.document.md](../docs/PositionPaper.ConvertLogsToMetrics.document.md)  | 17|
 | [../docs/PositionPaper.DefiningProduction.document.md](../docs/PositionPaper.DefiningProduction.document.md)  | 27|
@@ -120,7 +120,7 @@ status: Level5
 | [../docs/Architecture.Components.Processor.QueryLanguage.document.md](../docs/Architecture.Components.Processor.QueryLanguage.document.md)  | 349|
 | [../docs/Architecture.Components.Processor.StateMachine.document.md](../docs/Architecture.Components.Processor.StateMachine.document.md)  | 472|
 | [../docs/Architecture.Probes.Overview.document.md](../docs/Architecture.Probes.Overview.document.md)  | 1395|
-| [../docs/index.md](../docs/index.md)  | 489|
+| [../docs/index.md](../docs/index.md)  | 455|
 | [../docs/Personas.Overview.document.md](../docs/Personas.Overview.document.md)  | 257|
 | [../docs/PositionPaper.DurableIds_StructuredPayloads.document.md](../docs/PositionPaper.DurableIds_StructuredPayloads.document.md)  | 1242|
 | [../docs/PositionPaper.ThinkLike.RTOS.document.md](../docs/PositionPaper.ThinkLike.RTOS.document.md)  | 43|

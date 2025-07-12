@@ -9,7 +9,7 @@ description : Introduction to DynamicTelemetry
 ![image](../orig_media/DynamicTelemetry.logo.png){width="5.5in"
 height="1.261111111111111in"}
 
-Introducing DynamicTelemetry, an OpenSource, diagnostic compliment to
+Introducing DynamicTelemetry, an OpenSource, diagnostic complement to
 OpenTelemetry.
 
 **The DynamicTelemetry project aims to make debugging highly scaled
@@ -26,7 +26,7 @@ failing to anticipate other data that will be needed in the future. We want to l
 engineers reconfigure the telemetry being sent by production systems in real-time,
 creating tight feedback loops and more useful telemetry.
 
-In this introduction, lets explore a hypothetical new telemetry experience
+In this introduction, let's explore a hypothetical new telemetry experience
 that blends traditional symbolic debuggers with advanced new complements to
 your existing OpenTelemetry assets and workflow. You will be
 presented with five architectural components that, when used together, bring the

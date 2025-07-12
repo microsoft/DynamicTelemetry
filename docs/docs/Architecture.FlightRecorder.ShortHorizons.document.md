@@ -10,7 +10,7 @@ status: ReviewLevel1b
 A Short Horizon Flight Recorder is a focused Flight Recorder, designed to
 capture telemetry that is too verbose for steady-state streaming via
 OpenTelemetry.  It's a Flight Recorder you only collect, when something goes
-wrong, based on an [Action](./Architecture.Action.Explanation.document.md)
+wrong, based on an [Action](./Architecture.Actions.Overview.document.md)
 
 A Short Horizon Flight Recorder employs broad and loosely filtered logs to
 collect as much logging as possible, with a goal of keeping a few minutes of

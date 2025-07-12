@@ -18,7 +18,7 @@ retained for analysis. This process can be automated using tools and scripts
 that identify and redact sensitive data patterns, ensuring that logs remain
 useful for monitoring and troubleshooting without compromising security
 
-## Introducing Your Tools : [Filtering](./Architecture.Components.FiltersAndRouters.document.md)
+## Introducing Your Tools : [Filtering](./Architecture.Components.FiltersRoutersAndAdapters.document.md)
 
 Redacting portions of logs using durable IDs and structured payloads involves
 several technical steps to ensure that sensitive information is effectively
@@ -67,7 +67,7 @@ Should you find yourself in the unenviable position where your OpenTelemetry
 logs/traces contain secrets, or privacy information you face a complicated
 journey.
 
-First you have to fix the code, retest, redeploy, (potentially wait for a
+First, you have to fix the code, retest, redeploy, (potentially wait for a
 ringed deployment), and then go scrub your databases.
 
 Dynamic Telemetry offers no solution to database scrubbing, but it does offer
@@ -92,7 +92,7 @@ dynamic enabling and disabling of event tracing without requiring application or
 system restarts. ETW operates with minimal performance impact due to its
 efficient buffering and non-blocking logging mechanisms. It uses per-processor
 buffers that are written to disk by a separate thread, ensuring that logging
-does not interfere with the application's main operations1.
+does not interfere with the application's main operations.
 
 **user_events**is a powerful feature built into the Linux kernel, that has some
 characteristics of ETW on Windows Dynamic Telemetry. It allows for the insertion
@@ -131,19 +131,22 @@ captured and processed, thereby maintaining optimal system performance.
 
 ### Scrub variable payloads
 
-Scrubbing payloads can be performed in various locations within a system to
-ensure sensitive information is protected and compliance requirements are met.
+Scrubbing payloads can be performed in various Processor locations within a
+system to ensure that sensitive information is protected and compliance requirements
+are met.
+
+![hi](../orig_media/Architecture.Boxes.Full.DynamicTelemetry.drawio.png)
 
 1. In the usermode portion of an app or agent, scrubbing can occur before data
    is transmitted, ensuring that any sensitive information is removed or
    obfuscated at the source.
-1. In the kernel mode memory buffer, scrubbing can be implemented to clean data
+2. In the kernel mode memory buffer, scrubbing can be implemented to clean data
    as it is being processed, providing an additional layer of security before it
    reaches usermode components.
-1. The usermode aggregator and network transmitter can also perform scrubbing to
+3. The usermode aggregator and network transmitter can also perform scrubbing to
    ensure that aggregated data sent to backend systems is free of sensitive
    information.
-1. In the backend, scrubbing can be done at a. the point of ingest, where data
+4. In the backend, scrubbing can be done at a. the point of ingest, where data
    is first received and processed, or b. within the database, where stored data
    is periodically reviewed and cleaned to maintain data integrity and security.
 

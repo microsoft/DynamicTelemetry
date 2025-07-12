@@ -1,6 +1,6 @@
 # Using the Markdown editing container
 
-MkDocs is our markdown rendering in Dynamic Telemetry, providing a pleasant
+MkDocs is our markdown rendering tool in Dynamic Telemetry, providing a pleasant
 looking markdown-to-HTML converter that integrates well with GitHub.
 
 Because MkDocs depends on Python, versioning issues can arise. To avoid these
@@ -24,8 +24,8 @@ one-time setup.
 1. Once the build process is complete, simply use the container. In a workflow
    that looks something like this.
 
-   * In a Stand alone. terminal window, use 'docker compose up' command.
-   which will monitor Profile changes and update accordingly.
+   * In a standalone terminal window, use 'docker compose up' command
+   which will monitor profile changes and update accordingly.
 
        ```
        docker compose up
