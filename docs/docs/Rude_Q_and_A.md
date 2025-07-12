@@ -162,7 +162,8 @@ Reading Material:
 
 ### Q6: What is the Change Approach
 
-are we hoping to see lots of experimentation, or is this a community standards approach, like IETF
+Are we hoping to see lots of experimentation, or is this a community standards
+approach, like IETF?
 
 #### A6: Experimentation and Collaboration mostly - but it's a little of both
 
