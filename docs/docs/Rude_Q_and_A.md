@@ -110,7 +110,7 @@ patterns discussed have rigid schemas as their core value proposition. This is
 potentially something that should be further discussed if the design patterns
 are included in Dynamic Telemetry or built atop it.
 
-### Q4: Without any form of rigid schemas, can we expect and trust logs won't change over time?
+### Q4: Without any form of rigid schemas, can we trust logs that longs wont change?
 
 #### A4: It's a valid concern, but flexibility and consistency can coexist
 
@@ -121,10 +121,9 @@ ensures that any modifications are deliberate, documented, and aligned with
 organizational objectives.
 
 The (valid) concern is that the structure of logs may evolve, backward
-compatibility and durablity of dashboards may suffer.
+compatibility and durability of dashboards may suffer.
 
 Ideas to solve this include:
-1. Rigid Schema enforcment
-1. Compiler assist in identifer generation
 
-
+1. Rigid Schema enforcement
+1. Compiler assist in identifier generation
