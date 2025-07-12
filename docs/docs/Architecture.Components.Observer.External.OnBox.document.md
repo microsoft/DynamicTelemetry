@@ -17,4 +17,3 @@ Meeting Notes:
 1. Champion one External Processor extensibility model - to normalize
    differences found in different kernels
 1. Capabilities like suppression of logs
-
