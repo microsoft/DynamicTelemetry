@@ -2,6 +2,7 @@
 author: "Chris Gray"
 status: ReviewLevel1b
 ---
+\newpage
 
 # Improving Your Security and Privacy Posture
 

@@ -2,7 +2,7 @@
 author: "Chris Gray"
 status: ReviewLevel1b
 ---
-
+\newpage
 # Performance and Diagnostics, at Scale
 
 ![image](../orig_media/PerformanceAndDiagnostics.banner.png)

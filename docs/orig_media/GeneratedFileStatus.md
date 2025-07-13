@@ -31,11 +31,11 @@ status: Level5
 | [../docs/PositionPaper.TelemetryUmbilical.document.md](../docs/PositionPaper.TelemetryUmbilical.document.md)  | 92|
 | [../docs/Rude_Q_and_A.md](../docs/Rude_Q_and_A.md)  | 748|
 | [../docs/Scenarios.Overview.CostReduction.document.md](../docs/Scenarios.Overview.CostReduction.document.md)  | 1391|
-| [../docs/Scenarios.Overview.DeepDiagnostics.document.md](../docs/Scenarios.Overview.DeepDiagnostics.document.md)  | 760|
+| [../docs/Scenarios.Overview.DeepDiagnostics.document.md](../docs/Scenarios.Overview.DeepDiagnostics.document.md)  | 761|
 | [../docs/Scenarios.Overview.document.md](../docs/Scenarios.Overview.document.md)  | 180|
-| [../docs/Scenarios.Overview.DurableDashboards.Alerts.document.md](../docs/Scenarios.Overview.DurableDashboards.Alerts.document.md)  | 569|
-| [../docs/Scenarios.Overview.RedactingSecrets.document.md](../docs/Scenarios.Overview.RedactingSecrets.document.md)  | 1093|
-| [../docs/Scenarios.Overview.Reliability.document.md](../docs/Scenarios.Overview.Reliability.document.md)  | 2220|
+| [../docs/Scenarios.Overview.DurableDashboards.Alerts.document.md](../docs/Scenarios.Overview.DurableDashboards.Alerts.document.md)  | 570|
+| [../docs/Scenarios.Overview.RedactingSecrets.document.md](../docs/Scenarios.Overview.RedactingSecrets.document.md)  | 1094|
+| [../docs/Scenarios.Overview.Reliability.document.md](../docs/Scenarios.Overview.Reliability.document.md)  | 2221|
 
 
 ## Level1
