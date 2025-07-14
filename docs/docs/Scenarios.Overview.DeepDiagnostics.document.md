@@ -25,16 +25,16 @@ As you start using and learning Dynamic Telemetry, you'll discover how to gamify
 debugging by dynamically collecting memory, toggling logs, and employing other
 techniques to effectively trap and diagnose bugs.
 
-## Introducing Your Tools: [Processors](./Architecture.Components.Processor.Overview.document.md), [Probes](./Architecture.Probes.Overview.document.md), and [Actions](./Architecture.Actions.Overview.document.md)
+## Introducing Your Tools: [Processors](./Architecture.Processor.Overview.document.md), [Probes](./Architecture.Probes.Overview.document.md), and [Actions](./Architecture.Actions.Overview.document.md)
 
 In Dynamic Telemetry,
-[Processors](./Architecture.Components.Processor.Overview.document.md),
+[Processors](./Architecture.Processor.Overview.document.md),
 [Probes](./Architecture.Probes.Overview.document.md), and
 [Actions](./Architecture.Actions.Overview.document.md) play crucial roles in
 monitoring and diagnosing system behavior.
 
 The most important concept, if you can only understand one, is the
-[Processor](./Architecture.Components.Processor.Overview.document.md).
+[Processor](./Architecture.Processor.Overview.document.md).
 
 Think of the Processor as a virtual machine that sits in the middle of all
 OpenTelemetry logs. It "sees" all the logs and, based on what it's seeing, can

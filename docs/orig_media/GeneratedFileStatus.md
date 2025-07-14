@@ -9,9 +9,9 @@ status: Level5
 | [../docs/Applications.FlightRecorder.MemoryLeak.document.md](../docs/Applications.FlightRecorder.MemoryLeak.document.md)  | 211|
 | [../docs/Applications.FlightRecorder.PriorToCrash.document.md](../docs/Applications.FlightRecorder.PriorToCrash.document.md)  | 252|
 | [../docs/Architecture.Actions.Overview.document.md](../docs/Architecture.Actions.Overview.document.md)  | 124|
-| [../docs/Architecture.Components.FiltersRoutersAndAdapters.document.md](../docs/Architecture.Components.FiltersRoutersAndAdapters.document.md)  | 922|
-| [../docs/Architecture.Components.Observer.InProcess.document.md](../docs/Architecture.Components.Observer.InProcess.document.md)  | 53|
-| [../docs/Architecture.Components.Observer.Kernel.document.md](../docs/Architecture.Components.Observer.Kernel.document.md)  | 68|
+| [../docs/Architecture.Components.FiltersAndRouters.document.md](../docs/Architecture.Components.FiltersAndRouters.document.md)  | 922|
+| [../docs/Architecture.Processor.InProcess.document.md](../docs/Architecture.Processor.InProcess.document.md)  | 53|
+| [../docs/Architecture.Processor.Kernel.document.md](../docs/Architecture.Processor.Kernel.document.md)  | 68|
 | [../docs/Architecture.Components.Streaming.Observability.document.md](../docs/Architecture.Components.Streaming.Observability.document.md)  | 59|
 | [../docs/Architecture.FlightRecorder.LongHorizons.document.md](../docs/Architecture.FlightRecorder.LongHorizons.document.md)  | 795|
 | [../docs/Architecture.FlightRecorder.Overview.document.md](../docs/Architecture.FlightRecorder.Overview.document.md)  | 902|
@@ -54,9 +54,9 @@ status: Level5
 | [../docs/Architecture.Action.StateCollection.document.md](../docs/Architecture.Action.StateCollection.document.md)  | 13|
 | [../docs/Architecture.Action.VerboseLogs.document.md](../docs/Architecture.Action.VerboseLogs.document.md)  | 13|
 | [../docs/Architecture.Components.FileBased.Observability.document.md](../docs/Architecture.Components.FileBased.Observability.document.md)  | 10|
-| [../docs/Architecture.Components.Observer.External.OffBox.document.md](../docs/Architecture.Components.Observer.External.OffBox.document.md)  | 97|
-| [../docs/Architecture.Components.Observer.External.OnBox.document.md](../docs/Architecture.Components.Observer.External.OnBox.document.md)  | 62|
-| [../docs/Architecture.Components.ProcessorInstallation.Overview.document.md](../docs/Architecture.Components.ProcessorInstallation.Overview.document.md)  | 46|
+| [../docs/Architecture.Processor.External.OffBox.document.md](../docs/Architecture.Processor.External.OffBox.document.md)  | 97|
+| [../docs/Architecture.Processor.External.OnBox.document.md](../docs/Architecture.Processor.External.OnBox.document.md)  | 62|
+| [../docs/Architecture.Processor.Installation.Overview.document.md](../docs/Architecture.Processor.Installation.Overview.document.md)  | 46|
 | [../docs/Architecture.DesignPatterns.Counters.document.md](../docs/Architecture.DesignPatterns.Counters.document.md)  | 10|
 | [../docs/Architecture.DesignPatterns.DesignPatterns.Overview.document.md](../docs/Architecture.DesignPatterns.DesignPatterns.Overview.document.md)  | 14|
 | [../docs/Architecture.DesignPatterns.Queues.document.md](../docs/Architecture.DesignPatterns.Queues.document.md)  | 10|
@@ -115,10 +115,10 @@ status: Level5
 
 | File | Word Count |
 |------|------------|
-| [../docs/Architecture.Components.Processor.Language.md](../docs/Architecture.Components.Processor.Language.md)  | 476|
-| [../docs/Architecture.Components.Processor.Overview.document.md](../docs/Architecture.Components.Processor.Overview.document.md)  | 952|
-| [../docs/Architecture.Components.Processor.QueryLanguage.document.md](../docs/Architecture.Components.Processor.QueryLanguage.document.md)  | 349|
-| [../docs/Architecture.Components.Processor.StateMachine.document.md](../docs/Architecture.Components.Processor.StateMachine.document.md)  | 472|
+| [../docs/Architecture.Processor.Language.md](../docs/Architecture.Processor.Language.md)  | 476|
+| [../docs/Architecture.Processor.Overview.document.md](../docs/Architecture.Processor.Overview.document.md)  | 952|
+| [../docs/Architecture.Processor.QueryLanguage.document.md](../docs/Architecture.Processor.QueryLanguage.document.md)  | 349|
+| [../docs/Architecture.Processor.StateMachine.document.md](../docs/Architecture.Processor.StateMachine.document.md)  | 472|
 | [../docs/Architecture.Probes.Overview.document.md](../docs/Architecture.Probes.Overview.document.md)  | 1395|
 | [../docs/index.md](../docs/index.md)  | 455|
 | [../docs/Personas.Overview.document.md](../docs/Personas.Overview.document.md)  | 257|

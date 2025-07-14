@@ -6,7 +6,7 @@ status: ReviewLevel2
 # Processor : Query Language
 
 The Query Language
-[Processor](./Architecture.Components.Processor.Overview.document.md) is one of
+[Processor](./Architecture.Processor.Overview.document.md) is one of
 the most straightforward available. It presents minimal risk while still
 providing valuable capabilities for dynamic modeling and system understanding.
 The query language Processor can be likened to command line tools found on all

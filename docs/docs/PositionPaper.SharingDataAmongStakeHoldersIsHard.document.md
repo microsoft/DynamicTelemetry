@@ -21,7 +21,7 @@ higher level than Dynamic Telemetry.
 
 If a user of Dynamic Telemetry desires a rigid schema, this is totally
 acceptable. They should look for, or author, a
-[language processor](./Architecture.Components.Processor.Language.md) to fulfill
+[language processor](./Architecture.Processor.Language.md) to fulfill
 this task.
 
 A keen reader of the Dynamic Telemetry documentation will notice potential

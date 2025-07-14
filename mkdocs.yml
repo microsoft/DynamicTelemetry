@@ -131,22 +131,22 @@ nav:
                         - Cubby Hole: ./docs/Architecture.FlightRecorder.CubbyHole.document.md
                         - Long Horizons: ./docs/Architecture.FlightRecorder.LongHorizons.document.md
             - Filters, Routers, and Adapters:
-                - Filters / Routers / Adapters Overview: ./docs/Architecture.Components.FiltersRoutersAndAdapters.document.md
+                - Filters / Routers / Adapters Overview: ./docs/Architecture.Components.FiltersAndRouters.document.md
 
             - Processors :
-                - Processors Overview: ./docs/Architecture.Components.Processor.Overview.document.md
+                - Processors Overview: ./docs/Architecture.Processor.Overview.document.md
                 - Processor Types:
-                    - Query Language : ./docs/Architecture.Components.Processor.QueryLanguage.document.md
-                    - StateMachine : ./docs/Architecture.Components.Processor.StateMachine.document.md
-                    - Language : ./docs/Architecture.Components.Processor.Language.md
+                    - Query Language : ./docs/Architecture.Processor.QueryLanguage.document.md
+                    - StateMachine : ./docs/Architecture.Processor.StateMachine.document.md
+                    - Language : ./docs/Architecture.Processor.Language.md
 
                 - Processor Installation Locations:
-                    - Overview: ./docs/Architecture.Components.ProcessorInstallation.Overview.document.md
+                    - Overview: ./docs/Architecture.Processor.Installation.Overview.document.md
                     - Installation Locations:
-                        - Internal Observer: ./docs/Architecture.Components.Observer.InProcess.document.md
-                        - Kernel Observer: ./docs/Architecture.Components.Observer.Kernel.document.md
-                        - External, on-box Observer: ./docs/Architecture.Components.Observer.External.OnBox.document.md
-                        - External, off-box Observer: ./docs/Architecture.Components.Observer.External.OffBox.document.md
+                        - Internal Observer: ./docs/Architecture.Processor.InProcess.document.md
+                        - Kernel Observer: ./docs/Architecture.Processor.Kernel.document.md
+                        - External, on-box Observer: ./docs/Architecture.Processor.External.OnBox.document.md
+                        - External, off-box Observer: ./docs/Architecture.Processor.External.OffBox.document.md
 
             - Actions:
                 - Action Overview: ./docs/Architecture.Actions.Overview.document.md
@@ -154,6 +154,7 @@ nav:
                     - PacketCapture: ./docs/Architecture.Action.PacketCapture.document.md
                     - ConfigCollection: ./docs/Architecture.Action.ConfigCollection.document.md
                     - CPUSample: ./docs/Architecture.Action.CPUSample.document.md
+                    - Callstack Walk: ./docs/Architecture.Action.CallstackWalk.document.md
                     - FileCollection: ./docs/Architecture.Action.FileCollection.document.md
                     - FlightRecorder: ./docs/Architecture.Action.FlightRecorder.document.md
                     - MemoryDump: ./docs/Architecture.Action.MemoryDump.document.md
