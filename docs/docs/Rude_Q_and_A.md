@@ -109,3 +109,73 @@ incongruity found in the design pattern documentation. Specifically, the design
 patterns discussed have rigid schemas as their core value proposition. This is
 potentially something that should be further discussed if the design patterns
 are included in Dynamic Telemetry or built atop it.
+
+### Q4: Without any form of rigid schemas, can we trust logs that longs wont change?
+
+#### A4: It's a valid concern, but flexibility and consistency can coexist
+
+Ultimately, the balance between flexibility and consistency lies in adopting
+practices that allow for evolution while maintaining trust and reliability in
+the data. Implemented to monitor and control changes to log structures. This
+ensures that any modifications are deliberate, documented, and aligned with
+organizational objectives.
+
+The (valid) concern is that the structure of logs may evolve, backward
+compatibility and durability of dashboards may suffer.
+
+Ideas to solve this include:
+
+1. Rigid Schema enforcement
+1. Compiler assist in identifier generation
+
+______________________________________________________________________
+
+## Compatibility
+
+### Q5: Does Dynamic Telemetry have it's own protocol?
+
+Will Dynamic Telemetry invent a new protocol?
+
+#### Q5 : No, Dynamic Telemetry operates within OpenTelemetry (OTLP, gRPC, etc)
+
+Dynamic Telemetry adheres to the principles and protocols established by
+OpenTelemetry. While there may be opportunities to enhance schema usage within
+OpenTelemetry payloads, any such enhancements must remain fully compliant with
+OpenTelemetry's standard protocols and specifications.
+
+[https://github.com/open-telemetry/opentelemetry-proto/](https://github.com/open-telemetry/opentelemetry-proto/)
+
+Where there could be some struggles; and something to monitor, is that Dynamic
+Telemetry makes use of triggering
+[Actions](./Architecture.Action.Explanation.document.md). These Actions benefit
+from ability to decode and understand logging.
+
+Where Dynamic Telemetry may find itself
+
+Please see Q3 above, join a live
+[Discussion](https://github.com/microsoft/DynamicTelemetry/discussions/40) or
+study reading material below.
+
+Reading Material:
+[Stake Holder Documents](./PositionPaper.SharingDataAmongStakeHoldersIsHard.document.md)
+[Clear Failure Schemas](./PositionPaper.ClearFailuresViaSchema.document.md)
+
+### Q6: What is the Change Approach
+
+Are we hoping to see lots of experimentation, or is this a community standards
+approach, like IETF?
+
+#### A6: Experimentation and Collaboration mostly - but it's a little of both
+
+Dynamic Telemetry aims to provide a holistic vision and historical ledger for
+observability and telemetry practices. While it is not explicitly designed to
+dictate standards, it serves as a foundation for exploring innovative approaches
+and fostering discussions around best practices. At the time of writing, it
+remains uncertain whether specific implementations will emerge directly from
+Dynamic Telemetry, but its role as a conceptual framework is clear.
+
+Standards are more likely to emerge from established organizations such as IETF,
+OpenTelemetry, and CNCF. These bodies are well-positioned to define and
+formalize community-driven protocols and specifications. Dynamic Telemetry
+complements these efforts by offering insights and ideas that could influence
+the evolution of standards in the broader observability ecosystem.
