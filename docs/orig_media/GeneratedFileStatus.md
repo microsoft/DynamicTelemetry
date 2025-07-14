@@ -17,7 +17,7 @@ status: Level5
 | [../docs/Architecture.FlightRecorder.Overview.document.md](../docs/Architecture.FlightRecorder.Overview.document.md)  | 902|
 | [../docs/Architecture.FlightRecorder.ShortHorizons.document.md](../docs/Architecture.FlightRecorder.ShortHorizons.document.md)  | 633|
 | [../docs/Architecture.FlightRecorder.TraceHorizons.document.md](../docs/Architecture.FlightRecorder.TraceHorizons.document.md)  | 466|
-| [../docs/Architecture.KeyConstructs.Overview.document.md](../docs/Architecture.KeyConstructs.Overview.document.md)  | 920|
+| [../docs/Architecture.KeyConstructs.Overview.document.md](../docs/Architecture.KeyConstructs.Overview.document.md)  | 933|
 | [../docs/Architecture.Overview.document.md](../docs/Architecture.Overview.document.md)  | 331|
 | [../docs/Demos.1.DropChattyLog.md](../docs/Demos.1.DropChattyLog.md)  | 1103|
 | [../docs/Demos.2_DynamicProbe.md](../docs/Demos.2_DynamicProbe.md)  | 277|
@@ -31,11 +31,11 @@ status: Level5
 | [../docs/PositionPaper.TelemetryUmbilical.document.md](../docs/PositionPaper.TelemetryUmbilical.document.md)  | 92|
 | [../docs/Rude_Q_and_A.md](../docs/Rude_Q_and_A.md)  | 748|
 | [../docs/Scenarios.Overview.CostReduction.document.md](../docs/Scenarios.Overview.CostReduction.document.md)  | 1391|
-| [../docs/Scenarios.Overview.DeepDiagnostics.document.md](../docs/Scenarios.Overview.DeepDiagnostics.document.md)  | 762|
+| [../docs/Scenarios.Overview.DeepDiagnostics.document.md](../docs/Scenarios.Overview.DeepDiagnostics.document.md)  | 760|
 | [../docs/Scenarios.Overview.document.md](../docs/Scenarios.Overview.document.md)  | 180|
 | [../docs/Scenarios.Overview.DurableDashboards.Alerts.document.md](../docs/Scenarios.Overview.DurableDashboards.Alerts.document.md)  | 571|
-| [../docs/Scenarios.Overview.RedactingSecrets.document.md](../docs/Scenarios.Overview.RedactingSecrets.document.md)  | 1095|
-| [../docs/Scenarios.Overview.Reliability.document.md](../docs/Scenarios.Overview.Reliability.document.md)  | 2222|
+| [../docs/Scenarios.Overview.RedactingSecrets.document.md](../docs/Scenarios.Overview.RedactingSecrets.document.md)  | 1093|
+| [../docs/Scenarios.Overview.Reliability.document.md](../docs/Scenarios.Overview.Reliability.document.md)  | 2220|
 
 
 ## Level1

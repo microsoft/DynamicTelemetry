@@ -83,7 +83,7 @@ It's not tough to see applications in AI.
 
 These concepts will be expanded in further sections but they're worth thought.
 
-## Understanding By Example : Surveying Interesting Testing Techniques
+## Example : Surveying Interesting Testing Techniques
 
 ### Entropy Creators
 

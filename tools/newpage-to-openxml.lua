@@ -129,7 +129,7 @@ function Pandoc(doc)
         -- table.insert(doc.blocks, 1, hello_para)
 
         if not is_word_output(FORMAT) then
-            local hello_para = pandoc.Para({pandoc.Str("\newpage")})
+            local hello_para = pandoc.Para({pandoc.Str("\\newpage")})
             table.insert(doc.blocks, 1, hello_para)
         else
             local pagebreak = create_openxml_pagebreak()
