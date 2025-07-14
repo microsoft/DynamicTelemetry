@@ -50,7 +50,7 @@ that restricts both the memory accessed and the number of instructions executed.
 
 ### Query Language Processor
 
-[A Query Language Processor](./Architecture.Components.Processor.QueryLanguage.document.md)
+[A Query Language Processor](./Architecture.Processor.QueryLanguage.document.md)
 is the simplest type of Processor. It acts as a filter that is applied directly
 to the OpenTelemetry data stream, allowing for straightforward transformations
 or the removal of specific log messages.
@@ -83,7 +83,7 @@ to generate metrics on the fly.
 
 ### State Model Processor
 
-[A State Model Processor](./Architecture.Components.Processor.StateMachine.document.md)
+[A State Model Processor](./Architecture.Processor.StateMachine.document.md)
 is our next most sophisticated and complex Processor. Similar to a Query
 Language Processor, the State Model Processor uses a simple configuration file.
 However, instead of merely providing filtering and aggregation, it allows for
@@ -104,7 +104,7 @@ might capture a memory dump if a particular error is emitted in a log.
 
 ### Language Processor
 
-[The Language Processor](./Architecture.Components.Processor.Language.md) is the
+[The Language Processor](./Architecture.Processor.Language.md) is the
 most complex type of Processor. In addition to the ability to dynamically
 migrate state transitions, it introduces the capability to allocate small
 amounts of memory and perform simple computations and calculations.

@@ -23,7 +23,7 @@ A quick recap:
 
 1. A [Probe](./Architecture.Probes.Overview.document.md) is a form of logging
    that flows into OpenTelemetry
-1. A [Filter or Router](./Architecture.Components.FiltersRoutersAndAdapters.document.md)
+1. A [Filter or Router](./Architecture.Components.FiltersAndRouters.document.md)
    is a piece of code situated in the middle of an OpenTelemetry pipe that
    routes or filters logs
 1. A Flight Recorder is a circular log that is never emitted unless there's a

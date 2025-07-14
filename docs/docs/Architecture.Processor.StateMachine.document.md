@@ -6,7 +6,7 @@ status: ReviewLevel2
 # Processor : State Machine
 
 The State Machine
-[Processor](./Architecture.Components.Processor.Overview.document.md) is a
+[Processor](./Architecture.Processor.Overview.document.md) is a
 relatively simple yet highly effective component within Dynamic Telemetry.
 Essentially, this Processor listens to all log messages that pass by,
 identifying significant events and managing a state machine based on those

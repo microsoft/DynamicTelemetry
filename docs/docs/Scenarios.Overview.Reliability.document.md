@@ -35,7 +35,7 @@ The idea is to use the logging and metrics found within a piece of software
 to self-describe desired and expected behavior such that the product itself
 could detect its own failures.
 
-[Processors](./Architecture.Components.Processor.Overview.document.md) can be
+[Processors](./Architecture.Processor.Overview.document.md) can be
 configured to "look" for problems that emanate from the very core of the
 software executing.
 
@@ -44,9 +44,9 @@ written on the subject.
 
 What is interesting, and potentially novel, is the idea of using a combination
 of one box [in
-process](./Architecture.Components.Observer.InProcess.document.md)/[on
-box](./Architecture.Components.Observer.External.OnBox.document.md) and [off
-box](./Architecture.Components.Observer.External.OnBox.document.md) observers to
+process](./Architecture.Processor.InProcess.document.md)/[on
+box](./Architecture.Processor.External.OnBox.document.md) and [off
+box](./Architecture.Processor.External.OnBox.document.md) observers to
 this lightly schematized telemetry, to look for patterns and failures that
 wouldn't be necessarily caught within a unit test or scenario test.
 
@@ -58,7 +58,7 @@ testing such that your code self describes, and detects problems - and
 automatically generates verbose diagnostics for you, to help you fix the
 problem.
 
-## Introducing Your Tools: [Processors](./Architecture.Components.Processor.Overview.document.md), [Probes](./Architecture.Probes.Overview.document.md), [Actions](./Architecture.Actions.Overview.document.md), and [Flight Recorders](./Architecture.FlightRecorder.Overview.document.md)
+## Introducing Your Tools: [Processors](./Architecture.Processor.Overview.document.md), [Probes](./Architecture.Probes.Overview.document.md), [Actions](./Architecture.Actions.Overview.document.md), and [Flight Recorders](./Architecture.FlightRecorder.Overview.document.md)
 
 Imagine your software has the ability to self-describe failure.
 Perhaps when you author an enqueue() operation you also supply nominal
@@ -279,7 +279,7 @@ therefore providing clear guidance, and total clarity of expectation, on the
 subsequent steps and specifying what needs to be collected.
 
 1. Should an internal external test fail
-1. 'Detect' this in any one of your [Processor Locations](./Architecture.Components.Processor.Overview.document.md)
+1. 'Detect' this in any one of your [Processor Locations](./Architecture.Processor.Overview.document.md)
 1. 'Trigger' a Diagnostic Collecting, containing what the developer said they
    need
 
