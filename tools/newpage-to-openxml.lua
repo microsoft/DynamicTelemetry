@@ -103,8 +103,39 @@ function RawInline(elem)
     return elem
 end
 
--- For debugging: uncomment this to see what format Pandoc is using
--- function Meta(meta)
---     print("Output format: " .. FORMAT)
---     return meta
--- end
+-- Handle Meta elements to check for newpage metadata
+function Meta(meta)
+    if not is_word_output(FORMAT) then
+        return meta
+    end
+
+    -- For debugging: uncomment this to see what format Pandoc is using
+    -- print("Output format: " .. FORMAT)
+
+    return meta
+end
+
+-- Pandoc function to handle document-level modifications
+function Pandoc(doc)
+
+    -- Check if newpage is set to true in metadata
+    if doc.meta.newpage and doc.meta.newpage == true then
+        print("HIT")
+
+        -- Create "HELLO WORLD" paragraph
+        -- local hello_para = pandoc.Para({pandoc.Str("HELLO WORLD")})
+
+        -- Insert "HELLO WORLD" at the beginning of the document
+        -- table.insert(doc.blocks, 1, hello_para)
+
+        if not is_word_output(FORMAT) then
+            local hello_para = pandoc.Para({pandoc.Str("\newpage")})
+            table.insert(doc.blocks, 1, hello_para)
+        else
+            local pagebreak = create_openxml_pagebreak()
+            table.insert(doc.blocks, 1, pagebreak)
+        end
+    end
+
+    return doc
+end

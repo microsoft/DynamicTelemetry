@@ -1,8 +1,8 @@
 ---
 author: "Chris Gray"
 status: ReviewLevel1b
+newpage: true
 ---
-\newpage
 
 # Improving Your Security and Privacy Posture
 

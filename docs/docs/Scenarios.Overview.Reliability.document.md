@@ -1,8 +1,8 @@
 ---
 author: "Chris Gray"
 status: ReviewLevel1b
+newpage: true
 ---
-/newpage
 
 # Reliability and Testing
 
