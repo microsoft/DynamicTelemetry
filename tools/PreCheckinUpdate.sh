@@ -137,7 +137,7 @@ fileName="DynamicTelemetry-Draft-$myDate"
 
 echo "---" > ./title.txt
 echo "title: $fileName" >> ./title.txt
-echo "author: Chris Gray at al" >> ./title.txt
+echo "author: Chris Gray et al." >> ./title.txt
 echo "date: $myDate" >> ./title.txt
 echo "---" >> ./title.txt
 
