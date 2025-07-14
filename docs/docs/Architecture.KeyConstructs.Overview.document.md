@@ -62,7 +62,7 @@ The two key characteristics of a Flight Recorder are:
 1. that it is uniquely identifiable
 1. that it contains logs
 
-## Filter/Routers/Adapter : Shaping, Throttling, and Changing {.unlisted .unnumbered}
+## Filter/Routers/Adapter : Shaping, Throttling, and Changing      {.unlisted .unnumbered}
 
 Imagine an OpenTelemetry pipeline as a pipe of water. Cutting the pipe and
 adding a filter or diverter would allow you to control the flow. A fully
