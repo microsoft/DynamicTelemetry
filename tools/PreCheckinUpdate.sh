@@ -137,7 +137,7 @@ fileName="DynamicTelemetry-Draft-$myDate"
 
 echo "---" > ./title.txt
 echo "title: $fileName" >> ./title.txt
-echo "author: Chris Gray at al" >> ./title.txt
+echo "author: Chris Gray et al." >> ./title.txt
 echo "date: $myDate" >> ./title.txt
 echo "---" >> ./title.txt
 
@@ -173,8 +173,8 @@ pandoc $inputFile -o "$DT_BOUND_DIR/epub_$fileName.a5.epub" --epub-cover-image=.
 pandoc $inputFile -o "$DT_BOUND_DIR/epub_$fileName.a8.epub" --epub-cover-image=../orig_media/DynamicTelemetry.CoPilot.Image.png -V papersize=a8 $args
 pandoc $inputFile -o "$DT_BOUND_DIR/$fileName.a5.pdf" -H "$header_path" -V papersize=a5 $args
 pandoc $inputFile -o "$DT_BOUND_DIR/$fileName.a8.pdf" -H "$header_path" -V papersize=a8 $args
-pandoc $inputFile -o "$DT_BOUND_DIR/$fileName.a5.docx" -V papersize=a5 $args
-pandoc $inputFile -o "$DT_BOUND_DIR/$fileName.a8.docx" -V papersize=a8 $args
+pandoc $inputFile -o "$DT_BOUND_DIR/$fileName.a5.docx" -V papersize=a5 $args --lua-filter=../../tools/newpage-to-openxml.lua
+pandoc $inputFile -o "$DT_BOUND_DIR/$fileName.a8.docx" -V papersize=a8 $args --lua-filter=../../tools/newpage-to-openxml.lua
 pandoc ./bound.md -o "$DT_BOUND_DIR/$fileName.json" $args
 
 echo "Done!"

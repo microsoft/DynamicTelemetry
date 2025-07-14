@@ -20,7 +20,7 @@ The four Constructs of Dynamic Telemetry are
 1. a [Flight Recorder](./Architecture.FlightRecorder.Overview.document.md)
 1. a [Action](./Architecture.Actions.Overview.document.md)
 
-## What is a Probe{.unlisted .unnumbered}
+## Probe : your window into the system{.unlisted .unnumbered}
 
 A Dynamic Telemetry Probe is a lightweight mechanism that emits events (logs)
 within a running system. A Probe is usually specific to the operating system and
@@ -62,7 +62,7 @@ The two key characteristics of a Flight Recorder are:
 1. that it is uniquely identifiable
 1. that it contains logs
 
-## What is a Filter/Router/Adapter{.unlisted .unnumbered}
+## Filter/Routers/Adapter : Shaping, Throttling, and Changing      {.unlisted .unnumbered}
 
 Imagine an OpenTelemetry pipeline as a pipe of water. Cutting the pipe and
 adding a filter or diverter would allow you to control the flow. A fully
@@ -105,7 +105,7 @@ exporter, processor, and router}.
   platform-specific telemetry into the OpenTelemetry pipeline. For example,
   syslog, LTTng, or ETW on Windows.
 
-## What is a Processor{.unlisted .unnumbered}
+## Processor : Architectural Locations for Dynamic Compute  {.unlisted .unnumbered}
 
 A Processor is the dynamic component of Dynamic Telemetry where various
 scenarios and applications are manifested. The simplest way to think of a
@@ -119,7 +119,7 @@ Simple examples of a Processor include:
 - Converting verbose logs into metrics.
 - Monitoring logs to invoke an Action when a problem occurs.
 
-## What is an Action{.unlisted .unnumbered}
+## Actions : Tools for Learning More! {.unlisted .unnumbered}
 
 An Action is an architectural construct that performs tasks based on the logging
 data it observes passing through a pipeline.
