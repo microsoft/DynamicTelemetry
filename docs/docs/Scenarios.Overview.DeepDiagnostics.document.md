@@ -1,6 +1,7 @@
 ---
 author: "Chris Gray"
 status: ReviewLevel1b
+newpage: true
 ---
 
 # Performance and Diagnostics, at Scale
@@ -60,14 +61,14 @@ that catch bugs.
 
 ![type:video](../orig_media/DynamicTelemetry_DiagnosticVideo.mp4)
 
-## Understanding by Example: Dynamically Regulating Logging When Things Go Wrong
+## Example: Dynamically Regulating Logging When Things Go Wrong
 
 Consider a situation where a production system works well during
 testing and under light load but experiences unexpectedly high CPU contention
 from time to time. Developers have many theories, and little data -- they
 suspect the machine could be entering receive livelock but are unsure why.
 
-If they could predict which computer would next exhibit the problem, they could
+If they could predict which computer woulFd next exhibit the problem, they could
 turn on CPU sampling when the issue occurs. The challenge is that once the
 problem arises, it is resolved before they're able to:
 

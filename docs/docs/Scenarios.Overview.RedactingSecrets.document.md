@@ -1,6 +1,7 @@
 ---
 author: "Chris Gray"
 status: ReviewLevel1b
+newpage: true
 ---
 
 # Improving Your Security and Privacy Posture
@@ -39,7 +40,7 @@ asuser_id,transaction_id, andtimestamp. This separation allows for more precise
 redaction of sensitive data, such as email addresses or credit card numbers,
 without affecting other parts of the log.
 
-## Understanding by Example : Mechanics of Secret Redaction
+## Example : Mechanics of Secret Redaction
 
 The process typically involves the following steps:
 

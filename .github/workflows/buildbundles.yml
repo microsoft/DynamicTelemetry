@@ -1,6 +1,11 @@
 name: build-bundles
 run-name: ${{ github.actor }} is bundling documents together
-on: [push]
+on:
+  push:
+    branches: [ main ]
+    tags: [ 'v*' ]
+  pull_request:
+    branches: [ main ]
 jobs:
   Generating-Bound-Versions:
     runs-on: ubuntu-latest
@@ -11,6 +16,7 @@ jobs:
           node-version: '20'
       - run: ./tools/InstallUbuntuBuildDependencies.sh
       - run: ./tools/PreCheckinUpdate.sh
+      #- run: mkdir ./docs/bound_docs & df > ./docs/bound_docs/foo.pdf
       - name: Upload bound_docs as artifact
         uses: actions/upload-artifact@v4
         with:
@@ -19,3 +25,68 @@ jobs:
             ./docs/bound_docs/*.docx
             ./docs/bound_docs/*.epub
             ./docs/bound_docs/*.pdf
+
+  Create-Release:
+    needs: Generating-Bound-Versions
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download bound_docs artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: bound_docs
+          path: ./release-files
+
+      - name: Generate release tag
+        id: tag
+        run: |
+          if [[ $GITHUB_REF == refs/tags/* ]]; then
+            echo "tag=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+          else
+            echo "tag=v$(date +'%Y.%m.%d')-$(echo $GITHUB_SHA | cut -c1-7)" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ steps.tag.outputs.tag }}
+          release_name: Documentation Bundle ${{ steps.tag.outputs.tag }}
+          body: |
+            Automated release of bundled documentation files.
+
+            Generated from commit: ${{ github.sha }}
+
+            This release contains:
+            - DOCX files for offline reading
+            - EPUB files for e-readers
+            - PDF files for printing and sharing
+          draft: false
+          prerelease: ${{ !startsWith(github.ref, 'refs/tags/v') }}
+
+      - name: Upload DOCX files
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./release-files
+          asset_name: documentation-bundle-docx.zip
+          asset_content_type: application/zip
+        continue-on-error: true
+
+      - name: Upload all release files
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ steps.tag.outputs.tag }}
+          files: |
+            ./release-files/*.docx
+            ./release-files/*.epub
+            ./release-files/*.pdf
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
