@@ -65,7 +65,7 @@ height="2.185044838145232in"}
 ### Survey of a Dynamic Telemetry Processor
 
 A
-[Dynamic Telemetry Processor](./Architecture.Components.Processor.Overview.document.md)
+[Dynamic Telemetry Processor](./Architecture.Processor.Overview.document.md)
 is a software component that is dynamically configured and operates within the
 standard OpenTelemetry OLTP pipeline. This processor is detailed further in the
 processor section, but essentially, it is a software module that monitors all
@@ -76,15 +76,15 @@ Subject to implementation a Dynamic Telemetry processor is likely to be fitting
 into one of several categories
 
 1. A
-   [Query Language](./Architecture.Components.Processor.QueryLanguage.document.md)
+   [Query Language](./Architecture.Processor.QueryLanguage.document.md)
    (SQL, KQL, etc)
 
 1. A
-   [Programming Environment or Language](./Architecture.Components.Processor.Language.md)
+   [Programming Environment or Language](./Architecture.Processor.Language.md)
    (eBPF, .NET, Python, Rust, etc)
 
 1. A textually defined
-   [State Machine, or State Model](./Architecture.Components.Processor.StateMachine.document.md)
+   [State Machine, or State Model](./Architecture.Processor.StateMachine.document.md)
 
 ### Installation Points for Dynamic Telemetry Processors
 
@@ -92,17 +92,17 @@ The diagram below shows the installation of Dynamic Telemetry processors in four
 different architectural locations.
 
 1. In
-   [process of the emitting agent](./Architecture.Components.Observer.InProcess.document.md)
+   [process of the emitting agent](./Architecture.Processor.InProcess.document.md)
 
 1. In the
-   [kernel of the Operating System hosting the agent](./Architecture.Components.Observer.Kernel.document.md)
+   [kernel of the Operating System hosting the agent](./Architecture.Processor.Kernel.document.md)
 
 1. In the
-   [aggregation process](./Architecture.Components.Observer.External.OnBox.document.md)
+   [aggregation process](./Architecture.Processor.External.OnBox.document.md)
    that is about to emit to the ingestion gateway
 
 1. At the
-   [point of ingestion](./Architecture.Components.Observer.External.OffBox.document.md)
+   [point of ingestion](./Architecture.Processor.External.OffBox.document.md)
 
 The Processor section of this document expands upon these four different
 insertion points more thoroughly, but in short, each installation point have
@@ -142,7 +142,7 @@ pausing the logs to prevent the spread of accidentally logged sensitive
 information.
 
 To achieve this goal, we utilize the KQL
-[Query Language](./Architecture.Components.Processor.QueryLanguage.document.md)
+[Query Language](./Architecture.Processor.QueryLanguage.document.md)
 Processor -- and quickly deploy the below KQL to the most appropriate of the
 four Processors.
 
@@ -191,7 +191,7 @@ from the web agent.
 ```
 
 To achieve this goal, we utilize the KQL
-[Query Language](./Architecture.Components.Processor.QueryLanguage.document.md)
+[Query Language](./Architecture.Processor.QueryLanguage.document.md)
 Processor -- and quickly deploy the below KQL to the most appropriate of the
 four Processors.
 

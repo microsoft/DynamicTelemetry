@@ -6,7 +6,7 @@ status: ReviewLevel2
 # Processor : Language
 
 The Language
-[Processor](./Architecture.Components.Processor.Overview.document.md) is one of
+[Processor](./Architecture.Processor.Overview.document.md) is one of
 the most versatile and capable Processors within Dynamic Telemetry; however, it
 also poses certain risks. The language Processor in Dynamic Telemetry enables
 the insertion of programming language into the telemetry and logging stream of a
