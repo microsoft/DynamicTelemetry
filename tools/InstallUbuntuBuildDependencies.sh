@@ -7,12 +7,14 @@ set -e
 #
 if ! apt update; then
     echo "First apt update failed, waiting 1 second and retrying..."
-    sleep 1
+    ps aux
+    sleep 10
     apt update
 fi
 if ! apt install -y sudo; then
-    echo "First apt update failed, waiting 1 second and retrying..."
-    sleep 1
+    echo "First apt install failed, waiting 1 second and retrying..."
+    ps aux
+    sleep 10
     apt install -y sudo
 fi
 
