@@ -1,23 +1,6 @@
 #!/bin/bash
 set -e
 
-#
-# Try apt update with retry logic - introduce sleeps because github seems to be
-#     racing
-#
-if ! apt update; then
-    echo "First apt update failed, waiting 1 second and retrying..."
-    ps aux
-    sleep 10
-    apt update
-fi
-if ! apt install -y sudo; then
-    echo "First apt install failed, waiting 1 second and retrying..."
-    ps aux
-    sleep 10
-    apt install -y sudo
-fi
-
 export TZ=America/Los_Angeles
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US:en
