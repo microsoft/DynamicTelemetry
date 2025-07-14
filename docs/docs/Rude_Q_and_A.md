@@ -136,7 +136,7 @@ ______________________________________________________________________
 
 Will Dynamic Telemetry invent a new protocol?
 
-#### Q5 : No, Dynamic Telemetry operates within Open Telemetry (OTLP, gRPC, etc)
+#### Q5 : No, Dynamic Telemetry operates within OpenTelemetry (OTLP, gRPC, etc)
 
 Dynamic Telemetry adheres to the principles and protocols established by
 OpenTelemetry. While there may be opportunities to enhance schema usage within
