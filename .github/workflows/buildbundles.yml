@@ -16,6 +16,7 @@ jobs:
           node-version: '20'
       #- run: ./tools/InstallUbuntuBuildDependencies.sh
       #- run: ./tools/PreCheckinUpdate.sh
+      - run: mkdir ./docs/bound_docs & df > ./docs/bound_docs/foo.pdf
       - name: Upload bound_docs as artifact
         uses: actions/upload-artifact@v4
         with:
