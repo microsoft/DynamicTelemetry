@@ -1,5 +1,7 @@
 site_name: DynamicTelemetry
 site_description: 'DynamicTelemetry PoC Request for Collaboration'
+repo_url: https://github.com/microsoft/DynamicTelemetry
+repo_name: MD/PDF/DOC
 
 # Info : https://squidfunk.github.io/mkdocs-material/
 
@@ -59,6 +61,7 @@ theme:
         code: Roboto Mono
     favicon: assets/favicon.png
     icon:
+        repo: fontawesome/brands/github
         logo: logo
 
 
