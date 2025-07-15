@@ -1,5 +1,7 @@
 site_name: DynamicTelemetry
 site_description: 'DynamicTelemetry PoC Request for Collaboration'
+repo_url: https://github.com/microsoft/DynamicTelemetry
+repo_name: MD/PDF/DOC
 
 # Info : https://squidfunk.github.io/mkdocs-material/
 
@@ -59,6 +61,7 @@ theme:
         code: Roboto Mono
     favicon: assets/favicon.png
     icon:
+        repo: fontawesome/brands/github
         logo: logo
 
 
@@ -66,36 +69,11 @@ nav:
 #<START_BINDING>
     - What is Dynamic Telemetry:
         - Introduction : ./docs/index.md
-
         - Performance and Diagnostics: ./docs/Scenarios.Overview.DeepDiagnostics.document.md
-            #- Tools:
-            #    - Event Aggregation: ./docs/Scenarios.EventAggregation.document.md
-            #    - ExtractingMemoryWithUProbe: ./docs/Scenarios.ExtractingMemoryWithUProbe.document.md
-            #- The Process: ./docs/PlaceHolder.document.md
-            #- Architecture: ./docs/PlaceHolder.document.md
-            #- Position Papers: ./docs/PlaceHolder.document.md
-
         - Privacy and Security: ./docs/Scenarios.Overview.RedactingSecrets.document.md
-            #- Tools:
-            #    - EventFieldSuppression: ./docs/Scenarios.EventFieldSuppression.document.md
-            #    - EventSuppression: ./docs/Scenarios.EventSuppression.document.md
-
         - Reliability and Testing: ./docs/Scenarios.Overview.Reliability.document.md
-            #- Tools: ./docs/PlaceHolder.document.md
-            #- Architecture: ./docs/PlaceHolder.document.md
-            #- Position Papers: ./docs/PlaceHolder.document.md
-
         - Dashboards, Alerts, and Environment Migrations: ./docs/Scenarios.Overview.DurableDashboards.Alerts.document.md
-            #- Tools:
-            #    - Changing Environments: ./docs/Scenarios.ChangingEnvironments.document.md
-            #- Architecture: ./docs/PlaceHolder.document.md
-            #- Position Papers: ./docs/PlaceHolder.document.md
-
         - Cost Reduction: ./docs/Scenarios.Overview.CostReduction.document.md
-            #- Tools:
-            #    - Convert Logs to Metrics: ./docs/Scenarios.ConvertLogsToMetrics.document.md
-            #- Architecture: ./docs/PlaceHolder.document.md
-            #- Position Papers: ./docs/PlaceHolder.document.md
 
     - Architecture:
         - Overview: ./docs/Architecture.Overview.document.md

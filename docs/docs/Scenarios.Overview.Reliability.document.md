@@ -1,6 +1,7 @@
 ---
 author: "Chris Gray"
 status: ReviewLevel1b
+newpage: true
 ---
 
 # Reliability and Testing
@@ -82,7 +83,7 @@ It's not tough to see applications in AI.
 
 These concepts will be expanded in further sections but they're worth thought.
 
-## Understanding By Example : Surveying Interesting Testing Techniques
+## Example : Surveying Interesting Testing Techniques
 
 ### Entropy Creators
 

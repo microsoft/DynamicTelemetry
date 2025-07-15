@@ -1,6 +1,7 @@
 ---
 author: "Chris Gray"
 status: ReviewLevel1b
+newpage: true
 ---
 
 # Performance and Diagnostics, at Scale
@@ -60,7 +61,7 @@ that catch bugs.
 
 ![type:video](../orig_media/DynamicTelemetry_DiagnosticVideo.mp4)
 
-## Understanding by Example: Dynamically Regulating Logging When Things Go Wrong
+## Example: Dynamically Regulating Logging When Things Go Wrong
 
 Consider a situation where a production system works well during
 testing and under light load but experiences unexpectedly high CPU contention

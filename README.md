@@ -3,6 +3,8 @@
 *You're at the main github location hosting the unrendered markdown for Dynamic
 Telemetry.  If you'd prefer more pleasing to read, rendered HTML, please visit
 [https://microsoft.github.io/DynamicTelemetry/](https://microsoft.github.io/DynamicTelemetry/).
+PDF, DOCX, and EPUB versions are available for download in the 'Releases'
+section of GitHub.
 
 Dynamic Telemetry is an effort to make debugging highly scaled
 production software as easy and enjoyable as debugging a single

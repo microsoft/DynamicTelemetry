@@ -10,7 +10,7 @@ export DEBIAN_FRONTEND=noninteractive
 #
 # Install necessary tools, if they're not already present
 #
-apt_packages="git podman dotnet8 gnuplot pandoc dos2unix texlive-latex-base texlive-fonts-recommended texlive-latex-recommended texlive-full"
+apt_packages="git podman dotnet8 gnuplot pandoc dos2unix texlive-latex-base texlive-fonts-recommended texlive-latex-recommended texlive-full python3.12-venv"
 echo "Detecting / Installing necessary Ubuntu tools"
 if ! command -v git &> /dev/null; then
     echo "Installing Git"
