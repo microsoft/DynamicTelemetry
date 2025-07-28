@@ -215,8 +215,8 @@ Later in this section, we will further elaborate and provide detailed examples.
 
 ### Authoring Self-Describing Production Code
 
-Dynamic Telemetry takes advantage of the durable identifiers and structure
-payloads within your logging in order to provide loose schemas that can be used
+Dynamic Telemetry takes advantage of the durable identifiers and structured
+payloads within your logging to provide loose schemas that can be used
 in self-describing quality characteristics of code. While these topics are
 discussed further in other sections, the key aspect can be summarized as
 Lightweight telemetry that signals positive failure, or can otherwise indicate

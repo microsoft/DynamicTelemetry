@@ -5,22 +5,22 @@ status: ReviewLevel1b
 
 # Architectural Survey
 
-DynamicTelemetry is an articulation of the embodiment of a suite of
+Dynamic Telemetry is a suite of
 Observability tools, designed to manage, control, and reshape telemetry in
 [Production](./PositionPaper.DefiningProduction.document.md) systems.
 
-Essentially, DynamicTelemetry is a set of enforced conventions that enable
+Essentially, Dynamic Telemetry is a set of enforced conventions that enable
 various sophisticated diagnostic systems to work in harmony. It ensures
 compatibility with user privacy and security needs. Simultaneously,
-DynamicTelemetry provides businesses with the ability to adjust their
+Dynamic Telemetry provides businesses with the ability to adjust their
 Observability based on necessity. This allows resources to be allocated when
 needed and restricts telemetry when it's not required.
 
 By using Dynamic Telemetry, developers will have less guessing to do when
-deciding how much logging verbosity to utilize, as they can late bind the
-decision by deploying refining telemetry after code deployment.
+deciding how much logging verbosity to utilize, as they can make late-bound
+decisions by deploying telemetry refinements after code deployment.
 
-This document aims to delve into the philosophy of DynamicTelemetry, exploring
+This document aims to delve into the philosophy of Dynamic Telemetry, exploring
 the intricate balance between complex realities. While this document serves as a
 comprehensive spiritual guide, some readers might find it beneficial to start
 with the usage [scenarios](./Scenarios.Overview.document.md) to get a better

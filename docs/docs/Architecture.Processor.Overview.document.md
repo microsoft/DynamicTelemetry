@@ -25,10 +25,10 @@ discuss the four different locations that can house a query Processor.
 ## Processor Types
 
 It's expected within Dynamic Telemetry that multiple different Processor types
-are created over the course of time because there are requirements on the
-Processor in order to meet other obligations, such as safety and performance,
-all Processors must meet certain set of requirements, specifically in the event
-they are running out of specification they are all configured to automatically
+are created over the course of time. Because there are requirements on the
+Processor to meet other obligations, such as safety and performance,
+all Processors must meet a certain set of requirements. Specifically, in the event
+they are running out of specification, they are all configured to automatically
 disable.
 
 There are three different types of Processors each with varying degrees of
@@ -146,7 +146,7 @@ There will be scenarios where Dynamic Telemetry could be useful that will not be
 applicable as a result. And this is OK.
 
 It is the belief of Dynamic Telemetry's designers that having limitations to the
-application is necessary in order to provide a trustworthy diagnostic system
+application is necessary to provide a trustworthy diagnostic system
 that is suitable for use within a large cloud environment.
 
 In short, we take the
