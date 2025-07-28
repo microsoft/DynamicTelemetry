@@ -1,84 +1,419 @@
 
+/* =============================================================================
+   DYNAMIC TELEMETRY DOCUMENTATION CUSTOM STYLES
+   Enhanced styling for better accessibility, readability, and visual appeal
+   ============================================================================= */
 
-  .md-status--ReviewLevel1::after {
-    background-color: var(--color-background-dark);
-    border-radius: 0.2rem;
-    color: red;
-    content: "[Incomplete]";
-    font-size: 0.5rem;
-    height: auto;
-    padding: 0.1rem;
-    -webkit-mask-image: none;
-    width: auto;
-  }
+/* =============================================================================
+   ROOT VARIABLES & ACCESSIBILITY IMPROVEMENTS
+   ============================================================================= */
+:root {
+  /* Enhanced color palette with WCAG AA compliant contrast ratios */
+  --dt-red: #d73a49;
+  --dt-orange: #f66a0a;
+  --dt-green: #28a745;
+  --dt-blue: #0366d6;
+  --dt-purple: #6f42c1;
+  --dt-gray-dark: #24292e;
+  --dt-gray-light: #f6f8fa;
+  
+  /* Status badge colors with improved contrast */
+  --status-incomplete: #d73a49;
+  --status-talking-points: #b34700;
+  --status-pre-draft: #f66a0a;
+  --status-draft: #28a745;
+  --status-pending: #e36209;
+  --status-complete: #28a745;
+  
+  /* Enhanced spacing and typography */
+  --dt-spacing-xs: 0.25rem;
+  --dt-spacing-sm: 0.5rem;
+  --dt-spacing-md: 1rem;
+  --dt-spacing-lg: 1.5rem;
+  --dt-spacing-xl: 2rem;
+  
+  /* Border radius for consistent rounded corners */
+  --dt-border-radius: 0.375rem;
+  --dt-border-radius-sm: 0.25rem;
+  
+  /* Shadow definitions for depth */
+  --dt-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --dt-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
 
-  .md-status--ReviewLevel1b::after {
-    background-color: var(--color-background-dark);
-    border-radius: 0.2rem;
-    color: darkred;
-    content: "[Talking Points]";
-    font-size: 0.5rem;
-    height: auto;
-    padding: 0.1rem;
-    -webkit-mask-image: none;
-    width: auto;
-  }
+/* =============================================================================
+   ACCESSIBILITY ENHANCEMENTS
+   ============================================================================= */
 
-  .md-status--ReviewLevel2::after {
-    background-color: var(--color-background-dark);
-    border-radius: 0.2rem;
-    color: orange;
-    content: "[PRE-DRAFT]";
-    font-size: 0.5rem;
-    height: auto;
-    padding: 0.1rem;
-    -webkit-mask-image: none;
-    width: auto;
-  }
+/* Focus indicators for keyboard navigation */
+.md-nav__link:focus,
+.md-tabs__link:focus,
+button:focus,
+a:focus {
+  outline: 2px solid var(--md-accent-fg-color);
+  outline-offset: 2px;
+  border-radius: var(--dt-border-radius-sm);
+}
 
-  .md-status--ReviewLevel3::after {
-    background-color: var(--color-background-dark);
-    border-radius: 0.2rem;
-    color: lightgreen;
-    content: "[DRAFT]";
-    font-size: 0.5rem;
-    height: auto;
-    padding: 0.1rem;
-    -webkit-mask-image: none;
-    width: auto;
-  }
+/* Improved text contrast in dark mode */
+[data-md-color-scheme="slate"] {
+  --md-default-fg-color: #e1e4e8;
+  --md-default-fg-color--light: #959da5;
+  --md-default-fg-color--lighter: #6a737d;
+}
 
-  .md-status--ReviewLevel4::after {
-    background-color: var(--color-background-dark);
-    border-radius: 0.2rem;
-    color: orange;
-    content: "[PENDING]";
-    font-size: 0.5rem;
-    height: auto;
-    padding: 0.1rem;
-    -webkit-mask-image: none;
-    width: auto;
-  }
+/* Skip to content link for screen readers */
+.md-skip {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  z-index: 1000;
+  padding: 8px;
+  background: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+  text-decoration: none;
+  border-radius: var(--dt-border-radius-sm);
+  transition: top 0.3s;
+}
 
-  .md-status--ReviewLevel5::after {
-    background-color: var(--color-background-dark);
-    border-radius: 0.2rem;
-    color: green    ;
-    content: "5/5";
-    font-size: 0.5rem;
-    height: auto;
-    padding: 0.1rem;
-    -webkit-mask-image: none;
-    width: auto;
-  }
+.md-skip:focus {
+  top: 6px;
+}
 
-  .md-content__inner.md-typeset:before {
-    content: "OSS_Proposal";
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-75deg);
-    font-size: 15em;
-    color: rgb(128, 128, 128, 0.3);
-    position: absolute;
-    pointer-events: none;
+/* =============================================================================
+   ENHANCED STATUS BADGES
+   ============================================================================= */
+
+/* Base status badge styling with improved accessibility */
+[class*="md-status--"]::after {
+  background-color: var(--md-default-bg-color);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: var(--dt-border-radius);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  height: auto;
+  padding: var(--dt-spacing-xs) var(--dt-spacing-sm);
+  margin-left: var(--dt-spacing-xs);
+  -webkit-mask-image: none;
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.2;
+  box-shadow: var(--dt-shadow-sm);
+  transition: all 0.2s ease;
+}
+
+/* Individual status level styling with improved contrast */
+.md-status--ReviewLevel1::after {
+  background-color: #ffeaea;
+  color: var(--status-incomplete);
+  border-color: var(--status-incomplete);
+  content: "Incomplete";
+}
+
+.md-status--ReviewLevel1b::after {
+  background-color: #fff4e6;
+  color: var(--status-talking-points);
+  border-color: var(--status-talking-points);
+  content: "Talking Points";
+}
+
+.md-status--ReviewLevel2::after {
+  background-color: #fff8f0;
+  color: var(--status-pre-draft);
+  border-color: var(--status-pre-draft);
+  content: "Pre-Draft";
+}
+
+.md-status--ReviewLevel3::after {
+  background-color: #f0fff4;
+  color: var(--status-draft);
+  border-color: var(--status-draft);
+  content: "Draft";
+}
+
+.md-status--ReviewLevel4::after {
+  background-color: #fff8f0;
+  color: var(--status-pending);
+  border-color: var(--status-pending);
+  content: "Pending Review";
+}
+
+.md-status--ReviewLevel5::after {
+  background-color: #f0fff4;
+  color: var(--status-complete);
+  border-color: var(--status-complete);
+  content: "Complete";
+}
+
+/* Dark mode status badge adjustments */
+[data-md-color-scheme="slate"] [class*="md-status--"]::after {
+  background-color: var(--md-code-bg-color);
+  border-color: var(--md-default-fg-color--lightest);
+}
+
+[data-md-color-scheme="slate"] .md-status--ReviewLevel1::after {
+  background-color: rgba(215, 58, 73, 0.1);
+}
+
+[data-md-color-scheme="slate"] .md-status--ReviewLevel1b::after {
+  background-color: rgba(179, 71, 0, 0.1);
+}
+
+[data-md-color-scheme="slate"] .md-status--ReviewLevel2::after {
+  background-color: rgba(246, 106, 10, 0.1);
+}
+
+[data-md-color-scheme="slate"] .md-status--ReviewLevel3::after {
+  background-color: rgba(40, 167, 69, 0.1);
+}
+
+[data-md-color-scheme="slate"] .md-status--ReviewLevel4::after {
+  background-color: rgba(227, 98, 9, 0.1);
+}
+
+[data-md-color-scheme="slate"] .md-status--ReviewLevel5::after {
+  background-color: rgba(40, 167, 69, 0.1);
+}
+
+/* =============================================================================
+   IMPROVED WATERMARK
+   ============================================================================= */
+
+.md-content__inner.md-typeset::before {
+  content: "OSS Proposal";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  font-size: clamp(6rem, 15vw, 15rem);
+  font-weight: 200;
+  color: rgba(128, 128, 128, 0.15);
+  pointer-events: none;
+  z-index: 0;
+  white-space: nowrap;
+  user-select: none;
+  letter-spacing: 0.1em;
+}
+
+/* Ensure content appears above watermark */
+.md-content__inner.md-typeset > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* =============================================================================
+   ENHANCED TYPOGRAPHY
+   ============================================================================= */
+
+/* Improved heading spacing and visual hierarchy */
+.md-typeset h1 {
+  margin-top: 0;
+  margin-bottom: var(--dt-spacing-lg);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.md-typeset h2 {
+  margin-top: var(--dt-spacing-xl);
+  margin-bottom: var(--dt-spacing-md);
+  font-weight: 600;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  padding-bottom: var(--dt-spacing-sm);
+}
+
+.md-typeset h3 {
+  margin-top: var(--dt-spacing-lg);
+  margin-bottom: var(--dt-spacing-md);
+  font-weight: 600;
+}
+
+/* Enhanced paragraph spacing */
+.md-typeset p {
+  line-height: 1.7;
+  margin-bottom: var(--dt-spacing-md);
+}
+
+/* Improved list styling */
+.md-typeset ul,
+.md-typeset ol {
+  margin-bottom: var(--dt-spacing-md);
+}
+
+.md-typeset li {
+  margin-bottom: var(--dt-spacing-xs);
+  line-height: 1.6;
+}
+
+/* =============================================================================
+   ENHANCED CODE BLOCKS
+   ============================================================================= */
+
+/* Improved code block styling with better contrast */
+.md-typeset pre > code {
+  border-radius: var(--dt-border-radius);
+  box-shadow: var(--dt-shadow);
+  font-size: 0.85em;
+  line-height: 1.5;
+}
+
+/* Enhanced inline code styling */
+.md-typeset code {
+  background-color: var(--md-code-bg-color);
+  color: var(--md-code-fg-color);
+  padding: 0.1em 0.3em;
+  border-radius: var(--dt-border-radius-sm);
+  font-size: 0.9em;
+  border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* Copy button improvements */
+.md-clipboard {
+  transition: all 0.2s ease;
+}
+
+.md-clipboard:hover {
+  background-color: var(--md-accent-fg-color);
+  color: var(--md-accent-bg-color);
+}
+
+/* =============================================================================
+   ENHANCED TABLES
+   ============================================================================= */
+
+/* Improved table styling with better spacing and borders */
+.md-typeset table:not([class]) {
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: var(--dt-border-radius);
+  overflow: hidden;
+  box-shadow: var(--dt-shadow-sm);
+  margin-bottom: var(--dt-spacing-md);
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--md-default-fg-color--lightest);
+  font-weight: 600;
+  padding: var(--dt-spacing-sm) var(--dt-spacing-md);
+  border-bottom: 2px solid var(--md-default-fg-color--light);
+}
+
+.md-typeset table:not([class]) td {
+  padding: var(--dt-spacing-sm) var(--dt-spacing-md);
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.md-typeset table:not([class]) tr:last-child td {
+  border-bottom: none;
+}
+
+/* Zebra striping for better readability */
+.md-typeset table:not([class]) tbody tr:nth-child(even) {
+  background-color: var(--md-default-fg-color--lightest);
+}
+
+/* =============================================================================
+   ENHANCED ADMONITIONS
+   ============================================================================= */
+
+/* Improved admonition styling with better visual hierarchy */
+.md-typeset .admonition {
+  border-radius: var(--dt-border-radius);
+  box-shadow: var(--dt-shadow);
+  margin-bottom: var(--dt-spacing-md);
+  overflow: hidden;
+}
+
+.md-typeset .admonition-title {
+  font-weight: 600;
+  padding: var(--dt-spacing-sm) var(--dt-spacing-md);
+  margin: 0;
+}
+
+.md-typeset .admonition-title::before {
+  margin-right: var(--dt-spacing-sm);
+}
+
+/* =============================================================================
+   NAVIGATION ENHANCEMENTS
+   ============================================================================= */
+
+/* Improved navigation link styling */
+.md-nav__link {
+  transition: all 0.2s ease;
+  border-radius: var(--dt-border-radius-sm);
+  margin: 1px 0;
+}
+
+.md-nav__link:hover {
+  background-color: var(--md-accent-fg-color--transparent);
+  transform: translateX(2px);
+}
+
+.md-nav__link--active {
+  background-color: var(--md-accent-fg-color--transparent);
+  font-weight: 600;
+}
+
+/* Enhanced tab styling */
+.md-tabs__link {
+  transition: all 0.2s ease;
+}
+
+.md-tabs__link:hover {
+  opacity: 0.8;
+}
+
+/* =============================================================================
+   RESPONSIVE DESIGN IMPROVEMENTS
+   ============================================================================= */
+
+/* Better mobile experience */
+@media screen and (max-width: 76.1875em) {
+  .md-nav--primary .md-nav__title {
+    background-color: var(--md-primary-fg-color);
+    color: var(--md-primary-bg-color);
   }
+  
+  /* Improve mobile watermark */
+  .md-content__inner.md-typeset::before {
+    font-size: clamp(4rem, 12vw, 8rem);
+    transform: translate(-50%, -50%) rotate(-30deg);
+  }
+}
+
+/* =============================================================================
+   PRINT STYLES
+   ============================================================================= */
+
+@media print {
+  /* Hide watermark in print */
+  .md-content__inner.md-typeset::before {
+    display: none;
+  }
+  
+  /* Optimize status badges for print */
+  [class*="md-status--"]::after {
+    background-color: transparent !important;
+    border: 1px solid #000 !important;
+    color: #000 !important;
+  }
+}
+
+/* =============================================================================
+   CUSTOM GRID CARDS ENHANCEMENT (if using Material extensions)
+   ============================================================================= */
+
+.grid.cards > .card {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: var(--dt-border-radius);
+  box-shadow: var(--dt-shadow-sm);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.grid.cards > .card:hover {
+  box-shadow: var(--dt-shadow);
+  transform: translateY(-2px);
+}

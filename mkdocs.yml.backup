@@ -1,115 +1,70 @@
-# ==============================================================================
-# SITE CONFIGURATION
-# ==============================================================================
-# Basic site information and metadata
 site_name: DynamicTelemetry
-site_description: 'DynamicTelemetry PoC Request for Collaboration - Making debugging highly scaled production software as easy as debugging locally'
-site_url: https://microsoft.github.io/DynamicTelemetry/  # Add your actual site URL when deployed
+site_description: 'DynamicTelemetry PoC Request for Collaboration'
 repo_url: https://github.com/microsoft/DynamicTelemetry
-repo_name: microsoft/DynamicTelemetry  # Updated to match GitHub repository format
-edit_uri: edit/master/docs/  # Path for "Edit this page" links
+repo_name: MD/PDF/DOC
 
-# Author and copyright information
-site_author: Microsoft DynamicTelemetry Team
-copyright: Copyright &copy; 2024 Microsoft Corporation
+# Info : https://squidfunk.github.io/mkdocs-material/
 
-# Material for MkDocs documentation: https://squidfunk.github.io/mkdocs-material/
-
-# ==============================================================================
-# THEME CONFIGURATION
-# ==============================================================================
 theme:
-    name: material  # Using Material for MkDocs - modern, responsive theme
-    custom_dir: overrides  # Custom template overrides directory
-    language: en  # Set language for accessibility
-    
-    # FEATURE CONFIGURATION
-    # Enable various Material theme features for better UX
+    name: material
+    custom_dir: overrides
     features:
-        # Navigation enhancements
-        - navigation.top          # Back-to-top button
-        - navigation.footer       # Previous/next navigation in footer
-        - navigation.indexes      # Section index pages
-        - navigation.tabs         # Top-level tabs navigation
-        - navigation.tracking     # Track navigation state in URL
-        # - navigation.expand       # Expand all navigation sections by default
-        # - navigation.instant      # Fast page loading (SPA-like behavior)
-        # - navigation.instant.prefetch  # Prefetch pages on hover
-        # - navigation.instant.progress  # Show loading progress bar
-        # - navigation.prune        # Prune navigation for large sites
-        # - navigation.sections     # Group pages into sections
-        # - navigation.tabs.sticky  # Sticky navigation tabs
-        
-        # Content enhancements
-        - content.action.edit     # Edit page button
-        - content.action.view     # View source button
-        - content.code.annotate   # Code annotation support
-        - content.code.copy       # Copy code button
-        - content.tooltips        # Enhanced tooltips
-        # - content.code.select     # Select code blocks
-        # - content.tabs.link       # Link content tabs
-        
-        # Search enhancements
-        - search.highlight        # Highlight search terms
-        - search.share           # Share search results
-        - search.suggest         # Search suggestions
-        
-        # Table of contents
-        - toc.follow             # Follow scroll position in TOC
-        # - toc.integrate          # Integrate TOC into navigation
-        
-        # Header and announcements
-        - announce.dismiss       # Dismissible announcements
-        # - header.autohide        # Auto-hide header on scroll
+        - navigation.top
+        - announce.dismiss
+        - content.action.edit
+        - content.action.view
+        - content.code.annotate
+        - content.code.copy
+        # - content.code.select
+        # - content.tabs.link
+        - content.tooltips
+        # - header.autohide
+        # - navigation.expand
+        - navigation.footer
+        - navigation.indexes
+        # - navigation.instant
+        # - navigation.instant.prefetch
+        # - navigation.instant.progress
+        # - navigation.prune
+        # - navigation.sections
+        - navigation.tabs
+        # - navigation.tabs.sticky
+        - navigation.top
+        - navigation.tracking
+        - search.highlight
+        - search.share
+        - search.suggest
+        - toc.follow
+        # - toc.integrate
 
-    # COLOR PALETTE CONFIGURATION
-    # Supports system preference with manual overrides
     palette:
-        # System preference (automatic)
         - media: "(prefers-color-scheme)"
           toggle:
-            icon: material/brightness-auto
+            icon: material/link
             name: Switch to light mode
-            
-        # Light mode
         - media: "(prefers-color-scheme: light)"
           scheme: default
-          primary: indigo         # Primary color for headers, links
-          accent: indigo          # Accent color for interactive elements
+          primary: indigo
+          accent: indigo
           toggle:
-            icon: material/brightness-7
+            icon: material/toggle-switch
             name: Switch to dark mode
-            
-        # Dark mode
         - media: "(prefers-color-scheme: dark)"
-          scheme: slate           # Dark theme variant
-          primary: black          # Primary color for dark mode
-          accent: indigo          # Consistent accent color
+          scheme: slate
+          primary: black
+          accent: indigo
           toggle:
-            icon: material/brightness-4
-            name: Switch to system preference
-    
-    # TYPOGRAPHY CONFIGURATION
-    # Using system fonts for better performance and accessibility
+              icon: material/toggle-switch-off
+              name: Switch to system preference
     font:
-        text: Roboto            # Clear, readable font for body text
-        code: Roboto Mono       # Monospace font for code blocks
-        
-    # ASSETS AND ICONS
+        text: Roboto
+        code: Roboto Mono
     favicon: assets/favicon.png
-    logo: assets/logo.png       # Site logo (ensure file exists)
     icon:
-        repo: fontawesome/brands/github  # GitHub icon for repository link
-        # Additional icon options:
-        # edit: material/pencil           # Edit page icon
-        # view: material/eye              # View source icon
+        repo: fontawesome/brands/github
+        logo: logo
 
 
-# ==============================================================================
-# NAVIGATION CONFIGURATION
-# ==============================================================================
-# Organized hierarchical navigation structure
-# Note: Consider using mkdocs-awesome-pages-plugin for more flexible navigation management
 nav:
 #<START_BINDING>
     - What is Dynamic Telemetry:
@@ -268,38 +223,19 @@ nav:
 #<END_BINDING>
 
 
-# ==============================================================================
-# BUILD HOOKS
-# ==============================================================================
-# Custom Python hooks for build-time processing
 hooks:
-    - main/CDocs.hooks.py  # Custom documentation generation hooks
+    - main/CDocs.hooks.py
 
-# ==============================================================================
-# PLUGINS CONFIGURATION
-# ==============================================================================
-# Plugins extend MkDocs functionality - order matters for some plugins
 plugins:
-    # CORE PLUGINS
-    - search:               # Built-in search functionality
-        separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
-        lang: en
-        
-    # DIAGRAM AND VISUALIZATION PLUGINS
-    - mermaid2:            # Mermaid diagram support
-        version: 10.4.0   # Specify version for consistency
-        arguments:
-          theme: |
-            ^(JSON.parse(__md_get("__palette").index == 1)) ?
-            'dark' : 'light'  # Theme based on color scheme
-            
-    # CONTENT ENHANCEMENT PLUGINS
-    - macros:              # Template macros and variables
-        # Documentation: https://mkdocs-macros-plugin.readthedocs.io/
-        # module_name: main/CDocs.hooks
-        
-    - include-markdown:    # Include external markdown files
-        encoding: utf-8    # Updated from ascii for better Unicode support
+    - search
+    - mermaid2
+    - macros #https://mkdocs-macros-plugin.readthedocs.io/en/latest/
+    - redirects:
+        redirect_maps:
+            'index.md' : "docs/index.md"
+
+    - include-markdown:
+        encoding: ascii
         preserve_includer_indent: false
         dedent: false
         trailing_newlines: true
@@ -307,99 +243,38 @@ plugins:
         rewrite_relative_urls: true
         heading_offset: 0
         recursive: true
-        
-    - mkdocs-video:        # Video embedding support
-        is_video: true
-        video_muted: true
-        video_controls: true
-        css_style:
-          width: "100%"
-          max-width: "800px"
-        
-    # NAVIGATION PLUGINS
-    - redirects:           # Handle URL redirects
-        redirect_maps:
-            'index.md': "docs/index.md"
-            
-    # SUGGESTED ADDITIONAL PLUGINS (commented out - uncomment to enable):
-    # - minify:            # Minify HTML, CSS, JS for better performance
-    #     minify_html: true
-    #     minify_css: true
-    #     minify_js: true
-    #     htmlmin_opts:
-    #         remove_comments: true
-    #         
-    # - git-revision-date-localized:  # Add last updated dates
-    #     type: date
-    #     timezone: UTC
-    #     locale: en
-    #     
-    # - awesome-pages:     # Flexible page organization
-    #     filename: .pages
-    #     collapse_single_pages: true
-    #     
-    # - social:            # Social media cards
-    #     cards_layout_options:
-    #       color: "#2196F3"
+
+    - mkdocs-video:
+        is_video: True
+        video_muted: True
+        video_controls: True
 
 
-# ==============================================================================
-# MARKDOWN EXTENSIONS
-# ==============================================================================
-# Configure Markdown processing and syntax extensions
 markdown_extensions:
-  # CORE EXTENSIONS
-  - attr_list          # Add HTML attributes to elements
-  - footnotes          # Footnote support
-  - md_in_html         # Markdown inside HTML tags
-  - admonition         # Callout blocks (notes, warnings, etc.)
-  - def_list           # Definition lists
-  - abbr               # Abbreviation support
-  - meta               # Metadata support
-  
-  # PYMDOWN EXTENSIONS - Enhanced Markdown features
-  - pymdownx.details   # Collapsible content sections
-  
-  # CODE HIGHLIGHTING
-  - pymdownx.highlight:
-      anchor_linenums: true      # Anchor line numbers for linking
-      line_spans: __span         # Add spans for line highlighting
-      pygments_lang_class: true  # Add language class to code blocks
-      auto_title: true           # Auto-generate titles for code blocks
-      
-  - pymdownx.inlinehilite       # Inline code highlighting
-  - pymdownx.snippets:          # Include code snippets from files
-      base_path: [docs]
-      check_paths: true
+  - attr_list
+  - footnotes
+  - md_in_html
+  - admonition
+  - pymdownx.details
 
-  # ADVANCED CODE BLOCKS WITH CUSTOM FENCES
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+
+
   - pymdownx.superfences:
-      preserve_tabs: true        # Preserve tab characters
+        # make exceptions to highlighting of code:
       custom_fences:
-        - name: mermaid          # Mermaid diagram integration
+        - name: mermaid
           class: mermaid
           format: !!python/name:mermaid2.fence_mermaid_custom
 
-  # CONTENT ENHANCEMENT
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-      
-  - pymdownx.tabbed:            # Tabbed content sections
-      alternate_style: true
-      
-  - pymdownx.tasklist:          # Task lists with checkboxes
-      custom_checkbox: true
-      
-  - pymdownx.keys              # Keyboard key styling
-  - pymdownx.mark              # Text highlighting
-  - pymdownx.tilde             # Strikethrough and subscript
-  - pymdownx.caret             # Superscript and underline
-  
-  # TABLE ENHANCEMENTS
-  - tables                     # Enhanced table support
-
-  # BLOCK EXTENSIONS FOR ADMONITIONS
   - pymdownx.blocks.details:
       types:
       - name: details-new
@@ -414,11 +289,10 @@ markdown_extensions:
         class: info
       - name: details-tip
         class: tip
-        
   - pymdownx.blocks.admonition:
       types:
       - new
-      - settings  
+      - settings
       - note
       - abstract
       - info
@@ -432,35 +306,14 @@ markdown_extensions:
       - example
       - quote
 
-# ==============================================================================
-# FOOTER AND LEGAL
-# ==============================================================================
 copyright: >
-  Copyright &copy; 2024 Microsoft Corporation -
   <a href="#__consent">Change cookie / analytics settings</a>
 
-# ==============================================================================
-# EXTRA CONFIGURATION
-# ==============================================================================
 extra:
-  # Disable "Created with MkDocs" generator notice
   generator: false
-  
-  # VERSION INFORMATION (if applicable)
-  # version:
-  #   provider: mike  # For versioned documentation
-  #   default: stable
-  
-  # SOCIAL LINKS (add your project's social media)
-  # social:
-  #   - icon: fontawesome/brands/github
-  #     link: https://github.com/microsoft/DynamicTelemetry
-  #   - icon: fontawesome/brands/twitter  
-  #     link: https://twitter.com/microsoft
-  #   - icon: fontawesome/brands/linkedin
-  #     link: https://linkedin.com/company/microsoft
 
-  # CONSENT AND ANALYTICS CONFIGURATION
+
+
   consent:
     title: Cookie consent
     description: >-
@@ -468,29 +321,25 @@ extra:
       as to measure the effectiveness of our documentation and whether users
       find what they're searching for. With your consent, you're helping us to
       make our documentation better.
+
     cookies:
       analytics:
-        name: Analytics
-        value: required          # Changed from "Testing1234" to more appropriate value
-        checked: false           # Default to unchecked for privacy
+        name: Viewing Analytics
+        value: Testing1234
+        checked: true
 
-  # ANALYTICS CONFIGURATION
+
   analytics:
-    provider: custom            # Custom analytics implementation
-    property: G-XXXXXXXXXX      # Replace with actual Google Analytics ID
+    provider: custom
     actions:
       - accept
-      - reject  
+      - reject
       - manage
 
-# ==============================================================================
-# CUSTOM ASSETS
-# ==============================================================================
-# Custom CSS for enhanced styling and accessibility
+
+
 extra_css:
     - extra.css
 
-# Custom JavaScript for enhanced functionality  
 extra_javascript:
-    - javascripts/consent.js
-    # - javascripts/custom.js    # Add custom JavaScript if needed
+  - javascripts/consent.js
