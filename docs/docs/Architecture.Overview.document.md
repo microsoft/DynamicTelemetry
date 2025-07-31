@@ -5,7 +5,7 @@ status: ReviewLevel1b
 
 # Architectural Survey
 
-Dynamic Telemetry is a suite of
+DynamicTelemetry is an articulation of the embodiment of a suite of
 Observability tools, designed to manage, control, and reshape telemetry in
 [Production](./PositionPaper.DefiningProduction.document.md) systems.
 
