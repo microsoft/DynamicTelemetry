@@ -48,6 +48,8 @@ if ! command -v pdflatex &> /dev/null; then
     sudo apt install -y ${apt_packages}
 fi
 
+pip install pygments
+
 echo "Versions of tools:"
 echo "---------------------------"
 echo "Git Version:"

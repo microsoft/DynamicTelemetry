@@ -1,9 +1,9 @@
 # Project
 
-*You're at the main github location hosting the unrendered markdown for Dynamic
-Telemetry.  If you'd prefer more pleasing to read, rendered HTML, please visit
+*You're at the main GitHub location hosting the unrendered markdown for Dynamic
+Telemetry. If you'd prefer to read more polished, rendered HTML, please visit
 [https://microsoft.github.io/DynamicTelemetry/](https://microsoft.github.io/DynamicTelemetry/).
-PDF, DOCX, and EPUB versions are available for download in the 'Releases'
+PDF, DOCX, and EPUB versions are available for download in the Releases
 section of GitHub.
 
 Dynamic Telemetry is an effort to make debugging highly scaled
@@ -41,9 +41,6 @@ We invite you to join us in this journey to improve system stability and
 performance through Dynamic Telemetry. Let's work together to address
 these challenges and make debugging in production environments more
 efficient and effective.
-
-Feel free to modify this draft as needed. Let us know if there's
-anything else you'd like to add or change!
 
 ## Contributing
 

@@ -23,6 +23,7 @@ if [ ! -f "${CDOCS_MARKDOWN_RENDER_PATH}/tools/CDocsMarkdownCommentRender/bin/De
     echo "ERROR: CDocsMarkdownCommentRender binary not found in CDOCS_MARKDOWN_RENDER_PATH: ${CDOCS_MARKDOWN_RENDER_PATH}"
     dotnet build ${CDOCS_MARKDOWN_RENDER_PATH}/tools/CDocsMarkdownCommentRender
 fi
+
 if [ ! -f "${CDOCS_MARKDOWN_RENDER_PATH}/tools/CDocsMarkdownCommentRender/bin/Debug/net8.0/CDocsMarkdownCommentRender" ]; then
     echo "ERROR: CDocsMarkdownCommentRender binary not found in CDOCS_MARKDOWN_RENDER_PATH: ${CDOCS_MARKDOWN_RENDER_PATH}"
     exit 1
@@ -54,13 +55,16 @@ if [ ! -d "${DT_ORIG_MEDIA_DIR}" ]; then
 fi
 
 #
-# See if the pandoc image exists; if not, pull it
+# See if the pandoc image exists; if not, pull it - we're inspecting
+#    the location of the file, and not calling the executable, because
+#    of struggles with WSL2, where Windows<-->Linux interop is indicating
+#    the presence of Docker
 #
 echo "Determining if we're using docker or podman, docker preferred"
-if command -v docker &> /dev/null; then
+if [ -f "/usr/bin/docker" ]; then
     echo "Using Docker."
     container_tool="docker"
-elif command -v podman &> /dev/null; then
+elif [ -f "/usr/bin/podman" ]; &> /dev/null; then
     echo "Using podman"
     container_tool="podman"
 else
