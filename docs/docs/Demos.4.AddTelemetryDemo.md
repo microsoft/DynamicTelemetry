@@ -1,6 +1,6 @@
 ---
 author: "Chris Gray"
-status: ReviewLevel1b
+status: ReviewLevel2
 ---
 
 # Diagnostic Demo: Dynamically Adding a Row of Telemetry
