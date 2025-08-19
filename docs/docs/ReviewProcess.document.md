@@ -31,7 +31,7 @@ Meeds ReviewLevel1, plus talking points are enumerated. Must contain the phrase
 
 ### ReviewLevel2 (PRE-DRAFT)
 
-Meets ReviewLeverl 1b, plus document has been created but not ready to take feedback.
+Meets ReviewLevel1b, plus document has been created but not ready to take feedback.
 
 ### ReviewLevel3 (DRAFT)
 
