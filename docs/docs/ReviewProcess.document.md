@@ -8,33 +8,43 @@ status: ReviewLevel1
 Because there are many stakeholders and dynamic telemetry, each document has a
 header that describes the state of review.
 
+The status of documents are included in the status of the document,  eg
+
+```cdocs
+author: <name of the primary author>
+status: <one of the below status>
+```
+
 Below are the different stages:
 
 ## Stages of Review
 
 ### ReviewLevel1 (Incomplete)
 
-Placeholder; incomplete or unwritten
+Placeholder; incomplete or unwritten.  Must contain the phrase "COMING SOON" in
+the markdown header.
 
 ### ReviewLevel1b (Talking Points)
 
-ReviewLevel1 plus talking points are enumerated
+Meeds ReviewLevel1, plus talking points are enumerated. Must contain the phrase
+"TALKING_POINTS" in the markdown header.
 
 ### ReviewLevel2 (PRE-DRAFT)
 
-ReviewLeverl 1b, plus document has been written
+Meets ReviewLeverl 1b, plus document has been created but not ready to take feedback.
 
 ### ReviewLevel3 (DRAFT)
 
-ReviewLevel2, but in in review
+Meets ReviewLevel2, but is ready for feedback.
 
 ### ReviewLevel4 (PENDING)
 
-ReviewLevel3, but generally accepted
+Meets ReviewLevel3, has taken feedback, and is generally 'locked'
 
 ### ReviewLevel5 (COMPLETE)
 
-ReviewLevel4, signed off
+Meets ReviewLevel4, and is signed off and 'locked'.  Changes can still be made,
+but they're in errata form.
 
 ## Status of Documents
 
