@@ -27,8 +27,8 @@ documentation.
 
 ## Demonstration
 
-In this demonstration, we're going to showcase the broad architecture points
-found in added Dynamic Telemetry. We'll build on the standard OpenTelemetry
+In this demonstration, we're going to showcase the broad architectural points
+provided by Dynamic Telemetry. We'll build on the standard OpenTelemetry
 Kubernetes sample without modifying or recompiling any code. This showcases the
 seamless integration and powerful capabilities of Dynamic Telemetry.
 

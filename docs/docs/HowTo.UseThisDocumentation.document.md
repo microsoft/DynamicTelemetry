@@ -16,8 +16,7 @@ efforts with a broader perspective.
 
 Dynamic Telemetry does not describe a single implementation of Observability, or
 Telemetry. It is not intended to focus exclusively on one operating system, one
-cloud
-provider, or one database.
+cloud provider, or one database.
 
 Think of Dynamic Telemetry as a map, into the future and past of Observability.
 
