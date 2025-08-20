@@ -1,15 +1,22 @@
 ---
 author: "Chris Gray"
-status: ReviewLevel4
+status: ReviewLevel3
 ---
 
 # Review Process
 
 ## Review Process Overview
 
-The Dynamic Telemetry project involves multiple stakeholders, complex technical concepts, and evolving requirements that demand a systematic approach to documentation review and approval. This document establishes a comprehensive review process designed to ensure quality, consistency, and stakeholder alignment throughout the documentation lifecycle.
+The Dynamic Telemetry project involves multiple stakeholders, complex technical
+concepts, and evolving requirements that demand a systematic approach to
+documentation review and approval. This document establishes a comprehensive
+review process designed to ensure quality, consistency, and stakeholder
+alignment throughout the documentation lifecycle.
 
-Given the complexity of dynamic telemetry systems and the diverse audience (developers, operators, architects, product managers, and end users), a structured review process is essential to prevent miscommunication, reduce technical debt, and maintain documentation quality standards.
+Given the complexity of dynamic telemetry systems and the diverse audience
+(developers, operators, architects, product managers, and end users), a
+structured review process is essential to prevent miscommunication, reduce
+technical debt, and maintain documentation quality standards.
 
 ## Purpose and Benefits of the Review Process
 
@@ -17,26 +24,39 @@ Given the complexity of dynamic telemetry systems and the diverse audience (deve
 
 The multi-stage review process serves several critical purposes:
 
-1. **Quality Assurance**: Each stage acts as a quality gate, ensuring that documents meet specific criteria before advancing to the next level. This prevents low-quality or incomplete information from being disseminated to stakeholders.
+1. **Quality Assurance**: Each stage acts as a quality gate, ensuring that
+   documents meet specific criteria before advancing to the next level. This
+   prevents low-quality or incomplete information from being disseminated to
+   stakeholders.
 
-2. **Stakeholder Alignment**: Different review levels accommodate different stakeholder needs. Early stages allow for rapid iteration among technical contributors, while later stages involve broader stakeholder review and formal sign-off.
+2. **Stakeholder Alignment**: Different review levels accommodate different
+   stakeholder needs. Early stages allow for rapid iteration among technical
+   contributors, while later stages involve broader stakeholder review and
+   formal sign-off.
 
-3. **Risk Mitigation**: By establishing clear gates for forward progress, we reduce the risk of implementing features or processes based on incomplete or inaccurate documentation.
+3. **Risk Mitigation**: By establishing clear gates for forward progress, we
+   reduce the risk of implementing features or processes based on incomplete or
+   inaccurate documentation.
 
-4. **Resource Optimization**: The staged approach allows teams to invest appropriate levels of effort at each phase, avoiding over-engineering early drafts while ensuring thorough review of finalized documents.
+4. **Resource Optimization**: The staged approach allows teams to invest
+   appropriate levels of effort at each phase, avoiding over-engineering early
+   drafts while ensuring thorough review of finalized documents.
 
-5. **Change Management**: Clear status indicators help teams understand when documents are stable enough to base decisions upon, and when they should expect continued evolution.
+5. **Change Management**: Clear status indicators help teams understand when
+   documents are stable enough to base decisions upon, and when they should
+   expect continued evolution.
 
 ### Reducing Confusion Through Clear Status
 
-Each document includes a standardized header that immediately communicates its review status:
+Each document includes a standardized header that immediately communicates its
+review status:
 
-```yaml
+```cdocs
 author: <name of the primary author>
 status: <one of the review levels defined below>
 ```
 
-This front-matter approach ensures that readers immediately understand:
+This approach ensures that readers immediately understand:
 
 - Who is responsible for the document's content
 - What level of review and validation the document has received
@@ -45,11 +65,13 @@ This front-matter approach ensures that readers immediately understand:
 
 ## Detailed Review Stages
 
-The review process consists of six distinct stages, each with specific entry criteria, deliverables, and exit gates:
+The review process consists of six distinct stages, each with specific entry
+criteria, deliverables, and exit gates:
 
 ### ReviewLevel1 (Incomplete)
 
-**Purpose**: Placeholder stage for documents that are planned but not yet started or are in very early development.
+**Purpose**: Placeholder stage for documents that are planned but not yet
+started or are in very early development.
 
 **Entry Criteria**:
 
@@ -59,7 +81,6 @@ The review process consists of six distinct stages, each with specific entry cri
 
 **Requirements**:
 
-- Must contain the phrase "COMING SOON" in the markdown header
 - Should include basic metadata (author, intended audience, scope)
 - May contain high-level outline or table of contents
 
@@ -74,7 +95,8 @@ The review process consists of six distinct stages, each with specific entry cri
 
 ### ReviewLevel1b (Talking Points)
 
-**Purpose**: Establishes the foundation and scope of the document through structured talking points.
+**Purpose**: Establishes the foundation and scope of the document through
+structured talking points.
 
 **Entry Criteria**:
 
@@ -83,7 +105,6 @@ The review process consists of six distinct stages, each with specific entry cri
 
 **Requirements**:
 
-- Must contain the phrase "TALKING_POINTS" in the markdown header
 - All major sections identified with talking points enumerated
 - Key concepts, terminology, and scope clearly defined
 - Target audience and use cases specified
@@ -94,13 +115,15 @@ The review process consists of six distinct stages, each with specific entry cri
 - Section structure is logical and comprehensive
 - Primary stakeholders have reviewed and approved the approach
 
-**Stakeholder Involvement**: Primary author, technical leads, immediate team members
+**Stakeholder Involvement**: Primary author, technical leads, immediate team
+members
 
 **Typical Duration**: 1-2 weeks for talking point development and initial review
 
 ### ReviewLevel2 (PRE-DRAFT)
 
-**Purpose**: Full content development phase where the document is being actively written but not yet ready for broader feedback.
+**Purpose**: Full content development phase where the document is being actively
+written but not yet ready for broader feedback.
 
 **Entry Criteria**:
 
@@ -120,13 +143,15 @@ The review process consists of six distinct stages, each with specific entry cri
 - Author believes content is technically accurate and ready for review
 - All major sections are substantively complete
 
-**Stakeholder Involvement**: Primary author, subject matter experts, immediate technical team
+**Stakeholder Involvement**: Primary author, subject matter experts, immediate
+technical team
 
 **Typical Duration**: 2-4 weeks depending on document complexity
 
 ### ReviewLevel3 (DRAFT)
 
-**Purpose**: Collaborative review phase where the document is stable enough for broader stakeholder feedback.
+**Purpose**: Collaborative review phase where the document is stable enough for
+broader stakeholder feedback.
 
 **Entry Criteria**:
 
@@ -146,13 +171,15 @@ The review process consists of six distinct stages, each with specific entry cri
 - No major gaps or inaccuracies remain
 - Document serves its intended purpose effectively
 
-**Stakeholder Involvement**: Extended team, cross-functional reviewers, potential end users
+**Stakeholder Involvement**: Extended team, cross-functional reviewers,
+potential end users
 
 **Typical Duration**: 2-3 weeks for review cycles and revision
 
 ### ReviewLevel4 (PENDING)
 
-**Purpose**: Final validation phase where the document is functionally complete and undergoing final approval processes.
+**Purpose**: Final validation phase where the document is functionally complete
+and undergoing final approval processes.
 
 **Entry Criteria**:
 
@@ -178,7 +205,8 @@ The review process consists of six distinct stages, each with specific entry cri
 
 ### ReviewLevel5 (COMPLETE)
 
-**Purpose**: Fully approved and locked documentation that serves as authoritative reference.
+**Purpose**: Fully approved and locked documentation that serves as
+authoritative reference.
 
 **Entry Criteria**:
 
@@ -198,9 +226,11 @@ The review process consists of six distinct stages, each with specific entry cri
 - Modifications are tracked as errata or versioned updates
 - Impact assessment required for any substantive changes
 
-**Stakeholder Involvement**: Document owner for maintenance, formal change control board for modifications
+**Stakeholder Involvement**: Document owner for maintenance, formal change
+control board for modifications
 
-**Maintenance**: Ongoing maintenance as needed, formal review cycles as defined by document type
+**Maintenance**: Ongoing maintenance as needed, formal review cycles as defined
+by document type
 
 ## Implementation Guidelines
 
@@ -225,7 +255,8 @@ The review process consists of six distinct stages, each with specific entry cri
 **Review Responsibilities by Level**:
 
 - **ReviewLevel1-2**: Focus on scope, approach, and technical accuracy
-- **ReviewLevel3**: Provide comprehensive feedback on content, clarity, and completeness
+- **ReviewLevel3**: Provide comprehensive feedback on content, clarity, and
+  completeness
 - **ReviewLevel4**: Final validation and formal approval
 - **ReviewLevel5**: Ongoing maintenance review as needed
 
@@ -260,49 +291,7 @@ Each transition between review levels requires meeting specific criteria:
 | ReviewLevel3 | ReviewLevel4 | All feedback addressed, stakeholder review complete | Cross-functional approval |
 | ReviewLevel4 | ReviewLevel5 | Final sign-off, no blocking issues | Formal approval process |
 
-### Preventing Common Progression Issues
-
-**Early Stage Problems**:
-
-- Insufficient scope definition leading to scope creep
-- Missing stakeholder identification causing late-stage conflicts
-- Inadequate talking points resulting in structural revisions
-
-**Mid-Stage Problems**:
-
-- Premature advancement to draft stage with incomplete content
-- Inadequate technical review leading to accuracy issues
-- Poor feedback management causing revision cycles
-
-**Late Stage Problems**:
-
-- Attempting to make major changes during pending review
-- Insufficient stakeholder buy-in causing approval delays
-- Inadequate change control for completed documents
-
-## Metrics and Success Criteria
-
-### Process Effectiveness Metrics
-
-**Efficiency Indicators**:
-
-- Average time spent in each review level
-- Number of backward progressions (returning to previous levels)
-- Stakeholder satisfaction with review timing and quality
-
-**Quality Indicators**:
-
-- Number of post-completion errata or corrections needed
-- Stakeholder feedback scores on document usefulness
-- Frequency of references and citations by other documents
-
-**Process Improvement**:
-
-- Regular review of gate criteria effectiveness
-- Stakeholder feedback on process burden and value
-- Continuous refinement of review level definitions
-
-## Status of Documents
+## Status of (Current) Documents
 
 ![](../orig_media/DocumentStatus.png)
 
@@ -312,10 +301,15 @@ Each transition between review levels requires meeting specific criteria:
 
 ## Change Management for This Document
 
-This ReviewProcess.document.md itself follows the review process it defines. Changes to the review process require:
+This ReviewProcess.document.md itself follows the review process it defines.
+Changes to the review process require:
 
-1. **Minor Updates** (clarifications, typos): Direct edit with notification to document users
-2. **Process Improvements** (new criteria, modified gates): ReviewLevel3 process with stakeholder review
-3. **Major Changes** (new review levels, fundamental process changes): Full ReviewLevel1-5 process with formal approval
+1. **Minor Updates** (clarifications, typos): Direct edit with notification to
+   document users
+2. **Process Improvements** (new criteria, modified gates): ReviewLevel3 process
+   with stakeholder review
+3. **Major Changes** (new review levels, fundamental process changes): Full
+   ReviewLevel1-5 process with formal approval
 
-For questions about this review process or suggestions for improvement, contact the document author or raise issues through the established feedback channels.
+For questions about this review process or suggestions for improvement, contact
+the document author or raise issues through the established feedback channels.
