@@ -282,14 +282,14 @@ by document type
 
 Each transition between review levels requires meeting specific criteria:
 
-| From Level | To Level | Required Criteria | Approval Required |
-|------------|----------|-------------------|-------------------|
-| - | ReviewLevel1 | Document concept approved, author assigned | Team lead |
-| ReviewLevel1 | ReviewLevel1b | Talking points enumerated, scope defined | Primary stakeholders |
-| ReviewLevel1b | ReviewLevel2 | All sections have substantial content | Technical review |
-| ReviewLevel2 | ReviewLevel3 | Content complete, ready for feedback | Author certification |
-| ReviewLevel3 | ReviewLevel4 | All feedback addressed, stakeholder review complete | Cross-functional approval |
-| ReviewLevel4 | ReviewLevel5 | Final sign-off, no blocking issues | Formal approval process |
+| From Level | To Level | Required Criteria |
+|------------|----------|-------------------|
+| - | ReviewLevel1 | Document concept approved, author assigned |
+| ReviewLevel1 | ReviewLevel1b | Talking points/scope defined |
+| ReviewLevel1b | ReviewLevel2 | All sections have substantial content |
+| ReviewLevel2 | ReviewLevel3 | Content complete, ready for feedback |
+| ReviewLevel3 | ReviewLevel4 | Feedback addressed+stakeholder review complete |
+| ReviewLevel4 | ReviewLevel5 | Final sign-off, no blocking issues |
 
 ## Status of (Current) Documents
 
