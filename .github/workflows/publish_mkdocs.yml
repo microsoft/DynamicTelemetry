@@ -25,4 +25,5 @@ jobs:
           mkdocs-macros-plugin \
           mkdocs-video mkdocs-redirects
 
-    - run: mkdocs build -s
+    - name: Attempt strict compilation of docs
+      run: mkdocs build -s
