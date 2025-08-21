@@ -1,9 +1,9 @@
 name: Publish GitHub Pages
 on:
-  push:
-    branches:
-      - user/chgray/auto_publish_main_mkdocs
-
+   workflow_run:
+    workflows: ["Lint - Spelling & Encoding"]
+    types:
+      - completed
 jobs:
   build_mkdocs:
     runs-on: ubuntu-latest
