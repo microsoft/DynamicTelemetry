@@ -2,7 +2,6 @@ name: Publish GitHub Pages
 
 on:
   pull_request:
-    branches: [ user/chgray/auto_publish_main_mkdocs ]
     branches: [ main ]
 
 jobs:
