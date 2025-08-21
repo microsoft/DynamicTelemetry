@@ -1,15 +1,18 @@
 name: Publish GitHub Pages
+
 on:
   workflow_run:
-  workflows: ["Lint - Spelling & Encoding"]
-  types:
+    workflows: ["Lint - Spelling & Encoding"]
+    types:
+      - completed
+    branches: [user/chgray/auto_publish_main_mkdocs]
 
-  - completed
+
+
 jobs:
   build_mkdocs:
     runs-on: ubuntu-latest
-    # needs: run-markdownlint
-    workflows: ["Lint - Spelling & Encoding"]
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
     steps:
     - name: Checkout code
