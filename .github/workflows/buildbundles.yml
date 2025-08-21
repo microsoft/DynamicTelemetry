@@ -9,7 +9,6 @@ on:
 jobs:
   Generating-Bound-Versions:
     runs-on: ubuntu-latest
-    needs: quality-okay
 
     steps:
       - uses: actions/checkout@v4
