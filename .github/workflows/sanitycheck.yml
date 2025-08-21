@@ -9,7 +9,7 @@ on:
 jobs:
   run-misspell:
     runs-on: ubuntu-22.04
-    
+
     steps:
     - name: check out code
       uses: actions/checkout@v4
