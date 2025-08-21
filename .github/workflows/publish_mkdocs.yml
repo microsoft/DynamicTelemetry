@@ -1,9 +1,10 @@
 name: Publish GitHub Pages
 on:
    workflow_run:
-    workflows: ["Lint - Spelling & Encoding"]
-    types:
-      - completed
+   workflows: ["Lint - Spelling & Encoding"]
+   types:
+     - completed
+
 jobs:
   build_mkdocs:
     runs-on: ubuntu-latest
