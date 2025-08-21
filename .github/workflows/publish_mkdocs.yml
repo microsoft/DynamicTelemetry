@@ -8,6 +8,7 @@ jobs:
   build_mkdocs:
     runs-on: ubuntu-latest
     # needs: run-markdownlint
+    workflows: ["Lint - Spelling & Encoding"]
 
     steps:
     - name: Checkout code
