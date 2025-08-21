@@ -1,6 +1,8 @@
 name: Publish GitHub Pages
 
 on:
+  pull_request:
+    branches: [ main ]
   workflow_run:
     workflows: ["Lint-Spelling-and-Encoding"]
     types:
