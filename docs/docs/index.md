@@ -10,7 +10,7 @@ description : Introduction to DynamicTelemetry
 height="1.261111111111111in"}
 
 Introducing DynamicTelemetry, an open-source, diagnostic complement to
-OpenTelemetry.
+OpenTelemetry 1234.
 
 **The DynamicTelemetry project aims to make debugging highly scaled
 production software as easy and enjoyable as debugging a single application
