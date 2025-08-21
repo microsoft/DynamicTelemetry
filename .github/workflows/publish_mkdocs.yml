@@ -4,17 +4,10 @@ on:
   pull_request:
     branches: [ user/chgray/auto_publish_main_mkdocs ]
     branches: [ main ]
-  workflow_run:
-    workflows: ["Lint-Spelling-and-Encoding"]
-    types:
-      - completed
-  workflow_dispatch:
-
 
 jobs:
   build_mkdocs:
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
     steps:
     - name: Checkout code
