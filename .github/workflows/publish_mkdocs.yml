@@ -27,3 +27,6 @@ jobs:
 
     - name: Attempt strict compilation of docs
       run: mkdocs build -s
+
+    - name: Verify we stop if previous fails
+      run: df
