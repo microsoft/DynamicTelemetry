@@ -147,7 +147,7 @@ OpenTelemetry's standard protocols and specifications.
 
 Where there could be some struggles; and something to monitor, is that Dynamic
 Telemetry makes use of triggering
-[Actions](./Architecture.Action.Explanation.document.md). These Actions benefit
+[Actions](./Architecture.Actions.Overview.document.md). These Actions benefit
 from ability to decode and understand logging.
 
 Where Dynamic Telemetry may find itself

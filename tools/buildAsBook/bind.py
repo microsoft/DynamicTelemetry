@@ -133,7 +133,7 @@ def process_markdown_files(docs_dir, bound_docs_dir, mkdocs_content):
 
         # Convert using pandoc
         dest_file = os.path.join(bound_docs_dir, dest_leaf)
-        cmd = f'pandoc -i "{source_file}" -o "{dest_file}" --filter CDocsMarkdownCommentRender --lua-filter=../../tools/newpage-to-openxml.lua'
+        cmd = f'pandoc -i "{source_file}" -o "{dest_file}" --lua-filter=../../tools/newpage-to-openxml.lua'
 
         print("")
         print(f"# Converting {source_file} ==> {dest_leaf}")
