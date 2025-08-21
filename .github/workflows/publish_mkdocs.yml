@@ -27,6 +27,6 @@ jobs:
 
     - name: Attempt strict compilation of docs
       run: mkdocs build -s
-      
+
     - name: Publish
       run: mkdocs gh-deploy -s
