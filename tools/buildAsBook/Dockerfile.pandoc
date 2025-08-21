@@ -94,7 +94,6 @@ ENV PATH=$PATH:$DOTNET_ROOT/tools
 # RUN dotnet tool install powershell --global
 
 RUN apt-get install -y -q git
-ENV PATH=$PATH:/Source/CDocs/tools/CDocsMarkdownCommentRender/bin/Debug/net8.0
 RUN apt-get update
 RUN apt-get install -y -q podman
 RUN apt-get install -y -q tmux

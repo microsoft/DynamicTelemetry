@@ -4,30 +4,10 @@ set -e
 SCRIPT_PATH=$(dirname "$(realpath "${BASH_SOURCE[0]}")")
 echo "Script path: $SCRIPT_PATH"
 
-export CDOCS_MARKDOWN_RENDER_PATH=$(realpath ${SCRIPT_PATH}/../../CDocs)
 export DT_BOUND_DIR=$(realpath ${SCRIPT_PATH}/../docs/bound_docs)
 export DT_DOCS_DIR=$(realpath ${SCRIPT_PATH}/../docs/docs)
 export DT_ORIG_MEDIA_DIR=$(realpath ${SCRIPT_PATH}/../docs/orig_media)
 
-# Check for required environment variable
-if [ ! -d "${CDOCS_MARKDOWN_RENDER_PATH}" ]; then
-    git clone --branch user/chgray/update_ubuntu http://github.com/chgray/CDocs ${CDOCS_MARKDOWN_RENDER_PATH}
-fi
-
-export PATH=${CDOCS_MARKDOWN_RENDER_PATH}/tools/CDocsMarkdownCommentRender/bin/Debug/net8.0:$PATH$
-export | grep CDOCS
-export | grep DT
-
-# Verify the path exists and contains the required binary
-if [ ! -f "${CDOCS_MARKDOWN_RENDER_PATH}/tools/CDocsMarkdownCommentRender/bin/Debug/net8.0/CDocsMarkdownCommentRender" ]; then
-    echo "ERROR: CDocsMarkdownCommentRender binary not found in CDOCS_MARKDOWN_RENDER_PATH: ${CDOCS_MARKDOWN_RENDER_PATH}"
-    dotnet build ${CDOCS_MARKDOWN_RENDER_PATH}/tools/CDocsMarkdownCommentRender
-fi
-
-if [ ! -f "${CDOCS_MARKDOWN_RENDER_PATH}/tools/CDocsMarkdownCommentRender/bin/Debug/net8.0/CDocsMarkdownCommentRender" ]; then
-    echo "ERROR: CDocsMarkdownCommentRender binary not found in CDOCS_MARKDOWN_RENDER_PATH: ${CDOCS_MARKDOWN_RENDER_PATH}"
-    exit 1
-fi
 
 if [ -z "${DT_BOUND_DIR}" ]; then
     echo "ERROR: DT_BOUND_DIR environment variable must be set"
@@ -54,54 +34,12 @@ if [ ! -d "${DT_ORIG_MEDIA_DIR}" ]; then
     mkdir ${DT_ORIG_MEDIA_DIR}
 fi
 
-#
-# See if the pandoc image exists; if not, pull it - we're inspecting
-#    the location of the file, and not calling the executable, because
-#    of struggles with WSL2, where Windows<-->Linux interop is indicating
-#    the presence of Docker
-#
-echo "Determining if we're using docker or podman, docker preferred"
-if [ -f "/usr/bin/docker" ]; then
-    echo "Using Docker."
-    container_tool="docker"
-elif [ -f "/usr/bin/podman" ]; &> /dev/null; then
-    echo "Using podman"
-    container_tool="podman"
-else
-    echo "Either docker or podman are required"
-    exit 1
-fi
 
-set +e
-${container_tool} image exists docker.io/chgray123/chgray_repro:pandoc
 
-if [ $? -ne 0 ]; then
-    set -e
-    echo "Pulling pandoc image..."
-    ${container_tool} image pull docker.io/chgray123/chgray_repro:pandoc
-fi
-
-set +e
-${container_tool} image exists chgray123/chgray_repro:cdocs.mermaid
-
-if [ $? -ne 0 ]; then
-    set -e
-    echo "Pulling cdocs.mermaid image..."
-    ${container_tool} image pull docker.io/chgray123/chgray_repro:cdocs.mermaid
-fi
 set -e
 
 # Start in our script directory
 cd ${SCRIPT_PATH}
-
-#
-# Setup the Python environment
-#
-# if [ ! -d "/mkdocs_python" ]; then
-#     echo "ERROR: /mkdocs_python not found"
-#     exit 1
-# fi
-# source /mkdocs_python/bin/activate
 
 #
 # READ-WRITE Update Status Page, Probe Images, etc
@@ -120,7 +58,6 @@ echo "Rebuilding Probe Spider..."
 gnuplot ./_BuildProbeSpider.gnuplot
 
 cd ../docs/docs
-
 
 #
 # READ-ONLY: Do Binding and create content in docx/pdf/epub
@@ -170,7 +107,7 @@ fi
 echo "  INPUT_FILE : $inputFile"
 echo "DT_BOUND_DIR : $DT_BOUND_DIR"
 
-args="--toc --toc-depth 4 -N --filter CDocsMarkdownCommentRender"
+args="--toc --toc-depth 4 -N"
 
 export CDOCS_FILTER=1
 pandoc $inputFile -o "$DT_BOUND_DIR/epub_$fileName.a5.epub" --epub-cover-image=../orig_media/DynamicTelemetry.CoPilot.Image.png -V papersize=a5 $args
