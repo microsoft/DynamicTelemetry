@@ -55,7 +55,7 @@ Durable ID.
 ```cdocs_include
 {{ CSharp_Include("../Samples/DurableIds/Pages/Index.cshtml.cs",
     "// StartExample:ContrastDurableID",
-    "// EndExample:ContrastDurableID") 
+    "// EndExample:ContrastDurableID")
 }}
 ```
 
