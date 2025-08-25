@@ -6,7 +6,7 @@ description : Demo Showing DurableID
 
 # Demo 0 - Durable ID's Explanation
 
-## Using DurableID in OpenTelemetry, to locate the source of the the expense
+## Using DurableID in OpenTelemetry, to locate the source of the expense
 
 This demonstration will showcase and contrast two logging messages in
 OpenTelemetry. One will use a Durable ID, and the other will not. It's
@@ -16,10 +16,11 @@ considered a best practice. A Durable ID functions like a GPS or homing
 beacon, mapping any row of telemetry to a specific line of code.
 
 In Microsoft .NET platform, a Durable ID is created automatically at
-compile time for OpenTelemetry user using 'ILogger', when the author of the
-software follows best practices.
+compile-time for an OpenTelemetry user using
+[ILogger](https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.logging.ilogger?view=net-8.0-pp),
+when the author of the software follows best practices.
 
-### Contrasting C# that makes use of Durable ID's, with C# that does not
+### Contrasting C# that makes use of Durable IDs, with C# that does not
 
 Let's examine code that makes use of a Durable ID versus one that
 doesn't. We'll inspect both in the Application Insights Log database, to spot
@@ -27,8 +28,8 @@ the difference.
 
 ### Seeing the DurableID in Azure's Application Insights
 
-Let's start with the recommended way to log in .NET: using 'ILogger', with a
-compiler-generated Durable ID.
+Let's start with the recommended way to log in .NET: using ``ILogger``, with a
+[compiler-time generated](https://learn.microsoft.com/en-us/dotnet/core/extensions/logger-message-generator) Durable ID.
 
 #### Recommended Way to Log
 
@@ -53,13 +54,13 @@ compiler-generated Durable ID.
 ```cdocs_include
 {{ CSharp_Include("../Samples/DurableIds/Pages/Index.cshtml.cs",
     "// StartExample:ContrastDurableID",
-    "// EndExample:ContrastDurableID")
+    "// EndExample:ContrastDurableID") 
 }}
 ```
 
 #### Spotting the difference in your database
 
-While both of these logging methods result in the same printf() ('flatted') log,
+While both of these logging methods result in the same printf() ('flattened') log,
 the one with the Durable ID offers many extra goodies.
 
 Please recall the source snippets above;  when these two lines of code manifest
@@ -96,7 +97,7 @@ as any number of the Dynamic Telemetry scenarios.
 
 ## Use Azure Monitor and KQL language to locate an expensive OpenTelemetry log
 
-Lets go back to the original code;  and use the compiler generated Durable ID to
+Let's go back to the original code;  and use the compiler generated Durable ID to
 quickly count the ILogger log, that followed recommended guidance.
 
 ```cdocs_include
@@ -114,7 +115,7 @@ quickly count the ILogger log, that followed recommended guidance.
 ```
 
 This time, instead of trying to deduplicate with the message (where the GUID all
-bug guarantees each row is unique), we will deduplicate with the
+but guarantees each row is unique), we will deduplicate with the
 extracted EventName field.
 
 ![](../orig_media/Demo.0.DurableID.GroupedByEventName.png)
