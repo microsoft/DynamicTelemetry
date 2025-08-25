@@ -4,9 +4,9 @@ status: ReviewLevel1
 description : Demo Showing DurableID
 ---
 
-# Demo 0 - Durable ID's Explanation
+# Demo 0 - Durable IDs Explanation
 
-## Using DurableID in OpenTelemetry, to locate the source of the expense
+## Using DurableID in OpenTelemetry to locate the source of the expense
 
 This demonstration will showcase and contrast two logging messages in
 OpenTelemetry. One will use a Durable ID, and the other will not. It's
@@ -15,21 +15,22 @@ identifier, even though, in Dynamic Telemetry, the use of the DurableID is
 considered a best practice. A Durable ID functions like a GPS or homing
 beacon, mapping any row of telemetry to a specific line of code.
 
-In Microsoft .NET platform, a Durable ID is created automatically at
+In the Microsoft .NET platform, a Durable ID is created automatically at
 compile-time for an OpenTelemetry user using
 [ILogger](https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.logging.ilogger?view=net-8.0-pp),
 when the author of the software follows best practices.
 
 ### Contrasting C# that makes use of Durable IDs, with C# that does not
 
-Let's examine code that makes use of a Durable ID versus one that
-doesn't. We'll inspect both in the Application Insights Log database, to spot
+Let's examine code that uses a Durable ID versus code that does not.
+We'll inspect both in the Application Insights Log database, to spot
 the difference.
 
 ### Seeing the DurableID in Azure's Application Insights
 
-Let's start with the recommended way to log in .NET: using ``ILogger``, with a
-[compiler-time generated](https://learn.microsoft.com/en-us/dotnet/core/extensions/logger-message-generator) Durable ID.
+Let's start with the recommended way to log in .NET: using `ILogger`, with a
+[compiler-time generated](https://learn.microsoft.com/en-us/dotnet/core/extensions/logger-message-generator)
+Durable ID.
 
 #### Recommended Way to Log
 
@@ -63,7 +64,7 @@ Let's start with the recommended way to log in .NET: using ``ILogger``, with a
 While both of these logging methods result in the same printf() ('flattened') log,
 the one with the Durable ID offers many extra goodies.
 
-Please recall the source snippets above;  when these two lines of code manifest
+Please recall the source snippets above: when these two lines of code manifest
 in our database, they look as follows.
 
 ![](../orig_media/Demo.0.DurableID.WithAndWithoutContrast.png)
@@ -80,25 +81,25 @@ You can see an expanded version of these fields below.
 
 #### Trying to reason over lots of Logs
 
-Scenarios that require performant study and aggregation of clusters of Logs,
-really struggle with 'flattened' logs.  This is discussed more in the
+Scenarios that require performant study and aggregation of clusters of Logs
+really struggle with "flattened" logs. This is discussed more in the
 [Position Paper on Durable
-ID's](./PositionPaper.DurableIds_StructuredPayloads.document.md), but in short,
+IDs](./PositionPaper.DurableIds_StructuredPayloads.document.md), but in short,
 due to the addition of a GUID, each row of telemetry is different from another.
 
 You can see this quickly, with a quick dcount (distinct count) of each message.
 
 ![](../orig_media/Demo.0.DurableID.ShowCollisions.png)
 
-Notice in this screenshot, that the number of distinct messages is similar to
+Notice in this screenshot that the number of distinct messages is similar to
 the number of absolute messages - without a Durable ID, spotting the
-differences can be difficult.  This in turn complicates cost reductions, as well
+differences can be difficult. This, in turn, complicates cost reductions, as well
 as any number of the Dynamic Telemetry scenarios.
 
 ## Use Azure Monitor and KQL language to locate an expensive OpenTelemetry log
 
-Let's go back to the original code;  and use the compiler generated Durable ID to
-quickly count the ILogger log, that followed recommended guidance.
+Let's go back to the original code, and use the compiler-generated Durable ID to
+quickly count the ILogger log that followed recommended guidance.
 
 ```cdocs_include
 {{ CSharp_Include("../Samples/DurableIds/Pages/Index.cshtml.cs",
@@ -120,7 +121,7 @@ extracted EventName field.
 
 ![](../orig_media/Demo.0.DurableID.GroupedByEventName.png)
 
-You'll notice "LogRandomGuid" quickly stands out, with a tidy dcount(),  whereas
+You'll notice "LogRandomGuid" quickly stands out with a tidy dcount(), whereas
 the other similar log is still unclear.
 
 With the event name in hand, we can quickly do all sorts of quick study and
