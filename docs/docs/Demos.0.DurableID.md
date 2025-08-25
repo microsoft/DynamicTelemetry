@@ -29,7 +29,7 @@ the difference.
 ### Seeing the DurableID in Azure's Application Insights
 
 Let's start with the recommended way to log in .NET: using `ILogger`, with a
-[compiler-time generated](https://learn.microsoft.com/en-us/dotnet/core/extensions/logger-message-generator)
+[compile-time generated](https://learn.microsoft.com/en-us/dotnet/core/extensions/logger-message-generator)
 Durable ID.
 
 #### Recommended Way to Log
