@@ -9,6 +9,8 @@ on:
 jobs:
   stale:
     runs-on: ubuntu-22.04
+    permissions:
+      contents: read
     steps:
       - uses: actions/stale@v9
         with:
