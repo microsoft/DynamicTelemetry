@@ -1,6 +1,6 @@
 ---
 author: "Chris Gray"
-status: ReviewLevel1b
+status: ReviewLevel2
 ---
 
 # Costs Reduction
@@ -29,7 +29,7 @@ expenditures and improving the bottom line.
 
 ![type:video](../orig_media/DynamicTelemetry_CostSavings.mp4)
 
-## Introducing Your Tools : Filtering, Flight Recorders, and Converting Logs to Metrics
+## Introducing Your Tools : [Filtering](./Architecture.Components.FiltersAndRouters.document.md), [Flight Recorders](./Architecture.FlightRecorder.Overview.document.md), and [Converting Logs to Metrics](./Architecture.Processor.Overview.document.md)
 
 Converting logs into metrics is a powerful technique used in Dynamic Telemetry
 for optimizing and reducing the overhead associated with storing and

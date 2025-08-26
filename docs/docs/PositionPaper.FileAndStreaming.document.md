@@ -39,7 +39,3 @@ high-fidelity content, such as memory dumps, packet captures, or CPU samples.
 
 Unlike STREAMING telemetry, which is continuously emitted, FILE_BASED telemetry
 is only uploaded when necessary, typically in the event of a failure.
-
-## References
-
-1. [Flight Recorder](./PositionPaper.FlightRecorder.document.md)

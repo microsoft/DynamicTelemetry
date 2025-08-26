@@ -1,6 +1,6 @@
 ---
 author: "Chris Gray"
-status: ReviewLevel1b
+status: ReviewLevel2
 ---
 
 # Long Horizon Flight Recorder
@@ -24,7 +24,7 @@ fail.
 
 Using a combination of [Probes](./Architecture.Probes.Overview.document.md) that
 log into a Long Horizon Flight Recorder and
-[Actions](./Architecture.Action.Explanation.document.md) that initiate the
+[Actions](./Architecture.Actions.Overview.document.md) that initiate the
 egress of that recorder upon transaction failure, very interesting and novel
 diagnostic situations can often be created.
 

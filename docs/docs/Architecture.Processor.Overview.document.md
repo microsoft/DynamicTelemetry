@@ -25,10 +25,10 @@ discuss the four different locations that can house a query Processor.
 ## Processor Types
 
 It's expected within Dynamic Telemetry that multiple different Processor types
-are created over the course of time because there are requirements on the
-Processor in order to meet other obligations, such as safety and performance,
-all Processors must meet certain set of requirements, specifically in the event
-they are running out of specification they are all configured to automatically
+are created over the course of time. Because there are requirements on the
+Processor to meet other obligations, such as safety and performance,
+all Processors must meet a certain set of requirements. Specifically, in the event
+they are running out of specification, they are all configured to automatically
 disable.
 
 There are three different types of Processors each with varying degrees of
@@ -50,7 +50,7 @@ that restricts both the memory accessed and the number of instructions executed.
 
 ### Query Language Processor
 
-[A Query Language Processor](./Architecture.Components.Processor.QueryLanguage.document.md)
+[A Query Language Processor](./Architecture.Processor.QueryLanguage.document.md)
 is the simplest type of Processor. It acts as a filter that is applied directly
 to the OpenTelemetry data stream, allowing for straightforward transformations
 or the removal of specific log messages.
@@ -83,7 +83,7 @@ to generate metrics on the fly.
 
 ### State Model Processor
 
-[A State Model Processor](./Architecture.Components.Processor.StateMachine.document.md)
+[A State Model Processor](./Architecture.Processor.StateMachine.document.md)
 is our next most sophisticated and complex Processor. Similar to a Query
 Language Processor, the State Model Processor uses a simple configuration file.
 However, instead of merely providing filtering and aggregation, it allows for
@@ -104,7 +104,7 @@ might capture a memory dump if a particular error is emitted in a log.
 
 ### Language Processor
 
-[The Language Processor](./Architecture.Components.Processor.Language.md) is the
+[The Language Processor](./Architecture.Processor.Language.md) is the
 most complex type of Processor. In addition to the ability to dynamically
 migrate state transitions, it introduces the capability to allocate small
 amounts of memory and perform simple computations and calculations.
@@ -146,7 +146,7 @@ There will be scenarios where Dynamic Telemetry could be useful that will not be
 applicable as a result. And this is OK.
 
 It is the belief of Dynamic Telemetry's designers that having limitations to the
-application is necessary in order to provide a trustworthy diagnostic system
+application is necessary to provide a trustworthy diagnostic system
 that is suitable for use within a large cloud environment.
 
 In short, we take the

@@ -9,6 +9,9 @@
 default: true
 
 ul-style: false
+
+# ReWrap VSCode plugin makes line-length easy;  CTRL-A ALT-Q formats the whole
+# document
 line-length: 80
 no-duplicate-header:
   siblings_only: true

@@ -6,7 +6,7 @@ status: ReviewLevel2
 # Processor : State Machine
 
 The State Machine
-[Processor](./Architecture.Components.Processor.Overview.document.md) is a
+[Processor](./Architecture.Processor.Overview.document.md) is a
 relatively simple yet highly effective component within Dynamic Telemetry.
 Essentially, this Processor listens to all log messages that pass by,
 identifying significant events and managing a state machine based on those
@@ -45,7 +45,7 @@ files or JPEG images.
 In this example you'll notice that the example code
 
 1. Logs when we begin hashing
-1. Hashs the file; or otherwise perform business logic
+1. Hashes the file; or otherwise perform business logic
 1. Logs when we've completed the hashing of the file
 
 This workflow outlines a typical sequence of operations for a developer. Log
@@ -69,7 +69,7 @@ deployment is completed.
 
 Lets look at a few examples, as they likely will help tell the tale
 
-Image a piece of code that looks something like this:
+Imagine a piece of code that looks something like this:
 
 ```mermaid
     flowchart TD

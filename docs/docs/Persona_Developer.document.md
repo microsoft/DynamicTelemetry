@@ -29,7 +29,7 @@ mindmap
     root(Developer)
         Triggers(Triggered Actions)
             Collect Flight Recorder
-            Toggle Flight Recorder Verbocity
+            Toggle Flight Recorder Verbosity
 
             Actions
 

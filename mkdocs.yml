@@ -1,5 +1,7 @@
 site_name: DynamicTelemetry
 site_description: 'DynamicTelemetry PoC Request for Collaboration'
+repo_url: https://github.com/microsoft/DynamicTelemetry
+repo_name: MD/PDF/DOC
 
 # Info : https://squidfunk.github.io/mkdocs-material/
 
@@ -59,6 +61,7 @@ theme:
         code: Roboto Mono
     favicon: assets/favicon.png
     icon:
+        repo: fontawesome/brands/github
         logo: logo
 
 
@@ -66,36 +69,11 @@ nav:
 #<START_BINDING>
     - What is Dynamic Telemetry:
         - Introduction : ./docs/index.md
-
         - Performance and Diagnostics: ./docs/Scenarios.Overview.DeepDiagnostics.document.md
-            #- Tools:
-            #    - Event Aggregation: ./docs/Scenarios.EventAggregation.document.md
-            #    - ExtractingMemoryWithUProbe: ./docs/Scenarios.ExtractingMemoryWithUProbe.document.md
-            #- The Process: ./docs/PlaceHolder.document.md
-            #- Architecture: ./docs/PlaceHolder.document.md
-            #- Position Papers: ./docs/PlaceHolder.document.md
-
         - Privacy and Security: ./docs/Scenarios.Overview.RedactingSecrets.document.md
-            #- Tools:
-            #    - EventFieldSuppression: ./docs/Scenarios.EventFieldSuppression.document.md
-            #    - EventSuppression: ./docs/Scenarios.EventSuppression.document.md
-
         - Reliability and Testing: ./docs/Scenarios.Overview.Reliability.document.md
-            #- Tools: ./docs/PlaceHolder.document.md
-            #- Architecture: ./docs/PlaceHolder.document.md
-            #- Position Papers: ./docs/PlaceHolder.document.md
-
         - Dashboards, Alerts, and Environment Migrations: ./docs/Scenarios.Overview.DurableDashboards.Alerts.document.md
-            #- Tools:
-            #    - Changing Environments: ./docs/Scenarios.ChangingEnvironments.document.md
-            #- Architecture: ./docs/PlaceHolder.document.md
-            #- Position Papers: ./docs/PlaceHolder.document.md
-
         - Cost Reduction: ./docs/Scenarios.Overview.CostReduction.document.md
-            #- Tools:
-            #    - Convert Logs to Metrics: ./docs/Scenarios.ConvertLogsToMetrics.document.md
-            #- Architecture: ./docs/PlaceHolder.document.md
-            #- Position Papers: ./docs/PlaceHolder.document.md
 
     - Architecture:
         - Overview: ./docs/Architecture.Overview.document.md
@@ -130,30 +108,31 @@ nav:
                         - Short Horizons: ./docs/Architecture.FlightRecorder.ShortHorizons.document.md
                         - Cubby Hole: ./docs/Architecture.FlightRecorder.CubbyHole.document.md
                         - Long Horizons: ./docs/Architecture.FlightRecorder.LongHorizons.document.md
-            - Filters and Routers:
-                - Filters / Routers Overview: ./docs/Architecture.Components.FiltersAndRouters.document.md
+            - Filters, Routers, and Adapters:
+                - Filters / Routers / Adapters Overview: ./docs/Architecture.Components.FiltersAndRouters.document.md
 
             - Processors :
-                - Processors Overview: ./docs/Architecture.Components.Processor.Overview.document.md
+                - Processors Overview: ./docs/Architecture.Processor.Overview.document.md
                 - Processor Types:
-                    - Query Language : ./docs/Architecture.Components.Processor.QueryLanguage.document.md
-                    - StateMachine : ./docs/Architecture.Components.Processor.StateMachine.document.md
-                    - Language : ./docs/Architecture.Components.Processor.Language.md
+                    - Query Language : ./docs/Architecture.Processor.QueryLanguage.document.md
+                    - StateMachine : ./docs/Architecture.Processor.StateMachine.document.md
+                    - Language : ./docs/Architecture.Processor.Language.md
 
                 - Processor Installation Locations:
-                    - Overview: ./docs/Architecture.Components.ProcessorInstallation.Overview.document.md
+                    - Overview: ./docs/Architecture.Processor.Installation.Overview.document.md
                     - Installation Locations:
-                        - Internal Observer: ./docs/Architecture.Components.Observer.InProcess.document.md
-                        - Kernel Observer: ./docs/Architecture.Components.Observer.Kernel.document.md
-                        - External, on-box Observer: ./docs/Architecture.Components.Observer.External.OnBox.document.md
-                        - External, off-box Observer: ./docs/Architecture.Components.Observer.External.OffBox.document.md
+                        - Internal Observer: ./docs/Architecture.Processor.InProcess.document.md
+                        - Kernel Observer: ./docs/Architecture.Processor.Kernel.document.md
+                        - External, on-box Observer: ./docs/Architecture.Processor.External.OnBox.document.md
+                        - External, off-box Observer: ./docs/Architecture.Processor.External.OffBox.document.md
 
             - Actions:
-                - Action Overview: ./docs/Architecture.Action.Explanation.document.md
+                - Action Overview: ./docs/Architecture.Actions.Overview.document.md
                 - Sample Actions:
                     - PacketCapture: ./docs/Architecture.Action.PacketCapture.document.md
                     - ConfigCollection: ./docs/Architecture.Action.ConfigCollection.document.md
                     - CPUSample: ./docs/Architecture.Action.CPUSample.document.md
+                    - Callstack Walk: ./docs/Architecture.Action.CallstackWalk.document.md
                     - FileCollection: ./docs/Architecture.Action.FileCollection.document.md
                     - FlightRecorder: ./docs/Architecture.Action.FlightRecorder.document.md
                     - MemoryDump: ./docs/Architecture.Action.MemoryDump.document.md
@@ -222,12 +201,13 @@ nav:
                         - Project Manager: ./docs/Persona_ProjectManager.document.md
 
                 - Demos and Presentations:
-                    - Videos:
+                    - Video Demos:
+                        - Adding a Memory Probe: ./docs/Demos.4.AddTelemetryDemo.md
+                        - Drop a Chatty Event : ./docs/Demos.1.DropChattyLog.md
+                    - Written Demos:
+                        - Understanding Durable ID : ./docs/Demos.0.DurableID.md
                         - Dynamic Probes: ./docs/Demos.2_DynamicProbe.md
                         - HighLevel / Overview : ./docs/Demos.HighLevel.Overview.md
-                        - Adding a Memory Probe: ./docs/Demos.4.AddTelemetryDemo.md
-                        - Understanding Durable ID : ./docs/Demos.0.DynamicID.md
-                        - Drop a Chatty Event : ./docs/Demos.1.DropChattyLog.md
                     - Slides / Presentations:
                         - Overview: ./docs/Slides.Overview.Presentation.md
                 - Development / Spec Process:

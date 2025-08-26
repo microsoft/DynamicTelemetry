@@ -1,52 +1,75 @@
 #!/bin/bash
 set -e
 
-#
-# See if CDocs has been built; if not sync and build
-#
-if [ ! -d "/Source/CDocs" ]; then
-    git clone https://github.com/chgray/CDocs /Source/CDocs
-    cd /Source/CDocs
-    git checkout user/chgray/update_ubuntu
+SCRIPT_PATH=$(dirname "$(realpath "${BASH_SOURCE[0]}")")
+echo "Script path: $SCRIPT_PATH"
 
-    podman image pull docker.io/chgray123/chgray_repro:pandoc
-    podman image pull docker.io/chgray123/chgray_repro:cdocs.mermaid
-fi
-
-cd /Source/CDocs/tools/CDocsMarkdownCommentRender
-dotnet build .
+export DT_BOUND_DIR=$(realpath ${SCRIPT_PATH}/../docs/bound_docs)
+export DT_DOCS_DIR=$(realpath ${SCRIPT_PATH}/../docs/docs)
+export DT_ORIG_MEDIA_DIR=$(realpath ${SCRIPT_PATH}/../docs/orig_media)
 
 
-#
-# Setup the Python environment
-#
-if [ ! -d "/mkdocs_python" ]; then
-    echo "ERROR: /mkdocs_python not found"
+if [ -z "${DT_BOUND_DIR}" ]; then
+    echo "ERROR: DT_BOUND_DIR environment variable must be set"
     exit 1
 fi
-source /mkdocs_python/bin/activate
+
+if [ -z "${DT_DOCS_DIR}" ]; then
+    echo "ERROR: DT_DOCS_DIR environment variable must be set"
+    exit 1
+fi
+
+if [ -z "${DT_ORIG_MEDIA_DIR}" ]; then
+    echo "ERROR: DT_ORIG_MEDIA_DIR environment variable must be set"
+    exit 1
+fi
+
+if [ ! -d "${DT_BOUND_DIR}" ]; then
+    echo "ERROR: ${DT_BOUND_DIR} not found"
+    mkdir ${DT_BOUND_DIR}
+fi
+
+if [ ! -d "${DT_ORIG_MEDIA_DIR}" ]; then
+    echo "ERROR: ${DT_ORIG_MEDIA_DIR} not found"
+    mkdir ${DT_ORIG_MEDIA_DIR}
+fi
+
+
+
+set -e
+
+# Start in our script directory
+cd ${SCRIPT_PATH}
 
 #
 # READ-WRITE Update Status Page, Probe Images, etc
 #
-cd /data/docs/docs
-
+pwd
 echo "Updating Status..."
-python3 ../../tools/_CalculateStatus.py
-../../tools/_CalculateStatus.gnuplot
+python3 ./_CalculateStatus.py
+
+#
+# use a container to call gnuplot
+#
+echo "Update Status with GNU Plot"
+gnuplot ./_CalculateStatus.gnuplot
 
 echo "Rebuilding Probe Spider..."
-../../tools/_BuildProbeSpider.gnuplot
+gnuplot ./_BuildProbeSpider.gnuplot
+
+cd ../docs/docs
 
 #
 # READ-ONLY: Do Binding and create content in docx/pdf/epub
 #
-cd /data/docs/docs
+cd "$DT_DOCS_DIR"
+ls
 
 echo "Binding and generating TOC"
-pwsh ../../tools/buildAsBook/bind.ps1
+python ../../tools/buildAsBook/bind.py
 
-cd /data/docs/bound_docs
+echo "Changing to dir : $DT_BOUND_DIR"
+cd "$DT_BOUND_DIR"
 dos2unix ./bind.files
 pandoc -i $(cat ./bind.files) -o ./_bound.tmp.md
 
@@ -55,7 +78,7 @@ fileName="DynamicTelemetry-Draft-$myDate"
 
 echo "---" > ./title.txt
 echo "title: $fileName" >> ./title.txt
-echo "author: Chris Gray at al" >> ./title.txt
+echo "author: Chris Gray et al." >> ./title.txt
 echo "date: $myDate" >> ./title.txt
 echo "---" >> ./title.txt
 
@@ -63,8 +86,9 @@ cat ./title.txt ./_bound.tmp.md | grep -v mp4 > ./bound.md
 
 echo "Building bound contents; in docx, pdf, and epub"
 
-if [ ! -f /data/tools/buildAsBook/header.tex ]; then
-    echo "ERROR: /data/tools/buildAsBook/header.tex not found"
+header_path="$DT_DOCS_DIR/../../tools/buildAsBook/header.tex"
+if [ ! -f "$header_path" ]; then
+    echo "ERROR: header.tex not found at: $header_path"
     exit 1
 fi
 
@@ -73,15 +97,25 @@ echo ""
 echo ""
 echo "Building bound contents; in docx, pdf, and epub"
 
-#fileName=testing_doc
-inputFile=./bound.md
+inputFile=$DT_BOUND_DIR/bound.md
 
+if [ ! -f "$inputFile" ]; then
+    echo "ERROR: $inputFile not found"
+    exit 1
+fi
 
-args="--toc --toc-depth 4 -N -V papersize=a5 --filter CDocsMarkdownCommentRender"
-pandoc $inputFile -o /data/bound/epub_$fileName.epub --epub-cover-image=../orig_media/DynamicTelemetry.CoPilot.Image.png $args
-pandoc $inputFile -o /data/bound/$fileName.pdf -H /data/tools/buildAsBook/header.tex $args
-pandoc $inputFile -o /data/bound/$fileName.docx $args
-pandoc ./bound.md -o /data/bound/$fileName.json $args
+echo "  INPUT_FILE : $inputFile"
+echo "DT_BOUND_DIR : $DT_BOUND_DIR"
 
-cp ./bound.md /data/bound
+args="--toc --toc-depth 4 -N"
+
+export CDOCS_FILTER=1
+pandoc $inputFile -o "$DT_BOUND_DIR/epub_$fileName.a5.epub" --epub-cover-image=../orig_media/DynamicTelemetry.CoPilot.Image.png -V papersize=a5 $args
+pandoc $inputFile -o "$DT_BOUND_DIR/epub_$fileName.a8.epub" --epub-cover-image=../orig_media/DynamicTelemetry.CoPilot.Image.png -V papersize=a8 $args
+pandoc $inputFile -o "$DT_BOUND_DIR/$fileName.a5.pdf" -H "$header_path" -V papersize=a5 $args
+pandoc $inputFile -o "$DT_BOUND_DIR/$fileName.a8.pdf" -H "$header_path" -V papersize=a8 $args
+pandoc $inputFile -o "$DT_BOUND_DIR/$fileName.a5.docx" -V papersize=a5 $args --lua-filter=../../tools/newpage-to-openxml.lua
+pandoc $inputFile -o "$DT_BOUND_DIR/$fileName.a8.docx" -V papersize=a8 $args --lua-filter=../../tools/newpage-to-openxml.lua
+pandoc ./bound.md -o "$DT_BOUND_DIR/$fileName.json" $args
+
 echo "Done!"

@@ -1,6 +1,6 @@
 ---
 author: "Chris Gray"
-status: ReviewLevel1b
+status: ReviewLevel2
 ---
 
 # High Level Overview Demo, of Dynamic Telemetry
@@ -27,8 +27,8 @@ documentation.
 
 ## Demonstration
 
-In this demonstration, we're going to how case the broad architecture points
-found in added Dynamic Telemetry. We'll build on the standard OpenTelemetry
+In this demonstration, we're going to showcase the broad architectural points
+provided by Dynamic Telemetry. We'll build on the standard OpenTelemetry
 Kubernetes sample without modifying or recompiling any code. This showcases the
 seamless integration and powerful capabilities of Dynamic Telemetry.
 
@@ -48,7 +48,7 @@ remote configuration deployment server, and intercepts all OpenTelemetry logs
 metrics and traces that are being emitted and passed through that architectural
 point in the below diagram.
 
-### Standard OpenTelmetry Architectural Overview
+### Standard OpenTelemetry Architectural Overview
 
 In the diagram below, you will observe a typical OpenTelemetry architecture,
 where multiple agents transmit their telemetry data through the kernel of their
@@ -65,7 +65,7 @@ height="2.185044838145232in"}
 ### Survey of a Dynamic Telemetry Processor
 
 A
-[Dynamic Telemetry Processor](./Architecture.Components.Processor.Overview.document.md)
+[Dynamic Telemetry Processor](./Architecture.Processor.Overview.document.md)
 is a software component that is dynamically configured and operates within the
 standard OpenTelemetry OLTP pipeline. This processor is detailed further in the
 processor section, but essentially, it is a software module that monitors all
@@ -76,15 +76,15 @@ Subject to implementation a Dynamic Telemetry processor is likely to be fitting
 into one of several categories
 
 1. A
-   [Query Language](./Architecture.Components.Processor.QueryLanguage.document.md)
+   [Query Language](./Architecture.Processor.QueryLanguage.document.md)
    (SQL, KQL, etc)
 
 1. A
-   [Programming Environment or Language](./Architecture.Components.Processor.Language.md)
+   [Programming Environment or Language](./Architecture.Processor.Language.md)
    (eBPF, .NET, Python, Rust, etc)
 
 1. A textually defined
-   [State Machine, or State Model](./Architecture.Components.Processor.StateMachine.document.md)
+   [State Machine, or State Model](./Architecture.Processor.StateMachine.document.md)
 
 ### Installation Points for Dynamic Telemetry Processors
 
@@ -92,17 +92,17 @@ The diagram below shows the installation of Dynamic Telemetry processors in four
 different architectural locations.
 
 1. In
-   [process of the emitting agent](./Architecture.Components.Observer.InProcess.document.md)
+   [process of the emitting agent](./Architecture.Processor.InProcess.document.md)
 
 1. In the
-   [kernel of the Operation System hosting the agent](./Architecture.Components.Observer.Kernel.document.md)
+   [kernel of the Operating System hosting the agent](./Architecture.Processor.Kernel.document.md)
 
 1. In the
-   [aggregation process](./Architecture.Components.Observer.External.OnBox.document.md)
+   [aggregation process](./Architecture.Processor.External.OnBox.document.md)
    that is about to emit to the ingestion gateway
 
 1. At the
-   [point of ingestion](./Architecture.Components.Observer.External.OffBox.document.md)
+   [point of ingestion](./Architecture.Processor.External.OffBox.document.md)
 
 The Processor section of this document expands upon these four different
 insertion points more thoroughly, but in short, each installation point have
@@ -114,7 +114,7 @@ height="2.185044838145232in"}
 ### Capabilities of Dynamic Telemetry
 
 With a basic understanding of where architecturally Dynamic Telemetry can be
-inserted into the OpenTelemetry pipeline it's important to understand the types
+inserted into the OpenTelemetry pipeline, it's important to understand the types
 of operations that Dynamic Telemetry can offer.
 
 1. Dropping Logs or Metrics
@@ -142,7 +142,7 @@ pausing the logs to prevent the spread of accidentally logged sensitive
 information.
 
 To achieve this goal, we utilize the KQL
-[Query Language](./Architecture.Components.Processor.QueryLanguage.document.md)
+[Query Language](./Architecture.Processor.QueryLanguage.document.md)
 Processor -- and quickly deploy the below KQL to the most appropriate of the
 four Processors.
 
@@ -167,7 +167,7 @@ In this scenario for some reason a particular field was included and then later
 after deployment was decided that field was unnecessary or unwanted this can
 happen for several reasons ranging from costs to security, database performance,
 and privacy it could also be simply a case of just wanting to be more tidy
-anesthetics
+aesthetics
 
 Consider the example below from our demonstration on content redaction. This
 simulation code unintentionally emits a secret, which we need to remove before
@@ -191,14 +191,14 @@ from the web agent.
 ```
 
 To achieve this goal, we utilize the KQL
-[Query Language](./Architecture.Components.Processor.QueryLanguage.document.md)
+[Query Language](./Architecture.Processor.QueryLanguage.document.md)
 Processor -- and quickly deploy the below KQL to the most appropriate of the
 four Processors.
 
-Without Dynamic Telemetry a rebuild retest and redeploy be required but with
+Without Dynamic Telemetry a rebuild, retest and redeploy would be required, but with
 Dynamic Telemetry the simple configuration below can be dynamically transmitted
 to any of the four described processors at which point any log named
-"*LogWelcomeBanner*" have it's "secret" field redacted.
+"*LogWelcomeBanner*" will have its "secret" field redacted.
 
 ```cdocs_include
 {{ CSharp_Include("../Samples/Demos.3.SecurityRedaction/Pages/Index.cshtml.cs",

@@ -9,17 +9,26 @@ description : Introduction to DynamicTelemetry
 ![image](../orig_media/DynamicTelemetry.logo.png){width="5.5in"
 height="1.261111111111111in"}
 
-Introducing DynamicTelemetry, an OpenSource, diagnostic compliment to
+Introducing DynamicTelemetry, an open-source, diagnostic complement to
 OpenTelemetry.
 
-The DynamicTelemetry development team wants to make debugging highly scaled
-production software as easy and enjoyable as debugging one application locally.
-We want you to be able to diagnose and explore live production systems without
-compromising reliability, performance, or customer privacy.
+**The DynamicTelemetry project aims to make debugging highly scaled
+production software as easy and enjoyable as debugging a single application
+locally.** Engineers should be able to diagnose and explore live production
+systems without compromising reliability, performance, or customer privacy.
+***Dynamic Telemetry is a collaborative effort and a shared vision***; We are
+actively exploring it and we welcome your contributions.
 
-In this introduction, you will learn about DynamicTelemetry, an open-source
-diagnostic tool that blends traditional symbolic debuggers with advanced new
-complements to your existing OpenTelemetry assets and workflows. You will be
+Historically telemetry has focused on collecting large volumes of statically
+configured information, then mining it later in hopes that it is useful.
+This often leads to storing vast amounts of rarely used data 'just in case', yet
+failing to anticipate other data that will be needed in the future. We want to let
+engineers reconfigure the telemetry being sent by production systems in real-time,
+creating tight feedback loops and more useful telemetry.
+
+In this introduction, let's explore a hypothetical new telemetry experience
+that blends traditional symbolic debuggers with advanced new complements to
+your existing OpenTelemetry assets and workflow. You will be
 presented with five architectural components that, when used together, bring the
 peace and calm of local debugging into the distributed cloud.
 
