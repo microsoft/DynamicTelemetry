@@ -9,10 +9,14 @@ on:
 jobs:
   run-misspell:
     runs-on: ubuntu-22.04
+    permissions:
+      contents: read
 
     steps:
     - name: check out code
       uses: actions/checkout@v4
+      with:
+        persist-credentials: false
 
     - name: install misspell
       run: |
@@ -24,10 +28,15 @@ jobs:
 
   run-sanitycheck:
     runs-on: ubuntu-22.04
+    permissions:
+        contents: read
 
     steps:
     - name: check out code
       uses: actions/checkout@v4
+      with:
+        persist-credentials: false
 
     - name: detect non-ASCII encoding and trailing space
       run: python3 ./main/sanitycheck.py
+
