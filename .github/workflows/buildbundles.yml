@@ -32,7 +32,7 @@ jobs:
   Create-Release:
     needs: Generating-Bound-Versions
     runs-on: ubuntu-latest
-    
+
     permissions:
       contents: write
 
