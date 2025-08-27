@@ -18,8 +18,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      #- run: ./tools/InstallUbuntuBuildDependencies.sh
-      #- run: ./tools/PreCheckinUpdate.sh
+      - run: ./tools/InstallUbuntuBuildDependencies.sh
+      - run: ./tools/PreCheckinUpdate.sh
       - name: Upload bound_docs as artifact
         uses: actions/upload-artifact@v4
         with:
