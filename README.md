@@ -1,6 +1,6 @@
 # Project
 
-*You're at the main GitHub location hosting the unrendered markdown for Dynamic
+You're at the main GitHub location hosting the unrendered markdown for Dynamic
 Telemetry. If you'd prefer to read more polished, rendered HTML, please visit
 [https://microsoft.github.io/DynamicTelemetry/](https://microsoft.github.io/DynamicTelemetry/).
 PDF, DOCX, and EPUB versions are available for download in the Releases
