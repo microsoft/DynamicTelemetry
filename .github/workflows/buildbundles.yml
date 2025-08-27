@@ -32,7 +32,7 @@ jobs:
   Create-Release:
     needs: Generating-Bound-Versions
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' && (github.ref == 'refs/heads/main'  || startsWith(github.ref, 'refs/user/chgray'))
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/main')
     permissions:
           contents: write
 
