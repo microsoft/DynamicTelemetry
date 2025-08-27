@@ -32,10 +32,9 @@ jobs:
   Create-Release:
     needs: Generating-Bound-Versions
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' && (github.ref == 'refs/heads/main')
     permissions:
-          contents: write
-
+      contents: write
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/main')
     steps:
       - uses: actions/checkout@v4
         with:
